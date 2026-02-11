@@ -1,0 +1,4 @@
+"basis","window","ecdet","p","r","T","m","logdet","k_par","PIC","BIC","ecdet_label","reason"
+"Q2","ford","none",1,1,49,4,-17.8094118350273,23,-15.9826390420365,71.7024550215172,"No Constant","Selected: min PIC within window; tie-break BIC then smallest p"
+"Q2","full","none",1,1,99,4,-15.3084125214672,23,-14.2408594249713,90.3793440316284,"No Constant","Selected: min PIC within window; tie-break BIC then smallest p"
+"Q2","post","none",1,1,50,4,-17.368245668248,23,-15.5687150857511,72.6082834565993,"No Constant","Selected: min PIC within window; tie-break BIC then smallest p"

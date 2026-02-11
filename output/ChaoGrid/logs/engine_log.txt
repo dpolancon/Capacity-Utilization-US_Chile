@@ -2,203 +2,1021 @@
 Project root: C:/ReposGitHub/capacity_utilization 
 Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
 
-Windows built. N(full)= 99  N(ford)= 49  N(post)= 50 
+Windows built (raw). N(full)= 99  N(ford)= 49  N(post)= 50 
 
-SYS_VARS:  log_y, log_k, logK_e, logK_e2 
-System size m = 4 
+GLOBAL QR basis built on FULL window e.
+  degree2: center= TRUE 
+  degree3: center= TRUE 
 
-Grid size = 63 cells
+Grid size = 84 cells
 
-Cell 1/63: window=full ecdet=none p=1 (T=99, m=4)
-  -> done.
+Cell 1/84: basis=Q2 window=full ecdet=none p=1 (T=99, m=4)
+  -> OK
 
-Cell 2/63: window=full ecdet=none p=2 (T=99, m=4)
-  -> done.
+Cell 2/84: basis=Q2 window=full ecdet=none p=2 (T=99, m=4)
+  -> OK
 
-Cell 3/63: window=full ecdet=none p=3 (T=99, m=4)
-  -> done.
+Cell 3/84: basis=Q2 window=full ecdet=none p=3 (T=99, m=4)
+  -> OK
 
-Cell 4/63: window=full ecdet=none p=4 (T=99, m=4)
-  -> done.
+Cell 4/84: basis=Q2 window=full ecdet=none p=4 (T=99, m=4)
+  -> OK
 
-Cell 5/63: window=full ecdet=none p=5 (T=99, m=4)
-  -> done.
+Cell 5/84: basis=Q2 window=full ecdet=none p=5 (T=99, m=4)
+  -> OK
 
-Cell 6/63: window=full ecdet=none p=6 (T=99, m=4)
-  -> done.
+Cell 6/84: basis=Q2 window=full ecdet=none p=6 (T=99, m=4)
+  -> OK
 
-Cell 7/63: window=full ecdet=none p=7 (T=99, m=4)
-  -> done.
+Cell 7/84: basis=Q2 window=full ecdet=none p=7 (T=99, m=4)
+  -> OK
 
-Cell 8/63: window=full ecdet=const p=1 (T=99, m=4)
-  -> done.
+Cell 8/84: basis=Q2 window=full ecdet=const p=1 (T=99, m=4)
+  -> OK
 
-Cell 9/63: window=full ecdet=const p=2 (T=99, m=4)
-  -> done.
+Cell 9/84: basis=Q2 window=full ecdet=const p=2 (T=99, m=4)
+  -> OK
 
-Cell 10/63: window=full ecdet=const p=3 (T=99, m=4)
-  -> done.
+Cell 10/84: basis=Q2 window=full ecdet=const p=3 (T=99, m=4)
+  -> OK
 
-Cell 11/63: window=full ecdet=const p=4 (T=99, m=4)
-  -> done.
+Cell 11/84: basis=Q2 window=full ecdet=const p=4 (T=99, m=4)
+  -> OK
 
-Cell 12/63: window=full ecdet=const p=5 (T=99, m=4)
-  -> done.
+Cell 12/84: basis=Q2 window=full ecdet=const p=5 (T=99, m=4)
+  -> OK
 
-Cell 13/63: window=full ecdet=const p=6 (T=99, m=4)
-  -> done.
+Cell 13/84: basis=Q2 window=full ecdet=const p=6 (T=99, m=4)
+  -> OK
 
-Cell 14/63: window=full ecdet=const p=7 (T=99, m=4)
-  -> done.
+Cell 14/84: basis=Q2 window=full ecdet=const p=7 (T=99, m=4)
+  -> OK
 
-Cell 15/63: window=full ecdet=trend p=1 (T=99, m=4)
-  -> done.
+Cell 15/84: basis=Q2 window=ford ecdet=none p=1 (T=49, m=4)
+  -> OK
 
-Cell 16/63: window=full ecdet=trend p=2 (T=99, m=4)
-  -> done.
+Cell 16/84: basis=Q2 window=ford ecdet=none p=2 (T=49, m=4)
+  -> OK
 
-Cell 17/63: window=full ecdet=trend p=3 (T=99, m=4)
-  -> done.
+Cell 17/84: basis=Q2 window=ford ecdet=none p=3 (T=49, m=4)
+  -> OK
 
-Cell 18/63: window=full ecdet=trend p=4 (T=99, m=4)
-  -> done.
+Cell 18/84: basis=Q2 window=ford ecdet=none p=4 (T=49, m=4)
+  -> OK
 
-Cell 19/63: window=full ecdet=trend p=5 (T=99, m=4)
-  -> done.
+Cell 19/84: basis=Q2 window=ford ecdet=none p=5 (T=49, m=4)
+  -> OK
 
-Cell 20/63: window=full ecdet=trend p=6 (T=99, m=4)
-  -> done.
+Cell 20/84: basis=Q2 window=ford ecdet=none p=6 (T=49, m=4)
+  -> OK
 
-Cell 21/63: window=full ecdet=trend p=7 (T=99, m=4)
-  -> done.
+Cell 21/84: basis=Q2 window=ford ecdet=none p=7 (T=49, m=4)
+  -> OK
 
-Cell 22/63: window=ford ecdet=none p=1 (T=49, m=4)
-  -> done.
+Cell 22/84: basis=Q2 window=ford ecdet=const p=1 (T=49, m=4)
+  -> OK
 
-Cell 23/63: window=ford ecdet=none p=2 (T=49, m=4)
-  -> done.
+Cell 23/84: basis=Q2 window=ford ecdet=const p=2 (T=49, m=4)
+  -> OK
 
-Cell 24/63: window=ford ecdet=none p=3 (T=49, m=4)
-  -> done.
+Cell 24/84: basis=Q2 window=ford ecdet=const p=3 (T=49, m=4)
+  -> OK
 
-Cell 25/63: window=ford ecdet=none p=4 (T=49, m=4)
-  -> done.
+Cell 25/84: basis=Q2 window=ford ecdet=const p=4 (T=49, m=4)
+  -> OK
 
-Cell 26/63: window=ford ecdet=none p=5 (T=49, m=4)
-  -> done.
+Cell 26/84: basis=Q2 window=ford ecdet=const p=5 (T=49, m=4)
+  -> OK
 
-Cell 27/63: window=ford ecdet=none p=6 (T=49, m=4)
-  -> done.
+Cell 27/84: basis=Q2 window=ford ecdet=const p=6 (T=49, m=4)
+  -> OK
 
-Cell 28/63: window=ford ecdet=none p=7 (T=49, m=4)
-  -> done.
+Cell 28/84: basis=Q2 window=ford ecdet=const p=7 (T=49, m=4)
+  -> SKIP infeasible (T too small for m,p,det)
 
-Cell 29/63: window=ford ecdet=const p=1 (T=49, m=4)
-  -> done.
+Cell 29/84: basis=Q2 window=post ecdet=none p=1 (T=50, m=4)
+  -> OK
 
-Cell 30/63: window=ford ecdet=const p=2 (T=49, m=4)
-  -> done.
+Cell 30/84: basis=Q2 window=post ecdet=none p=2 (T=50, m=4)
+  -> OK
 
-Cell 31/63: window=ford ecdet=const p=3 (T=49, m=4)
-  -> done.
+Cell 31/84: basis=Q2 window=post ecdet=none p=3 (T=50, m=4)
+  -> OK
 
-Cell 32/63: window=ford ecdet=const p=4 (T=49, m=4)
-  -> done.
+Cell 32/84: basis=Q2 window=post ecdet=none p=4 (T=50, m=4)
+  -> OK
 
-Cell 33/63: window=ford ecdet=const p=5 (T=49, m=4)
-  -> done.
+Cell 33/84: basis=Q2 window=post ecdet=none p=5 (T=50, m=4)
+  -> OK
 
-Cell 34/63: window=ford ecdet=const p=6 (T=49, m=4)
-  -> done.
+Cell 34/84: basis=Q2 window=post ecdet=none p=6 (T=50, m=4)
+  -> OK
 
-Cell 35/63: window=ford ecdet=const p=7 (T=49, m=4)
-  -> done.
+Cell 35/84: basis=Q2 window=post ecdet=none p=7 (T=50, m=4)
+  -> OK
 
-Cell 36/63: window=ford ecdet=trend p=1 (T=49, m=4)
-  -> done.
+Cell 36/84: basis=Q2 window=post ecdet=const p=1 (T=50, m=4)
+  -> OK
 
-Cell 37/63: window=ford ecdet=trend p=2 (T=49, m=4)
-  -> done.
+Cell 37/84: basis=Q2 window=post ecdet=const p=2 (T=50, m=4)
+  -> OK
 
-Cell 38/63: window=ford ecdet=trend p=3 (T=49, m=4)
-  -> done.
+Cell 38/84: basis=Q2 window=post ecdet=const p=3 (T=50, m=4)
+  -> OK
 
-Cell 39/63: window=ford ecdet=trend p=4 (T=49, m=4)
-  -> done.
+Cell 39/84: basis=Q2 window=post ecdet=const p=4 (T=50, m=4)
+  -> OK
 
-Cell 40/63: window=ford ecdet=trend p=5 (T=49, m=4)
-  -> done.
+Cell 40/84: basis=Q2 window=post ecdet=const p=5 (T=50, m=4)
+  -> OK
 
-Cell 41/63: window=ford ecdet=trend p=6 (T=49, m=4)
-  -> done.
+Cell 41/84: basis=Q2 window=post ecdet=const p=6 (T=50, m=4)
+  -> OK
 
-Cell 42/63: window=ford ecdet=trend p=7 (T=49, m=4)
-  -> done.
+Cell 42/84: basis=Q2 window=post ecdet=const p=7 (T=50, m=4)
+  -> SKIP infeasible (T too small for m,p,det)
 
-Cell 43/63: window=post ecdet=none p=1 (T=50, m=4)
-  -> done.
+Cell 43/84: basis=Q3 window=full ecdet=none p=1 (T=99, m=5)
+  -> OK
 
-Cell 44/63: window=post ecdet=none p=2 (T=50, m=4)
-  -> done.
+Cell 44/84: basis=Q3 window=full ecdet=none p=2 (T=99, m=5)
+  -> OK
 
-Cell 45/63: window=post ecdet=none p=3 (T=50, m=4)
-  -> done.
+Cell 45/84: basis=Q3 window=full ecdet=none p=3 (T=99, m=5)
+  -> OK
 
-Cell 46/63: window=post ecdet=none p=4 (T=50, m=4)
-  -> done.
+Cell 46/84: basis=Q3 window=full ecdet=none p=4 (T=99, m=5)
+  -> OK
 
-Cell 47/63: window=post ecdet=none p=5 (T=50, m=4)
-  -> done.
+Cell 47/84: basis=Q3 window=full ecdet=none p=5 (T=99, m=5)
+  -> OK
 
-Cell 48/63: window=post ecdet=none p=6 (T=50, m=4)
-  -> done.
+Cell 48/84: basis=Q3 window=full ecdet=none p=6 (T=99, m=5)
+  -> OK
 
-Cell 49/63: window=post ecdet=none p=7 (T=50, m=4)
-  -> done.
+Cell 49/84: basis=Q3 window=full ecdet=none p=7 (T=99, m=5)
+  -> OK
 
-Cell 50/63: window=post ecdet=const p=1 (T=50, m=4)
-  -> done.
+Cell 50/84: basis=Q3 window=full ecdet=const p=1 (T=99, m=5)
+  -> OK
 
-Cell 51/63: window=post ecdet=const p=2 (T=50, m=4)
-  -> done.
+Cell 51/84: basis=Q3 window=full ecdet=const p=2 (T=99, m=5)
+  -> OK
 
-Cell 52/63: window=post ecdet=const p=3 (T=50, m=4)
-  -> done.
+Cell 52/84: basis=Q3 window=full ecdet=const p=3 (T=99, m=5)
+  -> OK
 
-Cell 53/63: window=post ecdet=const p=4 (T=50, m=4)
-  -> done.
+Cell 53/84: basis=Q3 window=full ecdet=const p=4 (T=99, m=5)
+  -> OK
 
-Cell 54/63: window=post ecdet=const p=5 (T=50, m=4)
-  -> done.
+Cell 54/84: basis=Q3 window=full ecdet=const p=5 (T=99, m=5)
+  -> OK
 
-Cell 55/63: window=post ecdet=const p=6 (T=50, m=4)
-  -> done.
+Cell 55/84: basis=Q3 window=full ecdet=const p=6 (T=99, m=5)
+  -> OK
 
-Cell 56/63: window=post ecdet=const p=7 (T=50, m=4)
-  -> done.
+Cell 56/84: basis=Q3 window=full ecdet=const p=7 (T=99, m=5)
+  -> OK
 
-Cell 57/63: window=post ecdet=trend p=1 (T=50, m=4)
-  -> done.
+Cell 57/84: basis=Q3 window=ford ecdet=none p=1 (T=49, m=5)
+  -> OK
 
-Cell 58/63: window=post ecdet=trend p=2 (T=50, m=4)
-  -> done.
+Cell 58/84: basis=Q3 window=ford ecdet=none p=2 (T=49, m=5)
+  -> OK
 
-Cell 59/63: window=post ecdet=trend p=3 (T=50, m=4)
-  -> done.
+Cell 59/84: basis=Q3 window=ford ecdet=none p=3 (T=49, m=5)
+  -> OK
 
-Cell 60/63: window=post ecdet=trend p=4 (T=50, m=4)
-  -> done.
+Cell 60/84: basis=Q3 window=ford ecdet=none p=4 (T=49, m=5)
+  -> OK
 
-Cell 61/63: window=post ecdet=trend p=5 (T=50, m=4)
-  -> done.
+Cell 61/84: basis=Q3 window=ford ecdet=none p=5 (T=49, m=5)
+  -> OK
 
-Cell 62/63: window=post ecdet=trend p=6 (T=50, m=4)
-  -> done.
+Cell 62/84: basis=Q3 window=ford ecdet=none p=6 (T=49, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
 
-Cell 63/63: window=post ecdet=trend p=7 (T=50, m=4)
-  -> done.
+Cell 63/84: basis=Q3 window=ford ecdet=none p=7 (T=49, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
 
-=== Engine completed ===
-PIC table rows : 252 
-Rank table rows: 63 
+Cell 64/84: basis=Q3 window=ford ecdet=const p=1 (T=49, m=5)
+  -> OK
+
+Cell 65/84: basis=Q3 window=ford ecdet=const p=2 (T=49, m=5)
+  -> OK
+
+Cell 66/84: basis=Q3 window=ford ecdet=const p=3 (T=49, m=5)
+  -> OK
+
+Cell 67/84: basis=Q3 window=ford ecdet=const p=4 (T=49, m=5)
+  -> OK
+
+Cell 68/84: basis=Q3 window=ford ecdet=const p=5 (T=49, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 69/84: basis=Q3 window=ford ecdet=const p=6 (T=49, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 70/84: basis=Q3 window=ford ecdet=const p=7 (T=49, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 71/84: basis=Q3 window=post ecdet=none p=1 (T=50, m=5)
+  -> OK
+
+Cell 72/84: basis=Q3 window=post ecdet=none p=2 (T=50, m=5)
+  -> OK
+
+Cell 73/84: basis=Q3 window=post ecdet=none p=3 (T=50, m=5)
+  -> OK
+
+Cell 74/84: basis=Q3 window=post ecdet=none p=4 (T=50, m=5)
+  -> OK
+
+Cell 75/84: basis=Q3 window=post ecdet=none p=5 (T=50, m=5)
+  -> OK
+
+Cell 76/84: basis=Q3 window=post ecdet=none p=6 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 77/84: basis=Q3 window=post ecdet=none p=7 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 78/84: basis=Q3 window=post ecdet=const p=1 (T=50, m=5)
+  -> OK
+
+Cell 79/84: basis=Q3 window=post ecdet=const p=2 (T=50, m=5)
+  -> OK
+
+Cell 80/84: basis=Q3 window=post ecdet=const p=3 (T=50, m=5)
+  -> OK
+
+Cell 81/84: basis=Q3 window=post ecdet=const p=4 (T=50, m=5)
+  -> OK
+
+Cell 82/84: basis=Q3 window=post ecdet=const p=5 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 83/84: basis=Q3 window=post ecdet=const p=6 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 84/84: basis=Q3 window=post ecdet=const p=7 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+=== Engine completed (base grid) ===
+Cells total: 84 
+Cells ok   : 72 
+Cells skip : 12  (infeasible/admissible)
+Cells fail : 0  (errors)
+PIC rows   : 320 
+Rank rows  : 72 
+Exports written to: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+
+=== S6 theta_inference start ===
+Inference log: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/logs/inference_log.txt 
+=== theta_inference log ===
+TOP_N: 3  BOOT_B: 100  DO_THETA_SECOND: TRUE 
+
+== Inference batch: Q2 full n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q2 full spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q2 full spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q2 full spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+== Inference batch: Q2 ford n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q2 ford spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q2 ford spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q2 ford spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+== Inference batch: Q2 post n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q2 post spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q2 post spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q2 post spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+== Inference batch: Q3 full n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q3 full spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q3 full spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q3 full spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+== Inference batch: Q3 ford n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q3 ford spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q3 ford spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q3 ford spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+== Inference batch: Q3 post n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q3 post spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q3 post spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q3 post spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Running theta_unit_tests_qr...
+theta_unit_tests_qr PASSED.
+
+=== S6 theta_inference completed ===
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  === ChaoGrid Engine start ===
+Project root: C:/ReposGitHub/capacity_utilization 
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+Windows built (raw). N(full)= 99  N(ford)= 49  N(post)= 50 
+
+GLOBAL QR basis built on FULL window e.
+  degree2: center= TRUE 
+  degree3: center= TRUE 
+
+Grid size = 84 cells
+
+Cell 1/84: basis=Q2 window=full ecdet=none p=1 (T=99, m=4)
+  -> OK
+
+Cell 2/84: basis=Q2 window=full ecdet=none p=2 (T=99, m=4)
+  -> OK
+
+Cell 3/84: basis=Q2 window=full ecdet=none p=3 (T=99, m=4)
+  -> OK
+
+Cell 4/84: basis=Q2 window=full ecdet=none p=4 (T=99, m=4)
+  -> OK
+
+Cell 5/84: basis=Q2 window=full ecdet=none p=5 (T=99, m=4)
+  -> OK
+
+Cell 6/84: basis=Q2 window=full ecdet=none p=6 (T=99, m=4)
+  -> OK
+
+Cell 7/84: basis=Q2 window=full ecdet=none p=7 (T=99, m=4)
+  -> OK
+
+Cell 8/84: basis=Q2 window=full ecdet=const p=1 (T=99, m=4)
+  -> OK
+
+Cell 9/84: basis=Q2 window=full ecdet=const p=2 (T=99, m=4)
+  -> OK
+
+Cell 10/84: basis=Q2 window=full ecdet=const p=3 (T=99, m=4)
+  -> OK
+
+Cell 11/84: basis=Q2 window=full ecdet=const p=4 (T=99, m=4)
+  -> OK
+
+Cell 12/84: basis=Q2 window=full ecdet=const p=5 (T=99, m=4)
+  -> OK
+
+Cell 13/84: basis=Q2 window=full ecdet=const p=6 (T=99, m=4)
+  -> OK
+
+Cell 14/84: basis=Q2 window=full ecdet=const p=7 (T=99, m=4)
+  -> OK
+
+Cell 15/84: basis=Q2 window=ford ecdet=none p=1 (T=49, m=4)
+  -> OK
+
+Cell 16/84: basis=Q2 window=ford ecdet=none p=2 (T=49, m=4)
+  -> OK
+
+Cell 17/84: basis=Q2 window=ford ecdet=none p=3 (T=49, m=4)
+  -> OK
+
+Cell 18/84: basis=Q2 window=ford ecdet=none p=4 (T=49, m=4)
+  -> OK
+
+Cell 19/84: basis=Q2 window=ford ecdet=none p=5 (T=49, m=4)
+  -> OK
+
+Cell 20/84: basis=Q2 window=ford ecdet=none p=6 (T=49, m=4)
+  -> OK
+
+Cell 21/84: basis=Q2 window=ford ecdet=none p=7 (T=49, m=4)
+  -> OK
+
+Cell 22/84: basis=Q2 window=ford ecdet=const p=1 (T=49, m=4)
+  -> OK
+
+Cell 23/84: basis=Q2 window=ford ecdet=const p=2 (T=49, m=4)
+  -> OK
+
+Cell 24/84: basis=Q2 window=ford ecdet=const p=3 (T=49, m=4)
+  -> OK
+
+Cell 25/84: basis=Q2 window=ford ecdet=const p=4 (T=49, m=4)
+  -> OK
+
+Cell 26/84: basis=Q2 window=ford ecdet=const p=5 (T=49, m=4)
+  -> OK
+
+Cell 27/84: basis=Q2 window=ford ecdet=const p=6 (T=49, m=4)
+  -> OK
+
+Cell 28/84: basis=Q2 window=ford ecdet=const p=7 (T=49, m=4)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 29/84: basis=Q2 window=post ecdet=none p=1 (T=50, m=4)
+  -> OK
+
+Cell 30/84: basis=Q2 window=post ecdet=none p=2 (T=50, m=4)
+  -> OK
+
+Cell 31/84: basis=Q2 window=post ecdet=none p=3 (T=50, m=4)
+  -> OK
+
+Cell 32/84: basis=Q2 window=post ecdet=none p=4 (T=50, m=4)
+  -> OK
+
+Cell 33/84: basis=Q2 window=post ecdet=none p=5 (T=50, m=4)
+  -> OK
+
+Cell 34/84: basis=Q2 window=post ecdet=none p=6 (T=50, m=4)
+  -> OK
+
+Cell 35/84: basis=Q2 window=post ecdet=none p=7 (T=50, m=4)
+  -> OK
+
+Cell 36/84: basis=Q2 window=post ecdet=const p=1 (T=50, m=4)
+  -> OK
+
+Cell 37/84: basis=Q2 window=post ecdet=const p=2 (T=50, m=4)
+  -> OK
+
+Cell 38/84: basis=Q2 window=post ecdet=const p=3 (T=50, m=4)
+  -> OK
+
+Cell 39/84: basis=Q2 window=post ecdet=const p=4 (T=50, m=4)
+  -> OK
+
+Cell 40/84: basis=Q2 window=post ecdet=const p=5 (T=50, m=4)
+  -> OK
+
+Cell 41/84: basis=Q2 window=post ecdet=const p=6 (T=50, m=4)
+  -> OK
+
+Cell 42/84: basis=Q2 window=post ecdet=const p=7 (T=50, m=4)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 43/84: basis=Q3 window=full ecdet=none p=1 (T=99, m=5)
+  -> OK
+
+Cell 44/84: basis=Q3 window=full ecdet=none p=2 (T=99, m=5)
+  -> OK
+
+Cell 45/84: basis=Q3 window=full ecdet=none p=3 (T=99, m=5)
+  -> OK
+
+Cell 46/84: basis=Q3 window=full ecdet=none p=4 (T=99, m=5)
+  -> OK
+
+Cell 47/84: basis=Q3 window=full ecdet=none p=5 (T=99, m=5)
+  -> OK
+
+Cell 48/84: basis=Q3 window=full ecdet=none p=6 (T=99, m=5)
+  -> OK
+
+Cell 49/84: basis=Q3 window=full ecdet=none p=7 (T=99, m=5)
+  -> OK
+
+Cell 50/84: basis=Q3 window=full ecdet=const p=1 (T=99, m=5)
+  -> OK
+
+Cell 51/84: basis=Q3 window=full ecdet=const p=2 (T=99, m=5)
+  -> OK
+
+Cell 52/84: basis=Q3 window=full ecdet=const p=3 (T=99, m=5)
+  -> OK
+
+Cell 53/84: basis=Q3 window=full ecdet=const p=4 (T=99, m=5)
+  -> OK
+
+Cell 54/84: basis=Q3 window=full ecdet=const p=5 (T=99, m=5)
+  -> OK
+
+Cell 55/84: basis=Q3 window=full ecdet=const p=6 (T=99, m=5)
+  -> OK
+
+Cell 56/84: basis=Q3 window=full ecdet=const p=7 (T=99, m=5)
+  -> OK
+
+Cell 57/84: basis=Q3 window=ford ecdet=none p=1 (T=49, m=5)
+  -> OK
+
+Cell 58/84: basis=Q3 window=ford ecdet=none p=2 (T=49, m=5)
+  -> OK
+
+Cell 59/84: basis=Q3 window=ford ecdet=none p=3 (T=49, m=5)
+  -> OK
+
+Cell 60/84: basis=Q3 window=ford ecdet=none p=4 (T=49, m=5)
+  -> OK
+
+Cell 61/84: basis=Q3 window=ford ecdet=none p=5 (T=49, m=5)
+  -> OK
+
+Cell 62/84: basis=Q3 window=ford ecdet=none p=6 (T=49, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 63/84: basis=Q3 window=ford ecdet=none p=7 (T=49, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 64/84: basis=Q3 window=ford ecdet=const p=1 (T=49, m=5)
+  -> OK
+
+Cell 65/84: basis=Q3 window=ford ecdet=const p=2 (T=49, m=5)
+  -> OK
+
+Cell 66/84: basis=Q3 window=ford ecdet=const p=3 (T=49, m=5)
+  -> OK
+
+Cell 67/84: basis=Q3 window=ford ecdet=const p=4 (T=49, m=5)
+  -> OK
+
+Cell 68/84: basis=Q3 window=ford ecdet=const p=5 (T=49, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 69/84: basis=Q3 window=ford ecdet=const p=6 (T=49, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 70/84: basis=Q3 window=ford ecdet=const p=7 (T=49, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 71/84: basis=Q3 window=post ecdet=none p=1 (T=50, m=5)
+  -> OK
+
+Cell 72/84: basis=Q3 window=post ecdet=none p=2 (T=50, m=5)
+  -> OK
+
+Cell 73/84: basis=Q3 window=post ecdet=none p=3 (T=50, m=5)
+  -> OK
+
+Cell 74/84: basis=Q3 window=post ecdet=none p=4 (T=50, m=5)
+  -> OK
+
+Cell 75/84: basis=Q3 window=post ecdet=none p=5 (T=50, m=5)
+  -> OK
+
+Cell 76/84: basis=Q3 window=post ecdet=none p=6 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 77/84: basis=Q3 window=post ecdet=none p=7 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 78/84: basis=Q3 window=post ecdet=const p=1 (T=50, m=5)
+  -> OK
+
+Cell 79/84: basis=Q3 window=post ecdet=const p=2 (T=50, m=5)
+  -> OK
+
+Cell 80/84: basis=Q3 window=post ecdet=const p=3 (T=50, m=5)
+  -> OK
+
+Cell 81/84: basis=Q3 window=post ecdet=const p=4 (T=50, m=5)
+  -> OK
+
+Cell 82/84: basis=Q3 window=post ecdet=const p=5 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 83/84: basis=Q3 window=post ecdet=const p=6 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 84/84: basis=Q3 window=post ecdet=const p=7 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+=== Engine completed (base grid) ===
+Cells total: 84 
+Cells ok   : 72 
+Cells skip : 12  (infeasible/admissible)
+Cells fail : 0  (errors)
+PIC rows   : 320 
+Rank rows  : 72 
+Exports written to: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+
+=== S6 theta_inference start ===
+Inference log: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/logs/inference_log.txt 
+=== theta_inference log ===
+TOP_N: 3  BOOT_B: 100  DO_THETA_SECOND: TRUE 
+
+== Inference batch: Q2 full n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q2 full spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q2 full spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q2 full spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+== Inference batch: Q2 ford n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q2 ford spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q2 ford spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q2 ford spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+== Inference batch: Q2 post n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q2 post spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q2 post spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q2 post spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+== Inference batch: Q3 full n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q3 full spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q3 full spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q3 full spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+== Inference batch: Q3 ford n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q3 ford spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q3 ford spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q3 ford spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+== Inference batch: Q3 post n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q3 post spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q3 post spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q3 post spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Running theta_unit_tests_qr...
+theta_unit_tests_qr PASSED.
+
+=== S6 theta_inference completed ===
+=== ChaoGrid Report start ===
+Root: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+PIC rows (all): 320 
+Rank rows(all): 72 
+
+
+--- Running basis: Q2 ---
+PIC rows: 160 
+Rank rows: 40 
+
+
+--- Running basis: Q3 ---
+PIC rows: 160 
+Rank rows: 32 
+
+
+NOTE: No S6 inference artifacts found in output/ChaoGrid/csv (run engine with S6 enabled).
+
+=== ChaoGrid Report completed ===
+Exports written to: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+m,p,det)
+
+Cell 69/84: basis=Q3 window=ford ecdet=const p=6 (T=49, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 70/84: basis=Q3 window=ford ecdet=const p=7 (T=49, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 71/84: basis=Q3 window=post ecdet=none p=1 (T=50, m=5)
+  -> OK
+
+Cell 72/84: basis=Q3 window=post ecdet=none p=2 (T=50, m=5)
+  -> OK
+
+Cell 73/84: basis=Q3 window=post ecdet=none p=3 (T=50, m=5)
+  -> OK
+
+Cell 74/84: basis=Q3 window=post ecdet=none p=4 (T=50, m=5)
+  -> OK
+
+Cell 75/84: basis=Q3 window=post ecdet=none p=5 (T=50, m=5)
+  -> OK
+
+Cell 76/84: basis=Q3 window=post ecdet=none p=6 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 77/84: basis=Q3 window=post ecdet=none p=7 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 78/84: basis=Q3 window=post ecdet=const p=1 (T=50, m=5)
+  -> OK
+
+Cell 79/84: basis=Q3 window=post ecdet=const p=2 (T=50, m=5)
+  -> OK
+
+Cell 80/84: basis=Q3 window=post ecdet=const p=3 (T=50, m=5)
+  -> OK
+
+Cell 81/84: basis=Q3 window=post ecdet=const p=4 (T=50, m=5)
+  -> OK
+
+Cell 82/84: basis=Q3 window=post ecdet=const p=5 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 83/84: basis=Q3 window=post ecdet=const p=6 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+Cell 84/84: basis=Q3 window=post ecdet=const p=7 (T=50, m=5)
+  -> SKIP infeasible (T too small for m,p,det)
+
+=== Engine completed (base grid) ===
+Cells total: 84 
+Cells ok   : 72 
+Cells skip : 12  (infeasible/admissible)
+Cells fail : 0  (errors)
+PIC rows   : 320 
+Rank rows  : 72 
+Exports written to: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+
+=== S6 theta_inference start ===
+Inference log: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/logs/inference_log.txt 
+=== theta_inference log ===
+TOP_N: 3  BOOT_B: 100  DO_THETA_SECOND: TRUE 
+
+== Inference batch: Q2 full n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q2 full spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q2 full spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q2 full spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+== Inference batch: Q2 ford n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q2 ford spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q2 ford spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q2 ford spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+== Inference batch: Q2 post n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q2 post spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q2 post spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q2 post spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+== Inference batch: Q3 full n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q3 full spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q3 full spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q3 full spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+== Inference batch: Q3 ford n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q3 ford spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q3 ford spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q3 ford spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+== Inference batch: Q3 post n_specs= 3 
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q3 post spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q3 post spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q3 post spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_PError in extract_t
+
+Running theta_unit_tests_qr...
+theta_unit_tests_qr PASSED.
+
+=== S6 theta_inference completed ===
+=== ChaoGrid Report start ===
+Root: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+PIC rows (all): 320 
+Rank rows(all): 72 
+
+
+--- Running basis: Q2 ---
+PIC rows: 160 
+Rank rows: 40 
+
+
+--- Running basis: Q3 ---
+PIC rows: 160 
+Rank rows: 32 
+
+
+NOTE: No S6 inference artifacts found in output/ChaoGrid/csv (run engine with S6 enabled).
+
+=== ChaoGrid Report completed ===
+Exports written to: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+aoGrid/csv (run engine with S6 enabled).
+
+=== ChaoGrid Report completed ===
+Exports written to: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+Spec: Q3 ford none p= 5 r= 4 degree= 3 
+  -> inference FAIL for Q3 post spec k=1: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 3 degree= 3 
+  -> inference FAIL for Q3 post spec k=2: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Spec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q3 post spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Running theta_unit_tests_qr...
+theta_unit_tests_qr PASSED.
+
+=== S6 theta_inference completed ===
+=== ChaoGrid Report start ===
+Root: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+PIC rows (all): 320 
+Rank rows(all): 72 
+
+
+--- Running basis: Q2 ---
+PIC rows: 160 
+Rank rows: 40 
+
+
+--- Running basis: Q3 ---
+PIC rows: 160 
+Rank rows: 32 
+
+
+NOTE: No S6 inference artifacts found in output/ChaoGrid/csv (run engine with S6 enabled).
+
+=== ChaoGrid Report completed ===
+Exports written to: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+pec: Q3 ford none p= 5 r= 2 degree= 3 
+  -> inference FAIL for Q3 post spec k=3: Error in extract_theta_beta_from_dfw(dfw_mat, ecdet, p, degree) : 
+  log_y not found in beta vector names. Found: log_y.l6, log_k.l6, logK_P1.l6, logK_P2.l6, logK_P3.l6
+
+
+Running theta_unit_tests_qr...
+theta_unit_tests_qr PASSED.
+
+=== S6 theta_inference completed ===
+=== ChaoGrid Report start ===
+Root: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+PIC rows (all): 320 
+Rank rows(all): 72 
+
+
+--- Running basis: Q2 ---
+PIC rows: 160 
+Rank rows: 40 
+
+
+--- Running basis: Q3 ---
+PIC rows: 160 
+Rank rows: 32 
+
+
+NOTE: No S6 inference artifacts found in output/ChaoGrid/csv (run engine with S6 enabled).
+
+=== ChaoGrid Report completed ===
 Exports written to: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 

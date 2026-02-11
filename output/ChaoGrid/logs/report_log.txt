@@ -1,15 +1,21 @@
 === ChaoGrid Report start ===
-PIC rows: 252 
-Rank rows: 63 
+Root: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+PIC rows (all): 320 
+Rank rows(all): 72 
 
 
-========================================
-ChaoGrid_Report: FINAL RECOMMENDATIONS (S4)
-========================================
-  window ecdet ecdet_label p r  T m    logdet       PIC      BIC                                                         reason
-1   full trend       Trend 1 3 99 4 -23.01023 -21.57136 119.4385 Selected: min PIC within window; tie-break BIC then smallest p
-2   ford trend       Trend 7 3 49 4 -34.85101 -24.76405 459.4102 Selected: min PIC within window; tie-break BIC then smallest p
-3   post trend       Trend 7 3 50 4 -33.31757 -23.38103 463.5094 Selected: min PIC within window; tie-break BIC then smallest p
+--- Running basis: Q2 ---
+PIC rows: 160 
+Rank rows: 40 
+
+
+--- Running basis: Q3 ---
+PIC rows: 160 
+Rank rows: 32 
+
+
+NOTE: No S6 inference artifacts found in output/ChaoGrid/csv (run engine with S6 enabled).
 
 === ChaoGrid Report completed ===
 Exports written to: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
