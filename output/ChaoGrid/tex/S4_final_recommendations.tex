@@ -1,0 +1,22 @@
+\begingroup\fontsize{9}{11}\selectfont
+
+\begin{longtable}[t]{llrrrrrrrrll}
+\caption{\label{tab:tab:S4_final_recommendations}S4: Final recommended specification per window (PIC-first)}\\
+\toprule
+window & ecdet & p & r & T & m & logdet & k\_par & PIC & BIC & ecdet\_label & reason\\
+\midrule
+\endfirsthead
+\caption[]{S4: Final recommended specification per window (PIC-first) \textit{(continued)}}\\
+\toprule
+window & ecdet & p & r & T & m & logdet & k\_par & PIC & BIC & ecdet\_label & reason\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+full & trend & 1 & 3 & 99 & 4 & -23.010 & 31 & -21.571 & 119.438 & Trend & Selected: min PIC within window; tie-break BIC then smallest p\\
+ford & trend & 7 & 3 & 49 & 4 & -34.851 & 127 & -24.764 & 459.410 & Trend & Selected: min PIC within window; tie-break BIC then smallest p\\
+post & trend & 7 & 3 & 50 & 4 & -33.318 & 127 & -23.381 & 463.509 & Trend & Selected: min PIC within window; tie-break BIC then smallest p\\*
+\end{longtable}
+\endgroup{}

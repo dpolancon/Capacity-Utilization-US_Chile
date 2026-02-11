@@ -1,0 +1,204 @@
+=== ChaoGrid Engine start ===
+Project root: C:/ReposGitHub/capacity_utilization 
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+Windows built. N(full)= 99  N(ford)= 49  N(post)= 50 
+
+SYS_VARS:  log_y, log_k, logK_e, logK_e2 
+System size m = 4 
+
+Grid size = 63 cells
+
+Cell 1/63: window=full ecdet=none p=1 (T=99, m=4)
+  -> done.
+
+Cell 2/63: window=full ecdet=none p=2 (T=99, m=4)
+  -> done.
+
+Cell 3/63: window=full ecdet=none p=3 (T=99, m=4)
+  -> done.
+
+Cell 4/63: window=full ecdet=none p=4 (T=99, m=4)
+  -> done.
+
+Cell 5/63: window=full ecdet=none p=5 (T=99, m=4)
+  -> done.
+
+Cell 6/63: window=full ecdet=none p=6 (T=99, m=4)
+  -> done.
+
+Cell 7/63: window=full ecdet=none p=7 (T=99, m=4)
+  -> done.
+
+Cell 8/63: window=full ecdet=const p=1 (T=99, m=4)
+  -> done.
+
+Cell 9/63: window=full ecdet=const p=2 (T=99, m=4)
+  -> done.
+
+Cell 10/63: window=full ecdet=const p=3 (T=99, m=4)
+  -> done.
+
+Cell 11/63: window=full ecdet=const p=4 (T=99, m=4)
+  -> done.
+
+Cell 12/63: window=full ecdet=const p=5 (T=99, m=4)
+  -> done.
+
+Cell 13/63: window=full ecdet=const p=6 (T=99, m=4)
+  -> done.
+
+Cell 14/63: window=full ecdet=const p=7 (T=99, m=4)
+  -> done.
+
+Cell 15/63: window=full ecdet=trend p=1 (T=99, m=4)
+  -> done.
+
+Cell 16/63: window=full ecdet=trend p=2 (T=99, m=4)
+  -> done.
+
+Cell 17/63: window=full ecdet=trend p=3 (T=99, m=4)
+  -> done.
+
+Cell 18/63: window=full ecdet=trend p=4 (T=99, m=4)
+  -> done.
+
+Cell 19/63: window=full ecdet=trend p=5 (T=99, m=4)
+  -> done.
+
+Cell 20/63: window=full ecdet=trend p=6 (T=99, m=4)
+  -> done.
+
+Cell 21/63: window=full ecdet=trend p=7 (T=99, m=4)
+  -> done.
+
+Cell 22/63: window=ford ecdet=none p=1 (T=49, m=4)
+  -> done.
+
+Cell 23/63: window=ford ecdet=none p=2 (T=49, m=4)
+  -> done.
+
+Cell 24/63: window=ford ecdet=none p=3 (T=49, m=4)
+  -> done.
+
+Cell 25/63: window=ford ecdet=none p=4 (T=49, m=4)
+  -> done.
+
+Cell 26/63: window=ford ecdet=none p=5 (T=49, m=4)
+  -> done.
+
+Cell 27/63: window=ford ecdet=none p=6 (T=49, m=4)
+  -> done.
+
+Cell 28/63: window=ford ecdet=none p=7 (T=49, m=4)
+  -> done.
+
+Cell 29/63: window=ford ecdet=const p=1 (T=49, m=4)
+  -> done.
+
+Cell 30/63: window=ford ecdet=const p=2 (T=49, m=4)
+  -> done.
+
+Cell 31/63: window=ford ecdet=const p=3 (T=49, m=4)
+  -> done.
+
+Cell 32/63: window=ford ecdet=const p=4 (T=49, m=4)
+  -> done.
+
+Cell 33/63: window=ford ecdet=const p=5 (T=49, m=4)
+  -> done.
+
+Cell 34/63: window=ford ecdet=const p=6 (T=49, m=4)
+  -> done.
+
+Cell 35/63: window=ford ecdet=const p=7 (T=49, m=4)
+  -> done.
+
+Cell 36/63: window=ford ecdet=trend p=1 (T=49, m=4)
+  -> done.
+
+Cell 37/63: window=ford ecdet=trend p=2 (T=49, m=4)
+  -> done.
+
+Cell 38/63: window=ford ecdet=trend p=3 (T=49, m=4)
+  -> done.
+
+Cell 39/63: window=ford ecdet=trend p=4 (T=49, m=4)
+  -> done.
+
+Cell 40/63: window=ford ecdet=trend p=5 (T=49, m=4)
+  -> done.
+
+Cell 41/63: window=ford ecdet=trend p=6 (T=49, m=4)
+  -> done.
+
+Cell 42/63: window=ford ecdet=trend p=7 (T=49, m=4)
+  -> done.
+
+Cell 43/63: window=post ecdet=none p=1 (T=50, m=4)
+  -> done.
+
+Cell 44/63: window=post ecdet=none p=2 (T=50, m=4)
+  -> done.
+
+Cell 45/63: window=post ecdet=none p=3 (T=50, m=4)
+  -> done.
+
+Cell 46/63: window=post ecdet=none p=4 (T=50, m=4)
+  -> done.
+
+Cell 47/63: window=post ecdet=none p=5 (T=50, m=4)
+  -> done.
+
+Cell 48/63: window=post ecdet=none p=6 (T=50, m=4)
+  -> done.
+
+Cell 49/63: window=post ecdet=none p=7 (T=50, m=4)
+  -> done.
+
+Cell 50/63: window=post ecdet=const p=1 (T=50, m=4)
+  -> done.
+
+Cell 51/63: window=post ecdet=const p=2 (T=50, m=4)
+  -> done.
+
+Cell 52/63: window=post ecdet=const p=3 (T=50, m=4)
+  -> done.
+
+Cell 53/63: window=post ecdet=const p=4 (T=50, m=4)
+  -> done.
+
+Cell 54/63: window=post ecdet=const p=5 (T=50, m=4)
+  -> done.
+
+Cell 55/63: window=post ecdet=const p=6 (T=50, m=4)
+  -> done.
+
+Cell 56/63: window=post ecdet=const p=7 (T=50, m=4)
+  -> done.
+
+Cell 57/63: window=post ecdet=trend p=1 (T=50, m=4)
+  -> done.
+
+Cell 58/63: window=post ecdet=trend p=2 (T=50, m=4)
+  -> done.
+
+Cell 59/63: window=post ecdet=trend p=3 (T=50, m=4)
+  -> done.
+
+Cell 60/63: window=post ecdet=trend p=4 (T=50, m=4)
+  -> done.
+
+Cell 61/63: window=post ecdet=trend p=5 (T=50, m=4)
+  -> done.
+
+Cell 62/63: window=post ecdet=trend p=6 (T=50, m=4)
+  -> done.
+
+Cell 63/63: window=post ecdet=trend p=7 (T=50, m=4)
+  -> done.
+
+=== Engine completed ===
+PIC table rows : 252 
+Rank table rows: 63 
+Exports written to: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 

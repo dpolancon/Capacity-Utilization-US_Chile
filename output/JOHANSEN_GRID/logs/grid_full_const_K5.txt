@@ -1,0 +1,103 @@
+==============================================================
+JOHANSEN GRID | window=full | ecdet=const | K=5
+==============================================================
+n=99 | m=4 | vars=log_y, log_k, logK_e, logK_e2
+
+---- TRACE summary ----
+
+###################### 
+# Johansen-Procedure # 
+###################### 
+
+Test type: trace statistic , without linear trend and constant in cointegration 
+
+Eigenvalues (lambda):
+[1] 3.353087e-01 1.504730e-01 6.831979e-02 3.326244e-02 1.200612e-15
+
+Values of teststatistic and critical values of test:
+
+          test 10pct  5pct  1pct
+r <= 3 |  3.18  7.52  9.24 12.97
+r <= 2 |  9.83 17.85 19.96 24.60
+r <= 1 | 25.16 32.00 34.91 41.07
+r = 0  | 63.55 49.65 53.12 60.16
+
+Eigenvectors, normalised to first column:
+(These are the cointegration relations)
+
+              log_y.l1   log_k.l1 logK_e.l1 logK_e2.l1    constant
+log_y.l1     1.0000000  1.0000000  1.000000   1.000000   1.0000000
+log_k.l1    12.1204379 -1.4388093 -2.055205  -2.956246  -3.3133783
+logK_e.l1  -62.0501380  2.6198531  5.501773   2.935511  12.8759980
+logK_e2.l1  72.5401614 -3.0966797 -5.859515   1.091654 -17.1400569
+constant    -0.5005981  0.5213731 -1.270161   2.707671   0.1020812
+
+Weights W:
+(This is the loading matrix)
+
+              log_y.l1   log_k.l1    logK_e.l1    logK_e2.l1      constant
+log_y.d   -0.004389634 0.05329858 -0.029435486 -3.312063e-04  7.710114e-14
+log_k.d   -0.001370830 0.04960047  0.006770297  1.263729e-05  7.764251e-14
+logK_e.d  -0.001334859 0.06884427 -0.021697687 -1.382110e-02 -6.462380e-15
+logK_e2.d -0.014217047 0.05170649 -0.017354759 -1.190087e-02  2.938824e-13
+
+
+---- MAX-EIGEN summary ----
+
+###################### 
+# Johansen-Procedure # 
+###################### 
+
+Test type: maximal eigenvalue statistic (lambda max) , without linear trend and constant in cointegration 
+
+Eigenvalues (lambda):
+[1] 3.353087e-01 1.504730e-01 6.831979e-02 3.326244e-02 1.200612e-15
+
+Values of teststatistic and critical values of test:
+
+          test 10pct  5pct  1pct
+r <= 3 |  3.18  7.52  9.24 12.97
+r <= 2 |  6.65 13.75 15.67 20.20
+r <= 1 | 15.33 19.77 22.00 26.81
+r = 0  | 38.39 25.56 28.14 33.24
+
+Eigenvectors, normalised to first column:
+(These are the cointegration relations)
+
+              log_y.l1   log_k.l1 logK_e.l1 logK_e2.l1    constant
+log_y.l1     1.0000000  1.0000000  1.000000   1.000000   1.0000000
+log_k.l1    12.1204379 -1.4388093 -2.055205  -2.956246  -3.3133783
+logK_e.l1  -62.0501380  2.6198531  5.501773   2.935511  12.8759980
+logK_e2.l1  72.5401614 -3.0966797 -5.859515   1.091654 -17.1400569
+constant    -0.5005981  0.5213731 -1.270161   2.707671   0.1020812
+
+Weights W:
+(This is the loading matrix)
+
+              log_y.l1   log_k.l1    logK_e.l1    logK_e2.l1      constant
+log_y.d   -0.004389634 0.05329858 -0.029435486 -3.312063e-04  7.710114e-14
+log_k.d   -0.001370830 0.04960047  0.006770297  1.263729e-05  7.764251e-14
+logK_e.d  -0.001334859 0.06884427 -0.021697687 -1.382110e-02 -6.462380e-15
+logK_e2.d -0.014217047 0.05170649 -0.017354759 -1.190087e-02  2.938824e-13
+
+
+---- TRACE rank table (parsed) ----
+        H0      stat cv_10  cv_5  cv_1 r0 rej_10 rej_5 rej_1
+1 r <= 3 |  3.179852  7.52  9.24 12.97  0  FALSE FALSE FALSE
+2 r <= 2 |  9.831822 17.85 19.96 24.60  1  FALSE FALSE FALSE
+3 r <= 1 | 25.160927 32.00 34.91 41.07  2  FALSE FALSE FALSE
+4 r = 0  | 63.553584 49.65 53.12 60.16  3   TRUE  TRUE  TRUE
+
+---- MAX-EIGEN rank table (parsed) ----
+        H0      stat cv_10  cv_5  cv_1 r0 rej_10 rej_5 rej_1
+1 r <= 3 |  3.179852  7.52  9.24 12.97  0  FALSE FALSE FALSE
+2 r <= 2 |  6.651970 13.75 15.67 20.20  1  FALSE FALSE FALSE
+3 r <= 1 | 15.329105 19.77 22.00 26.81  2  FALSE FALSE FALSE
+4 r = 0  | 38.392656 25.56 28.14 33.24  3   TRUE  TRUE  TRUE
+
+---- PIC table (r=0..m-1) ----
+  window ecdet K p r  T m    logdet       PIC       BIC
+1   full const 5 4 0 94 4 -22.71951 -19.62621 -19.62621
+2   full const 5 4 1 94 4 -23.04557 -19.46894 -19.61393
+3   full const 5 4 2 94 4 -23.18880 -19.32217 -19.51550
+4   full const 5 4 3 94 4 -23.25354 -19.29024 -19.43524 

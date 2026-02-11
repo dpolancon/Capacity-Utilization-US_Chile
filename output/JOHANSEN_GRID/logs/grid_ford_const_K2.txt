@@ -1,0 +1,103 @@
+==============================================================
+JOHANSEN GRID | window=ford | ecdet=const | K=2
+==============================================================
+n=49 | m=4 | vars=log_y, log_k, logK_e, logK_e2
+
+---- TRACE summary ----
+
+###################### 
+# Johansen-Procedure # 
+###################### 
+
+Test type: trace statistic , without linear trend and constant in cointegration 
+
+Eigenvalues (lambda):
+[1] 5.953500e-01 2.929521e-01 2.150744e-01 7.251338e-02 4.403992e-17
+
+Values of teststatistic and critical values of test:
+
+          test 10pct  5pct  1pct
+r <= 3 |  3.54  7.52  9.24 12.97
+r <= 2 | 14.92 17.85 19.96 24.60
+r <= 1 | 31.21 32.00 34.91 41.07
+r = 0  | 73.74 49.65 53.12 60.16
+
+Eigenvectors, normalised to first column:
+(These are the cointegration relations)
+
+             log_y.l1    log_k.l1  logK_e.l1 logK_e2.l1   constant
+log_y.l1     1.000000   1.0000000   1.000000  1.0000000  1.0000000
+log_k.l1   -14.569034   1.6288827  -2.864460 -0.4705685 -3.3095996
+logK_e.l1   64.057198 -10.2936334  20.585971 -3.3715849  0.2338335
+logK_e2.l1 -76.383881   9.5172232 -42.693968  4.4293584  3.1508500
+constant     1.868797   0.3041752   2.007873 -0.4590555  5.7005669
+
+Weights W:
+(This is the loading matrix)
+
+               log_y.l1   log_k.l1     logK_e.l1   logK_e2.l1      constant
+log_y.d   -3.241686e-02 0.05844190  0.0001875274 -0.034765668 -3.002665e-15
+log_k.d    1.355513e-02 0.07669999 -0.0073203387 -0.005557358 -7.178623e-16
+logK_e.d  -9.912187e-05 0.10473718  0.0166083173 -0.025433406 -1.898082e-15
+logK_e2.d  6.012047e-03 0.06832260  0.0152097132 -0.021736913 -8.965493e-16
+
+
+---- MAX-EIGEN summary ----
+
+###################### 
+# Johansen-Procedure # 
+###################### 
+
+Test type: maximal eigenvalue statistic (lambda max) , without linear trend and constant in cointegration 
+
+Eigenvalues (lambda):
+[1] 5.953500e-01 2.929521e-01 2.150744e-01 7.251338e-02 4.403992e-17
+
+Values of teststatistic and critical values of test:
+
+          test 10pct  5pct  1pct
+r <= 3 |  3.54  7.52  9.24 12.97
+r <= 2 | 11.38 13.75 15.67 20.20
+r <= 1 | 16.29 19.77 22.00 26.81
+r = 0  | 42.52 25.56 28.14 33.24
+
+Eigenvectors, normalised to first column:
+(These are the cointegration relations)
+
+             log_y.l1    log_k.l1  logK_e.l1 logK_e2.l1   constant
+log_y.l1     1.000000   1.0000000   1.000000  1.0000000  1.0000000
+log_k.l1   -14.569034   1.6288827  -2.864460 -0.4705685 -3.3095996
+logK_e.l1   64.057198 -10.2936334  20.585971 -3.3715849  0.2338335
+logK_e2.l1 -76.383881   9.5172232 -42.693968  4.4293584  3.1508500
+constant     1.868797   0.3041752   2.007873 -0.4590555  5.7005669
+
+Weights W:
+(This is the loading matrix)
+
+               log_y.l1   log_k.l1     logK_e.l1   logK_e2.l1      constant
+log_y.d   -3.241686e-02 0.05844190  0.0001875274 -0.034765668 -3.002665e-15
+log_k.d    1.355513e-02 0.07669999 -0.0073203387 -0.005557358 -7.178623e-16
+logK_e.d  -9.912187e-05 0.10473718  0.0166083173 -0.025433406 -1.898082e-15
+logK_e2.d  6.012047e-03 0.06832260  0.0152097132 -0.021736913 -8.965493e-16
+
+
+---- TRACE rank table (parsed) ----
+        H0      stat cv_10  cv_5  cv_1 r0 rej_10 rej_5 rej_1
+1 r <= 3 |  3.538015  7.52  9.24 12.97  0  FALSE FALSE FALSE
+2 r <= 2 | 14.919830 17.85 19.96 24.60  1  FALSE FALSE FALSE
+3 r <= 1 | 31.212703 32.00 34.91 41.07  2  FALSE FALSE FALSE
+4 r = 0  | 73.735146 49.65 53.12 60.16  3   TRUE  TRUE  TRUE
+
+---- MAX-EIGEN rank table (parsed) ----
+        H0      stat cv_10  cv_5  cv_1 r0 rej_10 rej_5 rej_1
+1 r <= 3 |  3.538015  7.52  9.24 12.97  0  FALSE FALSE FALSE
+2 r <= 2 | 11.381815 13.75 15.67 20.20  1  FALSE FALSE FALSE
+3 r <= 1 | 16.292873 19.77 22.00 26.81  2  FALSE FALSE FALSE
+4 r = 0  | 42.522443 25.56 28.14 33.24  3   TRUE  TRUE  TRUE
+
+---- PIC table (r=0..m-1) ----
+  window ecdet K p r  T m    logdet       PIC       BIC
+1   ford const 2 1 0 47 4 -24.14724 -22.83655 -22.83655
+2   ford const 2 1 1 47 4 -24.97319 -22.84332 -23.08908
+3   ford const 2 1 2 47 4 -25.29908 -22.67770 -23.00537
+4   ford const 2 1 3 47 4 -25.53544 -22.75023 -22.99598 

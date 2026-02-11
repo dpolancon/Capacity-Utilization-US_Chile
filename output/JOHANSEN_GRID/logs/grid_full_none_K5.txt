@@ -1,0 +1,101 @@
+==============================================================
+JOHANSEN GRID | window=full | ecdet=none | K=5
+==============================================================
+n=99 | m=4 | vars=log_y, log_k, logK_e, logK_e2
+
+---- TRACE summary ----
+
+###################### 
+# Johansen-Procedure # 
+###################### 
+
+Test type: trace statistic , with linear trend 
+
+Eigenvalues (lambda):
+[1] 0.33397914 0.10672189 0.03658194 0.01092154
+
+Values of teststatistic and critical values of test:
+
+          test 10pct  5pct  1pct
+r <= 3 |  1.03  6.50  8.18 11.65
+r <= 2 |  4.54 15.66 17.95 23.52
+r <= 1 | 15.14 28.71 31.52 37.22
+r = 0  | 53.35 45.23 48.28 55.43
+
+Eigenvectors, normalised to first column:
+(These are the cointegration relations)
+
+            log_y.l1  log_k.l1 logK_e.l1 logK_e2.l1
+log_y.l1     1.00000  1.000000  1.000000   1.000000
+log_k.l1    11.64879 -1.918499 -3.748329  -3.496971
+logK_e.l1  -59.79819  4.858779  6.333558  14.881686
+logK_e2.l1  69.90007 -5.546851 -4.217647 -20.837333
+
+Weights W:
+(This is the loading matrix)
+
+               log_y.l1    log_k.l1     logK_e.l1  logK_e2.l1
+log_y.d   -0.0010896914 0.009861945  0.0021419220 0.008228078
+log_k.d    0.0004895672 0.052642486  0.0002569475 0.001623572
+logK_e.d   0.0030614098 0.021333686 -0.0081443752 0.015739904
+logK_e2.d -0.0112584562 0.013712316 -0.0071758606 0.012955816
+
+
+---- MAX-EIGEN summary ----
+
+###################### 
+# Johansen-Procedure # 
+###################### 
+
+Test type: maximal eigenvalue statistic (lambda max) , with linear trend 
+
+Eigenvalues (lambda):
+[1] 0.33397914 0.10672189 0.03658194 0.01092154
+
+Values of teststatistic and critical values of test:
+
+          test 10pct  5pct  1pct
+r <= 3 |  1.03  6.50  8.18 11.65
+r <= 2 |  3.50 12.91 14.90 19.19
+r <= 1 | 10.61 18.90 21.07 25.75
+r = 0  | 38.20 24.78 27.14 32.14
+
+Eigenvectors, normalised to first column:
+(These are the cointegration relations)
+
+            log_y.l1  log_k.l1 logK_e.l1 logK_e2.l1
+log_y.l1     1.00000  1.000000  1.000000   1.000000
+log_k.l1    11.64879 -1.918499 -3.748329  -3.496971
+logK_e.l1  -59.79819  4.858779  6.333558  14.881686
+logK_e2.l1  69.90007 -5.546851 -4.217647 -20.837333
+
+Weights W:
+(This is the loading matrix)
+
+               log_y.l1    log_k.l1     logK_e.l1  logK_e2.l1
+log_y.d   -0.0010896914 0.009861945  0.0021419220 0.008228078
+log_k.d    0.0004895672 0.052642486  0.0002569475 0.001623572
+logK_e.d   0.0030614098 0.021333686 -0.0081443752 0.015739904
+logK_e2.d -0.0112584562 0.013712316 -0.0071758606 0.012955816
+
+
+---- TRACE rank table (parsed) ----
+        H0      stat cv_10  cv_5  cv_1 r0 rej_10 rej_5 rej_1
+1 r <= 3 |  1.032272  6.50  8.18 11.65  0  FALSE FALSE FALSE
+2 r <= 2 |  4.535449 15.66 17.95 23.52  1  FALSE FALSE FALSE
+3 r <= 1 | 15.144036 28.71 31.52 37.22  2  FALSE FALSE FALSE
+4 r = 0  | 53.348859 45.23 48.28 55.43  3   TRUE  TRUE FALSE
+
+---- MAX-EIGEN rank table (parsed) ----
+        H0      stat cv_10  cv_5  cv_1 r0 rej_10 rej_5 rej_1
+1 r <= 3 |  1.032272  6.50  8.18 11.65  0  FALSE FALSE FALSE
+2 r <= 2 |  3.503177 12.91 14.90 19.19  1  FALSE FALSE FALSE
+3 r <= 1 | 10.608587 18.90 21.07 25.75  2  FALSE FALSE FALSE
+4 r = 0  | 38.204823 24.78 27.14 32.14  3   TRUE  TRUE  TRUE
+
+---- PIC table (r=0..m-1) ----
+  window ecdet K p r  T m    logdet       PIC       BIC
+1   full  none 5 4 0 94 4 -22.63785 -19.54454 -19.54454
+2   full  none 5 4 1 94 4 -23.12595 -19.54931 -19.69431
+3   full  none 5 4 2 94 4 -23.23881 -19.37217 -19.56550
+4   full  none 5 4 3 94 4 -23.27607 -19.31277 -19.45777 

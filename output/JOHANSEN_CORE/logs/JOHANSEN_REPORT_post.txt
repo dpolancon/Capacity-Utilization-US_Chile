@@ -1,0 +1,97 @@
+==============================================================================
+JOHANSEN REPORT — WINDOW: POST
+==============================================================================
+
+n = 50 | K (VAR lag) = 6
+SYS_VARS: log_y, log_k, logK_e, logK_e2
+ECDET: const | SPEC: transitory | LAGMAX: 6
+RUN DATE: 2026-02-06 14:16:33
+ 
+---- ca.jo TRACE summary ----
+
+###################### 
+# Johansen-Procedure # 
+###################### 
+
+Test type: trace statistic , without linear trend and constant in cointegration 
+
+Eigenvalues (lambda):
+[1]  7.023543e-01  3.461646e-01  2.240130e-01  1.704992e-01 -4.710363e-16
+
+Values of teststatistic and critical values of test:
+
+          test 10pct  5pct  1pct
+r <= 3 |  8.22  7.52  9.24 12.97
+r <= 2 | 19.38 17.85 19.96 24.60
+r <= 1 | 38.08 32.00 34.91 41.07
+r = 0  | 91.40 49.65 53.12 60.16
+
+Eigenvectors, normalised to first column:
+(These are the cointegration relations)
+
+              log_y.l1  log_k.l1  logK_e.l1 logK_e2.l1   constant
+log_y.l1     1.0000000  1.000000  1.0000000   1.000000  1.0000000
+log_k.l1     0.8566334 -2.344332 -0.3252065   2.461447 -0.8651793
+logK_e.l1  -10.0120658  6.058555 -2.5448393 -21.205097 -3.6573574
+logK_e2.l1  12.5690608 -6.618309  2.9561822  26.413827  4.6007753
+constant     1.2000171  0.361021 -0.8488477  12.021339  7.6718046
+
+Weights W:
+(This is the loading matrix)
+
+             log_y.l1    log_k.l1   logK_e.l1 logK_e2.l1     constant
+log_y.d   -0.02223909 -0.07636944 -0.10704631 0.01151819 1.134715e-12
+log_k.d   -0.04302173  0.06632302 -0.02462124 0.01517692 4.456741e-12
+logK_e.d  -0.70468997 -0.54496037 -0.03775361 0.04231243 5.496045e-11
+logK_e2.d -0.66583836 -0.40889846 -0.06998256 0.03443356 5.813868e-11
+
+ 
+---- ca.jo MAX-EIGEN summary ----
+
+###################### 
+# Johansen-Procedure # 
+###################### 
+
+Test type: maximal eigenvalue statistic (lambda max) , without linear trend and constant in cointegration 
+
+Eigenvalues (lambda):
+[1]  7.023543e-01  3.461646e-01  2.240130e-01  1.704992e-01 -4.710363e-16
+
+Values of teststatistic and critical values of test:
+
+          test 10pct  5pct  1pct
+r <= 3 |  8.22  7.52  9.24 12.97
+r <= 2 | 11.16 13.75 15.67 20.20
+r <= 1 | 18.70 19.77 22.00 26.81
+r = 0  | 53.32 25.56 28.14 33.24
+
+Eigenvectors, normalised to first column:
+(These are the cointegration relations)
+
+              log_y.l1  log_k.l1  logK_e.l1 logK_e2.l1   constant
+log_y.l1     1.0000000  1.000000  1.0000000   1.000000  1.0000000
+log_k.l1     0.8566334 -2.344332 -0.3252065   2.461447 -0.8651793
+logK_e.l1  -10.0120658  6.058555 -2.5448393 -21.205097 -3.6573574
+logK_e2.l1  12.5690608 -6.618309  2.9561822  26.413827  4.6007753
+constant     1.2000171  0.361021 -0.8488477  12.021339  7.6718046
+
+Weights W:
+(This is the loading matrix)
+
+             log_y.l1    log_k.l1   logK_e.l1 logK_e2.l1     constant
+log_y.d   -0.02223909 -0.07636944 -0.10704631 0.01151819 1.134715e-12
+log_k.d   -0.04302173  0.06632302 -0.02462124 0.01517692 4.456741e-12
+logK_e.d  -0.70468997 -0.54496037 -0.03775361 0.04231243 5.496045e-11
+logK_e2.d -0.66583836 -0.40889846 -0.06998256 0.03443356 5.813868e-11
+
+ 
+------------------------------------------------------------------------------
+COINTEGRATING VECTORS (beta) — cajorls | r = 2
+------------------------------------------------------------------------------
+                    ect1       ect2
+log_y.l1    1.000000e+00  0.0000000
+log_k.l1   -1.110223e-16  1.0000000
+logK_e.l1  -5.711291e+00 -5.0205551
+logK_e2.l1  7.434190e+00  5.9942456
+constant    9.754873e-01  0.2621073
+ 
