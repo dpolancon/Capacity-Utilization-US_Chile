@@ -1,15 +1,39 @@
-=== ChaoGrid Report start ===
-PIC rows: 252 
-Rank rows: 63 
+=== Report start: Q2 vSurfaceEverywhere ===
+ROOT: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_unrestricted.csv [=======================================================] 78.40MB/s, eta:  0s                                                                                                                         indexing S4_final_recommendations_Q2.csv [=========================================================] 170.07MB/s, eta:  0s                                                                                                                         Rows gridU: 168 
+Final present: TRUE 
+
+wrote 1.07kB in  0s, 97.93MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/tex/PIC_surface_pack_Q2.csv 
+
+=== Engine start: Q2 vSurfaceEverywhere ===
+Project root: C:/ReposGitHub/capacity_utilization 
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+-/                                                                                                                       /                                                                                                                       -                                                                                                                       Windows built:
+N(full)= 99  N(fordism)= 49  N(post_fordism)= 50 
+
+System dimension m = 4 
+
+wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       COMMON_P_MAX = 3 
+
+wrote 1.54kB in  0s, 140.24MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/csv/grid_pic_table_Q2_unrestricted.csv 
+wrote 1.90kB in  0s, 79.03MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       
+=== Engine completed OK ===
+=== Report start: Q2 vSurfaceEverywhere ===
+ROOT: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_unrestricted.csv [========================================================] 1.53GB/s, eta:  0s                                                                                                                         indexing S4_final_recommendations_Q2.csv [=========================================================] 132.28MB/s, eta:  0s                                                                                                                         Rows gridU: 168 
+Final present: TRUE 
+
+wrote 1.07kB in  0s, 77.67MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/tex/PIC_surface_pack_Q2.csv 
 
 
-========================================
-ChaoGrid_Report: FINAL RECOMMENDATIONS (S4)
-========================================
-  window ecdet ecdet_label p r  T m    logdet       PIC      BIC                                                         reason
-1   full trend       Trend 1 3 99 4 -23.01023 -21.57136 119.4385 Selected: min PIC within window; tie-break BIC then smallest p
-2   ford trend       Trend 7 3 49 4 -34.85101 -24.76405 459.4102 Selected: min PIC within window; tie-break BIC then smallest p
-3   post trend       Trend 7 3 50 4 -33.31757 -23.38103 463.5094 Selected: min PIC within window; tie-break BIC then smallest p
+=== Report completed OK ===
+[========================================================] 1.53GB/s, eta:  0s                                                                                                                         indexing S4_final_recommendations_Q2.csv [=========================================================] 132.28MB/s, eta:  0s                                                                                                                         Rows gridU: 168 
+Final present: TRUE 
 
-=== ChaoGrid Report completed ===
-Exports written to: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+wrote 1.07kB in  0s, 77.67MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/tex/PIC_surface_pack_Q2.csv 
+
+
+=== Report completed OK ===

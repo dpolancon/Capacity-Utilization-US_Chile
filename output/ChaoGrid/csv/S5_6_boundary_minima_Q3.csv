@@ -1,0 +1,7 @@
+"basis","window","ecdet","p","r","T","m","logdet","k_par","PIC","BIC","p_max","r_max","at_p_max","at_r_max","boundary_min","ecdet_label","note"
+"Q3","ford","const",1,2,49,5,-21.2418413090177,41,-17.9854202432517,138.322790913518,4,4,FALSE,FALSE,FALSE,"Constant","Interior PIC min (more credible identification)"
+"Q3","ford","none",5,4,49,5,-30.9146916665289,149,-19.0803809641109,548.966532751954,5,4,TRUE,TRUE,TRUE,"No Constant","Boundary-seeking PIC min (treat as overparameterization signal)"
+"Q3","full","const",1,1,99,5,-17.4880042367461,34,-15.909882268013,138.74607066783,7,4,FALSE,FALSE,FALSE,"Constant","Interior PIC min (more credible identification)"
+"Q3","full","none",1,1,99,5,-17.5742804254742,34,-15.9961584567411,138.659794479102,7,4,FALSE,FALSE,FALSE,"No Constant","Interior PIC min (more credible identification)"
+"Q3","post","const",1,1,50,5,-19.4452372094617,34,-16.7850615657706,113.563544975095,4,4,FALSE,FALSE,FALSE,"Constant","Interior PIC min (more credible identification)"
+"Q3","post","none",1,1,50,5,-19.6018062850643,34,-16.9416306413732,113.406975899493,5,4,FALSE,FALSE,FALSE,"No Constant","Interior PIC min (more credible identification)"
