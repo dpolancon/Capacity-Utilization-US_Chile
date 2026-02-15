@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ############################################################
 ## 0_functions.R — Consolidated helpers + theta_inference module
 ## QR/Gram–Schmidt orthogonalization (GLOBAL, window-invariant)
@@ -675,6 +676,145 @@ build_system_Q2 <- function(df, y_col = "log_y", k_col = "log_k") {
 >>>>>>> Stashed changes
 }
 
+=======
+# =========================
+# 0_functions.R (vNext, CLEAN)
+# Regime-stable Reduced-Rank helpers
+# Q2-first, orthogonal basis invariant across windows
+# =========================
+
+# -------------------------
+# S0.0 Utility + hygiene
+# -------------------------
+ensure_dirs <- function(...) {
+  dirs <- c(...)
+  for (d in dirs) if (!dir.exists(d)) dir.create(d, recursive = TRUE, showWarnings = FALSE)
+  invisible(TRUE)
+}
+
+set_seed_deterministic <- function(seed = 123) {
+  set.seed(seed)
+  invisible(TRUE)
+}
+
+# When your session is cursed: 128 connections in use.
+# Call this ONCE, then restart your engine cleanly.
+reset_r_io <- function() {
+  # close all sinks safely
+  while (sink.number(type = "output") > 0) sink(NULL, type = "output")
+  while (sink.number(type = "message") > 0) sink(NULL, type = "message")
+  # close connections
+  try(closeAllConnections(), silent = TRUE)
+  invisible(TRUE)
+}
+
+any_non_na <- function(x) {
+  if (length(x) == 0) return(FALSE)
+  any(!is.na(x))
+}
+
+`%||%` <- function(a, b) if (is.null(a)) b else a
+
+# -------------------------
+# S0.1 Locked windows + deterministics
+# -------------------------
+WINDOWS_LOCKED <- list(
+  full         = c(1925, 2023),
+  fordism      = c(1925, 1973),
+  post_fordism = c(1974, 2023)
+)
+
+ECDET_LOCKED <- c("none", "const") # trend excluded (LOCKED)
+
+ALPHA_LEVELS <- c("10pct" = 0.10, "5pct" = 0.05, "1pct" = 0.01)
+
+DECISION_DEFAULTS <- list(
+  epsilon = 0.10,
+  delta   = 0.02,
+  tau_det = 0.05
+)
+
+# -------------------------
+# S0.2 Window filtering
+# -------------------------
+filter_window_years <- function(df, window_name, year_col = "year") {
+  rng <- WINDOWS_LOCKED[[window_name]]
+  if (is.null(rng)) stop("Unknown window: ", window_name, call. = FALSE)
+  df[df[[year_col]] >= rng[1] & df[[year_col]] <= rng[2], , drop = FALSE]
+}
+
+# -------------------------
+# S0.3 Q2 orthogonal basis: build + apply + evaluate
+# Contract:
+# - basis is frozen using FULL sample (mu, sd, poly_coefs)
+# - each window uses same basis by evaluation on e (standardized by FULL mu/sd)
+# -------------------------
+build_q2_basis <- function(df, e_col = "e", degree = 2) {
+  if (!(e_col %in% names(df))) stop("build_q2_basis: missing column ", e_col, call. = FALSE)
+  
+  e <- df[[e_col]]
+  e <- e[is.finite(e)]
+  if (length(e) < 10) stop("build_q2_basis: too few finite e values", call. = FALSE)
+  
+  mu  <- mean(e)
+  sdv <- stats::sd(e)
+  if (!is.finite(sdv) || sdv <= 0) stop("build_q2_basis: sd invalid", call. = FALSE)
+  
+  z <- (e - mu) / sdv
+  
+  P <- stats::poly(z, degree = degree, raw = FALSE)
+  poly_coefs <- attr(P, "coefs")
+  
+  list(
+    e_col = e_col,
+    degree = degree,
+    mean_full = mu,
+    sd_full   = sdv,
+    poly_coefs = poly_coefs
+  )
+}
+
+eval_q2_basis <- function(basis, e_vec) {
+  stopifnot(!is.null(basis$mean_full), !is.null(basis$sd_full), !is.null(basis$poly_coefs))
+  z <- (as.numeric(e_vec) - basis$mean_full) / basis$sd_full
+  P <- stats::poly(z, degree = basis$degree, coefs = basis$poly_coefs)
+  P <- as.matrix(P)
+  data.frame(P1 = P[, 1], P2 = P[, 2])
+}
+
+apply_q2_basis <- function(df, basis) {
+  if (!(basis$e_col %in% names(df))) stop("apply_q2_basis: missing e column ", basis$e_col, call. = FALSE)
+  ev <- df[[basis$e_col]]
+  P  <- eval_q2_basis(basis, ev)
+  df$P1 <- P$P1
+  df$P2 <- P$P2
+  df
+}
+
+# -------------------------
+# S0.4 System builder: Q2 (DO NOT BREAK BASIS CONTRACT)
+# System:
+#   log_y, log_k, P1*log_k, P2*log_k
+# -------------------------
+build_system_Q2 <- function(df, y_col = "log_y", k_col = "log_k") {
+  for (nm in c(y_col, k_col, "P1", "P2")) {
+    if (!(nm %in% names(df))) stop("Missing column for system: ", nm, call. = FALSE)
+  }
+  
+  X <- data.frame(
+    log_y   = df[[y_col]],
+    log_k   = df[[k_col]],
+    P1_logK = df[["P1"]] * df[[k_col]],
+    P2_logK = df[["P2"]] * df[[k_col]]
+  )
+  
+  ok <- stats::complete.cases(X)
+  X  <- X[ok, , drop = FALSE]
+  
+  list(Y = as.matrix(X), var_names = colnames(X), ok_idx = which(ok))
+}
+
+>>>>>>> Stashed changes
 # -------------------------
 # S0.5 Feasibility gate (transparent, conservative)
 # -------------------------

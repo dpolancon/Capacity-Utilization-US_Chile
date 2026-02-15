@@ -1,11 +1,17 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 "basis","window","ecdet","p","r","T","m","logdet","k_par","PIC","BIC","ecdet_label","reason"
 "Q2","ford","none",1,1,49,4,-17.8094118350273,23,-15.9826390420365,71.7024550215172,"No Constant","Selected: min PIC within window; tie-break BIC then smallest p"
 "Q2","full","none",1,1,99,4,-15.3084125214672,23,-14.2408594249713,90.3793440316284,"No Constant","Selected: min PIC within window; tie-break BIC then smallest p"
 "Q2","post","none",1,1,50,4,-17.368245668248,23,-15.5687150857511,72.6082834565993,"No Constant","Selected: min PIC within window; tie-break BIC then smallest p"
 =======
+=======
+>>>>>>> Stashed changes
 "window","ecdet","p","r","T","m","K","grid","comparable_p","gate_ok","gate_T_eff","gate_min_eff","runtime_ok","runtime_reason","reject_sequence_valid","r_trace_10pct","r_trace_5pct","r_trace_1pct","r_eigen_10pct","r_eigen_5pct","r_eigen_1pct","logLik","k_total","PIC","BIC","status","winner_type","boundary_flag","epsilon_used","delta_to_global","delta_to_runnerup","no_interior_within_epsilon","tie_break_applied"
 "full","none",1,1,99,4,2,"comparable",TRUE,TRUE,97,45,TRUE,NA,TRUE,1,1,1,1,1,1,193.920237092643,8,-331.780201766531,-351.07951538421,"computed","global_min_all_boundary",TRUE,0.1,0,38.5709854905956,TRUE,"none"
 "fordism","none",1,1,49,4,2,"comparable",TRUE,TRUE,47,45,TRUE,NA,TRUE,1,1,1,1,1,1,153.782317171432,8,-265.256593888887,-276.43007195798,"computed","global_min_all_boundary",TRUE,0.1,0,27.560537356173,TRUE,"none"
 "post_fordism","none",1,1,50,4,2,"comparable",TRUE,TRUE,48,45,TRUE,NA,TRUE,2,1,0,0,0,0,146.422824945647,8,-250.155945055131,-261.54946584787,"computed","global_min_all_boundary",TRUE,0.1,0,28.108065517965,TRUE,"none"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
