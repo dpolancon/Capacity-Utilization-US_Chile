@@ -1,0 +1,11 @@
+ChaoGrid vNext — Q2 Decision Rule
+
+Step A: per window×ecdet, find global min PIC (p*,r*).
+Step B: boundary discipline rejects upper-boundary minima (p==p_max or r==r_max).
+        choose best interior within epsilon of global min; else best interior w/ flag.
+Step C: tie-breakers within delta: lower p, then lower r.
+Step D: prefer ecdet=none unless const improves PIC by > tau.
+
+epsilon=0.1, delta=0.02, tau=0.05
+COMMON_P_MAX=1
+Trend deterministics excluded (LOCKED).

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 "basis","window","ecdet","p","r","T","m","logdet","k_par","PIC","BIC"
 "Q2","full","none",1,0,99,4,-14.8712610939916,16,-14.1286154616467,58.6506565081618
 "Q2","full","none",1,1,99,4,-15.3084125214672,23,-14.2408594249713,90.3793440316284
@@ -159,3 +160,18 @@
 "Q2","post","const",6,1,50,4,-20.9455522686398,103,-12.8867848774579,381.992817290459
 "Q2","post","const",6,2,50,4,-21.4518394273474,108,-13.0018697356226,401.046645158892
 "Q2","post","const",6,3,50,4,-21.8572628961233,111,-13.1725718240728,412.377290706401
+=======
+"window","ecdet","p","r","T","m","K","grid","comparable_p","gate_ok","gate_T_eff","gate_min_eff","runtime_ok","runtime_reason","reject_sequence_valid","r_trace_10pct","r_trace_5pct","r_trace_1pct","r_eigen_10pct","r_eigen_5pct","r_eigen_1pct","logLik","k_total","PIC","BIC","status"
+"full","none",1,1,99,4,2,"comparable",TRUE,TRUE,97,45,TRUE,NA,TRUE,1,1,1,1,1,1,193.920237092643,8,-331.780201766531,-351.07951538421,"computed"
+"full","none",1,2,99,4,2,"comparable",TRUE,TRUE,97,45,TRUE,NA,TRUE,1,1,1,1,1,1,202.664880556723,16,-293.209216275936,-331.807843511292,"computed"
+"full","none",1,3,99,4,2,"comparable",TRUE,TRUE,97,45,TRUE,NA,TRUE,1,1,1,1,1,1,205.257186885782,24,-242.3335565153,-300.231497368335,"computed"
+"full","const",1,1,99,4,2,"comparable",TRUE,TRUE,97,50,TRUE,NA,TRUE,2,2,1,2,2,1,187.885635681408,9,-312.703464891717,-334.415192711605,"computed"
+"full","const",1,2,99,4,2,"comparable",TRUE,TRUE,97,50,TRUE,NA,TRUE,2,2,1,2,2,1,199.723612307149,18,-273.311611672099,-316.735067311875,"computed"
+"full","const",1,3,99,4,2,"comparable",TRUE,TRUE,97,50,TRUE,NA,TRUE,2,2,1,2,2,1,203.324550194461,27,-217.445680975625,-282.580864435289,"computed"
+"fordism","none",1,1,49,4,2,"comparable",TRUE,TRUE,47,45,TRUE,NA,TRUE,1,1,1,1,1,1,153.782317171432,8,-265.256593888887,-276.43007195798,"computed"
+"fordism","none",1,2,49,4,2,"comparable",TRUE,TRUE,47,45,TRUE,NA,TRUE,1,1,1,1,1,1,161.156068720335,16,-237.696056532714,-260.043012670899,"computed"
+"fordism","none",1,3,49,4,2,"comparable",TRUE,TRUE,47,45,TRUE,NA,TRUE,1,1,1,1,1,1,166.528980637596,24,-206.133839913258,-239.654274120537,"computed"
+"post_fordism","none",1,1,50,4,2,"comparable",TRUE,TRUE,48,45,TRUE,NA,TRUE,2,1,0,0,0,0,146.422824945647,8,-250.155945055131,-261.54946584787,"computed"
+"post_fordism","none",1,2,50,4,2,"comparable",TRUE,TRUE,48,45,TRUE,NA,TRUE,2,1,0,0,0,0,153.713644604747,16,-222.047879537166,-244.834921122643,"computed"
+"post_fordism","none",1,3,50,4,2,"comparable",TRUE,TRUE,48,45,TRUE,NA,TRUE,2,1,0,0,0,0,160.163430492602,24,-192.257746476713,-226.438308854928,"computed"
+>>>>>>> Stashed changes

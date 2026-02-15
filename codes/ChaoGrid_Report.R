@@ -1,558 +1,338 @@
-############################################################
-## ChaoGrid_Report.R  (Q2 + Q3, tables + figures, self-contained)
-##
-## Compatibility audit vs current Engine outputs:
-## - Expects: grid_pic_table_{Q2,Q3}.csv and grid_rank_decisions_{Q2,Q3}.csv
-## - Expects columns in PIC table: window, ecdet, p, r, PIC, BIC, T, m
-## - Expects columns in rank table: window, ecdet, p, r_trace_10/05/01
-## - Optional: S6_theta_*_curve.csv (index table only if exists)
-##
-## Fixes implemented here (report-side):
-## 1) Boundary diagnostic (S5.6) rewritten safely:
-##    - no “unique() inside mutate” fragility
-##    - p_max/r_max computed by join
-## 2) Grid overview (S1) grid_points counts actual (ecdet,p,r) combos.
-############################################################
+# ============================================================
+# ChaoGrid_Report_Q2_vSurfaceEverywhere.R
+#
+# Goal:
+#   Build an UNRESTRICTED PIC surface over full (p,r) lattice via PIC_hat,
+#   then overlay admissibility + runtime + comparability + final pick.
+#
+# Input:
+#   output/ChaoGrid/csv/grid_pic_table_Q2_unrestricted.csv
+#   output/ChaoGrid/csv/S4_final_recommendations_Q2.csv (optional)
+#
+# Output:
+#   figs/: status + PIC_hat heatmaps (+ comparable versions)
+#   html/: 3D PIC_hat surface + overlays (if plotly/htmlwidgets installed)
+#   tex/ : PIC_surface_pack_Q2.csv (surface + overlays for LaTeX ingestion)
+# ============================================================
 
 suppressPackageStartupMessages({
-  pkgs <- c("here","dplyr","tidyr","ggplot2","knitr","kableExtra","scales","conflicted","readr")
+  pkgs <- c("here","readr","dplyr","tidyr","ggplot2","tibble")
   invisible(lapply(pkgs, require, character.only = TRUE))
 })
 
-# ---- helpers ----
-codes_path   <- here::here("codes")
-helpers_path <- file.path(codes_path, "0_functions.R")
-source(helpers_path)
+HAS_PLOTLY <- requireNamespace("plotly", quietly = TRUE)
+HAS_HTML   <- requireNamespace("htmlwidgets", quietly = TRUE)
 
-# ---- conflicts ----
-conflicted::conflicts_prefer(dplyr::filter)
-conflicted::conflicts_prefer(dplyr::select)
-conflicted::conflicts_prefer(dplyr::lag)
-
-# ---- paths ----
-ROOT_OUT <- here::here("output/ChaoGrid")
-DIRS <- list(
-  csv  = file.path(ROOT_OUT, "csv"),
-  tex  = file.path(ROOT_OUT, "tex"),
-  figs = file.path(ROOT_OUT, "figs"),
-  rds  = file.path(ROOT_OUT, "rds"),
-  logs = file.path(ROOT_OUT, "logs")
+ROOT <- here::here("output/ChaoGrid")
+DIRS_IN <- list(csv = file.path(ROOT, "csv"), meta = file.path(ROOT, "meta"))
+DIRS_OUT <- list(
+  figs = file.path(ROOT, "figs"),
+  html = file.path(ROOT, "html"),
+  tex  = file.path(ROOT, "tex"),
+  logs = file.path(ROOT, "logs")
 )
-ensure_dirs(DIRS$csv, DIRS$tex, DIRS$figs, DIRS$rds, DIRS$logs)
+dir.create(DIRS_OUT$figs, recursive=TRUE, showWarnings=FALSE)
+dir.create(DIRS_OUT$html, recursive=TRUE, showWarnings=FALSE)
+dir.create(DIRS_OUT$tex,  recursive=TRUE, showWarnings=FALSE)
+dir.create(DIRS_OUT$logs, recursive=TRUE, showWarnings=FALSE)
 
-log_file <- file.path(DIRS$logs, "report_log.txt")
-sink(log_file, split = TRUE)
+log_file <- file.path(DIRS_OUT$logs, "report_log_Q2_vSurfaceEverywhere.txt")
+sink(log_file, split=TRUE)
+on.exit(sink(), add=TRUE)
 
-# ---- locked enums ----
-WINDOW_ORDER <- c("full","ford","post")
-ECDET_ORDER  <- c("none","const")
-BASIS_ORDER  <- c("Q2","Q3")
+cat("=== Report start: Q2 vSurfaceEverywhere ===\n")
+cat("ROOT:", ROOT, "\n\n")
 
-ECDET_LABELS <- c(
-  none  = "No Constant",
-  const = "Constant"
-)
+# -------------------------
+# Ingest (force types)
+# -------------------------
+pathU <- file.path(DIRS_IN$csv, "grid_pic_table_Q2_unrestricted.csv")
+if (!file.exists(pathU)) stop("Missing: grid_pic_table_Q2_unrestricted.csv", call.=FALSE)
 
-# ---- io ----
-pic_paths <- c(
-  Q2 = file.path(DIRS$csv, "grid_pic_table_Q2.csv"),
-  Q3 = file.path(DIRS$csv, "grid_pic_table_Q3.csv")
-)
-rnk_paths <- c(
-  Q2 = file.path(DIRS$csv, "grid_rank_decisions_Q2.csv"),
-  Q3 = file.path(DIRS$csv, "grid_rank_decisions_Q3.csv")
-)
-
-for (b in BASIS_ORDER) {
-  if (!file.exists(pic_paths[[b]])) stop("Missing: ", pic_paths[[b]], "  (run engine first)")
-  if (!file.exists(rnk_paths[[b]])) stop("Missing: ", rnk_paths[[b]], "  (run engine first)")
-}
-
-cat("=== ChaoGrid Report start ===\n")
-cat("Root:", ROOT_OUT, "\n\n")
-
-# ---- ingest all ----
-read_pic <- function(path, basis) {
-  read.csv(path, stringsAsFactors = FALSE) |>
-    dplyr::mutate(
-      basis  = basis,
-      window = as.character(window),
-      ecdet  = as.character(ecdet),
-      p      = as.integer(p),
-      r      = as.integer(r),
-      PIC    = as.numeric(PIC),
-      BIC    = as.numeric(BIC),
-      T      = as.numeric(T),
-      m      = as.numeric(m)
-    )
-}
-
-read_rnk <- function(path, basis) {
-  read.csv(path, stringsAsFactors = FALSE) |>
-    dplyr::mutate(
-      basis  = basis,
-      window = as.character(window),
-      ecdet  = as.character(ecdet),
-      p      = as.integer(p)
-    )
-}
-
-pic_all <- dplyr::bind_rows(
-  read_pic(pic_paths[["Q2"]], "Q2"),
-  read_pic(pic_paths[["Q3"]], "Q3")
+# Explicit col_types to avoid list-columns.
+# If you add columns later, readr will default them reasonably.
+gridU <- readr::read_csv(
+  pathU,
+  show_col_types = FALSE,
+  col_types = cols(
+    window = col_character(),
+    ecdet  = col_character(),
+    p      = col_integer(),
+    r      = col_integer(),
+    T      = col_integer(),
+    m      = col_integer(),
+    K      = col_integer(),
+    gate_ok = col_logical(),
+    runtime_ok = col_logical(),
+    comparable_p = col_logical(),
+    status = col_character(),
+    PIC_obs = col_double(),
+    BIC_obs = col_double(),
+    .default = col_guess()
+  )
 )
 
-rnk_all <- dplyr::bind_rows(
-  read_rnk(rnk_paths[["Q2"]], "Q2"),
-  read_rnk(rnk_paths[["Q3"]], "Q3")
-)
+pathF <- file.path(DIRS_IN$csv, "S4_final_recommendations_Q2.csv")
+final <- if (file.exists(pathF)) {
+  readr::read_csv(pathF, show_col_types = FALSE, col_types = cols(.default = col_guess()))
+} else NULL
 
-pic_all <- pic_all |>
+gridU <- gridU |>
   dplyr::mutate(
-    basis  = factor(basis,  levels = BASIS_ORDER),
-    window = factor(window, levels = WINDOW_ORDER),
-    ecdet  = factor(ecdet,  levels = ECDET_ORDER)
-  ) |>
-  dplyr::arrange(basis, window, ecdet, p, r)
+    window = as.character(window),
+    ecdet  = as.character(ecdet),
+    p = as.integer(p),
+    r = as.integer(r),
+    gate_ok = as.logical(gate_ok),
+    runtime_ok = as.logical(runtime_ok),
+    comparable_p = as.logical(comparable_p),
+    status = as.character(status)
+  )
 
-rnk_all <- rnk_all |>
-  dplyr::mutate(
-    basis  = factor(basis,  levels = BASIS_ORDER),
-    window = factor(window, levels = WINDOW_ORDER),
-    ecdet  = factor(ecdet,  levels = ECDET_ORDER)
-  ) |>
-  dplyr::arrange(basis, window, ecdet, p)
+cat("Rows gridU:", nrow(gridU), "\n")
+cat("Final present:", !is.null(final), "\n\n")
 
-cat("PIC rows (all):", nrow(pic_all), "\n")
-cat("Rank rows(all):", nrow(rnk_all), "\n\n")
-
-PIC_scales <- pic_all |>
-  dplyr::group_by(window) |>
-  dplyr::summarise(
-    PIC_lo = min(PIC, na.rm = TRUE),
-    PIC_hi = max(PIC, na.rm = TRUE),
-    .groups = "drop"
-  ) |>
-  as.data.frame()
-
-dPIC_caps <- pic_all |>
-  dplyr::group_by(basis, window, ecdet) |>
-  dplyr::mutate(dPIC = PIC - min(PIC, na.rm = TRUE)) |>
-  dplyr::ungroup() |>
-  dplyr::group_by(window) |>
-  dplyr::summarise(
-    dPIC_cap = stats::quantile(dPIC, probs = 0.95, na.rm = TRUE),
-    .groups = "drop"
-  ) |>
-  as.data.frame()
-
-export_csv_tex <- function(df, stem, caption, label, digits = 3) {
-  export_pair(
-    as.data.frame(df),
-    file.path(DIRS$csv, paste0(stem, ".csv")),
-    file.path(DIRS$tex, paste0(stem, ".tex")),
-    caption = caption,
-    label   = label,
-    digits  = digits
+# -------------------------
+# Helpers
+# -------------------------
+build_full_grid <- function(d) {
+  tidyr::expand_grid(
+    p = sort(unique(d$p)),
+    r = sort(unique(d$r))
   )
 }
 
-# ============================================================
-# SECTION A: per-basis S1..S4 + S5.6 minima storage
-# ============================================================
-run_report_basis <- function(basis_name) {
-  suffix <- paste0("_", basis_name)
+fit_predict_surface <- function(d_full, d_obs) {
+  if (nrow(d_obs) == 0) return(rep(NA_real_, nrow(d_full)))
   
-  pic_table <- pic_all |>
-    dplyr::filter(as.character(.data$basis) == basis_name) |>
-    dplyr::mutate(
-      basis  = as.character(.data$basis),
-      window = as.character(.data$window),
-      ecdet  = as.character(.data$ecdet)
+  if (nrow(d_obs) >= 12) {
+    fit <- tryCatch(
+      stats::loess(PIC_obs ~ p + r, data = d_obs,
+                   span = 0.9, degree = 2,
+                   control = stats::loess.control(surface="direct")),
+      error = function(e) NULL
     )
-  
-  rank_dec <- rnk_all |>
-    dplyr::filter(as.character(.data$basis) == basis_name) |>
-    dplyr::mutate(
-      basis  = as.character(.data$basis),
-      window = as.character(.data$window),
-      ecdet  = as.character(.data$ecdet)
-    )
-  
-  cat("\n--- Running basis:", basis_name, "---\n")
-  cat("PIC rows:", nrow(pic_table), "\n")
-  cat("Rank rows:", nrow(rank_dec), "\n\n")
-  
-  # S1: grid overview
-  S1 <- pic_table |>
-    dplyr::group_by(window) |>
-    dplyr::summarise(
-      T_eff = suppressWarnings(max(T, na.rm = TRUE)),
-      m     = suppressWarnings(max(m, na.rm = TRUE)),
-      ecdet_levels = paste(label_ecdet(sort(unique(ecdet))), collapse = ", "),
-      p_levels     = paste(sort(unique(p)), collapse = ","),
-      grid_points  = dplyr::n_distinct(paste(ecdet, p, r, sep = "|")), # fixed: count actual cells
-      .groups = "drop"
-    ) |>
-    dplyr::arrange(match(window, WINDOW_ORDER))
-  
-  export_csv_tex(
-    S1,
-    stem = paste0("S1_grid_overview", suffix),
-    caption = paste0("S1: Grid overview (", basis_name, ")"),
-    label   = paste0("tab:S1_grid_overview", suffix),
-    digits  = 0
-  )
-  
-  # S2: rank tests table
-  S2 <- rank_dec |>
-    dplyr::select(dplyr::any_of(c("basis","window","ecdet","p",
-                                  "r_trace_10","r_trace_05","r_trace_01",
-                                  "r_eigen_10","r_eigen_05","r_eigen_01"))) |>
-    dplyr::mutate(ecdet_label = label_ecdet(ecdet))
-  
-  export_csv_tex(
-    S2,
-    stem = paste0("S2_rank_all", suffix),
-    caption = paste0("S2: Rank tests (", basis_name, ")"),
-    label   = paste0("tab:S2_rank_all", suffix),
-    digits  = 0
-  )
-  
-  # S3: top-5 candidates by PIC/BIC per window
-  rank_topN <- function(pt, criterion = c("PIC","BIC"), N = 5) {
-    criterion <- match.arg(criterion)
-    key <- if (criterion == "PIC") pt$PIC else pt$BIC
-    
-    ord <- order(
-      match(pt$window, WINDOW_ORDER),
-      key, pt$PIC, pt$BIC,
-      pt$p, match(pt$ecdet, ECDET_ORDER), pt$r,
-      na.last = TRUE
-    )
-    
-    pt[ord, , drop = FALSE] |>
-      dplyr::group_by(window) |>
-      dplyr::slice_head(n = N) |>
-      dplyr::mutate(
-        within_window_rank = dplyr::row_number(),
-        criterion = criterion,
-        ecdet_label = label_ecdet(ecdet)
-      ) |>
-      dplyr::ungroup() |>
-      as.data.frame()
+    if (!is.null(fit)) {
+      pred <- tryCatch(stats::predict(fit, newdata = d_full), error = function(e) rep(NA_real_, nrow(d_full)))
+      if (any(is.finite(pred))) return(as.numeric(pred))
+    }
   }
   
-  S3_pic <- rank_topN(pic_table, "PIC", 5)
-  S3_bic <- rank_topN(pic_table, "BIC", 5)
-  
-  export_csv_tex(
-    S3_pic,
-    stem = paste0("S3_pic_top5", suffix),
-    caption = paste0("S3: Top-5 candidates per window by PIC (", basis_name, ")"),
-    label   = paste0("tab:S3_pic_top5", suffix),
-    digits  = 3
-  )
-  
-  export_csv_tex(
-    S3_bic,
-    stem = paste0("S3_bic_top5", suffix),
-    caption = paste0("S3: Top-5 candidates per window by BIC (", basis_name, ")"),
-    label   = paste0("tab:S3_bic_top5", suffix),
-    digits  = 3
-  )
-  
-  # S4: final per window (PIC-first)
-  S4 <- pic_table |>
-    dplyr::group_by(window) |>
-    dplyr::arrange(PIC, BIC, p, ecdet, r, .by_group = TRUE) |>
-    dplyr::slice_head(n = 1) |>
-    dplyr::mutate(
-      ecdet_label = label_ecdet(ecdet),
-      reason = "Selected: min PIC within window; tie-break BIC then smallest p"
-    ) |>
-    dplyr::ungroup()
-  
-  export_csv_tex(
-    S4,
-    stem = paste0("S4_final_recommendations", suffix),
-    caption = paste0("S4: Final recommended specification (PIC-first) (", basis_name, ")"),
-    label   = paste0("tab:S4_final_recommendations", suffix),
-    digits  = 3
-  )
-  
-  # store minima per (window,ecdet)
-  minPIC <- pic_table |>
-    dplyr::group_by(window, ecdet) |>
-    dplyr::slice_min(order_by = PIC, n = 1, with_ties = FALSE) |>
-    dplyr::ungroup() |>
-    dplyr::select(window, ecdet, p, r, PIC) |>
-    dplyr::mutate(ecdet_label = ECDET_LABELS[as.character(ecdet)])
-  
-  saveRDS(minPIC, file.path(DIRS$rds, paste0("minPIC_by_window_ecdet", suffix, ".rds")))
-  
-  # S5.6 boundary diagnostic (SAFE implementation)
-  bounds <- pic_table |>
-    dplyr::group_by(window, ecdet) |>
-    dplyr::summarise(
-      p_max = max(p, na.rm = TRUE),
-      r_max = max(r, na.rm = TRUE),
-      .groups = "drop"
+  if (nrow(d_obs) >= 6) {
+    fit2 <- tryCatch(
+      stats::lm(PIC_obs ~ p + r + I(p^2) + I(r^2) + I(p*r), data = d_obs),
+      error = function(e) NULL
     )
+    if (!is.null(fit2)) {
+      pred <- tryCatch(stats::predict(fit2, newdata = d_full), error = function(e) rep(NA_real_, nrow(d_full)))
+      if (any(is.finite(pred))) return(as.numeric(pred))
+    }
+  }
   
-  S5_boundary <- pic_table |>
-    dplyr::group_by(window, ecdet) |>
-    dplyr::slice_min(order_by = PIC, n = 1, with_ties = FALSE) |>
-    dplyr::ungroup() |>
-    dplyr::left_join(bounds, by = c("window","ecdet")) |>
-    dplyr::mutate(
-      at_p_max = (p == p_max),
-      at_r_max = (r == r_max),
-      boundary_min = (at_p_max | at_r_max),
-      ecdet_label = ECDET_LABELS[as.character(ecdet)],
-      note = ifelse(boundary_min,
-                    "Boundary-seeking PIC min (treat as overparameterization signal)",
-                    "Interior PIC min (more credible identification)")
-    )
-  
-  export_csv_tex(
-    S5_boundary,
-    stem = paste0("S5_6_boundary_minima", suffix),
-    caption = paste0("S5.6: Boundary-seeking PIC minima diagnostic (", basis_name, ")"),
-    label   = paste0("tab:S5_6_boundary_minima", suffix),
-    digits  = 0
-  )
-  
-  p6 <- ggplot2::ggplot(S5_boundary, ggplot2::aes(x = window, y = ecdet_label, fill = boundary_min)) +
-    ggplot2::geom_tile(color = "white") +
-    ggplot2::labs(
-      title = paste0("S5.6 Boundary-seeking PIC minima (", basis_name, ")"),
-      x = "Window", y = "Deterministics", fill = "Boundary?"
-    ) +
-    ggplot2::theme_minimal(base_size = 12)
-  
-  ggplot2::ggsave(
-    filename = file.path(DIRS$figs, paste0("S5_6_boundary_minima", suffix, ".pdf")),
-    plot = p6, width = 9, height = 3.6
-  )
-  
-  invisible(TRUE)
+  rep(stats::median(d_obs$PIC_obs, na.rm=TRUE), nrow(d_full))
 }
 
-invisible(lapply(BASIS_ORDER, run_report_basis))
+surface_matrix <- function(dd) {
+  m <- dd |>
+    tidyr::pivot_wider(names_from = p, values_from = PIC_hat) |>
+    dplyr::arrange(r)
+  
+  r_vals <- m$r
+  z <- as.matrix(m[, setdiff(names(m), "r"), drop=FALSE])
+  p_vals <- suppressWarnings(as.numeric(colnames(z)))
+  list(p_vals=p_vals, r_vals=r_vals, z=z)
+}
 
-# ============================================================
-# SECTION B: Cross-basis storytelling figures (COMPARE)
-# ============================================================
+# -------------------------
+# Build SURF pack: PIC_hat everywhere + overlays
+# -------------------------
+keys <- gridU |>
+  dplyr::distinct(window, ecdet) |>
+  dplyr::arrange(window, ecdet)
 
-get_window_limits <- function(w, what = c("PIC","dPIC")) {
-  what <- match.arg(what)
-  if (what == "PIC") {
-    row <- PIC_scales[PIC_scales$window == w, , drop = FALSE]
-    return(c(row$PIC_lo[1], row$PIC_hi[1]))
-  } else {
-    row <- dPIC_caps[dPIC_caps$window == w, , drop = FALSE]
-    return(c(0, row$dPIC_cap[1]))
+surface_pack <- vector("list", nrow(keys))
+
+for (i in seq_len(nrow(keys))) {
+  w  <- as.character(keys$window[i])
+  ec <- as.character(keys$ecdet[i])
+  
+  d0 <- gridU |> dplyr::filter(window == w, ecdet == ec)
+  
+  full_grid <- build_full_grid(d0)
+  
+  d_obs <- d0 |>
+    dplyr::filter(is.finite(PIC_obs)) |>
+    dplyr::select(p, r, PIC_obs)
+  
+  full_grid$PIC_hat <- fit_predict_surface(full_grid, d_obs)
+  
+  overlay <- full_grid |>
+    dplyr::left_join(
+      d0 |> dplyr::select(p,r,status,gate_ok,runtime_ok,comparable_p,PIC_obs,BIC_obs),
+      by=c("p","r")
+    ) |>
+    dplyr::mutate(
+      status       = dplyr::coalesce(status, "missing"),
+      gate_ok      = dplyr::coalesce(gate_ok, FALSE),
+      runtime_ok   = dplyr::coalesce(runtime_ok, FALSE),
+      comparable_p = dplyr::coalesce(comparable_p, FALSE),
+      window = w,
+      ecdet  = ec
+    )
+  
+  surface_pack[[i]] <- overlay
+}
+
+SURF <- dplyr::bind_rows(surface_pack) |>
+  dplyr::mutate(
+    window = as.character(window),
+    ecdet  = as.character(ecdet)
+  )
+
+readr::write_csv(SURF, file.path(DIRS_OUT$tex, "PIC_surface_pack_Q2.csv"))
+cat("Wrote:", file.path(DIRS_OUT$tex, "PIC_surface_pack_Q2.csv"), "\n\n")
+
+WLIST <- sort(unique(SURF$window))
+ECLIST <- sort(unique(SURF$ecdet))
+
+# -------------------------
+# PANEL A: status / admissibility tiles
+# -------------------------
+plot_status <- function(d, w, ec) {
+  dd <- d |> dplyr::filter(window == w, ecdet == ec)
+  ggplot(dd, aes(x=p, y=r)) +
+    geom_tile(aes(fill=status), alpha=0.95) +
+    labs(
+      title = paste0("A. Status lattice | ", w, " | ecdet=", ec),
+      subtitle = "computed has PIC_obs; runtime_fail has no likelihood; gate_fail violates feasibility rule",
+      x="p", y="r"
+    )
+}
+
+for (w in WLIST) {
+  for (ec in ECLIST) {
+    g <- plot_status(SURF, w, ec)
+    ggsave(file.path(DIRS_OUT$figs, paste0("A_STATUS_Q2_", w, "_", ec, ".png")),
+           g, width=7, height=4.5, dpi=160)
   }
 }
 
-for (w in WINDOW_ORDER) {
-  sub <- pic_all |>
-    dplyr::filter(as.character(.data$window) == w) |>
-    dplyr::mutate(
-      basis_label = as.character(.data$basis),
-      ecdet_label = ECDET_LABELS[as.character(.data$ecdet)]
+# -------------------------
+# PANEL B: PIC_hat heatmap + overlays
+# -------------------------
+plot_pic_hat <- function(d, w, ec, only_comparable=FALSE) {
+  dd <- d |> dplyr::filter(window == w, ecdet == ec)
+  if (only_comparable) dd <- dd |> dplyr::filter(comparable_p)
+  
+  g <- ggplot(dd, aes(x=p, y=r)) +
+    geom_tile(aes(fill=PIC_hat), alpha=0.95) +
+    geom_point(data = dd |> dplyr::filter(runtime_ok, is.finite(PIC_obs)),
+               aes(x=p, y=r), inherit.aes=FALSE, size=2) +
+    geom_point(data = dd |> dplyr::filter(!gate_ok),
+               aes(x=p, y=r), inherit.aes=FALSE, shape=4, size=2) +
+    labs(
+      title = paste0("B. PIC_hat surface (full lattice) | ", w, " | ecdet=", ec,
+                     if (only_comparable) " | comparable_p only" else ""),
+      subtitle = "Fill = PIC_hat everywhere; dots = computed PIC_obs; X = gate_fail",
+      x="p", y="r"
     )
   
-  if (nrow(sub) == 0) next
-  lims <- get_window_limits(w, "PIC")
+  if (!is.null(final) && all(c("window","ecdet","p","r") %in% names(final))) {
+    ff <- final |> dplyr::filter(window == w, ecdet == ec) |> dplyr::select(p,r) |> dplyr::distinct()
+    if (nrow(ff)>0) g <- g + geom_point(data=ff, aes(x=p,y=r), inherit.aes=FALSE, size=3)
+  }
   
-  p_cmp1 <- ggplot2::ggplot(sub, ggplot2::aes(x = p, y = r, fill = PIC)) +
-    ggplot2::geom_tile() +
-    ggplot2::facet_grid(basis_label ~ ecdet_label) +
-    ggplot2::scale_x_continuous(breaks = sort(unique(sub$p))) +
-    ggplot2::scale_y_continuous(breaks = sort(unique(sub$r))) +
-    ggplot2::scale_fill_continuous(limits = lims, oob = scales::squish) +
-    ggplot2::labs(
-      title = paste0("S5.1 PIC landscape (COMPARE Q2 vs Q3; window: ", w, ")"),
-      x = "VAR lag length p",
-      y = "Cointegration rank r",
-      fill = "PIC"
-    ) +
-    ggplot2::theme_minimal(base_size = 12)
-  
-  ggplot2::ggsave(
-    filename = file.path(DIRS$figs, paste0("S5_1_heatmap_PIC_COMPARE_", w, ".pdf")),
-    plot = p_cmp1, width = 12, height = 7.0
-  )
+  g
 }
 
-pic_with_dPIC <- pic_all |>
-  dplyr::group_by(basis, window, ecdet) |>
-  dplyr::mutate(dPIC = PIC - min(PIC, na.rm = TRUE)) |>
-  dplyr::ungroup()
+for (w in WLIST) {
+  for (ec in ECLIST) {
+    g1 <- plot_pic_hat(SURF, w, ec, only_comparable=FALSE)
+    ggsave(file.path(DIRS_OUT$figs, paste0("B_PICHAT_Q2_", w, "_", ec, ".png")),
+           g1, width=7, height=4.5, dpi=160)
+    
+    g2 <- plot_pic_hat(SURF, w, ec, only_comparable=TRUE)
+    ggsave(file.path(DIRS_OUT$figs, paste0("B_PICHAT_Q2_", w, "_", ec, "_comparable.png")),
+           g2, width=7, height=4.5, dpi=160)
+  }
+}
 
-for (w in WINDOW_ORDER) {
-  sub <- pic_with_dPIC |>
-    dplyr::filter(as.character(.data$window) == w) |>
-    dplyr::mutate(
-      basis_label = as.character(.data$basis),
-      ecdet_label = ECDET_LABELS[as.character(.data$ecdet)]
+# -------------------------
+# PANEL E: 3D PIC_hat surface + overlays
+# -------------------------
+plot_pic_hat_3d <- function(d, w, ec, only_comparable=FALSE) {
+  if (!HAS_PLOTLY || !HAS_HTML) return(NULL)
+  
+  dd <- d |> dplyr::filter(window == w, ecdet == ec)
+  if (only_comparable) dd <- dd |> dplyr::filter(comparable_p)
+  
+  ddS <- dd |> dplyr::filter(is.finite(PIC_hat))
+  if (nrow(ddS) < 4) {
+    return(plotly::plot_ly(type="scatter3d", mode="markers",
+                           x=numeric(0), y=numeric(0), z=numeric(0)) |>
+             plotly::layout(title=paste0("PIC_hat 3D | ", w, " | ecdet=", ec, " | no surface")))
+  }
+  
+  mat <- surface_matrix(ddS)
+  
+  fig <- plotly::plot_ly(type="surface", x=mat$p_vals, y=mat$r_vals, z=mat$z) |>
+    plotly::layout(
+      title = paste0("PIC_hat 3D | ", w, " | ecdet=", ec,
+                     if (only_comparable) " | comparable_p" else ""),
+      scene = list(
+        xaxis = list(title="p"),
+        yaxis = list(title="r"),
+        zaxis = list(title="PIC_hat")
+      )
     )
   
-  if (nrow(sub) == 0) next
-  lims <- get_window_limits(w, "dPIC")
+  obs <- dd |> dplyr::filter(runtime_ok, is.finite(PIC_obs)) |> dplyr::select(p,r,PIC_obs)
+  if (nrow(obs) > 0) {
+    fig <- fig |>
+      plotly::add_markers(data=obs, x=~p, y=~r, z=~PIC_obs,
+                          type="scatter3d", mode="markers",
+                          marker=list(size=3), name="PIC_obs (runtime_ok)")
+  }
   
-  p_cmp2 <- ggplot2::ggplot(sub, ggplot2::aes(x = p, y = r, fill = dPIC)) +
-    ggplot2::geom_tile() +
-    ggplot2::facet_grid(basis_label ~ ecdet_label) +
-    ggplot2::scale_x_continuous(breaks = sort(unique(sub$p))) +
-    ggplot2::scale_y_continuous(breaks = sort(unique(sub$r))) +
-    ggplot2::scale_fill_continuous(limits = lims, oob = scales::squish) +
-    ggplot2::labs(
-      title = paste0("S5.2 ΔPIC from best (COMPARE Q2 vs Q3; window: ", w, ")"),
-      x = "VAR lag length p",
-      y = "Cointegration rank r",
-      fill = "ΔPIC"
-    ) +
-    ggplot2::theme_minimal(base_size = 12)
+  gf <- dd |> dplyr::filter(!gate_ok, is.finite(PIC_hat)) |> dplyr::select(p,r,PIC_hat)
+  if (nrow(gf) > 0) {
+    fig <- fig |>
+      plotly::add_markers(data=gf, x=~p, y=~r, z=~PIC_hat,
+                          type="scatter3d", mode="markers",
+                          marker=list(size=3, symbol="x"), name="gate_fail")
+  }
   
-  ggplot2::ggsave(
-    filename = file.path(DIRS$figs, paste0("S5_2_heatmap_dPIC_COMPARE_", w, ".pdf")),
-    plot = p_cmp2, width = 12, height = 7.0
-  )
+  if (!is.null(final) && all(c("window","ecdet","p","r","PIC") %in% names(final))) {
+    ff <- final |> dplyr::filter(window==w, ecdet==ec) |> dplyr::select(p,r,PIC) |> dplyr::distinct()
+    if (nrow(ff) > 0) {
+      fig <- fig |>
+        plotly::add_markers(data=ff, x=~p, y=~r, z=~PIC,
+                            type="scatter3d", mode="markers",
+                            marker=list(size=5), name="final pick")
+    }
+  }
+  
+  fig
 }
 
-best_by_p_all <- pic_all |>
-  dplyr::group_by(basis, window, ecdet, p) |>
-  dplyr::summarise(PIC_best = min(PIC, na.rm = TRUE), .groups = "drop") |>
-  dplyr::mutate(
-    basis_label = as.character(.data$basis),
-    ecdet_label = ECDET_LABELS[as.character(.data$ecdet)]
-  )
-
-for (w in WINDOW_ORDER) {
-  sub <- best_by_p_all |>
-    dplyr::filter(as.character(.data$window) == w)
-  if (nrow(sub) == 0) next
-  
-  p_cmp3 <- ggplot2::ggplot(sub, ggplot2::aes(x = p, y = PIC_best, group = interaction(basis_label, ecdet_label))) +
-    ggplot2::geom_line() +
-    ggplot2::geom_point(size = 2) +
-    ggplot2::facet_grid(basis_label ~ ecdet_label, scales = "free_y") +
-    ggplot2::scale_x_continuous(breaks = sort(unique(sub$p))) +
-    ggplot2::labs(
-      title = paste0("S5.3 Best PIC by p (COMPARE Q2 vs Q3; window: ", w, ")"),
-      x = "VAR lag length p",
-      y = "min_r PIC"
-    ) +
-    ggplot2::theme_minimal(base_size = 12)
-  
-  ggplot2::ggsave(
-    filename = file.path(DIRS$figs, paste0("S5_3_line_bestPIC_by_p_COMPARE_", w, ".pdf")),
-    plot = p_cmp3, width = 12, height = 6.5
-  )
-}
-
-best_r_map_all <- pic_all |>
-  dplyr::group_by(basis, window, ecdet, p) |>
-  dplyr::slice_min(order_by = PIC, n = 1, with_ties = FALSE) |>
-  dplyr::ungroup() |>
-  dplyr::mutate(
-    basis_label = as.character(.data$basis),
-    ecdet_label = ECDET_LABELS[as.character(.data$ecdet)]
-  )
-
-for (w in WINDOW_ORDER) {
-  sub <- best_r_map_all |> dplyr::filter(as.character(.data$window) == w)
-  if (nrow(sub) == 0) next
-  
-  p5 <- ggplot2::ggplot(sub, ggplot2::aes(x = p, y = ecdet_label, fill = r)) +
-    ggplot2::geom_tile(color = "white") +
-    ggplot2::facet_wrap(~ basis_label, nrow = 1) +
-    ggplot2::scale_x_continuous(breaks = sort(unique(sub$p))) +
-    ggplot2::labs(
-      title = paste0("S5.5 Best rank r*(p) (argmin_r PIC; window: ", w, ")"),
-      x = "VAR lag length p",
-      y = "Deterministics",
-      fill = "r*(p)"
-    ) +
-    ggplot2::theme_minimal(base_size = 12)
-  
-  ggplot2::ggsave(
-    filename = file.path(DIRS$figs, paste0("S5_5_heatmap_bestR_by_p_COMPARE_", w, ".pdf")),
-    plot = p5, width = 11, height = 3.8
-  )
-}
-
-mQ2 <- readRDS(file.path(DIRS$rds, "minPIC_by_window_ecdet_Q2.rds"))
-mQ3 <- readRDS(file.path(DIRS$rds, "minPIC_by_window_ecdet_Q3.rds"))
-
-S5_7 <- mQ2 |>
-  dplyr::rename(p_Q2 = p, r_Q2 = r, PIC_Q2 = PIC) |>
-  dplyr::left_join(
-    mQ3 |> dplyr::rename(p_Q3 = p, r_Q3 = r, PIC_Q3 = PIC),
-    by = c("window","ecdet","ecdet_label")
-  ) |>
-  dplyr::mutate(
-    dPIC_Q3_minus_Q2 = PIC_Q3 - PIC_Q2,
-    winner = ifelse(dPIC_Q3_minus_Q2 < 0, "Q3 (lower PIC)", "Q2 (lower PIC)")
-  ) |>
-  dplyr::arrange(match(window, WINDOW_ORDER), match(ecdet, ECDET_ORDER))
-
-export_csv_tex(
-  S5_7,
-  stem = "S5_7_Q3_vs_Q2_minPIC",
-  caption = "S5.7: Q3 vs Q2 comparison using global minimum PIC (per window, ecdet)",
-  label   = "tab:S5_7_Q3_vs_Q2_minPIC",
-  digits  = 4
-)
-
-p7 <- ggplot2::ggplot(S5_7, ggplot2::aes(x = window, y = dPIC_Q3_minus_Q2, group = ecdet_label)) +
-  ggplot2::geom_hline(yintercept = 0, linetype = 2) +
-  ggplot2::geom_line() +
-  ggplot2::geom_point(size = 2) +
-  ggplot2::facet_wrap(~ ecdet_label, nrow = 1) +
-  ggplot2::labs(
-    title = "S5.7 Q3 vs Q2: Δ(min PIC) = minPIC(Q3) - minPIC(Q2)",
-    x = "Window",
-    y = "Δ(min PIC): negative favors Q3"
-  ) +
-  ggplot2::theme_minimal(base_size = 12)
-
-ggplot2::ggsave(
-  filename = file.path(DIRS$figs, "S5_7_Q3_vs_Q2_minPIC.pdf"),
-  plot = p7, width = 11, height = 4.2
-)
-
-# ============================================================
-# OPTIONAL SECTION S6: index table if inference artifacts exist
-# ============================================================
-s6_files <- list.files(DIRS$csv, pattern = "^S6_theta_.*_curve\\.csv$", full.names = TRUE)
-if (length(s6_files) > 0) {
-  S6_index <- data.frame(
-    file = basename(s6_files),
-    basis  = sub("^S6_theta_(Q2|Q3)_.*$", "\\1", basename(s6_files)),
-    window = sub("^S6_theta_(Q2|Q3)_([a-z]+)_.*$", "\\2", basename(s6_files)),
-    ecdet  = sub("^S6_theta_(Q2|Q3)_[a-z]+_([a-z]+)_p.*$", "\\2", basename(s6_files)),
-    p = as.integer(sub(".*_p([0-9]+)_r.*$", "\\1", basename(s6_files))),
-    r = as.integer(sub(".*_r([0-9]+)_curve\\.csv$", "\\1", basename(s6_files))),
-    stringsAsFactors = FALSE
-  ) |>
-    dplyr::arrange(match(window, WINDOW_ORDER), match(basis, BASIS_ORDER), match(ecdet, ECDET_ORDER), p, r)
-  
-  export_csv_tex(
-    S6_index,
-    stem = "S6_theta_index",
-    caption = "S6: Index of theta inference artifacts generated by the engine",
-    label   = "tab:S6_theta_index",
-    digits  = 0
-  )
-  cat("\nS6 artifacts detected: wrote S6_theta_index.{csv,tex}\n")
+if (HAS_PLOTLY && HAS_HTML) {
+  for (w in WLIST) {
+    for (ec in ECLIST) {
+      fig1 <- plot_pic_hat_3d(SURF, w, ec, only_comparable=FALSE)
+      htmlwidgets::saveWidget(fig1,
+                              file = file.path(DIRS_OUT$html, paste0("E_PICHAT3D_Q2_", w, "_", ec, ".html")),
+                              selfcontained = TRUE
+      )
+      
+      fig2 <- plot_pic_hat_3d(SURF, w, ec, only_comparable=TRUE)
+      htmlwidgets::saveWidget(fig2,
+                              file = file.path(DIRS_OUT$html, paste0("E_PICHAT3D_Q2_", w, "_", ec, "_comparable.html")),
+                              selfcontained = TRUE
+      )
+    }
+  }
 } else {
-  cat("\nNOTE: No S6 inference artifacts found in output/ChaoGrid/csv (run engine with S6 enabled).\n")
+  cat("NOTE: plotly/htmlwidgets not installed; skipping 3D outputs.\n")
 }
 
-cat("\n=== ChaoGrid Report completed ===\n")
-cat("Exports written to:", ROOT_OUT, "\n")
-sink()
+cat("\n=== Report completed OK ===\n")

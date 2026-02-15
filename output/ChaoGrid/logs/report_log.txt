@@ -1,21 +1,39 @@
-=== ChaoGrid Report start ===
-Root: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+=== Report start: Q2 vSurfaceEverywhere ===
+ROOT: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
 
-PIC rows (all): 320 
-Rank rows(all): 72 
+indexing grid_pic_table_Q2_unrestricted.csv [=======================================================] 78.40MB/s, eta:  0s                                                                                                                         indexing S4_final_recommendations_Q2.csv [=========================================================] 170.07MB/s, eta:  0s                                                                                                                         Rows gridU: 168 
+Final present: TRUE 
+
+wrote 1.07kB in  0s, 97.93MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/tex/PIC_surface_pack_Q2.csv 
+
+=== Engine start: Q2 vSurfaceEverywhere ===
+Project root: C:/ReposGitHub/capacity_utilization 
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+-/                                                                                                                       /                                                                                                                       -                                                                                                                       Windows built:
+N(full)= 99  N(fordism)= 49  N(post_fordism)= 50 
+
+System dimension m = 4 
+
+wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       COMMON_P_MAX = 3 
+
+wrote 1.54kB in  0s, 140.24MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/csv/grid_pic_table_Q2_unrestricted.csv 
+wrote 1.90kB in  0s, 79.03MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       
+=== Engine completed OK ===
+=== Report start: Q2 vSurfaceEverywhere ===
+ROOT: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_unrestricted.csv [========================================================] 1.53GB/s, eta:  0s                                                                                                                         indexing S4_final_recommendations_Q2.csv [=========================================================] 132.28MB/s, eta:  0s                                                                                                                         Rows gridU: 168 
+Final present: TRUE 
+
+wrote 1.07kB in  0s, 77.67MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/tex/PIC_surface_pack_Q2.csv 
 
 
---- Running basis: Q2 ---
-PIC rows: 160 
-Rank rows: 40 
+=== Report completed OK ===
+[========================================================] 1.53GB/s, eta:  0s                                                                                                                         indexing S4_final_recommendations_Q2.csv [=========================================================] 132.28MB/s, eta:  0s                                                                                                                         Rows gridU: 168 
+Final present: TRUE 
+
+wrote 1.07kB in  0s, 77.67MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/tex/PIC_surface_pack_Q2.csv 
 
 
---- Running basis: Q3 ---
-PIC rows: 160 
-Rank rows: 32 
-
-
-NOTE: No S6 inference artifacts found in output/ChaoGrid/csv (run engine with S6 enabled).
-
-=== ChaoGrid Report completed ===
-Exports written to: C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+=== Report completed OK ===

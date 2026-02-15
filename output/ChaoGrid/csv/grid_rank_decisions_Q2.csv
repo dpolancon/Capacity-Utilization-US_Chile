@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 "basis","window","ecdet","p","T","m","r_trace_10","r_trace_05","r_trace_01","r_eigen_10","r_eigen_05","r_eigen_01"
 "Q2","full","none",1,99,4,4,4,4,NA,NA,NA
 "Q2","full","none",2,99,4,4,4,4,NA,NA,NA
@@ -39,3 +40,10 @@
 "Q2","post","const",4,50,4,4,4,4,NA,NA,NA
 "Q2","post","const",5,50,4,4,4,4,NA,NA,NA
 "Q2","post","const",6,50,4,4,4,4,NA,NA,NA
+=======
+"window","ecdet","p","m","T","r_trace_10pct","r_trace_5pct","r_trace_1pct","r_eigen_10pct","r_eigen_5pct","r_eigen_1pct","reject_sequence_valid","trace_stat_r_5pct","trace_cv_r_5pct","eigen_stat_r_5pct","eigen_cv_r_5pct"
+"full","none",1,4,99,1,1,1,1,1,1,TRUE,23.0329175457727,31.52,17.4892869281549,21.07
+"full","const",1,4,99,2,2,1,2,2,1,TRUE,11.4261671167651,19.96,7.20187577462513,15.67
+"fordism","none",1,4,49,1,1,1,1,1,1,TRUE,25.6811978110948,31.52,14.7475030978051,21.07
+"post_fordism","none",1,4,50,2,1,0,0,0,0,TRUE,29.1120291833005,31.52,14.5816393181144,21.07
+>>>>>>> Stashed changes
