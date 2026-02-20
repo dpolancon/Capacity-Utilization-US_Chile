@@ -1,9 +1,0 @@
-JOHANSEN_CORE RUN COMPLETE
-SYS_VARS: log_y, log_k, logK_e, logK_e2
-ECDET: const | SPEC: transitory | LAGMAX: 6
-Ranks chosen: full=2, ford=1, post=2
-Lags chosen (K): full=2, ford=6, post=6
-Window reports written to: C:/ReposGitHub/capacity_utilization/output/JOHANSEN_CORE/logs
-  - JOHANSEN_REPORT_full.txt
-  - JOHANSEN_REPORT_ford.txt
-  - JOHANSEN_REPORT_post.txt

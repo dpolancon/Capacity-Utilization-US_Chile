@@ -1,0 +1,12 @@
+=== Engine start: Q3_ortho ===
+Project root: C:/ReposGitHub/capacity_utilization 
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+Degree      : 3 
+ORTHO       : TRUE 
+
+System dimension m = 5 
+
+wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       COMMON_P_MAX = 3 
+
+wrote 1.70kB in  0s, 154.92MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/csv/grid_pic_table_Q3_ortho_unrestricted.csv 
+=== Engine completed OK: Q3_ortho ===

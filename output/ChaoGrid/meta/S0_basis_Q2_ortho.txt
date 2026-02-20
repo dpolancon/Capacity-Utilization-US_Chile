@@ -1,0 +1,7 @@
+basis_tag=ortho
+spec=Q2
+degree=2
+type=poly_orthonormal
+e_col=e
+mean_full=0.4259837308
+sd_full=0.05720250611

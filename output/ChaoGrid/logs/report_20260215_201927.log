@@ -1,0 +1,162 @@
+=== Report start ===
+Project root: C:/ReposGitHub/capacity_utilization 
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_raw_unrestricted.csv [==================================================] 665.08MB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q2_ortho_unrestricted.csv [================================================] 556.70MB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_raw_unrestricted.csv [==================================================] 992.84MB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_ortho_unrestricted.csv [==================================================] 1.64GB/s, eta:  0s                                                                                                                         Rows in master: 756 
+Status counts:
+
+ computed gate_fail   missing 
+      390       254       112 
+
+Error in `dplyr::mutate()`:
+ℹ In argument: `in_ambiguity = is.finite(dPIC) & dPIC <= DELTA_TOL`.
+ℹ In group 1: `spec = "Q2"`, `basis = "ortho"`, `window = "fordism"`, `ecdet = "const"`.
+Caused by error:
+! `in_ambiguity` must be size 28 or 1, not 0.
+Run `rlang::last_trace()` to see where the error occurred.
+
+
+
+
+NULL
+function (name, pos = -1L, envir = as.environment(pos), all.names = FALSE, 
+    pattern, sorted = TRUE) 
+{
+    if (!missing(name)) {
+        pos <- tryCatch(name, error = function(e) e)
+        if (inherits(pos, "error")) {
+            name <- substitute(name)
+            if (!is.character(name)) 
+                name <- deparse(name)
+            warning(gettextf("%s converted to character string", 
+                sQuote(name)), domain = NA)
+            pos <- name
+        }
+    }
+    all.names <- .Internal(ls(envir, all.names, sorted))
+    if (!missing(pattern)) {
+        if ((ll <- length(grep("[", pattern, fixed = TRUE))) && 
+            ll != length(grep("]", pattern, fixed = TRUE))) {
+            if (pattern == "[") {
+                pattern <- "\\["
+                warning("replaced regular expression pattern '[' by  '\\\\['")
+            }
+            else if (length(grep("[^\\\\]\\[<-", pattern))) {
+                pattern <- sub("\\[<-", "\\\\\\[<-", pattern)
+                warning("replaced '[<-' by '\\\\[<-' in regular expression pattern")
+            }
+        }
+        grep(pattern, all.names, value = TRUE)
+    }
+    else all.names
+}
+<bytecode: 0x000001e3c834f358>
+<environment: namespace:base>
+ [1] "%||%"                        "add_stars"                   "admissible_gate"            
+ [4] "ALPHA_LEVELS"                "any_non_na"                  "apply_basis"                
+ [7] "apply_q2_basis"              "basis"                       "basis_apply_poly"           
+[10] "basis_build_poly"            "basis_eval_poly"             "basis_tag"                  
+[13] "boundary_flag"               "build_basis"                 "build_lattice"              
+[16] "build_q2_basis"              "build_system_Q2"             "build_system_Qd"            
+[19] "build_system_Qd_engine"      "calc_ic"                     "cell_rows"                  
+[22] "cell_tbl"                    "choose_winner_Q2"            "COMMON_P_MAX"               
+[25] "CONFIG"                      "count_params_vecm"           "cs"                         
+[28] "data_path"                   "ddbb_us"                     "degree"                     
+[31] "DELTA_TOL"                   "det_preference"              "df0"                        
+[34] "DIRS"                        "ec"                          "ECDET_LOCKED"               
+[37] "ensure_dirs"                 "eval_q2_basis"               "expected_files"             
+[40] "extract_beta_alpha"          "extract_rank_decisions_pair" "feas"                       
+[43] "feas_rows"                   "feasible_df"                 "feasible_for_ca_jo"         
+[46] "filter_window_years"         "g"                           "gate"                       
+[49] "gridU"                       "i"                           "jo_tr"                      
+[52] "K"                           "keys"                        "lattice"                    
+[55] "ll_by_r"                     "log_con"                     "log_file"                   
+[58] "loglik_from_cajorls"         "m_sys"                       "m_vec"                      
+[61] "m_w"                         "master"                      "missing"                    
+[64] "normalize_beta"              "ORTHO"                       "out_csv"                    
+[67] "p"                           "paths"                       "pkgs"                       
+[70] "processAndAddStars"          "rank_rows"                   "read_one"                   
+[73] "recompute_ic_check"          "reset_r_io"                  "reshapeTestsResults"        
+[76] "ROOT_OUT"                    "rr"                          "rr_tbl"                     
+[79] "run_ca_jo_pair"              "run_tag"                     "run_unit_tests"             
+[82] "safe_logdet"                 "save_plot_dual"              "save_table_tex_csv"         
+[85] "set_seed_deterministic"      "spec_name"                   "sys_list"                   
+[88] "T_w"                         "table_as_is"                 "theta_curve_from_beta"      
+[91] "UnitRootTests"               "w"                           "windows_b"                  
+[94] "WINDOWS_LOCKED"              "windows_raw"                
+=== Report start ===
+Project root: C:/ReposGitHub/capacity_utilization 
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_raw_unrestricted.csv [==================================================] 704.49MB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q2_ortho_unrestricted.csv [==================================================] 1.29GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_raw_unrestricted.csv [====================================================] 1.14GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_ortho_unrestricted.csv [==================================================] 1.05GB/s, eta:  0s                                                                                                                         Rows in master: 756 
+Status counts:
+
+ computed gate_fail   missing 
+      390       254       112 
+
+ [1] "%||%"                        "add_stars"                   "admissible_gate"            
+ [4] "ALPHA_LEVELS"                "any_non_na"                  "apply_basis"                
+ [7] "apply_q2_basis"              "basis"                       "basis_apply_poly"           
+[10] "basis_build_poly"            "basis_eval_poly"             "basis_tag"                  
+[13] "boundary_flag"               "build_basis"                 "build_lattice"              
+[16] "build_q2_basis"              "build_system_Q2"             "build_system_Qd"            
+[19] "build_system_Qd_engine"      "calc_ic"                     "cell_rows"                  
+[22] "cell_tbl"                    "choose_winner_Q2"            "COMMON_P_MAX"               
+[25] "CONFIG"                      "count_params_vecm"           "cs"                         
+[28] "data_path"                   "ddbb_us"                     "degree"                     
+[31] "DELTA_TOL"                   "det_preference"              "df0"                        
+[34] "DIRS"                        "ec"                          "ECDET_LOCKED"               
+[37] "ensure_dirs"                 "eval_q2_basis"               "expected_files"             
+[40] "extract_beta_alpha"          "extract_rank_decisions_pair" "feas"                       
+[43] "feas_rows"                   "feasible_df"                 "feasible_for_ca_jo"         
+[46] "filter_window_years"         "g"                           "gate"                       
+[49] "gridU"                       "i"                           "jo_tr"                      
+[52] "K"                           "keys"                        "lattice"                    
+[55] "ll_by_r"                     "log_con"                     "log_file"                   
+[58] "loglik_from_cajorls"         "m_sys"                       "m_vec"                      
+[61] "m_w"                         "master"                      "missing"                    
+[64] "normalize_beta"              "ORTHO"                       "out_csv"                    
+[67] "p"                           "paths"                       "pkgs"                       
+[70] "processAndAddStars"          "rank_rows"                   "read_one"                   
+[73] "recompute_ic_check"          "reset_r_io"                  "reshapeTestsResults"        
+[76] "ROOT_OUT"                    "rr"                          "rr_tbl"                     
+[79] "run_ca_jo_pair"              "run_tag"                     "run_unit_tests"             
+[82] "safe_logdet"                 "save_plot_dual"              "save_table_tex_csv"         
+[85] "set_seed_deterministic"      "spec_name"                   "sys_list"                   
+[88] "T_w"                         "table_as_is"                 "theta_curve_from_beta"      
+[91] "UnitRootTests"               "w"                           "windows_b"                  
+[94] "WINDOWS_LOCKED"              "windows_raw"                
+=== Report start ===
+Project root: C:/ReposGitHub/capacity_utilization 
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_raw_unrestricted.csv [====================================================] 1.20GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q2_ortho_unrestricted.csv [==================================================] 1.06GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_raw_unrestricted.csv [====================================================] 2.04GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_ortho_unrestricted.csv [==================================================] 1.47GB/s, eta:  0s                                                                                                                         Rows in master: 756 
+Status counts:
+
+ computed gate_fail   missing 
+      390       254       112 
+
+=== Report start ===
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_raw_unrestricted.csv [==================================================] 951.06MB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q2_ortho_unrestricted.csv [================================================] 269.17MB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_raw_unrestricted.csv [====================================================] 1.25GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_ortho_unrestricted.csv [==================================================] 1.62GB/s, eta:  0s                                                                                                                         Rows in master: 756 
+
+ computed gate_fail   missing 
+      390       254       112 
+
+=== Report start ===
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_raw_unrestricted.csv [====================================================] 1.61GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q2_ortho_unrestricted.csv [==================================================] 1.46GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_raw_unrestricted.csv [====================================================] 1.43GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_ortho_unrestricted.csv [================================================] 624.82MB/s, eta:  0s                                                                                                                         Rows in master: 756 
+
+ computed gate_fail   missing 
+      390       254       112 
+
+=== Report start ===
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_raw_unrestricted.csv [====================================================] 1.03GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q2_ortho_unrestricted.csv [==================================================] 1.96GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_raw_unrestricted.csv [====================================================] 2.15GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_ortho_unrestricted.csv [==================================================] 2.09GB/s, eta:  0s                                                                                                                         Rows in master: 756 
+
+ computed gate_fail   missing 
+      390       254       112 
+

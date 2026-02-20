@@ -1,0 +1,58 @@
+=== Report start ===
+Project root: C:/ReposGitHub/capacity_utilization 
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_raw_unrestricted.csv [====================================================] 1.20GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q2_ortho_unrestricted.csv [==================================================] 1.06GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_raw_unrestricted.csv [====================================================] 2.04GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_ortho_unrestricted.csv [==================================================] 1.47GB/s, eta:  0s                                                                                                                         Rows in master: 756 
+Status counts:
+
+ computed gate_fail   missing 
+      390       254       112 
+
+Error in `dplyr::mutate()`:
+ℹ In argument: `in_ambiguity = is.finite(dPIC) & dPIC <= DELTA_TOL`.
+ℹ In group 1: `spec = "Q2"`, `basis = "ortho"`, `window = "fordism"`, `ecdet = "const"`.
+Caused by error:
+! `in_ambiguity` must be size 28 or 1, not 0.
+Run `rlang::last_trace()` to see where the error occurred.
+=== Report start ===
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_raw_unrestricted.csv [==================================================] 951.06MB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q2_ortho_unrestricted.csv [================================================] 269.17MB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_raw_unrestricted.csv [====================================================] 1.25GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_ortho_unrestricted.csv [==================================================] 1.62GB/s, eta:  0s                                                                                                                         Rows in master: 756 
+
+ computed gate_fail   missing 
+      390       254       112 
+
+Error in `dplyr::mutate()`:
+ℹ In argument: `in_ambiguity = is.finite(dPIC) & dPIC <= DELTA_TOL`.
+ℹ In group 1: `spec = "Q2"`, `basis = "ortho"`, `window = "fordism"`, `ecdet = "const"`.
+Caused by error:
+! `in_ambiguity` must be size 28 or 1, not 0.
+Run `rlang::last_trace()` to see where the error occurred.
+=== Report start ===
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_raw_unrestricted.csv [====================================================] 1.61GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q2_ortho_unrestricted.csv [==================================================] 1.46GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_raw_unrestricted.csv [====================================================] 1.43GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_ortho_unrestricted.csv [================================================] 624.82MB/s, eta:  0s                                                                                                                         Rows in master: 756 
+
+ computed gate_fail   missing 
+      390       254       112 
+
+Error in `dplyr::mutate()`:
+ℹ In argument: `in_ambiguity = is.finite(dPIC) & dPIC <= DELTA_TOL`.
+ℹ In group 1: `spec = "Q2"`, `basis = "ortho"`, `window = "fordism"`, `ecdet = "const"`.
+Caused by error:
+! `in_ambiguity` must be size 28 or 1, not 0.
+Run `rlang::last_trace()` to see where the error occurred.
+=== Report start ===
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+
+indexing grid_pic_table_Q2_raw_unrestricted.csv [====================================================] 1.03GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q2_ortho_unrestricted.csv [==================================================] 1.96GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_raw_unrestricted.csv [====================================================] 2.15GB/s, eta:  0s                                                                                                                         indexing grid_pic_table_Q3_ortho_unrestricted.csv [==================================================] 2.09GB/s, eta:  0s                                                                                                                         Rows in master: 756 
+
+ computed gate_fail   missing 
+      390       254       112 
+
+Error in `dplyr::mutate()`:
+ℹ In argument: `in_ambiguity = is.finite(dPIC) & dPIC <= DELTA_TOL`.
+ℹ In group 1: `spec = "Q2"`, `basis = "ortho"`, `window = "fordism"`, `ecdet = "const"`.
+Caused by error:
+! `in_ambiguity` must be size 28 or 1, not 0.
+Run `rlang::last_trace()` to see where the error occurred.

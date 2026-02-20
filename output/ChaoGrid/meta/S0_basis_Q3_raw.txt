@@ -1,0 +1,7 @@
+basis_tag=raw
+spec=Q3
+degree=3
+type=raw_std_powers
+e_col=e
+mean_full=0.4259837308
+sd_full=0.05720250611

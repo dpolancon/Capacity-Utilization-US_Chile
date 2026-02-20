@@ -1,4 +1,0 @@
-Q2 basis meta
-e_col=e
-mean_full=0.42598373
-sd_full=0.057202506
