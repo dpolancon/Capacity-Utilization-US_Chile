@@ -1,7 +1,7 @@
 window,ecdet,T,m,p_max_feasible
-full,none,99,5,7
-full,const,99,5,7
-fordism,none,49,5,3
-fordism,const,49,5,3
-post_fordism,none,50,5,4
-post_fordism,const,50,5,3
+full,none,99,6,7
+full,const,99,6,7
+fordism,none,49,6,3
+fordism,const,49,6,2
+post_fordism,none,50,6,3
+post_fordism,const,50,6,2

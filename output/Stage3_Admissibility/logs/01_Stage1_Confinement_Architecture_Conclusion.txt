@@ -1,0 +1,65 @@
+Stage 1 — Confinement Architecture from the Full Sample to Regime
+Partition
+
+Stage 1 begins with the full historical sample. The unrestricted lattice
+evaluation of lag length (p) and rank (r) identifies a sharply defined
+global minimum at (p=1, r=1) across all polynomial degrees (Q2, Q3),
+bases (raw and orthogonalized), and deterministic specifications (const,
+none). The PIC landscape heatmaps show a pronounced minimum at this
+coordinate, with criterion values worsening as either p or r move away
+from unity within the feasible region. No competing minima appear. The
+ΔPIC ≤ 2 ambiguity sets collapse to a single cell in every
+configuration.
+
+The full historical system therefore exhibits one-dimensional long-run
+confinement: the drift of the state vector is restricted by a single
+stable long-run relation, and this restriction is sharply identified.
+Orthogonalization leaves both the feasible lattice and the location of
+the minimum unchanged, confirming that the result is invariant to
+invertible polynomial reparameterizations. BIC diagnostics reproduce the
+same selection, with only minor near-ties at higher ranks that do not
+overturn the global optimum.
+
+This full-sample result defines the structural baseline: the data
+support a single long-run confinement relation, and the preferred
+dynamic order is parsimonious (p=1).
+
+Regime partitions are then introduced not to re-identify rank, but to
+interrogate whether confinement changes when the historical sample is
+split.
+
+When the sample is partitioned into Fordism and Post-Fordism, the
+location of the minimum remains unchanged: (p=1, r=1) under both PIC and
+BIC for all deterministics and bases. The confinement dimension does not
+shift across regimes. There is no evidence of a rank change.
+
+What does change is the width of the admissible domain: the portion of
+the (p,r) lattice that remains feasible (computed) rather than failing
+admissibility gates.
+
+The Fordist subsample exhibits severe feasibility compression.
+Particularly under higher-degree specifications (Q3), large portions of
+the lattice are infeasible (gate_fail or missing), and the feasible lag
+region narrows. The Fordist PIC landscape appears as a thin feasible
+strip, indicating limited tolerance for alternative short-run dynamics.
+The long-run restriction remains one-dimensional, but the space of
+dynamically admissible specifications tightens.
+
+The Post-Fordist subsample exhibits a wider feasible region than
+Fordism, though still narrower than the full sample. Feasibility expands
+relative to the Fordist window without altering the rank structure. The
+long-run confinement relation persists, while dynamic admissibility
+loosens.
+
+This chronological comparison supports a regulationist hypothesis. If
+regimes corresponded to distinct long-run structures, one would expect
+confinement dimension to shift across regime windows. Instead, rank
+remains invariant, and regime differentiation appears through stability
+margins and dynamic admissibility: institutional mediation tightens or
+loosens which dynamic specifications can be sustained, without
+redefining the dimensionality of long-run confinement.
+
+Stage 1 therefore closes with a stable confinement architecture: a
+single long-run restriction persists across regimes, while regime
+differences operate through changes in feasible domain width rather than
+through changes in cointegration rank.

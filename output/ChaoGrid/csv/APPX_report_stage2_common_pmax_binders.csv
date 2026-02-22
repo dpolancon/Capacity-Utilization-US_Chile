@@ -1,0 +1,11 @@
+run_tag,window,ecdet,T,m,p_max_feasible,COMMON_P_MAX,file
+Q2_ortho,fordism,const,49,5,3,3,APPX_S1_feasible_pmax_by_window_ecdet_Q2_ortho.csv
+Q2_ortho,fordism,none,49,5,3,3,APPX_S1_feasible_pmax_by_window_ecdet_Q2_ortho.csv
+Q2_ortho,post_fordism,const,50,5,3,3,APPX_S1_feasible_pmax_by_window_ecdet_Q2_ortho.csv
+Q2_raw,fordism,const,49,5,3,3,APPX_S1_feasible_pmax_by_window_ecdet_Q2_raw.csv
+Q2_raw,fordism,none,49,5,3,3,APPX_S1_feasible_pmax_by_window_ecdet_Q2_raw.csv
+Q2_raw,post_fordism,const,50,5,3,3,APPX_S1_feasible_pmax_by_window_ecdet_Q2_raw.csv
+Q3_ortho,fordism,const,49,6,2,2,APPX_S1_feasible_pmax_by_window_ecdet_Q3_ortho.csv
+Q3_ortho,post_fordism,const,50,6,2,2,APPX_S1_feasible_pmax_by_window_ecdet_Q3_ortho.csv
+Q3_raw,fordism,const,49,6,2,2,APPX_S1_feasible_pmax_by_window_ecdet_Q3_raw.csv
+Q3_raw,post_fordism,const,50,6,2,2,APPX_S1_feasible_pmax_by_window_ecdet_Q3_raw.csv

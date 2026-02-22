@@ -4,9 +4,9 @@ Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid
 Degree      : 2 
 ORTHO       : FALSE 
 
-System dimension m = 4 
+System dimension m = 5 
 
-wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       COMMON_P_MAX = 3 
+COMMON_P_MAX = 3 
 
-wrote 1.62kB in  0s, 161.88MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/csv/grid_pic_table_Q2_raw_unrestricted.csv 
+Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/csv/grid_pic_table_Q2_raw_unrestricted.csv 
 === Engine completed OK: Q2_raw ===
