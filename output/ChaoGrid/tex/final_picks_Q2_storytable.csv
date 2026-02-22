@@ -1,4 +1,0 @@
-window,ecdet,p,r,PIC,BIC,winner_type,det_preference,det_improvement_rel,boundary_flag,no_interior_within_epsilon,tie_break_applied
-fordism,none,1,1,-265.256593888887,-276.43007195798,global_min_all_boundary,NA,NA,TRUE,TRUE,none
-full,none,1,1,-331.780201766531,-351.07951538421,global_min_all_boundary,NA,NA,TRUE,TRUE,none
-post_fordism,none,1,1,-250.155945055131,-261.54946584787,global_min_all_boundary,NA,NA,TRUE,TRUE,none

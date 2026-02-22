@@ -1,4 +1,0 @@
-COMMON_P_MAX selection (Q2)
-COMMON_P_MAX = 3
-Computed as min p_max_feasible across windows × ecdet.
-Note: comparability is metadata; unrestricted lattice still spans P_MAX_EXPLORATORY.
