@@ -1,0 +1,174 @@
+4.X Stage 3 — Dynamic Admissibility Under Full Sample and Regime
+Partition
+
+Stage 1 established that the confinement dimension of the system is
+invariant across historical windows. The reduced-rank lattice
+consistently selects r = 1, indicating that regime transformation does
+not operate through a change in manifold dimensionality.
+
+Stage 2 demonstrated that regime differences instead appear in the
+geometry of feasibility. The admissible (p,r) domain is compressed in
+the Fordist subsample, wider in the full sample, and structurally
+differentiated in the post-Fordist window. Rank remains constant; domain
+width varies.
+
+Stage 3 addresses a more restrictive question:
+
+Which level specifications consistent with the confinement architecture
+are dynamically admissible?
+
+This stage does not perform inference, nor does it test parameter
+stability. It evaluates whether the level representation survives
+asymptotic aggregation and minimal dynamic discipline. Admissibility is
+treated as a necessary precondition for long-run interpretation.
+
+4.X.1 Admissibility Framework
+
+Admissibility is defined through a double gate.
+
+Gate 1 — Asymptotic Aggregation. We implement the Bayer–Hanck combined
+cointegration framework, which aggregates Engle–Granger, Johansen,
+Boswijk, and Banerjee–Dolado–Mestre statistics into a unified
+Fisher-type measure. The combined statistic serves as an asymptotic
+screen for level relations without privileging a single testing
+approach.
+
+Gate 2 — Dynamic Bounds Discipline. We apply ARDL bounds testing under
+strict lag discipline p = 1 for the dependent variable and q = 1 for all
+regressors. This restriction is intentional. It prevents dynamic
+overfitting from artificially stabilizing weak level relations. The
+bounds F-statistic governs admissibility; only specifications rejecting
+the null of no level relationship pass the dynamic gate.
+
+A specification is classified as Stage 3 admissible only if it passes
+both gates.
+
+4.X.2 Full Sample Results
+
+Consistent with the research prior, we begin with the pooled sample
+before turning to regime partition.
+
+Under the full sample, admissibility is narrow. Only the cubic
+specification (Q3) with a constant term survives the double gate.
+Quadratic specifications and deterministic-free variants fail either the
+asymptotic aggregation or the dynamic bounds discipline.
+
+Two baseline facts follow.
+
+First, a level relation is dynamically feasible in pooled data.
+
+Second, that feasibility is specification-sensitive and relies on
+deterministic anchoring.
+
+The pooled sample does not generate universal admissibility. Even before
+partitioning, the dynamically feasible domain is constrained.
+
+4.X.3 Regime Partition: Fordism and Post-Fordism
+
+We now compare the pooled evidence to the regime partition, testing the
+regulationist prior that historical regimes mediate accumulation
+dynamics.
+
+Fordism (1925–1973)
+
+Under Fordism, admissibility expands relative to the pooled sample. Both
+quadratic (Q2) and cubic (Q3) specifications with a constant pass the
+double gate, under both raw and orthogonal interaction bases.
+
+This result is consistent with Stage 2’s feasibility geometry. The
+Fordist subsample exhibited a tightly structured admissible lattice.
+Stage 3 shows that within that compressed geometry, the level relation
+remains dynamically coherent under minimal discipline.
+
+Fordism therefore combines: - Invariant confinement dimension, -
+Compressed but internally stable feasibility domain, - Robust dynamic
+admissibility under strict lag discipline.
+
+The interaction block and capital accumulation operate within a stable
+dynamic envelope.
+
+Post-Fordism (1974–2023)
+
+The post-Fordist window yields a sharply different pattern.
+
+Under strict discipline, no specification passes the double gate. While
+certain single-test components—most notably Johansen—remain significant,
+the Bayer–Hanck aggregation fails, and the ARDL bounds test does not
+support a stable level relation at p = 1, q = 1.
+
+This outcome must be interpreted carefully.
+
+First, it does not indicate a change in confinement dimension. Stage 1
+established that r = 1 is invariant across windows. The structural
+manifold remains one-dimensional.
+
+Second, it does not imply absence of interaction dynamics. Stage 2
+demonstrated that the feasibility geometry remains well-defined.
+
+What it reveals is a contraction of the dynamically admissible domain
+under minimal discipline. The level specification cannot survive strict
+lag restriction in the post-Fordist regime.
+
+To assess whether this contraction is purely mechanical, we implemented
+bounded auto-ARDL selection using BIC. Allowing regressor lag depth to
+expand rescues constant specifications in post-Fordism. The dependent
+variable lag remains p = 1, but additional lags on capital and
+interaction terms restore dynamic admissibility. Deterministic-free
+specifications, however, remain non-admissible, and one cubic variant
+reaches boundary lag selection, indicating overfitting risk rather than
+robust stabilization.
+
+Lag flexibility therefore mitigates but does not eliminate the
+contraction. Under the strict admissibility criterion, post-Fordism
+exhibits zero admissible specifications.
+
+4.X.4 Variance Regime and Dynamic Fragility
+
+The contraction of admissibility in post-Fordism should not be
+interpreted mechanically as structural disappearance of the long-run
+relation. Stage 1 diagnostics documented heavy tails, regime-like
+persistence, and heteroskedastic behavior in level variables. It is
+therefore plausible that post-Fordism exhibits higher conditional
+variance and variance instability relative to Fordism.
+
+Under such conditions, asymptotic aggregation and ARDL bounds
+testing—particularly under strict lag discipline—become fragile to
+variance shifts and clustered volatility. The failure of strict
+admissibility in post-Fordism may reflect not a change in confinement
+dimension, but an increase in dynamic fragility. The long-run relation,
+if present, requires thicker lag buffering or deterministic anchoring to
+remain coherent.
+
+Higher variance does not eliminate the structural manifold; it
+compresses the minimally disciplined dynamic envelope within which that
+manifold can be expressed.
+
+Formal treatment of conditional heteroskedasticity is deferred to the
+inference stage, where robust and variance-aware procedures will be
+implemented explicitly.
+
+4.X.5 Regulationist Synthesis
+
+Taken together, the results align with the regulationist prior.
+
+-   The confinement dimension remains invariant across regimes.
+-   The feasibility geometry differs across regimes.
+-   Dynamic admissibility under minimal discipline is
+    regime-conditional.
+
+Fordism supports a dynamically coherent long-run envelope. The full
+sample supports a narrower admissible set. Post-Fordism exhibits
+contraction of the admissible domain and heightened dynamic fragility.
+
+Regime transformation therefore operates not through a change in
+structural dimensionality, but through a change in stability margins and
+admissible dynamics.
+
+Stage 3 closes the admissibility question. It identifies which
+specifications are dynamically coherent candidates for long-run
+interpretation within each historical window. It does not establish
+parameter constancy or structural stability; those tasks follow in
+subsequent stages.
+
+Only specifications passing the strict double gate proceed to the
+inference architecture.

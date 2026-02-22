@@ -1,0 +1,118 @@
+4.X Stage 3 — Double Admissibility Gate in Levels
+
+Stage 3 evaluates whether the level specifications identified in the
+reduced-rank lattice are dynamically admissible. The objective is not
+inference, parameter stability, or historical interpretation. The
+purpose is narrower and prior: to determine whether a given
+specification can be treated as a feasible long-run relation under
+minimal dynamic discipline.
+
+To that end, admissibility is defined through a double gate.
+
+Gate 1 (Asymptotic Meta-Test). We implement the Bayer–Hanck combined
+cointegration framework, which aggregates Engle–Hanck, Johansen,
+Boswijk, and Banerjee–Dolado–Mestre tests into a single Fisher-type
+statistic. The combined statistic (BH_all) serves as a preliminary
+screen for level relations. This gate answers whether, under asymptotic
+critical values, the specification exhibits sufficient evidence of
+cointegration across heterogeneous testing frameworks. It is not treated
+as definitive; it is an admissibility filter.
+
+Gate 2 (Dynamic Bounds Discipline). We then apply ARDL bounds testing to
+evaluate whether the level relation survives dynamic specification. In
+the strict version of the gate, lag structure is fixed at p = 1 for the
+dependent variable and q = 1 for all regressors. This rule is
+intentionally conservative. The bounds F-statistic governs
+admissibility: only specifications that reject the null of no level
+relationship are considered dynamically admissible. The t-bounds
+statistic is reported for completeness but does not override the F
+decision.
+
+A specification is classified as Stage 3 admissible only if it passes
+both gates.
+
+4.X.1 Results Under Strict Dynamic Discipline
+
+Under the strict p = 1, q = 1 discipline, admissibility is strongly
+regime-conditional.
+
+In the Fordist period (1925–1973), both quadratic (Q2) and cubic (Q3)
+specifications with a constant term pass the double gate, under both raw
+and orthogonal interaction bases. This indicates that the long-run level
+relation between output, capital, and the interaction block is
+dynamically coherent within the Fordist regime.
+
+For the full sample, admissibility narrows: only the constant Q3
+specification survives the double gate. This suggests that pooling
+across regimes compresses the dynamically feasible domain.
+
+In contrast, no specification passes the strict double gate in the
+post-Fordist period (1974–2023). Although certain single-test components
+(notably Johansen) remain significant, the combined Bayer–Hanck
+statistic fails, and the ARDL bounds test under strict lag discipline
+does not support a stable level relation.
+
+Importantly, this outcome does not imply a change in confinement
+dimension. Upstream reduced-rank analysis continues to select r = 1
+across windows. Rather, Stage 3 reveals a contraction in the admissible
+dynamic domain under post-Fordist conditions.
+
+4.X.2 Lag Sensitivity: Auto-ARDL Robustness
+
+To assess whether the post-Fordist failure is purely mechanical—driven
+by restrictive lag structure—we implement a bounded auto-ARDL procedure
+using BIC-based lag selection.
+
+The results are revealing.
+
+First, in all admissible cases, the selected lag for the dependent
+variable remains p = 1. The binding constraint in the strict gate is not
+the lag on output growth, but the restriction on regressor lags.
+
+Second, constant specifications in the post-Fordist window become
+dynamically admissible once regressor lag structure expands (typically
+two lags on capital and one lag on interaction terms). The ARDL
+F-statistic then rejects the null of no level relationship.
+
+Third, deterministic-free (no-intercept) specifications remain
+non-admissible even under flexible lag selection. In one cubic
+specification, the lag search reaches the maximum boundary and produces
+undefined F-statistics, indicating overfitting risk rather than
+structural support.
+
+These findings clarify the nature of post-Fordist instability. The
+failure of strict admissibility is not attributable to insufficient
+dynamics on the dependent variable. It reflects sensitivity to
+deterministic structure and lag depth on capital and interaction terms.
+The long-run relation, if present, requires a thicker dynamic buffer in
+the post-Fordist regime.
+
+For purposes of Stage 3 classification, however, the strict gate remains
+the operative criterion. The auto-ARDL results are interpreted as
+robustness checks, not as replacements for the disciplined admissibility
+rule.
+
+4.X.3 Interpretation: Admissibility as Regime-Conditional Feasibility
+
+Stage 3 therefore yields a clear conclusion.
+
+Admissibility of the level specification is regime-conditional. Fordism
+supports dynamically coherent long-run relations across polynomial
+degrees and basis choices. The full sample supports a narrower
+admissible set. Post-Fordism fails the strict admissibility criterion.
+
+Crucially, this regime variation does not operate through a shift in
+cointegration rank. The confinement dimension remains invariant. What
+varies is the width of the dynamically feasible specification domain. In
+Fordism, the interaction block and capital accumulation operate within a
+stable dynamic envelope. In Post-Fordism, that envelope contracts: level
+relations require either expanded lag structure or deterministic
+support, and deterministic-free formulations fail altogether.
+
+Stage 3 thus closes the admissibility question. It does not establish
+parameter constancy, structural stability, or historical causation.
+Those tasks belong to subsequent stages. What it establishes is narrower
+but essential: which specifications are dynamically coherent candidates
+for long-run interpretation within each regime.
+
+Only those specifications passing the double gate proceed to Stage 4.

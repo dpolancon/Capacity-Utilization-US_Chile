@@ -1,0 +1,8 @@
+run_tag=Q2_raw
+spec=Q2
+basis=raw
+spec_type=
+degree=2
+basis_type=raw_powers
+basis_name=rawpowers_deg2
+e_raw_locked=TRUE

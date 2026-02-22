@@ -1,0 +1,9 @@
+basis_tag=raw
+spec=Q2
+degree=2
+include_e_raw=TRUE
+e_raw_mode=raw
+type=raw_std_powers
+e_col=e
+mean_full=0.4259837308
+sd_full=0.05720250611

@@ -1,0 +1,9 @@
+basis_tag=ortho
+spec=Q3
+degree=3
+include_e_raw=TRUE
+e_raw_mode=raw
+type=poly_orthonormal
+e_col=e
+mean_full=0.4259837308
+sd_full=0.05720250611

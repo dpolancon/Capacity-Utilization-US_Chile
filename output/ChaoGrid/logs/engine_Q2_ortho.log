@@ -1,0 +1,12 @@
+=== Engine start: Q2_ortho ===
+Project root: C:/ReposGitHub/capacity_utilization 
+Output root : C:/ReposGitHub/capacity_utilization/output/ChaoGrid 
+Degree      : 2 
+ORTHO       : TRUE 
+
+System dimension m = 5 
+
+COMMON_P_MAX = 3 
+
+Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/csv/grid_pic_table_Q2_ortho_unrestricted.csv 
+=== Engine completed OK: Q2_ortho ===

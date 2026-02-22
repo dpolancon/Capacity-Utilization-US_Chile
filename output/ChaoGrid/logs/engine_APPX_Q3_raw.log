@@ -1,0 +1,11 @@
+=== Engine start: Q3_raw ===
+Spec: Q3 | type: | degree: 3 | ORTHO: FALSE 
+
+System dimension m = 6 
+
+COMMON_P_MAX = 2 
+
+...progress: Q3_raw | i= 25 / 42 | window= full ecdet= none p= 4 | 2026-02-21 00:18:30 
+
+Wrote: C:/ReposGitHub/capacity_utilization/output/ChaoGrid/csv/APPX_grid_pic_table_Q3_raw_unrestricted.csv 
+=== Engine completed OK: Q3_raw ===

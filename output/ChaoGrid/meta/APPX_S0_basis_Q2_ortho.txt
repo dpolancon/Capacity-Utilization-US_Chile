@@ -1,0 +1,8 @@
+run_tag=Q2_ortho
+spec=Q2
+basis=ortho
+spec_type=
+degree=2
+basis_type=rawpowers_qr
+basis_name=qr_rawpowers_deg2
+e_raw_locked=TRUE
