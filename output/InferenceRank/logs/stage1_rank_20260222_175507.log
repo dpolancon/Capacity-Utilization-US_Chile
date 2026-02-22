@@ -1,0 +1,58 @@
+=== STAGE 1 Rank Bootstrap start ===
+Timestamp: 2026-02-22 17:55:07
+Project root: C:/ReposGitHub/capacity_utilization
+OUT_ROOT: C:/ReposGitHub/capacity_utilization/output/InferenceRank
+Data file (resolved): C:/ReposGitHub/capacity_utilization/data/processed/ddbb_cu_US_kgr.xlsx
+Data sheet: us_data
+[STAGE1] RUN: full | Q2 | raw | none
+[STAGE1] ERROR: full | Q2 | raw | none
+[STAGE1] RUN: full | Q2 | raw | const
+[STAGE1] ERROR: full | Q2 | raw | const
+[STAGE1] RUN: full | Q2 | ortho | none
+[STAGE1] ERROR: full | Q2 | ortho | none
+[STAGE1] RUN: full | Q2 | ortho | const
+[STAGE1] ERROR: full | Q2 | ortho | const
+[STAGE1] RUN: full | Q3 | raw | none
+[STAGE1] ERROR: full | Q3 | raw | none
+[STAGE1] RUN: full | Q3 | raw | const
+[STAGE1] ERROR: full | Q3 | raw | const
+[STAGE1] RUN: full | Q3 | ortho | none
+[STAGE1] ERROR: full | Q3 | ortho | none
+[STAGE1] RUN: full | Q3 | ortho | const
+[STAGE1] ERROR: full | Q3 | ortho | const
+[STAGE1] RUN: fordism | Q2 | raw | none
+[STAGE1] ERROR: fordism | Q2 | raw | none
+[STAGE1] RUN: fordism | Q2 | raw | const
+[STAGE1] ERROR: fordism | Q2 | raw | const
+[STAGE1] RUN: fordism | Q2 | ortho | none
+[STAGE1] ERROR: fordism | Q2 | ortho | none
+[STAGE1] RUN: fordism | Q2 | ortho | const
+[STAGE1] ERROR: fordism | Q2 | ortho | const
+[STAGE1] RUN: fordism | Q3 | raw | none
+[STAGE1] ERROR: fordism | Q3 | raw | none
+[STAGE1] RUN: fordism | Q3 | raw | const
+[STAGE1] ERROR: fordism | Q3 | raw | const
+[STAGE1] RUN: fordism | Q3 | ortho | none
+[STAGE1] ERROR: fordism | Q3 | ortho | none
+[STAGE1] RUN: fordism | Q3 | ortho | const
+[STAGE1] ERROR: fordism | Q3 | ortho | const
+[STAGE1] RUN: post_fordism | Q2 | raw | none
+[STAGE1] ERROR: post_fordism | Q2 | raw | none
+[STAGE1] RUN: post_fordism | Q2 | raw | const
+[STAGE1] ERROR: post_fordism | Q2 | raw | const
+[STAGE1] RUN: post_fordism | Q2 | ortho | none
+[STAGE1] ERROR: post_fordism | Q2 | ortho | none
+[STAGE1] RUN: post_fordism | Q2 | ortho | const
+[STAGE1] ERROR: post_fordism | Q2 | ortho | const
+[STAGE1] RUN: post_fordism | Q3 | raw | none
+[STAGE1] ERROR: post_fordism | Q3 | raw | none
+[STAGE1] RUN: post_fordism | Q3 | raw | const
+[STAGE1] ERROR: post_fordism | Q3 | raw | const
+[STAGE1] RUN: post_fordism | Q3 | ortho | none
+[STAGE1] ERROR: post_fordism | Q3 | ortho | none
+[STAGE1] RUN: post_fordism | Q3 | ortho | const
+[STAGE1] ERROR: post_fordism | Q3 | ortho | const
+=== STAGE 1 completed ===
+CSV: C:/ReposGitHub/capacity_utilization/output/InferenceRank/csv/STAGE1_rank_bootstrap_table.csv
+RDS: C:/ReposGitHub/capacity_utilization/output/InferenceRank/rds/STAGE1_rank_bootstrap_draws_20260222_175507.rds
+Log: C:/ReposGitHub/capacity_utilization/output/InferenceRank/logs/stage1_rank_20260222_175507.log

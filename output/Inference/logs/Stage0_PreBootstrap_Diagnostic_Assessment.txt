@@ -1,0 +1,81 @@
+4.X Pre-Bootstrap Diagnostic Assessment
+
+Before conducting bootstrap-based rank inference, a diagnostic
+assessment of the maintained VECM specification is performed. The
+objective is limited and procedural: to verify that the short-run
+dynamics are adequately specified for inference and to document the
+disturbance environment that will shape the finite-sample distribution
+of the likelihood ratio statistic. Stage 0 does not deliver conclusions
+regarding rank, parameters, or regime interpretation. It evaluates
+whether the maintained specification is bootstrappable.
+
+Full Sample
+
+Across all specifications (Q2 and Q3 polynomial blocks, raw and
+orthogonal bases, and both deterministic cases), residual serial
+correlation is not detected at conventional portmanteau horizons (K = 4,
+8). The baseline lag order p = 1 satisfies the serial-correlation gate
+uniformly. No repair of the lag structure is required. The maintained
+short-run skeleton is therefore admissible for inference.
+
+The disturbance structure, however, is markedly non-Gaussian. Average
+residual kurtosis is approximately 5.7, substantially above the Gaussian
+benchmark of 3. Conditional heteroskedasticity tests indicate pervasive
+variance instability across components (ARCH flags present in
+essentially all specifications). These features do not invalidate
+estimation but imply that asymptotic Gaussian critical values are
+unreliable in finite samples. The disturbance environment of the full
+sample is characterized by variance clustering and heavy tails. This
+motivates the use of wild bootstrap procedures in Stage 1.
+
+Fordist Subsample
+
+In the Fordist window, the serial-correlation gate is again satisfied at
+p = 1 across all specifications. No dynamic misspecification is
+detected.
+
+The distributional environment differs from the full sample. Average
+kurtosis is approximately 3.2, close to the Gaussian benchmark. Variance
+clustering remains present (ARCH detection persists in most components),
+but tail thickness is substantially reduced relative to the full sample.
+The Fordist disturbance environment thus appears as one of bounded
+variance instability rather than extreme tail behavior. Variance is
+non-constant, yet shocks are less explosive in magnitude.
+
+Post-Fordist Subsample
+
+The post-Fordist window likewise satisfies the serial-correlation gate
+at p = 1. The short-run dynamics remain admissible.
+
+In contrast to Fordism, residual kurtosis increases to approximately
+5.1, indicating heavier tails and more extreme realizations. Conditional
+heteroskedasticity remains detectable, although the share of components
+flagged by ARCH-type tests is somewhat lower than in Fordism. This
+pattern suggests that variance instability in the post-Fordist period
+may manifest less as smooth clustering and more as episodic turbulence.
+The disturbance environment is therefore characterized by heightened
+tail risk relative to the Fordist regime.
+
+Diagnostic Synthesis
+
+Three conclusions follow from Stage 0.
+
+First, no evidence of residual serial correlation is detected in any
+window. The maintained VECM structure with p = 1 is dynamically
+admissible and suitable for bootstrap recursion.
+
+Second, conditional heteroskedasticity is pervasive in all windows.
+Gaussian asymptotic critical values are therefore inappropriate for
+finite-sample rank testing.
+
+Third, disturbance characteristics differ across regimes: the Fordist
+period exhibits variance clustering with relatively moderate tails,
+whereas the post-Fordist period exhibits heavier tails and greater
+episodic volatility. These differences affect the finite-sample
+distribution of the likelihood ratio statistic but do not alter the
+maintained specification of the system.
+
+Accordingly, Stage 1 rank inference proceeds using wild bootstrap
+procedures under the maintained deterministic specification. Rank
+conclusions will be drawn from bootstrap-based critical values rather
+than asymptotic Gaussian theory.

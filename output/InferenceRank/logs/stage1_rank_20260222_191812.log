@@ -1,0 +1,58 @@
+=== STAGE 1 Rank Bootstrap start ===
+Timestamp: 2026-02-22 19:18:12
+Project root: C:/ReposGitHub/capacity_utilization
+OUT_ROOT: C:/ReposGitHub/capacity_utilization/output/InferenceRank
+Data file (resolved): C:/ReposGitHub/capacity_utilization/data/processed/ddbb_cu_US_kgr.xlsx
+Data sheet: us_data
+[STAGE1] RUN: full | Q2 | raw | none
+[STAGE1] DONE: full | Q2 | raw | none | B_eff=1999 | fail_rate=0.000 | p_boot=0.6203
+[STAGE1] RUN: full | Q2 | raw | const
+[STAGE1] DONE: full | Q2 | raw | const | B_eff=1999 | fail_rate=0.000 | p_boot=0.0675*
+[STAGE1] RUN: full | Q2 | ortho | none
+[STAGE1] DONE: full | Q2 | ortho | none | B_eff=1999 | fail_rate=0.000 | p_boot=0.6178
+[STAGE1] RUN: full | Q2 | ortho | const
+[STAGE1] DONE: full | Q2 | ortho | const | B_eff=1999 | fail_rate=0.000 | p_boot=0.0625*
+[STAGE1] RUN: full | Q3 | raw | none
+[STAGE1] DONE: full | Q3 | raw | none | B_eff=1999 | fail_rate=0.000 | p_boot=0.5858
+[STAGE1] RUN: full | Q3 | raw | const
+[STAGE1] DONE: full | Q3 | raw | const | B_eff=1999 | fail_rate=0.000 | p_boot=0.0550*
+[STAGE1] RUN: full | Q3 | ortho | none
+[STAGE1] DONE: full | Q3 | ortho | none | B_eff=1999 | fail_rate=0.000 | p_boot=0.5678
+[STAGE1] RUN: full | Q3 | ortho | const
+[STAGE1] DONE: full | Q3 | ortho | const | B_eff=1999 | fail_rate=0.000 | p_boot=0.0520*
+[STAGE1] RUN: fordism | Q2 | raw | none
+[STAGE1] DONE: fordism | Q2 | raw | none | B_eff=1999 | fail_rate=0.000 | p_boot=0.9230
+[STAGE1] RUN: fordism | Q2 | raw | const
+[STAGE1] DONE: fordism | Q2 | raw | const | B_eff=1999 | fail_rate=0.000 | p_boot=0.3892
+[STAGE1] RUN: fordism | Q2 | ortho | none
+[STAGE1] DONE: fordism | Q2 | ortho | none | B_eff=1999 | fail_rate=0.000 | p_boot=0.9185
+[STAGE1] RUN: fordism | Q2 | ortho | const
+[STAGE1] DONE: fordism | Q2 | ortho | const | B_eff=1999 | fail_rate=0.000 | p_boot=0.3927
+[STAGE1] RUN: fordism | Q3 | raw | none
+[STAGE1] DONE: fordism | Q3 | raw | none | B_eff=1999 | fail_rate=0.000 | p_boot=0.9705
+[STAGE1] RUN: fordism | Q3 | raw | const
+[STAGE1] DONE: fordism | Q3 | raw | const | B_eff=1999 | fail_rate=0.000 | p_boot=0.4312
+[STAGE1] RUN: fordism | Q3 | ortho | none
+[STAGE1] DONE: fordism | Q3 | ortho | none | B_eff=1999 | fail_rate=0.000 | p_boot=0.9665
+[STAGE1] RUN: fordism | Q3 | ortho | const
+[STAGE1] DONE: fordism | Q3 | ortho | const | B_eff=1999 | fail_rate=0.000 | p_boot=0.4147
+[STAGE1] RUN: post_fordism | Q2 | raw | none
+[STAGE1] DONE: post_fordism | Q2 | raw | none | B_eff=1999 | fail_rate=0.000 | p_boot=0.2056
+[STAGE1] RUN: post_fordism | Q2 | raw | const
+[STAGE1] DONE: post_fordism | Q2 | raw | const | B_eff=1999 | fail_rate=0.000 | p_boot=0.2126
+[STAGE1] RUN: post_fordism | Q2 | ortho | none
+[STAGE1] DONE: post_fordism | Q2 | ortho | none | B_eff=1999 | fail_rate=0.000 | p_boot=0.2226
+[STAGE1] RUN: post_fordism | Q2 | ortho | const
+[STAGE1] DONE: post_fordism | Q2 | ortho | const | B_eff=1999 | fail_rate=0.000 | p_boot=0.2251
+[STAGE1] RUN: post_fordism | Q3 | raw | none
+[STAGE1] DONE: post_fordism | Q3 | raw | none | B_eff=1999 | fail_rate=0.000 | p_boot=0.4097
+[STAGE1] RUN: post_fordism | Q3 | raw | const
+[STAGE1] DONE: post_fordism | Q3 | raw | const | B_eff=1999 | fail_rate=0.000 | p_boot=0.3827
+[STAGE1] RUN: post_fordism | Q3 | ortho | none
+[STAGE1] DONE: post_fordism | Q3 | ortho | none | B_eff=1999 | fail_rate=0.000 | p_boot=0.4327
+[STAGE1] RUN: post_fordism | Q3 | ortho | const
+[STAGE1] DONE: post_fordism | Q3 | ortho | const | B_eff=1999 | fail_rate=0.000 | p_boot=0.3757
+=== STAGE 1 completed ===
+CSV: C:/ReposGitHub/capacity_utilization/output/InferenceRank/csv/STAGE1_rank_bootstrap_table.csv
+RDS: C:/ReposGitHub/capacity_utilization/output/InferenceRank/rds/STAGE1_rank_bootstrap_draws_20260222_191812.rds
+Log: C:/ReposGitHub/capacity_utilization/output/InferenceRank/logs/stage1_rank_20260222_191812.log
