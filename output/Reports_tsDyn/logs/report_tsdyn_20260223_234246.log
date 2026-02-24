@@ -1,0 +1,674 @@
+=== 30_report_tsdyn start ===
+Input dir : C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv 
+Output dir: C:/ReposGitHub/capacity_utilization/output/Reports_tsDyn 
+
+Grid files found: 18 
+indexing APPX_grid_pic_table_Q1_ortho_SR_const__LR_none_unrestricted.csv [===========================] 4.64MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_ortho_SR_none__LR_const_unrestricted.csv [===========================] 4.44MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_ortho_SR_none__LR_none_unrestricted.csv [============================] 9.53MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.63GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_none__LR_const_unrestricted.csv [=============================] 1.48GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_none__LR_none_unrestricted.csv [============================] 895.29MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_ortho_SR_const__LR_none_unrestricted.csv [=========================] 571.90MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_ortho_SR_none__LR_const_unrestricted.csv [=========================] 203.12MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_ortho_SR_none__LR_none_unrestricted.csv [==========================] 836.44MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.27GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_none__LR_const_unrestricted.csv [===========================] 676.68MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_none__LR_none_unrestricted.csv [==============================] 1.82GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_const__LR_none_unrestricted.csv [===========================] 1.20GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_none__LR_const_unrestricted.csv [=========================] 949.44MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_none__LR_none_unrestricted.csv [============================] 1.17GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.73GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_none__LR_const_unrestricted.csv [=============================] 1.53GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_none__LR_none_unrestricted.csv [==============================] 1.83GB/s, eta:  0s                                                                                                                         Rows ingested: 1638 
+
+Primary IC: PIC_obs 
+
+BIC available: TRUE 
+
+wrote 677.00B in  0s, 42.38MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 449.00B in  0s, 25.11MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.94kB in  0s, 246.79MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.95kB in  0s, 209.36MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.94kB in  0s, 246.79MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.95kB in  0s, 209.36MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 3.03kB in  0s, 179.23MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 1.39kB in  0s, 100.59MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       
+=== Digest ===
+Primary IC     : PIC_obs 
+Unique windows : full, fordism, post_fordism 
+Unique specs   : Q1, Q2, Q3 
+Unique basis   : raw, ortho 
+Unique det_tag : SR_const__LR_none, SR_none__LR_const, SR_none__LR_none 
+Computed cells : 467 
+Winners (essay) rows: 18 
+
+Outputs written under: C:/ReposGitHub/capacity_utilization/output/Reports_tsDyn 
+=== 30_report_tsdyn complete ===
+indexing APPX_grid_pic_table_Q1_ortho_SR_const__LR_none_unrestricted.csv [===========================] 4.16MB/s, eta:  0s                                                                                                                          [1] "spec"                "basis"               "window"              "DSR"                 "DLR"                
+ [6] "det_tag"             "include"             "LRinclude"           "p"                   "r"                  
+[11] "status"              "PIC_obs"             "BIC_obs"             "common_p_max"        "comparable_p"       
+[16] "computed_comparable"
+        PIC_star_present finite_PIC_star_computed 
+                       0                       NA 
+Length  Class   Mode 
+     0   NULL   NULL 
+=== 20_engine_tsdyn start ===
+Output root: C:/ReposGitHub/capacity_utilization/output/TsDynEngine 
+
+Reading input data...
+-/                                                                                                                       /                                                                                                                       -                                                                                                                       Rows after finite filter: 99 
+Columns in data: year, KGCRcorp, Yrgdp, Wsh, Psh, e, yk, log_y, log_k, e_raw 
+
+Precomputing orthogonalization (full sample) where needed...
+Building lattice...
+
+Run tag: Q1_raw (degree= 1 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_raw (degree= 2 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_ortho (degree= 2 )
+ Window: full 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+ Window: fordism 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+ Window: post_fordism 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+
+Run tag: Q3_raw (degree= 3 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q3_ortho (degree= 3 )
+ Window: full 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+ Window: fordism 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+ Window: post_fordism 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+
+Post-processing lattice...
+Writing grid tables...
+wrote 2.21kB in  0s, 88.08MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.20kB in  0s, 130.20MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.20kB in  0s, 130.02MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 149.20MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 125.33MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 130.31MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 132.45MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 63.94MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 159.03MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       === 20_engine_tsdyn complete ===
+=== 30_report_tsdyn start ===
+Input dir : C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv 
+Output dir: C:/ReposGitHub/capacity_utilization/output/Reports_tsDyn 
+
+Grid files found: 18 
+indexing APPX_grid_pic_table_Q1_ortho_SR_const__LR_none_unrestricted.csv [===========================] 8.89MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_ortho_SR_none__LR_const_unrestricted.csv [===========================] 7.83MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_ortho_SR_none__LR_none_unrestricted.csv [============================] 9.71MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.63GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_none__LR_const_unrestricted.csv [=============================] 1.48GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_none__LR_none_unrestricted.csv [==============================] 1.77GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_ortho_SR_const__LR_none_unrestricted.csv [=========================] 915.04MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_ortho_SR_none__LR_const_unrestricted.csv [=========================] 853.79MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_ortho_SR_none__LR_none_unrestricted.csv [==========================] 649.34MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.71GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_none__LR_const_unrestricted.csv [=============================] 1.27GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_none__LR_none_unrestricted.csv [==============================] 2.00GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_const__LR_none_unrestricted.csv [===========================] 1.01GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_none__LR_const_unrestricted.csv [===========================] 1.09GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_none__LR_none_unrestricted.csv [==========================] 994.83MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.42GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_none__LR_const_unrestricted.csv [=============================] 1.62GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_none__LR_none_unrestricted.csv [==============================] 1.74GB/s, eta:  0s                                                                                                                         Rows ingested: 1638 
+
+PIC_star present: TRUE 
+finite PIC_star (computed): 0 
+=== 20_engine_tsdyn start ===
+Output root: C:/ReposGitHub/capacity_utilization/output/TsDynEngine 
+
+Reading input data...
+-/                                                                                                                       /                                                                                                                       -                                                                                                                       Rows after finite filter: 99 
+Columns in data: year, KGCRcorp, Yrgdp, Wsh, Psh, e, yk, log_y, log_k, e_raw 
+
+Precomputing orthogonalization (full sample) where needed...
+Building lattice...
+
+Run tag: Q1_raw (degree= 1 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_raw (degree= 2 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_ortho (degree= 2 )
+ Window: full 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+ Window: fordism 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+ Window: post_fordism 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+
+Run tag: Q3_raw (degree= 3 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q3_ortho (degree= 3 )
+ Window: full 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+ Window: fordism 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+ Window: post_fordism 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+
+Post-processing lattice...
+Writing grid tables...
+wrote 2.21kB in  0s, 156.75MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.20kB in  0s, 146.73MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.20kB in  0s, 121.47MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 170.90MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 130.55MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 125.10MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 149.26MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 140.29MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 159.03MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       === 20_engine_tsdyn complete ===
+=== 30_report_tsdyn start ===
+Input dir : C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv 
+Output dir: C:/ReposGitHub/capacity_utilization/output/Reports_tsDyn 
+
+Grid files found: 9 
+indexing APPX_grid_pic_table_Q1_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.24GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_none__LR_const_unrestricted.csv [=============================] 1.08GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_none__LR_none_unrestricted.csv [==============================] 1.46GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.85GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_none__LR_const_unrestricted.csv [=============================] 1.85GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_none__LR_none_unrestricted.csv [==============================] 1.82GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.44GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_none__LR_const_unrestricted.csv [=============================] 2.15GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_none__LR_none_unrestricted.csv [==============================] 1.97GB/s, eta:  0s                                                                                                                         Rows ingested: 945 
+
+PIC_star present: TRUE 
+finite PIC_star (computed): 0 
+=== 20_engine_tsdyn start ===
+Output root: C:/ReposGitHub/capacity_utilization/output/TsDynEngine 
+
+Reading input data...
+-/                                                                                                                       /                                                                                                                       -                                                                                                                       Rows after finite filter: 99 
+Columns in data: year, KGCRcorp, Yrgdp, Wsh, Psh, e, yk, log_y, log_k, e_raw 
+
+Precomputing orthogonalization (full sample) where needed...
+Building lattice...
+
+Run tag: Q1_raw (degree= 1 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_raw (degree= 2 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_ortho (degree= 2 )
+ Window: full 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+ Window: fordism 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+ Window: post_fordism 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+
+Run tag: Q3_raw (degree= 3 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q3_ortho (degree= 3 )
+ Window: full 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+ Window: fordism 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+ Window: post_fordism 
+  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.
+
+Post-processing lattice...
+Called from: dplyr::mutate(df, T_eff = dplyr::coalesce(.data$T_eff, .data$n_eff))
+=== 20_engine_tsdyn start ===
+Output root: C:/ReposGitHub/capacity_utilization/output/TsDynEngine 
+
+Reading input data...
+-/                                                                                                                       /                                                                                                                       -                                                                                                                       Rows after finite filter: 99 
+Columns in data: year, KGCRcorp, Yrgdp, Wsh, Psh, e, yk, log_y, log_k, e_raw 
+
+Precomputing orthogonalization (full sample) where needed...
+  [INFO] Ortho A computed via QR fallback for Q2_ortho 
+  [INFO] Ortho A computed via QR fallback for Q3_ortho 
+Building lattice...
+
+Run tag: Q1_raw (degree= 1 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_raw (degree= 2 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_ortho (degree= 2 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q3_raw (degree= 3 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q3_ortho (degree= 3 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Post-processing lattice...
+Writing grid tables...
+=== 20_engine_tsdyn start ===
+Output root: C:/ReposGitHub/capacity_utilization/output/TsDynEngine 
+
+Reading input data...
+-/                                                                                                                       /                                                                                                                       -                                                                                                                       Rows after finite filter: 99 
+Columns in data: year, KGCRcorp, Yrgdp, Wsh, Psh, e, yk, log_y, log_k, e_raw 
+
+Precomputing orthogonalization (full sample) where needed...
+  [INFO] Ortho A computed via QR fallback for Q2_ortho 
+  [INFO] Ortho A computed via QR fallback for Q3_ortho 
+Building lattice...
+
+Run tag: Q1_raw (degree= 1 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_raw (degree= 2 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_ortho (degree= 2 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q3_raw (degree= 3 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q3_ortho (degree= 3 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Post-processing lattice...
+Writing grid tables...
+wrote 2.21kB in  0s, 59.67MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.20kB in  0s, 81.09MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.23kB in  0s, 106.19MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.20kB in  0s, 109.90MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.23kB in  0s, 85.62MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 106.81MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 70.15MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.27kB in  0s, 118.75MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 101.99MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.26kB in  0s, 93.89MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 106.86MB/s                                                                                                                       wrote 4.49kB in  1s, 6.04kB/swrote 6.76kB in  2s, 3.73kB/swrote 9.05kB in  2s, 4.10kB/swrote 11.35kB in  2s, 5.13kB/swrote 13.70kB in  2s, 6.18kB/s                                                                                                                       wrote 2.15GB in  2s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 96.90MB/s                                                                                                                       wrote 4.49kB in  1s, 4.51kB/swrote 6.76kB in  2s, 3.86kB/swrote 9.04kB in  2s, 5.15kB/swrote 11.33kB in  2s, 6.45kB/swrote 13.64kB in  2s, 7.74kB/swrote 15.97kB in  2s, 9.05kB/swrote 18.33kB in  2s, 10.37kB/s                                                                                                                       wrote 2.15GB in  2s, 2.15GB/s                                                                                                                       wrote 2.27kB in  0s, 94.06MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 86.08MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.26kB in  0s, 114.26MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       === 20_engine_tsdyn complete ===
+=== 20_engine_tsdyn start ===
+Output root: C:/ReposGitHub/capacity_utilization/output/TsDynEngine 
+
+Reading input data...
+-/                                                                                                                       /                                                                                                                       -                                                                                                                       Rows after finite filter: 99 
+Columns in data: year, KGCRcorp, Yrgdp, Wsh, Psh, e, yk, log_y, log_k, e_raw 
+
+Precomputing orthogonalization (full sample) where needed...
+  [INFO] Ortho A computed via QR fallback for Q2_ortho 
+  [INFO] Ortho A computed via QR fallback for Q3_ortho 
+Building lattice...
+
+Run tag: Q1_raw (degree= 1 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_raw (degree= 2 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_ortho (degree= 2 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q3_raw (degree= 3 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q3_ortho (degree= 3 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Post-processing lattice...
+Writing grid tables...
+wrote 2.21kB in  0s, 95.34MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.20kB in  0s, 115.55MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.23kB in  0s, 85.73MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.20kB in  0s, 73.27MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.23kB in  0s, 79.09MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 111.90MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 97.91MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.27kB in  0s, 107.96MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 101.99MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.26kB in  0s, 90.32MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 74.63MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 90.38MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.27kB in  0s, 77.87MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.24kB in  0s, 50.99MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.26kB in  0s, 98.78MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       === 20_engine_tsdyn complete ===
+=== 30_report_tsdyn start ===
+Input dir : C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv 
+Output dir: C:/ReposGitHub/capacity_utilization/output/Reports_tsDyn 
+
+Grid files found: 18 
+indexing APPX_grid_pic_table_Q1_ortho_SR_const__LR_none_unrestricted.csv [==========================] 13.76MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_ortho_SR_none__LR_const_unrestricted.csv [==========================] 11.63MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_ortho_SR_none__LR_none_unrestricted.csv [===========================] 15.51MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_const__LR_none_unrestricted.csv [===========================] 961.68MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_none__LR_const_unrestricted.csv [=============================] 1.24GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_none__LR_none_unrestricted.csv [==============================] 1.00GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_ortho_SR_const__LR_none_unrestricted.csv [===========================] 1.46GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_ortho_SR_none__LR_const_unrestricted.csv [===========================] 1.49GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_ortho_SR_none__LR_none_unrestricted.csv [============================] 1.12GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.55GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_none__LR_const_unrestricted.csv [=============================] 1.27GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_none__LR_none_unrestricted.csv [==============================] 1.42GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_const__LR_none_unrestricted.csv [=========================] 948.18MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_none__LR_const_unrestricted.csv [=========================] 847.15MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_none__LR_none_unrestricted.csv [============================] 1.27GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.10GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_none__LR_const_unrestricted.csv [=============================] 1.29GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_none__LR_none_unrestricted.csv [============================] 923.82MB/s, eta:  0s                                                                                                                         Rows ingested: 1638 
+
+PIC_star present: TRUE 
+finite PIC_star (computed): 0 
+
+gate_fail 
+     1638 
+[1] 0
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+     NA      NA      NA     NaN      NA      NA    1638 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+                                                
+=== 20_engine_tsdyn start ===
+Output root: C:/ReposGitHub/capacity_utilization/output/TsDynEngine 
+
+Reading input data...
+-/                                                                                                                       /                                                                                                                       -                                                                                                                       Rows after finite filter: 99 
+Columns in data: year, KGCRcorp, Yrgdp, Wsh, Psh, e, yk, log_y, log_k, e_raw 
+
+Precomputing orthogonalization (full sample) where needed...
+  [INFO] Ortho A computed via QR fallback for Q2_ortho 
+  [INFO] Ortho A computed via QR fallback for Q3_ortho 
+Building lattice...
+
+Run tag: Q1_raw (degree= 1 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_raw (degree= 2 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q2_ortho (degree= 2 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q3_raw (degree= 3 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Run tag: Q3_ortho (degree= 3 )
+ Window: full 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+ Window: post_fordism 
+  Deterministic: SR_none__LR_none ( none , none )
+  Deterministic: SR_none__LR_const ( none , const )
+  Deterministic: SR_const__LR_none ( const , none )
+
+Post-processing lattice...
+Writing grid tables...
+wrote 2.60kB in  0s, 74.21MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.57kB in  0s, 107.79MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.57kB in  0s, 98.70MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.56kB in  0s, 98.62MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.60kB in  0s, 89.32MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.64kB in  0s, 87.71MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.61kB in  0s, 90.40MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.62kB in  0s, 97.06MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.61kB in  0s, 76.94MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.64kB in  0s, 75.33MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.66kB in  0s, 85.66MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.65kB in  0s, 85.50MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.70kB in  0s, 59.83MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.63kB in  0s, 97.69MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.68kB in  0s, 103.20MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 413.00B in  0s, 12.83MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       === 20_engine_tsdyn complete ===
+indexing APPX_grid_pic_table_Q1_ortho_SR_const__LR_none_unrestricted.csv [==========================] 11.63MB/s, eta:  0s                                                                                                                         < table of extent 0 >
+[1] 0
+[1] 0
+[1] TRUE
+[1] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv"
+[1] 18
+[1] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv/APPX_grid_pic_table_Q1_ortho_SR_const__LR_none_unrestricted.csv"
+[2] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv/APPX_grid_pic_table_Q1_ortho_SR_none__LR_const_unrestricted.csv"
+[3] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv/APPX_grid_pic_table_Q1_ortho_SR_none__LR_none_unrestricted.csv" 
+[4] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv/APPX_grid_pic_table_Q1_raw_SR_const__LR_none_unrestricted.csv"  
+[5] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv/APPX_grid_pic_table_Q1_raw_SR_none__LR_const_unrestricted.csv"  
+[6] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv/APPX_grid_pic_table_Q1_raw_SR_none__LR_none_unrestricted.csv"   
+indexing APPX_grid_pic_table_Q1_ortho_SR_const__LR_none_unrestricted.csv [==========================] 10.18MB/s, eta:  0s                                                                                                                         [1] 0
+[1] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv/APPX_grid_pic_table_Q3_ortho_SR_const__LR_none_unrestricted.csv"
+[2] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv/APPX_grid_pic_table_Q3_raw_SR_const__LR_none_unrestricted.csv"  
+[3] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv/APPX_grid_pic_table_Q2_ortho_SR_const__LR_none_unrestricted.csv"
+[4] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv/APPX_grid_pic_table_Q2_raw_SR_const__LR_none_unrestricted.csv"  
+[5] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv/APPX_grid_pic_table_Q1_ortho_SR_const__LR_none_unrestricted.csv"
+[6] "C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv/APPX_grid_pic_table_Q1_raw_SR_const__LR_none_unrestricted.csv"  
+indexing APPX_grid_pic_table_Q3_ortho_SR_const__LR_none_unrestricted.csv [=========================] 417.08MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_const__LR_none_unrestricted.csv [===========================] 3.17MB/s, eta:  0s                                                                                                                                                                                      file 
+"APPX_grid_pic_table_Q3_ortho_SR_const__LR_none_unrestricted.csv" 
+                                                                n 
+                                                            "126" 
+                                                       has_status 
+                                                           "TRUE" 
+                                                     has_PIC_star 
+                                                           "TRUE" 
+
+    computed runtime_fail 
+         111           15 
+[1] 111
+[1] 111
+=== 30_report_tsdyn start ===
+Input dir : C:/ReposGitHub/capacity_utilization/output/TsDynEngine/csv 
+Output dir: C:/ReposGitHub/capacity_utilization/output/Reports_tsDyn 
+
+Grid files found: 18 
+indexing APPX_grid_pic_table_Q1_ortho_SR_const__LR_none_unrestricted.csv [===========================] 5.31MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_ortho_SR_none__LR_const_unrestricted.csv [==========================] 12.86MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_ortho_SR_none__LR_none_unrestricted.csv [===========================] 12.22MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.06GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_none__LR_const_unrestricted.csv [=============================] 1.45GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q1_raw_SR_none__LR_none_unrestricted.csv [==============================] 1.25GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_ortho_SR_const__LR_none_unrestricted.csv [===========================] 1.72GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_ortho_SR_none__LR_const_unrestricted.csv [===========================] 1.19GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_ortho_SR_none__LR_none_unrestricted.csv [============================] 1.23GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.99GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_none__LR_const_unrestricted.csv [===========================] 874.57MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q2_raw_SR_none__LR_none_unrestricted.csv [==============================] 1.28GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_const__LR_none_unrestricted.csv [===========================] 1.42GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_const__LR_none_unrestricted.csv [==========================] 11.10MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_none__LR_const_unrestricted.csv [===========================] 1.75GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_none__LR_const_unrestricted.csv [==========================] 14.60MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_none__LR_none_unrestricted.csv [==========================] 932.68MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_ortho_SR_none__LR_none_unrestricted.csv [============================] 8.49MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_const__LR_none_unrestricted.csv [=============================] 1.48GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_const__LR_none_unrestricted.csv [============================] 10.88MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_none__LR_const_unrestricted.csv [=============================] 1.58GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_none__LR_const_unrestricted.csv [============================] 24.53MB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_none__LR_none_unrestricted.csv [==============================] 1.45GB/s, eta:  0s                                                                                                                         indexing APPX_grid_pic_table_Q3_raw_SR_none__LR_none_unrestricted.csv [=============================] 21.14MB/s, eta:  0s                                                                                                                         Rows ingested: 1638 
+
+PIC_star present: TRUE 
+finite PIC_star (computed): 1513 
+Primary IC: PIC_star 
+
+BIC available: TRUE 
+
+wrote 818.00B in  0s, 37.29MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 431.00B in  0s, 15.86MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 332.00B in  0s, 13.26MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 3.62kB in  0s, 150.50MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 3.63kB in  0s, 181.00MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 3.62kB in  0s, 150.50MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 3.63kB in  0s, 202.72MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 3.17kB in  0s, 138.41MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       wrote 2.01kB in  0s, 69.21MB/s                                                                                                                       wrote 2.15GB in  0s, 2.15GB/s                                                                                                                       
+=== Digest ===
+Primary IC     : PIC_star 
+Unique windows : full, fordism, post_fordism 
+Unique specs   : Q1, Q2, Q3 
+Unique basis   : raw, ortho 
+Unique det_tag : SR_const__LR_none, SR_none__LR_const, SR_none__LR_none 
+Computed cells : 1513 
+Winners (essay) rows: 45 
+
+Outputs written under: C:/ReposGitHub/capacity_utilization/output/Reports_tsDyn 
+=== 30_report_tsdyn complete ===

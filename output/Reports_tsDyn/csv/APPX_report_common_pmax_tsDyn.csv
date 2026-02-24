@@ -1,0 +1,16 @@
+spec,basis,det_tag,common_p_max
+Q1,raw,SR_const__LR_none,7
+Q1,raw,SR_none__LR_const,7
+Q1,raw,SR_none__LR_none,7
+Q2,ortho,SR_const__LR_none,7
+Q2,ortho,SR_none__LR_const,7
+Q2,ortho,SR_none__LR_none,7
+Q2,raw,SR_const__LR_none,7
+Q2,raw,SR_none__LR_const,7
+Q2,raw,SR_none__LR_none,7
+Q3,ortho,SR_const__LR_none,7
+Q3,ortho,SR_none__LR_const,7
+Q3,ortho,SR_none__LR_none,7
+Q3,raw,SR_const__LR_none,7
+Q3,raw,SR_none__LR_const,7
+Q3,raw,SR_none__LR_none,7

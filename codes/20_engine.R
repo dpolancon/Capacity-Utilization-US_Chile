@@ -1,476 +1,607 @@
 # ============================================================
-# 20_engine.R — ChaoGrid Engine (v4 CONSOLIDATED)
-# Repo: capacity_utilization/
+# 20_engine.R — tsDyn Lattice Engine (tsdyn_migration_stage1)
 #
-# Goal (locked):
-# - Build FULL lattice over (p,r) for each window × ecdet
-# - NEVER drop cells: separate gate_ok vs runtime_ok
-# - Export unrestricted canonical grid tables for joint (p,r) selection (PIC/BIC)
+# CONSOLIDATED (2026-02-23, rev2)
+# - Uses tsDyn ML logLik for VECM (Johansen ML).
+# - Implements r=0 comparator via tsDyn::lineVar(VAR, I="diff") and labels r0_path="SP_Sigma0".
+# - Computes PIC_star = logdet(Sigma_hat) + (log(T_eff)/T_eff) * (df_LR + df_SR)
+#     df_LR = 2mr - r^2
+#     df_SR = (p-1)m^2 + m*d_det  with d_det from DSR
+# - Keeps legacy PIC_obs/BIC_obs for debugging (do not use for selection once report enforces PIC_star).
+# - Adds structured diagnostics (fail_code, fail_msg, runtime_sec) without using runtime as a gate.
+# - Fixes tsDyn lag mapping: lag_tsdyn := p (VECM lag in tsDyn).
+# - FIX: robust common_p_max computation (no -Inf/Inf).
+# - FIX: export schema includes PIC_star + components (so report can ingest it).
+# - BONUS: ortho A fallback via QR if fit_ortho_A returns NULL.
 #
-# v4 fixes (definitive sink discipline):
-# - NO file() connection objects.
-# - sink() by filename only, with a dedicated open/close wrapper.
-# - Always close message sinks first, then output sinks.
-# - Fail-fast if sinks already open (optional auto-close via CONFIG$AUTO_CLOSE_SINKS).
-#
-# e handling (locked):
-# - NO standardization of e (raw only).
-# - ORTHO toggle = QR orthogonalization of RAW powers block X=[e^1,...,e^d]
-#   applied BEFORE interacting with logK:
-#     Q = X %*% A   (A stored)
-#     regressors: Qj*logK
-# - Transformation A is saved so coefficients can be back-transformed:
-#     delta_raw = A %*% gamma_ortho
-#
-# Specs supported:
-# - type="poly_theta":  [log_y, log_k, (optional e_raw), Q1*logK,...,Qd*logK]
-# - type="linear_affine_theta": [log_y, log_k, e_raw*logK]   (theta(e)=λ0+λ1 e)
-#
-# Exports (prefixed):
-#  csv/<APPX>_grid_pic_table_<SPEC>_<BASIS>_unrestricted.csv
-#  csv/<APPX>_S1_feasible_pmax_by_window_ecdet_<SPEC>_<BASIS>.csv
-#  meta/<APPX>_S0_basis_<SPEC>_<BASIS>.txt
-#  meta/<APPX>_S0_systemvars_<SPEC>_<BASIS>.txt
-#  meta/<APPX>_A_matrix_<SPEC>_<BASIS>.{rds,csv}   [only ortho + poly_theta]
-#  logs/<APPX>_engine_<SPEC>_<BASIS>.log
+# Writes ONLY under output/TsDynEngine/ (branch-local).
 # ============================================================
 
 suppressPackageStartupMessages({
-  pkgs <- c("here","readxl","dplyr","tidyr","urca","readr")
+  pkgs <- c("here", "readxl", "dplyr", "tidyr", "tsDyn", "readr", "tibble")
   invisible(lapply(pkgs, require, character.only = TRUE))
 })
 
-# --- Load config + utils (do not put runtime logic into config)
-here::i_am("codes/10_config.R")
-source(here::here("codes", "99_utils.R"))
-source(here::here("codes", "10_config.R"))
-
 # ------------------------------------------------------------
-# Fallback helpers (only if not defined in 99_utils.R)
+# Repo anchors + config + utils
 # ------------------------------------------------------------
-`%||%` <- get0("%||%", ifnotfound = function(a,b) if (is.null(a)) b else a)
+here::i_am("codes/20_engine.R")
+source(here::here("codes", "10_config_tsdyn.R"))
+source(here::here("codes", "99_tsdyn_utils.R"))
 
-ensure_dirs <- get0("ensure_dirs", ifnotfound = function(...) {
-  paths <- unique(c(...))
-  paths <- paths[!is.na(paths) & nzchar(paths)]
-  invisible(lapply(paths, function(p) if (!dir.exists(p)) dir.create(p, recursive = TRUE, showWarnings = FALSE)))
-})
+`%||%` <- get0("%||%", ifnotfound = function(a, b) if (is.null(a)) b else a)
 
-set_seed_deterministic <- get0("set_seed_deterministic", ifnotfound = function(seed = 123456) {
-  suppressWarnings(RNGkind(kind = "Mersenne-Twister", normal.kind = "Inversion"))
-  set.seed(seed)
-  invisible(TRUE)
-})
-
-# logLik from cajorls (fallback if absent)
-loglik_from_cajorls <- get0("loglik_from_cajorls", ifnotfound = function(jo_trace, r, m_expected = NULL) {
-  fit <- tryCatch(urca::cajorls(jo_trace, r = r), error = function(e) e)
-  if (inherits(fit, "error")) return(NA_real_)
-  E <- tryCatch(as.matrix(fit$rlm$residuals), error = function(e) NULL)
-  if (is.null(E) || nrow(E) < 5) return(NA_real_)
-  m <- ncol(E)
-  if (!is.null(m_expected) && m != m_expected) return(NA_real_)
-  Teff <- nrow(E)
-  S <- crossprod(E) / Teff
-  ld <- tryCatch(as.numeric(determinant(S, logarithm = TRUE)$modulus), error = function(e) NA_real_)
-  if (!is.finite(ld)) return(NA_real_)
-  -0.5 * Teff * (m * log(2 * pi) + ld + m)
-})
-
-count_params_vecm <- get0("count_params_vecm", ifnotfound = function(m, p, r, ecdet) {
-  k_alpha <- m * r
-  k_beta  <- m * r
-  k_gamma <- m * m * max(p - 1, 0)
-  k_det   <- if (ecdet == "const") r else 0
-  list(k_total = k_alpha + k_beta + k_gamma + k_det)
-})
-
-calc_ic <- get0("calc_ic", ifnotfound = function(loglik, T, k_total) {
-  bic <- -2 * loglik + k_total * log(T)
-  pic <- -2 * loglik + k_total * log(T) * log(log(T))
-  list(PIC = pic, BIC = bic)
-})
-
-# ------------------------------------------------------------
-# Logging discipline (LOCKED): use open_log() from 99_utils.R
-# ------------------------------------------------------------
-
-# ------------------------------------------------------------
-# v4 Basis: raw powers and QR orthogonalization (NO standardization)
-# ------------------------------------------------------------
-basis_apply_rawpowers <- function(df, e_col = "e", degree = 2, prefix = "Q") {
-  e <- as.numeric(df[[e_col]])
-  if (any(!is.finite(e))) stop("basis_apply_rawpowers: e has non-finite values after filtering", call. = FALSE)
-  for (j in seq_len(degree)) df[[paste0(prefix, j)]] <- e^j
-  df
-}
-
-basis_build_rawpowers_qr <- function(df_full, e_col = "e", degree = 2) {
-  e <- df_full[[e_col]]
-  e <- as.numeric(e[is.finite(e)])
-  if (length(e) < max(10, 5 * degree)) stop("basis_build_rawpowers_qr: too few finite e values", call. = FALSE)
-  
-  X <- sapply(seq_len(degree), function(j) e^j)
-  colnames(X) <- paste0("e^", seq_len(degree))
-  
-  qrX <- qr(X)
-  Q <- qr.Q(qrX)  # orthonormal columns
-  
-  # A solves: X %*% A = Q
-  A <- solve(crossprod(X), crossprod(X, Q))
-  
-  list(type = "rawpowers_qr", e_col = e_col, degree = degree, A = A)
-}
-
-basis_apply_rawpowers_qr <- function(df, basis, prefix = "Q") {
-  e <- as.numeric(df[[basis$e_col]])
-  if (any(!is.finite(e))) stop("basis_apply_rawpowers_qr: e has non-finite values after filtering", call. = FALSE)
-  X <- sapply(seq_len(basis$degree), function(j) e^j)
-  Q <- X %*% basis$A
-  Q <- as.matrix(Q)
-  colnames(Q) <- paste0(prefix, seq_len(basis$degree))
-  cbind(df, as.data.frame(Q))
-}
-
-build_basis <- function(df_full, e_col, degree, orthogonalize = TRUE) {
-  if (isTRUE(orthogonalize)) {
-    b <- basis_build_rawpowers_qr(df_full, e_col = e_col, degree = degree)
-    b$basis_name <- paste0("qr_rawpowers_deg", degree)
-    return(b)
+# Local fallback ensure_dirs if utils didn't define it
+if (!exists("ensure_dirs", mode = "function")) {
+  ensure_dirs <- function(...) {
+    paths <- unique(c(...))
+    paths <- paths[!is.na(paths) & nzchar(paths)]
+    invisible(lapply(paths, function(p) if (!dir.exists(p)) dir.create(p, recursive = TRUE, showWarnings = FALSE)))
   }
-  list(type = "raw_powers", e_col = e_col, degree = degree, basis_name = paste0("rawpowers_deg", degree))
-}
-
-apply_basis <- function(df, basis, spec_type) {
-  df$e_raw <- as.numeric(df[[CONFIG$e_col]])
-  
-  if (identical(spec_type, "linear_affine_theta")) return(df)
-  
-  if (identical(basis$type, "rawpowers_qr")) return(basis_apply_rawpowers_qr(df, basis, prefix = "Q"))
-  if (identical(basis$type, "raw_powers"))   return(basis_apply_rawpowers(df, e_col = basis$e_col, degree = basis$degree, prefix = "Q"))
-  
-  stop("apply_basis: unknown basis$type", call. = FALSE)
 }
 
 # ------------------------------------------------------------
-# System builder
+# Output dirs + logging
 # ------------------------------------------------------------
-build_system_engine <- function(df, spec_type, degree, y_col="log_y", k_col="log_k") {
-  
-  if (identical(spec_type, "linear_affine_theta")) {
-    need <- c(y_col, k_col, "e_raw")
-    miss <- setdiff(need, names(df))
-    if (length(miss)) stop("Missing column(s): ", paste(miss, collapse=", "), call.=FALSE)
-    
-    X <- data.frame(
-      log_y  = df[[y_col]],
-      log_k  = df[[k_col]],
-      e_logK = df[["e_raw"]] * df[[k_col]]
-    )
-    ok <- stats::complete.cases(X)
-    X <- X[ok, , drop=FALSE]
-    return(list(Y=as.matrix(X), var_names=colnames(X), ok_idx=which(ok)))
-  }
-  
-  need <- c(y_col, k_col, paste0("Q", seq_len(degree)))
-  miss <- setdiff(need, names(df))
-  if (length(miss)) stop("Missing column(s): ", paste(miss, collapse=", "), call.=FALSE)
-  
-  X <- data.frame(log_y=df[[y_col]], log_k=df[[k_col]])
-  if (isTRUE(CONFIG$INCLUDE_E_RAW %||% FALSE)) X$e_raw <- df[["e_raw"]]
-  
-  for (j in seq_len(degree)) {
-    X[[paste0("Q", j, "_logK")]] <- df[[paste0("Q", j)]] * df[[k_col]]
-  }
-  
-  ok <- stats::complete.cases(X)
-  X <- X[ok, , drop=FALSE]
-  list(Y=as.matrix(X), var_names=colnames(X), ok_idx=which(ok))
-}
-
-# ------------------------------------------------------------
-# Gate rule + Lattice
-# ------------------------------------------------------------
-feasible_for_ca_jo <- function(T, m, p, ecdet) {
-  T_eff <- T - p
-  min_eff <- max(20, 5*m + 5*p + ifelse(ecdet=="const", 5, 0))
-  list(ok = is.finite(T_eff) && T_eff > min_eff, T_eff=T_eff, min_eff=min_eff)
-}
-
-build_lattice <- function(sys_list, p_min, p_max, ecdet_set) {
-  out <- list()
-  for (w in names(sys_list)) {
-    Y <- sys_list[[w]]$Y
-    T_w <- nrow(Y); m_w <- ncol(Y)
-    out[[length(out)+1L]] <- tidyr::expand_grid(
-      window=w, ecdet=ecdet_set, p=p_min:p_max, r=0:(m_w-1L)
-    ) |>
-      dplyr::mutate(T=T_w, m=m_w, K=p+1L)
-  }
-  dplyr::bind_rows(out) |>
-    dplyr::mutate(
-      window=as.character(.data$window),
-      ecdet=as.character(.data$ecdet),
-      p=as.integer(.data$p),
-      r=as.integer(.data$r),
-      T=as.integer(.data$T),
-      m=as.integer(.data$m),
-      K=as.integer(.data$K)
-    )
-}
-
-# ------------------------------------------------------------
-# Init + data
-# ------------------------------------------------------------
-set_seed_deterministic(CONFIG$seed)
-
-ROOT_OUT <- here::here(CONFIG$OUT_ROOT)
+ROOT_OUT <- here::here(CONFIG$OUT_TSDYN %||% "output/TsDynEngine")
 DIRS <- list(
   csv  = file.path(ROOT_OUT, "csv"),
-  meta = file.path(ROOT_OUT, "meta"),
-  logs = file.path(ROOT_OUT, "logs")
+  logs = file.path(ROOT_OUT, "logs"),
+  meta = file.path(ROOT_OUT, "meta")
 )
-ensure_dirs(DIRS$csv, DIRS$meta, DIRS$logs)
+ensure_dirs(DIRS$csv, DIRS$logs, DIRS$meta)
 
-LBL_APPX <- CONFIG$OUT_LABELS$appx %||% "APPX"
-VERBOSE_CONSOLE  <- isTRUE(CONFIG$VERBOSE_CONSOLE %||% TRUE)
-HEARTBEAT_EVERY  <- as.integer(CONFIG$HEARTBEAT_EVERY %||% 25L)
-if (!is.finite(HEARTBEAT_EVERY) || HEARTBEAT_EVERY < 1) HEARTBEAT_EVERY <- 25L
-
-data_path <- here::here(CONFIG$data_file)
-ddbb_us <- readxl::read_excel(data_path, sheet = CONFIG$data_sheet)
-
-df0 <- dplyr::transmute(
-  ddbb_us,
-  year  = .data[[CONFIG$year_col]],
-  log_y = log(.data[[CONFIG$y_col]]),
-  log_k = log(.data[[CONFIG$k_col]]),
-  e     = .data[[CONFIG$e_col]]
-) |>
-  dplyr::arrange(.data$year) |>
-  dplyr::filter(is.finite(.data$year), is.finite(.data$log_y), is.finite(.data$log_k), is.finite(.data$e))
-
-filter_window_years <- function(df, key, year_col = "year") {
-  rng <- CONFIG$WINDOWS_LOCKED[[key]]
-  df |>
-    dplyr::filter(.data[[year_col]] >= rng[1], .data[[year_col]] <= rng[2])
+timestamp_tag <- format(Sys.time(), "%Y%m%d_%H%M%S")
+log_handle <- NULL
+if (exists("open_log", mode = "function")) {
+  log_handle <- tryCatch(
+    open_log(DIRS$logs, paste0("engine_tsdyn_", timestamp_tag), config = CONFIG),
+    error = function(e) {
+      message("[WARN] open_log failed: ", conditionMessage(e))
+      NULL
+    }
+  )
+}
+if (!is.null(log_handle) && exists("close_log", mode = "function")) {
+  on.exit(close_log(log_handle), add = TRUE)
 }
 
-windows_raw <- list(
-  full         = filter_window_years(df0, "full", year_col="year"),
-  fordism      = filter_window_years(df0, "fordism", year_col="year"),
-  post_fordism = filter_window_years(df0, "post_fordism", year_col="year")
-)
+cat("=== 20_engine_tsdyn start ===\n")
+cat("Output root:", ROOT_OUT, "\n\n")
 
-# ============================================================
-# RUN
-# ============================================================
-for (spec_name in names(CONFIG$SPECS)) {
+# ------------------------------------------------------------
+# Read data
+# ------------------------------------------------------------
+cat("Reading input data...\n")
+set.seed(CONFIG$seed %||% 123456L)
+
+data_path  <- here::here(CONFIG$data_file)
+sheet_name <- CONFIG$data_sheet %||% "us_data"
+
+df_raw <- readxl::read_excel(data_path, sheet = sheet_name)
+df_raw <- as.data.frame(df_raw)
+
+year_col <- CONFIG$year_col %||% "year"
+y_col    <- CONFIG$y_col %||% "Yrgdp"
+k_col    <- CONFIG$k_col %||% "KGCRcorp"
+e_col    <- CONFIG$e_col %||% "e"
+
+df_raw$year  <- as.numeric(df_raw[[year_col]])
+df_raw$log_y <- log(as.numeric(df_raw[[y_col]]))
+df_raw$log_k <- log(as.numeric(df_raw[[k_col]]))
+df_raw$e_raw <- as.numeric(df_raw[[e_col]])
+
+ok_core <- is.finite(df_raw$year) & is.finite(df_raw$log_y) & is.finite(df_raw$log_k) & is.finite(df_raw$e_raw)
+df_raw <- df_raw[ok_core, , drop = FALSE]
+
+cat("Rows after finite filter:", nrow(df_raw), "\n")
+cat("Columns in data:", paste(names(df_raw), collapse = ", "), "\n\n")
+
+# ------------------------------------------------------------
+# Axes: specs / basis / windows
+# ------------------------------------------------------------
+if (is.null(CONFIG$SPECS) || !is.list(CONFIG$SPECS) || length(CONFIG$SPECS) == 0) {
+  stop("CONFIG$SPECS missing or empty.")
+}
+SPEC_SET <- names(CONFIG$SPECS)
+
+basis_set <- NULL
+if (!is.null(CONFIG$ORTHO_TOGGLE)) {
+  basis_set <- unique(ifelse(as.logical(CONFIG$ORTHO_TOGGLE), "ortho", "raw"))
+}
+if (is.null(basis_set)) basis_set <- c("raw")
+
+WINDOWS_LOCK <- CONFIG$WINDOWS_LOCKED %||% stop("CONFIG$WINDOWS_LOCKED missing")
+windows_order <- names(WINDOWS_LOCK)
+
+# ------------------------------------------------------------
+# Ortho A fallback (QR): if fit_ortho_A returns NULL
+# ------------------------------------------------------------
+fallback_ortho_A <- function(df, e_col = "e_raw", degree = 2L) {
+  e_vec <- as.numeric(df[[e_col]])
+  e_vec <- e_vec[is.finite(e_vec)]
+  if (length(e_vec) < (degree + 2L)) return(NULL)
   
-  spec_type <- CONFIG$SPECS[[spec_name]]$type
-  degree    <- CONFIG$SPECS[[spec_name]]$degree
+  X_raw <- sapply(seq_len(degree), function(j) e_vec^j)
+  X_raw <- as.matrix(X_raw)
+  if (any(!is.finite(X_raw))) return(NULL)
   
-  ORTHO_SET <- if (identical(spec_type, "linear_affine_theta")) c(FALSE) else CONFIG$ORTHO_TOGGLE
+  qrx <- qr(X_raw)
+  if (qrx$rank < degree) return(NULL)
   
-  for (ORTHO in ORTHO_SET) {
+  R <- qr.R(qrx)
+  # A = R^{-1} so that X_raw %*% A = Q (orthonormal columns)
+  A <- tryCatch(solve(R, diag(degree)), error = function(e) NULL)
+  if (is.null(A) || any(!is.finite(A))) return(NULL)
+  
+  list(A = A, method = "QR_fallback")
+}
+
+# ------------------------------------------------------------
+# Precompute orthogonalization matrices A on FULL sample for each spec
+# ------------------------------------------------------------
+cat("Precomputing orthogonalization (full sample) where needed...\n")
+
+basis_info_list <- list()
+for (spec in SPEC_SET) {
+  degree <- as.integer(CONFIG$SPECS[[spec]]$degree)
+  for (basis_tag in basis_set) {
     
-    basis_tag <- if (identical(spec_type, "linear_affine_theta")) "raw" else if (ORTHO) "ortho" else "raw"
-    run_tag   <- paste0(spec_name, "_", basis_tag)
-    # log file handled by open_log(run_tag, CONFIG, DIRS$logs)
+    # Q1 must be raw-only
+    if (identical(spec, "Q1") && identical(basis_tag, "ortho")) next
     
-    if (VERBOSE_CONSOLE) {
-      cat("\n>>> ABOUT TO RUN:", run_tag, "@", format(Sys.time()), "\n")
-      flush.console()
+    key <- paste0(spec, "_", basis_tag)
+    
+    if (basis_tag == "ortho") {
+      basis_full <- tryCatch(
+        fit_ortho_A(df_raw, e_col = "e_raw", degree = degree),
+        error = function(e) NULL
+      )
+      A <- if (!is.null(basis_full) && !is.null(basis_full$A)) basis_full$A else NULL
+      
+      if (is.null(A)) {
+        # fallback QR
+        fb <- fallback_ortho_A(df_raw, e_col = "e_raw", degree = degree)
+        A <- if (!is.null(fb)) fb$A else NULL
+        if (!is.null(A)) cat("  [INFO] Ortho A computed via QR fallback for", key, "\n")
+      }
+      
+      basis_info_list[[key]] <- list(type = "ortho", degree = degree, A = A)
+    } else {
+      basis_info_list[[key]] <- list(type = "raw", degree = degree, A = NULL)
     }
-    
-    close_log <- NULL
-    
-    tryCatch({
-      
-      close_log <- open_log(run_tag = paste0(LBL_APPX, "_", run_tag), config = CONFIG, dir_logs = DIRS$logs)
-      on.exit(if (is.function(close_log)) close_log(), add = TRUE)
-      
-      cat("=== Engine start:", run_tag, "===\n")
-      cat("Spec:", spec_name, "| type:", spec_type, "| degree:", degree, "| ORTHO:", ORTHO, "\n\n")
-      
-      basis <- if (!identical(spec_type, "linear_affine_theta")) {
-        build_basis(windows_raw$full, e_col="e", degree=degree, orthogonalize=ORTHO)
-      } else {
-        list(type="none", e_col="e", degree=1L, basis_name="none")
-      }
-      
-      writeLines(
-        c(
-          paste0("run_tag=", run_tag),
-          paste0("spec=", spec_name),
-          paste0("basis=", basis_tag),
-          paste0("spec_type=", spec_type),
-          paste0("degree=", degree),
-          paste0("basis_type=", basis$type),
-          paste0("basis_name=", basis$basis_name %||% NA_character_),
-          paste0("e_raw_locked=TRUE")
-        ),
-        con = file.path(DIRS$meta, paste0(LBL_APPX, "_S0_basis_", run_tag, ".txt"))
-      )
-      
-      if (identical(basis$type, "rawpowers_qr")) {
-        saveRDS(basis$A, file.path(DIRS$meta, paste0(LBL_APPX, "_A_matrix_", run_tag, ".rds")))
-        utils::write.csv(basis$A,
-                         file.path(DIRS$meta, paste0(LBL_APPX, "_A_matrix_", run_tag, ".csv")),
-                         row.names = FALSE)
-      }
-      
-      windows_b <- lapply(windows_raw, apply_basis, basis=basis, spec_type=spec_type)
-      sys_list  <- lapply(windows_b, build_system_engine, spec_type=spec_type, degree=degree, y_col="log_y", k_col="log_k")
-      
-      ref_win <- if ("full" %in% names(sys_list)) "full" else names(sys_list)[1]
-      writeLines(
-        c(
-          paste0("run_tag=", run_tag),
-          paste0("vars=", paste(sys_list[[ref_win]]$var_names, collapse=", "))
-        ),
-        con = file.path(DIRS$meta, paste0(LBL_APPX, "_S0_systemvars_", run_tag, ".txt"))
-      )
-      
-      m_vec <- vapply(sys_list, function(s) ncol(s$Y), integer(1))
-      if (length(unique(m_vec)) != 1) stop("System dimension differs across windows; check missingness.", call.=FALSE)
-      m_sys <- unique(m_vec)
-      cat("System dimension m =", m_sys, "\n\n")
-      
-      lattice <- build_lattice(sys_list, CONFIG$P_MIN, CONFIG$P_MAX_EXPLORATORY, CONFIG$ECDET_LOCKED)
-      
-      feas_rows <- list()
-      for (w in names(sys_list)) {
-        T_w <- nrow(sys_list[[w]]$Y)
-        for (ec in CONFIG$ECDET_LOCKED) {
-          feas <- integer(0)
-          for (p in CONFIG$P_MIN:CONFIG$P_MAX_EXPLORATORY) {
-            g <- feasible_for_ca_jo(T=T_w, m=m_sys, p=p, ecdet=ec)
-            if (isTRUE(g$ok)) feas <- c(feas, p)
-          }
-          feas_rows[[length(feas_rows)+1L]] <- data.frame(
-            window=w, ecdet=ec, T=T_w, m=m_sys,
-            p_max_feasible=if (length(feas)==0) NA_integer_ else max(feas),
-            stringsAsFactors=FALSE
-          )
-        }
-      }
-      feasible_df <- dplyr::bind_rows(feas_rows)
-      readr::write_csv(feasible_df, file.path(DIRS$csv, paste0(LBL_APPX, "_S1_feasible_pmax_by_window_ecdet_", run_tag, ".csv")))
-      
-      COMMON_P_MAX <- suppressWarnings(min(feasible_df$p_max_feasible, na.rm=TRUE))
-      if (!is.finite(COMMON_P_MAX)) COMMON_P_MAX <- NA_integer_
-      cat("COMMON_P_MAX =", COMMON_P_MAX, "\n\n")
-      
-      keys <- lattice |>
-        dplyr::distinct(window, ecdet, p, T, m, K) |>
-        dplyr::arrange(window, ecdet, p)
-      
-      cell_rows <- vector("list", nrow(keys))
-      rank_rows <- list()
-      
-      for (i in seq_len(nrow(keys))) {
-        
-        w  <- keys$window[i]
-        ec <- keys$ecdet[i]
-        p  <- keys$p[i]
-        T_w <- keys$T[i]
-        m_w <- keys$m[i]
-        K   <- keys$K[i]
-        
-        if (i %% HEARTBEAT_EVERY == 0) {
-          cat("...progress:", run_tag, "| i=", i, "/", nrow(keys),
-              "| window=", w, "ecdet=", ec, "p=", p,
-              "|", format(Sys.time()), "\n")
-        }
-        
-        gate <- feasible_for_ca_jo(T=T_w, m=m_w, p=p, ecdet=ec)
-        
-        cs <- data.frame(
-          window=w, ecdet=ec, p=p, T=T_w, m=m_w, K=K,
-          gate_ok=isTRUE(gate$ok),
-          gate_T_eff=gate$T_eff,
-          gate_min_eff=gate$min_eff,
-          runtime_ok=FALSE,
-          runtime_reason=NA_character_,
-          stringsAsFactors=FALSE
-        )
-        
-        if (!isTRUE(gate$ok)) {
-          cs$runtime_reason <- paste0("gate_fail: T_eff=", gate$T_eff, " <= min_eff=", gate$min_eff)
-          cell_rows[[i]] <- cs
-          next
-        }
-        
-        jo_tr <- tryCatch(
-          urca::ca.jo(sys_list[[w]]$Y, type="trace", ecdet=ec, K=K, spec=CONFIG$johansen_spec),
-          error=function(e) e
-        )
-        
-        if (inherits(jo_tr, "error")) {
-          cs$runtime_reason <- paste0("runtime_fail: ", conditionMessage(jo_tr))
-          cell_rows[[i]] <- cs
-          next
-        }
-        
-        ll_by_r <- rep(NA_real_, m_w)
-        for (rr in 0:(m_w-1L)) ll_by_r[rr+1L] <- loglik_from_cajorls(jo_tr, r=rr, m_expected=m_w)
-        
-        if (all(!is.finite(ll_by_r))) {
-          cs$runtime_reason <- "runtime_fail: cajorls logLik all non-finite"
-          cell_rows[[i]] <- cs
-          next
-        }
-        
-        cs$runtime_ok <- TRUE
-        cell_rows[[i]] <- cs
-        
-        rr_tbl <- data.frame(window=w, ecdet=ec, p=p, r=0:(m_w-1L), logLik=ll_by_r, stringsAsFactors=FALSE) |>
-          dplyr::mutate(
-            k_total = vapply(.data$r, function(rrr) count_params_vecm(m=m_w, p=p, r=rrr, ecdet=ec)$k_total, numeric(1)),
-            PIC = mapply(function(ll, kk) if (is.finite(ll)) calc_ic(ll, T_w, kk)$PIC else NA_real_, .data$logLik, .data$k_total),
-            BIC = mapply(function(ll, kk) if (is.finite(ll)) calc_ic(ll, T_w, kk)$BIC else NA_real_, .data$logLik, .data$k_total)
-          )
-        
-        rank_rows[[length(rank_rows)+1L]] <- rr_tbl
-      }
-      
-      cell_tbl <- dplyr::bind_rows(cell_rows)
-      rr_tbl <- if (length(rank_rows)>0) dplyr::bind_rows(rank_rows) else dplyr::tibble()
-      
-      gridU <- lattice |>
-        dplyr::left_join(cell_tbl, by=c("window","ecdet","p","T","m","K")) |>
-        dplyr::left_join(rr_tbl,   by=c("window","ecdet","p","r")) |>
-        dplyr::mutate(
-          comparable_p = ifelse(is.na(COMMON_P_MAX), FALSE, (.data$p <= COMMON_P_MAX)),
-          status = dplyr::case_when(
-            !.data$gate_ok ~ "gate_fail",
-            .data$gate_ok & !.data$runtime_ok ~ "runtime_fail",
-            .data$gate_ok & .data$runtime_ok & is.finite(.data$PIC) ~ "computed",
-            TRUE ~ "missing"
-          ),
-          PIC_obs = ifelse(.data$status=="computed", .data$PIC, NA_real_),
-          BIC_obs = ifelse(.data$status=="computed", .data$BIC, NA_real_)
-        ) |>
-        dplyr::mutate(spec=spec_name, basis=basis_tag)
-      
-      out_csv <- file.path(DIRS$csv, paste0(LBL_APPX, "_grid_pic_table_", run_tag, "_unrestricted.csv"))
-      readr::write_csv(gridU, out_csv)
-      
-      cat("\nWrote:", out_csv, "\n")
-      cat("=== Engine completed OK:", run_tag, "===\n")
-      
-    }, error=function(e) {
-      
-      cat("RUN FAILED:", run_tag, "\n", conditionMessage(e), "\n")
-      
-    }, finally={
-      
-      if (is.function(close_log)) close_log()
-      
-      if (sink.number(type="output") > 0) {
-        message("WARNING: OUTPUT sinks remained open after run. out=", sink.number(type="output"))
-      }
-    })
   }
 }
+
+# ------------------------------------------------------------
+# Main lattice
+# ------------------------------------------------------------
+cat("Building lattice...\n")
+LBL_APPX <- (CONFIG$OUT_LABELS$appx %||% "APPX")
+
+det_df <- det_pairs(CONFIG)
+if (nrow(det_df) == 0) stop("det_pairs(CONFIG) returned no deterministic pairs.")
+
+results_list <- list()
+p_max_by_window <- list()
+
+for (spec in SPEC_SET) {
+  degree <- as.integer(CONFIG$SPECS[[spec]]$degree)
+  
+  for (basis_tag in basis_set) {
+    if (identical(spec, "Q1") && identical(basis_tag, "ortho")) next
+    
+    run_tag <- paste0(spec, "_", basis_tag)
+    cat("\nRun tag:", run_tag, "(degree=", degree, ")\n")
+    
+    basis_info <- basis_info_list[[run_tag]]
+    if (is.null(basis_info)) next
+    
+    for (window_name in windows_order) {
+      cat(" Window:", window_name, "\n")
+      win_bounds <- WINDOWS_LOCK[[window_name]]
+      
+      df_win <- df_raw[df_raw$year >= win_bounds[1] & df_raw$year <= win_bounds[2], , drop = FALSE]
+      if (nrow(df_win) < 10) {
+        cat("  Too few observations in window, skipping.\n")
+        next
+      }
+      
+      # Build polynomial block Qj in df_win
+      if (basis_info$type == "ortho") {
+        if (is.null(basis_info$A)) {
+          cat("  [WARN] Ortho basis requested but A is NULL; skipping this run_tag.\n")
+          next
+        }
+        e_vec <- df_win$e_raw
+        X_raw <- sapply(seq_len(degree), function(j) e_vec^j)
+        colnames(X_raw) <- paste0("Qraw", seq_len(degree))
+        Q <- as.matrix(X_raw) %*% basis_info$A
+        colnames(Q) <- paste0("Q", seq_len(degree))
+        df_win <- cbind(df_win, as.data.frame(Q))
+      } else {
+        for (j in seq_len(degree)) df_win[[paste0("Q", j)]] <- df_win$e_raw^j
+      }
+      
+      for (i in seq_len(nrow(det_df))) {
+        DSR <- det_df$DSR[i]
+        DLR <- det_df$DLR[i]
+        det_tag <- det_df$det_tag[i]
+        include <- det_df$include[i]
+        LRinclude <- det_df$LRinclude[i]
+        
+        cat("  Deterministic:", det_tag, "(", include, ",", LRinclude, ")\n")
+        
+        # Build system matrix X: log_y, log_k, e_raw, and Qj*log_k terms
+        X <- data.frame(log_y = df_win$log_y, log_k = df_win$log_k)
+        if (isTRUE(CONFIG$INCLUDE_E_RAW %||% TRUE)) X$e_raw <- df_win$e_raw
+        
+        for (jj in seq_len(degree)) {
+          nm <- paste0("Q", jj)
+          X[[paste0(nm, "_logK")]] <- df_win[[nm]] * df_win$log_k
+        }
+        
+        m <- ncol(X)
+        
+        p_min <- as.integer(CONFIG$P_MIN %||% 1L)
+        p_max <- as.integer(CONFIG$P_MAX_EXPLORATORY %||% p_min)
+        
+        feasible_p_this <- integer()
+        
+        for (p_vecm in seq(p_min, p_max)) {
+          
+          # Gate (sample size / conditioning). Runtime is logged but not treated as a pass/fail gate.
+          gate <- tryCatch(admissible_gate(X, p_vecm), error = function(e) list(ok = FALSE, msg = conditionMessage(e)))
+          if (!isTRUE(gate$ok)) {
+            for (r0 in 0:(m - 1)) {
+              results_list[[length(results_list) + 1]] <- data.frame(
+                spec = spec, basis = basis_tag, window = window_name,
+                DSR = DSR, DLR = DLR, det_tag = det_tag,
+                include = include, LRinclude = LRinclude,
+                p = p_vecm, r = r0,
+                m = m,
+                status = "gate_fail",
+                r0_path = if (r0 == 0L) "SP_Sigma0" else NA_character_,
+                fail_code = "gate_fail",
+                fail_msg = truncate_msg(gate$msg %||% "", 180L),
+                runtime_sec = NA_real_,
+                T_eff = NA_integer_,
+                logLik_ML = NA_real_,
+                logdet_Sigma = NA_real_,
+                Cn = NA_real_,
+                df_LR = as.integer(2L * m * r0 - r0 * r0),
+                df_SR = as.integer((p_vecm - 1L) * m * m + m * det_count(DSR)),
+                d_det = det_count(DSR),
+                k_total = as.integer(k_total_rr(p_vecm, r0, m, DSR, DLR)),
+                PIC_star = NA_real_,
+                PIC_obs = NA_real_, BIC_obs = NA_real_,
+                stringsAsFactors = FALSE
+              )
+            }
+            next
+          }
+          
+          # tsDyn lag mapping: p := tsDyn VECM lag argument (Δ-lag order)
+          lag_tsdyn <- p_vecm
+          
+          for (r0 in 0:(m - 1)) {
+            t0 <- proc.time()[["elapsed"]]
+            
+            d_det <- det_count(DSR)
+            dfSR  <- as.integer((p_vecm - 1L) * m * m + m * d_det)
+            dfLR  <- as.integer(2L * m * r0 - r0 * r0)
+            kTot  <- as.integer(k_total_rr(p_vecm, r0, m, DSR, DLR))
+            
+            # -----------------
+            # r = 0 comparator path (FROZEN): VAR in first differences
+            # -----------------
+            if (r0 == 0L) {
+              fit0 <- fit_sigma0_var_diff(X_level = X, p_vecm = p_vecm, include = include)
+              
+              if (!isTRUE(fit0$ok)) {
+                results_list[[length(results_list) + 1]] <- data.frame(
+                  spec = spec, basis = basis_tag, window = window_name,
+                  DSR = DSR, DLR = DLR, det_tag = det_tag,
+                  include = include, LRinclude = LRinclude,
+                  p = p_vecm, r = r0,
+                  m = m,
+                  status = "runtime_fail",
+                  r0_path = "SP_Sigma0",
+                  fail_code = fit0$fail_code %||% "R0_FAIL",
+                  fail_msg = truncate_msg(fit0$fail_msg %||% "", 180L),
+                  runtime_sec = as.numeric(proc.time()[["elapsed"]] - t0),
+                  T_eff = NA_integer_,
+                  logLik_ML = NA_real_,
+                  logdet_Sigma = NA_real_,
+                  Cn = NA_real_,
+                  df_LR = dfLR,
+                  df_SR = dfSR,
+                  d_det = d_det,
+                  k_total = kTot,
+                  PIC_star = NA_real_,
+                  PIC_obs = NA_real_, BIC_obs = NA_real_,
+                  stringsAsFactors = FALSE
+                )
+                next
+              }
+              
+              ll0 <- fit0$ll
+              Sigma0 <- fit0$Sigma0
+              T_eff <- as.integer(fit0$T_eff)
+              logdet0 <- tryCatch(as.numeric(determinant(Sigma0, logarithm = TRUE)$modulus), error = function(e) NA_real_)
+              Cn <- if (is.finite(T_eff) && T_eff > 1L) log(T_eff) else NA_real_
+              
+              PIC_star <- if (is.finite(logdet0) && is.finite(Cn)) logdet0 + (Cn / T_eff) * (dfLR + dfSR) else NA_real_
+              
+              PIC_obs <- if (is.finite(ll0) && is.finite(T_eff) && T_eff > 1L) (-2 * ll0 + kTot * log(T_eff) * log(log(T_eff))) else NA_real_
+              BIC_obs <- if (is.finite(ll0) && is.finite(T_eff) && T_eff > 1L) (-2 * ll0 + kTot * log(T_eff)) else NA_real_
+              
+              results_list[[length(results_list) + 1]] <- data.frame(
+                spec = spec, basis = basis_tag, window = window_name,
+                DSR = DSR, DLR = DLR, det_tag = det_tag,
+                include = include, LRinclude = LRinclude,
+                p = p_vecm, r = r0,
+                m = m,
+                status = "computed",
+                r0_path = "SP_Sigma0",
+                fail_code = NA_character_,
+                fail_msg = NA_character_,
+                runtime_sec = as.numeric(proc.time()[["elapsed"]] - t0),
+                T_eff = T_eff,
+                logLik_ML = ll0,
+                logdet_Sigma = logdet0,
+                Cn = Cn,
+                df_LR = dfLR,
+                df_SR = dfSR,
+                d_det = d_det,
+                k_total = kTot,
+                PIC_star = PIC_star,
+                PIC_obs = PIC_obs,
+                BIC_obs = BIC_obs,
+                stringsAsFactors = FALSE
+              )
+              
+              feasible_p_this <- unique(c(feasible_p_this, p_vecm))
+              next
+            }
+            
+            # -----------------
+            # r > 0: VECM Johansen ML
+            # -----------------
+            model <- tryCatch(
+              tsDyn::VECM(X, lag = lag_tsdyn, r = r0, include = include, LRinclude = LRinclude, estim = "ML"),
+              error = function(e) e
+            )
+            
+            if (inherits(model, "error")) {
+              results_list[[length(results_list) + 1]] <- data.frame(
+                spec = spec, basis = basis_tag, window = window_name,
+                DSR = DSR, DLR = DLR, det_tag = det_tag,
+                include = include, LRinclude = LRinclude,
+                p = p_vecm, r = r0,
+                m = m,
+                status = "runtime_fail",
+                r0_path = NA_character_,
+                fail_code = "VECM_ML_FAIL",
+                fail_msg = truncate_msg(conditionMessage(model), 180L),
+                runtime_sec = as.numeric(proc.time()[["elapsed"]] - t0),
+                T_eff = NA_integer_,
+                logLik_ML = NA_real_,
+                logdet_Sigma = NA_real_,
+                Cn = NA_real_,
+                df_LR = dfLR,
+                df_SR = dfSR,
+                d_det = d_det,
+                k_total = kTot,
+                PIC_star = NA_real_,
+                PIC_obs = NA_real_,
+                BIC_obs = NA_real_,
+                stringsAsFactors = FALSE
+              )
+              next
+            }
+            
+            ll <- tsdyn_loglik(model)
+            U  <- tryCatch(stats::residuals(model), error = function(e) NULL)
+            if (is.null(U)) {
+              results_list[[length(results_list) + 1]] <- data.frame(
+                spec = spec, basis = basis_tag, window = window_name,
+                DSR = DSR, DLR = DLR, det_tag = det_tag,
+                include = include, LRinclude = LRinclude,
+                p = p_vecm, r = r0,
+                m = m,
+                status = "runtime_fail",
+                r0_path = NA_character_,
+                fail_code = "RESID_FAIL",
+                fail_msg = "Could not extract residuals",
+                runtime_sec = as.numeric(proc.time()[["elapsed"]] - t0),
+                T_eff = NA_integer_,
+                logLik_ML = ll,
+                logdet_Sigma = NA_real_,
+                Cn = NA_real_,
+                df_LR = dfLR,
+                df_SR = dfSR,
+                d_det = d_det,
+                k_total = kTot,
+                PIC_star = NA_real_,
+                PIC_obs = NA_real_,
+                BIC_obs = NA_real_,
+                stringsAsFactors = FALSE
+              )
+              next
+            }
+            
+            U <- as.matrix(U)
+            T_eff <- nrow(U)
+            Sigma <- tryCatch(sigma_hat_ml(U, T_eff = T_eff), error = function(e) NULL)
+            logdet <- tryCatch(as.numeric(determinant(Sigma, logarithm = TRUE)$modulus), error = function(e) NA_real_)
+            Cn <- if (is.finite(T_eff) && T_eff > 1L) log(T_eff) else NA_real_
+            
+            PIC_star <- if (is.finite(logdet) && is.finite(Cn)) logdet + (Cn / T_eff) * (dfLR + dfSR) else NA_real_
+            
+            PIC_obs <- if (is.finite(ll) && is.finite(T_eff) && T_eff > 1L) (-2 * ll + kTot * log(T_eff) * log(log(T_eff))) else NA_real_
+            BIC_obs <- if (is.finite(ll) && is.finite(T_eff) && T_eff > 1L) (-2 * ll + kTot * log(T_eff)) else NA_real_
+            
+            if (!is.finite(PIC_star)) {
+              results_list[[length(results_list) + 1]] <- data.frame(
+                spec = spec, basis = basis_tag, window = window_name,
+                DSR = DSR, DLR = DLR, det_tag = det_tag,
+                include = include, LRinclude = LRinclude,
+                p = p_vecm, r = r0,
+                m = m,
+                status = "runtime_fail",
+                r0_path = NA_character_,
+                fail_code = "PICSTAR_NA",
+                fail_msg = "PIC_star not finite",
+                runtime_sec = as.numeric(proc.time()[["elapsed"]] - t0),
+                T_eff = as.integer(T_eff),
+                logLik_ML = ll,
+                logdet_Sigma = logdet,
+                Cn = Cn,
+                df_LR = dfLR,
+                df_SR = dfSR,
+                d_det = d_det,
+                k_total = kTot,
+                PIC_star = NA_real_,
+                PIC_obs = PIC_obs,
+                BIC_obs = BIC_obs,
+                stringsAsFactors = FALSE
+              )
+              next
+            }
+            
+            results_list[[length(results_list) + 1]] <- data.frame(
+              spec = spec, basis = basis_tag, window = window_name,
+              DSR = DSR, DLR = DLR, det_tag = det_tag,
+              include = include, LRinclude = LRinclude,
+              p = p_vecm, r = r0,
+              m = m,
+              status = "computed",
+              r0_path = NA_character_,
+              fail_code = NA_character_,
+              fail_msg = NA_character_,
+              runtime_sec = as.numeric(proc.time()[["elapsed"]] - t0),
+              T_eff = as.integer(T_eff),
+              logLik_ML = ll,
+              logdet_Sigma = logdet,
+              Cn = Cn,
+              df_LR = dfLR,
+              df_SR = dfSR,
+              d_det = d_det,
+              k_total = kTot,
+              PIC_star = PIC_star,
+              PIC_obs = PIC_obs,
+              BIC_obs = BIC_obs,
+              stringsAsFactors = FALSE
+            )
+            
+            feasible_p_this <- unique(c(feasible_p_this, p_vecm))
+          }
+        }
+        
+        if (length(feasible_p_this) > 0) {
+          key <- paste(window_name, det_tag, run_tag, sep = "|")
+          p_max_by_window[[key]] <- max(feasible_p_this)
+        }
+      }
+    }
+  }
+}
+
+# ------------------------------------------------------------
+# Post-processing: comparability p flags + write outputs
+# ------------------------------------------------------------
+cat("\nPost-processing lattice...\n")
+
+grid_df <- dplyr::bind_rows(results_list)
+
+if (nrow(grid_df) == 0) {
+  cat("No results to write.\n")
+  cat("=== 20_engine_tsdyn complete ===\n")
+  quit(save = "no")
+}
+
+# Comparable p region:
+# common_p_max = min over windows within each (spec,basis,det_tag) among computed rows
+grid_df <- grid_df |>
+  dplyr::mutate(case_tag = paste0(spec, "_", basis, "|", det_tag))
+
+pmax_tbl <- grid_df |>
+  dplyr::filter(status == "computed") |>
+  dplyr::group_by(case_tag, window) |>
+  dplyr::summarise(
+    p_max_window = if (any(is.finite(p))) max(p[is.finite(p)]) else NA_real_,
+    .groups = "drop"
+  )
+
+common_tbl <- pmax_tbl |>
+  dplyr::group_by(case_tag) |>
+  dplyr::summarise(
+    common_p_max = if (all(is.na(p_max_window))) NA_real_ else min(p_max_window, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+grid_df <- grid_df |>
+  dplyr::left_join(common_tbl, by = "case_tag") |>
+  dplyr::mutate(
+    comparable_p = status == "computed" & is.finite(common_p_max) & is.finite(p) & p <= common_p_max,
+    computed_comparable = status == "computed" & comparable_p
+  ) |>
+  dplyr::select(-case_tag)
+
+# ------------------------------------------------------------
+# Export schema: keep PIC_star + diagnostics in the CSVs
+# ------------------------------------------------------------
+export_cols <- c(
+  "spec","basis","window","DSR","DLR","det_tag","include","LRinclude",
+  "p","r","m","status",
+  "PIC_star","logdet_Sigma","logLik_ML","Cn","T_eff",
+  "df_LR","df_SR","d_det","k_total",
+  "PIC_obs","BIC_obs",
+  "common_p_max","comparable_p","computed_comparable",
+  "r0_path","fail_code","fail_msg","runtime_sec"
+)
+
+make_export_df <- function(df) {
+  # Ensure T_eff exists
+  if (!("T_eff" %in% names(df))) df$T_eff <- NA_integer_
+  
+  # Backward compat: if n_eff exists in some older runs, merge it in
+  if ("n_eff" %in% names(df)) {
+    df$T_eff <- dplyr::coalesce(df$T_eff, as.integer(df$n_eff))
+  }
+  
+  df |> dplyr::select(dplyr::any_of(export_cols), dplyr::everything())
+}
+
+# Write one CSV per (spec,basis,det_tag)
+cat("Writing grid tables...\n")
+for (det_tag in unique(grid_df$det_tag)) {
+  sub_det <- grid_df[grid_df$det_tag == det_tag, , drop = FALSE]
+  for (spec in unique(sub_det$spec)) {
+    for (basis_tag in unique(sub_det$basis)) {
+      file_name <- paste0(
+        LBL_APPX, "_grid_pic_table_",
+        spec, "_", basis_tag, "_", det_tag, "_unrestricted.csv"
+      )
+      path <- file.path(DIRS$csv, file_name)
+      
+      out_case <- make_export_df(sub_det[sub_det$spec == spec & sub_det$basis == basis_tag, , drop = FALSE])
+      readr::write_csv(out_case, path)
+    }
+  }
+}
+
+# Feasible p summary
+if (length(p_max_by_window) > 0) {
+  summary_tbl <- tibble::tibble(
+    key = names(p_max_by_window),
+    p_max = unlist(p_max_by_window)
+  ) |>
+    tidyr::separate(key, into = c("window", "det_tag", "run_tag"), sep = "\\|")
+  
+  summary_path <- file.path(DIRS$csv, paste0(LBL_APPX, "_S1_feasible_pmax_by_window_det.csv"))
+  readr::write_csv(summary_tbl, summary_path)
+}
+
+cat("=== 20_engine_tsdyn complete ===\n")
