@@ -1,2 +1,0 @@
-run_tag=Q3_ortho
-vars=log_y, log_k, e_raw, Q1_logK, Q2_logK, Q3_logK

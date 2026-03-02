@@ -1,8 +1,0 @@
-run_tag=Q3_raw
-spec=Q3
-basis=raw
-spec_type=
-degree=3
-basis_type=raw_powers
-basis_name=rawpowers_deg3
-e_raw_locked=TRUE

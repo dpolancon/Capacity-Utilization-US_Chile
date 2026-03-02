@@ -1,9 +1,0 @@
-run_tag,degree,basis,window,det,ic,best_order,F_stat,F_decision,t_stat,t_decision,notes
-Q2_ortho,2,ortho,post_fordism,const,BIC,"(1,2,0,0)",6.140787882254818,reject_I1,-0.7442388024376231,reject_I1,ok
-Q2_ortho,2,ortho,post_fordism,none,BIC,"(3,2,1,0)",0.9808812437664778,fail_I0,-1.5843559125745654,reject_I1,ok
-Q2_raw,2,raw,post_fordism,const,BIC,"(1,2,0,0)",6.140787882254342,reject_I1,-0.744238802437623,reject_I1,ok
-Q2_raw,2,raw,post_fordism,none,BIC,"(3,2,1,0)",0.9808812437666186,fail_I0,-1.5843559125745537,reject_I1,ok
-Q3_ortho,3,ortho,post_fordism,const,BIC,"(1,2,1,1,1)",6.023484749192763,reject_I1,-0.22404270566220677,reject_I1,ok
-Q3_ortho,3,ortho,post_fordism,none,BIC,"(2,3,0,1,2)",0.5214557644738761,fail_I0,-0.9308097142442101,reject_I1,ok
-Q3_raw,3,raw,post_fordism,const,BIC,"(1,2,1,1,1)",6.023484748979217,reject_I1,-0.22404270566216336,reject_I1,ok
-Q3_raw,3,raw,post_fordism,none,BIC,"(3,3,3,3,3)",NA,NA,-0.5997623722530881,reject_I1,ok
