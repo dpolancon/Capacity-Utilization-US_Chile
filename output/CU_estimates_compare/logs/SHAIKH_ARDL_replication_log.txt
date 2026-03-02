@@ -1,0 +1,117 @@
+=== Shaikh ARDL replication (CONFIG-driven; ARDL 0.2.4) ===
+
+Formula:
+  lnY ~ lnK + trend(lnY) + DM_7374 + DM_7982
+
+CASE:
+  5
+
+Dummies:
+  DM_7374, DM_7982
+
+--- Bounds F-test ---
+
+	Bounds F-test (Wald) for no cointegration
+
+data:  d(lnY) ~ trend(lnY) + L(lnY, 1) + L(lnK, 1) + L(DM_7374, 1) +     L(DM_7982, 1) + d(L(lnY, 1)) + d(lnK) + d(DM_7374) + d(DM_7982) +     d(L(DM_7982, 1))
+F = 5.7906, Lower-bound I(0) = 4.0238, Upper-bound I(1) = 5.0335, p-value =
+0.01971
+alternative hypothesis: Possible cointegration
+null values:
+   k    T 
+   3 1000 
+
+
+--- Best ARDL model ---
+
+Time series regression with "ts" data:
+Start = 1927, End = 2023
+
+Call:
+dynlm::dynlm(formula = full_formula, data = data, start = start, 
+    end = end)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.231256 -0.031056  0.008509  0.035681  0.173465 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    0.0956383  0.0318287   3.005  0.00348 ** 
+trend(lnY)     0.0077087  0.0027338   2.820  0.00597 ** 
+L(lnY, 1)      1.4930784  0.0765651  19.501  < 2e-16 ***
+L(lnY, 2)     -0.6105524  0.0792504  -7.704 2.09e-11 ***
+lnK            0.6711649  0.1369138   4.902 4.43e-06 ***
+L(lnK, 1)     -0.6371544  0.1272449  -5.007 2.91e-06 ***
+DM_7374       -0.0662551  0.0654515  -1.012  0.31425    
+L(DM_7374, 1) -0.1005787  0.0654439  -1.537  0.12800    
+DM_7982       -0.1139956  0.0633721  -1.799  0.07555 .  
+L(DM_7982, 1) -0.0007036  0.0774075  -0.009  0.99277    
+L(DM_7982, 2)  0.0835214  0.0600873   1.390  0.16812    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.0772 on 86 degrees of freedom
+Multiple R-squared:  0.9994,	Adjusted R-squared:  0.9993 
+F-statistic: 1.323e+04 on 10 and 86 DF,  p-value: < 2.2e-16
+
+
+--- coint_eq() return class ---
+[1] "ts"
+
+--- Cointegrating (long-run) equation object ---
+Time Series:
+Start = 1925 
+End = 2023 
+Frequency = 1 
+ [1] 0.6755448 0.6877496 0.7058049 0.7183608 0.7238791 0.7157562 0.6689215 0.6383312
+ [9] 0.6360748 0.6372852 0.6309128 0.6496129 0.6635596 0.6568738 0.6609271 0.6756039
+[17] 0.7057000 0.7212403 0.7200254 0.7152392 0.7266619 0.7982983 0.8698236 0.9209243
+[25] 0.9343992 1.0010785 1.0477190 1.0796252 1.1060934 1.1226920 1.1745967 1.2295816
+[33] 1.2655550 1.2781208 1.3006318 1.3103021 1.3231851 1.3382555 1.3533641 1.3779377
+[41] 1.4063184 1.4417798 1.4787792 1.5238804 1.5696600 1.6172745 1.6638314 1.7034194
+[49] 0.3427440 0.4483755 1.9242808 1.9742108 2.0286814 2.0915667 1.8967055 1.9668203
+[57] 2.0286998 2.0598519 2.3394240 2.3648453 2.3874036 2.4083350 2.4344210 2.4661661
+[65] 2.4946882 2.5217805 2.5346655 2.5528793 2.5759727 2.6025126 2.6278054 2.6479285
+[73] 2.6703330 2.6906449 2.7127880 2.7401088 2.7612001 2.7781907 2.7941350 2.8376972
+[81] 2.8827088 2.9208505 2.9445082 2.9752055 2.9602327 2.9756400 3.0001015 3.0253237
+[89] 3.0520145 3.0811915 3.0951113 3.1148637 3.1400074 3.1669894 3.1939389 3.2110432
+[97] 3.2747995 3.3393439 3.3595039
+
+--- Restricted ECM (ECT coefficient) ---
+
+Time series regression with "zooreg" data:
+Start = 1927, End = 2023
+
+Call:
+dynlm::dynlm(formula = full_formula, data = data, start = start, 
+    end = end)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.231256 -0.031056  0.008509  0.035681  0.173465 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)    
+(Intercept)       0.095638   0.024062   3.975 0.000143 ***
+trend(lnY)        0.007709   0.001656   4.655 1.12e-05 ***
+d(L(lnY, 1))      0.610552   0.075626   8.073 3.07e-12 ***
+d(lnK)            0.671165   0.118458   5.666 1.78e-07 ***
+d(DM_7374)       -0.066255   0.056422  -1.174 0.243413    
+d(DM_7982)       -0.113996   0.055420  -2.057 0.042618 *  
+d(L(DM_7982, 1)) -0.083521   0.054276  -1.539 0.127391    
+ect              -0.117474   0.023994  -4.896 4.34e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.07589 on 89 degrees of freedom
+  (0 observations deleted due to missingness)
+Multiple R-squared:  0.5337,	Adjusted R-squared:  0.497 
+F-statistic: 14.55 on 7 and 89 DF,  p-value: 1.727e-12
+
+
+--- Outputs ---
+Series CSV:
+  C:/ReposGitHub/capacity_utilization/output/CU_estimates_compare/csv/SHAIKH_ARDL_u_series.csv
+Log:
+  C:/ReposGitHub/capacity_utilization/output/CU_estimates_compare/logs/SHAIKH_ARDL_replication_log.txt

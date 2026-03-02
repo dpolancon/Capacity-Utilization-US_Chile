@@ -1,0 +1,270 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.13)  28 FEB 2026 13:14
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./sprint_ARDL_selfdiscovery_v1.tex
+(sprint_ARDL_selfdiscovery_v1.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-29>
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
+\Gm@dimlist=\toks18
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cf
+g
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
+)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
+ex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count286
+) (sprint_ARDL_selfdiscovery_v1.aux)
+\openout1 = `sprint_ARDL_selfdiscovery_v1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(22.76219pt, 551.98349pt, 22.76219pt)
+* v-part:(T,H,B)=(22.76219pt, 799.52246pt, 22.76219pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=551.98349pt
+* \textheight=799.52246pt
+* \oddsidemargin=-49.5078pt
+* \evensidemargin=-49.5078pt
+* \topmargin=-86.5078pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
+i
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count287
+\scratchdimen=\dimen159
+\scratchbox=\box53
+\nofMPsegments=\count288
+\nofMParguments=\count289
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count290
+\MPscratchDim=\dimen160
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
+\everyMPtoPDFconversion=\toks20
+)
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
+se.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cf
+g
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+<shaikh_ardl_icspace_frontier.png, id=1, 722.7pt x 505.89pt>
+File: shaikh_ardl_icspace_frontier.png Graphic file (type png)
+<use shaikh_ardl_icspace_frontier.png>
+Package pdftex.def Info: shaikh_ardl_icspace_frontier.png  used on input line 3
+6.
+(pdftex.def)             Requested size: 551.98149pt x 386.38704pt.
+ [1
+
+ <./shaikh_ardl_icspace_frontier.png>]
+<shaikh_ardl_icspace_ic_vs_logLik.png, id=7, 867.24pt x 578.16pt>
+File: shaikh_ardl_icspace_ic_vs_logLik.png Graphic file (type png)
+<use shaikh_ardl_icspace_ic_vs_logLik.png>
+Package pdftex.def Info: shaikh_ardl_icspace_ic_vs_logLik.png  used on input li
+ne 37.
+(pdftex.def)             Requested size: 552.01459pt x 368.00972pt.
+ [2
+
+ <./shaikh_ardl_icspace_ic_vs_logLik.png>]
+<shaikh_ardl_icspace_pairs.png, id=12, 867.24pt x 578.16pt>
+File: shaikh_ardl_icspace_pairs.png Graphic file (type png)
+<use shaikh_ardl_icspace_pairs.png>
+Package pdftex.def Info: shaikh_ardl_icspace_pairs.png  used on input line 38.
+(pdftex.def)             Requested size: 552.01459pt x 368.00972pt.
+ [3
+
+ <./shaikh_ardl_icspace_pairs.png>]
+<shaikh_ardl_MDS.png, id=17, 722.7pt x 505.89pt>
+File: shaikh_ardl_MDS.png Graphic file (type png)
+<use shaikh_ardl_MDS.png>
+Package pdftex.def Info: shaikh_ardl_MDS.png  used on input line 39.
+(pdftex.def)             Requested size: 551.98149pt x 386.38704pt.
+ [4
+
+ <./shaikh_ardl_MDS.png>]
+<shaikh_ardl_MDS_correlation_heatmap.png, id=22, 650.43pt x 361.35pt>
+File: shaikh_ardl_MDS_correlation_heatmap.png Graphic file (type png)
+<use shaikh_ardl_MDS_correlation_heatmap.png>
+Package pdftex.def Info: shaikh_ardl_MDS_correlation_heatmap.png  used on input
+ line 40.
+(pdftex.def)             Requested size: 552.0245pt x 306.68028pt.
+
+[5
+
+ <./shaikh_ardl_MDS_correlation_heatmap.png (PNG copy)>]
+<shaikh_ardl_MDS_logLik.png, id=26, 578.16pt x 433.62pt>
+File: shaikh_ardl_MDS_logLik.png Graphic file (type png)
+<use shaikh_ardl_MDS_logLik.png>
+Package pdftex.def Info: shaikh_ardl_MDS_logLik.png  used on input line 41.
+(pdftex.def)             Requested size: 552.01016pt x 414.00763pt.
+ [6
+
+ <./shaikh_ardl_MDS_logLik.png (PNG copy)>]
+<shaikh_ardl_MDS_complexity.png, id=30, 578.16pt x 433.62pt>
+File: shaikh_ardl_MDS_complexity.png Graphic file (type png)
+<use shaikh_ardl_MDS_complexity.png>
+Package pdftex.def Info: shaikh_ardl_MDS_complexity.png  used on input line 42.
+
+(pdftex.def)             Requested size: 552.01016pt x 414.00763pt.
+ [7
+
+ <./shaikh_ardl_MDS_complexity.png (PNG copy)>]
+<shaikh_ardl_PCA.png, id=35, 650.43pt x 433.62pt>
+File: shaikh_ardl_PCA.png Graphic file (type png)
+<use shaikh_ardl_PCA.png>
+Package pdftex.def Info: shaikh_ardl_PCA.png  used on input line 43.
+(pdftex.def)             Requested size: 552.0245pt x 368.01634pt.
+
+[8
+
+ <./shaikh_ardl_PCA.png>]
+<shaikh_ardl_PCA_loadings.png, id=40, 650.43pt x 433.62pt>
+File: shaikh_ardl_PCA_loadings.png Graphic file (type png)
+<use shaikh_ardl_PCA_loadings.png>
+Package pdftex.def Info: shaikh_ardl_PCA_loadings.png  used on input line 44.
+(pdftex.def)             Requested size: 552.0245pt x 368.01634pt.
+ [9
+
+ <./shaikh_ardl_PCA_loadings.png>]
+<shaikh_ardl_PCA_scores.png, id=45, 722.7pt x 505.89pt>
+File: shaikh_ardl_PCA_scores.png Graphic file (type png)
+<use shaikh_ardl_PCA_scores.png>
+Package pdftex.def Info: shaikh_ardl_PCA_scores.png  used on input line 45.
+(pdftex.def)             Requested size: 551.98149pt x 386.38704pt.
+ [10
+
+ <./shaikh_ardl_PCA_scores.png>]
+<shaikh_ardl_PCA_scree.png, id=50, 578.16pt x 361.35pt>
+File: shaikh_ardl_PCA_scree.png Graphic file (type png)
+<use shaikh_ardl_PCA_scree.png>
+Package pdftex.def Info: shaikh_ardl_PCA_scree.png  used on input line 46.
+(pdftex.def)             Requested size: 552.01016pt x 345.00636pt.
+ [11
+
+ <./shaikh_ardl_PCA_scree.png>]
+(sprint_ARDL_selfdiscovery_v1.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-29>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 1913 strings out of 467871
+ 32930 string characters out of 5418860
+ 436924 words of memory out of 5000000
+ 30827 multiletter control sequences out of 15000+600000
+ 628019 words of font info for 41 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,5n,65p,207b,191s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on sprint_ARDL_selfdiscovery_v1.pdf (11 pages, 320094 bytes).
+PDF statistics:
+ 57 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+

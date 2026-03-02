@@ -1,0 +1,41 @@
+\begin{table}[!h]
+\centering
+\caption{Selected VECM Bootstrap Inference (fordism, ortho, Q2, p=1, r=1)}
+\centering
+\fontsize{9}{11}\selectfont
+\begin{tabular}[t]{lllrrrrr}
+\toprule
+  & variable & param & estimate & boot_mean & boot_sd & ci_low & ci_high\\
+\midrule
+beta|const & beta & const & -0.0686 & 0.0165 & 0.1004 & -0.1691 & 0.1699\\
+beta|e2logK & beta & e2logK & -2.0414 & -0.0517 & 0.7807 & -1.1036 & 0.9136\\
+beta|elogK & beta & elogK & 0.2021 & -0.0029 & 0.0150 & -0.0317 & 0.0228\\
+beta|logK & beta & logK & 23.8375 & -0.7944 & 2.4813 & -6.5689 & 3.3664\\
+beta|logY & beta & logY & 1.0000 & 1.0000 & 0.0000 & 1.0000 & 1.0000\\
+\addlinespace
+dEquation logK|alphaECT & dEquation logK & alphaECT & 0.0136 & 0.0035 & 0.0484 & -0.0747 & 0.1015\\
+dEquation logK|logK -1 & dEquation logK & logK -1 & 0.9250 & 0.0058 & 0.6327 & -1.2139 & 1.1902\\
+dEquation logK|logY -1 & dEquation logK & logY -1 & -0.0292 & -0.0016 & 0.1727 & -0.3069 & 0.3129\\
+dEquation logK|q1logK -1 & dEquation logK & q1logK -1 & 3.5563 & 0.2137 & 6.1954 & -11.0058 & 11.3957\\
+dEquation logK|q2logK -1 & dEquation logK & q2logK -1 & -0.3052 & -0.0294 & 0.6173 & -1.0572 & 1.1283\\
+\addlinespace
+dEquation logY|alphaECT & dEquation logY & alphaECT & -0.0324 & -0.0379 & 0.0840 & -0.2063 & 0.1021\\
+dEquation logY|logK -1 & dEquation logY & logK -1 & 0.4068 & 0.1421 & 1.2375 & -2.2293 & 2.2833\\
+dEquation logY|logY -1 & dEquation logY & logY -1 & 0.5818 & -0.0374 & 0.3088 & -0.5901 & 0.5764\\
+dEquation logY|q1logK -1 & dEquation logY & q1logK -1 & -4.5316 & 1.0399 & 11.0439 & -20.6341 & 22.5866\\
+dEquation logY|q2logK -1 & dEquation logY & q2logK -1 & 0.2730 & -0.1270 & 1.0741 & -1.8775 & 2.0994\\
+\addlinespace
+dEquation q1logK|alphaECT & dEquation q1logK & alphaECT & 0.0000 & 0.0005 & 0.0061 & -0.0120 & 0.0089\\
+dEquation q1logK|logK -1 & dEquation q1logK & logK -1 & -0.0135 & -0.0087 & 0.1076 & -0.1977 & 0.2013\\
+dEquation q1logK|logY -1 & dEquation q1logK & logY -1 & 0.0184 & 0.0002 & 0.0275 & -0.0531 & 0.0507\\
+dEquation q1logK|q1logK -1 & dEquation q1logK & q1logK -1 & 0.6198 & -0.0971 & 0.8390 & -1.4531 & 1.4429\\
+dEquation q1logK|q2logK -1 & dEquation q1logK & q2logK -1 & -0.0341 & 0.0085 & 0.0850 & -0.1529 & 0.1518\\
+\addlinespace
+dEquation q2logK|alphaECT & dEquation q2logK & alphaECT & -0.0136 & -0.0047 & 0.0662 & -0.1247 & 0.1223\\
+dEquation q2logK|logK -1 & dEquation q2logK & logK -1 & 0.2010 & -0.0269 & 0.9785 & -1.6770 & 1.9223\\
+dEquation q2logK|logY -1 & dEquation q2logK & logY -1 & 0.2108 & -0.0092 & 0.2301 & -0.4297 & 0.4160\\
+dEquation q2logK|q1logK -1 & dEquation q2logK & q1logK -1 & 3.2750 & -0.4817 & 7.4822 & -13.6678 & 13.9913\\
+dEquation q2logK|q2logK -1 & dEquation q2logK & q2logK -1 & -0.0109 & 0.0295 & 0.7787 & -1.3524 & 1.3703\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,2 @@
+"run_id","det_tag","include","LRinclude","P_MIN","P_MAX","T_window","T_eff_common","feasibility_share","best_cell_id","best_BIC","theta_best","theta_bandwidth_dBIC2","alpha_y_med_dBIC2","alpha_k_med_dBIC2","stability_margin_best"
+2,"SR_const__LR_both","const","both",1,7,65,57,1,"p01_K_only_const_both",-527.479489459965,0.862934401694622,0,0.0964601985709192,0.0940785377141531,0.0498118053839179

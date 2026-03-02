@@ -1,0 +1,24 @@
+status,n
+"fail: Not enough observations. Try reducing lag number
+",48
+fail: logLik extraction,44
+"fail: Lapack routine dgesv: system is exactly singular: U[1,1] = 0",20
+fail: sistema es computacionalmente singular: número de condición recíproco = 1.23444e-18,5
+fail: sistema es computacionalmente singular: número de condición recíproco = 1.64615e-18,5
+fail: sistema es computacionalmente singular: número de condición recíproco = 2.63895e-18,5
+fail: sistema es computacionalmente singular: número de condición recíproco = 3.93225e-18,5
+"fail: Lapack routine dgesv: system is exactly singular: U[2,2] = 0",3
+"fail: Lapack routine dgesv: system is exactly singular: U[3,3] = 0",1
+fail: sistema es computacionalmente singular: número de condición recíproco = 1.15235e-20,1
+fail: sistema es computacionalmente singular: número de condición recíproco = 1.37764e-18,1
+fail: sistema es computacionalmente singular: número de condición recíproco = 1.61048e-19,1
+fail: sistema es computacionalmente singular: número de condición recíproco = 2.57591e-19,1
+fail: sistema es computacionalmente singular: número de condición recíproco = 2.83176e-21,1
+fail: sistema es computacionalmente singular: número de condición recíproco = 3.33659e-19,1
+fail: sistema es computacionalmente singular: número de condición recíproco = 4.19265e-20,1
+fail: sistema es computacionalmente singular: número de condición recíproco = 4.19696e-18,1
+fail: sistema es computacionalmente singular: número de condición recíproco = 5.59679e-19,1
+fail: sistema es computacionalmente singular: número de condición recíproco = 6.08108e-20,1
+fail: sistema es computacionalmente singular: número de condición recíproco = 7.5732e-20,1
+fail: sistema es computacionalmente singular: número de condición recíproco = 8.51285e-19,1
+fail: sistema es computacionalmente singular: número de condición recíproco = 9.89228e-20,1

@@ -1,0 +1,23 @@
+\begin{table}[!h]
+\centering
+\caption{\label{tab:tab:rank_bootstrap}Bootstrap LR Rank Test ($r = 0$ vs $r \ge 1$)}
+\centering
+\fontsize{10}{12}\selectfont
+\begin{tabular}[t]{lllcrrrrl}
+\toprule
+window & basis & DLR & P_VECM & LR_obs & p_val & B_eff & fail_share & status\\
+\midrule
+ & \textbf{ortho} & \textbf{const} & \textbf{1} & \textbf{42.52} & \textbf{0.018} & \textbf{1999} & \textbf{0.000} & \textbf{ok}\\
+
+\multirow{-2}{*}{\raggedright\arraybackslash \textbf{fordism}} & \textbf{raw} & \textbf{const} & \textbf{1} & \textbf{42.52} & \textbf{0.015} & \textbf{1999} & \textbf{0.000} & \textbf{ok}\\
+\cmidrule{1-9}
+ & ortho & const & 1 & 34.92 & 0.079 & 1999 & 0.000 & ok\\
+
+\multirow{-2}{*}{\raggedright\arraybackslash full} & raw & const & 1 & 34.92 & 0.071 & 1999 & 0.000 & ok\\
+\cmidrule{1-9}
+ & ortho & const & 2 & 26.92 & 0.640 & 1999 & 0.000 & ok\\
+
+\multirow{-2}{*}{\raggedright\arraybackslash post_fordism} & raw & const & 2 & 26.92 & 0.629 & 1999 & 0.000 & ok\\
+\bottomrule
+\end{tabular}
+\end{table}

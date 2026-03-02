@@ -1,0 +1,159 @@
+=== Shaikh ARDL replication log ===
+Timestamp: 2026-02-28 16:07:18
+
+=== Shaikh ARDL replication (fixed order) ===
+Window: shaikh_window (1947-2011)
+Formula: lnY ~ lnK | d1956 + d1974 + d1980
+Order (p,q): 2,4
+CASE: uc
+
+--- ARDL summary ---
+
+Time series regression with "ts" data:
+Start = 1951, End = 2011
+
+Call:
+dynlm::dynlm(formula = full_formula, data = data, start = start, 
+    end = end)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.06574 -0.01057  0.00000  0.01478  0.04576 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.329114   0.087727   3.752 0.000458 ***
+L(lnY, 1)    0.845941   0.122927   6.882 9.19e-09 ***
+L(lnY, 2)   -0.005688   0.121808  -0.047 0.962943    
+lnK          1.201045   0.187045   6.421 4.83e-08 ***
+L(lnK, 1)   -1.346007   0.234822  -5.732 5.69e-07 ***
+L(lnK, 2)   -0.203472   0.249875  -0.814 0.419338    
+L(lnK, 3)    0.362986   0.217680   1.668 0.101664    
+L(lnK, 4)    0.098640   0.148795   0.663 0.510423    
+d1956       -0.052683   0.025920  -2.033 0.047426 *  
+d1974       -0.124765   0.027409  -4.552 3.42e-05 ***
+d1980       -0.052852   0.024377  -2.168 0.034934 *  
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.0231 on 50 degrees of freedom
+Multiple R-squared:  0.9987,	Adjusted R-squared:  0.9985 
+F-statistic:  3922 on 10 and 50 DF,  p-value: < 2.2e-16
+
+
+--- Bounds F test ---
+
+	Bounds F-test (Wald) for no cointegration
+
+data:  d(lnY) ~ L(lnY, 1) + L(lnK, 1) + d(L(lnY, 1)) + d(lnK) + d(L(lnK,     1)) + d(L(lnK, 2)) + d(L(lnK, 3)) + d1956 + d1974 + d1980
+F = 6.7943, Lower-bound I(0) = 4.9186, Upper-bound
+I(1) = 5.7434, p-value = 0.02237
+alternative hypothesis: Possible cointegration
+null values:
+   k    T 
+   1 1000 
+
+
+	Bounds F-test (Wald) for no cointegration
+
+data:  d(lnY) ~ L(lnY, 1) + L(lnK, 1) + d(L(lnY, 1)) + d(lnK) + d(L(lnK,     1)) + d(L(lnK, 2)) + d(L(lnK, 3)) + d1956 + d1974 + d1980
+F = 6.7943, Lower-bound I(0) = 5.1133, Upper-bound
+I(1) = 6.0294, p-value = 0.03015
+alternative hypothesis: Possible cointegration
+null values:
+ k  T 
+ 1 61 
+
+
+--- Bounds t test ---
+
+	Bounds t-test for no cointegration
+
+data:  d(lnY) ~ L(lnY, 1) + L(lnK, 1) + d(L(lnY, 1)) + d(lnK) + d(L(lnK,     1)) + d(L(lnK, 2)) + d(L(lnK, 3)) + d1956 + d1974 + d1980
+t = -2.5522, Lower-bound I(0) = -2.8606, Upper-bound
+I(1) = -3.2240, p-value = 0.1957
+alternative hypothesis: Possible cointegration
+null values:
+   k    T 
+   1 1000 
+
+
+	Bounds t-test for no cointegration
+
+data:  d(lnY) ~ L(lnY, 1) + L(lnK, 1) + d(L(lnY, 1)) + d(lnK) + d(L(lnK,     1)) + d(L(lnK, 2)) + d(L(lnK, 3)) + d1956 + d1974 + d1980
+t = -2.5522, Lower-bound I(0) = -2.9294, Upper-bound
+I(1) = -3.2817, p-value = 0.1981
+alternative hypothesis: Possible cointegration
+null values:
+ k  T 
+ 1 61 
+
+
+--- Long-run multipliers (including Shaikh-scaled dummies) ---
+         Term   Estimate Std. Error   t value     Pr(>|t|)
+1 (Intercept)  2.0602176 0.46741222  4.407710 5.537862e-05
+2         lnK  0.7085689 0.04318925 16.406140 9.114526e-22
+3       d1956 -0.3297903 0.16225455 -2.032549 4.742613e-02
+4       d1974 -0.7810174 0.17157491 -4.552049 3.420438e-05
+5       d1980 -0.3308484 0.15259582 -2.168136 3.493371e-02
+
+--- Utilization diagnostics ---
+mean(u_dummy)   = 0.8985
+sd(u_dummy)     = 0.1324
+mean(u_nodummy) = 0.8742
+sd(u_nodummy)   = 0.0681
+
+--- Correlation with Shaikh series ---
+cor(u_dummy,  u_shaikh) = 0.2474
+cor(u_nodummy,u_shaikh) = 0.9569
+
+--- UECM / RECM summary ---
+
+Time series regression with "ts" data:
+Start = 1951, End = 2011
+
+Call:
+dynlm::dynlm(formula = full_formula, data = data, start = start, 
+    end = end)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.06574 -0.01057  0.00000  0.01478  0.04576 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   0.329114   0.087727   3.752 0.000458 ***
+L(lnY, 1)    -0.159747   0.062591  -2.552 0.013805 *  
+L(lnK, 1)     0.113192   0.049559   2.284 0.026655 *  
+d(L(lnY, 1))  0.005688   0.121808   0.047 0.962943    
+d(lnK)        1.201045   0.187045   6.421 4.83e-08 ***
+d(L(lnK, 1)) -0.258154   0.157778  -1.636 0.108081    
+d(L(lnK, 2)) -0.461625   0.148147  -3.116 0.003035 ** 
+d(L(lnK, 3)) -0.098640   0.148795  -0.663 0.510423    
+d1956        -0.052683   0.025920  -2.033 0.047426 *  
+d1974        -0.124765   0.027409  -4.552 3.42e-05 ***
+d1980        -0.052852   0.024377  -2.168 0.034934 *  
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.0231 on 50 degrees of freedom
+Multiple R-squared:  0.5765,	Adjusted R-squared:  0.4918 
+F-statistic: 6.807 on 10 and 50 DF,  p-value: 1.38e-06
+
+
+--- Error-Correction Term (λ) ---
+λ (ECT coefficient) = -0.159747
+Std. Error          = 0.062591
+t-value             = -2.5522
+p-value             = 0.013805
+Implied half-life (years) ≈ 3.98
+
+Wrote CSV:
+  C:/ReposGitHub/capacity_utilization/output/CU_estimates_compare/csv/SHAIKH_ARDL_replication_series_shaikh_window.csv
+
+Saved figure:
+  C:/ReposGitHub/capacity_utilization/output/CU_estimates_compare/figs/FIG_SHAIKH_ARDL_u_shaikh_window.png
+Saved log:
+  C:/ReposGitHub/capacity_utilization/output/CU_estimates_compare/logs/SHAIKH_ARDL_replication_log_shaikh_window.txt

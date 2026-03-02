@@ -1,103 +1,160 @@
 ############################################################
-# 10_config_tsdyn.R — tsDyn migration configuration
+# 10_config_tsdyn.R — tsDyn migration configuration (FROZEN LAG LOGIC)
 #
-# This configuration file defines all constants and toggles used
-# by the tsDyn‐based engine, diagnostics and rank inference
-# scripts.  It mirrors the legacy 10_config.R but introduces
-# explicit deterministic subspaces (DSR/DLR) and an LR engine
-# toggle for flexibility.  Modify this file to adjust
-# windows, variable names, or bootstrap parameters.  Do not
-# overwrite legacy outputs; new outputs are written under
-# output/TsDynEngine and output/InferenceRank_tsDyn.
+# Lag convention (FROZEN):
+#   In tsDyn:
+#     VECM(lag = p)  ⇒  p lags of ΔX in the short run.
+#   Therefore:
+#     r = 0 null (no Π term) must be estimated as
+#     lineVar(..., lag = p, I = "diff")
+#
+#   We DO NOT use (p - 1) mapping.
+#   We DO NOT reinterpret lag as VAR-levels lag.
+#   We take tsDyn's lag argument literally.
 ############################################################
 
 CONFIG <- list(
+  
+  ## ----------------------------------------------------------
   ## Data location
+  ## ----------------------------------------------------------
   data_file  = "data/processed/ddbb_cu_US_kgr.xlsx",
   data_sheet = "us_data",
-
+  
   ## Column names in the Excel sheet
   year_col = "year",
   y_col    = "Yrgdp",
   k_col    = "KGCRcorp",
   e_col    = "e",
 
+  ## ----------------------------------------------------------
+  # Shaikh Data Replication ####
+  ## ----------------------------------------------------------
+  
+  # Data set 
+  data_shaikh = "data/raw/Shaikh_RepData.xlsx",
+  data_shaikh_sheet = "long",
+  
+  #Variables
+  y_nom    = "GVAcorp",
+  k_nom    = "KGCcorp",
+  p_index    = "Py",
+  u_shaikh = "u_shaikh",
+  pi_share = "Profshcorp",
+  e_rate = "e",
+
+  ## ----------------------------------------------------------
   ## Sample windows (full sample must be first)
+  ## ----------------------------------------------------------
   WINDOWS_LOCKED = list(
+    shaikh_window = c(1947, 2011),
     full         = c(-Inf, Inf),
     fordism      = c(-Inf, 1973),
     post_fordism = c(1974,  Inf)
   ),
-
+  
+  ## ----------------------------------------------------------
   ## Deterministic subspaces
-  # DSR controls short–run deterministics (Δ equations)
-  # DLR controls long–run deterministics (cointegration space)
-  # Allowed values: "none", "const" (trends can be added via ALLOW_TRENDS)
+  ##
+  ## DSR = short-run deterministic (Δ equations)
+  ## DLR = long-run deterministic (cointegration space)
+  ##
+  ## Allowed values:
+  ##   "none", "const"
+  ##
+  ## NOTE:
+  ##   We freeze deterministic interpretation.
+  ##   No automatic cross-mapping.
+  ## ----------------------------------------------------------
   DSR_SET = c("none", "const"),
   DLR_SET = c("none", "const"),
-
-  # Explicit whitelist of allowed (DSR,DLR) pairs.  Modify this
-  # list to add or remove specific deterministic structures.  Each
-  # element must be a character vector of length 2.
+  
   DET_PAIRS = list(
     c("none",  "none"),
     c("none",  "const"),
     c("const", "none")
   ),
-
-  ## Trend deterministics toggle
-  # Set to TRUE if trend terms should be available.  If enabled
-  # you must also add the corresponding pairs to DET_PAIRS.
+  
+  ## ----------------------------------------------------------
+  ## Trend toggle (OFF by default)
+  ## ----------------------------------------------------------
   ALLOW_TRENDS = FALSE,
-
+  
+  ## ----------------------------------------------------------
   ## Lag settings
-  # Minimum and maximum VECM lag order considered by the engine
+  ##
+  ## tsDyn convention (FROZEN):
+  ##   VECM(lag = p)
+  ##   ⇒ p lags of ΔX in short-run.
+  ##
+  ## r = 0 null must use:
+  ##   lineVar(..., lag = p, I = "diff")
+  ##
+  ## No (p-1) mapping allowed.
+  ## ----------------------------------------------------------
   P_MIN = 1L,
   P_MAX_EXPLORATORY = 7L,
-  # Default lag for Stage 0 and Stage 1 (VECM lag order)
+  
+  # Default lag for inference
   p_vecm_default = 1L,
-
-  ## Model specifications
-  # The structural manifold is defined via polynomial blocks Q2 and Q3.
+  
+  ## ----------------------------------------------------------
+  ## Model specifications (structural manifold blocks)
+  ## ----------------------------------------------------------
   SPECS = list(
-    Q1 = list(degree = 1L),  # NEW: linear e block
+    Q1 = list(degree = 1L),
     Q2 = list(degree = 2L),
     Q3 = list(degree = 3L)
   ),
-
-  ## Orthogonalization toggle (apply QR orthonormalization to the
-  ## polynomial block).  Raw powers and orthogonalized bases are
-  ## evaluated in parallel.  TRUE adds the ortho basis to the lattice.
+  
+  ## ----------------------------------------------------------
+  ## Orthogonalization toggle
+  ## ----------------------------------------------------------
   ORTHO_TOGGLE = c(FALSE, TRUE),
-
-  ## Include exploitation rate as a raw linear term.  Only "raw"
-  ## mode is currently supported (no z–scoring).  Changing this
-  ## requires adjustments in build_state_vector().
+  
+  ## ----------------------------------------------------------
+  ## Exploitation term handling
+  ## ----------------------------------------------------------
   INCLUDE_E_RAW = TRUE,
   E_RAW_MODE    = "raw",
-
-  ## Output roots for the tsDyn branch
+  
+  ## ----------------------------------------------------------
+  ## Output roots
+  ## ----------------------------------------------------------
   OUT_TSDYN = "output/TsDynEngine",
   OUT_RANK  = "output/InferenceRank_tsDyn",
-
-  ## Random seed for reproducibility
+  
+  ## ----------------------------------------------------------
+  ## Reproducibility
+  ## ----------------------------------------------------------
   seed = 123456L,
-
-  ## Sink / logging behaviour
-  # Options: "stop" (fail if sinks are open) or "soft_close"
+  
+  ## ----------------------------------------------------------
+  ## Logging behaviour
+  ## ----------------------------------------------------------
   SINK_POLICY = "soft_close",
   VERBOSE_CONSOLE = TRUE,
   HEARTBEAT_EVERY = 25L,
-
-  ## Bootstrap parameters (Stage 1)
+  
+  ## ----------------------------------------------------------
+  ## Bootstrap parameters
+  ## ----------------------------------------------------------
   B_target    = 1999L,
   B_pilot     = 200L,
   fail_threshold = 0.10,
   max_attempt_factor = 6L,
   weight      = "rademacher",
   expl_abs_cap = 1e8,
-
+  
+  ## ----------------------------------------------------------
   ## LR engine toggle
-  # "tsdyn" uses tsDyn::rank.test(); "urca" uses urca::ca.jo.
-  LR_ENGINE = "tsdyn"
+  ## ----------------------------------------------------------
+  LR_ENGINE = "tsdyn",
+  
+  ## ----------------------------------------------------------
+  ## Information Criteria diagnostic
+  ## ----------------------------------------------------------
+  IC_DIAGNOSTIC = list(
+    eta_value = 1
+  )
 )

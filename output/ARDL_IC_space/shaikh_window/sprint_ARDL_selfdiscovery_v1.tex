@@ -1,0 +1,49 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[a4paper,margin=8mm]{geometry}
+\usepackage{graphicx}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% Put this .tex file in the same folder as your PNG files.
+% Each image gets one page.
+\newcommand{\plotpage}[1]{%
+	\begin{center}
+		\vspace*{\fill}
+		\IfFileExists{\detokenize{#1}}{%
+			\includegraphics[
+			width=\textwidth,
+			height=0.94\textheight,
+			keepaspectratio
+			]{\detokenize{#1}}%
+		}{%
+			\fbox{%
+				\parbox{0.9\textwidth}{%
+					\centering
+					Missing file:\\[0.5em]
+					\texttt{\detokenize{#1}}\\[0.5em]
+					Replace this filename with the exact one from your folder.
+				}%
+			}%
+		}%
+		\vspace*{\fill}
+	\end{center}
+	\clearpage
+}
+
+\begin{document}
+	
+	\plotpage{shaikh_ardl_icspace_frontier.png}
+	\plotpage{shaikh_ardl_icspace_ic_vs_logLik.png}
+	\plotpage{shaikh_ardl_icspace_pairs.png}
+	\plotpage{shaikh_ardl_MDS.png}
+	\plotpage{shaikh_ardl_MDS_correlation_heatmap.png}
+	\plotpage{shaikh_ardl_MDS_logLik.png}
+	\plotpage{shaikh_ardl_MDS_complexity.png}
+	\plotpage{shaikh_ardl_PCA.png}
+	\plotpage{shaikh_ardl_PCA_loadings.png}
+	\plotpage{shaikh_ardl_PCA_scores.png}
+	\plotpage{shaikh_ardl_PCA_scree.png}
+
+	
+\end{document}

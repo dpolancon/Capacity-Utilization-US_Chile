@@ -1,0 +1,246 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\title{VECM Stage S1 --- Shaikh Window (lnY, lnK)\\Self-Discovery Results Report}
+\date{}
+\begin{document}
+\maketitle
+\section*{Output root}
+\noindent\texttt{\detokenize{output/Self_Discovery_Process/VECM_stage/S1_lnY_lnK/shaikh_window}}
+\section{Cross-branch scoreboard}
+\input{\detokenize{TAB_scoreboard.tex}}
+\clearpage
+\section{Branch: \texttt{\detokenize{SR_const__LR_none}}}
+\subsection{Summary}
+\input{\detokenize{../SR_const__LR_none/tex/TAB_branch_summary.tex}}
+\subsection{Top cells (N=10)}
+\input{\detokenize{../SR_const__LR_none/tex/TAB_top_cells_N10.tex}}
+\subsection{Rank-penalty IC family (\texorpdfstring{$\eta$}{eta}) --- best cell per \texorpdfstring{$\eta$}{eta}}
+\input{\detokenize{../SR_const__LR_none/tex/TAB_eta_best_cells.tex}}
+\paragraph{$\Delta$BIC surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_const__LR_none/figs/FIG_dBIC_surface.png}}
+\end{figure}
+\paragraph{Likelihood--complexity frontier}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_const__LR_none/figs/FIG_ll_frontier.png}}
+\end{figure}
+\paragraph{$\hat{\theta}$ surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_const__LR_none/figs/FIG_theta_surface.png}}
+\end{figure}
+\paragraph{Stability margin surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_const__LR_none/figs/FIG_stability_margin_surface.png}}
+\end{figure}
+\paragraph{Embedding (PCA)}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_const__LR_none/figs/FIG_embedding_pca.png}}
+\end{figure}
+\paragraph{ECT overlay (representatives)}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_const__LR_none/figs/FIG_ect_overlay_representatives.png}}
+\end{figure}
+\clearpage
+\section{Branch: \texttt{\detokenize{SR_const__LR_trend}}}
+\subsection{Summary}
+\input{\detokenize{../SR_const__LR_trend/tex/TAB_branch_summary.tex}}
+\subsection{Top cells (N=10)}
+\input{\detokenize{../SR_const__LR_trend/tex/TAB_top_cells_N10.tex}}
+\subsection{Rank-penalty IC family (\texorpdfstring{$\eta$}{eta}) --- best cell per \texorpdfstring{$\eta$}{eta}}
+\input{\detokenize{../SR_const__LR_trend/tex/TAB_eta_best_cells.tex}}
+\paragraph{$\Delta$BIC surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_const__LR_trend/figs/FIG_dBIC_surface.png}}
+\end{figure}
+\paragraph{Likelihood--complexity frontier}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_const__LR_trend/figs/FIG_ll_frontier.png}}
+\end{figure}
+\paragraph{$\hat{\theta}$ surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_const__LR_trend/figs/FIG_theta_surface.png}}
+\end{figure}
+\paragraph{Stability margin surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_const__LR_trend/figs/FIG_stability_margin_surface.png}}
+\end{figure}
+\paragraph{Embedding (PCA)}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_const__LR_trend/figs/FIG_embedding_pca.png}}
+\end{figure}
+\paragraph{ECT overlay (representatives)}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_const__LR_trend/figs/FIG_ect_overlay_representatives.png}}
+\end{figure}
+\clearpage
+\section{Branch: \texttt{\detokenize{SR_none__LR_both}}}
+\subsection{Summary}
+\input{\detokenize{../SR_none__LR_both/tex/TAB_branch_summary.tex}}
+\subsection{Top cells (N=10)}
+\input{\detokenize{../SR_none__LR_both/tex/TAB_top_cells_N10.tex}}
+\subsection{Rank-penalty IC family (\texorpdfstring{$\eta$}{eta}) --- best cell per \texorpdfstring{$\eta$}{eta}}
+\input{\detokenize{../SR_none__LR_both/tex/TAB_eta_best_cells.tex}}
+\paragraph{$\Delta$BIC surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_both/figs/FIG_dBIC_surface.png}}
+\end{figure}
+\paragraph{Likelihood--complexity frontier}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_both/figs/FIG_ll_frontier.png}}
+\end{figure}
+\paragraph{$\hat{\theta}$ surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_both/figs/FIG_theta_surface.png}}
+\end{figure}
+\paragraph{Stability margin surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_both/figs/FIG_stability_margin_surface.png}}
+\end{figure}
+\paragraph{Embedding (PCA)}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_both/figs/FIG_embedding_pca.png}}
+\end{figure}
+\paragraph{ECT overlay (representatives)}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_both/figs/FIG_ect_overlay_representatives.png}}
+\end{figure}
+\clearpage
+\section{Branch: \texttt{\detokenize{SR_none__LR_const}}}
+\subsection{Summary}
+\input{\detokenize{../SR_none__LR_const/tex/TAB_branch_summary.tex}}
+\subsection{Top cells (N=10)}
+\input{\detokenize{../SR_none__LR_const/tex/TAB_top_cells_N10.tex}}
+\subsection{Rank-penalty IC family (\texorpdfstring{$\eta$}{eta}) --- best cell per \texorpdfstring{$\eta$}{eta}}
+\input{\detokenize{../SR_none__LR_const/tex/TAB_eta_best_cells.tex}}
+\paragraph{$\Delta$BIC surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_const/figs/FIG_dBIC_surface.png}}
+\end{figure}
+\paragraph{Likelihood--complexity frontier}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_const/figs/FIG_ll_frontier.png}}
+\end{figure}
+\paragraph{$\hat{\theta}$ surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_const/figs/FIG_theta_surface.png}}
+\end{figure}
+\paragraph{Stability margin surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_const/figs/FIG_stability_margin_surface.png}}
+\end{figure}
+\paragraph{Embedding (PCA)}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_const/figs/FIG_embedding_pca.png}}
+\end{figure}
+\paragraph{ECT overlay (representatives)}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_const/figs/FIG_ect_overlay_representatives.png}}
+\end{figure}
+\clearpage
+\section{Branch: \texttt{\detokenize{SR_none__LR_none}}}
+\subsection{Summary}
+\input{\detokenize{../SR_none__LR_none/tex/TAB_branch_summary.tex}}
+\subsection{Top cells (N=10)}
+\input{\detokenize{../SR_none__LR_none/tex/TAB_top_cells_N10.tex}}
+\subsection{Rank-penalty IC family (\texorpdfstring{$\eta$}{eta}) --- best cell per \texorpdfstring{$\eta$}{eta}}
+\input{\detokenize{../SR_none__LR_none/tex/TAB_eta_best_cells.tex}}
+\paragraph{$\Delta$BIC surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_none/figs/FIG_dBIC_surface.png}}
+\end{figure}
+\paragraph{Likelihood--complexity frontier}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_none/figs/FIG_ll_frontier.png}}
+\end{figure}
+\paragraph{$\hat{\theta}$ surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_none/figs/FIG_theta_surface.png}}
+\end{figure}
+\paragraph{Stability margin surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_none/figs/FIG_stability_margin_surface.png}}
+\end{figure}
+\paragraph{Embedding (PCA)}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_none/figs/FIG_embedding_pca.png}}
+\end{figure}
+\paragraph{ECT overlay (representatives)}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_none/figs/FIG_ect_overlay_representatives.png}}
+\end{figure}
+\clearpage
+\section{Branch: \texttt{\detokenize{SR_none__LR_trend}}}
+\subsection{Summary}
+\input{\detokenize{../SR_none__LR_trend/tex/TAB_branch_summary.tex}}
+\subsection{Top cells (N=10)}
+\input{\detokenize{../SR_none__LR_trend/tex/TAB_top_cells_N10.tex}}
+\subsection{Rank-penalty IC family (\texorpdfstring{$\eta$}{eta}) --- best cell per \texorpdfstring{$\eta$}{eta}}
+\input{\detokenize{../SR_none__LR_trend/tex/TAB_eta_best_cells.tex}}
+\paragraph{$\Delta$BIC surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_trend/figs/FIG_dBIC_surface.png}}
+\end{figure}
+\paragraph{Likelihood--complexity frontier}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_trend/figs/FIG_ll_frontier.png}}
+\end{figure}
+\paragraph{$\hat{\theta}$ surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_trend/figs/FIG_theta_surface.png}}
+\end{figure}
+\paragraph{Stability margin surface}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_trend/figs/FIG_stability_margin_surface.png}}
+\end{figure}
+\paragraph{Embedding (PCA)}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_trend/figs/FIG_embedding_pca.png}}
+\end{figure}
+\paragraph{ECT overlay (representatives)}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\linewidth]{\detokenize{../SR_none__LR_trend/figs/FIG_ect_overlay_representatives.png}}
+\end{figure}
+\clearpage
+\end{document}

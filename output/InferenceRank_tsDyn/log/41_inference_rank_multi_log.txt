@@ -1,0 +1,349 @@
+[2026-02-24 23:21:44] === 41_inference_rank_multiTests_vecm started ===
+[2026-02-24 23:21:44] Running: full raw DLR= const r0_set= 0,1,2
+[2026-02-24 23:21:44] r0=0 bootstrap=25 fail_share=0
+[2026-02-24 23:21:45] r0=0 bootstrap=50 fail_share=0
+[2026-02-24 23:21:45] r0=0 bootstrap=75 fail_share=0
+[2026-02-24 23:21:45] r0=0 bootstrap=100 fail_share=0
+[2026-02-24 23:21:45] r0=0 bootstrap=125 fail_share=0
+[2026-02-24 23:21:45] r0=0 bootstrap=150 fail_share=0
+[2026-02-24 23:21:45] r0=0 bootstrap=175 fail_share=0
+[2026-02-24 23:21:46] Running: full ortho DLR= const r0_set= 0,1,2
+[2026-02-24 23:21:46] r0=0 bootstrap=25 fail_share=0
+[2026-02-24 23:21:46] r0=0 bootstrap=50 fail_share=0
+[2026-02-24 23:21:46] r0=0 bootstrap=75 fail_share=0
+[2026-02-24 23:21:46] r0=0 bootstrap=100 fail_share=0
+[2026-02-24 23:21:46] r0=0 bootstrap=125 fail_share=0
+[2026-02-24 23:21:46] r0=0 bootstrap=150 fail_share=0
+[2026-02-24 23:21:47] r0=0 bootstrap=175 fail_share=0
+[2026-02-24 23:21:47] Running: fordism raw DLR= const r0_set= 0,1,2
+[2026-02-24 23:21:47] r0=0 bootstrap=25 fail_share=0
+[2026-02-24 23:21:47] r0=0 bootstrap=50 fail_share=0
+[2026-02-24 23:21:47] r0=0 bootstrap=75 fail_share=0
+[2026-02-24 23:21:47] r0=0 bootstrap=100 fail_share=0
+[2026-02-24 23:21:47] r0=0 bootstrap=125 fail_share=0
+[2026-02-24 23:21:48] r0=0 bootstrap=150 fail_share=0
+[2026-02-24 23:21:48] r0=0 bootstrap=175 fail_share=0
+[2026-02-24 23:21:48] Running: fordism ortho DLR= const r0_set= 0,1,2
+[2026-02-24 23:21:48] r0=0 bootstrap=25 fail_share=0
+[2026-02-24 23:21:48] r0=0 bootstrap=50 fail_share=0
+[2026-02-24 23:21:48] r0=0 bootstrap=75 fail_share=0
+[2026-02-24 23:21:48] r0=0 bootstrap=100 fail_share=0
+[2026-02-24 23:21:48] r0=0 bootstrap=125 fail_share=0
+[2026-02-24 23:21:49] r0=0 bootstrap=150 fail_share=0
+[2026-02-24 23:21:49] r0=0 bootstrap=175 fail_share=0
+[2026-02-24 23:21:49] Running: post_fordism raw DLR= const r0_set= 0,1,2
+[2026-02-24 23:21:49] r0=0 bootstrap=25 fail_share=0
+[2026-02-24 23:21:49] r0=0 bootstrap=50 fail_share=0
+[2026-02-24 23:21:49] r0=0 bootstrap=75 fail_share=0
+[2026-02-24 23:21:49] r0=0 bootstrap=100 fail_share=0
+[2026-02-24 23:21:49] r0=0 bootstrap=125 fail_share=0
+[2026-02-24 23:21:50] r0=0 bootstrap=150 fail_share=0
+[2026-02-24 23:21:50] r0=0 bootstrap=175 fail_share=0
+[2026-02-24 23:21:50] Running: post_fordism ortho DLR= const r0_set= 0,1,2
+[2026-02-24 23:21:55] r0=0 bootstrap=25 fail_share=0
+[2026-02-24 23:21:55] r0=0 bootstrap=50 fail_share=0
+[2026-02-24 23:21:56] r0=0 bootstrap=75 fail_share=0
+[2026-02-24 23:21:56] r0=0 bootstrap=100 fail_share=0
+[2026-02-24 23:21:56] r0=0 bootstrap=125 fail_share=0
+[2026-02-24 23:21:56] r0=0 bootstrap=150 fail_share=0
+[2026-02-24 23:21:57] r0=0 bootstrap=175 fail_share=0
+[2026-02-24 23:21:57] === 41_inference_rank_multiTests_vecm completed ===
+[2026-02-25 06:56:37] === 41_inference_rank_multiTests_vecm started ===
+[2026-02-25 06:58:40] === 41_inference_rank_multiTests_vecm started ===
+[2026-02-25 06:58:41] Running: full raw DLR= const r0_set= 0,1,2
+[2026-02-25 06:58:41] JOH_OBS meta: K_urca=2 T_eff_used=99
+[2026-02-25 06:58:41] JOH_OBS lambda: 0.302338, 0.216577, 0.071557, 0.042615, 0
+[2026-02-25 06:58:41] JOH_OBS trace:  71.467883, 35.825875, 11.661758, 4.31139, 0
+[2026-02-25 06:58:41] JOH_OBS maxeig: 35.642008, 24.164117, 7.350368, 4.31139, 0
+[2026-02-25 06:58:42] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 06:58:42] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 06:58:42] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 06:58:43] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 06:58:43] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 06:58:43] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 06:58:44] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 06:58:44] Running: full ortho DLR= const r0_set= 0,1,2
+[2026-02-25 06:58:44] JOH_OBS meta: K_urca=2 T_eff_used=99
+[2026-02-25 06:58:44] JOH_OBS lambda: 0.302338, 0.216577, 0.071557, 0.042615, 0
+[2026-02-25 06:58:44] JOH_OBS trace:  71.467883, 35.825875, 11.661758, 4.31139, 0
+[2026-02-25 06:58:44] JOH_OBS maxeig: 35.642008, 24.164117, 7.350368, 4.31139, 0
+[2026-02-25 06:58:45] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 06:58:45] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 06:58:45] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 06:58:46] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 06:58:46] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 06:58:46] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 06:58:47] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 06:58:47] Running: fordism raw DLR= const r0_set= 0,1,2
+[2026-02-25 06:58:47] JOH_OBS meta: K_urca=2 T_eff_used=49
+[2026-02-25 06:58:47] JOH_OBS lambda: 0.59535, 0.292952, 0.215074, 0.072513, 0
+[2026-02-25 06:58:47] JOH_OBS trace:  76.872812, 32.540903, 15.554716, 3.688568, 0
+[2026-02-25 06:58:47] JOH_OBS maxeig: 44.331909, 16.986187, 11.866148, 3.688568, 0
+[2026-02-25 06:58:48] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 06:58:48] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 06:58:49] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 06:58:50] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 06:58:50] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 06:58:51] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 06:58:52] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 06:58:52] Running: fordism ortho DLR= const r0_set= 0,1,2
+[2026-02-25 06:58:52] JOH_OBS meta: K_urca=2 T_eff_used=49
+[2026-02-25 06:58:52] JOH_OBS lambda: 0.59535, 0.292952, 0.215074, 0.072513, 0
+[2026-02-25 06:58:52] JOH_OBS trace:  76.872812, 32.540903, 15.554716, 3.688568, 0
+[2026-02-25 06:58:52] JOH_OBS maxeig: 44.331909, 16.986187, 11.866148, 3.688568, 0
+[2026-02-25 06:58:53] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 06:58:53] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 06:58:54] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 06:58:55] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 06:58:55] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 06:58:55] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 06:58:56] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 06:58:57] Running: post_fordism raw DLR= const r0_set= 0,1,2
+[2026-02-25 06:58:57] JOH_OBS meta: K_urca=2 T_eff_used=50
+[2026-02-25 06:58:57] JOH_OBS lambda: 0.491386, 0.333092, 0.237564, 0.078466, 0
+[2026-02-25 06:58:57] JOH_OBS trace:  71.706041, 37.902752, 17.647604, 4.085794, 0
+[2026-02-25 06:58:57] JOH_OBS maxeig: 33.803289, 20.255148, 13.56181, 4.085794, 0
+[2026-02-25 06:58:57] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 06:58:57] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 06:58:59] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 06:59:00] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 06:59:01] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 06:59:01] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 06:59:01] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 06:59:02] Running: post_fordism ortho DLR= const r0_set= 0,1,2
+[2026-02-25 06:59:02] JOH_OBS meta: K_urca=2 T_eff_used=50
+[2026-02-25 06:59:02] JOH_OBS lambda: 0.491386, 0.333092, 0.237564, 0.078466, 0
+[2026-02-25 06:59:02] JOH_OBS trace:  71.706041, 37.902752, 17.647604, 4.085794, 0
+[2026-02-25 06:59:02] JOH_OBS maxeig: 33.803289, 20.255148, 13.56181, 4.085794, 0
+[2026-02-25 06:59:02] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 06:59:03] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 06:59:04] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 06:59:05] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 06:59:05] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 06:59:05] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 06:59:06] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 06:59:07] === 41_inference_rank_multiTests_vecm completed ===
+[2026-02-25 07:18:29] === 41_inference_rank_multiTests_vecm started ===
+[2026-02-25 07:18:30] Running: full raw DLR= const r0_set= 0,1,2
+[2026-02-25 07:18:30] JOH_OBS meta: K_urca=2 T_eff_used=97
+[2026-02-25 07:18:30] JOH_OBS lambda: 0.302338, 0.216577, 0.071557, 0.042615, 0
+[2026-02-25 07:18:30] JOH_OBS trace:  70.024088, 35.10212, 11.426167, 4.224291, 0
+[2026-02-25 07:18:30] JOH_OBS maxeig: 34.921967, 23.675953, 7.201876, 4.224291, 0
+[2026-02-25 07:18:31] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 07:18:31] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 07:18:31] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 07:18:31] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 07:18:32] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 07:18:32] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 07:18:32] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 07:18:33] Running: full ortho DLR= const r0_set= 0,1,2
+[2026-02-25 07:18:33] JOH_OBS meta: K_urca=2 T_eff_used=97
+[2026-02-25 07:18:33] JOH_OBS lambda: 0.302338, 0.216577, 0.071557, 0.042615, 0
+[2026-02-25 07:18:33] JOH_OBS trace:  70.024088, 35.10212, 11.426167, 4.224291, 0
+[2026-02-25 07:18:33] JOH_OBS maxeig: 34.921967, 23.675953, 7.201876, 4.224291, 0
+[2026-02-25 07:18:33] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 07:18:34] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 07:18:35] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 07:18:35] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 07:18:36] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 07:18:36] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 07:18:37] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 07:18:39] Running: fordism raw DLR= const r0_set= 0,1,2
+[2026-02-25 07:18:39] JOH_OBS meta: K_urca=2 T_eff_used=47
+[2026-02-25 07:18:39] JOH_OBS lambda: 0.59535, 0.292952, 0.215074, 0.072513, 0
+[2026-02-25 07:18:39] JOH_OBS trace:  73.735146, 31.212703, 14.91983, 3.538015, 0
+[2026-02-25 07:18:39] JOH_OBS maxeig: 42.522443, 16.292873, 11.381815, 3.538015, 0
+[2026-02-25 07:18:39] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 07:18:39] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 07:18:40] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 07:18:40] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 07:18:40] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 07:18:41] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 07:18:43] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 07:18:44] Running: fordism ortho DLR= const r0_set= 0,1,2
+[2026-02-25 07:18:44] JOH_OBS meta: K_urca=2 T_eff_used=47
+[2026-02-25 07:18:44] JOH_OBS lambda: 0.59535, 0.292952, 0.215074, 0.072513, 0
+[2026-02-25 07:18:44] JOH_OBS trace:  73.735146, 31.212703, 14.91983, 3.538015, 0
+[2026-02-25 07:18:44] JOH_OBS maxeig: 42.522443, 16.292873, 11.381815, 3.538015, 0
+[2026-02-25 07:18:44] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 07:18:44] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 07:18:45] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 07:18:45] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 07:18:46] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 07:18:48] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 07:18:48] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 07:18:48] Running: post_fordism raw DLR= const r0_set= 0,1,2
+[2026-02-25 07:18:48] JOH_OBS meta: K_urca=2 T_eff_used=48
+[2026-02-25 07:18:48] JOH_OBS lambda: 0.491386, 0.333092, 0.237564, 0.078466, 0
+[2026-02-25 07:18:48] JOH_OBS trace:  68.8378, 36.386642, 16.9417, 3.922362, 0
+[2026-02-25 07:18:48] JOH_OBS maxeig: 32.451158, 19.444942, 13.019338, 3.922362, 0
+[2026-02-25 07:18:49] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 07:18:49] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 07:18:49] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 07:18:50] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 07:18:52] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 07:18:53] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 07:18:53] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 07:18:53] Running: post_fordism ortho DLR= const r0_set= 0,1,2
+[2026-02-25 07:18:53] JOH_OBS meta: K_urca=2 T_eff_used=48
+[2026-02-25 07:18:53] JOH_OBS lambda: 0.491386, 0.333092, 0.237564, 0.078466, 0
+[2026-02-25 07:18:53] JOH_OBS trace:  68.8378, 36.386642, 16.9417, 3.922362, 0
+[2026-02-25 07:18:53] JOH_OBS maxeig: 32.451158, 19.444942, 13.019338, 3.922362, 0
+[2026-02-25 07:18:54] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 07:18:54] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 07:18:55] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 07:18:58] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 07:18:58] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 07:18:58] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 07:18:59] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 07:18:59] === 41_inference_rank_multiTests_vecm completed ===
+[2026-02-25 07:20:52] === 41_inference_rank_multiTests_vecm started ===
+[2026-02-25 07:20:52] Running: full raw DLR= const r0_set= 0,1,2
+[2026-02-25 07:53:34] === 41_inference_rank_multiTests_vecm started ===
+[2026-02-25 07:53:34] Running: full raw DLR= const r0_set= 0,1,2
+[2026-02-25 07:53:34] JOH_OBS is NULL (ca.jo failed on observed sample).
+[2026-02-25 07:53:34] Running: full ortho DLR= const r0_set= 0,1,2
+[2026-02-25 07:53:34] JOH_OBS is NULL (ca.jo failed on observed sample).
+[2026-02-25 07:53:34] Running: fordism raw DLR= const r0_set= 0,1,2
+[2026-02-25 07:53:34] JOH_OBS is NULL (ca.jo failed on observed sample).
+[2026-02-25 07:53:34] Running: fordism ortho DLR= const r0_set= 0,1,2
+[2026-02-25 07:53:34] JOH_OBS is NULL (ca.jo failed on observed sample).
+[2026-02-25 07:53:34] Running: post_fordism raw DLR= const r0_set= 0,1,2
+[2026-02-25 07:53:34] JOH_OBS is NULL (ca.jo failed on observed sample).
+[2026-02-25 07:53:34] Running: post_fordism ortho DLR= const r0_set= 0,1,2
+[2026-02-25 07:53:34] JOH_OBS is NULL (ca.jo failed on observed sample).
+[2026-02-25 07:53:35] === 41_inference_rank_multiTests_vecm completed ===
+[2026-02-25 10:22:49] === 41_inference_rank_multiTests_vecm started ===
+[2026-02-25 10:22:49] Running: full raw DLR= const r0_set= 0,1,2
+[2026-02-25 10:22:49] JOH_OBS meta: K=2 det=const T_eff_used=97
+[2026-02-25 10:22:49] JOH_OBS lambda: 0.296484, 0.164982, 0.052046, 0.003694
+[2026-02-25 10:22:49] JOH_OBS trace:  57.144323, 23.032918, 5.543631, 0.359018
+[2026-02-25 10:22:49] JOH_OBS maxeig: 34.111406, 17.489287, 5.184613, 0.359018
+[2026-02-25 10:22:49] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 10:22:49] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 10:22:49] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 10:22:50] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 10:22:50] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 10:22:50] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 10:22:50] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 10:22:50] Running: full ortho DLR= const r0_set= 0,1,2
+[2026-02-25 10:22:50] JOH_OBS meta: K=2 det=const T_eff_used=97
+[2026-02-25 10:22:50] JOH_OBS lambda: 0.296484, 0.164982, 0.052046, 0.003694
+[2026-02-25 10:22:50] JOH_OBS trace:  57.144323, 23.032918, 5.543631, 0.359018
+[2026-02-25 10:22:50] JOH_OBS maxeig: 34.111406, 17.489287, 5.184613, 0.359018
+[2026-02-25 10:22:50] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 10:22:50] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 10:22:50] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 10:22:50] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 10:22:50] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 10:22:50] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 10:22:50] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 10:22:50] Running: fordism raw DLR= const r0_set= 0,1,2
+[2026-02-25 10:22:50] JOH_OBS meta: K=2 det=const T_eff_used=47
+[2026-02-25 10:22:50] JOH_OBS lambda: 0.590236, 0.269318, 0.204381, 0.003989
+[2026-02-25 10:22:50] JOH_OBS trace:  67.613329, 25.681198, 10.933695, 0.187871
+[2026-02-25 10:22:50] JOH_OBS maxeig: 41.932131, 14.747503, 10.745824, 0.187871
+[2026-02-25 10:22:51] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 10:22:51] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 10:22:51] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 10:22:51] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 10:22:51] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 10:22:51] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 10:22:51] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 10:22:51] Running: fordism ortho DLR= const r0_set= 0,1,2
+[2026-02-25 10:22:51] JOH_OBS meta: K=2 det=const T_eff_used=47
+[2026-02-25 10:22:51] JOH_OBS lambda: 0.590236, 0.269318, 0.204381, 0.003989
+[2026-02-25 10:22:51] JOH_OBS trace:  67.613329, 25.681198, 10.933695, 0.187871
+[2026-02-25 10:22:51] JOH_OBS maxeig: 41.932131, 14.747503, 10.745824, 0.187871
+[2026-02-25 10:22:51] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 10:22:51] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 10:22:51] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 10:22:51] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 10:22:51] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 10:22:51] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 10:22:51] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 10:22:52] Running: post_fordism raw DLR= const r0_set= 0,1,2
+[2026-02-25 10:22:53] JOH_OBS meta: K=2 det=const T_eff_used=48
+[2026-02-25 10:22:53] JOH_OBS lambda: 0.40033, 0.26198, 0.235659, 0.033405
+[2026-02-25 10:22:53] JOH_OBS trace:  53.658084, 29.112029, 14.53039, 1.630818
+[2026-02-25 10:22:53] JOH_OBS maxeig: 24.546055, 14.581639, 12.899572, 1.630818
+[2026-02-25 10:22:54] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 10:22:54] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 10:22:54] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 10:22:54] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 10:22:54] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 10:22:55] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 10:22:55] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 10:22:55] Running: post_fordism ortho DLR= const r0_set= 0,1,2
+[2026-02-25 10:22:55] JOH_OBS meta: K=2 det=const T_eff_used=48
+[2026-02-25 10:22:55] JOH_OBS lambda: 0.40033, 0.26198, 0.235659, 0.033405
+[2026-02-25 10:22:55] JOH_OBS trace:  53.658084, 29.112029, 14.53039, 1.630818
+[2026-02-25 10:22:55] JOH_OBS maxeig: 24.546055, 14.581639, 12.899572, 1.630818
+[2026-02-25 10:22:56] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 10:22:56] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 10:22:56] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 10:22:56] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 10:22:56] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 10:22:57] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 10:22:57] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 10:22:58] === 41_inference_rank_multiTests_vecm completed ===
+[2026-02-25 10:42:47] === 41_inference_rank_multiTests_vecm started ===
+[2026-02-25 10:43:33] === 41_inference_rank_multiTests_vecm started ===
+[2026-02-25 10:43:34] Running: full raw DLR= const r0_set= 0,1,2
+[2026-02-25 10:43:34] JOH_OBS meta: K=2 det=const T_eff_used=97
+[2026-02-25 10:43:34] JOH_OBS lambda: 0.296484, 0.164982, 0.052046, 0.003694
+[2026-02-25 10:43:34] JOH_OBS trace:  57.144323, 23.032918, 5.543631, 0.359018
+[2026-02-25 10:43:34] JOH_OBS maxeig: 34.111406, 17.489287, 5.184613, 0.359018
+[2026-02-25 11:59:41] === 41_inference_rank_multiTests_vecm started ===
+[2026-02-25 11:59:41] DO_JOHANSEN_STATS=FALSE (urca-free mode)
+[2026-02-25 11:59:41] Running: full raw DLR= const r0_set= 0,1,2 use_jump02= FALSE
+[2026-02-25 11:59:42] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 11:59:43] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 11:59:43] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 11:59:43] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 11:59:43] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 11:59:44] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 11:59:44] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 11:59:44] Running: full ortho DLR= const r0_set= 0,1,2 use_jump02= FALSE
+[2026-02-25 11:59:44] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 11:59:44] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 11:59:45] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 11:59:45] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 11:59:45] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 11:59:45] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 11:59:45] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 11:59:46] Running: fordism raw DLR= const r0_set= 0,1,2 use_jump02= FALSE
+[2026-02-25 11:59:46] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 11:59:46] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 11:59:46] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 11:59:46] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 11:59:46] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 11:59:47] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 11:59:47] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 11:59:47] Running: fordism ortho DLR= const r0_set= 0,1,2 use_jump02= FALSE
+[2026-02-25 11:59:48] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 11:59:48] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 11:59:48] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 11:59:48] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 11:59:49] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 11:59:49] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 11:59:49] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 11:59:49] Running: post_fordism raw DLR= const r0_set= 0,1,2 use_jump02= TRUE
+[2026-02-25 11:59:49] NOTE: post_fordism uses LR jump test for r0=0: LR(0 vs 2) stored under stat_type='lr_seq' at r0=0.
+[2026-02-25 11:59:49] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 11:59:49] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 11:59:50] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 11:59:50] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 11:59:50] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 11:59:50] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 11:59:51] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 11:59:51] Running: post_fordism ortho DLR= const r0_set= 0,1,2 use_jump02= TRUE
+[2026-02-25 11:59:51] NOTE: post_fordism uses LR jump test for r0=0: LR(0 vs 2) stored under stat_type='lr_seq' at r0=0.
+[2026-02-25 11:59:51] r0=0 bootstrap=25 fail_share=0
+[2026-02-25 11:59:51] r0=0 bootstrap=50 fail_share=0
+[2026-02-25 11:59:52] r0=0 bootstrap=75 fail_share=0
+[2026-02-25 11:59:52] r0=0 bootstrap=100 fail_share=0
+[2026-02-25 11:59:52] r0=0 bootstrap=125 fail_share=0
+[2026-02-25 11:59:52] r0=0 bootstrap=150 fail_share=0
+[2026-02-25 11:59:53] r0=0 bootstrap=175 fail_share=0
+[2026-02-25 11:59:55] === 41_inference_rank_multiTests_vecm completed ===

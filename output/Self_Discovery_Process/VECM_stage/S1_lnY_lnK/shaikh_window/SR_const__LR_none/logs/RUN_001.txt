@@ -1,0 +1,1 @@
+[2026-02-28 20:33:38] Stage S1 run: SR=const LR=none (P=1..7)

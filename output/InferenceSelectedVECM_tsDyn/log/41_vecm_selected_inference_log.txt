@@ -1,0 +1,97 @@
+[2026-02-25 15:16:55] === 41_vecm_selected_inference started ===
+[2026-02-25 15:16:55] SPEC_TAG= Q2 | DLR= const DSR= none | r= 1 | BOOT= wild | B= 1999
+[2026-02-25 15:16:55] Window: fordism P_VECM= 1 range: -Inf-1973
+[2026-02-25 15:16:55] FAIL beta normalization: fordism raw
+[2026-02-25 15:16:55] FAIL beta normalization: fordism ortho
+[2026-02-25 15:16:55] === 41_vecm_selected_inference completed ===
+[2026-02-25 15:40:43] === 41_vecm_selected_inference started ===
+[2026-02-25 15:40:43] SPEC_TAG= Q2 | DLR= const DSR= none | r= 1 | BOOT= wild | B= 1999
+[2026-02-25 15:40:43] Window: fordism P_VECM= 1 range: -Inf-1973
+[2026-02-25 16:02:14] === 41_vecm_selected_inference started ===
+[2026-02-25 16:02:14] SPEC_TAG= Q2 | DLR= const DSR= none | r= 1 | BOOT= wild | B= 1999
+[2026-02-25 16:02:14] Window: fordism P_VECM= 1 range: 1925-1973
+[2026-02-25 16:02:15] Boot: fordism raw b= 25 fail_share= 0
+[2026-02-25 16:02:15] Boot: fordism raw b= 50 fail_share= 0
+[2026-02-25 16:02:15] Boot: fordism raw b= 75 fail_share= 0
+[2026-02-25 16:02:15] Boot: fordism raw b= 100 fail_share= 0
+[2026-02-25 16:02:16] Boot: fordism raw b= 125 fail_share= 0
+[2026-02-25 16:02:16] Boot: fordism raw b= 150 fail_share= 0
+[2026-02-25 16:02:16] Boot: fordism raw b= 175 fail_share= 0
+[2026-02-25 16:02:16] Boot: fordism raw b= 200 fail_share= 0
+[2026-02-25 16:02:16] Boot: fordism raw b= 225 fail_share= 0
+[2026-02-25 16:02:16] Boot: fordism raw b= 250 fail_share= 0
+[2026-02-25 16:02:17] Boot: fordism raw b= 275 fail_share= 0
+[2026-02-25 16:02:17] Boot: fordism raw b= 300 fail_share= 0
+[2026-02-25 16:02:17] Boot: fordism raw b= 325 fail_share= 0
+[2026-02-25 16:02:17] Boot: fordism raw b= 350 fail_share= 0
+[2026-02-25 16:02:18] Boot: fordism raw b= 375 fail_share= 0
+[2026-02-25 16:02:18] Boot: fordism raw b= 400 fail_share= 0
+[2026-02-25 16:02:18] Boot: fordism raw b= 425 fail_share= 0
+[2026-02-25 16:02:18] Boot: fordism raw b= 450 fail_share= 0
+[2026-02-25 16:02:18] Boot: fordism raw b= 475 fail_share= 0
+[2026-02-25 16:02:18] Boot: fordism raw b= 500 fail_share= 0
+[2026-02-25 16:02:19] Boot: fordism raw b= 525 fail_share= 0
+[2026-02-25 16:02:19] Boot: fordism raw b= 550 fail_share= 0
+[2026-02-25 16:02:24] Boot: fordism raw b= 575 fail_share= 0
+[2026-02-25 16:02:24] Boot: fordism raw b= 600 fail_share= 0
+[2026-02-25 16:02:25] Boot: fordism raw b= 625 fail_share= 0
+[2026-02-25 16:02:25] Boot: fordism raw b= 650 fail_share= 0
+[2026-02-25 16:02:25] Boot: fordism raw b= 675 fail_share= 0
+[2026-02-25 16:02:26] Boot: fordism raw b= 700 fail_share= 0
+[2026-02-25 16:02:26] Boot: fordism raw b= 725 fail_share= 0
+[2026-02-25 16:02:26] Boot: fordism raw b= 750 fail_share= 0
+[2026-02-25 16:02:27] Boot: fordism raw b= 775 fail_share= 0
+[2026-02-25 16:02:27] Boot: fordism raw b= 800 fail_share= 0
+[2026-02-25 16:02:27] Boot: fordism raw b= 825 fail_share= 0
+[2026-02-25 16:02:28] Boot: fordism raw b= 850 fail_share= 0
+[2026-02-25 16:02:29] Boot: fordism raw b= 875 fail_share= 0
+[2026-02-25 16:02:29] Boot: fordism raw b= 900 fail_share= 0
+[2026-02-25 16:02:29] Boot: fordism raw b= 925 fail_share= 0
+[2026-02-25 16:02:30] Boot: fordism raw b= 950 fail_share= 0
+[2026-02-25 16:02:30] Boot: fordism raw b= 975 fail_share= 0
+[2026-02-25 16:02:31] Boot: fordism raw b= 1000 fail_share= 0
+[2026-02-25 16:02:31] Boot: fordism raw b= 1025 fail_share= 0
+[2026-02-25 16:02:31] Boot: fordism raw b= 1050 fail_share= 0
+[2026-02-25 16:02:32] Boot: fordism raw b= 1075 fail_share= 0
+[2026-02-25 16:02:32] Boot: fordism raw b= 1100 fail_share= 0
+[2026-02-25 16:02:34] Boot: fordism raw b= 1125 fail_share= 0
+[2026-02-25 16:02:34] Boot: fordism raw b= 1150 fail_share= 0
+[2026-02-25 16:02:35] Boot: fordism raw b= 1175 fail_share= 0
+[2026-02-25 16:02:35] Boot: fordism raw b= 1200 fail_share= 0
+[2026-02-25 16:02:36] Boot: fordism raw b= 1225 fail_share= 0
+[2026-02-25 16:02:36] Boot: fordism raw b= 1250 fail_share= 0
+[2026-02-25 16:02:38] Boot: fordism raw b= 1275 fail_share= 0
+[2026-02-25 16:02:38] Boot: fordism raw b= 1300 fail_share= 0
+[2026-02-25 16:02:39] Boot: fordism raw b= 1325 fail_share= 0
+[2026-02-25 16:02:39] Boot: fordism raw b= 1350 fail_share= 0
+[2026-02-25 16:02:40] Boot: fordism raw b= 1375 fail_share= 0
+[2026-02-25 16:02:40] Boot: fordism raw b= 1400 fail_share= 0
+[2026-02-25 16:02:42] Boot: fordism raw b= 1425 fail_share= 0
+[2026-02-25 16:02:42] Boot: fordism raw b= 1450 fail_share= 0
+[2026-02-25 16:02:43] Boot: fordism raw b= 1475 fail_share= 0
+[2026-02-25 16:02:43] Boot: fordism raw b= 1500 fail_share= 0
+[2026-02-25 16:02:43] Boot: fordism raw b= 1525 fail_share= 0
+[2026-02-25 16:02:44] Boot: fordism raw b= 1550 fail_share= 0
+[2026-02-25 16:02:45] Boot: fordism raw b= 1575 fail_share= 0
+[2026-02-25 16:02:46] Boot: fordism raw b= 1600 fail_share= 0
+[2026-02-25 16:02:46] Boot: fordism raw b= 1625 fail_share= 0
+[2026-02-25 16:02:51] === 41_vecm_selected_inference started ===
+[2026-02-25 16:02:51] SPEC_TAG= Q2 | DLR= const DSR= none | r= 1 | BOOT= wild | B= 199
+[2026-02-25 16:02:52] Window: fordism P_VECM= 1 range: 1925-1973
+[2026-02-25 16:02:52] Boot: fordism raw b= 25 fail_share= 0
+[2026-02-25 16:02:52] Boot: fordism raw b= 50 fail_share= 0
+[2026-02-25 16:02:52] Boot: fordism raw b= 75 fail_share= 0
+[2026-02-25 16:02:52] Boot: fordism raw b= 100 fail_share= 0
+[2026-02-25 16:02:52] Boot: fordism raw b= 125 fail_share= 0
+[2026-02-25 16:02:53] Boot: fordism raw b= 150 fail_share= 0
+[2026-02-25 16:02:53] Boot: fordism raw b= 175 fail_share= 0
+[2026-02-25 16:02:53] EXPORT OK: fordism raw B_eff= 199 fail_share= 0
+[2026-02-25 16:02:54] Boot: fordism ortho b= 25 fail_share= 0
+[2026-02-25 16:02:54] Boot: fordism ortho b= 50 fail_share= 0
+[2026-02-25 16:02:54] Boot: fordism ortho b= 75 fail_share= 0
+[2026-02-25 16:02:54] Boot: fordism ortho b= 100 fail_share= 0
+[2026-02-25 16:02:54] Boot: fordism ortho b= 125 fail_share= 0
+[2026-02-25 16:02:54] Boot: fordism ortho b= 150 fail_share= 0
+[2026-02-25 16:02:55] Boot: fordism ortho b= 175 fail_share= 0
+[2026-02-25 16:02:55] EXPORT OK: fordism ortho B_eff= 199 fail_share= 0
+[2026-02-25 16:02:55] === 41_vecm_selected_inference completed ===

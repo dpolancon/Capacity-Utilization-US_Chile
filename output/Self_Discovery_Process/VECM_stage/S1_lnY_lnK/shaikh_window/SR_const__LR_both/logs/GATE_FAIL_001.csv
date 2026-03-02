@@ -1,0 +1,8 @@
+"run_id","det_tag","p","stage","fail_code","fail_msg"
+1,"SR_const__LR_both",1,"BETA_EXTRACT","BETA_FAIL","Could not extract/normalize beta"
+1,"SR_const__LR_both",2,"BETA_EXTRACT","BETA_FAIL","Could not extract/normalize beta"
+1,"SR_const__LR_both",3,"BETA_EXTRACT","BETA_FAIL","Could not extract/normalize beta"
+1,"SR_const__LR_both",4,"BETA_EXTRACT","BETA_FAIL","Could not extract/normalize beta"
+1,"SR_const__LR_both",5,"BETA_EXTRACT","BETA_FAIL","Could not extract/normalize beta"
+1,"SR_const__LR_both",6,"BETA_EXTRACT","BETA_FAIL","Could not extract/normalize beta"
+1,"SR_const__LR_both",7,"BETA_EXTRACT","BETA_FAIL","Could not extract/normalize beta"
