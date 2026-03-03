@@ -127,23 +127,22 @@ data/
 
 output/
   CriticalReplication/
-    shaikh_window/
-      Exercise_a_ARDL_faithful/
+    Exercise_a_ARDL_faithful/
         csv/ figs/ logs/
-      Exercise_b_ARDL_grid/
+    Exercise_b_ARDL_grid/
         csv/ figs/ logs/
-      Exercise_c_VECM_S1_r1/
+    Exercise_c_VECM_S1_r1/
         csv/ figs/ logs/ branches/
-      Exercise_d_VECM_S2_m3_rank/
+    Exercise_d_VECM_S2_m3_rank/
         csv/ figs/ logs/
-      Crosswalk/
+    Crosswalk/
         csv/ figs/ logs/
-      Manifest/
+    Manifest/
         RUN_MANIFEST_stage4.md
         RUN_MANIFEST_stage4.csv                     # optional
 ```
 
-Note: legacy paths can remain, but Stage 4 should write canonical artifacts into `output/CriticalReplication/shaikh_window/…`.
+Note: legacy paths can remain, but Stage 4 should write canonical artifacts into `output/CriticalReplication/…` (no `/shaikh_window/` subdirectory).
 
 ---
 
@@ -183,7 +182,7 @@ Rscript codes/critical_replication/56_crosswalk_tables.R
 ## Run Manifest (Stage 4)
 
 A run writes:
-- `output/CriticalReplication/shaikh_window/Manifest/RUN_MANIFEST_stage4.md`
+- `output/CriticalReplication/Manifest/RUN_MANIFEST_stage4.md`
 - optionally: `RUN_MANIFEST_stage4.csv`
 
 ### Required manifest fields

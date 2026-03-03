@@ -56,6 +56,8 @@ df <- df_raw |>
 # -----------------------------
 WINDOW_TAG <- "shaikh_window"
 w <- CONFIG$WINDOWS_LOCKED[[WINDOW_TAG]]
+WINDOW_START <- as.integer(w[1])
+WINDOW_END <- as.integer(w[2])
 df <- df |>
   filter(year >= w[1], year <= w[2]) |>
   arrange(year)
@@ -63,13 +65,17 @@ df <- df |>
 # -----------------------------
 # 1.5) Output dirs + log sink (console + file)
 # -----------------------------
-CSV_DIR <- here::here("output", "CU_estimates_compare", "csv")
-LOG_DIR <- here::here("output", "CU_estimates_compare", "logs")
-FIG_DIR <- here::here("output", "CU_estimates_compare", "figs")
+OUT_ROOT <- here::here(CONFIG$OUT_CR_ROOT %||% "output/CriticalReplication")
+EXERCISE_DIR <- here::here(CONFIG$OUT_CR$exercise_a %||% "output/CriticalReplication/Exercise_a_ARDL_faithful")
+CSV_DIR <- file.path(EXERCISE_DIR, "csv")
+LOG_DIR <- file.path(EXERCISE_DIR, "logs")
+FIG_DIR <- file.path(EXERCISE_DIR, "figs")
+MAN_DIR  <- here::here(CONFIG$OUT_CR$manifest %||% "output/CriticalReplication/Manifest")
 
 dir.create(CSV_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(LOG_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(FIG_DIR, recursive = TRUE, showWarnings = FALSE)
+dir.create(MAN_DIR, recursive = TRUE, showWarnings = FALSE)
 
 log_path <- file.path(LOG_DIR, paste0("SHAIKH_ARDL_replication_log_", WINDOW_TAG, ".txt"))
 sink(log_path, split = TRUE)
@@ -291,3 +297,20 @@ ggsave(fig_path, plot_u, width = 10, height = 4.5, dpi = 300)
 
 cat("\nSaved figure:\n  ", fig_path, "\n", sep = "")
 cat("Saved log:\n  ", log_path, "\n", sep = "")
+manifest_path <- file.path(MAN_DIR, "RUN_MANIFEST_stage4.md")
+cat(
+  paste0(
+    "# Run Manifest (Stage 4)\n",
+    "- window_tag: ", WINDOW_TAG, "\n",
+    "- window_start: ", WINDOW_START, "\n",
+    "- window_end: ", WINDOW_END, "\n\n",
+    "## Script: codes/20_shaikh_ardl_replication.R\n",
+    "- exercise_output: output/CriticalReplication/Exercise_a_ARDL_faithful/\n",
+    "- window_tag: ", WINDOW_TAG, "\n",
+    "- window_start: ", WINDOW_START, "\n",
+    "- window_end: ", WINDOW_END, "\n",
+    "- Timestamp: ", Sys.time(), "\n\n"
+  ),
+  file = manifest_path,
+  append = TRUE
+)

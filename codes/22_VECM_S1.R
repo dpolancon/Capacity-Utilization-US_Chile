@@ -63,7 +63,7 @@ ETA_GRID <- c(1, 1.5, 2, 3, 4, 6, 8)
 # ============================================================
 # Output paths
 # ============================================================
-out_root <- file.path("output","Self_Discovery_Process","VECM_stage",STATE_TAG,WINDOW_TAG)
+out_root <- here::here(CONFIG$OUT_CR$exercise_c %||% "output/CriticalReplication/Exercise_c_VECM_S1_r1")
 
 make_branch_dirs <- function(det_tag) {
   base <- file.path(out_root, det_tag)
@@ -124,7 +124,7 @@ load_shaikh_window <- function() {
   X <- as.matrix(df[, c("lnY","lnK")])
   colnames(X) <- c("lnY","lnK")
   
-  list(df = df, X = X, T_window = nrow(X), m = ncol(X), window = w)
+  list(df = df, X = X, T_window = nrow(X), m = ncol(X), window = w, window_start = as.integer(w[1]), window_end = as.integer(w[2]))
 }
 
 # ============================================================
@@ -616,7 +616,12 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
     }
   }
   
-  cells <- bind_rows(rows)
+  cells <- bind_rows(rows) |>
+    mutate(
+      window_tag = WINDOW_TAG,
+      window_start = dat$window_start,
+      window_end = dat$window_end
+    )
   safe_write_csv(cells, file.path(csv_dir, "APPX_lattice_cells.csv"))
   
   n_comp <- sum(cells$status == "computed", na.rm = TRUE)
@@ -627,6 +632,7 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
     feas_share <- mean(cells$status == "computed", na.rm = TRUE)
     branch_summary <- tibble(
       run_id = run_id, det_tag = det_tag, include = include, LRinclude = LRinclude,
+      window_tag = WINDOW_TAG, window_start = dat$window_start, window_end = dat$window_end,
       P_MIN = P_MIN, P_MAX = P_MAX, T_window = T_window, T_eff_common = T_eff_common,
       feasibility_share = feas_share,
       best_cell_id = NA_character_, best_BIC = NA_real_,
@@ -641,6 +647,13 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
   }
   
   eig_long <- if (length(eig_rows) > 0) bind_rows(eig_rows) else tibble()
+  if (nrow(eig_long) > 0) {
+    eig_long <- eig_long |> mutate(
+      window_tag = WINDOW_TAG,
+      window_start = dat$window_start,
+      window_end = dat$window_end
+    )
+  }
   if (nrow(eig_long) > 0) safe_write_csv(eig_long, file.path(csv_dir, "APPX_eigs_long.csv"))
   
   # ---- Deltas under stability mask
@@ -694,6 +707,7 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
   
   branch_summary <- tibble(
     run_id = run_id, det_tag = det_tag, include = include, LRinclude = LRinclude,
+    window_tag = WINDOW_TAG, window_start = dat$window_start, window_end = dat$window_end,
     P_MIN = P_MIN, P_MAX = P_MAX, T_window = T_window, T_eff_common = T_eff_common,
     feasibility_share = feas_share,
     best_cell_id = best_stable$cell_id[1],
@@ -758,7 +772,10 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
     p0 <- reps$p[i]
     b0 <- beta_by_p[[as.character(p0)]]
     ect0 <- compute_ect_series(X, b0, LRinclude, T_window)
-    ect_df <- tibble(year = df$year, ECT = ect0, series = paste0("p=", p0))
+    ect_df <- tibble(
+      year = df$year, ECT = ect0, series = paste0("p=", p0),
+      window_tag = WINDOW_TAG, window_start = dat$window_start, window_end = dat$window_end
+    )
     ect_bank[[i]] <- ect_df
     safe_write_csv(ect_df, file.path(ect_dir, paste0("ECT_p", sprintf("%02d", p0), ".csv")))
   }
@@ -820,3 +837,24 @@ for (sr in SR_SET) {
 }
 
 message("Stage S1 completed across all SR/LR branches.")
+
+manifest_dir <- here::here(CONFIG$OUT_CR$manifest %||% "output/CriticalReplication/Manifest")
+dir.create(manifest_dir, recursive = TRUE, showWarnings = FALSE)
+manifest_path <- file.path(manifest_dir, "RUN_MANIFEST_stage4.md")
+cat(
+  paste0(
+    "# Run Manifest (Stage 4)\n",
+    "- window_tag: ", WINDOW_TAG, "\n",
+    "- window_start: ", dat$window_start, "\n",
+    "- window_end: ", dat$window_end, "\n\n",
+    "## Script: codes/22_VECM_S1.R\n",
+    "- exercise_output: output/CriticalReplication/Exercise_c_VECM_S1_r1/\n",
+    "- window_tag: ", WINDOW_TAG, "\n",
+    "- window_start: ", dat$window_start, "\n",
+    "- window_end: ", dat$window_end, "\n",
+    "- p_range: ", P_MIN, "..", P_MAX, "\n",
+    "- Timestamp: ", Sys.time(), "\n\n"
+  ),
+  file = manifest_path,
+  append = TRUE
+)
