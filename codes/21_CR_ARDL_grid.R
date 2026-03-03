@@ -35,6 +35,7 @@ suppressPackageStartupMessages({
 source(here::here("codes", "10_config.R"))
 source(here::here("codes", "99_utils.R"))
 source(here::here("codes", "critical_replication", "25_envelope_tools.R"))
+source(here::here("codes", "critical_replication", "24_complexity_penalties.R"))
 
 set.seed(CONFIG$seed)
 
@@ -44,11 +45,12 @@ set.seed(CONFIG$seed)
 
 # ----------------------------------------------------------
 
-OUT_ROOT <- here::here("output", "CriticalReplication")
-CSV_DIR  <- file.path(OUT_ROOT, "csv")
-FIG_DIR  <- file.path(OUT_ROOT, "figs")
-LOG_DIR  <- file.path(OUT_ROOT, "logs")
-MAN_DIR  <- file.path(OUT_ROOT, "manifest")
+OUT_ROOT <- here::here(CONFIG$OUT_CR_ROOT %||% "output/CriticalReplication")
+EXERCISE_DIR <- here::here(CONFIG$OUT_CR$exercise_b %||% "output/CriticalReplication/Exercise_b_ARDL_grid")
+CSV_DIR  <- file.path(EXERCISE_DIR, "csv")
+FIG_DIR  <- file.path(EXERCISE_DIR, "figs")
+LOG_DIR  <- file.path(EXERCISE_DIR, "logs")
+MAN_DIR  <- here::here(CONFIG$OUT_CR$manifest %||% "output/CriticalReplication/Manifest")
 
 dir.create(CSV_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(FIG_DIR, recursive = TRUE, showWarnings = FALSE)
@@ -57,6 +59,8 @@ dir.create(MAN_DIR, recursive = TRUE, showWarnings = FALSE)
 
 WINDOW_TAG <- "shaikh_window"
 w <- CONFIG$WINDOWS_LOCKED[[WINDOW_TAG]]
+WINDOW_START <- as.integer(w[1])
+WINDOW_END <- as.integer(w[2])
 
 # ----------------------------------------------------------
 
@@ -102,6 +106,7 @@ grid_results <- list()
 for (p in 1:P_MAX) {
   for (q in 1:Q_MAX) {
     
+
     fml <- as.formula("lnY ~ lnK")
     
     fit_try <- try(
@@ -126,31 +131,42 @@ for (p in 1:P_MAX) {
     HQ_val   <- AIC_val + 2 * log(log(T_obs))
     AICc_val <- AIC_val + (2*k*(k+1))/(T_obs - k - 1)
     
-    # --- ICOMP / RICOMP penalties (penalty only) ---
     Sigma_hat <- vcov(fit)
-    icomp_pen  <- log(det(Sigma_hat))
-    ricomp_pen <- log(sum(diag(Sigma_hat)^2))
-    
-    grid_results[[length(grid_results) + 1]] <-
-      data.frame(
+    comp_row <- compute_complexity_record(
+      model_class = "ARDL",
+      logLik = ll,
+      k_total = k,
+      vcov_mat = Sigma_hat,
+      T_eff = T_obs,
+      extra = list(
         exercise = "ARDL",
-        model_class = "ARDL",
         window = WINDOW_TAG,
+        window_tag = WINDOW_TAG,
+        window_start = WINDOW_START,
+        window_end = WINDOW_END,
         p = p,
+        q = q,
         r = NA,
         logLik = ll,
         k_total = k,
         ICOMP_pen = icomp_pen,
         RICOMP_pen = ricomp_pen,
+        k = k,
         AIC = AIC_val,
         BIC = BIC_val,
-        HQ  = HQ_val,
+        HQ = HQ_val,
         AICc = AICc_val,
         SI_Y = NA,
         s_K = q / (p + q),
-        notes = ""
+        notes = "",
+        fit_term_source = "ARDL::logLik_gaussian_OLS",
+        covariance_source = "vcov(ARDL_fit)_OLS"
       )
     
+    )
+
+    grid_results[[length(grid_results) + 1]] <- comp_row
+
   }
 }
 
@@ -204,12 +220,19 @@ write_envelope_plane(
 
 # ----------------------------------------------------------
 
-manifest_path <- file.path(MAN_DIR, "RUN_MANIFEST.md")
+manifest_path <- file.path(MAN_DIR, "RUN_MANIFEST_stage4.md")
 
 cat(
   paste0(
-    "## ARDL Grid Run\n",
-    "- Window: ", WINDOW_TAG, "\n",
+    "# Run Manifest (Stage 4)\n",
+    "- window_tag: ", WINDOW_TAG, "\n",
+    "- window_start: ", WINDOW_START, "\n",
+    "- window_end: ", WINDOW_END, "\n\n",
+    "## Script: codes/21_CR_ARDL_grid.R\n",
+    "- exercise_output: output/CriticalReplication/Exercise_b_ARDL_grid/\n",
+    "- window_tag: ", WINDOW_TAG, "\n",
+    "- window_start: ", WINDOW_START, "\n",
+    "- window_end: ", WINDOW_END, "\n",
     "- Observations: ", T_obs, "\n",
     "- Grid: p,q ≤ ", P_MAX, "\n",
     "- Timestamp: ", Sys.time(), "\n\n"

@@ -38,6 +38,7 @@ library(tsDyn)
 source(here::here("codes","10_config.R"))
 source(here::here("codes","99_utils.R"))
 source(here::here("codes","critical_replication","25_envelope_tools.R"))
+source(here::here("codes","critical_replication","24_complexity_penalties.R"))
 
 set.seed(CONFIG$seed %||% 123)
 
@@ -64,7 +65,7 @@ ETA_GRID <- c(1, 1.5, 2, 3, 4, 6, 8)
 # ============================================================
 # Output paths
 # ============================================================
-out_root <- file.path("output","Self_Discovery_Process","VECM_stage",STATE_TAG,WINDOW_TAG)
+out_root <- here::here(CONFIG$OUT_CR$exercise_c %||% "output/CriticalReplication/Exercise_c_VECM_S1_r1")
 
 make_branch_dirs <- function(det_tag) {
   base <- file.path(out_root, det_tag)
@@ -125,7 +126,7 @@ load_shaikh_window <- function() {
   X <- as.matrix(df[, c("lnY","lnK")])
   colnames(X) <- c("lnY","lnK")
   
-  list(df = df, X = X, T_window = nrow(X), m = ncol(X), window = w)
+  list(df = df, X = X, T_window = nrow(X), m = ncol(X), window = w, window_start = as.integer(w[1]), window_end = as.integer(w[2]))
 }
 
 # ============================================================
@@ -554,10 +555,14 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
         roots <- companion_roots(Pi, G, tol_unit = TOL_UNIT)
         gsum <- gamma_summaries(G)
         
+        Sigma_hat <- crossprod(ols$U) / nrow(ols$U)
+
         list(ok = TRUE, ll = ll, Te = nrow(ols$U),
              alpha = alpha, beta = bnorm, Pi = Pi,
              roots = roots, gsum = gsum,
              icomp_pen = icomp_pen, ricomp_pen = ricomp_pen)
+             alpha = alpha, beta = bnorm, Pi = Pi, Sigma_hat = Sigma_hat,
+             roots = roots, gsum = gsum)
       }, error = function(e) list(ok = FALSE, msg = conditionMessage(e)))
       
       if (!isTRUE(fit_ols$ok) || !is.finite(fit_ols$ll)) {
@@ -587,18 +592,34 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
       
       unit_mismatch <- fit_ols$roots$unit_root_count - (m - 1L)
       
+      comp_row <- compute_complexity_record(
+        model_class = "VECM_S1_restricted_OLS",
+        logLik = fit_ols$ll,
+        k_total = kTot,
+        vcov_mat = fit_ols$Sigma_hat,
+        T_eff = fit_ols$Te
+      )
+
       rows[[length(rows)+1]] <- tibble(
         run_id = run_id, det_tag = det_tag,
         include = include, LRinclude = LRinclude,
         p = p, r = 1, q_tag = q_tag, qY = qY, qK = qK,
         cell_id = cid,
         status = "computed",
+        fit_term_source = "restricted_OLS_gaussian_not_VECM_ML",
+        covariance_source = "residual_covariance_crossprodU_over_Teff",
         logLik = fit_ols$ll,
         T_eff = fit_ols$Te,
         T_eff_common = T_eff_common,
         k_gamma = kG, k_pi = kPi, k_det = kDet, k_sigma = kSig, k_total = kTot,
         ICOMP_pen = fit_ols$icomp_pen,
         RICOMP_pen = fit_ols$ricomp_pen,
+        ICOMP_pen = comp_row$ICOMP_pen,
+        RICOMP_pen = comp_row$RICOMP_pen,
+        ICOMP_flag = comp_row$ICOMP_flag,
+        RICOMP_flag = comp_row$RICOMP_flag,
+        ICOMP_stabilized = comp_row$ICOMP_stabilized,
+        RICOMP_stabilized = comp_row$RICOMP_stabilized,
         AIC = ic$AIC, BIC = ic$BIC, HQ = ic$HQ, AICc = ic$AICc,
         theta_hat = theta_hat,
         alpha_y = aY, alpha_k = aK,
@@ -624,7 +645,12 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
     }
   }
   
-  cells <- bind_rows(rows)
+  cells <- bind_rows(rows) |>
+    mutate(
+      window_tag = WINDOW_TAG,
+      window_start = dat$window_start,
+      window_end = dat$window_end
+    )
   safe_write_csv(cells, file.path(csv_dir, "APPX_lattice_cells.csv"))
   
   n_comp <- sum(cells$status == "computed", na.rm = TRUE)
@@ -635,6 +661,7 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
     feas_share <- mean(cells$status == "computed", na.rm = TRUE)
     branch_summary <- tibble(
       run_id = run_id, det_tag = det_tag, include = include, LRinclude = LRinclude,
+      window_tag = WINDOW_TAG, window_start = dat$window_start, window_end = dat$window_end,
       P_MIN = P_MIN, P_MAX = P_MAX, T_window = T_window, T_eff_common = T_eff_common,
       feasibility_share = feas_share,
       best_cell_id = NA_character_, best_BIC = NA_real_,
@@ -649,6 +676,13 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
   }
   
   eig_long <- if (length(eig_rows) > 0) bind_rows(eig_rows) else tibble()
+  if (nrow(eig_long) > 0) {
+    eig_long <- eig_long |> mutate(
+      window_tag = WINDOW_TAG,
+      window_start = dat$window_start,
+      window_end = dat$window_end
+    )
+  }
   if (nrow(eig_long) > 0) safe_write_csv(eig_long, file.path(csv_dir, "APPX_eigs_long.csv"))
   
   # ---- Deltas under stability mask
@@ -702,6 +736,7 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
   
   branch_summary <- tibble(
     run_id = run_id, det_tag = det_tag, include = include, LRinclude = LRinclude,
+    window_tag = WINDOW_TAG, window_start = dat$window_start, window_end = dat$window_end,
     P_MIN = P_MIN, P_MAX = P_MAX, T_window = T_window, T_eff_common = T_eff_common,
     feasibility_share = feas_share,
     best_cell_id = best_stable$cell_id[1],
@@ -792,7 +827,10 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
     p0 <- reps$p[i]
     b0 <- beta_by_p[[as.character(p0)]]
     ect0 <- compute_ect_series(X, b0, LRinclude, T_window)
-    ect_df <- tibble(year = df$year, ECT = ect0, series = paste0("p=", p0))
+    ect_df <- tibble(
+      year = df$year, ECT = ect0, series = paste0("p=", p0),
+      window_tag = WINDOW_TAG, window_start = dat$window_start, window_end = dat$window_end
+    )
     ect_bank[[i]] <- ect_df
     safe_write_csv(ect_df, file.path(ect_dir, paste0("ECT_p", sprintf("%02d", p0), ".csv")))
   }
@@ -854,3 +892,24 @@ for (sr in SR_SET) {
 }
 
 message("Stage S1 completed across all SR/LR branches.")
+
+manifest_dir <- here::here(CONFIG$OUT_CR$manifest %||% "output/CriticalReplication/Manifest")
+dir.create(manifest_dir, recursive = TRUE, showWarnings = FALSE)
+manifest_path <- file.path(manifest_dir, "RUN_MANIFEST_stage4.md")
+cat(
+  paste0(
+    "# Run Manifest (Stage 4)\n",
+    "- window_tag: ", WINDOW_TAG, "\n",
+    "- window_start: ", dat$window_start, "\n",
+    "- window_end: ", dat$window_end, "\n\n",
+    "## Script: codes/22_VECM_S1.R\n",
+    "- exercise_output: output/CriticalReplication/Exercise_c_VECM_S1_r1/\n",
+    "- window_tag: ", WINDOW_TAG, "\n",
+    "- window_start: ", dat$window_start, "\n",
+    "- window_end: ", dat$window_end, "\n",
+    "- p_range: ", P_MIN, "..", P_MAX, "\n",
+    "- Timestamp: ", Sys.time(), "\n\n"
+  ),
+  file = manifest_path,
+  append = TRUE
+)
