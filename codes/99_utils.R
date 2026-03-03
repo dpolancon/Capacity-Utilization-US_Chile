@@ -256,6 +256,58 @@ as_fail_record <- function(status = c("runtime_fail","infeasible","gate_fail"),
 }
 
 # ============================================================
+# Stage-4 geometry complexity row helper
+# ============================================================
+
+compute_complexity_record <- function(exercise,
+                                      model_class,
+                                      window,
+                                      window_tag,
+                                      window_start,
+                                      window_end,
+                                      p,
+                                      r,
+                                      logLik,
+                                      k,
+                                      ICOMP_pen,
+                                      RICOMP_pen,
+                                      AIC,
+                                      BIC,
+                                      HQ,
+                                      AICc,
+                                      SI_Y,
+                                      s_K,
+                                      notes = "",
+                                      extra = list()) {
+  row <- c(
+    list(
+      exercise = exercise,
+      model_class = model_class,
+      window = window,
+      window_tag = window_tag,
+      window_start = window_start,
+      window_end = window_end,
+      p = p,
+      r = r,
+      logLik = logLik,
+      k = k,
+      ICOMP_pen = ICOMP_pen,
+      RICOMP_pen = RICOMP_pen,
+      AIC = AIC,
+      BIC = BIC,
+      HQ = HQ,
+      AICc = AICc,
+      SI_Y = SI_Y,
+      s_K = s_K,
+      notes = notes
+    ),
+    extra
+  )
+
+  as.data.frame(row, stringsAsFactors = FALSE)
+}
+
+# ============================================================
 # det_pairs(CONFIG) — supports list-of-pairs DET_PAIRS
 # ============================================================
 
