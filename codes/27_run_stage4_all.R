@@ -67,6 +67,10 @@ script_plan$exists <- vapply(
 script_plan$status <- "not_run"
 script_plan$exit_code <- NA_integer_
 script_plan$log_path <- NA_character_
+script_plan$reason_code <- NA_character_
+script_plan$timestamp <- NA_character_
+script_plan$seed <- if (!is.null(CONFIG$seed)) as.character(CONFIG$seed) else NA_character_
+script_plan$git_hash <- git_hash_val
 
 # ---- execute ---------------------------------------------------------------
 for (i in seq_len(nrow(script_plan))) {
@@ -75,8 +79,10 @@ for (i in seq_len(nrow(script_plan))) {
 
   if (!isTRUE(script_plan$exists[i])) {
     writeLines(sprintf("MISSING SCRIPT: %s", script_plan$path[i]), con = log_file)
-    script_plan$status[i] <- "missing"
+    script_plan$status[i] <- "failed"
+    script_plan$reason_code[i] <- "SCRIPT_MISSING"
     script_plan$exit_code[i] <- NA_integer_
+    script_plan$timestamp[i] <- iso_stamp(Sys.time())
     next
   }
 
@@ -87,7 +93,19 @@ for (i in seq_len(nrow(script_plan))) {
 
   writeLines(run$output, con = log_file)
   script_plan$exit_code[i] <- run$status
-  script_plan$status[i] <- if (run$status == 0L) "ok" else "failed"
+  script_plan$timestamp[i] <- iso_stamp(Sys.time())
+  hint_line <- grep("STAGE4_STATUS_HINT:", run$output, value = TRUE)
+  infeasible_hint <- any(grepl("infeasible_specs_skipped=true", hint_line, fixed = TRUE))
+  if (run$status == 0L && infeasible_hint) {
+    script_plan$status[i] <- "ok_with_infeasible_specs_skipped"
+    script_plan$reason_code[i] <- "INFEASIBLE_SPECS_SKIPPED"
+  } else if (run$status == 0L) {
+    script_plan$status[i] <- "ok"
+    script_plan$reason_code[i] <- "OK"
+  } else {
+    script_plan$status[i] <- "failed"
+    script_plan$reason_code[i] <- "NONZERO_EXIT"
+  }
 }
 
 # ---- deviation checks ------------------------------------------------------
@@ -163,21 +181,22 @@ md <- c(
   sprintf("- Window lock: `shaikh_window` (%s)", window_label),
   "",
   "## Script execution log (with grid dimensions)",
-  "| Script | Path | Grid dimensions | Exists | Status | Exit code | Log |",
-  "|---|---|---|---:|---|---:|---|"
+  "| Script | Path | Grid dimensions | Exists | Status | Exit code | Reason code | Log |",
+  "|---|---|---|---:|---|---:|---|---|"
 )
 
 for (i in seq_len(nrow(script_plan))) {
   md <- c(
     md,
     sprintf(
-      "| `%s` | `%s` | %s | %s | %s | %s | `%s` |",
+      "| `%s` | `%s` | %s | %s | %s | %s | %s | `%s` |",
       script_plan$script[i],
       script_plan$path[i],
       script_plan$grid_dimensions[i],
       ifelse(isTRUE(script_plan$exists[i]), "yes", "no"),
       script_plan$status[i],
       ifelse(is.na(script_plan$exit_code[i]), "NA", as.character(script_plan$exit_code[i])),
+      ifelse(is.na(script_plan$reason_code[i]), "NA", script_plan$reason_code[i]),
       script_plan$log_path[i]
     )
   )
@@ -207,12 +226,10 @@ if (length(deviations)) {
 writeLines(md, con = manifest_md_path)
 
 # optional CSV manifest
-csv_manifest <- script_plan[, c("script", "path", "grid_dimensions", "exists", "status", "exit_code", "log_path")]
+csv_manifest <- script_plan[, c("script", "path", "grid_dimensions", "exists", "status", "exit_code", "reason_code", "log_path", "timestamp", "seed", "git_hash")]
 csv_manifest$run_id <- run_id
-csv_manifest$timestamp <- iso_stamp(run_start)
+csv_manifest$run_started_at <- iso_stamp(run_start)
 csv_manifest$timezone <- tz_name
-csv_manifest$git_hash <- git_hash_val
-csv_manifest$seed <- if (!is.null(CONFIG$seed)) CONFIG$seed else NA_integer_
 write.csv(csv_manifest, file = manifest_csv_path, row.names = FALSE)
 
 message("Stage 4 runner complete.")

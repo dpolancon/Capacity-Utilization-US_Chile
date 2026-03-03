@@ -337,19 +337,20 @@ run_branch <- function(dat, sr, lr) {
   include <- resolve_include(sr)
   LRinclude <- resolve_LRinclude(lr)
 
-  if (include == "const" && LRinclude %in% c("const", "both")) {
-    det_tag_skip <- det_tag_from(include, LRinclude)
-    base_dir_skip <- make_branch_dirs(det_tag_skip)
-    log_run(file.path(base_dir_skip, "logs"), sprintf("SKIPPED: invalid tsDyn deterministic combo SR=%s LR=%s", include, LRinclude))
-    return(invisible(NULL))
+  det_tag <- det_tag_from(include, LRinclude)
+  branch_pre <- preflight_vecm_spec(include = include, LRinclude = LRinclude, p = P_MIN, T_window = nrow(dat$X), m = ncol(dat$X), r = 0L)
+  if (!isTRUE(branch_pre$ok) && identical(branch_pre$status, "skipped_invalid_det")) {
+    append_stage4_spec_log(
+      script_name = "23_VECM_S2.R",
+      spec_key = sprintf("det=%s|p=%d:%d", det_tag, P_MIN, P_MAX),
+      status = "skipped_invalid_det",
+      reason_code = branch_pre$reason_code,
+      message = branch_pre$message
+    )
+    return(invisible(list(det_tag = det_tag, status = "skipped_invalid_det")))
   }
 
-  det_tag <- det_tag_from(include, LRinclude)
-  base_dir <- make_branch_dirs(det_tag)
-  csv_dir <- file.path(base_dir, "csv")
-  fig_dir <- file.path(base_dir, "figs")
-  log_dir <- file.path(base_dir, "logs")
-  run_id <- log_run(log_dir, sprintf("Stage S2 run: SR=%s LR=%s P=%d..%d", include, LRinclude, P_MIN, P_MAX))
+  run_id <- as.integer(as.numeric(Sys.time()))
 
   X <- dat$X; m <- ncol(X); T_window <- nrow(X)
   T_eff_common <- as.integer(max(20L, T_window - (P_MAX + 1L)))
@@ -357,6 +358,38 @@ run_branch <- function(dat, sr, lr) {
   rows <- list(); eig_rows <- list(); alpha_beta_rows <- list()
 
   for (p in P_MIN:P_MAX) {
+    pre <- preflight_vecm_spec(include = include, LRinclude = LRinclude, p = p, T_window = T_window, m = m, r = 0L)
+    if (!isTRUE(pre$ok)) {
+      append_stage4_spec_log(
+        script_name = "23_VECM_S2.R",
+        spec_key = sprintf("det=%s|p=%d", det_tag, p),
+        status = pre$status,
+        reason_code = pre$reason_code,
+        message = pre$message
+      )
+      qprof <- q_profiles_for_p(p)
+      for (iq in seq_len(nrow(qprof))) {
+        for (r in R_SET) {
+          cid <- cell_id(p, qprof$q_tag[iq], r, include, LRinclude)
+          rows[[length(rows) + 1]] <- tibble(
+            run_id = run_id, det_tag = det_tag, cell_id = cid, status = pre$status,
+            include = include, LRinclude = LRinclude,
+            p = p, r = r, q_tag = qprof$q_tag[iq], qY = qprof$qY[iq], qK = qprof$qK[iq], qE = qprof$qE[iq],
+            model_class = NA_character_, logLik = NA_real_, T_eff = NA_real_, T_eff_common = T_eff_common,
+            k_gamma = NA_real_, k_pi = NA_real_, k_det = NA_real_, k_sigma = NA_real_, k_total = NA_real_,
+            ICOMP_pen = NA_real_, RICOMP_pen = NA_real_,
+            ICOMP_flag = NA_character_, RICOMP_flag = NA_character_,
+            ICOMP_stabilized = NA, RICOMP_stabilized = NA,
+            AIC = NA_real_, BIC = NA_real_, HQ = NA_real_, AICc = NA_real_,
+            stability_margin = NA_real_, unit_root_count = NA_real_, unstable_count = NA_real_,
+            expected_unit_roots = m - r, unit_root_mismatch = NA_real_,
+            fail_code = pre$reason_code, fail_msg = pre$message
+          )
+        }
+      }
+      next
+    }
+
     qprof <- q_profiles_for_p(p)
     for (iq in seq_len(nrow(qprof))) {
       qY <- as.integer(max(0L, min(p, qprof$qY[iq])))
@@ -434,9 +467,27 @@ run_branch <- function(dat, sr, lr) {
   }
 
   cells <- bind_rows(rows) |> mutate(window_tag = WINDOW_TAG, window_start = dat$window_start, window_end = dat$window_end)
+
+  had_infeasible <- any(cells$status %in% c("infeasible", "skipped_invalid_det"), na.rm = TRUE)
+  cells2 <- cells |> filter(status == "computed")
+  if (nrow(cells2) == 0) {
+    append_stage4_spec_log(
+      script_name = "23_VECM_S2.R",
+      spec_key = sprintf("det=%s", det_tag),
+      status = "runtime_fail",
+      reason_code = "NO_COMPUTED_CELLS",
+      message = "Branch finished with zero computed cells; branch artifacts intentionally skipped."
+    )
+    return(invisible(list(run_id = run_id, det_tag = det_tag, n_cells = nrow(cells), n_computed = 0L, status = "runtime_fail")))
+  }
+
+  base_dir <- make_branch_dirs(det_tag)
+  csv_dir <- file.path(base_dir, "csv")
+  fig_dir <- file.path(base_dir, "figs")
+  log_dir <- file.path(base_dir, "logs")
+  run_id <- log_run(log_dir, sprintf("Stage S2 run: SR=%s LR=%s P=%d..%d", include, LRinclude, P_MIN, P_MAX))
   safe_write_csv(cells, file.path(csv_dir, "APPX_lattice_cells.csv"))
 
-  cells2 <- cells |> filter(status == "computed")
   if (nrow(cells2) > 0) {
     cells2 <- cells2 |> mutate(
       dBIC = BIC - min(BIC, na.rm = TRUE),
@@ -480,14 +531,18 @@ run_branch <- function(dat, sr, lr) {
     }
   }
 
-  invisible(list(run_id = run_id, det_tag = det_tag, n_cells = nrow(cells), n_computed = nrow(cells2)))
+  out_status <- if (had_infeasible) "ok_with_infeasible_specs_skipped" else "computed"
+  invisible(list(run_id = run_id, det_tag = det_tag, n_cells = nrow(cells), n_computed = nrow(cells2), status = out_status))
 }
 
 dat <- load_shaikh_window_s2()
+branch_runs <- list()
 for (sr in SR_SET) {
   for (lr in LR_SET) {
-    run_branch(dat, sr = sr, lr = lr)
+    branch_runs[[length(branch_runs) + 1L]] <- run_branch(dat, sr = sr, lr = lr)
   }
 }
 
+any_infeasible <- any(vapply(branch_runs, function(x) !is.null(x$status) && x$status %in% c("infeasible", "skipped_invalid_det", "ok_with_infeasible_specs_skipped"), logical(1)))
+message("STAGE4_STATUS_HINT: script=23_VECM_S2.R infeasible_specs_skipped=", ifelse(any_infeasible, "true", "false"))
 message("S2 run completed: ", out_root)
