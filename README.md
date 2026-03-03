@@ -180,6 +180,18 @@ Rscript codes/26_crosswalk_tables.R
 
 ---
 
+## CI syntax gate for R scripts
+
+GitHub Actions enforces an R parse-only check so pull requests fail if any script has invalid R syntax.
+
+Local equivalent command:
+
+```
+Rscript -e 'parse(file = "codes/21_CR_ARDL_grid.R"); files <- Sys.glob("codes/*.R"); for (f in files) parse(file = f); cat("Parsed", length(files), "scripts successfully\n")'
+```
+
+---
+
 ## Run Manifest (Stage 4)
 
 A run writes:
