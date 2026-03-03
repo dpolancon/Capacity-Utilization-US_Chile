@@ -34,8 +34,8 @@ suppressPackageStartupMessages({
 
 source(here::here("codes", "10_config.R"))
 source(here::here("codes", "99_utils.R"))
-source(here::here("codes", "critical_replication", "25_envelope_tools.R"))
-source(here::here("codes", "critical_replication", "24_complexity_penalties.R"))
+source(here::here("codes", "25_envelope_tools.R"))
+source(here::here("codes", "24_complexity_penalties.R"))
 
 set.seed(CONFIG$seed)
 
