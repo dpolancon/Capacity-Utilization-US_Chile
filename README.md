@@ -108,8 +108,7 @@ Crosswalk columns:
 
 ```
 codes/
-  10_config_tsdyn.R
-  99_tsdyn_utils.R
+  10_config.R
   20_shaikh_ardl_replication.R
   21_CR_ARDL_grid.R
   22_VECM_S1.R
@@ -118,6 +117,7 @@ codes/
   25_envelope_tools.R
   26_crosswalk_tables.R
   27_run_stage4_all.R
+  99_utils.R
 
 data/
   raw/
@@ -141,7 +141,7 @@ output/
         RUN_MANIFEST_stage4.csv                     # optional
 ```
 
-Note: legacy paths can remain, but Stage 4 should write canonical artifacts into `output/CriticalReplication/…` (no `/shaikh_window/` subdirectory).
+Canonical convention: active Stage-4 scripts are named with the `2*` sequence and are resolved from `codes/` (no `codes/critical_replication/` runtime path).
 
 **Canonical rule:** active pipeline scripts live in `codes/` root; subfolders are archival or domain-specific modules only.
 
