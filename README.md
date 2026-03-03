@@ -143,6 +143,8 @@ output/
 
 Canonical convention: active Stage-4 scripts are named with the `2*` sequence and are resolved from `codes/` (no `codes/critical_replication/` runtime path).
 
+**Canonical rule:** active pipeline scripts live in `codes/` root; subfolders are archival or domain-specific modules only.
+
 ---
 
 ## How to run (Stage 4)

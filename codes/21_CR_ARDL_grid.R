@@ -34,8 +34,8 @@ suppressPackageStartupMessages({
 
 source(here::here("codes", "10_config.R"))
 source(here::here("codes", "99_utils.R"))
-source(here::here("codes", "critical_replication", "25_envelope_tools.R"))
-source(here::here("codes", "critical_replication", "24_complexity_penalties.R"))
+source(here::here("codes", "25_envelope_tools.R"))
+source(here::here("codes", "24_complexity_penalties.R"))
 
 set.seed(CONFIG$seed)
 
@@ -134,28 +134,6 @@ for (p in 1:P_MAX) {
     icomp_pen  <- log(det(Sigma_hat))
     ricomp_pen <- log(sum(diag(Sigma_hat)^2))
     
-    comp_row <- compute_complexity_record(
-      exercise = "ARDL",
-      model_class = "ARDL",
-      window = WINDOW_TAG,
-      window_tag = WINDOW_TAG,
-      window_start = WINDOW_START,
-      window_end = WINDOW_END,
-      p = p,
-      r = NA,
-      logLik = ll,
-      k = k,
-      ICOMP_pen = icomp_pen,
-      RICOMP_pen = ricomp_pen,
-      AIC = AIC_val,
-      BIC = BIC_val,
-      HQ = HQ_val,
-      AICc = AICc_val,
-      SI_Y = NA,
-      s_K = q / (p + q),
-      notes = "",
-      extra = list()
-    )
     comp_row <- compute_complexity_record(
       model_class = "ARDL",
       logLik = ll,
