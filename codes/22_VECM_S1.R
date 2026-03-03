@@ -37,6 +37,7 @@ library(tsDyn)
 # ---------------------------
 source(here::here("codes","10_config.R"))
 source(here::here("codes","99_utils.R"))
+source(here::here("codes","critical_replication","24_complexity_penalties.R"))
 
 set.seed(CONFIG$seed %||% 123)
 
@@ -549,8 +550,10 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
         roots <- companion_roots(Pi, G, tol_unit = TOL_UNIT)
         gsum <- gamma_summaries(G)
         
+        Sigma_hat <- crossprod(ols$U) / nrow(ols$U)
+
         list(ok = TRUE, ll = ll, Te = nrow(ols$U),
-             alpha = alpha, beta = bnorm, Pi = Pi,
+             alpha = alpha, beta = bnorm, Pi = Pi, Sigma_hat = Sigma_hat,
              roots = roots, gsum = gsum)
       }, error = function(e) list(ok = FALSE, msg = conditionMessage(e)))
       
@@ -581,16 +584,32 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
       
       unit_mismatch <- fit_ols$roots$unit_root_count - (m - 1L)
       
+      comp_row <- compute_complexity_record(
+        model_class = "VECM_S1_restricted_OLS",
+        logLik = fit_ols$ll,
+        k_total = kTot,
+        vcov_mat = fit_ols$Sigma_hat,
+        T_eff = fit_ols$Te
+      )
+
       rows[[length(rows)+1]] <- tibble(
         run_id = run_id, det_tag = det_tag,
         include = include, LRinclude = LRinclude,
         p = p, r = 1, q_tag = q_tag, qY = qY, qK = qK,
         cell_id = cid,
         status = "computed",
+        fit_term_source = "restricted_OLS_gaussian_not_VECM_ML",
+        covariance_source = "residual_covariance_crossprodU_over_Teff",
         logLik = fit_ols$ll,
         T_eff = fit_ols$Te,
         T_eff_common = T_eff_common,
         k_gamma = kG, k_pi = kPi, k_det = kDet, k_sigma = kSig, k_total = kTot,
+        ICOMP_pen = comp_row$ICOMP_pen,
+        RICOMP_pen = comp_row$RICOMP_pen,
+        ICOMP_flag = comp_row$ICOMP_flag,
+        RICOMP_flag = comp_row$RICOMP_flag,
+        ICOMP_stabilized = comp_row$ICOMP_stabilized,
+        RICOMP_stabilized = comp_row$RICOMP_stabilized,
         AIC = ic$AIC, BIC = ic$BIC, HQ = ic$HQ, AICc = ic$AICc,
         theta_hat = theta_hat,
         alpha_y = aY, alpha_k = aK,

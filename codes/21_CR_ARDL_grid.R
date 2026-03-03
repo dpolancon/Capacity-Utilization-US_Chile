@@ -34,6 +34,7 @@ suppressPackageStartupMessages({
 
 source(here::here("codes", "10_config.R"))
 source(here::here("codes", "99_utils.R"))
+source(here::here("codes", "critical_replication", "24_complexity_penalties.R"))
 
 set.seed(CONFIG$seed)
 
@@ -103,7 +104,7 @@ grid_results <- list()
 
 for (p in 1:P_MAX) {
   for (q in 1:Q_MAX) {
-    
+
     fml <- as.formula("lnY ~ lnK")
     
     fit_try <- try(
@@ -128,33 +129,36 @@ for (p in 1:P_MAX) {
     HQ_val   <- AIC_val + 2 * log(log(T_obs))
     AICc_val <- AIC_val + (2*k*(k+1))/(T_obs - k - 1)
     
-    # --- ICOMP / RICOMP penalties (penalty only) ---
     Sigma_hat <- vcov(fit)
-    icomp_pen  <- log(det(Sigma_hat))
-    ricomp_pen <- log(sum(diag(Sigma_hat)^2))
-    
-    grid_results[[length(grid_results) + 1]] <-
-      data.frame(
+    comp_row <- compute_complexity_record(
+      model_class = "ARDL",
+      logLik = ll,
+      k_total = k,
+      vcov_mat = Sigma_hat,
+      T_eff = T_obs,
+      extra = list(
         exercise = "ARDL",
-        model_class = "ARDL",
         window = WINDOW_TAG,
         window_tag = WINDOW_TAG,
         window_start = WINDOW_START,
         window_end = WINDOW_END,
         p = p,
+        q = q,
         r = NA,
-        logLik = ll,
         k = k,
-        ICOMP_pen = icomp_pen,
-        RICOMP_pen = ricomp_pen,
         AIC = AIC_val,
         BIC = BIC_val,
-        HQ  = HQ_val,
+        HQ = HQ_val,
         AICc = AICc_val,
         SI_Y = NA,
         s_K = q / (p + q),
-        notes = ""
+        notes = "",
+        fit_term_source = "ARDL::logLik_gaussian_OLS",
+        covariance_source = "vcov(ARDL_fit)_OLS"
       )
+    )
+
+    grid_results[[length(grid_results) + 1]] <- comp_row
 
   }
 }

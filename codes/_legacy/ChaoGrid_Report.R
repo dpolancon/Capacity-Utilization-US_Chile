@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 # ============================================================
 # ChaoGrid_Report_Q2_vSurfaceEverywhere.R
 #
@@ -18,7 +17,6 @@
 
 suppressPackageStartupMessages({
   pkgs <- c("here","readr","dplyr","tidyr","ggplot2","tibble")
-=======
 # =========================
 # ChaoGrid_Report.R (definitive branch, vSurfaceEverywhere)
 # Storytelling for joint (p,r) decision:
@@ -42,14 +40,12 @@ suppressPackageStartupMessages({
 
 suppressPackageStartupMessages({
   pkgs <- c("here","readr","dplyr","tidyr","ggplot2","tibble","stringr")
->>>>>>> Stashed changes
   invisible(lapply(pkgs, require, character.only = TRUE))
 })
 
 HAS_PLOTLY <- requireNamespace("plotly", quietly = TRUE)
 HAS_HTML   <- requireNamespace("htmlwidgets", quietly = TRUE)
 
-<<<<<<< Updated upstream
 ROOT <- here::here("output/ChaoGrid")
 DIRS_IN <- list(csv = file.path(ROOT, "csv"), meta = file.path(ROOT, "meta"))
 DIRS_OUT <- list(
@@ -118,7 +114,6 @@ gridU <- gridU |>
 
 cat("Rows gridU:", nrow(gridU), "\n")
 cat("Final present:", !is.null(final), "\n\n")
-=======
 ROOT_IN  <- here::here("output/ChaoGrid")
 DIRS_IN  <- list(csv = file.path(ROOT_IN, "csv"), meta = file.path(ROOT_IN, "meta"))
 DIRS_OUT <- list(
@@ -140,12 +135,10 @@ on.exit(sink(), add = TRUE)
 cat("=== ChaoGrid_Report start (vSurfaceEverywhere) ===\n")
 cat("IN :", ROOT_IN, "\n")
 cat("OUT:", paste(unlist(DIRS_OUT), collapse = " | "), "\n\n")
->>>>>>> Stashed changes
 
 # -------------------------
 # Helpers
 # -------------------------
-<<<<<<< Updated upstream
 build_full_grid <- function(d) {
   tidyr::expand_grid(
     p = sort(unique(d$p)),
@@ -169,7 +162,6 @@ fit_predict_surface <- function(d_full, d_obs) {
     }
   }
   
-=======
 add_missing_cols <- function(df, defaults) {
   for (nm in names(defaults)) if (!(nm %in% names(df))) df[[nm]] <- defaults[[nm]]
   df
@@ -218,7 +210,6 @@ fit_predict_surface <- function(d_full, d_obs) {
     }
   }
   
->>>>>>> Stashed changes
   if (nrow(d_obs) >= 6) {
     fit2 <- tryCatch(
       stats::lm(PIC_obs ~ p + r + I(p^2) + I(r^2) + I(p*r), data = d_obs),
@@ -226,7 +217,6 @@ fit_predict_surface <- function(d_full, d_obs) {
     )
     if (!is.null(fit2)) {
       pred <- tryCatch(stats::predict(fit2, newdata = d_full), error = function(e) rep(NA_real_, nrow(d_full)))
-<<<<<<< Updated upstream
       if (any(is.finite(pred))) return(as.numeric(pred))
     }
   }
@@ -248,7 +238,6 @@ surface_matrix <- function(dd) {
 # -------------------------
 # Build SURF pack: PIC_hat everywhere + overlays
 # -------------------------
-=======
       if (any(is.finite(pred))) return(pred)
     }
   }
@@ -328,12 +317,10 @@ readr::write_csv(final_small, file.path(DIRS_OUT$tex, "final_picks_Q2_storytable
 # Build per (window,ecdet) surfaces + exports
 # -------------------------
 surface_pack <- list()
->>>>>>> Stashed changes
 keys <- gridU |>
   dplyr::distinct(window, ecdet) |>
   dplyr::arrange(window, ecdet)
 
-<<<<<<< Updated upstream
 surface_pack <- vector("list", nrow(keys))
 
 for (i in seq_len(nrow(keys))) {
@@ -389,7 +376,6 @@ plot_status <- function(d, w, ec) {
     labs(
       title = paste0("A. Status lattice | ", w, " | ecdet=", ec),
       subtitle = "computed has PIC_obs; runtime_fail has no likelihood; gate_fail violates feasibility rule",
-=======
 for (i in seq_len(nrow(keys))) {
   w  <- keys$window[i]
   ec <- keys$ecdet[i]
@@ -446,30 +432,25 @@ plot_status <- function(d, w, ec, subtxt="") {
     labs(
       title = paste0("A. Status / admissibility | ", w, " | ecdet=", ec),
       subtitle = paste0("status from Engine (gate/runtime/computed). ", subtxt),
->>>>>>> Stashed changes
       x="p", y="r"
     )
 }
 
-<<<<<<< Updated upstream
 for (w in WLIST) {
   for (ec in ECLIST) {
     g <- plot_status(SURF, w, ec)
     ggsave(file.path(DIRS_OUT$figs, paste0("A_STATUS_Q2_", w, "_", ec, ".png")),
            g, width=7, height=4.5, dpi=160)
-=======
 for (w in unique(SURF$window)) {
   for (ec in unique(SURF$ecdet)) {
     subtxt <- unique(SURF$subtxt[SURF$window==w & SURF$ecdet==ec])[1]
     pA <- plot_status(SURF, w, ec, subtxt)
     ggsave(file.path(DIRS_OUT$figs, paste0("A_STATUS_Q2_", w, "_", ec, ".png")),
            pA, width=7, height=4.5, dpi=160)
->>>>>>> Stashed changes
   }
 }
 
 # -------------------------
-<<<<<<< Updated upstream
 # PANEL B: PIC_hat heatmap + overlays
 # -------------------------
 plot_pic_hat <- function(d, w, ec, only_comparable=FALSE) {
@@ -506,7 +487,6 @@ for (w in WLIST) {
     g2 <- plot_pic_hat(SURF, w, ec, only_comparable=TRUE)
     ggsave(file.path(DIRS_OUT$figs, paste0("B_PICHAT_Q2_", w, "_", ec, "_comparable.png")),
            g2, width=7, height=4.5, dpi=160)
-=======
 # PANEL B: Unrestricted PIC surface heatmap (PIC_hat) + overlays
 # -------------------------
 plot_pic_hat_2d <- function(d, w, ec, subtxt="", final_df=NULL, label="") {
@@ -544,12 +524,10 @@ for (w in unique(SURF$window)) {
     pC <- plot_pic_hat_2d(SURF |> dplyr::filter(comparable_p), w, ec, subtxt=subtxt, final_df=final, label="comparable p-range")
     ggsave(file.path(DIRS_OUT$figs, paste0("B_PIC_HAT_Q2_", w, "_", ec, "_comparable.png")),
            pC, width=7, height=4.5, dpi=160)
->>>>>>> Stashed changes
   }
 }
 
 # -------------------------
-<<<<<<< Updated upstream
 # PANEL E: 3D PIC_hat surface + overlays
 # -------------------------
 plot_pic_hat_3d <- function(d, w, ec, only_comparable=FALSE) {
@@ -620,7 +598,6 @@ if (HAS_PLOTLY && HAS_HTML) {
       htmlwidgets::saveWidget(fig2,
                               file = file.path(DIRS_OUT$html, paste0("E_PICHAT3D_Q2_", w, "_", ec, "_comparable.html")),
                               selfcontained = TRUE
-=======
 # PANEL C: Frontier on PIC_hat (best r per p) + show if gate_ok/runtime_ok
 # -------------------------
 frontier_hat <- function(d) {
@@ -813,7 +790,6 @@ if (HAS_PLOTLY && HAS_HTML) {
         figC,
         file = file.path(DIRS_OUT$html, paste0("E_PIC_HAT_3D_Q2_", w, "_", ec, "_comparable.html")),
         selfcontained = TRUE
->>>>>>> Stashed changes
       )
     }
   }
@@ -821,9 +797,7 @@ if (HAS_PLOTLY && HAS_HTML) {
   cat("NOTE: plotly/htmlwidgets not installed; skipping 3D outputs.\n")
 }
 
-<<<<<<< Updated upstream
 cat("\n=== Report completed OK ===\n")
-=======
 # -------------------------
 # Compact exports for LaTeX ingestion
 # -------------------------
@@ -837,4 +811,3 @@ frontier_tbl <- SURF |>
 readr::write_csv(frontier_tbl, file.path(DIRS_OUT$tex, "frontier_on_PIC_hat_Q2.csv"))
 
 cat("\n=== ChaoGrid_Report completed (vSurfaceEverywhere) ===\n")
->>>>>>> Stashed changes
