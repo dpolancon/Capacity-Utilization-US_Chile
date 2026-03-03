@@ -92,6 +92,63 @@ log_line <- function(path, msg) {
   cat(sprintf("[%s] %s\n", now_stamp(), msg), file = path, append = TRUE)
 }
 
+stage4_manifest_log_path <- function(file_name = "SPEC_FEASIBILITY_LOG.csv") {
+  file.path("output", "CriticalReplication", "Manifest", "logs", file_name)
+}
+
+append_stage4_spec_log <- function(script_name,
+                                   spec_key,
+                                   status,
+                                   reason_code,
+                                   message,
+                                   file_name = "SPEC_FEASIBILITY_LOG.csv") {
+  path <- here::here(stage4_manifest_log_path(file_name))
+  dir.create(dirname(path), showWarnings = FALSE, recursive = TRUE)
+  row <- data.frame(
+    timestamp = now_stamp(),
+    script = as.character(script_name),
+    spec_key = as.character(spec_key),
+    status = as.character(status),
+    reason_code = as.character(reason_code),
+    message = truncate_msg(message, 240L),
+    stringsAsFactors = FALSE
+  )
+  if (file.exists(path)) {
+    old <- tryCatch(utils::read.csv(path, stringsAsFactors = FALSE), error = function(e) NULL)
+    out <- if (is.null(old)) row else rbind(old, row)
+    utils::write.csv(out, path, row.names = FALSE)
+  } else {
+    utils::write.csv(row, path, row.names = FALSE)
+  }
+  invisible(path)
+}
+
+preflight_vecm_spec <- function(include, LRinclude, p, T_window, m, r = NULL, min_te = 8L) {
+  include <- resolve_include(include)
+  LRinclude <- resolve_LRinclude(LRinclude)
+  p <- as.integer(p)
+  T_window <- as.integer(T_window)
+  m <- as.integer(m)
+  min_te <- as.integer(min_te)
+
+  if (include == "const" && LRinclude %in% c("const", "both")) {
+    return(list(ok = FALSE, status = "skipped_invalid_det", reason_code = "INVALID_DET_COMBO",
+                message = sprintf("Invalid deterministic combo: SR=%s, LR=%s.", include, LRinclude)))
+  }
+  if (!is.null(r) && (as.integer(r) < 0L || as.integer(r) > (m - 1L))) {
+    return(list(ok = FALSE, status = "infeasible", reason_code = "RANK_OUT_OF_RANGE",
+                message = sprintf("Rank r=%s outside [0,%s].", as.integer(r), m - 1L)))
+  }
+
+  Te <- T_window - (p + 1L)
+  if (!is.finite(Te) || Te < min_te) {
+    return(list(ok = FALSE, status = "infeasible", reason_code = "INSUFFICIENT_EFFECTIVE_SAMPLE",
+                message = sprintf("T_eff=%s below min_te=%s for p=%s.", Te, min_te, p)))
+  }
+
+  list(ok = TRUE, status = "computable", reason_code = "OK", message = "Spec passes preflight feasibility checks.")
+}
+
 # ------------------------------------------------------------------
 # Safe I/O helpers
 # ------------------------------------------------------------------
