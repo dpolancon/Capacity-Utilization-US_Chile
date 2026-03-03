@@ -133,28 +133,29 @@ for (p in 1:P_MAX) {
     icomp_pen  <- log(det(Sigma_hat))
     ricomp_pen <- log(sum(diag(Sigma_hat)^2))
     
-    grid_results[[length(grid_results) + 1]] <-
-      data.frame(
-        exercise = "ARDL",
-        model_class = "ARDL",
-        window = WINDOW_TAG,
-        window_tag = WINDOW_TAG,
-        window_start = WINDOW_START,
-        window_end = WINDOW_END,
-        p = p,
-        r = NA,
-        logLik = ll,
-        k = k,
-        ICOMP_pen = icomp_pen,
-        RICOMP_pen = ricomp_pen,
-        AIC = AIC_val,
-        BIC = BIC_val,
-        HQ  = HQ_val,
-        AICc = AICc_val,
-        SI_Y = NA,
-        s_K = q / (p + q),
-        notes = ""
-      )
+    comp_row <- compute_complexity_record(
+      exercise = "ARDL",
+      model_class = "ARDL",
+      window = WINDOW_TAG,
+      window_tag = WINDOW_TAG,
+      window_start = WINDOW_START,
+      window_end = WINDOW_END,
+      p = p,
+      r = NA,
+      logLik = ll,
+      k = k,
+      ICOMP_pen = icomp_pen,
+      RICOMP_pen = ricomp_pen,
+      AIC = AIC_val,
+      BIC = BIC_val,
+      HQ = HQ_val,
+      AICc = AICc_val,
+      SI_Y = NA,
+      s_K = q / (p + q),
+      notes = "",
+      extra = list()
+    )
+    grid_results[[length(grid_results) + 1]] <- comp_row
 
   }
 }
