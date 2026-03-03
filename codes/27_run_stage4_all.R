@@ -43,9 +43,9 @@ writeLines(capture.output(sessionInfo()), con = sessioninfo_path)
 script_plan <- data.frame(
   script = c(
     "20_shaikh_ardl_replication.R",
-    "21_shaikh_auto_ardl.R",
-    "22_VECM_S1_shaikh_window.R",
-    "23_VECM_S2_shaikh_window_lnY_lnK_lne.R",
+    "21_CR_ARDL_grid.R",
+    "22_VECM_S1.R",
+    "23_VECM_S2.R",
     "26_crosswalk_tables.R"
   ),
   grid_dimensions = c(
@@ -59,7 +59,11 @@ script_plan <- data.frame(
 )
 
 script_plan$path <- file.path("codes", script_plan$script)
-script_plan$exists <- file.exists(here::here(script_plan$path))
+script_plan$exists <- vapply(
+  script_plan$script,
+  function(s) file.exists(here::here("codes", s)),
+  logical(1)
+)
 script_plan$status <- "not_run"
 script_plan$exit_code <- NA_integer_
 script_plan$log_path <- NA_character_
@@ -78,7 +82,7 @@ for (i in seq_len(nrow(script_plan))) {
 
   run <- safe_system(
     R.home("bin/Rscript"),
-    c(shQuote(here::here(script_plan$path[i])))
+    c(shQuote(here::here("codes", script_plan$script[i])))
   )
 
   writeLines(run$output, con = log_file)

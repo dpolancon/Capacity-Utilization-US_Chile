@@ -15,7 +15,7 @@ suppressPackageStartupMessages({
 })
 
 source(here::here("codes", "99_utils.R"))
-source(here::here("codes", "critical_replication", "25_envelope_tools.R"))
+source(here::here("codes", "25_envelope_tools.R"))
 
 emit_mandatory_planes_s2 <- function(geom_df, csv_dir, fig_dir, tag = "S2") {
   stopifnot(is.data.frame(geom_df))

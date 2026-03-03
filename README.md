@@ -110,15 +110,14 @@ Crosswalk columns:
 codes/
   10_config_tsdyn.R
   99_tsdyn_utils.R
-  critical_replication/
-    50_shaikh_ardl_replication.R
-    51_shaikh_auto_ardl.R
-    52_VECM_S1_shaikh_window.R
-    53_VECM_S2_shaikh_window_lnY_lnK_lne.R        # NEW (Stage 4)
-    54_complexity_penalties.R                      # NEW (ICOMP/RICOMP_pen)
-    55_envelope_tools.R                            # NEW (envelope extraction + plots)
-    56_crosswalk_tables.R                          # NEW (crosswalk builders)
-    57_run_stage4_all.R                            # NEW (single runner + manifest)
+  20_shaikh_ardl_replication.R
+  21_CR_ARDL_grid.R
+  22_VECM_S1.R
+  23_VECM_S2.R
+  24_complexity_penalties.R
+  25_envelope_tools.R
+  26_crosswalk_tables.R
+  27_run_stage4_all.R
 
 data/
   raw/
@@ -144,6 +143,8 @@ output/
 
 Note: legacy paths can remain, but Stage 4 should write canonical artifacts into `output/CriticalReplication/…` (no `/shaikh_window/` subdirectory).
 
+**Canonical rule:** active pipeline scripts live in `codes/` root; subfolders are archival or domain-specific modules only.
+
 ---
 
 ## How to run (Stage 4)
@@ -152,29 +153,29 @@ Recommended: one runner that executes the whole pipeline end-to-end.
 
 ### Option A (preferred): run the single runner
 ```
-Rscript codes/critical_replication/57_run_stage4_all.R
+Rscript codes/27_run_stage4_all.R
 ```
 
 ### Option B: run modules in order
 1) faithful ARDL “as reported”
 ```
-Rscript codes/critical_replication/50_shaikh_ardl_replication.R
+Rscript codes/20_shaikh_ardl_replication.R
 ```
 2) ARDL full grid
 ```
-Rscript codes/critical_replication/51_shaikh_auto_ardl.R
+Rscript codes/21_CR_ARDL_grid.R
 ```
 3) bivariate VECM S1 (r=1) full grid
 ```
-Rscript codes/critical_replication/52_VECM_S1_shaikh_window.R
+Rscript codes/22_VECM_S1.R
 ```
 4) trivariate VECM rank grid (m=3, r∈{0,1,2})
 ```
-Rscript codes/critical_replication/53_VECM_S2_shaikh_window_lnY_lnK_lne.R
+Rscript codes/23_VECM_S2.R
 ```
 5) crosswalk tables + final artifacts
 ```
-Rscript codes/critical_replication/56_crosswalk_tables.R
+Rscript codes/26_crosswalk_tables.R
 ```
 
 ---
