@@ -34,6 +34,7 @@ suppressPackageStartupMessages({
 
 source(here::here("codes", "10_config.R"))
 source(here::here("codes", "99_utils.R"))
+source(here::here("codes", "critical_replication", "25_envelope_tools.R"))
 
 set.seed(CONFIG$seed)
 
@@ -101,7 +102,6 @@ grid_results <- list()
 for (p in 1:P_MAX) {
   for (q in 1:Q_MAX) {
     
-    ```
     fml <- as.formula("lnY ~ lnK")
     
     fit_try <- try(
@@ -139,7 +139,7 @@ for (p in 1:P_MAX) {
         p = p,
         r = NA,
         logLik = ll,
-        k = k,
+        k_total = k,
         ICOMP_pen = icomp_pen,
         RICOMP_pen = ricomp_pen,
         AIC = AIC_val,
@@ -150,7 +150,6 @@ for (p in 1:P_MAX) {
         s_K = q / (p + q),
         notes = ""
       )
-    ```
     
   }
 }
@@ -168,77 +167,36 @@ write.csv(geom_df, geom_path, row.names = FALSE)
 
 # ----------------------------------------------------------
 
-# Frontier helper
+# Mandatory frontier planes
 
 # ----------------------------------------------------------
 
-extract_envelope <- function(df, x_var) {
-  df |>
-    arrange(.data[[x_var]], desc(logLik)) |>
-    group_by(.data[[x_var]]) |>
-    slice_max(logLik, n = 1) |>
-    ungroup()
-}
+write_envelope_plane(
+  geom_df,
+  x_col = "k_total",
+  y_col = "logLik",
+  csv_path = file.path(CSV_DIR, "ENVELOPE_ARDL_logLik_vs_k_total.csv"),
+  fig_path = file.path(FIG_DIR, "FIG_Frontier_ARDL_logLik_vs_k_total.png"),
+  title = "ARDL frontier: logLik vs k_total"
+)
 
-# ----------------------------------------------------------
+write_envelope_plane(
+  geom_df,
+  x_col = "ICOMP_pen",
+  y_col = "logLik",
+  csv_path = file.path(CSV_DIR, "ENVELOPE_ARDL_logLik_vs_ICOMP_pen.csv"),
+  fig_path = file.path(FIG_DIR, "FIG_Frontier_ARDL_logLik_vs_ICOMP_pen.png"),
+  title = "ARDL frontier: logLik vs ICOMP_pen"
+)
 
-# Frontier 1: logLik vs k
-
-# ----------------------------------------------------------
-
-env_k <- extract_envelope(geom_df, "k")
-write.csv(env_k,
-          file.path(CSV_DIR, "ENVELOPE_ARDL_fit_vs_k.csv"),
-          row.names = FALSE)
-
-g1 <- ggplot(geom_df, aes(k, logLik)) +
-  geom_point(alpha = .4) +
-  geom_line(data = env_k, color = "red") +
-  theme_minimal()
-
-ggsave(file.path(FIG_DIR,
-                 "FIG_Frontier_ARDL_fit_vs_k.png"),
-       g1, width = 6, height = 4)
-
-# ----------------------------------------------------------
-
-# Frontier 2: logLik vs ICOMP_pen
-
-# ----------------------------------------------------------
-
-env_ic <- extract_envelope(geom_df, "ICOMP_pen")
-write.csv(env_ic,
-          file.path(CSV_DIR, "ENVELOPE_ARDL_fit_vs_ICOMP.csv"),
-          row.names = FALSE)
-
-g2 <- ggplot(geom_df, aes(ICOMP_pen, logLik)) +
-  geom_point(alpha = .4) +
-  geom_line(data = env_ic, color = "red") +
-  theme_minimal()
-
-ggsave(file.path(FIG_DIR,
-                 "FIG_Frontier_ARDL_fit_vs_ICOMP.png"),
-       g2, width = 6, height = 4)
-
-# ----------------------------------------------------------
-
-# Frontier 3: logLik vs RICOMP_pen
-
-# ----------------------------------------------------------
-
-env_ric <- extract_envelope(geom_df, "RICOMP_pen")
-write.csv(env_ric,
-          file.path(CSV_DIR, "ENVELOPE_ARDL_fit_vs_RICOMP.csv"),
-          row.names = FALSE)
-
-g3 <- ggplot(geom_df, aes(RICOMP_pen, logLik)) +
-  geom_point(alpha = .4) +
-  geom_line(data = env_ric, color = "red") +
-  theme_minimal()
-
-ggsave(file.path(FIG_DIR,
-                 "FIG_Frontier_ARDL_fit_vs_RICOMP.png"),
-       g3, width = 6, height = 4)
+write_envelope_plane(
+  geom_df,
+  x_col = "RICOMP_pen",
+  y_col = "logLik",
+  csv_path = file.path(CSV_DIR, "ENVELOPE_ARDL_logLik_vs_RICOMP_pen.csv"),
+  fig_path = file.path(FIG_DIR, "FIG_Frontier_ARDL_logLik_vs_RICOMP_pen.png"),
+  title = "ARDL frontier: logLik vs RICOMP_pen"
+)
 
 # ----------------------------------------------------------
 

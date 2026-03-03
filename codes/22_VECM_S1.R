@@ -37,6 +37,7 @@ library(tsDyn)
 # ---------------------------
 source(here::here("codes","10_config.R"))
 source(here::here("codes","99_utils.R"))
+source(here::here("codes","critical_replication","25_envelope_tools.R"))
 
 set.seed(CONFIG$seed %||% 123)
 
@@ -539,6 +540,10 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
         des <- build_restricted_design(X, ect, p, qY, qK, include)
         ols <- ols_multivar(des$Z, des$Y)
         ll  <- gaussian_loglik(ols$U)
+        Sigma_u <- stats::cov(ols$U)
+        if (any(!is.finite(Sigma_u))) stop("non-finite residual covariance")
+        icomp_pen <- as.numeric(determinant(Sigma_u, logarithm = TRUE)$modulus)
+        ricomp_pen <- log(sum(diag(Sigma_u)^2))
         
         G <- extract_gamma_list(ols$B, p, qY, qK)
         
@@ -551,7 +556,8 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
         
         list(ok = TRUE, ll = ll, Te = nrow(ols$U),
              alpha = alpha, beta = bnorm, Pi = Pi,
-             roots = roots, gsum = gsum)
+             roots = roots, gsum = gsum,
+             icomp_pen = icomp_pen, ricomp_pen = ricomp_pen)
       }, error = function(e) list(ok = FALSE, msg = conditionMessage(e)))
       
       if (!isTRUE(fit_ols$ok) || !is.finite(fit_ols$ll)) {
@@ -591,6 +597,8 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
         T_eff = fit_ols$Te,
         T_eff_common = T_eff_common,
         k_gamma = kG, k_pi = kPi, k_det = kDet, k_sigma = kSig, k_total = kTot,
+        ICOMP_pen = fit_ols$icomp_pen,
+        RICOMP_pen = fit_ols$ricomp_pen,
         AIC = ic$AIC, BIC = ic$BIC, HQ = ic$HQ, AICc = ic$AICc,
         theta_hat = theta_hat,
         alpha_y = aY, alpha_k = aK,
@@ -714,6 +722,32 @@ run_branch <- function(df, X, T_window, m, sr, lr) {
       dBIC_band = band_cut(dBIC)
     )
   
+
+  write_envelope_plane(
+    plot_df,
+    x_col = "k_total",
+    y_col = "logLik",
+    csv_path = file.path(csv_dir, "ENVELOPE_logLik_vs_k_total.csv"),
+    fig_path = file.path(fig_dir, "FIG_envelope_logLik_vs_k_total.png"),
+    title = paste0("Envelope: logLik vs k_total | ", det_tag)
+  )
+  write_envelope_plane(
+    plot_df,
+    x_col = "ICOMP_pen",
+    y_col = "logLik",
+    csv_path = file.path(csv_dir, "ENVELOPE_logLik_vs_ICOMP_pen.csv"),
+    fig_path = file.path(fig_dir, "FIG_envelope_logLik_vs_ICOMP_pen.png"),
+    title = paste0("Envelope: logLik vs ICOMP_pen | ", det_tag)
+  )
+  write_envelope_plane(
+    plot_df,
+    x_col = "RICOMP_pen",
+    y_col = "logLik",
+    csv_path = file.path(csv_dir, "ENVELOPE_logLik_vs_RICOMP_pen.csv"),
+    fig_path = file.path(fig_dir, "FIG_envelope_logLik_vs_RICOMP_pen.png"),
+    title = paste0("Envelope: logLik vs RICOMP_pen | ", det_tag)
+  )
+
   g1 <- ggplot(plot_df, aes(x = factor(p), y = q_tag, fill = dBIC)) +
     geom_tile() +
     theme_minimal(base_size = 13) +
