@@ -44,11 +44,12 @@ set.seed(CONFIG$seed)
 
 # ----------------------------------------------------------
 
-OUT_ROOT <- here::here("output", "CriticalReplication")
-CSV_DIR  <- file.path(OUT_ROOT, "csv")
-FIG_DIR  <- file.path(OUT_ROOT, "figs")
-LOG_DIR  <- file.path(OUT_ROOT, "logs")
-MAN_DIR  <- file.path(OUT_ROOT, "manifest")
+OUT_ROOT <- here::here(CONFIG$OUT_CR_ROOT %||% "output/CriticalReplication")
+EXERCISE_DIR <- here::here(CONFIG$OUT_CR$exercise_b %||% "output/CriticalReplication/Exercise_b_ARDL_grid")
+CSV_DIR  <- file.path(EXERCISE_DIR, "csv")
+FIG_DIR  <- file.path(EXERCISE_DIR, "figs")
+LOG_DIR  <- file.path(EXERCISE_DIR, "logs")
+MAN_DIR  <- here::here(CONFIG$OUT_CR$manifest %||% "output/CriticalReplication/Manifest")
 
 dir.create(CSV_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(FIG_DIR, recursive = TRUE, showWarnings = FALSE)
@@ -57,6 +58,8 @@ dir.create(MAN_DIR, recursive = TRUE, showWarnings = FALSE)
 
 WINDOW_TAG <- "shaikh_window"
 w <- CONFIG$WINDOWS_LOCKED[[WINDOW_TAG]]
+WINDOW_START <- as.integer(w[1])
+WINDOW_END <- as.integer(w[2])
 
 # ----------------------------------------------------------
 
@@ -136,6 +139,9 @@ for (p in 1:P_MAX) {
       extra = list(
         exercise = "ARDL",
         window = WINDOW_TAG,
+        window_tag = WINDOW_TAG,
+        window_start = WINDOW_START,
+        window_end = WINDOW_END,
         p = p,
         q = q,
         r = NA,
@@ -248,12 +254,19 @@ ggsave(file.path(FIG_DIR,
 
 # ----------------------------------------------------------
 
-manifest_path <- file.path(MAN_DIR, "RUN_MANIFEST.md")
+manifest_path <- file.path(MAN_DIR, "RUN_MANIFEST_stage4.md")
 
 cat(
   paste0(
-    "## ARDL Grid Run\n",
-    "- Window: ", WINDOW_TAG, "\n",
+    "# Run Manifest (Stage 4)\n",
+    "- window_tag: ", WINDOW_TAG, "\n",
+    "- window_start: ", WINDOW_START, "\n",
+    "- window_end: ", WINDOW_END, "\n\n",
+    "## Script: codes/21_CR_ARDL_grid.R\n",
+    "- exercise_output: output/CriticalReplication/Exercise_b_ARDL_grid/\n",
+    "- window_tag: ", WINDOW_TAG, "\n",
+    "- window_start: ", WINDOW_START, "\n",
+    "- window_end: ", WINDOW_END, "\n",
     "- Observations: ", T_obs, "\n",
     "- Grid: p,q ≤ ", P_MAX, "\n",
     "- Timestamp: ", Sys.time(), "\n\n"
