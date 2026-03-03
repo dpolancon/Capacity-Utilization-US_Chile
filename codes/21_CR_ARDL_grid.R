@@ -103,9 +103,8 @@ grid_results <- list()
 
 for (p in 1:P_MAX) {
   for (q in 1:Q_MAX) {
-    
     fml <- as.formula("lnY ~ lnK")
-    
+
     fit_try <- try(
       ARDL::ardl(
         formula = fml,
