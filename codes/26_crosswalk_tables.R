@@ -8,8 +8,17 @@
 
 options(stringsAsFactors = FALSE)
 
-out_root <- file.path("output", "CriticalReplication")
-crosswalk_dir <- file.path(out_root, "Crosswalk")
+suppressPackageStartupMessages({
+  library(here)
+})
+
+source(here::here("codes", "99_utils.R"))
+
+
+source(here::here("codes", "10_config.R"))
+
+out_root <- here::here(CONFIG$OUT_CR_ROOT %||% "output/CriticalReplication")
+crosswalk_dir <- here::here(CONFIG$OUT_CR$crosswalk %||% file.path("output", "CriticalReplication", "Crosswalk"))
 dir.create(crosswalk_dir, recursive = TRUE, showWarnings = FALSE)
 
 message("[crosswalk] Output directory: ", normalizePath(crosswalk_dir, winslash = "/", mustWork = FALSE))

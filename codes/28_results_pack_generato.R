@@ -65,9 +65,10 @@ append_results_pack_export_log <- function(CONFIG,
 if (!exists("CONFIG")) stop("CONFIG not found. Did you source codes/10_config.R ?", call. = FALSE)
 
 OUT_ROOT <- CONFIG$OUT_CR_ROOT
-RUN_ID   <- "stage4_20260303_183218"   # keep consistent with your manifest
+RUN_ID <- Sys.getenv("CR_RUN_ID", unset = paste0("stage4_", format(Sys.time(), "%Y%m%d_%H%M%S")))
+RUN_ROOT <- Sys.getenv("CR_RUN_ROOT", unset = file.path(OUT_ROOT, paste0("run_", RUN_ID)))
 
-PACK_ROOT   <- file.path(OUT_ROOT, "ResultsPack")
+PACK_ROOT   <- file.path(RUN_ROOT, "ResultsPack")
 PACK_TABLES <- file.path(PACK_ROOT, "tables")
 PACK_FIGS   <- file.path(PACK_ROOT, "figs")
 dir.create(PACK_TABLES, recursive = TRUE, showWarnings = FALSE)
@@ -145,6 +146,18 @@ with_source <- function(df, source_file) {
   df %>% mutate(source_file = source_file, .before = 1)
 }
 
+clean_for_paper <- function(df, allowed_cols = NULL) {
+  if (is.null(df)) return(NULL)
+  drop_pat <- grepl("(\\.1$|_geom$)", names(df))
+  path_like <- grepl("(^source_file$|_path$|_file$)", names(df))
+  df <- df[, !(drop_pat | path_like), drop = FALSE]
+  if (!is.null(allowed_cols)) {
+    keep <- intersect(allowed_cols, names(df))
+    df <- df[, keep, drop = FALSE]
+  }
+  df
+}
+
 pick_winners <- function(df,
                          delta_col_candidates = c("dICOMP","dRICOMP","dBIC","dAIC","dIC_eta"),
                          max_rows = 5,
@@ -203,6 +216,8 @@ if (!is.null(s1_faithful)) {
 }
 if (is.null(TAB_S1)) stop("TAB_S1 failed: faithful_ardl_2_4.csv and series file both missing.", call. = FALSE)
 
+TAB_S1 <- clean_for_paper(TAB_S1)
+
 export_table_bundle(
   CONFIG, TAB_S1,
   name = "TAB_S1_replication_key_stats",
@@ -254,6 +269,12 @@ if (!is.null(s2_geom)) {
   }
 }
 
+TAB_S2 <- clean_for_paper(TAB_S2, allowed_cols = c(
+  "run_id","stage_tag","ic_family","window_tag","spec_id","p","q",
+  "theta_hat","lambda_hat","AIC","BIC","ICOMP_pen","RICOMP_pen",
+  "ICOMP_IC","RICOMP_IC","k_total","sK_ardl"
+))
+
 export_table_bundle(
   CONFIG, TAB_S2,
   name = "TAB_S2_frontier_summary_by_IC",
@@ -300,6 +321,11 @@ read_s3_branch <- function(branch_dir) {
 TAB_S3 <- purrr::map_dfr(S3_branches, read_s3_branch)
 if (nrow(TAB_S3) == 0) stop("TAB_S3 failed: no readable Stage 3 branches found.", call. = FALSE)
 
+TAB_S3 <- clean_for_paper(TAB_S3, allowed_cols = c(
+  "run_id","stage_tag","det_tag","rank","p","q_tag","logLik","BIC",
+  "ICOMP_pen","RICOMP_pen","theta_hat","alpha_y","alpha_k","stability_margin","dBIC"
+))
+
 export_table_bundle(
   CONFIG, TAB_S3,
   name = "TAB_S3_confinement_winners_by_branch",
@@ -323,38 +349,88 @@ read_s4_branch <- function(branch_dir) {
   bypqr_path  <- file.path(branch_dir, "csv", "TAB_summary_by_p_q_r.csv")
   ab_path     <- file.path(branch_dir, "csv", "TAB_alpha_beta_by_rank.csv")
   ledger_path <- file.path(branch_dir, "csv", "TAB_top_spec_selection_ledger.csv")
-  
+
   df_rank <- harmonize_names(with_source(if (file.exists(byrank_path)) safe_read_csv(byrank_path) else NULL, byrank_path))
   df_pqr  <- harmonize_names(with_source(if (file.exists(bypqr_path))  safe_read_csv(bypqr_path)  else NULL, bypqr_path))
   df_ab   <- harmonize_names(with_source(if (file.exists(ab_path))     safe_read_csv(ab_path)     else NULL, ab_path))
   df_led  <- harmonize_names(with_source(if (file.exists(ledger_path)) safe_read_csv(ledger_path) else NULL, ledger_path))
-  
-  base <- if (!is.null(df_rank)) df_rank else if (!is.null(df_led)) df_led else df_pqr
-  if (is.null(base)) return(NULL)
-  
-  out <- base %>%
-    mutate(run_id = RUN_ID,
-           stage_tag = "S4_VECM_S2_m3_rank",
-           det_tag = det_tag,
-           .before = 1)
-  
-  if (!is.null(df_ab) && "rank" %in% names(out) && "rank" %in% names(df_ab)) {
-    out <- left_join(out, df_ab, by = "rank", suffix = c("", "_ab"))
+
+  add_rank <- function(df) {
+    if (is.null(df)) return(NULL)
+    has_r <- "r" %in% names(df)
+    has_rank <- "rank" %in% names(df)
+    if (has_r && has_rank) {
+      df %>% mutate(rank = dplyr::coalesce(as.integer(.data$r), as.integer(.data$rank)))
+    } else if (has_r) {
+      df %>% mutate(rank = as.integer(.data$r))
+    } else if (has_rank) {
+      df %>% mutate(rank = as.integer(.data$rank))
+    } else {
+      df
+    }
   }
+
+  df_rank <- add_rank(df_rank)
+  df_pqr <- add_rank(df_pqr)
+  df_ab <- add_rank(df_ab)
+  df_led <- add_rank(df_led)
+
+  if (!is.null(df_led) && nrow(df_led) > 0) {
+    out <- df_led %>%
+      mutate(run_id = RUN_ID,
+             stage_tag = "S2_VECM_lnY_lnK_e",
+             det_tag = det_tag,
+             .before = 1)
+  } else if (!is.null(df_rank) && nrow(df_rank) > 0) {
+    out <- df_rank %>%
+      mutate(run_id = RUN_ID,
+             stage_tag = "S2_VECM_lnY_lnK_e",
+             det_tag = det_tag,
+             criterion = "BIC_rank_summary",
+             .before = 1)
+  } else if (!is.null(df_pqr) && nrow(df_pqr) > 0) {
+    out <- df_pqr %>%
+      mutate(run_id = RUN_ID,
+             stage_tag = "S2_VECM_lnY_lnK_e",
+             det_tag = det_tag,
+             criterion = "BIC_by_p_q_r",
+             .before = 1)
+  } else {
+    return(NULL)
+  }
+
+  if (!is.null(df_rank) && "rank" %in% names(out) && "rank" %in% names(df_rank)) {
+    rank_ref <- df_rank %>% select(rank, best_BIC, best_AIC, n_cells)
+    out <- out %>% left_join(rank_ref, by = "rank", suffix = c("", "_rank"))
+  }
+
+  if (!is.null(df_ab) && nrow(df_ab) > 0 && "rank" %in% names(out) && "rank" %in% names(df_ab)) {
+    ab_ref <- df_ab %>%
+      group_by(rank) %>%
+      summarise(alpha_lnY = dplyr::first(alpha_lnY), alpha_lnK = dplyr::first(alpha_lnK), alpha_e = dplyr::first(alpha_e),
+                beta_lnY = dplyr::first(beta_lnY), beta_lnK = dplyr::first(beta_lnK), beta_e = dplyr::first(beta_e), .groups = "drop")
+    out <- out %>% left_join(ab_ref, by = "rank", suffix = c("", "_ab"))
+  }
+
   out
 }
 
 TAB_S4 <- purrr::map_dfr(S4_branches, read_s4_branch)
-if (nrow(TAB_S4) == 0) stop("TAB_S4 failed: no readable Stage 4 branches found.", call. = FALSE)
+if (nrow(TAB_S4) == 0) stop("TAB_S2_VECM_lnY_lnK_e failed: no readable trivariate VECM branches found.", call. = FALSE)
+
+TAB_S4 <- clean_for_paper(TAB_S4, allowed_cols = c(
+  "run_id","stage_tag","det_tag","criterion","rank","cell_id","p","q_tag",
+  "best_BIC","best_AIC","n_cells","alpha_lnY","alpha_lnK","alpha_e","beta_lnY","beta_lnK","beta_e"
+))
 
 export_table_bundle(
   CONFIG, TAB_S4,
-  name = "TAB_S4_rank_summary_by_branch",
+  name = "TAB_S2_VECM_lnYlnK_e_cointegration",
   tables_dir = PACK_TABLES,
-  caption = "Rank comparison for the trivariate VECM system ($\\ln Y, \\ln K, e$).",
-  stage_tag = "S4_VECM_S2_m3_rank",
+  caption = "Trivariate VECM ($\ln Y, \ln K, e$): cointegration-relevant representatives by deterministic branch and rank.",
+  stage_tag = "S2_VECM_lnY_lnK_e",
   run_id = RUN_ID,
-  footnote = "Used to assess whether distribution alters the confinement dimension.",
+  footnote = "Compact table: criterion-level representatives with alpha/beta cointegration terms where available.",
   escape = FALSE
 )
 
@@ -432,7 +508,7 @@ idx_lines <- c(
   "- `TAB_S1_replication_key_stats.{csv,tex}` (Stage 1 anchor)",
   "- `TAB_S2_frontier_summary_by_IC.{csv,tex}` (Stage 2 ARDL frontier representatives)",
   "- `TAB_S3_confinement_winners_by_branch.{csv,tex}` (Stage 3 bivariate confinement representatives)",
-  "- `TAB_S4_rank_summary_by_branch.{csv,tex}` (Stage 4 rank summaries)",
+  "- `TAB_S2_VECM_lnYlnK_e_cointegration.{csv,tex}` (Trivariate VECM cointegration representatives)",
   "- `TAB_crosswalk_core.{csv,tex}` (Core crosswalk representatives across stages)",
   "",
   "## Figure index (canonical captions)",

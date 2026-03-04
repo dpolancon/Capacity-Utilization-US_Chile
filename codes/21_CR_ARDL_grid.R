@@ -159,7 +159,7 @@ for (p in 1:P_MAX) {
         HQ = HQ_val,
         AICc = AICc_val,
         SI_Y = NA,
-        s_K = q / (p + q),
+        s_K = ifelse(((p - 1) + q) > 0, q / ((p - 1) + q), NA_real_),
         notes = "",
         fit_term_source = "ARDL::logLik_gaussian_OLS",
         covariance_source = "vcov(ARDL_fit)_OLS"
