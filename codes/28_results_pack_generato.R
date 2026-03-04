@@ -91,19 +91,54 @@ S4_root <- CONFIG$OUT_CR$exercise_d
 # ---- Local helper: harmonize names minimally (do not fight your pipeline) ----
 harmonize_names <- function(df) {
   if (is.null(df)) return(NULL)
+
+  alias_map <- c(
+    theta = "theta_hat",
+    lambda = "lambda_hat",
+    ICOMP = "ICOMP_pen",
+    RICOMP = "RICOMP_pen",
+    k = "k_total"
+  )
+
   nm <- names(df)
-  nm <- str_replace_all(nm, c(
-    "^theta$" = "theta_hat",
-    "^theta\\.hat$" = "theta_hat",
-    "^lambda$" = "lambda_hat",
-    "^lambda\\.hat$" = "lambda_hat",
-    "^ICOMP$" = "ICOMP_pen",
-    "^RICOMP$" = "RICOMP_pen",
-    "^k$" = "k_total"
-  ))
+  idx_theta_dot <- which(nm == "theta.hat")
+  if (length(idx_theta_dot) > 0L && !"theta_hat" %in% nm) nm[idx_theta_dot] <- "theta_hat"
+  idx_lambda_dot <- which(nm == "lambda.hat")
+  if (length(idx_lambda_dot) > 0L && !"lambda_hat" %in% nm) nm[idx_lambda_dot] <- "lambda_hat"
+
+  for (alias in names(alias_map)) {
+    canonical <- alias_map[[alias]]
+    alias_idx <- which(nm == alias)
+    if (length(alias_idx) == 0L) next
+
+    if (canonical %in% nm) {
+      nm[alias_idx] <- paste0(alias, "__alias_drop")
+    } else {
+      nm[alias_idx] <- canonical
+    }
+  }
+
   names(df) <- nm
+  alias_drop <- grepl("__alias_drop$", names(df))
+  if (any(alias_drop)) {
+    df <- df[, !alias_drop, drop = FALSE]
+  }
+
+  names(df) <- make.unique(names(df), sep = "__dup")
   df
 }
+
+assert_unique_names <- function(df, context) {
+  if (is.null(df)) return(invisible(NULL))
+  dup_idx <- anyDuplicated(names(df))
+  if (dup_idx > 0L) {
+    msg <- sprintf("TAB_S2 duplicate columns in '%s' (first duplicate: '%s').", context, names(df)[dup_idx])
+    warning(msg, call. = FALSE)
+    stop(msg, call. = FALSE)
+  }
+  invisible(NULL)
+}
+
 
 with_source <- function(df, source_file) {
   if (is.null(df)) return(NULL)
@@ -188,6 +223,12 @@ s2_env_r <- harmonize_names(with_source(if (file.exists(S2_env_r_path)) safe_rea
 
 bind_env <- function(df, ic_family) {
   if (is.null(df)) return(NULL)
+  src <- NA_character_
+  if ("source_file" %in% names(df) && nrow(df) > 0L) {
+    src <- unique(as.character(df$source_file))[1]
+  }
+  ctx <- if (is.na(src) || identical(src, "")) paste0("ic_family=", ic_family) else src
+  assert_unique_names(df, paste0("bind_env pre-mutate @ ", ctx))
   df %>%
     mutate(run_id = RUN_ID,
            stage_tag = "S2_ARDL_grid",
@@ -200,6 +241,7 @@ S2_env_all <- dplyr::bind_rows(
   bind_env(s2_env_i, "ICOMP"),
   bind_env(s2_env_r, "RICOMP")
 )
+assert_unique_names(S2_env_all, "S2_env_all (pre-mutate)")
 if (is.null(S2_env_all) || nrow(S2_env_all) == 0) stop("TAB_S2 failed: missing ARDL envelope files.", call. = FALSE)
 
 TAB_S2 <- S2_env_all

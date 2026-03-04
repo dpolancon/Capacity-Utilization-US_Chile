@@ -22,6 +22,42 @@ extract_envelope <- function(df, x_col = "k_total", y_col = "logLik") {
     dplyr::arrange(.data[[x_col]])
 }
 
+canonicalize_envelope_schema <- function(df) {
+  alias_map <- c(
+    k = "k_total",
+    ICOMP = "ICOMP_pen",
+    RICOMP = "RICOMP_pen"
+  )
+
+  dup_idx <- anyDuplicated(names(df))
+  if (dup_idx > 0L) {
+    stop(sprintf("Envelope export aborted: duplicate column names detected (first duplicate: '%s').", names(df)[dup_idx]), call. = FALSE)
+  }
+
+  alias_pairs <- names(alias_map)[names(alias_map) %in% names(df) & alias_map %in% names(df)]
+  if (length(alias_pairs) > 0L) {
+    pair_msg <- paste(sprintf("%s/%s", alias_pairs, alias_map[alias_pairs]), collapse = ", ")
+    stop(sprintf("Envelope export aborted: alias+canonical pairs coexist: %s.", pair_msg), call. = FALSE)
+  }
+
+  drop_cols <- unique(c(
+    names(alias_map)[names(alias_map) %in% names(df)],
+    names(df)[grepl("\\.[0-9]+$", names(df))]
+  ))
+
+  out <- if (length(drop_cols) > 0L) {
+    df[, setdiff(names(df), drop_cols), drop = FALSE]
+  } else {
+    df
+  }
+
+  if (anyDuplicated(names(out)) > 0L) {
+    stop("Envelope export aborted: duplicate names remain after schema canonicalization.", call. = FALSE)
+  }
+
+  out
+}
+
 write_envelope_plane <- function(df,
                                  x_col,
                                  y_col = "logLik",
@@ -30,6 +66,7 @@ write_envelope_plane <- function(df,
                                  title = NULL,
                                  point_alpha = 0.4) {
   env <- extract_envelope(df, x_col = x_col, y_col = y_col)
+  env <- canonicalize_envelope_schema(env)
   utils::write.csv(env, csv_path, row.names = FALSE)
 
   p <- ggplot2::ggplot(df, ggplot2::aes(x = .data[[x_col]], y = .data[[y_col]])) +
