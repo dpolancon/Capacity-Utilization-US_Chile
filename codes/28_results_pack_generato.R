@@ -427,7 +427,7 @@ export_table_bundle(
   CONFIG, TAB_S4,
   name = "TAB_S2_VECM_lnYlnK_e_cointegration",
   tables_dir = PACK_TABLES,
-  caption = "Trivariate VECM ($\ln Y, \ln K, e$): cointegration-relevant representatives by deterministic branch and rank.",
+  caption = "Trivariate VECM ($ln Y$, $ln K$, $e$): cointegration-relevant representatives by deterministic branch and rank.",
   stage_tag = "S2_VECM_lnY_lnK_e",
   run_id = RUN_ID,
   footnote = "Compact table: criterion-level representatives with alpha/beta cointegration terms where available.",
