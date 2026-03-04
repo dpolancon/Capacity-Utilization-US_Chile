@@ -87,6 +87,43 @@ gate_check_min_T <- function(T, m, p_max) {
 # ------------------------------------------------------------------
 now_stamp <- function() format(Sys.time(), "%Y-%m-%d %H:%M:%S")
 
+
+results_pack_manifest_path <- function(CONFIG, file_name = "RESULTSPACK_EXPORT_LOG.csv") {
+  file.path(CONFIG$OUT_CR$manifest, "logs", file_name)
+}
+
+append_results_pack_export_log <- function(CONFIG,
+                                           run_id,
+                                           stage_tag,
+                                           obj_type = c("table_csv","table_tex","index_md","fig_copy","data_csv"),
+                                           file_path,
+                                           caption = "",
+                                           notes = "") {
+  obj_type <- match.arg(obj_type)
+  path <- here::here(results_pack_manifest_path(CONFIG))
+  dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
+
+  row <- data.frame(
+    timestamp = now_stamp(),
+    run_id    = as.character(run_id),
+    stage_tag = as.character(stage_tag),
+    obj_type  = as.character(obj_type),
+    file_path = as.character(file_path),
+    caption   = truncate_msg(caption, 240L),
+    notes     = truncate_msg(notes, 240L),
+    stringsAsFactors = FALSE
+  )
+
+  if (file.exists(path)) {
+    old <- tryCatch(utils::read.csv(path, stringsAsFactors = FALSE), error = function(e) NULL)
+    out <- if (is.null(old)) row else rbind(old, row)
+    utils::write.csv(out, path, row.names = FALSE)
+  } else {
+    utils::write.csv(row, path, row.names = FALSE)
+  }
+  invisible(path)
+}
+
 log_line <- function(path, msg) {
   dir.create(dirname(path), showWarnings = FALSE, recursive = TRUE)
   cat(sprintf("[%s] %s\n", now_stamp(), msg), file = path, append = TRUE)
@@ -711,7 +748,15 @@ export_table_bundle <- function(CONFIG,
   tex_path <- file.path(tables_dir, paste0(name, ".tex"))
   
   readr::write_csv(as.data.frame(tbl), csv_path)
-  append_results_pack_export_log(CONFIG, run_id, stage_tag, "table_csv", csv_path, caption)
+  tryCatch({
+    if (exists("append_results_pack_export_log", mode = "function")) {
+      append_results_pack_export_log(CONFIG, run_id, stage_tag, "table_csv", csv_path, caption)
+    } else {
+      warning("append_results_pack_export_log() unavailable; CSV manifest logging skipped.", call. = FALSE)
+    }
+  }, error = function(e) {
+    warning("CSV manifest logging failed: ", conditionMessage(e), call. = FALSE)
+  })
   
   table_as_is(
     data = tbl,
@@ -724,7 +769,15 @@ export_table_bundle <- function(CONFIG,
     footnote = footnote,
     manifest_hook = NULL
   )
-  append_results_pack_export_log(CONFIG, run_id, stage_tag, "table_tex", tex_path, caption)
+  tryCatch({
+    if (exists("append_results_pack_export_log", mode = "function")) {
+      append_results_pack_export_log(CONFIG, run_id, stage_tag, "table_tex", tex_path, caption)
+    } else {
+      warning("append_results_pack_export_log() unavailable; TEX manifest logging skipped.", call. = FALSE)
+    }
+  }, error = function(e) {
+    warning("TEX manifest logging failed: ", conditionMessage(e), call. = FALSE)
+  })
   
   invisible(list(csv = csv_path, tex = tex_path))
 }

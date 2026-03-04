@@ -54,6 +54,7 @@ dir.create(DIR_LOGS,   recursive = TRUE, showWarnings = FALSE)
 
 log_path <- file.path(DIR_LOGS, "RUN_results_package_VECM_S1_lnY_lnK.txt")
 sink(log_path, split = TRUE)
+on.exit(try(sink(), silent = TRUE), add = TRUE)
 
 cat("============================================================\n")
 cat("RESULTS PACKAGE — VECM S1 (lnY, lnK), r=1\n")

@@ -21,46 +21,6 @@ suppressPackageStartupMessages({
   library("readr")
 })
 
-# -----------------------------
-# ResultsPack manifest hook
-# -----------------------------
-results_pack_manifest_path <- function(CONFIG, file_name = "RESULTSPACK_EXPORT_LOG.csv") {
-  file.path(CONFIG$OUT_CR$manifest, "logs", file_name)
-}
-
-append_results_pack_export_log <- function(CONFIG,
-                                           run_id,
-                                           stage_tag,
-                                           obj_type = c("table_csv","table_tex","index_md","fig_copy"),
-                                           file_path,
-                                           caption = "",
-                                           notes = "") {
-  obj_type <- match.arg(obj_type)
-  path <- here::here(results_pack_manifest_path(CONFIG))
-  dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
-  
-  row <- data.frame(
-    timestamp = now_stamp(),
-    run_id    = as.character(run_id),
-    stage_tag = as.character(stage_tag),
-    obj_type  = as.character(obj_type),
-    file_path = as.character(file_path),
-    caption   = truncate_msg(caption, 240L),
-    notes     = truncate_msg(notes, 240L),
-    stringsAsFactors = FALSE
-  )
-  
-  if (file.exists(path)) {
-    old <- tryCatch(utils::read.csv(path, stringsAsFactors = FALSE), error = function(e) NULL)
-    out <- if (is.null(old)) row else rbind(old, row)
-    utils::write.csv(out, path, row.names = FALSE)
-  } else {
-    utils::write.csv(row, path, row.names = FALSE)
-  }
-  invisible(path)
-}
-
-
 
 if (!exists("CONFIG")) stop("CONFIG not found. Did you source codes/10_config.R ?", call. = FALSE)
 
@@ -71,12 +31,18 @@ RUN_ROOT <- Sys.getenv("CR_RUN_ROOT", unset = file.path(OUT_ROOT, paste0("run_",
 PACK_ROOT   <- file.path(RUN_ROOT, "ResultsPack")
 PACK_TABLES <- file.path(PACK_ROOT, "tables")
 PACK_FIGS   <- file.path(PACK_ROOT, "figs")
+PACK_DATA   <- file.path(PACK_ROOT, "data")
 dir.create(PACK_TABLES, recursive = TRUE, showWarnings = FALSE)
 dir.create(PACK_FIGS, recursive = TRUE, showWarnings = FALSE)
+dir.create(PACK_DATA, recursive = TRUE, showWarnings = FALSE)
 
 # ---- Paths (CONFIG aware) ----
 S1_series_path <- file.path(CONFIG$OUT_CR$exercise_a, "csv",
                             "SHAIKH_ARDL_replication_series_shaikh_window.csv")
+S1_four_series_path <- file.path(CONFIG$OUT_CR$exercise_a, "csv",
+                                 "SHAIKH_ARDL_replication_four_series_shaikh_window.csv")
+S1_spec_report_path <- file.path(CONFIG$OUT_CR$exercise_a, "csv",
+                                 "SHAIKH_ARDL_replication_spec_report_shaikh_window.csv")
 
 XW_faithful_path <- file.path(CONFIG$OUT_CR$crosswalk, "faithful_ardl_2_4.csv")
 XW_core_path     <- file.path(CONFIG$OUT_CR$crosswalk, "crosswalk_representatives.csv")
@@ -95,7 +61,8 @@ harmonize_names <- function(df) {
 
   alias_map <- c(
     theta = "theta_hat",
-    lambda = "lambda_hat",
+    lambda = "alpha_hat",
+    lambda_hat = "alpha_hat",
     ICOMP = "ICOMP_pen",
     RICOMP = "RICOMP_pen",
     k = "k_total"
@@ -105,7 +72,7 @@ harmonize_names <- function(df) {
   idx_theta_dot <- which(nm == "theta.hat")
   if (length(idx_theta_dot) > 0L && !"theta_hat" %in% nm) nm[idx_theta_dot] <- "theta_hat"
   idx_lambda_dot <- which(nm == "lambda.hat")
-  if (length(idx_lambda_dot) > 0L && !"lambda_hat" %in% nm) nm[idx_lambda_dot] <- "lambda_hat"
+  if (length(idx_lambda_dot) > 0L && !"alpha_hat" %in% nm) nm[idx_lambda_dot] <- "alpha_hat"
 
   for (alias in names(alias_map)) {
     canonical <- alias_map[[alias]]
@@ -181,19 +148,30 @@ pick_winners <- function(df,
 # ============================================================
 # TAB_S1 — faithful replication key stats
 # ============================================================
+s1_spec_report <- harmonize_names(with_source(
+  if (file.exists(S1_spec_report_path)) safe_read_csv(S1_spec_report_path) else NULL,
+  S1_spec_report_path
+))
+
 s1_faithful <- harmonize_names(with_source(
   if (file.exists(XW_faithful_path)) safe_read_csv(XW_faithful_path) else NULL,
   XW_faithful_path
 ))
 
 s1_series <- if (file.exists(S1_series_path)) safe_read_csv(S1_series_path) else NULL
+s1_four_series <- if (file.exists(S1_four_series_path)) safe_read_csv(S1_four_series_path) else NULL
 
 TAB_S1 <- NULL
-if (!is.null(s1_faithful)) {
+if (!is.null(s1_spec_report) && nrow(s1_spec_report) > 0) {
+  TAB_S1 <- s1_spec_report %>%
+    mutate(run_id = RUN_ID, stage_tag = "S1_ARDL_faithful", .before = 1)
+} else if (!is.null(s1_faithful)) {
+  warning("S1 spec report CSV missing; falling back to faithful crosswalk file.", call. = FALSE)
   TAB_S1 <- s1_faithful %>%
     mutate(run_id = RUN_ID, stage_tag = "S1_ARDL_faithful", window_tag = "shaikh_window") %>%
     select(run_id, stage_tag, window_tag, everything())
 } else if (!is.null(s1_series)) {
+  warning("S1 spec report + crosswalk missing; using minimal series fallback (limited inference fields).", call. = FALSE)
   nm <- names(s1_series)
   uhat_col <- nm[str_detect(nm, "u_hat|u\\.hat|u_est|u_pred")][1]
   ush_col  <- nm[str_detect(nm, "^u_shaikh$|u_shaikh")][1]
@@ -207,14 +185,19 @@ if (!is.null(s1_faithful)) {
     window_tag = "shaikh_window",
     spec_id = "ARDL_2_4_faithful",
     theta_hat = NA_real_,
-    lambda_hat = NA_real_,
-    bounds_F = NA_real_,
-    bounds_t = NA_real_,
+    theta_pvalue = NA_real_,
+    alpha_hat = NA_real_,
+    boundsF_stat = NA_real_,
+    boundsF_pvalue = NA_real_,
+    boundsT_stat = NA_real_,
+    boundsT_pvalue = NA_real_,
     u_hat_corr_u_shaikh = corr_val,
     source_file = S1_series_path
   )
 }
-if (is.null(TAB_S1)) stop("TAB_S1 failed: faithful_ardl_2_4.csv and series file both missing.", call. = FALSE)
+if (is.null(TAB_S1)) stop("TAB_S1 failed: spec-report, faithful crosswalk, and series files are all missing.", call. = FALSE)
+
+TAB_S1 <- clean_for_paper(TAB_S1)
 
 TAB_S1 <- clean_for_paper(TAB_S1)
 
@@ -227,6 +210,17 @@ export_table_bundle(
   run_id = RUN_ID,
   footnote = "Outputs from Exercise A (ARDL faithful replication)."
 )
+
+if (!is.null(s1_four_series) && nrow(s1_four_series) > 0) {
+  data_copy_path <- file.path(PACK_DATA, "DATA_S1_ARDL_four_series.csv")
+  readr::write_csv(s1_four_series, data_copy_path)
+  tryCatch({
+    append_results_pack_export_log(CONFIG, RUN_ID, "S1_ARDL_faithful", "data_csv", data_copy_path,
+                                   caption = "S1 ARDL four-series reproducible dataset")
+  }, error = function(e) {
+    warning("S1 four-series manifest logging failed: ", conditionMessage(e), call. = FALSE)
+  })
+}
 
 # ============================================================
 # TAB_S2 — frontier summary by IC (envelope representatives)
@@ -458,25 +452,29 @@ export_table_bundle(
 # ============================================================
 fig_candidates <- tibble::tribble(
   ~fig_id, ~rel_path, ~caption,
-  "FIG_S1_ARDL_u_series",
-  file.path("Exercise_a_ARDL_faithful","figs","FIG_SHAIKH_ARDL_u_shaikh_window.png"),
-  "Faithful ARDL replication: estimated utilization series ($\\hat u$) against Shaikh reference (window = shaikh_window).",
-  
+  "FIG_S1_ARDL_u_compare_base2011",
+  file.path("Exercise_a_ARDL_faithful","figs","FIG_S1_ARDL_u_compare_base2011_shaikh_window.png"),
+  "Faithful ARDL replication (2011 base): Shaikh reference vs with/without LR dummies.",
+
+  "FIG_S1_ARDL_u_compare_base1947",
+  file.path("Exercise_a_ARDL_faithful","figs","FIG_S1_ARDL_u_compare_base1947_shaikh_window.png"),
+  "Faithful ARDL replication (1947 base): Shaikh reference vs with/without LR dummies.",
+
   "FIG_S2_ARDL_frontier_RICOMP",
   file.path("Exercise_b_ARDL_grid","figs","FIG_Frontier_ARDL_logLik_vs_RICOMP_pen.png"),
   "ARDL grid: fit–complexity frontier under RICOMP; representatives define the robustness set.",
-  
+
   "FIG_S3_stability_margin_surface",
   file.path("Exercise_c_VECM_S1_r1","SR_const__LR_none","figs","FIG_stability_margin_surface.png"),
-  "Bivariate VECM ($\\ln Y, \\ln K$), $r=1$: stability margin surface over admissible lattice.",
-  
+  "Bivariate VECM ($\ln Y, \ln K$), $r=1$: stability margin surface over admissible lattice.",
+
   "FIG_S4_rank_r1_envelope_RICOMP",
   file.path("Exercise_d_VECM_S2_m3_rank","SR_const__LR_none","figs","rank_r1","FIG_envelope_logLik_vs_RICOMP_pen.png"),
-  "Trivariate VECM ($\\ln Y, \\ln K, e$), $r=1$: fit–complexity envelope under RICOMP.",
-  
+  "Trivariate VECM ($\ln Y, \ln K, e$), $r=1$: fit–complexity envelope under RICOMP.",
+
   "FIG_S4_rank_r2_envelope_RICOMP",
   file.path("Exercise_d_VECM_S2_m3_rank","SR_const__LR_none","figs","rank_r2","FIG_envelope_logLik_vs_RICOMP_pen.png"),
-  "Trivariate VECM ($\\ln Y, \\ln K, e$), $r=2$: fit–complexity envelope under RICOMP."
+  "Trivariate VECM ($\ln Y, \ln K, e$), $r=2$: fit–complexity envelope under RICOMP."
 )
 
 fig_candidates <- fig_candidates %>%
@@ -510,6 +508,10 @@ idx_lines <- c(
   "- `TAB_S3_confinement_winners_by_branch.{csv,tex}` (Stage 3 bivariate confinement representatives)",
   "- `TAB_S2_VECM_lnYlnK_e_cointegration.{csv,tex}` (Trivariate VECM cointegration representatives)",
   "- `TAB_crosswalk_core.{csv,tex}` (Core crosswalk representatives across stages)",
+  "",
+  "## Data artifacts",
+  "",
+  "- `data/DATA_S1_ARDL_four_series.csv` (Faithful ARDL four-series reproducible dataset)",
   "",
   "## Figure index (canonical captions)",
   ""
