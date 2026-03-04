@@ -25,6 +25,8 @@ source(here::here("codes", "10_config.R"))
 
 run_start <- Sys.time()
 run_id <- paste0("stage4_", format(run_start, "%Y%m%d_%H%M%S"))
+run_root <- here::here("output", paste0("run_", run_id))
+dir.create(run_root, recursive = TRUE, showWarnings = FALSE)
 
 tz_name <- Sys.timezone()
 if (is.na(tz_name) || !nzchar(tz_name)) tz_name <- "UNKNOWN"
@@ -46,14 +48,18 @@ script_plan <- data.frame(
     "21_CR_ARDL_grid.R",
     "22_VECM_S1.R",
     "23_VECM_S2.R",
-    "26_crosswalk_tables.R"
+    "26_crosswalk_tables.R",
+    "28_results_pack_generato.R",
+    "29_S1_VECM_r1_results_pack_gen.R"
   ),
   grid_dimensions = c(
     "Fixed ARDL replication (single locked specification)",
     "ARDL grid (p x q; values declared inside script)",
     "VECM S1 grid (lag/deterministic combinations; values declared inside script)",
     "VECM S2 grid (m=3, rank r in {0,1,2} + lag/deterministics as scripted)",
-    "Crosswalk table builder (no independent grid)"
+    "Crosswalk table builder (no independent grid)",
+    "ResultsPack aggregator (paper-facing compact bundles)",
+    "S1-specific results package generator"
   ),
   stringsAsFactors = FALSE
 )
@@ -86,10 +92,19 @@ for (i in seq_len(nrow(script_plan))) {
     next
   }
 
-  run <- safe_system(
-    R.home("bin/Rscript"),
-    c(shQuote(here::here("codes", script_plan$script[i])))
-  )
+  run <- tryCatch({
+    old_run_id <- Sys.getenv("CR_RUN_ID", unset = NA_character_)
+    old_run_root <- Sys.getenv("CR_RUN_ROOT", unset = NA_character_)
+    on.exit({
+      if (is.na(old_run_id)) Sys.unsetenv("CR_RUN_ID") else Sys.setenv(CR_RUN_ID = old_run_id)
+      if (is.na(old_run_root)) Sys.unsetenv("CR_RUN_ROOT") else Sys.setenv(CR_RUN_ROOT = old_run_root)
+    }, add = TRUE)
+    Sys.setenv(CR_RUN_ID = run_id, CR_RUN_ROOT = run_root)
+    safe_system(
+      R.home("bin/Rscript"),
+      c(shQuote(here::here("codes", script_plan$script[i])))
+    )
+  }, error = function(e) list(status = 1L, output = conditionMessage(e)))
 
   writeLines(run$output, con = log_file)
   script_plan$exit_code[i] <- run$status
@@ -167,6 +182,7 @@ md <- c(
   "",
   "## Run metadata",
   sprintf("- Run ID: `%s`", run_id),
+  sprintf("- Run root: `%s`", sub(paste0("^", normalizePath(here::here(), winslash = "/", mustWork = TRUE), "/"), "", normalizePath(run_root, winslash = "/", mustWork = FALSE))),
   sprintf("- Timestamp: `%s`", iso_stamp(run_start)),
   sprintf("- Timezone: `%s`", tz_name),
   sprintf("- Git hash: `%s`", git_hash_val),
