@@ -19,6 +19,7 @@
 rm(list = ls())
 
 suppressPackageStartupMessages({
+  library(here)
   library(tidyverse)
   library(readr)
   library(glue)
@@ -27,8 +28,8 @@ suppressPackageStartupMessages({
 # ------------------------------------------------------------
 # Load CONFIG + UTILS (repo-native)
 # ------------------------------------------------------------
-source("10_config.R")  # defines CONFIG
-source("99_utils.R")   # defines safe_read_csv, export_table_bundle, etc.
+source(here::here("codes", "10_config.R"))  # defines CONFIG
+source(here::here("codes", "99_utils.R"))   # defines safe_read_csv, export_table_bundle, etc.
 
 stopifnot(exists("CONFIG"))
 stopifnot(is.list(CONFIG))
@@ -40,7 +41,9 @@ BASE_DIR <- CONFIG$OUT_CR$exercise_c
 # ------------------------------------------------------------
 # Results package output dirs
 # ------------------------------------------------------------
-OUT_PKG <- file.path(CONFIG$OUT_CR_ROOT, "ResultsPackages", "VECM_S1_lnY_lnK")
+RUN_ID <- Sys.getenv("CR_RUN_ID", unset = paste0("stage4_", format(Sys.time(), "%Y%m%d_%H%M%S")))
+RUN_ROOT <- Sys.getenv("CR_RUN_ROOT", unset = file.path(CONFIG$OUT_CR_ROOT, paste0("run_", RUN_ID)))
+OUT_PKG <- file.path(RUN_ROOT, "ResultsPackages", "VECM_S1_lnY_lnK")
 DIR_TABLES <- file.path(OUT_PKG, "tables")
 DIR_FIGS   <- file.path(OUT_PKG, "figs")
 DIR_LOGS   <- file.path(OUT_PKG, "logs")
@@ -51,6 +54,7 @@ dir.create(DIR_LOGS,   recursive = TRUE, showWarnings = FALSE)
 
 log_path <- file.path(DIR_LOGS, "RUN_results_package_VECM_S1_lnY_lnK.txt")
 sink(log_path, split = TRUE)
+on.exit(try(sink(), silent = TRUE), add = TRUE)
 
 cat("============================================================\n")
 cat("RESULTS PACKAGE — VECM S1 (lnY, lnK), r=1\n")
@@ -123,6 +127,7 @@ print(inputs_manifest)
 cat("\n")
 
 export_table_bundle(
+  CONFIG,
   tbl = inputs_manifest,
   name = "MANIFEST_S3_inputs_by_branch",
   tables_dir = DIR_TABLES,
@@ -176,6 +181,7 @@ spec_universe <- lattice_all |>
   select(all_of(core_cols_present))
 
 export_table_bundle(
+  CONFIG,
   tbl = spec_universe,
   name = "DATA_S3_specification_universe",
   tables_dir = DIR_TABLES,
@@ -235,6 +241,7 @@ wcols <- wcols_pref[wcols_pref %in% names(winners)]
 TAB_winners <- winners |> select(all_of(wcols))
 
 export_table_bundle(
+  CONFIG,
   tbl = TAB_winners,
   name = "TAB_S3_confinement_winners_by_branch",
   tables_dir = DIR_TABLES,
@@ -263,6 +270,7 @@ TAB_metrics <- bind_rows(theta_sum, stab_sum)
 
 if (nrow(TAB_metrics) > 0) {
   export_table_bundle(
+    CONFIG,
     tbl = TAB_metrics,
     name = "TAB_S3_metric_summary_by_branch",
     tables_dir = DIR_TABLES,
