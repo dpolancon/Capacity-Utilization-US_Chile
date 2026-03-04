@@ -1,8 +1,8 @@
 ============================================================
 RESULTS PACKAGE — VECM S1 (lnY, lnK), r=1
 Base dir:  output/CriticalReplication/Exercise_c_VECM_S1_r1 
-Out dir:   C:/ReposGitHub/capacity_utilization/output/run_stage4_20260304_101833/ResultsPackages/VECM_S1_lnY_lnK 
-Timestamp: 2026-03-04 10:22:26 
+Out dir:   C:/ReposGitHub/capacity_utilization/output/run_stage4_20260304_130240/ResultsPackages/VECM_S1_lnY_lnK 
+Timestamp: 2026-03-04 13:06:34 
 ============================================================
 
 Branches found:
@@ -20,7 +20,22 @@ Input availability by branch:
 5 SR_none__LR_none   TRUE    TRUE  TRUE    TRUE  TRUE  
 6 SR_none__LR_trend  TRUE    TRUE  TRUE    TRUE  TRUE  
 
-Error en append_results_pack_export_log(CONFIG, run_id, stage_tag, "table_csv", : 
-  no se pudo encontrar la función "append_results_pack_export_log"
-Calls: export_table_bundle
+Error in `mutate()`:
+ℹ In argument: `spec_id = paste0("p", sprintf("%02d", p), "_",
+  q_profile)`.
+Caused by error:
+! objeto 'q_profile' no encontrado
+Backtrace:
+     ▆
+  1. ├─dplyr::mutate(...)
+  2. ├─dplyr:::mutate.data.frame(...)
+  3. │ └─dplyr:::mutate_cols(.data, dplyr_quosures(...), by)
+  4. │   ├─base::withCallingHandlers(...)
+  5. │   └─dplyr:::mutate_col(dots[[i]], data, mask, new_columns)
+  6. │     └─mask$eval_all_mutate(quo)
+  7. │       └─dplyr (local) eval()
+  8. ├─base::paste0("p", sprintf("%02d", p), "_", q_profile)
+  9. └─base::.handleSimpleError(...)
+ 10.   └─dplyr (local) h(simpleError(msg, call))
+ 11.     └─rlang::abort(message, class = error_class, parent = parent, call = error_call)
 Ejecución interrumpida

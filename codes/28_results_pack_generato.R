@@ -466,15 +466,15 @@ fig_candidates <- tibble::tribble(
 
   "FIG_S3_stability_margin_surface",
   file.path("Exercise_c_VECM_S1_r1","SR_const__LR_none","figs","FIG_stability_margin_surface.png"),
-  "Bivariate VECM ($\ln Y, \ln K$), $r=1$: stability margin surface over admissible lattice.",
+  "Bivariate VECM ($ln Y$, $ln K$), $r=1$: stability margin surface over admissible lattice.",
 
   "FIG_S4_rank_r1_envelope_RICOMP",
   file.path("Exercise_d_VECM_S2_m3_rank","SR_const__LR_none","figs","rank_r1","FIG_envelope_logLik_vs_RICOMP_pen.png"),
-  "Trivariate VECM ($\ln Y, \ln K, e$), $r=1$: fit–complexity envelope under RICOMP.",
+  "Trivariate VECM ($ln Y, $ln K, $e$), $r=1$: fit–complexity envelope under RICOMP.",
 
   "FIG_S4_rank_r2_envelope_RICOMP",
   file.path("Exercise_d_VECM_S2_m3_rank","SR_const__LR_none","figs","rank_r2","FIG_envelope_logLik_vs_RICOMP_pen.png"),
-  "Trivariate VECM ($\ln Y, \ln K, e$), $r=2$: fit–complexity envelope under RICOMP."
+  "Trivariate VECM ($ln Y$, $ln K$, $e$), $r=2$: fit–complexity envelope under RICOMP."
 )
 
 fig_candidates <- fig_candidates %>%

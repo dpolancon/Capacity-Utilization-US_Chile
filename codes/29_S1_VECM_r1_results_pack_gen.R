@@ -41,7 +41,7 @@ BASE_DIR <- CONFIG$OUT_CR$exercise_c
 # ------------------------------------------------------------
 # Results package output dirs
 # ------------------------------------------------------------
-RUN_ID <- Sys.getenv("CR_RUN_ID", unset = paste0("stage4_", format(Sys.time(), "%Y%m%d_%H%M%S")))
+RUN_ID <- Sys.getenv("CR_RUN_ID", unset = paste0("stage4_", format(Sys.time(), "%Y%m%d_%H%M%S"))) # nolint
 RUN_ROOT <- Sys.getenv("CR_RUN_ROOT", unset = file.path(CONFIG$OUT_CR_ROOT, paste0("run_", RUN_ID)))
 OUT_PKG <- file.path(RUN_ROOT, "ResultsPackages", "VECM_S1_lnY_lnK")
 DIR_TABLES <- file.path(OUT_PKG, "tables")
@@ -100,8 +100,8 @@ read_branch <- function(branch_tag) {
   out <- list(branch = branch_tag)
   
   out$lattice <- if (file.exists(f_lattice)) safe_read_csv(f_lattice) else NULL
-  out$top     <- if (file.exists(f_top))     safe_read_csv(f_top)     else NULL
-  out$summary <- if (file.exists(f_sum))     safe_read_csv(f_sum)     else NULL
+  out$top     <- if (file.exists(f_top))     safe_read_csv(f_top)     else NULL # nolint: object_usage_linter. # nolint
+  out$summary <- if (file.exists(f_sum))     safe_read_csv(f_sum)     else NULL # nolint
   out$eigs    <- if (file.exists(f_eigs))    safe_read_csv(f_eigs)    else NULL
   out$iceta   <- if (file.exists(f_iceta))   safe_read_csv(f_iceta)   else NULL
   
@@ -159,12 +159,29 @@ lattice_all <- lattice_all |>
   rename_if_exists("k_total", "Parameters") |>
   rename_if_exists("ICOMP_pen", "ICOMP_penalty") |>
   rename_if_exists("RICOMP_pen", "RICOMP_penalty") |>
-  rename_if_exists("sK_ardl", "sK_ARDL")
+  rename_if_exists("sK_ardl", "sK_ARDL") |>
+  rename_if_exists("theta_hat", "theta")
 
-# Create a canonical spec_id if absent
+# Create a canonical q_profile + spec_id if absent
+if (!("q_profile" %in% names(lattice_all))) {
+  if ("q_tag" %in% names(lattice_all)) {
+    lattice_all <- lattice_all |>
+      mutate(q_profile = as.character(.data$q_tag))
+  } else if (all(c("qY", "qK") %in% names(lattice_all))) {
+    lattice_all <- lattice_all |>
+      mutate(q_profile = paste0("qY", .data$qY, "_qK", .data$qK))
+  } else if ("q_lag" %in% names(lattice_all)) {
+    lattice_all <- lattice_all |>
+      mutate(q_profile = paste0("q", .data$q_lag))
+  } else {
+    lattice_all <- lattice_all |>
+      mutate(q_profile = "qNA")
+  }
+}
+
 if (!("spec_id" %in% names(lattice_all))) {
   lattice_all <- lattice_all |>
-    mutate(spec_id = paste0("p", sprintf("%02d", p), "_", q_profile))
+    mutate(spec_id = paste0("p", sprintf("%02d", .data$p), "_", .data$q_profile))
 }
 
 # Keep a tidy core column set (only if present)

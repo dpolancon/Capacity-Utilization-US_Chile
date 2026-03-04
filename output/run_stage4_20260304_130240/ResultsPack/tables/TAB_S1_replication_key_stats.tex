@@ -1,0 +1,21 @@
+\begin{table}[!h]
+\centering
+\caption{Faithful replication anchor statistics.}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{llllrlrrrrrrrrrrrllrlrrr}
+\toprule
+run\_id & stage\_tag & window\_tag & spec\_id & numeraire\_base & dummy\_regime & N & T\_eff & boundsF\_stat & boundsF\_pvalue & boundsT\_stat & boundsT\_pvalue & theta\_hat & theta\_pvalue & alpha\_hat & long\_run\_intercept & long\_run\_lnk & long\_run\_dummy\_included & long\_run\_dummy\_set & long\_run\_dummy\_sum\_mean & lnYp\_formula & lr\_d1956 & lr\_d1974 & lr\_d1980\\
+\midrule
+stage4\_20260304\_130240 & S1\_ARDL\_faithful & shaikh\_window & ARDL\_2\_4\_base2011\_with\_LR\_dummies & 2011 & with\_LR\_dummies & 65 & 61 & 1.13511 & 0.7839036 & -1.195543 & 0.7607807 & 0.7489013 & 2.39e-05 & -0.1106236 & 2.108397 & 0.7489013 & TRUE & d1956;d1974;d1980 & 1.938462 & lnYp = intercept + theta*lnK + sum(dummy\_j*lr\_dummy\_j) & -0.087467 & -0.0851564 & -0.067518\\
+stage4\_20260304\_130240 & S1\_ARDL\_faithful & shaikh\_window & ARDL\_2\_4\_base2011\_no\_LR\_dummies & 2011 & no\_LR\_dummies & 65 & 61 & 1.13511 & 0.7839036 & -1.195543 & 0.7607807 & 0.7489013 & 2.39e-05 & -0.1106236 & 2.108397 & 0.7489013 & FALSE & NA & NA & lnYp = intercept + theta*lnK & NA & NA & NA\\
+stage4\_20260304\_130240 & S1\_ARDL\_faithful & shaikh\_window & ARDL\_2\_4\_base1947\_with\_LR\_dummies & 1947 & with\_LR\_dummies & 65 & 61 & 1.13511 & 0.7839036 & -1.195543 & 0.7607807 & 0.7489013 & 2.39e-05 & -0.1106236 & 1.585740 & 0.7489013 & TRUE & d1956;d1974;d1980 & 1.938462 & lnYp = intercept + theta*lnK + sum(dummy\_j*lr\_dummy\_j) & -0.087467 & -0.0851564 & -0.067518\\
+stage4\_20260304\_130240 & S1\_ARDL\_faithful & shaikh\_window & ARDL\_2\_4\_base1947\_no\_LR\_dummies & 1947 & no\_LR\_dummies & 65 & 61 & 1.13511 & 0.7839036 & -1.195543 & 0.7607807 & 0.7489013 & 2.39e-05 & -0.1106236 & 1.585740 & 0.7489013 & FALSE & NA & NA & lnYp = intercept + theta*lnK & NA & NA & NA\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Note: } 
+\item Outputs from Exercise A (ARDL faithful replication).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

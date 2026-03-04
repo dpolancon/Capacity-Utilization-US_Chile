@@ -1,0 +1,7 @@
+branch,lattice,top10,summary,eigs,ic_eta
+SR_const__LR_none,TRUE,TRUE,TRUE,TRUE,TRUE
+SR_const__LR_trend,TRUE,TRUE,TRUE,TRUE,TRUE
+SR_none__LR_both,TRUE,TRUE,TRUE,TRUE,TRUE
+SR_none__LR_const,TRUE,TRUE,TRUE,TRUE,TRUE
+SR_none__LR_none,TRUE,TRUE,TRUE,TRUE,TRUE
+SR_none__LR_trend,TRUE,TRUE,TRUE,TRUE,TRUE
