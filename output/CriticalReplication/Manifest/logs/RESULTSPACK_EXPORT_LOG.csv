@@ -20,4 +20,20 @@
 "2026-03-04 03:45:03","stage4_20260303_183218","RESULTSPACK","fig_copy","output/CriticalReplication/ResultsPack/figs/FIG_stability_margin_surface.png","FIG_stability_margin_surface.png",NA
 "2026-03-04 03:45:03","stage4_20260303_183218","RESULTSPACK","fig_copy","output/CriticalReplication/ResultsPack/figs/FIG_envelope_logLik_vs_RICOMP_pen.png","FIG_envelope_logLik_vs_RICOMP_pen.png",NA
 "2026-03-04 03:45:03","stage4_20260303_183218","RESULTSPACK","fig_copy","output/CriticalReplication/ResultsPack/figs/FIG_envelope_logLik_vs_RICOMP_pen.png","FIG_envelope_logLik_vs_RICOMP_pen.png",NA
-"2026-03-04 03:45:03","stage4_20260303_183218","RESULTSPACK","index_md","output/CriticalReplication/ResultsPack/INDEX_RESULTS_PACK.md","ResultsPack index",""
+"2026-03-04 03:45:03","stage4_20260303_183218","RESULTSPACK","index_md","output/CriticalReplication/ResultsPack/INDEX_RESULTS_PACK.md","ResultsPack index",NA
+"2026-03-04 04:33:31","stage4_20260303_183218","S1_ARDL_faithful","table_csv","output/CriticalReplication/ResultsPack/tables/TAB_S1_replication_key_stats.csv","Faithful replication anchor statistics.",NA
+"2026-03-04 04:33:32","stage4_20260303_183218","S1_ARDL_faithful","table_tex","output/CriticalReplication/ResultsPack/tables/TAB_S1_replication_key_stats.tex","Faithful replication anchor statistics.",NA
+"2026-03-04 04:33:32","stage4_20260303_183218","S2_ARDL_grid","table_csv","output/CriticalReplication/ResultsPack/tables/TAB_S2_frontier_summary_by_IC.csv","ARDL grid frontier representatives under alternative information criteria.",NA
+"2026-03-04 04:33:32","stage4_20260303_183218","S2_ARDL_grid","table_tex","output/CriticalReplication/ResultsPack/tables/TAB_S2_frontier_summary_by_IC.tex","ARDL grid frontier representatives under alternative information criteria.",NA
+"2026-03-04 04:33:32","stage4_20260303_183218","S3_VECM_S1_r1","table_csv","output/CriticalReplication/ResultsPack/tables/TAB_S3_confinement_winners_by_branch.csv","Bivariate VECM confinement representatives by deterministic branch.",NA
+"2026-03-04 04:33:32","stage4_20260303_183218","S3_VECM_S1_r1","table_tex","output/CriticalReplication/ResultsPack/tables/TAB_S3_confinement_winners_by_branch.tex","Bivariate VECM confinement representatives by deterministic branch.",NA
+"2026-03-04 04:33:33","stage4_20260303_183218","S4_VECM_S2_m3_rank","table_csv","output/CriticalReplication/ResultsPack/tables/TAB_S4_rank_summary_by_branch.csv","Rank comparison for the trivariate VECM system ($\ln Y, \ln K, e$).",NA
+"2026-03-04 04:33:33","stage4_20260303_183218","S4_VECM_S2_m3_rank","table_tex","output/CriticalReplication/ResultsPack/tables/TAB_S4_rank_summary_by_branch.tex","Rank comparison for the trivariate VECM system ($\ln Y, \ln K, e$).",NA
+"2026-03-04 04:33:33","stage4_20260303_183218","CROSSWALK_CORE","table_csv","output/CriticalReplication/ResultsPack/tables/TAB_crosswalk_core.csv","Crosswalk of representative specifications across ARDL and VECM systems.",NA
+"2026-03-04 04:33:33","stage4_20260303_183218","CROSSWALK_CORE","table_tex","output/CriticalReplication/ResultsPack/tables/TAB_crosswalk_core.tex","Crosswalk of representative specifications across ARDL and VECM systems.",NA
+"2026-03-04 04:33:33","stage4_20260303_183218","RESULTSPACK","fig_copy","output/CriticalReplication/ResultsPack/figs/FIG_SHAIKH_ARDL_u_shaikh_window.png","FIG_SHAIKH_ARDL_u_shaikh_window.png",NA
+"2026-03-04 04:33:33","stage4_20260303_183218","RESULTSPACK","fig_copy","output/CriticalReplication/ResultsPack/figs/FIG_Frontier_ARDL_logLik_vs_RICOMP_pen.png","FIG_Frontier_ARDL_logLik_vs_RICOMP_pen.png",NA
+"2026-03-04 04:33:33","stage4_20260303_183218","RESULTSPACK","fig_copy","output/CriticalReplication/ResultsPack/figs/FIG_stability_margin_surface.png","FIG_stability_margin_surface.png",NA
+"2026-03-04 04:33:33","stage4_20260303_183218","RESULTSPACK","fig_copy","output/CriticalReplication/ResultsPack/figs/FIG_envelope_logLik_vs_RICOMP_pen.png","FIG_envelope_logLik_vs_RICOMP_pen.png",NA
+"2026-03-04 04:33:33","stage4_20260303_183218","RESULTSPACK","fig_copy","output/CriticalReplication/ResultsPack/figs/FIG_envelope_logLik_vs_RICOMP_pen.png","FIG_envelope_logLik_vs_RICOMP_pen.png",NA
+"2026-03-04 04:33:33","stage4_20260303_183218","RESULTSPACK","index_md","output/CriticalReplication/ResultsPack/INDEX_RESULTS_PACK.md","ResultsPack index",""
