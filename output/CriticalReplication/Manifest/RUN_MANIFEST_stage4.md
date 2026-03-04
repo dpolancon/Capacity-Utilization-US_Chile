@@ -399,3 +399,39 @@
 
 ## Deviations / notes
 - None.
+# Run Manifest (Stage 4)
+- window_tag: shaikh_window
+- window_start: 1947
+- window_end: 2011
+
+## Script: codes/20_shaikh_ardl_replication.R
+- exercise_output: output/CriticalReplication/Exercise_a_ARDL_faithful/
+- window_tag: shaikh_window
+- window_start: 1947
+- window_end: 2011
+- Timestamp: 2026-03-04 05:17:38.179638
+
+# Run Manifest (Stage 4)
+- window_tag: shaikh_window
+- window_start: 1947
+- window_end: 2011
+
+## Script: codes/20_shaikh_ardl_replication.R
+- exercise_output: output/CriticalReplication/Exercise_a_ARDL_faithful/
+- window_tag: shaikh_window
+- window_start: 1947
+- window_end: 2011
+- Timestamp: 2026-03-04 05:46:32.892077
+
+# Run Manifest (Stage 4)
+- window_tag: shaikh_window
+- window_start: 1947
+- window_end: 2011
+- script: codes/20_shaikh_ardl_replication_WRAPPED.R
+- outputs:
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_series_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_key_stats_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/figs/FIG_SHAIKH_ARDL_u_shaikh_window.png
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/logs/SHAIKH_ARDL_replication_log_shaikh_window.txt
+- Timestamp: 2026-03-04 06:00:14.761111
+
