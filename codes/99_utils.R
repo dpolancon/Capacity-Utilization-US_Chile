@@ -632,3 +632,80 @@ tsdyn_loglik_safe2 <- function(fit, m) {
   if (!is.finite(ll2)) return(list(ll = NA_real_, reason = "fail:ll_nonfinite"))
   list(ll = ll2, reason = "ok:resid_Sigma")
 }
+
+
+
+# ============================================================
+# export table bundle  - table_as_is
+# ============================================================
+# -------- Table export with optional kableExtra footnote/styling --------
+table_as_is <- function(data, file_path,
+                        column_labels = NULL,
+                        caption = "Table",
+                        format = c("latex", "html"),
+                        overwrite = TRUE,
+                        escape = TRUE,
+                        return_string = FALSE,
+                        footnote = NULL,
+                        manifest_hook = NULL) {
+  format <- match.arg(format)
+  if (!is.data.frame(data) && !is.matrix(data)) stop("data must be a data.frame or matrix.")
+  if (!is.null(column_labels)) {
+    if (length(column_labels) != ncol(data)) stop("column_labels length mismatch.")
+    colnames(data) <- column_labels
+  }
+  dir_path <- dirname(file_path)
+  if (!dir.exists(dir_path)) dir.create(dir_path, recursive = TRUE, showWarnings = FALSE)
+  if (file.exists(file_path) && !isTRUE(overwrite)) stop("File exists and overwrite = FALSE: ", file_path)
+  
+  if (!requireNamespace("knitr", quietly = TRUE)) stop("Package 'knitr' is required")
+  tbl <- knitr::kable(data, format = format, booktabs = TRUE, caption = caption, escape = escape)
+  
+  if (requireNamespace("kableExtra", quietly = TRUE)) {
+    if (format == "latex") {
+      tbl <- kableExtra::kable_styling(tbl, latex_options = c("hold_position"))
+      if (!is.null(footnote)) tbl <- kableExtra::footnote(tbl, general = footnote, threeparttable = TRUE)
+    } else {
+      tbl <- kableExtra::kable_styling(tbl, bootstrap_options = c("condensed","responsive"))
+      if (!is.null(footnote)) tbl <- kableExtra::footnote(tbl, general = footnote)
+    }
+    tbl_string <- as.character(tbl)
+  } else {
+    tbl_string <- paste(tbl, collapse = "\n")
+    if (!is.null(footnote)) tbl_string <- paste0(tbl_string, sprintf("\n\nNote: %s\n", footnote))
+  }
+  
+  if (isTRUE(return_string)) return(tbl_string)
+  
+  tryCatch({
+    writeLines(tbl_string, con = file_path, useBytes = TRUE)
+    if (is.function(manifest_hook)) manifest_hook(list(type = "table", file = file_path, caption = caption))
+    invisible(file_path)
+  }, error = function(e) stop("Failed to write table: ", conditionMessage(e)))
+}
+
+export_table_bundle <- function(tbl,
+                                name,
+                                tables_dir,
+                                caption,
+                                column_labels = NULL,
+                                footnote = NULL,
+                                manifest_hook = NULL) {
+  
+  csv_path <- file.path(tables_dir, paste0(name, ".csv"))
+  tex_path <- file.path(tables_dir, paste0(name, ".tex"))
+  
+  readr::write_csv(tbl, csv_path)
+  
+  table_as_is(
+    data = tbl,
+    file_path = tex_path,
+    column_labels = column_labels,
+    caption = caption,
+    format = "latex",
+    footnote = footnote,
+    manifest_hook = manifest_hook
+  )
+  
+  invisible(list(csv = csv_path, tex = tex_path))
+}

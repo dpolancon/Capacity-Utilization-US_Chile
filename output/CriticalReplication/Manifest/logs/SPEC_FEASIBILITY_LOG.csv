@@ -1,0 +1,5 @@
+"timestamp","script","spec_key","status","reason_code","message"
+"2026-03-03 18:34:11","22_VECM_S1.R","22_VECM_S1.R|det=SR_const__LR_const|p=1:7","skipped_invalid_det","INVALID_DET_COMBO","Invalid deterministic combo: SR=const, LR=const."
+"2026-03-03 18:34:17","22_VECM_S1.R","22_VECM_S1.R|det=SR_const__LR_both|p=1:7","skipped_invalid_det","INVALID_DET_COMBO","Invalid deterministic combo: SR=const, LR=both."
+"2026-03-03 18:35:12","23_VECM_S2.R","det=SR_const__LR_const|p=1:7","skipped_invalid_det","INVALID_DET_COMBO","Invalid deterministic combo: SR=const, LR=const."
+"2026-03-03 18:35:23","23_VECM_S2.R","det=SR_const__LR_both|p=1:7","skipped_invalid_det","INVALID_DET_COMBO","Invalid deterministic combo: SR=const, LR=both."
