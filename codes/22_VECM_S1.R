@@ -41,6 +41,7 @@ source(here::here("codes","25_envelope_tools.R"))
 source(here::here("codes","24_complexity_penalties.R"))
 
 set.seed(CONFIG$seed %||% 123)
+RUN_ROOT <- Sys.getenv("STAGE4_RUN_ROOT", unset = "")
 
 # ============================================================
 # Stage locks
@@ -65,7 +66,7 @@ ETA_GRID <- c(1, 1.5, 2, 3, 4, 6, 8)
 # ============================================================
 # Output paths
 # ============================================================
-out_root <- here::here(CONFIG$OUT_CR$exercise_c %||% "output/CriticalReplication/Exercise_c_VECM_S1_r1")
+out_root <- if (nzchar(RUN_ROOT)) file.path(RUN_ROOT, "Exercise_c_VECM_S1_r1") else here::here(CONFIG$OUT_CR$exercise_c %||% "output/CriticalReplication/Exercise_c_VECM_S1_r1")
 
 make_branch_dirs <- function(det_tag) {
   base <- file.path(out_root, det_tag)
@@ -915,7 +916,7 @@ any_infeasible <- any(vapply(branch_runs, function(x) !is.null(x$status) && x$st
 message("STAGE4_STATUS_HINT: script=22_VECM_S1.R infeasible_specs_skipped=", ifelse(any_infeasible, "true", "false"))
 message("Stage S1 completed across all SR/LR branches.")
 
-manifest_dir <- here::here(CONFIG$OUT_CR$manifest %||% "output/CriticalReplication/Manifest")
+manifest_dir <- if (nzchar(RUN_ROOT)) file.path(RUN_ROOT, "Manifest") else here::here(CONFIG$OUT_CR$manifest %||% "output/CriticalReplication/Manifest")
 dir.create(manifest_dir, recursive = TRUE, showWarnings = FALSE)
 manifest_path <- file.path(manifest_dir, "RUN_MANIFEST_stage4.md")
 cat(

@@ -8,13 +8,18 @@
 
 options(stringsAsFactors = FALSE)
 
-out_root <- file.path("output", "CriticalReplication")
+source(here::here("codes", "10_config.R"))
+
+run_root_env <- Sys.getenv("STAGE4_RUN_ROOT", unset = "")
+source_root <- CONFIG$OUT_CR_ROOT %||% file.path("output", "CriticalReplication")
+out_root <- if (nzchar(run_root_env)) run_root_env else source_root
 crosswalk_dir <- file.path(out_root, "Crosswalk")
 dir.create(crosswalk_dir, recursive = TRUE, showWarnings = FALSE)
 
+message("[crosswalk] Source directory: ", normalizePath(source_root, winslash = "/", mustWork = FALSE))
 message("[crosswalk] Output directory: ", normalizePath(crosswalk_dir, winslash = "/", mustWork = FALSE))
 
-csv_files <- list.files(out_root, pattern = "\\.csv$", recursive = TRUE, full.names = TRUE)
+csv_files <- list.files(source_root, pattern = "\\.csv$", recursive = TRUE, full.names = TRUE)
 if (length(csv_files) > 0L) {
   csv_files <- csv_files[!grepl("/Crosswalk/", gsub("\\\\", "/", csv_files), ignore.case = TRUE)]
 }

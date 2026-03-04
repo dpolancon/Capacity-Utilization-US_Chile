@@ -33,6 +33,8 @@ suppressPackageStartupMessages({
 source(here::here("codes", "10_config.R"))
 source(here::here("codes", "99_utils.R"))
 
+RUN_ROOT <- Sys.getenv("STAGE4_RUN_ROOT", unset = "")
+
 # -----------------------------
 # Helpers (local)
 # -----------------------------
@@ -212,11 +214,11 @@ df0 <- df0 |>
 # -----------------------------
 # 1.5) Output dirs + log sink (CONFIG)
 # -----------------------------
-EXERCISE_DIR <- here::here(CONFIG$OUT_CR$exercise_a %||% "output/CriticalReplication/Exercise_a_ARDL_faithful")
+EXERCISE_DIR <- if (nzchar(RUN_ROOT)) file.path(RUN_ROOT, "Exercise_a_ARDL_faithful") else here::here(CONFIG$OUT_CR$exercise_a %||% "output/CriticalReplication/Exercise_a_ARDL_faithful")
 CSV_DIR <- file.path(EXERCISE_DIR, "csv")
 LOG_DIR <- file.path(EXERCISE_DIR, "logs")
 FIG_DIR <- file.path(EXERCISE_DIR, "figs")
-MAN_DIR <- here::here(CONFIG$OUT_CR$manifest %||% "output/CriticalReplication/Manifest")
+MAN_DIR <- if (nzchar(RUN_ROOT)) file.path(RUN_ROOT, "Manifest") else here::here(CONFIG$OUT_CR$manifest %||% "output/CriticalReplication/Manifest")
 
 dir.create(CSV_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(LOG_DIR, recursive = TRUE, showWarnings = FALSE)

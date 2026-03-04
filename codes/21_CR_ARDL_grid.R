@@ -38,6 +38,7 @@ source(here::here("codes", "25_envelope_tools.R"))
 source(here::here("codes", "24_complexity_penalties.R"))
 
 set.seed(CONFIG$seed)
+RUN_ROOT <- Sys.getenv("STAGE4_RUN_ROOT", unset = "")
 
 # ----------------------------------------------------------
 
@@ -45,12 +46,12 @@ set.seed(CONFIG$seed)
 
 # ----------------------------------------------------------
 
-OUT_ROOT <- here::here(CONFIG$OUT_CR_ROOT %||% "output/CriticalReplication")
-EXERCISE_DIR <- here::here(CONFIG$OUT_CR$exercise_b %||% "output/CriticalReplication/Exercise_b_ARDL_grid")
+OUT_ROOT <- if (nzchar(RUN_ROOT)) RUN_ROOT else here::here(CONFIG$OUT_CR_ROOT %||% "output/CriticalReplication")
+EXERCISE_DIR <- if (nzchar(RUN_ROOT)) file.path(OUT_ROOT, "Exercise_b_ARDL_grid") else here::here(CONFIG$OUT_CR$exercise_b %||% "output/CriticalReplication/Exercise_b_ARDL_grid")
 CSV_DIR  <- file.path(EXERCISE_DIR, "csv")
 FIG_DIR  <- file.path(EXERCISE_DIR, "figs")
 LOG_DIR  <- file.path(EXERCISE_DIR, "logs")
-MAN_DIR  <- here::here(CONFIG$OUT_CR$manifest %||% "output/CriticalReplication/Manifest")
+MAN_DIR  <- if (nzchar(RUN_ROOT)) file.path(OUT_ROOT, "Manifest") else here::here(CONFIG$OUT_CR$manifest %||% "output/CriticalReplication/Manifest")
 
 dir.create(CSV_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(FIG_DIR, recursive = TRUE, showWarnings = FALSE)
@@ -159,7 +160,7 @@ for (p in 1:P_MAX) {
         HQ = HQ_val,
         AICc = AICc_val,
         SI_Y = NA,
-        s_K = q / (p + q),
+        sK_ardl = ifelse(((p - 1) + q) == 0, NA_real_, q / ((p - 1) + q)),
         notes = "",
         fit_term_source = "ARDL::logLik_gaussian_OLS",
         covariance_source = "vcov(ARDL_fit)_OLS"

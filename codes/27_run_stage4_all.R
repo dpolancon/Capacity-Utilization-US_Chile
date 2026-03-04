@@ -24,7 +24,9 @@ safe_system <- function(cmd, args = character()) {
 source(here::here("codes", "10_config.R"))
 
 run_start <- Sys.time()
-run_id <- paste0("stage4_", format(run_start, "%Y%m%d_%H%M%S"))
+run_id <- paste0("stage4_", format(run_start, "%Y%m%d_%H%M%S"), "_", sprintf("%04d", sample.int(9999, 1)))
+run_root <- here::here("output", paste0("run_", run_id), "CriticalReplication")
+Sys.setenv(STAGE4_RUN_ID = run_id, STAGE4_RUN_ROOT = run_root)
 
 tz_name <- Sys.timezone()
 if (is.na(tz_name) || !nzchar(tz_name)) tz_name <- "UNKNOWN"
@@ -32,7 +34,7 @@ if (is.na(tz_name) || !nzchar(tz_name)) tz_name <- "UNKNOWN"
 git_hash <- safe_system("git", c("rev-parse", "--short", "HEAD"))
 git_hash_val <- if (git_hash$status == 0L) trimws(paste(git_hash$output, collapse = "\n")) else "UNAVAILABLE"
 
-manifest_dir <- here::here("output", "CriticalReplication", "Manifest")
+manifest_dir <- file.path(run_root, "Manifest")
 manifest_logs_dir <- file.path(manifest_dir, "logs")
 dir.create(manifest_logs_dir, recursive = TRUE, showWarnings = FALSE)
 
@@ -46,14 +48,18 @@ script_plan <- data.frame(
     "21_CR_ARDL_grid.R",
     "22_VECM_S1.R",
     "23_VECM_S2.R",
-    "26_crosswalk_tables.R"
+    "26_crosswalk_tables.R",
+    "28_results_pack_generato.R",
+    "29_S1_VECM_r1_results_pack_gen.R"
   ),
   grid_dimensions = c(
     "Fixed ARDL replication (single locked specification)",
     "ARDL grid (p x q; values declared inside script)",
     "VECM S1 grid (lag/deterministic combinations; values declared inside script)",
     "VECM S2 grid (m=3, rank r in {0,1,2} + lag/deterministics as scripted)",
-    "Crosswalk table builder (no independent grid)"
+    "Crosswalk table builder (no independent grid)",
+    "ResultsPack binder (tables + figure index)",
+    "Stage-3 dedicated results package generator"
   ),
   stringsAsFactors = FALSE
 )
@@ -75,7 +81,7 @@ script_plan$git_hash <- git_hash_val
 # ---- execute ---------------------------------------------------------------
 for (i in seq_len(nrow(script_plan))) {
   log_file <- file.path(manifest_logs_dir, sub("\\.R$", "_run.log", script_plan$script[i]))
-  script_plan$log_path[i] <- file.path("output", "CriticalReplication", "Manifest", "logs", basename(log_file))
+  script_plan$log_path[i] <- file.path("output", paste0("run_", run_id), "CriticalReplication", "Manifest", "logs", basename(log_file))
 
   if (!isTRUE(script_plan$exists[i])) {
     writeLines(sprintf("MISSING SCRIPT: %s", script_plan$path[i]), con = log_file)
@@ -135,8 +141,8 @@ if (is.null(CONFIG$WINDOWS_LOCKED$shaikh_window)) {
 
 # ---- output artifact index -------------------------------------------------
 artifact_files <- character()
-if (dir.exists(here::here("output"))) {
-  all_outputs <- list.files(here::here("output"), recursive = TRUE, full.names = TRUE)
+if (dir.exists(run_root)) {
+  all_outputs <- list.files(run_root, recursive = TRUE, full.names = TRUE)
   if (length(all_outputs) > 0L) {
     finfo <- file.info(all_outputs)
     artifact_files <- all_outputs[!is.na(finfo$mtime) & finfo$mtime >= run_start - 1]
@@ -167,6 +173,7 @@ md <- c(
   "",
   "## Run metadata",
   sprintf("- Run ID: `%s`", run_id),
+  sprintf("- Run root: `%s`", run_root),
   sprintf("- Timestamp: `%s`", iso_stamp(run_start)),
   sprintf("- Timezone: `%s`", tz_name),
   sprintf("- Git hash: `%s`", git_hash_val),
@@ -213,7 +220,7 @@ md <- c(
   md,
   "",
   "## Session snapshot",
-  sprintf("- `sessionInfo()` saved to `%s`", file.path("output", "CriticalReplication", "Manifest", "logs", basename(sessioninfo_path))),
+  sprintf("- `sessionInfo()` saved to `%s`", file.path("output", paste0("run_", run_id), "CriticalReplication", "Manifest", "logs", basename(sessioninfo_path))),
   "",
   "## Deviations / notes"
 )

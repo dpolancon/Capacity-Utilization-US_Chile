@@ -27,20 +27,25 @@ suppressPackageStartupMessages({
 # ------------------------------------------------------------
 # Load CONFIG + UTILS (repo-native)
 # ------------------------------------------------------------
-source("10_config.R")  # defines CONFIG
-source("99_utils.R")   # defines safe_read_csv, export_table_bundle, etc.
+source(here::here("codes", "10_config.R"))  # defines CONFIG
+source(here::here("codes", "99_utils.R"))   # defines safe_read_csv, export_table_bundle, etc.
 
 stopifnot(exists("CONFIG"))
 stopifnot(is.list(CONFIG))
 stopifnot(!is.null(CONFIG$OUT_CR))
 stopifnot(!is.null(CONFIG$OUT_CR$exercise_c))
 
-BASE_DIR <- CONFIG$OUT_CR$exercise_c
+RUN_ID <- Sys.getenv("STAGE4_RUN_ID", unset = paste0("stage4_pkg_", format(Sys.time(), "%Y%m%d_%H%M%S")))
+RUN_ROOT <- Sys.getenv("STAGE4_RUN_ROOT", unset = "")
+if (!nzchar(RUN_ROOT)) RUN_ROOT <- CONFIG$OUT_CR_ROOT
+BASE_DIR <- file.path(RUN_ROOT, "Exercise_c_VECM_S1_r1")
+if (!dir.exists(BASE_DIR)) BASE_DIR <- CONFIG$OUT_CR$exercise_c
+
 
 # ------------------------------------------------------------
 # Results package output dirs
 # ------------------------------------------------------------
-OUT_PKG <- file.path(CONFIG$OUT_CR_ROOT, "ResultsPackages", "VECM_S1_lnY_lnK")
+OUT_PKG <- file.path(RUN_ROOT, "ResultsPackages", "VECM_S1_lnY_lnK")
 DIR_TABLES <- file.path(OUT_PKG, "tables")
 DIR_FIGS   <- file.path(OUT_PKG, "figs")
 DIR_LOGS   <- file.path(OUT_PKG, "logs")
@@ -110,6 +115,8 @@ dl <- lapply(branches, read_branch)
 # Build MANIFEST-like table for this package (inputs consumed)
 # ------------------------------------------------------------
 inputs_manifest <- tibble(
+  run_id = RUN_ID,
+  stage_tag = "S1_VECM_lnY_lnK_results_pack",
   branch = branches,
   lattice = map_lgl(dl, ~ !is.null(.x$lattice)),
   top10   = map_lgl(dl, ~ !is.null(.x$top)),
@@ -123,6 +130,7 @@ print(inputs_manifest)
 cat("\n")
 
 export_table_bundle(
+  CONFIG = CONFIG,
   tbl = inputs_manifest,
   name = "MANIFEST_S3_inputs_by_branch",
   tables_dir = DIR_TABLES,
@@ -173,9 +181,11 @@ core_cols <- c(
 core_cols_present <- core_cols[core_cols %in% names(lattice_all)]
 
 spec_universe <- lattice_all |>
-  select(all_of(core_cols_present))
+  select(all_of(core_cols_present)) |>
+  mutate(run_id = RUN_ID, stage_tag = "S1_VECM_lnY_lnK_results_pack", .before = 1)
 
 export_table_bundle(
+  CONFIG = CONFIG,
   tbl = spec_universe,
   name = "DATA_S3_specification_universe",
   tables_dir = DIR_TABLES,
@@ -232,9 +242,11 @@ wcols_pref <- c(
 )
 wcols <- wcols_pref[wcols_pref %in% names(winners)]
 
-TAB_winners <- winners |> select(all_of(wcols))
+TAB_winners <- winners |> select(all_of(wcols)) |>
+  mutate(run_id = RUN_ID, stage_tag = "S1_VECM_lnY_lnK_results_pack", .before = 1)
 
 export_table_bundle(
+  CONFIG = CONFIG,
   tbl = TAB_winners,
   name = "TAB_S3_confinement_winners_by_branch",
   tables_dir = DIR_TABLES,
@@ -259,10 +271,12 @@ summarise_by_branch <- function(df, var) {
 theta_sum <- summarise_by_branch(spec_universe, "theta")
 stab_sum  <- summarise_by_branch(spec_universe, "stability_margin")
 
-TAB_metrics <- bind_rows(theta_sum, stab_sum)
+TAB_metrics <- bind_rows(theta_sum, stab_sum) |>
+  mutate(run_id = RUN_ID, stage_tag = "S1_VECM_lnY_lnK_results_pack", .before = 1)
 
 if (nrow(TAB_metrics) > 0) {
   export_table_bundle(
+    CONFIG = CONFIG,
     tbl = TAB_metrics,
     name = "TAB_S3_metric_summary_by_branch",
     tables_dir = DIR_TABLES,

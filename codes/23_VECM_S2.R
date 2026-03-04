@@ -25,6 +25,7 @@ source(here::here("codes","24_complexity_penalties.R"))
 source(here::here("codes","25_envelope_tools.R"))
 
 set.seed(CONFIG$seed %||% 123)
+RUN_ROOT <- Sys.getenv("STAGE4_RUN_ROOT", unset = "")
 
 WINDOW_TAG <- "shaikh_window"
 STATE_TAG  <- "S2_lnY_lnK_e"
@@ -37,7 +38,7 @@ R_SET  <- 0:2
 TOL_UNIT <- 1e-3
 ETA_GRID <- c(1, 1.5, 2, 3, 4, 6, 8)
 
-out_root <- here::here(CONFIG$OUT_CR$exercise_d %||% "output/CriticalReplication/Exercise_d_VECM_S2_m3_rank")
+out_root <- if (nzchar(RUN_ROOT)) file.path(RUN_ROOT, "Exercise_d_VECM_S2_m3_rank") else here::here(CONFIG$OUT_CR$exercise_d %||% "output/CriticalReplication/Exercise_d_VECM_S2_m3_rank")
 
 make_branch_dirs <- function(det_tag) {
   base <- file.path(out_root, det_tag)
