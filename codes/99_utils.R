@@ -636,7 +636,7 @@ tsdyn_loglik_safe2 <- function(fit, m) {
 
 
 # ============================================================
-# export table bundle  - table_as_is
+#  table_as_is
 # ============================================================
 # -------- Table export with optional kableExtra footnote/styling --------
 table_as_is <- function(data, file_path,
@@ -684,18 +684,34 @@ table_as_is <- function(data, file_path,
   }, error = function(e) stop("Failed to write table: ", conditionMessage(e)))
 }
 
-export_table_bundle <- function(tbl,
+
+
+# -----------------------------
+# Table export wrapper (CSV + TEX) using your table_as_is()
+# -----------------------------
+export_table_bundle <- function(CONFIG,
+                                tbl,
                                 name,
                                 tables_dir,
                                 caption,
+                                stage_tag = "RESULTSPACK",
+                                run_id = NA_character_,
                                 column_labels = NULL,
                                 footnote = NULL,
-                                manifest_hook = NULL) {
+                                escape = TRUE) {
+  
+  if (!exists("table_as_is", mode = "function")) {
+    stop("Missing helper `table_as_is()`. Source the file that defines it.", call. = FALSE)
+  }
+  if (!is.data.frame(tbl) && !is.matrix(tbl)) stop("tbl must be data.frame or matrix", call. = FALSE)
+  
+  dir.create(tables_dir, recursive = TRUE, showWarnings = FALSE)
   
   csv_path <- file.path(tables_dir, paste0(name, ".csv"))
   tex_path <- file.path(tables_dir, paste0(name, ".tex"))
   
-  readr::write_csv(tbl, csv_path)
+  readr::write_csv(as.data.frame(tbl), csv_path)
+  append_results_pack_export_log(CONFIG, run_id, stage_tag, "table_csv", csv_path, caption)
   
   table_as_is(
     data = tbl,
@@ -703,9 +719,12 @@ export_table_bundle <- function(tbl,
     column_labels = column_labels,
     caption = caption,
     format = "latex",
+    overwrite = TRUE,
+    escape = escape,
     footnote = footnote,
-    manifest_hook = manifest_hook
+    manifest_hook = NULL
   )
+  append_results_pack_export_log(CONFIG, run_id, stage_tag, "table_tex", tex_path, caption)
   
   invisible(list(csv = csv_path, tex = tex_path))
 }

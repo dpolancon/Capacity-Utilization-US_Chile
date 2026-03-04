@@ -1,14 +1,8 @@
 # ============================================================
-# PATCHSET — leverage CONFIG + 99_utils for ResultsPack
-# (1) Remove duplicated export_table_bundle definitions (you have it 3x)
-# (2) Reuse CONFIG$OUT_CR paths (stop hardcoding output/CriticalReplication)
-# (3) Add a lightweight ResultsPack manifest hook (table exports recorded)
-# (4) Avoid name collisions: safe_read_csv exists in 99_utils; don't re-define
-# (5) Keep lag logic untouched (this is reporting only)
-#
-# Drop this file as: codes/utils/results_pack_utils.R
-# Then in 27_results_pack_generator.R do:
-#   source("codes/10_config.R"); source("codes/99_utils.R"); source("codes/utils/results_pack_utils.R")
+# UPDATED 28_results_pack_generator.R
+# - Uses CONFIG paths
+# - Uses 99_utils safe_read_csv (base R) and det_pairs if needed later
+# - Uses export_table_bundle(CONFIG, ...)
 # ============================================================
 
 
@@ -22,6 +16,9 @@ source(here::here("codes","99_utils.R"))
 suppressPackageStartupMessages({
   library("readr")
   library("dplyr")
+  library("stringr")
+  library("purrr")
+  library("readr")
 })
 
 # -----------------------------
@@ -63,74 +60,7 @@ append_results_pack_export_log <- function(CONFIG,
   invisible(path)
 }
 
-# -----------------------------
-# Table export wrapper (CSV + TEX) using your table_as_is()
-# -----------------------------
-export_table_bundle <- function(CONFIG,
-                                tbl,
-                                name,
-                                tables_dir,
-                                caption,
-                                stage_tag = "RESULTSPACK",
-                                run_id = NA_character_,
-                                column_labels = NULL,
-                                footnote = NULL,
-                                escape = TRUE) {
-  
-  if (!exists("table_as_is", mode = "function")) {
-    stop("Missing helper `table_as_is()`. Source the file that defines it.", call. = FALSE)
-  }
-  if (!is.data.frame(tbl) && !is.matrix(tbl)) stop("tbl must be data.frame or matrix", call. = FALSE)
-  
-  dir.create(tables_dir, recursive = TRUE, showWarnings = FALSE)
-  
-  csv_path <- file.path(tables_dir, paste0(name, ".csv"))
-  tex_path <- file.path(tables_dir, paste0(name, ".tex"))
-  
-  readr::write_csv(as.data.frame(tbl), csv_path)
-  append_results_pack_export_log(CONFIG, run_id, stage_tag, "table_csv", csv_path, caption)
-  
-  table_as_is(
-    data = tbl,
-    file_path = tex_path,
-    column_labels = column_labels,
-    caption = caption,
-    format = "latex",
-    overwrite = TRUE,
-    escape = escape,
-    footnote = footnote,
-    manifest_hook = NULL
-  )
-  append_results_pack_export_log(CONFIG, run_id, stage_tag, "table_tex", tex_path, caption)
-  
-  invisible(list(csv = csv_path, tex = tex_path))
-}
 
-# ============================================================
-# UPDATED 28_results_pack_generator.R
-# - Uses CONFIG paths
-# - Uses 99_utils safe_read_csv (base R) and det_pairs if needed later
-# - Uses export_table_bundle(CONFIG, ...)
-# ============================================================
-
-
-# ============================================================
-# 28_results_pack_generator.R
-# Critical Replication — ResultsPack (Binding Tables + Figure Index)
-# v1.2 — CONFIG-driven, manifest-hooked
-# ============================================================
-
-suppressPackageStartupMessages({
-  library(dplyr)
-  library(stringr)
-  library(purrr)
-  library(readr)
-})
-
-# ---- Load config + utils (expected in your repo) ----
-# source("codes/10_config.R")
-# source("codes/99_utils.R")
-# source("codes/utils/results_pack_utils.R")
 
 if (!exists("CONFIG")) stop("CONFIG not found. Did you source codes/10_config.R ?", call. = FALSE)
 
