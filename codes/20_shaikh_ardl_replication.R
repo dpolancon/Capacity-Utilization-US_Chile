@@ -1,25 +1,34 @@
 # ============================================================
-# 20_shaikh_ardl_replication_WRAPPED.R  (PATCH CONSOLIDATE)
+# 20_shaikh_ardl_replication.R  (PATCH CONSOLIDATE v2)
 #
-# Faithful Shaikh ARDL replication, consolidated:
-#  - console results + full log capture (sink split=TRUE)
-#  - CSV export of replication series
-#  - key-stats CSV export (LaTeX feed)
-#  - single plot comparing: Shaikh series + replication variants
-#  - two alternative numeraires:
-#       (A) p rebased so p(2011)=100
-#       (B) p rebased so p(1947)=100
+# Study A — Shaikh faithful ARDL replication + CASE TOGGLE (1–5)
+#
+# LOCKED OBJECTIVE (Study A):
+#   - Fix lag structure at (p,q) = (2,4)
+#   - Run ALL 5 PSS/ARDL “cases” (1..5) for the SAME (2,4) spec
+#   - Admissibility gate for inclusion in the main comparison figure:
+#         PASS bounds F-test (cointegration gate)
+#   - t-bounds test:
+#         reported for all cases BUT “robustness star” only applies when
+#         t-bounds is admissible (cases 1,3,5 per your lockdown)
+#   - Figure: Shaikh u vs replication u for all F-admissible cases
+#            with legend stars for t-bounds robustness (1/5/10%).
+#   - Tables (CSV + optional LaTeX feed):
+#        (i) Case contest table (ALL cases, levels not deltas):
+#            F and t bounds stats/pvals + stars, theta + stars, alpha (UECM)
+#        (ii) Coefficient summary table for ALL cases (LR multipliers + scaled LR dummies)
+#
+# Uses:
+#   - CONFIG from codes/10_config.R
+#   - utilities from codes/99_utils.R (safe_write_csv, now_stamp, %||%, add_stars if present)
 #
 # Outputs (under Exercise_a_ARDL_faithful):
-#  - csv/SHAIKH_ARDL_replication_series_shaikh_window.csv
-#  - csv/SHAIKH_ARDL_replication_four_series_shaikh_window.csv
-#  - csv/SHAIKH_ARDL_replication_key_stats_shaikh_window.csv
-#  - csv/SHAIKH_ARDL_replication_spec_report_shaikh_window.csv
-#  - logs/SHAIKH_ARDL_replication_log_shaikh_window.txt
-#  - figs/FIG_S1_ARDL_u_compare_base2011_shaikh_window.png
-#  - figs/FIG_S1_ARDL_u_compare_base1947_shaikh_window.png
-#  - figs/FIG_SHAIKH_ARDL_u_shaikh_window.png (legacy compatibility)
-#  - Manifest/RUN_MANIFEST_stage4.md (append)
+#   - csv/SHAIKH_ARDL_case_contest_shaikh_window.csv
+#   - csv/SHAIKH_ARDL_coef_table_shaikh_window.csv
+#   - csv/SHAIKH_ARDL_u_cases_shaikh_window.csv
+#   - figs/FIG_S1_ARDL_u_compare_cases_Fpass_shaikh_window.png
+#   - logs/SHAIKH_ARDL_replication_log_shaikh_window.txt
+#   - Manifest/RUN_MANIFEST_stage4.md (append)
 # ============================================================
 
 rm(list = ls())
@@ -29,18 +38,41 @@ suppressPackageStartupMessages({
   library(readxl)
   library(dplyr)
   library(tidyr)
+  library(purrr)
+  library(stringr)
   library(ARDL)
   library(ggplot2)
 })
 
-# --- load CONFIG + utils (repo-local) ---
+# ------------------------------------------------------------
+# Load CONFIG + UTILS (repo-native)
+# ------------------------------------------------------------
 source(here::here("codes", "10_config.R"))
 source(here::here("codes", "99_utils.R"))
 
-# -----------------------------
-# Helpers (local)
-# -----------------------------
+stopifnot(exists("CONFIG"))
+stopifnot(is.list(CONFIG))
 
+# ------------------------------------------------------------
+# LOCKED TOGGLES (Study A)
+# ------------------------------------------------------------
+WINDOW_TAG <- "shaikh_window"
+ORDER      <- c(2, 4)     # (p,q) locked
+CASES      <- 1:5         # PSS cases 1..5
+EXACT_TEST <- FALSE       # FALSE = asymptotic; TRUE = in-sample (exact=TRUE)
+
+# Admissibility for t-bounds robustness labeling (your lockdown)
+T_BOUNDS_ADMISSIBLE_CASES <- c(1, 3, 5)
+
+# F-gate alpha (used only for flagging; p-values still reported)
+F_GATE_ALPHA <- 0.10
+
+# Step dummies (kept as in your current script)
+DUMMY_YEARS <- c(1956L, 1974L, 1980L)
+
+# ------------------------------------------------------------
+# Helpers (local)
+# ------------------------------------------------------------
 make_step_dummies <- function(df, years) {
   for (yy in years) df[[paste0("d", yy)]] <- as.integer(df$year >= yy)
   df
@@ -69,90 +101,48 @@ extract_bt <- function(bt_obj) {
   out
 }
 
-get_lr_table_with_scaled_dummies <- function(fit_ardl, dummy_names) {
+# stars helper: prefer your utils add_stars(); fallback local
+stars_from_p <- function(p) {
+  if (!is.finite(p)) return("")
+  if (p <= 0.01) return("***")
+  if (p <= 0.05) return("**")
+  if (p <= 0.10) return("*")
+  ""
+}
+
+# LR multipliers + scaled LR dummy multipliers (since dummies enter outside LR relation but have LR multipliers)
+get_lr_table_with_scaled_dummies <- function(fit_ardl, lnY_name = "lnY", dummy_names = character()) {
   lr_mult <- ARDL::multipliers(fit_ardl, type = "lr")
   
   coefs <- coef(fit_ardl)
-  den <- 1 - sum(coefs[grep("^L\\(lnY,", names(coefs))])
+  # denominator: 1 - sum phi_i on lagged dependent variable
+  den <- 1 - sum(coefs[grep(paste0("^L\\(", lnY_name, ","), names(coefs))])
   
-  dummy_lr <- coefs[dummy_names] / den
-  
-  vc <- vcov(fit_ardl)
-  se_delta <- sqrt(diag(vc))[dummy_names]
-  se_lr <- se_delta / abs(den)
-  
-  t_lr <- dummy_lr / se_lr
-  p_lr <- 2 * pt(abs(t_lr), df = df.residual(fit_ardl), lower.tail = FALSE)
-  
-  dummy_table <- data.frame(
-    Term         = dummy_names,
-    Estimate     = as.numeric(dummy_lr),
-    `Std. Error` = as.numeric(se_lr),
-    `t value`    = as.numeric(t_lr),
-    `Pr(>|t|)`   = as.numeric(p_lr),
-    stringsAsFactors = FALSE
-  )
-  
-  names(dummy_table) <- names(lr_mult)
-  lr_full_table <- rbind(lr_mult, dummy_table)
-  
-  list(lr_full_table = lr_full_table, den = den)
-}
-
-run_one_variant <- function(df, lnY_col, lnK_col, dummy_names,
-                            order = c(2,4), case = "uc") {
-  
-  df_ts <- ts(df |> select(all_of(c(lnY_col, lnK_col, dummy_names))),
-              start = min(df$year), frequency = 1)
-  
-  fml <- as.formula(paste0(lnY_col, " ~ ", lnK_col, " | ", paste(dummy_names, collapse = " + ")))
-  fit_ardl <- ARDL::ardl(formula = fml, data = df_ts, order = order)
-  
-  # Bounds tests
-  bt_f_asympt <- ARDL::bounds_f_test(fit_ardl, case = case, alpha = 0.05, pvalue = TRUE, exact = FALSE)
-  bt_f_exact  <- ARDL::bounds_f_test(fit_ardl, case = case, alpha = 0.05, pvalue = TRUE, exact = TRUE)
-  bt_t_asympt <- ARDL::bounds_t_test(fit_ardl, case = case, alpha = 0.05, pvalue = TRUE, exact = FALSE)
-  bt_t_exact  <- ARDL::bounds_t_test(fit_ardl, case = case, alpha = 0.05, pvalue = TRUE, exact = TRUE)
-  
-  # LR multipliers incl scaled dummy LR
-  lr_pack <- get_lr_table_with_scaled_dummies(fit_ardl, dummy_names)
-  lr_full <- lr_pack$lr_full_table
-  
-  a_lr <- lr_full$Estimate[lr_full$Term == "(Intercept)"]
-  b_lr <- lr_full$Estimate[lr_full$Term == lnK_col]
-  
-  dummy_coef   <- lr_full$Estimate[match(dummy_names, lr_full$Term)]
-  dummy_effect <- rowSums(df[dummy_names] * dummy_coef)
-  
-  lnY <- df[[lnY_col]]
-  lnK <- df[[lnK_col]]
-  
-  lnYp_with <- a_lr + b_lr * lnK + dummy_effect
-  lnYp_no   <- a_lr + b_lr * lnK
-  
-  u_with <- exp(lnY - lnYp_with)
-  u_no   <- exp(lnY - lnYp_no)
-  
-  # λ from UECM
-  uecm_model <- ARDL::uecm(fit_ardl)
-  uecm_coef <- tryCatch(summary(uecm_model)$coefficients, error = function(e) NULL)
-  lambda_hat <- NA_real_
-  if (!is.null(uecm_coef)) {
-    rr <- grep("^L\\(lnY, 1\\)$", rownames(uecm_coef), value = TRUE)
-    if (length(rr) == 1) lambda_hat <- as.numeric(uecm_coef[rr, "Estimate"])
+  dummy_table <- NULL
+  if (length(dummy_names)) {
+    dummy_lr <- coefs[dummy_names] / den
+    
+    vc <- vcov(fit_ardl)
+    se_delta <- sqrt(diag(vc))[dummy_names]
+    se_lr <- se_delta / abs(den)
+    
+    t_lr <- dummy_lr / se_lr
+    p_lr <- 2 * pt(abs(t_lr), df = df.residual(fit_ardl), lower.tail = FALSE)
+    
+    dummy_table <- data.frame(
+      Term         = dummy_names,
+      Estimate     = as.numeric(dummy_lr),
+      `Std. Error` = as.numeric(se_lr),
+      `t value`    = as.numeric(t_lr),
+      `Pr(>|t|)`   = as.numeric(p_lr),
+      stringsAsFactors = FALSE
+    )
+    names(dummy_table) <- names(lr_mult)
   }
   
-  list(
-    fml = fml,
-    fit = fit_ardl,
-    bt  = list(f_asympt = bt_f_asympt, f_exact = bt_f_exact,
-               t_asympt = bt_t_asympt, t_exact = bt_t_exact),
-    lr_full = lr_full,
-    lambda_hat = lambda_hat,
-    series = list(u_with = u_with, u_no = u_no, lnYp_with = lnYp_with, lnYp_no = lnYp_no)
-  )
+  lr_full_table <- if (!is.null(dummy_table)) rbind(lr_mult, dummy_table) else lr_mult
+  list(lr_full_table = lr_full_table, den = den)
 }
-
 
 extract_lr_row <- function(lr_full, term) {
   if (is.null(lr_full) || !("Term" %in% names(lr_full))) return(list(est = NA_real_, p = NA_real_))
@@ -165,62 +155,40 @@ extract_lr_row <- function(lr_full, term) {
   )
 }
 
-extract_dummy_lr_terms <- function(lr_full, dummy_names) {
-  out <- setNames(as.list(rep(NA_real_, length(dummy_names))), paste0("lr_", dummy_names))
-  if (is.null(lr_full) || !("Term" %in% names(lr_full))) return(out)
-  for (dn in dummy_names) {
-    rr <- lr_full[lr_full$Term == dn, , drop = FALSE]
-    if (nrow(rr) > 0) out[[paste0("lr_", dn)]] <- suppressWarnings(as.numeric(rr$Estimate[1]))
-  }
-  out
+# Extract alpha (speed) from UECM coefficient on L(lnY,1)
+extract_alpha_from_uecm <- function(fit_ardl, lnY_name = "lnY") {
+  uecm_model <- ARDL::uecm(fit_ardl)
+  uecm_coef <- tryCatch(summary(uecm_model)$coefficients, error = function(e) NULL)
+  if (is.null(uecm_coef)) return(NA_real_)
+  rr <- grep(paste0("^L\\(", lnY_name, ", 1\\)$"), rownames(uecm_coef), value = TRUE)
+  if (length(rr) == 1) return(as.numeric(uecm_coef[rr, "Estimate"]))
+  NA_real_
 }
 
-build_s1_compare_plot <- function(df, base_col, base_label, dummy_years) {
-  plot_df <- dplyr::tibble(
-    year = df$year,
-    u_shaikh = df$u_shaikh,
-    u_with_dummy = df[[paste0("u_", base_col, "_with_dummy")]],
-    u_no_dummy = df[[paste0("u_", base_col, "_no_dummy")]]
-  ) |>
-    tidyr::pivot_longer(
-      cols = c("u_shaikh", "u_with_dummy", "u_no_dummy"),
-      names_to = "series",
-      values_to = "u"
-    ) |>
-    dplyr::mutate(
-      label = dplyr::case_when(
-        series == "u_shaikh" ~ "Shaikh (2016)",
-        series == "u_with_dummy" ~ "Replication (LR step dummies in Y^p)",
-        series == "u_no_dummy" ~ "Replication (no LR dummies in Y^p)",
-        TRUE ~ series
-      )
-    )
-
-  ggplot2::ggplot(plot_df, ggplot2::aes(x = year, y = u, color = label, linetype = label)) +
-    ggplot2::geom_line(linewidth = 0.9, na.rm = TRUE) +
-    ggplot2::geom_hline(yintercept = 1, alpha = 0.35) +
-    ggplot2::geom_vline(xintercept = dummy_years, linetype = "dashed", alpha = 0.45) +
-    ggplot2::theme_minimal(base_size = 12) +
-    ggplot2::theme(
-      legend.title = ggplot2::element_blank(),
-      legend.position = "bottom",
-      axis.text.x = ggplot2::element_text(angle = 45, hjust = 1)
-    ) +
-    ggplot2::labs(
-      x = "Year",
-      y = "Capacity Utilization (u)",
-      title = paste0("Faithful ARDL(2,4) utilization comparison | base ", base_label)
-    )
+# Build u and lnY^p from LR object:
+# lnY^p = a + theta lnK + sum_j lr_dummy_j * d_j
+compute_u_from_lr <- function(df, lnY_name, lnK_name, lr_full, dummy_names) {
+  a_lr <- lr_full$Estimate[lr_full$Term == "(Intercept)"]
+  theta_lr <- lr_full$Estimate[lr_full$Term == lnK_name]
+  
+  dummy_coef <- if (length(dummy_names)) lr_full$Estimate[match(dummy_names, lr_full$Term)] else numeric(0)
+  dummy_effect <- if (length(dummy_names)) rowSums(df[dummy_names] * dummy_coef) else 0
+  
+  lnY  <- df[[lnY_name]]
+  lnK  <- df[[lnK_name]]
+  lnYp <- a_lr + theta_lr * lnK + dummy_effect
+  u    <- exp(lnY - lnYp)
+  
+  list(u = u, lnYp = lnYp, intercept = a_lr, theta = theta_lr)
 }
 
-# -----------------------------
-# 0) Load Shaikh replication dataset (CONFIG)
-# -----------------------------
+# ------------------------------------------------------------
+# 0) Load dataset (CONFIG) + build deflator base 2011 only
+# ------------------------------------------------------------
 df_raw <- readxl::read_excel(here::here(CONFIG$data_shaikh), sheet = CONFIG$data_shaikh_sheet)
-
 stopifnot(all(c(CONFIG$year_col, CONFIG$y_nom, CONFIG$k_nom, CONFIG$p_index) %in% names(df_raw)))
 
-# keep a "full series ledger" for p rebase
+# ledger for p rebase (fail fast)
 p_ledger <- df_raw |>
   transmute(
     year  = as.integer(.data[[CONFIG$year_col]]),
@@ -229,16 +197,11 @@ p_ledger <- df_raw |>
   filter(is.finite(year), is.finite(p_raw), p_raw > 0) |>
   arrange(year)
 
-# fail fast (don’t let the pipeline invent base years)
 stopifnot(any(p_ledger$year == 2011L))
-stopifnot(any(p_ledger$year == 1947L))
 
 p_ledger <- p_ledger |>
-  mutate(
-    p2011 = rebase_to_year_to_100(p_raw, year, 2011L, strict = TRUE),
-    p1947 = rebase_to_year_to_100(p_raw, year, 1947L, strict = TRUE)
-  ) |>
-  select(year, p2011, p1947)
+  mutate(p2011 = rebase_to_year_to_100(p_raw, year, 2011L, strict = TRUE)) |>
+  select(year, p2011)
 
 df0 <- df_raw |>
   transmute(
@@ -259,13 +222,14 @@ df0 <- df_raw |>
   arrange(year) |>
   left_join(p_ledger, by = "year")
 
-stopifnot(all(is.finite(df0$p2011)), all(is.finite(df0$p1947)))
+stopifnot(all(is.finite(df0$p2011)))
 
-# -----------------------------
-# 1) Window lock (CONFIG)
-# -----------------------------
-WINDOW_TAG <- "shaikh_window"
+# ------------------------------------------------------------
+# 1) Window lock
+# ------------------------------------------------------------
 w <- CONFIG$WINDOWS_LOCKED[[WINDOW_TAG]]
+stopifnot(!is.null(w), length(w) == 2)
+
 WINDOW_START <- as.integer(w[1])
 WINDOW_END   <- as.integer(w[2])
 
@@ -273,9 +237,9 @@ df0 <- df0 |>
   filter(year >= w[1], year <= w[2]) |>
   arrange(year)
 
-# -----------------------------
-# 1.5) Output dirs + log sink (CONFIG)
-# -----------------------------
+# ------------------------------------------------------------
+# 2) Output dirs + log sink (CONFIG)
+# ------------------------------------------------------------
 EXERCISE_DIR <- here::here(CONFIG$OUT_CR$exercise_a %||% "output/CriticalReplication/Exercise_a_ARDL_faithful")
 CSV_DIR <- file.path(EXERCISE_DIR, "csv")
 LOG_DIR <- file.path(EXERCISE_DIR, "logs")
@@ -291,279 +255,237 @@ log_path <- file.path(LOG_DIR, paste0("SHAIKH_ARDL_replication_log_", WINDOW_TAG
 sink(log_path, split = TRUE)
 on.exit(try(sink(), silent = TRUE), add = TRUE)
 
-cat("=== Shaikh ARDL faithful replication log ===\n")
+cat("=== Shaikh ARDL replication — CASE TOGGLE (Study A) ===\n")
 cat("Timestamp: ", now_stamp(), "\n", sep = "")
-cat("Window: ", WINDOW_TAG, " (", min(df0$year), "-", max(df0$year), ")\n\n", sep = "")
+cat("Window:    ", WINDOW_TAG, " (", min(df0$year), "-", max(df0$year), ")\n", sep = "")
+cat("Order:     (p,q) = (", paste(ORDER, collapse = ","), ")\n", sep = "")
+cat("Cases:     ", paste(CASES, collapse = ","), "\n", sep = "")
+cat("Bounds:    exact=", EXACT_TEST, " (FALSE=asymptotic; TRUE=in-sample)\n\n", sep = "")
 
-# -----------------------------
-# 2) Dummies (step / level-shift dummies)
-# -----------------------------
-DUMMY_YEARS <- c(1956L, 1974L, 1980L)
+# ------------------------------------------------------------
+# 3) Dummies + build real logs (base 2011 only)
+# ------------------------------------------------------------
 df0 <- make_step_dummies(df0, DUMMY_YEARS)
 dummy_names <- paste0("d", DUMMY_YEARS)
-dummy_years <- DUMMY_YEARS
 
-# -----------------------------
-# 3) Build two numeraire variants (2011=100 vs 1947=100)
-# -----------------------------
-build_real_logs <- function(df, p_col) {
-  df |>
-    mutate(
-      p = .data[[p_col]],
-      p_scale = p / 100,
-      Y_real  = Y_nom / p_scale,
-      K_real  = K_nom / p_scale,
-      lnY     = log(Y_real),
-      lnK     = log(K_real)
-    )
-}
-
-df_2011 <- build_real_logs(df0, "p2011")
-df_1947 <- build_real_logs(df0, "p1947")
-
-# -----------------------------
-# 4) Fit ARDL (fixed order replication)
-# -----------------------------
-ORDER <- c(2, 4)
-CASE  <- "uc"  # intercept, no trend
-
-res2011 <- run_one_variant(df_2011, "lnY", "lnK", dummy_names, order = ORDER, case = CASE)
-res1947 <- run_one_variant(df_1947, "lnY", "lnK", dummy_names, order = ORDER, case = CASE)
-
-cat("=== Variant A: deflator rebased p(2011)=100 ===\n")
-cat("Formula: ", deparse(res2011$fml), "\n", sep = "")
-cat("Order (p,q): ", paste(ORDER, collapse = ","), " | CASE=", CASE, "\n\n", sep = "")
-print(summary(res2011$fit))
-cat("\nBounds F (asympt/exact):\n"); print(res2011$bt$f_asympt); print(res2011$bt$f_exact)
-cat("\nBounds t (asympt/exact):\n"); print(res2011$bt$t_asympt); print(res2011$bt$t_exact)
-
-cat("\n=== Variant B: deflator rebased p(1947)=100 ===\n")
-cat("Formula: ", deparse(res1947$fml), "\n", sep = "")
-cat("Order (p,q): ", paste(ORDER, collapse = ","), " | CASE=", CASE, "\n\n", sep = "")
-print(summary(res1947$fit))
-cat("\nBounds F (asympt/exact):\n"); print(res1947$bt$f_asympt); print(res1947$bt$f_exact)
-cat("\nBounds t (asympt/exact):\n"); print(res1947$bt$t_asympt); print(res1947$bt$t_exact)
-
-# sanity: base-year choice should not change utilization shape if everything cancels correctly
-diff_max <- max(abs(res2011$series$u_with - res1947$series$u_with), na.rm = TRUE)
-cat("\nSANITY CHECK: max|u_with(2011base)-u_with(1947base)| = ", signif(diff_max, 6), "\n", sep = "")
-
-# -----------------------------
-# 5) Export faithful 4-series CSVs
-# -----------------------------
-out_series <- data.frame(
-  year = df0$year,
-  u_shaikh = df0$u_shaikh,
-  u_2011_with_dummy = res2011$series$u_with,
-  u_2011_no_dummy   = res2011$series$u_no,
-  u_1947_with_dummy = res1947$series$u_with,
-  u_1947_no_dummy   = res1947$series$u_no
-)
-
-series_path <- file.path(CSV_DIR, paste0("SHAIKH_ARDL_replication_series_", WINDOW_TAG, ".csv"))
-four_series_path <- file.path(CSV_DIR, paste0("SHAIKH_ARDL_replication_four_series_", WINDOW_TAG, ".csv"))
-safe_write_csv(out_series, series_path)
-safe_write_csv(out_series, four_series_path)
-cat("\nWrote series CSV:\n  ", series_path, "\n", sep = "")
-cat("Wrote four-series CSV:\n  ", four_series_path, "\n", sep = "")
-
-# -----------------------------
-# 6) Key stats + faithful spec report
-# -----------------------------
-Teff <- function(fit) tryCatch(length(residuals(fit)), error = function(e) NA_integer_)
-
-bF_2011 <- extract_bt(res2011$bt$f_asympt)
-bT_2011 <- extract_bt(res2011$bt$t_asympt)
-bF_1947 <- extract_bt(res1947$bt$f_asympt)
-bT_1947 <- extract_bt(res1947$bt$t_asympt)
-
-key_stats <- tibble::tibble(
-  run_id = paste0("stage4_", format(Sys.time(), "%Y%m%d_%H%M%S")),
-  stage_tag = "S1_ARDL_faithful",
-  window_tag = WINDOW_TAG,
-  model = "Shaikh baseline",
-  system = "ARDL",
-  det_terms = "none",
-  lag_structure = "(p=2,q=4)",
-  cap_memory = 4 / ((2 - 1) + 4),
-  N = nrow(df0),
-  T_eff_2011 = Teff(res2011$fit),
-  T_eff_1947 = Teff(res1947$fit),
-  logLik_2011 = tryCatch(as.numeric(logLik(res2011$fit)), error = function(e) NA_real_),
-  logLik_1947 = tryCatch(as.numeric(logLik(res1947$fit)), error = function(e) NA_real_),
-  k_total_2011 = tryCatch(attr(logLik(res2011$fit), "df"), error = function(e) NA_real_),
-  k_total_1947 = tryCatch(attr(logLik(res1947$fit), "df"), error = function(e) NA_real_),
-  boundsF_stat_2011 = bF_2011$stat,
-  boundsF_p_2011    = bF_2011$pval,
-  boundsT_stat_2011 = bT_2011$stat,
-  boundsT_p_2011    = bT_2011$pval,
-  boundsF_stat_1947 = bF_1947$stat,
-  boundsF_p_1947    = bF_1947$pval,
-  boundsT_stat_1947 = bT_1947$stat,
-  boundsT_p_1947    = bT_1947$pval,
-  alpha_hat_2011 = res2011$lambda_hat,
-  alpha_hat_1947 = res1947$lambda_hat,
-  max_abs_u_with_diff = diff_max
-)
-
-key_path <- file.path(CSV_DIR, paste0("SHAIKH_ARDL_replication_key_stats_", WINDOW_TAG, ".csv"))
-safe_write_csv(key_stats, key_path)
-cat("\nWrote key-stats CSV:\n  ", key_path, "\n", sep = "")
-
-theta_2011 <- extract_lr_row(res2011$lr_full, "lnK")
-theta_1947 <- extract_lr_row(res1947$lr_full, "lnK")
-int_2011 <- extract_lr_row(res2011$lr_full, "(Intercept)")
-int_1947 <- extract_lr_row(res1947$lr_full, "(Intercept)")
-
-dummy_terms_2011 <- extract_dummy_lr_terms(res2011$lr_full, dummy_names)
-dummy_terms_1947 <- extract_dummy_lr_terms(res1947$lr_full, dummy_names)
-
-spec_report <- dplyr::bind_rows(
-  tibble::tibble(
-    window_tag = WINDOW_TAG,
-    spec_id = "ARDL_2_4_base2011_with_LR_dummies",
-    numeraire_base = "2011",
-    dummy_regime = "with_LR_dummies",
-    N = nrow(df0),
-    T_eff = Teff(res2011$fit),
-    boundsF_stat = bF_2011$stat,
-    boundsF_pvalue = bF_2011$pval,
-    boundsT_stat = bT_2011$stat,
-    boundsT_pvalue = bT_2011$pval,
-    theta_hat = theta_2011$est,
-    theta_pvalue = theta_2011$p,
-    alpha_hat = res2011$lambda_hat,
-    long_run_intercept = int_2011$est,
-    long_run_lnk = theta_2011$est,
-    long_run_dummy_included = TRUE,
-    long_run_dummy_set = paste(dummy_names, collapse = ";"),
-    long_run_dummy_sum_mean = mean(rowSums(as.matrix(df0[dummy_names]))),
-    lnYp_formula = "lnYp = intercept + theta*lnK + sum(dummy_j*lr_dummy_j)"
-  ) %>% dplyr::bind_cols(as.data.frame(dummy_terms_2011, stringsAsFactors = FALSE)),
-  tibble::tibble(
-    window_tag = WINDOW_TAG,
-    spec_id = "ARDL_2_4_base2011_no_LR_dummies",
-    numeraire_base = "2011",
-    dummy_regime = "no_LR_dummies",
-    N = nrow(df0),
-    T_eff = Teff(res2011$fit),
-    boundsF_stat = bF_2011$stat,
-    boundsF_pvalue = bF_2011$pval,
-    boundsT_stat = bT_2011$stat,
-    boundsT_pvalue = bT_2011$pval,
-    theta_hat = theta_2011$est,
-    theta_pvalue = theta_2011$p,
-    alpha_hat = res2011$lambda_hat,
-    long_run_intercept = int_2011$est,
-    long_run_lnk = theta_2011$est,
-    long_run_dummy_included = FALSE,
-    long_run_dummy_set = NA_character_,
-    long_run_dummy_sum_mean = NA_real_,
-    lnYp_formula = "lnYp = intercept + theta*lnK"
-  ) %>% dplyr::bind_cols(as.data.frame(setNames(as.list(rep(NA_real_, length(dummy_names))), paste0("lr_", dummy_names)), stringsAsFactors = FALSE)),
-  tibble::tibble(
-    window_tag = WINDOW_TAG,
-    spec_id = "ARDL_2_4_base1947_with_LR_dummies",
-    numeraire_base = "1947",
-    dummy_regime = "with_LR_dummies",
-    N = nrow(df0),
-    T_eff = Teff(res1947$fit),
-    boundsF_stat = bF_1947$stat,
-    boundsF_pvalue = bF_1947$pval,
-    boundsT_stat = bT_1947$stat,
-    boundsT_pvalue = bT_1947$pval,
-    theta_hat = theta_1947$est,
-    theta_pvalue = theta_1947$p,
-    alpha_hat = res1947$lambda_hat,
-    long_run_intercept = int_1947$est,
-    long_run_lnk = theta_1947$est,
-    long_run_dummy_included = TRUE,
-    long_run_dummy_set = paste(dummy_names, collapse = ";"),
-    long_run_dummy_sum_mean = mean(rowSums(as.matrix(df0[dummy_names]))),
-    lnYp_formula = "lnYp = intercept + theta*lnK + sum(dummy_j*lr_dummy_j)"
-  ) %>% dplyr::bind_cols(as.data.frame(dummy_terms_1947, stringsAsFactors = FALSE)),
-  tibble::tibble(
-    window_tag = WINDOW_TAG,
-    spec_id = "ARDL_2_4_base1947_no_LR_dummies",
-    numeraire_base = "1947",
-    dummy_regime = "no_LR_dummies",
-    N = nrow(df0),
-    T_eff = Teff(res1947$fit),
-    boundsF_stat = bF_1947$stat,
-    boundsF_pvalue = bF_1947$pval,
-    boundsT_stat = bT_1947$stat,
-    boundsT_pvalue = bT_1947$pval,
-    theta_hat = theta_1947$est,
-    theta_pvalue = theta_1947$p,
-    alpha_hat = res1947$lambda_hat,
-    long_run_intercept = int_1947$est,
-    long_run_lnk = theta_1947$est,
-    long_run_dummy_included = FALSE,
-    long_run_dummy_set = NA_character_,
-    long_run_dummy_sum_mean = NA_real_,
-    lnYp_formula = "lnYp = intercept + theta*lnK"
-  ) %>% dplyr::bind_cols(as.data.frame(setNames(as.list(rep(NA_real_, length(dummy_names))), paste0("lr_", dummy_names)), stringsAsFactors = FALSE))
-)
-
-spec_report_path <- file.path(CSV_DIR, paste0("SHAIKH_ARDL_replication_spec_report_", WINDOW_TAG, ".csv"))
-safe_write_csv(spec_report, spec_report_path)
-cat("Wrote S1 spec report CSV:\n  ", spec_report_path, "\n", sep = "")
-
-# -----------------------------
-# 7) Plot (separate by numeraire base)
-# -----------------------------
-plot_2011 <- build_s1_compare_plot(out_series, base_col = "2011", base_label = "2011=100", dummy_years = dummy_years)
-plot_1947 <- build_s1_compare_plot(out_series, base_col = "1947", base_label = "1947=100", dummy_years = dummy_years)
-
-fig_path_2011 <- file.path(FIG_DIR, paste0("FIG_S1_ARDL_u_compare_base2011_", WINDOW_TAG, ".png"))
-fig_path_1947 <- file.path(FIG_DIR, paste0("FIG_S1_ARDL_u_compare_base1947_", WINDOW_TAG, ".png"))
-ggsave(fig_path_2011, plot_2011, width = 10, height = 6.2, dpi = 300)
-ggsave(fig_path_1947, plot_1947, width = 10, height = 6.2, dpi = 300)
-
-# backward-compatible legacy figure
-legacy_fig_path <- file.path(FIG_DIR, paste0("FIG_SHAIKH_ARDL_u_", WINDOW_TAG, ".png"))
-ggsave(legacy_fig_path, plot_2011, width = 10, height = 6.2, dpi = 300)
-
-cat("\nSaved figure (2011):\n  ", fig_path_2011, "\n", sep = "")
-cat("Saved figure (1947):\n  ", fig_path_1947, "\n", sep = "")
-cat("Saved legacy figure:\n  ", legacy_fig_path, "\n", sep = "")
-cat("Saved log:\n  ", log_path, "\n", sep = "")
-
-# -----------------------------
-# 7.5) Correlation diagnostics vs Shaikh (levels)
-# -----------------------------
-if (!all(is.na(out_series$u_shaikh))) {
-  diag_rows <- dplyr::bind_rows(
-    tibble::tibble(base = "2011", cor_with_dummy = suppressWarnings(cor(out_series$u_2011_with_dummy, out_series$u_shaikh, use = "complete.obs")),
-                   cor_no_dummy = suppressWarnings(cor(out_series$u_2011_no_dummy, out_series$u_shaikh, use = "complete.obs"))),
-    tibble::tibble(base = "1947", cor_with_dummy = suppressWarnings(cor(out_series$u_1947_with_dummy, out_series$u_shaikh, use = "complete.obs")),
-                   cor_no_dummy = suppressWarnings(cor(out_series$u_1947_no_dummy, out_series$u_shaikh, use = "complete.obs")))
+df <- df0 |>
+  mutate(
+    p = p2011,
+    p_scale = p / 100,
+    Y_real  = Y_nom / p_scale,
+    K_real  = K_nom / p_scale,
+    lnY     = log(Y_real),
+    lnK     = log(K_real)
   )
-} else {
-  diag_rows <- tibble::tibble(base = c("2011","1947"), cor_with_dummy = NA_real_, cor_no_dummy = NA_real_)
+
+# ------------------------------------------------------------
+# 4) Run one CASE (bounded tests + LR + u)
+# ------------------------------------------------------------
+run_one_case <- function(df, case_id, order, dummy_names, exact_test) {
+  df_ts <- ts(df |> select(all_of(c("lnY", "lnK", dummy_names))),
+              start = min(df$year), frequency = 1)
+  
+  # ARDL formula: lnY ~ lnK | dummies
+  fml <- as.formula(paste0("lnY ~ lnK | ", paste(dummy_names, collapse = " + ")))
+  fit <- ARDL::ardl(formula = fml, data = df_ts, order = order)
+  
+  # bounds tests (F always; t returned but robustness-star only for cases 1,3,5)
+  bt_f <- ARDL::bounds_f_test(fit, case = case_id, alpha = 0.05, pvalue = TRUE, exact = exact_test)
+  bt_t <- ARDL::bounds_t_test(fit, case = case_id, alpha = 0.05, pvalue = TRUE, exact = exact_test)
+  
+  bF <- extract_bt(bt_f)
+  bT <- extract_bt(bt_t)
+  
+  # LR multipliers + LR dummy scaling
+  lr_pack <- get_lr_table_with_scaled_dummies(fit, lnY_name = "lnY", dummy_names = dummy_names)
+  lr_full <- lr_pack$lr_full_table
+  
+  theta <- extract_lr_row(lr_full, "lnK")
+  intercept <- extract_lr_row(lr_full, "(Intercept)")
+  alpha_hat <- extract_alpha_from_uecm(fit, lnY_name = "lnY")
+  
+  # series
+  series <- compute_u_from_lr(df, "lnY", "lnK", lr_full, dummy_names)
+  
+  list(
+    case_id = case_id,
+    fml     = fml,
+    fit     = fit,
+    bt_f    = bF,
+    bt_t    = bT,
+    lr_full = lr_full,
+    theta   = theta,
+    intercept = intercept,
+    alpha_hat = alpha_hat,
+    u = series$u,
+    lnYp = series$lnYp
+  )
 }
 
-safe_write_csv(diag_rows, file.path(CSV_DIR, paste0("DIAG_corr_vs_shaikh_", WINDOW_TAG, ".csv")))
-cat("Wrote CSV:\n  ", file.path(CSV_DIR, paste0("DIAG_corr_vs_shaikh_", WINDOW_TAG, ".csv")), "\n", sep = "")
+# ------------------------------------------------------------
+# 5) Execute all cases
+# ------------------------------------------------------------
+results <- lapply(CASES, function(cc) {
+  cat("------------------------------------------------------------\n")
+  cat("CASE ", cc, " | order=", paste(ORDER, collapse=","), " | exact=", EXACT_TEST, "\n", sep="")
+  out <- run_one_case(df, case_id = cc, order = ORDER, dummy_names = dummy_names, exact_test = EXACT_TEST)
+  cat("Formula: ", deparse(out$fml), "\n", sep="")
+  print(summary(out$fit))
+  cat("\nBounds F:\n"); print(ARDL::bounds_f_test(out$fit, case = cc, alpha = 0.05, pvalue = TRUE, exact = EXACT_TEST))
+  cat("\nBounds t:\n"); print(ARDL::bounds_t_test(out$fit, case = cc, alpha = 0.05, pvalue = TRUE, exact = EXACT_TEST))
+  cat("\nTheta (LR lnK): ", signif(out$theta$est, 6), " | p=", signif(out$theta$p, 6), "\n", sep="")
+  cat("Alpha (UECM L(lnY,1)): ", signif(out$alpha_hat, 6), "\n", sep="")
+  out
+})
 
-# -----------------------------
-# 8) Manifest append
-# -----------------------------
+# ------------------------------------------------------------
+# 6) Build contest table (LEVELS, not deltas) — ALL cases
+# ------------------------------------------------------------
+contest <- tibble(
+  window_tag = WINDOW_TAG,
+  order_p = ORDER[1],
+  order_q = ORDER[2],
+  exact_test = EXACT_TEST,
+  case_id = sapply(results, `[[`, "case_id"),
+  
+  boundsF_stat = sapply(results, function(x) x$bt_f$stat),
+  boundsF_p    = sapply(results, function(x) x$bt_f$pval),
+  
+  boundsT_stat = sapply(results, function(x) x$bt_t$stat),
+  boundsT_p    = sapply(results, function(x) x$bt_t$pval),
+  
+  theta_hat    = sapply(results, function(x) x$theta$est),
+  theta_p      = sapply(results, function(x) x$theta$p),
+  
+  alpha_hat    = sapply(results, function(x) x$alpha_hat),
+  
+  # Admissibility / robustness flags
+  F_pass = (boundsF_p <= F_GATE_ALPHA),
+  t_admissible = case_id %in% T_BOUNDS_ADMISSIBLE_CASES,
+  t_pass_10 = if_else(t_admissible, boundsT_p <= 0.10, NA),
+  t_pass_05 = if_else(t_admissible, boundsT_p <= 0.05, NA),
+  t_pass_01 = if_else(t_admissible, boundsT_p <= 0.01, NA)
+) |>
+  mutate(
+    boundsF_stars = map_chr(boundsF_p, stars_from_p),
+    boundsT_stars = if_else(t_admissible, map_chr(boundsT_p, stars_from_p), ""),
+    theta_stars   = map_chr(theta_p, stars_from_p),
+    
+    # Legend robustness stars: only meaningful if F_pass AND t_admissible
+    robust_star = case_when(
+      F_pass & t_admissible & boundsT_p <= 0.01 ~ "***",
+      F_pass & t_admissible & boundsT_p <= 0.05 ~ "**",
+      F_pass & t_admissible & boundsT_p <= 0.10 ~ "*",
+      TRUE ~ ""
+    )
+  )
+
+contest_path <- file.path(CSV_DIR, paste0("SHAIKH_ARDL_case_contest_", WINDOW_TAG, ".csv"))
+safe_write_csv(contest, contest_path)
+cat("\nWrote contest CSV:\n  ", contest_path, "\n", sep="")
+
+# ------------------------------------------------------------
+# 7) Coefficient table (LR multipliers table per case)
+# ------------------------------------------------------------
+coef_tbl <- purrr::map_dfr(results, function(x) {
+  lr <- x$lr_full
+  lr |>
+    mutate(
+      case_id = x$case_id,
+      order_p = ORDER[1],
+      order_q = ORDER[2],
+      exact_test = EXACT_TEST,
+      window_tag = WINDOW_TAG
+    ) |>
+    select(window_tag, case_id, order_p, order_q, exact_test, everything())
+})
+
+coef_path <- file.path(CSV_DIR, paste0("SHAIKH_ARDL_coef_table_", WINDOW_TAG, ".csv"))
+safe_write_csv(coef_tbl, coef_path)
+cat("Wrote coef CSV:\n  ", coef_path, "\n", sep="")
+
+# ------------------------------------------------------------
+# 8) Build u-series wide CSV: Shaikh + u_caseX (ALL cases)
+# ------------------------------------------------------------
+u_cases <- tibble(year = df$year, u_shaikh = df$u_shaikh)
+for (x in results) {
+  u_cases[[paste0("u_case", x$case_id)]] <- x$u
+}
+u_cases_path <- file.path(CSV_DIR, paste0("SHAIKH_ARDL_u_cases_", WINDOW_TAG, ".csv"))
+safe_write_csv(u_cases, u_cases_path)
+cat("Wrote u-cases CSV:\n  ", u_cases_path, "\n", sep="")
+
+# ------------------------------------------------------------
+# 9) Main comparison figure:
+#     Shaikh u + ALL cases that pass F gate
+#     Legend includes robustness stars (from t-bounds) only for cases 1/3/5
+# ------------------------------------------------------------
+plot_long <- u_cases |>
+  pivot_longer(-c(year, u_shaikh), names_to = "series", values_to = "u") |>
+  mutate(
+    case_id = as.integer(str_extract(series, "\\d+"))
+  ) |>
+  left_join(contest |> select(case_id, F_pass, t_admissible, robust_star), by = "case_id") |>
+  filter(F_pass) |>
+  mutate(
+    label = case_when(
+      is.na(case_id) ~ series,
+      t_admissible ~ paste0("Case ", case_id, " (F-pass, t-robust ", robust_star, ")"),
+      TRUE ~ paste0("Case ", case_id, " (F-pass, t n/a)")
+    )
+  )
+
+shaikh_df <- tibble(year = df$year, u = df$u_shaikh, label = "Shaikh (2016)")
+
+plot_df <- bind_rows(
+  shaikh_df,
+  plot_long |> select(year, u, label)
+) |>
+  filter(is.finite(u))
+
+p <- ggplot(plot_df, aes(x = year, y = u, color = label, linetype = label)) +
+  geom_line(linewidth = 0.9, na.rm = TRUE) +
+  geom_hline(yintercept = 1, alpha = 0.35) +
+  geom_vline(xintercept = DUMMY_YEARS, linetype = "dashed", alpha = 0.45) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.title = element_blank(),
+    legend.position = "bottom",
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  ) +
+  labs(
+    x = "Year",
+    y = "Capacity Utilization (u)",
+    title = paste0(
+      "Shaikh replication | ARDL(", ORDER[1], ",", ORDER[2], ") | F-pass cases only | base p(2011)=100"
+    ),
+    subtitle = "Legend robustness stars apply only when t-bounds is admissible (cases 1,3,5) and F-pass"
+  )
+
+fig_path <- file.path(FIG_DIR, paste0("FIG_S1_ARDL_u_compare_cases_Fpass_", WINDOW_TAG, ".png"))
+ggsave(fig_path, p, width = 11, height = 6.6, dpi = 300)
+cat("Saved figure:\n  ", fig_path, "\n", sep="")
+
+# ------------------------------------------------------------
+# 10) Manifest append
+# ------------------------------------------------------------
 manifest_path <- file.path(MAN_DIR, "RUN_MANIFEST_stage4.md")
 cat(
   paste0(
     "# Run Manifest (Stage 4)\n",
+    "- stage: Study A (ARDL faithful + cases)\n",
     "- window_tag: ", WINDOW_TAG, "\n",
     "- window_start: ", WINDOW_START, "\n",
     "- window_end: ", WINDOW_END, "\n",
-    "- script: codes/20_shaikh_ardl_replication_WRAPPED.R\n",
+    "- script: codes/20_shaikh_ardl_replication.R\n",
+    "- order_pq: (", paste(ORDER, collapse=","), ")\n",
+    "- cases: ", paste(CASES, collapse=","), "\n",
+    "- exact_test: ", EXACT_TEST, "\n",
     "- outputs:\n",
-    "  - ", series_path, "\n",
-    "  - ", four_series_path, "\n",
-    "  - ", key_path, "\n",
-    "  - ", spec_report_path, "\n",
-    "  - ", fig_path_2011, "\n",
-    "  - ", fig_path_1947, "\n",
+    "  - ", contest_path, "\n",
+    "  - ", coef_path, "\n",
+    "  - ", u_cases_path, "\n",
+    "  - ", fig_path, "\n",
     "  - ", log_path, "\n",
     "- Timestamp: ", Sys.time(), "\n\n"
   ),
@@ -572,3 +494,4 @@ cat(
 )
 
 cat("\nAppended manifest:\n  ", manifest_path, "\n", sep = "")
+cat("\nDONE.\n")
