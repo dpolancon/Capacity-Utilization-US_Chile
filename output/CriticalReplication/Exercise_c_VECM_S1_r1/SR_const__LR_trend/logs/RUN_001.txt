@@ -1,1 +1,0 @@
-[2026-03-03 18:34:12] Stage S1 run: SR=const LR=trend (P=1..7)

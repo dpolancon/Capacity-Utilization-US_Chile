@@ -1,11 +1,11 @@
 # RUN MANIFEST — Stage 4
 
 ## Run metadata
-- Run ID: `stage4_20260304_130240`
-- Run root: `output/run_stage4_20260304_130240`
-- Timestamp: `2026-03-04T13:02:40-0300`
+- Run ID: `stage4_20260304_233647`
+- Run root: `output/CriticalReplication/ResultsPack/ResultsPack_20260304_233647`
+- Timestamp: `2026-03-04T23:36:47-0300`
 - Timezone: `America/Santiago`
-- Git hash: `5462fae`
+- Git hash: `6b8fa22`
 - Seed: `123456`
 - Machine/OS: `sysname Windows; release 10 x64; version build 26200; nodename DIEGO-ASUS; machine x86-64; login User; user User; effective_user User; udomain DIEGO-ASUS`
 
@@ -24,8 +24,8 @@
 | `22_VECM_S1.R` | `codes/22_VECM_S1.R` | VECM S1 grid (lag/deterministic combinations; values declared inside script) | yes | ok_with_infeasible_specs_skipped | 0 | INFEASIBLE_SPECS_SKIPPED | `output/CriticalReplication/Manifest/logs/22_VECM_S1_run.log` |
 | `23_VECM_S2.R` | `codes/23_VECM_S2.R` | VECM S2 grid (m=3, rank r in {0,1,2} + lag/deterministics as scripted) | yes | ok_with_infeasible_specs_skipped | 0 | INFEASIBLE_SPECS_SKIPPED | `output/CriticalReplication/Manifest/logs/23_VECM_S2_run.log` |
 | `26_crosswalk_tables.R` | `codes/26_crosswalk_tables.R` | Crosswalk table builder (no independent grid) | yes | ok | 0 | OK | `output/CriticalReplication/Manifest/logs/26_crosswalk_tables_run.log` |
-| `28_results_pack_generato.R` | `codes/28_results_pack_generato.R` | ResultsPack aggregator (paper-facing compact bundles) | yes | failed | 1 | NONZERO_EXIT | `output/CriticalReplication/Manifest/logs/28_results_pack_generato_run.log` |
-| `29_S1_VECM_r1_results_pack_gen.R` | `codes/29_S1_VECM_r1_results_pack_gen.R` | S1-specific results package generator | yes | failed | 1 | NONZERO_EXIT | `output/CriticalReplication/Manifest/logs/29_S1_VECM_r1_results_pack_gen_run.log` |
+| `28_results_pack_generato.R` | `codes/28_results_pack_generato.R` | ResultsPack aggregator (paper-facing compact bundles) | no | failed | NA | SCRIPT_MISSING | `output/CriticalReplication/Manifest/logs/28_results_pack_generato_run.log` |
+| `29_S1_VECM_r1_results_pack_gen.R` | `codes/29_S1_VECM_r1_results_pack_gen.R` | S1-specific results package generator | no | failed | NA | SCRIPT_MISSING | `output/CriticalReplication/Manifest/logs/29_S1_VECM_r1_results_pack_gen_run.log` |
 
 ## Output artifact index (relative paths)
 - `output/CriticalReplication/Crosswalk/ardl_frontier_representatives.csv`
@@ -63,7 +63,7 @@
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_none/figs/FIG_ll_frontier.png`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_none/figs/FIG_stability_margin_surface.png`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_none/figs/FIG_theta_surface.png`
-- `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_none/logs/RUN_003.txt`
+- `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_none/logs/RUN_005.txt`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_none/logs/RUN_INDEX.csv`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_none/tex/README_TEX_STUBS.tex`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_trend/csv/APPX_eigs_long.csv`
@@ -87,7 +87,7 @@
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_trend/figs/FIG_ll_frontier.png`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_trend/figs/FIG_stability_margin_surface.png`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_trend/figs/FIG_theta_surface.png`
-- `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_trend/logs/RUN_003.txt`
+- `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_trend/logs/RUN_005.txt`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_trend/logs/RUN_INDEX.csv`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_const__LR_trend/tex/README_TEX_STUBS.tex`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_both/csv/APPX_eigs_long.csv`
@@ -110,7 +110,7 @@
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_both/figs/FIG_ll_frontier.png`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_both/figs/FIG_stability_margin_surface.png`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_both/figs/FIG_theta_surface.png`
-- `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_both/logs/RUN_003.txt`
+- `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_both/logs/RUN_005.txt`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_both/logs/RUN_INDEX.csv`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_both/tex/README_TEX_STUBS.tex`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_const/csv/APPX_eigs_long.csv`
@@ -133,7 +133,7 @@
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_const/figs/FIG_ll_frontier.png`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_const/figs/FIG_stability_margin_surface.png`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_const/figs/FIG_theta_surface.png`
-- `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_const/logs/RUN_003.txt`
+- `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_const/logs/RUN_005.txt`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_const/logs/RUN_INDEX.csv`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_const/tex/README_TEX_STUBS.tex`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_none/csv/APPX_eigs_long.csv`
@@ -157,7 +157,7 @@
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_none/figs/FIG_ll_frontier.png`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_none/figs/FIG_stability_margin_surface.png`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_none/figs/FIG_theta_surface.png`
-- `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_none/logs/RUN_003.txt`
+- `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_none/logs/RUN_005.txt`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_none/logs/RUN_INDEX.csv`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_none/tex/README_TEX_STUBS.tex`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_trend/csv/APPX_eigs_long.csv`
@@ -181,7 +181,7 @@
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_trend/figs/FIG_ll_frontier.png`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_trend/figs/FIG_stability_margin_surface.png`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_trend/figs/FIG_theta_surface.png`
-- `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_trend/logs/RUN_003.txt`
+- `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_trend/logs/RUN_005.txt`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_trend/logs/RUN_INDEX.csv`
 - `output/CriticalReplication/Exercise_c_VECM_S1_r1/SR_none__LR_trend/tex/README_TEX_STUBS.tex`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_none/csv/APPX_eigs_long.csv`
@@ -216,7 +216,7 @@
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_none/figs/rank_r2/FIG_envelope_logLik_vs_ICOMP_pen.png`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_none/figs/rank_r2/FIG_envelope_logLik_vs_k_total.png`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_none/figs/rank_r2/FIG_envelope_logLik_vs_RICOMP_pen.png`
-- `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_none/logs/RUN_003.txt`
+- `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_none/logs/RUN_005.txt`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_none/logs/RUN_INDEX.csv`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_trend/csv/APPX_eigs_long.csv`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_trend/csv/APPX_ic_eta_long.csv`
@@ -250,7 +250,7 @@
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_trend/figs/rank_r2/FIG_envelope_logLik_vs_ICOMP_pen.png`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_trend/figs/rank_r2/FIG_envelope_logLik_vs_k_total.png`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_trend/figs/rank_r2/FIG_envelope_logLik_vs_RICOMP_pen.png`
-- `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_trend/logs/RUN_003.txt`
+- `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_trend/logs/RUN_005.txt`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_const__LR_trend/logs/RUN_INDEX.csv`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_both/csv/APPX_eigs_long.csv`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_both/csv/APPX_ic_eta_long.csv`
@@ -284,7 +284,7 @@
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_both/figs/rank_r2/FIG_envelope_logLik_vs_ICOMP_pen.png`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_both/figs/rank_r2/FIG_envelope_logLik_vs_k_total.png`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_both/figs/rank_r2/FIG_envelope_logLik_vs_RICOMP_pen.png`
-- `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_both/logs/RUN_003.txt`
+- `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_both/logs/RUN_005.txt`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_both/logs/RUN_INDEX.csv`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_const/csv/APPX_eigs_long.csv`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_const/csv/APPX_ic_eta_long.csv`
@@ -318,7 +318,7 @@
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_const/figs/rank_r2/FIG_envelope_logLik_vs_ICOMP_pen.png`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_const/figs/rank_r2/FIG_envelope_logLik_vs_k_total.png`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_const/figs/rank_r2/FIG_envelope_logLik_vs_RICOMP_pen.png`
-- `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_const/logs/RUN_003.txt`
+- `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_const/logs/RUN_005.txt`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_const/logs/RUN_INDEX.csv`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_none/csv/APPX_eigs_long.csv`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_none/csv/APPX_ic_eta_long.csv`
@@ -352,7 +352,7 @@
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_none/figs/rank_r2/FIG_envelope_logLik_vs_ICOMP_pen.png`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_none/figs/rank_r2/FIG_envelope_logLik_vs_k_total.png`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_none/figs/rank_r2/FIG_envelope_logLik_vs_RICOMP_pen.png`
-- `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_none/logs/RUN_003.txt`
+- `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_none/logs/RUN_005.txt`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_none/logs/RUN_INDEX.csv`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_trend/csv/APPX_eigs_long.csv`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_trend/csv/APPX_ic_eta_long.csv`
@@ -386,7 +386,7 @@
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_trend/figs/rank_r2/FIG_envelope_logLik_vs_ICOMP_pen.png`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_trend/figs/rank_r2/FIG_envelope_logLik_vs_k_total.png`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_trend/figs/rank_r2/FIG_envelope_logLik_vs_RICOMP_pen.png`
-- `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_trend/logs/RUN_003.txt`
+- `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_trend/logs/RUN_005.txt`
 - `output/CriticalReplication/Exercise_d_VECM_S2_m3_rank/SR_none__LR_trend/logs/RUN_INDEX.csv`
 - `output/CriticalReplication/Manifest/logs/20_shaikh_ardl_replication_run.log`
 - `output/CriticalReplication/Manifest/logs/21_CR_ARDL_grid_run.log`
@@ -395,27 +395,73 @@
 - `output/CriticalReplication/Manifest/logs/26_crosswalk_tables_run.log`
 - `output/CriticalReplication/Manifest/logs/28_results_pack_generato_run.log`
 - `output/CriticalReplication/Manifest/logs/29_S1_VECM_r1_results_pack_gen_run.log`
-- `output/CriticalReplication/Manifest/logs/RESULTSPACK_EXPORT_LOG.csv`
 - `output/CriticalReplication/Manifest/logs/SESSIONINFO_stage4.txt`
 - `output/CriticalReplication/Manifest/logs/SPEC_FEASIBILITY_LOG.csv`
 - `output/CriticalReplication/Manifest/RUN_MANIFEST_stage4.md`
-- `output/run_stage4_20260304_130240/ResultsPack/data/DATA_S1_ARDL_four_series.csv`
-- `output/run_stage4_20260304_130240/ResultsPack/tables/TAB_crosswalk_core.csv`
-- `output/run_stage4_20260304_130240/ResultsPack/tables/TAB_crosswalk_core.tex`
-- `output/run_stage4_20260304_130240/ResultsPack/tables/TAB_S1_replication_key_stats.csv`
-- `output/run_stage4_20260304_130240/ResultsPack/tables/TAB_S1_replication_key_stats.tex`
-- `output/run_stage4_20260304_130240/ResultsPack/tables/TAB_S2_frontier_summary_by_IC.csv`
-- `output/run_stage4_20260304_130240/ResultsPack/tables/TAB_S2_frontier_summary_by_IC.tex`
-- `output/run_stage4_20260304_130240/ResultsPack/tables/TAB_S2_VECM_lnYlnK_e_cointegration.csv`
-- `output/run_stage4_20260304_130240/ResultsPack/tables/TAB_S2_VECM_lnYlnK_e_cointegration.tex`
-- `output/run_stage4_20260304_130240/ResultsPack/tables/TAB_S3_confinement_winners_by_branch.csv`
-- `output/run_stage4_20260304_130240/ResultsPack/tables/TAB_S3_confinement_winners_by_branch.tex`
-- `output/run_stage4_20260304_130240/ResultsPackages/VECM_S1_lnY_lnK/logs/RUN_results_package_VECM_S1_lnY_lnK.txt`
-- `output/run_stage4_20260304_130240/ResultsPackages/VECM_S1_lnY_lnK/tables/MANIFEST_S3_inputs_by_branch.csv`
-- `output/run_stage4_20260304_130240/ResultsPackages/VECM_S1_lnY_lnK/tables/MANIFEST_S3_inputs_by_branch.tex`
 
 ## Session snapshot
 - `sessionInfo()` saved to `output/CriticalReplication/Manifest/logs/SESSIONINFO_stage4.txt`
 
 ## Deviations / notes
+- Lock not met: missing script(s): 28_results_pack_generato.R, 29_S1_VECM_r1_results_pack_gen.R.
 - Lock not met: failed script(s): 21_CR_ARDL_grid.R, 28_results_pack_generato.R, 29_S1_VECM_r1_results_pack_gen.R.
+# Run Manifest (Stage 4)
+- window_tag: shaikh_window
+- window_start: 1947
+- window_end: 2011
+- script: codes/20_shaikh_ardl_replication_WRAPPED.R
+- outputs:
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_series_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_four_series_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_key_stats_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_spec_report_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/figs/FIG_S1_ARDL_u_compare_base2011_shaikh_window.png
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/figs/FIG_S1_ARDL_u_compare_base1947_shaikh_window.png
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/logs/SHAIKH_ARDL_replication_log_shaikh_window.txt
+- Timestamp: 2026-03-05 17:37:42.587255
+
+# Run Manifest (Stage 4)
+- window_tag: shaikh_window
+- window_start: 1947
+- window_end: 2011
+- script: codes/20_shaikh_ardl_replication_WRAPPED.R
+- outputs:
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_series_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_four_series_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_key_stats_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_spec_report_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/figs/FIG_S1_ARDL_u_compare_base2011_shaikh_window.png
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/figs/FIG_S1_ARDL_u_compare_base1947_shaikh_window.png
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/logs/SHAIKH_ARDL_replication_log_shaikh_window.txt
+- Timestamp: 2026-03-05 17:46:08.812836
+
+# Run Manifest (Stage 4)
+- window_tag: shaikh_window
+- window_start: 1947
+- window_end: 2011
+- script: codes/20_shaikh_ardl_replication_WRAPPED.R
+- outputs:
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_series_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_four_series_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_key_stats_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_spec_report_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/figs/FIG_S1_ARDL_u_compare_base2011_shaikh_window.png
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/figs/FIG_S1_ARDL_u_compare_base1947_shaikh_window.png
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/logs/SHAIKH_ARDL_replication_log_shaikh_window.txt
+- Timestamp: 2026-03-05 18:09:27.565137
+
+# Run Manifest (Stage 4)
+- window_tag: shaikh_window
+- window_start: 1947
+- window_end: 2011
+- script: codes/20_shaikh_ardl_replication_WRAPPED.R
+- outputs:
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_series_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_four_series_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_key_stats_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/csv/SHAIKH_ARDL_replication_spec_report_shaikh_window.csv
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/figs/FIG_S1_ARDL_u_compare_base2011_shaikh_window.png
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/figs/FIG_S1_ARDL_u_compare_base1947_shaikh_window.png
+  - C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Exercise_a_ARDL_faithful/logs/SHAIKH_ARDL_replication_log_shaikh_window.txt
+- Timestamp: 2026-03-05 18:59:46.867414
+

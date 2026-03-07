@@ -1,0 +1,77 @@
+
+The first exercise reconstructs the single-equation ARDL device used by Shaikh to recover the productive-capacity benchmark. The objective at this stage is not model comparison but verification: whether the maintained ARDL specification can reproduce an admissible long-run relation between output and capital from which a utilization series can be constructed.
+
+Table \ref{tab:s1_replication_key_stats} summarizes the key statistics for the faithful replication specification. The table reports the representative ARDL model corresponding to Shaikh's implementation, including the implied long-run slope linking output to capital, the estimated speed of adjustment of the error-correction mechanism, and the associated fit--complexity diagnostics.
+
+Two aspects of the table are particularly relevant for the replication pipeline.
+
+First, the ARDL specification produces a coherent error-correction representation. The model achieves a well-defined log-likelihood and finite parameter count while preserving the error-correction structure required for the construction of the capacity benchmark. This confirms that the single-equation device can be estimated with the reconstructed corporate output and capital series under the common-numeraire restriction.
+
+Second, the table documents the \emph{short-run memory allocation implied by the ARDL lag geometry}. In the faithful specification, the capital-memory share is approximately $s_K \approx 0.67$, indicating that roughly two-thirds of the distributed lag structure operates through capital rather than output. This allocation matters because the constructed utilization series inherits its short-run dynamics from this lag structure: different lag geometries can generate the same long-run relation while implying different adjustment paths for the residual interpreted as utilization.
+
+Taken together, the table establishes the baseline object of the replication. The ARDL device used by Shaikh can be reconstructed, it yields a coherent error-correction structure, and it produces a measurable long-run anchor between output and capital from which the utilization series can be recovered. This baseline specification serves as the reference point for the subsequent robustness exercises that examine whether the same long-run restriction remains stable when the lag geometry is relaxed and when the relation is estimated as a system property rather than as a conditional single equation.
+
+
+\begin{table}[!ht]
+\centering
+\caption{Faithful replication of Shaikh's ARDL utilization benchmark} % FIX 1: \caption now precedes \label
+\label{tab:s1_replication_key_stats}
+\small
+\begin{threeparttable}
+\begin{tabular}{L*{6}{C}}
+\toprule
+Model & System & Det. terms & Lag structure & \shortstack{Cap.\\memory} & logLik & ICOMP \\
+\midrule
+Shaikh baseline & ARDL & none & (p=2,q=4) & 0.67 & 137.10 & 20.71 \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+\item Notes: Faithful replication of Shaikh's ARDL specification used to construct the productive-capacity benchmark. Capital memory share reports the fraction of short-run lag allocation attributed to capital dynamics within the ARDL lag structure.
+\end{tablenotes}
+
+\end{threeparttable}
+\end{table}
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\textwidth]{FIG_SHAIKH_ARDL_u_shaikh_window.png}
+\caption{Replication of Shaikh's capacity utilization series using the ARDL framework. 
+The blue line shows the utilization series reported in \citet{Shaikh2016}. 
+The green line corresponds to the replication without long-run dummy shifts in the 
+capacity benchmark $Y^p$, while the red dashed line incorporates long-run dummy 
+adjustments. Vertical dashed lines indicate the break years included in the ARDL 
+specification.}
+\label{fig:shaikh_ardl_replication}
+\end{figure}
+
+\begin{table}[!h]
+\centering
+\caption{ARDL frontier: Info. Criterias and Ambiguity Sets}
+\label{tab:ardl_frontier_ic_delta}
+\small
+\setlength{\tabcolsep}{3.0pt}
+\begin{threeparttable}
+
+\begin{tabular}{lccccccccccc}
+\toprule
+Point & $(p,q)$ & Param. & AIC & BIC & ICOMP & RICOMP & $\Delta$AIC & $\Delta$BIC & $\Delta$ICOMP & $\Delta$RICOMP & $s_K$ \\
+\midrule
+\midrule
+F1 & (1,1) & 4 & -257.39 & -246.59 & 14.83 & 14.83 & 0.00 & 0.00 & 0.00 & 0.00 & 0.50 \\
+F2 & (1,2) & 5 & -261.31 & -248.45 & 16.74 & 16.74 & 0.00 & 0.00 & 1.91 & 1.91 & 0.67 \\
+F3 & (2,2) & 6 & -259.98 & -244.98 & 17.44 & 17.44 & 1.33 & 3.47 & 2.61 & 2.61 & 0.50 \\
+F4 & (3,2) & 7 & -261.49 & -244.47 & 17.90 & 17.90 & 0.00 & 3.98 & 3.07 & 3.07 & 0.40 \\
+F5 & (1,3) & 6 & -265.42 & -250.53 & 18.05 & 18.05 & 0.00 & 0.00 & 3.23 & 3.23 & 0.75 \\
+F6 & (2,3) & 7 & -263.42 & -246.40 & 19.43 & 19.43 & 2.00 & 4.13 & 4.60 & 4.60 & 0.60 \\
+F7 & (3,3) & 8 & -263.19 & -244.05 & 20.33 & 20.33 & 2.23 & 6.48 & 5.50 & 5.50 & 0.50 \\
+\bottomrule
+\end{tabular}
+
+\begin{tablenotes}
+\item Notes: Table reports only frontier points (non-dominated fit--complexity specs). $\Delta$ columns are computed relative to the minimum within each criterion. $s_K$ is the ARDL capital memory share (\texttt{sK\_ardl}). $T_{\mathrm{eff}}=65$.
+\end{tablenotes}
+
+\end{threeparttable}
+\end{table}

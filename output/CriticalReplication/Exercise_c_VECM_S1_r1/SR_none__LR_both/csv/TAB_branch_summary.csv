@@ -1,2 +1,0 @@
-"run_id","det_tag","include","LRinclude","window_tag","window_start","window_end","P_MIN","P_MAX","T_window","T_eff_common","feasibility_share","best_cell_id","best_BIC","theta_best","theta_bandwidth_dBIC2","alpha_y_med_dBIC2","alpha_k_med_dBIC2","stability_margin_best"
-3,"SR_none__LR_both","none","both","shaikh_window",1947,2011,1,7,65,57,1,"p01_K_only_none_both",-534.651410486079,0.862934401694622,0,0.11695687754245,0.0868313350039792,0.0147802084089261

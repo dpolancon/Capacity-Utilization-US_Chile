@@ -113,22 +113,22 @@ stars_from_p <- function(p) {
 # LR multipliers + scaled LR dummy multipliers (since dummies enter outside LR relation but have LR multipliers)
 get_lr_table_with_scaled_dummies <- function(fit_ardl, lnY_name = "lnY", dummy_names = character()) {
   lr_mult <- ARDL::multipliers(fit_ardl, type = "lr")
-  
+
   coefs <- coef(fit_ardl)
   # denominator: 1 - sum phi_i on lagged dependent variable
   den <- 1 - sum(coefs[grep(paste0("^L\\(", lnY_name, ","), names(coefs))])
-  
+
   dummy_table <- NULL
   if (length(dummy_names)) {
     dummy_lr <- coefs[dummy_names] / den
-    
+
     vc <- vcov(fit_ardl)
     se_delta <- sqrt(diag(vc))[dummy_names]
     se_lr <- se_delta / abs(den)
-    
+
     t_lr <- dummy_lr / se_lr
     p_lr <- 2 * pt(abs(t_lr), df = df.residual(fit_ardl), lower.tail = FALSE)
-    
+
     dummy_table <- data.frame(
       Term         = dummy_names,
       Estimate     = as.numeric(dummy_lr),
@@ -139,7 +139,7 @@ get_lr_table_with_scaled_dummies <- function(fit_ardl, lnY_name = "lnY", dummy_n
     )
     names(dummy_table) <- names(lr_mult)
   }
-  
+
   lr_full_table <- if (!is.null(dummy_table)) rbind(lr_mult, dummy_table) else lr_mult
   list(lr_full_table = lr_full_table, den = den)
 }
@@ -170,15 +170,15 @@ extract_alpha_from_uecm <- function(fit_ardl, lnY_name = "lnY") {
 compute_u_from_lr <- function(df, lnY_name, lnK_name, lr_full, dummy_names) {
   a_lr <- lr_full$Estimate[lr_full$Term == "(Intercept)"]
   theta_lr <- lr_full$Estimate[lr_full$Term == lnK_name]
-  
+
   dummy_coef <- if (length(dummy_names)) lr_full$Estimate[match(dummy_names, lr_full$Term)] else numeric(0)
   dummy_effect <- if (length(dummy_names)) rowSums(df[dummy_names] * dummy_coef) else 0
-  
+
   lnY  <- df[[lnY_name]]
   lnK  <- df[[lnK_name]]
   lnYp <- a_lr + theta_lr * lnK + dummy_effect
   u    <- exp(lnY - lnYp)
-  
+
   list(u = u, lnYp = lnYp, intercept = a_lr, theta = theta_lr)
 }
 
@@ -284,29 +284,29 @@ df <- df0 |>
 run_one_case <- function(df, case_id, order, dummy_names, exact_test) {
   df_ts <- ts(df |> select(all_of(c("lnY", "lnK", dummy_names))),
               start = min(df$year), frequency = 1)
-  
+
   # ARDL formula: lnY ~ lnK | dummies
   fml <- as.formula(paste0("lnY ~ lnK | ", paste(dummy_names, collapse = " + ")))
   fit <- ARDL::ardl(formula = fml, data = df_ts, order = order)
-  
+
   # bounds tests (F always; t returned but robustness-star only for cases 1,3,5)
   bt_f <- ARDL::bounds_f_test(fit, case = case_id, alpha = 0.05, pvalue = TRUE, exact = exact_test)
   bt_t <- ARDL::bounds_t_test(fit, case = case_id, alpha = 0.05, pvalue = TRUE, exact = exact_test)
-  
+
   bF <- extract_bt(bt_f)
   bT <- extract_bt(bt_t)
-  
+
   # LR multipliers + LR dummy scaling
   lr_pack <- get_lr_table_with_scaled_dummies(fit, lnY_name = "lnY", dummy_names = dummy_names)
   lr_full <- lr_pack$lr_full_table
-  
+
   theta <- extract_lr_row(lr_full, "lnK")
   intercept <- extract_lr_row(lr_full, "(Intercept)")
   alpha_hat <- extract_alpha_from_uecm(fit, lnY_name = "lnY")
-  
+
   # series
   series <- compute_u_from_lr(df, "lnY", "lnK", lr_full, dummy_names)
-  
+
   list(
     case_id = case_id,
     fml     = fml,
@@ -347,18 +347,18 @@ contest <- tibble(
   order_q = ORDER[2],
   exact_test = EXACT_TEST,
   case_id = sapply(results, `[[`, "case_id"),
-  
+
   boundsF_stat = sapply(results, function(x) x$bt_f$stat),
   boundsF_p    = sapply(results, function(x) x$bt_f$pval),
-  
+
   boundsT_stat = sapply(results, function(x) x$bt_t$stat),
   boundsT_p    = sapply(results, function(x) x$bt_t$pval),
-  
+
   theta_hat    = sapply(results, function(x) x$theta$est),
   theta_p      = sapply(results, function(x) x$theta$p),
-  
+
   alpha_hat    = sapply(results, function(x) x$alpha_hat),
-  
+
   # Admissibility / robustness flags
   F_pass = (boundsF_p <= F_GATE_ALPHA),
   t_admissible = case_id %in% T_BOUNDS_ADMISSIBLE_CASES,
@@ -370,7 +370,7 @@ contest <- tibble(
     boundsF_stars = map_chr(boundsF_p, stars_from_p),
     boundsT_stars = if_else(t_admissible, map_chr(boundsT_p, stars_from_p), ""),
     theta_stars   = map_chr(theta_p, stars_from_p),
-    
+
     # Legend robustness stars: only meaningful if F_pass AND t_admissible
     robust_star = case_when(
       F_pass & t_admissible & boundsT_p <= 0.01 ~ "***",
