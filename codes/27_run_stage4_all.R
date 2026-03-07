@@ -24,8 +24,14 @@ safe_system <- function(cmd, args = character()) {
 source(here::here("codes", "10_config.R"))
 
 run_start <- Sys.time()
-run_id <- paste0("stage4_", format(run_start, "%Y%m%d_%H%M%S"))
-run_root <- here::here("output", paste0("run_", run_id))
+
+# run folder name requested: ResultsPack_YYYYMMDD_HHMMSS
+run_stamp <- format(run_start, "%Y%m%d_%H%M%S")
+run_id <- paste0("stage4_", run_stamp)  # keep run_id for logs/manifest
+
+# fixed base + per-run folder
+run_root <- here::here("output", "CriticalReplication", "ResultsPack",
+                       paste0("ResultsPack_", run_stamp))
 dir.create(run_root, recursive = TRUE, showWarnings = FALSE)
 
 tz_name <- Sys.timezone()

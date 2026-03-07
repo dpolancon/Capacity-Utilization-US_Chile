@@ -3,7 +3,12 @@
 # - Uses CONFIG paths
 # - Uses 99_utils safe_read_csv (base R) and det_pairs if needed later
 # - Uses export_table_bundle(CONFIG, ...)
+# PACK SCOPE: ARDL replication + ARDL grid
+# INPUT SCRIPTS: 20_shaikh_ardl_replication.R, 21_CR_ARDL_grid.R
+# OUTPUT FOLDER: ResultsPack_ARDL_20_21/
 # ============================================================
+
+
 
 
 # ---------------------------
@@ -18,23 +23,30 @@ suppressPackageStartupMessages({
   library("dplyr")
   library("stringr")
   library("purrr")
-  library("readr")
 })
 
 
 if (!exists("CONFIG")) stop("CONFIG not found. Did you source codes/10_config.R ?", call. = FALSE)
 
+#Out Root 
 OUT_ROOT <- CONFIG$OUT_CR_ROOT
-RUN_ID <- Sys.getenv("CR_RUN_ID", unset = paste0("stage4_", format(Sys.time(), "%Y%m%d_%H%M%S")))
-RUN_ROOT <- Sys.getenv("CR_RUN_ROOT", unset = file.path(OUT_ROOT, paste0("run_", RUN_ID)))
 
-PACK_ROOT   <- file.path(RUN_ROOT, "ResultsPack")
+# auto-detect: called from 27 or standalone?
+CALLED_FROM_STAGE4 <- nzchar(Sys.getenv("CR_RUN_ROOT"))
+STANDALONE_FALLBACK_ROOT <- file.path(OUT_ROOT, "run_latest")
+
+# stable run identity
+RUN_ID <- if (CALLED_FROM_STAGE4) Sys.getenv("CR_RUN_ID") else "standalone_latest"
+RUN_ROOT <- if (CALLED_FROM_STAGE4) Sys.getenv("CR_RUN_ROOT") else STANDALONE_FALLBACK_ROOT
+
+# pack destination: unique subfolder for 28
+PACK_ROOT   <- file.path(RUN_ROOT, "ARDL_20_21")
 PACK_TABLES <- file.path(PACK_ROOT, "tables")
 PACK_FIGS   <- file.path(PACK_ROOT, "figs")
 PACK_DATA   <- file.path(PACK_ROOT, "data")
 dir.create(PACK_TABLES, recursive = TRUE, showWarnings = FALSE)
-dir.create(PACK_FIGS, recursive = TRUE, showWarnings = FALSE)
-dir.create(PACK_DATA, recursive = TRUE, showWarnings = FALSE)
+dir.create(PACK_FIGS,   recursive = TRUE, showWarnings = FALSE)
+dir.create(PACK_DATA,   recursive = TRUE, showWarnings = FALSE)
 
 # ---- Paths (CONFIG aware) ----
 S1_series_path <- file.path(CONFIG$OUT_CR$exercise_a, "csv",
