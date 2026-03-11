@@ -1,10 +1,10 @@
 # RUN MANIFEST — Chapter 3 Critical Replication
 
 ## Run metadata
-- Run ID: `ch3_20260311_134512`
-- Timestamp: `2026-03-11T13:45:12-0300`
+- Run ID: `ch3_20260311_183129`
+- Timestamp: `2026-03-11T18:31:29-0300`
 - Timezone: `America/Santiago`
-- Git hash: `fa310e7`
+- Git hash: `ea10042`
 - Seed: `123456`
 - Machine/OS: `sysname Windows; release 10 x64; version build 26200; nodename DIEGO-ASUS; machine x86-64; login User; user User; effective_user User; udomain DIEGO-ASUS`
 

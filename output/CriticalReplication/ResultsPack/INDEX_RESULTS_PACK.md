@@ -1,5 +1,5 @@
 # INDEX — Chapter 3 Results Pack
-Generated: 2026-03-11 13:47:54.67144
+Generated: 2026-03-11 18:33:42.864066
 
 ## Tables
 - TAB_S0_bounds_report.csv

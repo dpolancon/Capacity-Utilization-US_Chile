@@ -1,12 +1,12 @@
 === S2 VECM Bivariate (m=2, r=1) ===
-Timestamp:  2026-03-11 13:47:34 
+Timestamp:  2026-03-11 18:33:28 
 Lattice:   p=1: 4  d={ d0,d1,d2,d3 } h={ h0,h1,h2 }
 Total:      48  specs
 Window:     shaikh_window  ( 1947 - 2011 , T= 65 )
 
 Estimating 48 specifications...
-  [25/48] done | 6 failed | 13 admissible | elapsed 1.9s
-  [48/48] done | 12 failed | 21 admissible | elapsed 2.5s
+  [25/48] done | 6 failed | 13 admissible | elapsed 1.0s
+  [48/48] done | 12 failed | 21 admissible | elapsed 1.6s
 
 Grid complete: 48 specs | 12 failed | 21 admissible
 A_S2_m2 (admissible): 21 specs

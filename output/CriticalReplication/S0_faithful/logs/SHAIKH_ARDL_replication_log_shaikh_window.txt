@@ -1,5 +1,5 @@
 === Shaikh ARDL replication — CASE TOGGLE (Study A) ===
-Timestamp: 2026-03-11 13:45:15
+Timestamp: 2026-03-11 18:31:32
 Window:    shaikh_window (1947-2011)
 Order:     (p,q) = (2,4)
 Cases:     1,2,3,4,5

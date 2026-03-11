@@ -1,4 +1,0 @@
-Data → ARDL(2,4) estimation → Bounds F gate → 
-    admissible cases → utilization reconstruction → figure
-                   ↘ full results table
-
