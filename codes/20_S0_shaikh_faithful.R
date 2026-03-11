@@ -1,34 +1,20 @@
 # ============================================================
-# 20_shaikh_ardl_replication.R  (PATCH CONSOLIDATE v2)
+# 20_S0_shaikh_faithful.R
 #
-# Study A — Shaikh faithful ARDL replication + CASE TOGGLE (1–5)
+# S0 — Shaikh faithful ARDL(2,4) replication + five-case comparison
 #
-# LOCKED OBJECTIVE (Study A):
-#   - Fix lag structure at (p,q) = (2,4)
-#   - Run ALL 5 PSS/ARDL “cases” (1..5) for the SAME (2,4) spec
-#   - Admissibility gate for inclusion in the main comparison figure:
-#         PASS bounds F-test (cointegration gate)
-#   - t-bounds test:
-#         reported for all cases BUT “robustness star” only applies when
-#         t-bounds is admissible (cases 1,3,5 per your lockdown)
-#   - Figure: Shaikh u vs replication u for all F-admissible cases
-#            with legend stars for t-bounds robustness (1/5/10%).
-#   - Tables (CSV + optional LaTeX feed):
-#        (i) Case contest table (ALL cases, levels not deltas):
-#            F and t bounds stats/pvals + stars, theta + stars, alpha (UECM)
-#        (ii) Coefficient summary table for ALL cases (LR multipliers + scaled LR dummies)
+# Fixed-spec replication at m0 = (p=2, q=4, case=3, s=s3).
+# Produces three canonical public CSVs:
+#   - S0_spec_report.csv         (contest table: all 5 cases)
+#   - S0_fivecase_summary.csv    (coefficient summary)
+#   - S0_utilization_series.csv  (u_hat + yp_hat annual series)
 #
 # Uses:
 #   - CONFIG from codes/10_config.R
-#   - utilities from codes/99_utils.R (safe_write_csv, now_stamp, %||%, add_stars if present)
+#   - utilities from codes/99_utils.R
 #
-# Outputs (under Exercise_a_ARDL_faithful):
-#   - csv/SHAIKH_ARDL_case_contest_shaikh_window.csv
-#   - csv/SHAIKH_ARDL_coef_table_shaikh_window.csv
-#   - csv/SHAIKH_ARDL_u_cases_shaikh_window.csv
-#   - figs/FIG_S1_ARDL_u_compare_cases_Fpass_shaikh_window.png
-#   - logs/SHAIKH_ARDL_replication_log_shaikh_window.txt
-#   - Manifest/RUN_MANIFEST_stage4.md (append)
+# Outputs under: output/CriticalReplication/S0_faithful/
+# Manifest: written by 24_manifest_runner.R only (no local append)
 # ============================================================
 
 rm(list = ls())
@@ -110,31 +96,58 @@ stars_from_p <- function(p) {
   ""
 }
 
-# LR multipliers + scaled LR dummy multipliers (since dummies enter outside LR relation but have LR multipliers)
+# LR multipliers + scaled LR dummy multipliers via delta method
+# ------------------------------------------------------------------
+# multipliers() omits fixed regressors (dummies after "|"), so we
+# compute: LR(d_j) = gamma_j / (1 - phi_1 - phi_2 - ...)
+# SE via delta method:
+#   g = [ 1/den,  gamma_j/den^2, gamma_j/den^2, ... ] (gradient)
+#   SE = sqrt( g' V_sub g )   where V_sub is vcov submatrix for
+#                              {gamma_j, phi_1, phi_2, ...}
+# ------------------------------------------------------------------
 get_lr_table_with_scaled_dummies <- function(fit_ardl, lnY_name = "lnY", dummy_names = character()) {
   lr_mult <- ARDL::multipliers(fit_ardl, type = "lr")
 
   coefs <- coef(fit_ardl)
-  # denominator: 1 - sum phi_i on lagged dependent variable
-  den <- 1 - sum(coefs[grep(paste0("^L\\(", lnY_name, ","), names(coefs))])
+  # AR lag coefficient names  e.g. L(lnY, 1), L(lnY, 2)
+  phi_names <- grep(paste0("^L\\(", lnY_name, ","), names(coefs), value = TRUE)
+  # denominator: 1 - sum phi_i
+  den <- 1 - sum(coefs[phi_names])
 
   dummy_table <- NULL
   if (length(dummy_names)) {
-    dummy_lr <- coefs[dummy_names] / den
+    gamma_sr  <- coefs[dummy_names]          # SR dummy coefficients
+    dummy_lr  <- gamma_sr / den              # LR multipliers
 
     vc <- vcov(fit_ardl)
-    se_delta <- sqrt(diag(vc))[dummy_names]
-    se_lr <- se_delta / abs(den)
 
-    t_lr <- dummy_lr / se_lr
+    se_lr <- numeric(length(dummy_names))
+    for (j in seq_along(dummy_names)) {
+      dname   <- dummy_names[j]
+      gamma_j <- coefs[dname]
+
+      # indices in vcov for {gamma_j, phi_1, phi_2, ...}
+      param_names <- c(dname, phi_names)
+      idx <- match(param_names, names(coefs))
+
+      # gradient vector  ∂LR/∂theta
+      grad      <- numeric(length(param_names))
+      grad[1]   <- 1 / den                  # ∂/∂gamma_j
+      grad[-1]  <- gamma_j / den^2          # ∂/∂phi_i  (each AR lag)
+
+      V_sub     <- vc[idx, idx, drop = FALSE]
+      se_lr[j]  <- sqrt(as.numeric(t(grad) %*% V_sub %*% grad))
+    }
+
+    t_lr <- as.numeric(dummy_lr) / se_lr
     p_lr <- 2 * pt(abs(t_lr), df = df.residual(fit_ardl), lower.tail = FALSE)
 
     dummy_table <- data.frame(
       Term         = dummy_names,
       Estimate     = as.numeric(dummy_lr),
-      `Std. Error` = as.numeric(se_lr),
-      `t value`    = as.numeric(t_lr),
-      `Pr(>|t|)`   = as.numeric(p_lr),
+      `Std. Error` = se_lr,
+      `t value`    = t_lr,
+      `Pr(>|t|)`   = p_lr,
       stringsAsFactors = FALSE
     )
     names(dummy_table) <- names(lr_mult)
@@ -168,7 +181,9 @@ extract_alpha_from_uecm <- function(fit_ardl, lnY_name = "lnY") {
 # Build u and lnY^p from LR object:
 # lnY^p = a + theta lnK + sum_j lr_dummy_j * d_j
 compute_u_from_lr <- function(df, lnY_name, lnK_name, lr_full, dummy_names) {
-  a_lr <- lr_full$Estimate[lr_full$Term == "(Intercept)"]
+  a_lr_vec <- lr_full$Estimate[lr_full$Term == "(Intercept)"]
+  a_lr <- if (length(a_lr_vec) > 0 && is.finite(a_lr_vec[1])) a_lr_vec[1] else 0
+
   theta_lr <- lr_full$Estimate[lr_full$Term == lnK_name]
 
   dummy_coef <- if (length(dummy_names)) lr_full$Estimate[match(dummy_names, lr_full$Term)] else numeric(0)
@@ -240,16 +255,14 @@ df0 <- df0 |>
 # ------------------------------------------------------------
 # 2) Output dirs + log sink (CONFIG)
 # ------------------------------------------------------------
-EXERCISE_DIR <- here::here(CONFIG$OUT_CR$exercise_a %||% "output/CriticalReplication/Exercise_a_ARDL_faithful")
+EXERCISE_DIR <- here::here(CONFIG$OUT_CR$S0_faithful %||% "output/CriticalReplication/S0_faithful")
 CSV_DIR <- file.path(EXERCISE_DIR, "csv")
 LOG_DIR <- file.path(EXERCISE_DIR, "logs")
-FIG_DIR <- file.path(EXERCISE_DIR, "figs")
-MAN_DIR <- here::here(CONFIG$OUT_CR$manifest %||% "output/CriticalReplication/Manifest")
+FIG_DIR <- file.path(EXERCISE_DIR, "figures")
 
 dir.create(CSV_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(LOG_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(FIG_DIR, recursive = TRUE, showWarnings = FALSE)
-dir.create(MAN_DIR, recursive = TRUE, showWarnings = FALSE)
 
 log_path <- file.path(LOG_DIR, paste0("SHAIKH_ARDL_replication_log_", WINDOW_TAG, ".txt"))
 sink(log_path, split = TRUE)
@@ -285,13 +298,28 @@ run_one_case <- function(df, case_id, order, dummy_names, exact_test) {
   df_ts <- ts(df |> select(all_of(c("lnY", "lnK", dummy_names))),
               start = min(df$year), frequency = 1)
 
-  # ARDL formula: lnY ~ lnK | dummies
-  fml <- as.formula(paste0("lnY ~ lnK | ", paste(dummy_names, collapse = " + ")))
+  # Case-appropriate ARDL formula:
+  #   Case 1: no intercept, no trend
+  #   Cases 2-3: intercept, no trend (standard)
+  #   Cases 4-5: intercept + trend (trend as fixed regressor)
+  dum_str <- paste(dummy_names, collapse = " + ")
+  if (case_id == 1L) {
+    fml <- as.formula(paste0("lnY ~ -1 + lnK | ", dum_str))
+  } else if (case_id %in% c(4L, 5L)) {
+    fml <- as.formula(paste0("lnY ~ lnK | trend(lnY) + ", dum_str))
+  } else {
+    fml <- as.formula(paste0("lnY ~ lnK | ", dum_str))
+  }
   fit <- ARDL::ardl(formula = fml, data = df_ts, order = order)
 
-  # bounds tests (F always; t returned but robustness-star only for cases 1,3,5)
+  # F-bounds test (always applicable)
   bt_f <- ARDL::bounds_f_test(fit, case = case_id, alpha = 0.05, pvalue = TRUE, exact = exact_test)
-  bt_t <- ARDL::bounds_t_test(fit, case = case_id, alpha = 0.05, pvalue = TRUE, exact = exact_test)
+
+  # t-bounds test (not applicable for cases 2, 4)
+  bt_t <- tryCatch(
+    ARDL::bounds_t_test(fit, case = case_id, alpha = 0.05, pvalue = TRUE, exact = exact_test),
+    error = function(e) list(statistic = NA_real_, p.value = NA_real_)
+  )
 
   bF <- extract_bt(bt_f)
   bT <- extract_bt(bt_t)
@@ -304,8 +332,21 @@ run_one_case <- function(df, case_id, order, dummy_names, exact_test) {
   intercept <- extract_lr_row(lr_full, "(Intercept)")
   alpha_hat <- extract_alpha_from_uecm(fit, lnY_name = "lnY")
 
-  # series
+  # Recover utilization from LR relation
   series <- compute_u_from_lr(df, "lnY", "lnK", lr_full, dummy_names)
+
+  # For Cases 4-5, add trend component to capacity benchmark
+  if (case_id %in% c(4L, 5L)) {
+    coefs <- coef(fit)
+    trend_name <- grep("^trend", names(coefs), value = TRUE)
+    if (length(trend_name) > 0) {
+      trend_sr <- coefs[trend_name[1]]
+      trend_lr <- trend_sr / lr_pack$den
+      trend_vals <- seq(0, nrow(df) - 1)
+      series$lnYp <- series$lnYp + trend_lr * trend_vals
+      series$u <- exp(df$lnY - series$lnYp)
+    }
+  }
 
   list(
     case_id = case_id,
@@ -328,14 +369,41 @@ run_one_case <- function(df, case_id, order, dummy_names, exact_test) {
 results <- lapply(CASES, function(cc) {
   cat("------------------------------------------------------------\n")
   cat("CASE ", cc, " | order=", paste(ORDER, collapse=","), " | exact=", EXACT_TEST, "\n", sep="")
-  out <- run_one_case(df, case_id = cc, order = ORDER, dummy_names = dummy_names, exact_test = EXACT_TEST)
-  cat("Formula: ", deparse(out$fml), "\n", sep="")
-  print(summary(out$fit))
-  cat("\nBounds F:\n"); print(ARDL::bounds_f_test(out$fit, case = cc, alpha = 0.05, pvalue = TRUE, exact = EXACT_TEST))
-  cat("\nBounds t:\n"); print(ARDL::bounds_t_test(out$fit, case = cc, alpha = 0.05, pvalue = TRUE, exact = EXACT_TEST))
-  cat("\nTheta (LR lnK): ", signif(out$theta$est, 6), " | p=", signif(out$theta$p, 6), "\n", sep="")
-  cat("Alpha (UECM L(lnY,1)): ", signif(out$alpha_hat, 6), "\n", sep="")
-  out
+  tryCatch({
+    out <- run_one_case(df, case_id = cc, order = ORDER, dummy_names = dummy_names, exact_test = EXACT_TEST)
+    cat("Formula: ", deparse(out$fml), "\n", sep="")
+    print(summary(out$fit))
+    cat("\nBounds F:\n"); print(ARDL::bounds_f_test(out$fit, case = cc, alpha = 0.05, pvalue = TRUE, exact = EXACT_TEST))
+    bt_t_disp <- tryCatch(
+      ARDL::bounds_t_test(out$fit, case = cc, alpha = 0.05, pvalue = TRUE, exact = EXACT_TEST),
+      error = function(e) NULL
+    )
+    if (!is.null(bt_t_disp)) {
+      cat("\nBounds t:\n"); print(bt_t_disp)
+    } else {
+      cat("\nBounds t: not applicable for case ", cc, "\n")
+    }
+    cat("\nTheta (LR lnK): ", signif(out$theta$est, 6), " | p=", signif(out$theta$p, 6), "\n", sep="")
+    cat("Alpha (UECM L(lnY,1)): ", signif(out$alpha_hat, 6), "\n", sep="")
+    out
+  }, error = function(e) {
+    cat("CASE ", cc, " FAILED: ", conditionMessage(e), "\n")
+    list(
+      case_id   = cc,
+      failed    = TRUE,
+      error_msg = conditionMessage(e),
+      fml       = NA,
+      fit       = NULL,
+      bt_f      = list(stat = NA_real_, pval = NA_real_),
+      bt_t      = list(stat = NA_real_, pval = NA_real_),
+      theta     = list(est = NA_real_, p = NA_real_),
+      intercept = list(est = NA_real_, p = NA_real_),
+      alpha_hat = NA_real_,
+      u         = rep(NA_real_, nrow(df)),
+      lnYp      = rep(NA_real_, nrow(df)),
+      lr_full   = NULL
+    )
+  })
 })
 
 # ------------------------------------------------------------
@@ -347,6 +415,7 @@ contest <- tibble(
   order_q = ORDER[2],
   exact_test = EXACT_TEST,
   case_id = sapply(results, `[[`, "case_id"),
+  failed  = sapply(results, function(x) isTRUE(x$failed)),
 
   boundsF_stat = sapply(results, function(x) x$bt_f$stat),
   boundsF_p    = sapply(results, function(x) x$bt_f$pval),
@@ -359,28 +428,28 @@ contest <- tibble(
 
   alpha_hat    = sapply(results, function(x) x$alpha_hat),
 
-  # Admissibility / robustness flags
-  F_pass = (boundsF_p <= F_GATE_ALPHA),
-  t_admissible = case_id %in% T_BOUNDS_ADMISSIBLE_CASES,
-  t_pass_10 = if_else(t_admissible, boundsT_p <= 0.10, NA),
-  t_pass_05 = if_else(t_admissible, boundsT_p <= 0.05, NA),
-  t_pass_01 = if_else(t_admissible, boundsT_p <= 0.01, NA)
+  # Admissibility / robustness flags (failed cases are not admissible)
+  F_pass = if_else(!failed & !is.na(boundsF_p), boundsF_p <= F_GATE_ALPHA, FALSE),
+  t_admissible = case_id %in% T_BOUNDS_ADMISSIBLE_CASES & !failed,
+  t_pass_10 = if_else(t_admissible & !is.na(boundsT_p), boundsT_p <= 0.10, NA),
+  t_pass_05 = if_else(t_admissible & !is.na(boundsT_p), boundsT_p <= 0.05, NA),
+  t_pass_01 = if_else(t_admissible & !is.na(boundsT_p), boundsT_p <= 0.01, NA)
 ) |>
   mutate(
-    boundsF_stars = map_chr(boundsF_p, stars_from_p),
-    boundsT_stars = if_else(t_admissible, map_chr(boundsT_p, stars_from_p), ""),
-    theta_stars   = map_chr(theta_p, stars_from_p),
+    boundsF_stars = map_chr(boundsF_p, ~ if (is.na(.x)) "" else stars_from_p(.x)),
+    boundsT_stars = if_else(t_admissible, map_chr(boundsT_p, ~ if (is.na(.x)) "" else stars_from_p(.x)), ""),
+    theta_stars   = map_chr(theta_p, ~ if (is.na(.x)) "" else stars_from_p(.x)),
 
     # Legend robustness stars: only meaningful if F_pass AND t_admissible
     robust_star = case_when(
-      F_pass & t_admissible & boundsT_p <= 0.01 ~ "***",
-      F_pass & t_admissible & boundsT_p <= 0.05 ~ "**",
-      F_pass & t_admissible & boundsT_p <= 0.10 ~ "*",
+      F_pass & t_admissible & !is.na(boundsT_p) & boundsT_p <= 0.01 ~ "***",
+      F_pass & t_admissible & !is.na(boundsT_p) & boundsT_p <= 0.05 ~ "**",
+      F_pass & t_admissible & !is.na(boundsT_p) & boundsT_p <= 0.10 ~ "*",
       TRUE ~ ""
     )
   )
 
-contest_path <- file.path(CSV_DIR, paste0("SHAIKH_ARDL_case_contest_", WINDOW_TAG, ".csv"))
+contest_path <- file.path(CSV_DIR, "S0_spec_report.csv")
 safe_write_csv(contest, contest_path)
 cat("\nWrote contest CSV:\n  ", contest_path, "\n", sep="")
 
@@ -388,6 +457,7 @@ cat("\nWrote contest CSV:\n  ", contest_path, "\n", sep="")
 # 7) Coefficient table (LR multipliers table per case)
 # ------------------------------------------------------------
 coef_tbl <- purrr::map_dfr(results, function(x) {
+  if (isTRUE(x$failed) || is.null(x$lr_full)) return(NULL)
   lr <- x$lr_full
   lr |>
     mutate(
@@ -400,18 +470,27 @@ coef_tbl <- purrr::map_dfr(results, function(x) {
     select(window_tag, case_id, order_p, order_q, exact_test, everything())
 })
 
-coef_path <- file.path(CSV_DIR, paste0("SHAIKH_ARDL_coef_table_", WINDOW_TAG, ".csv"))
+coef_path <- file.path(CSV_DIR, "S0_fivecase_summary.csv")
 safe_write_csv(coef_tbl, coef_path)
 cat("Wrote coef CSV:\n  ", coef_path, "\n", sep="")
 
 # ------------------------------------------------------------
 # 8) Build u-series wide CSV: Shaikh + u_caseX (ALL cases)
+#    u_hat = Case 3 (Shaikh's benchmark), yp_hat = Case 3 capacity
 # ------------------------------------------------------------
-u_cases <- tibble(year = df$year, u_shaikh = df$u_shaikh)
+# Identify Case 3 result (Shaikh's benchmark specification)
+res_c3 <- results[[which(sapply(results, `[[`, "case_id") == 3)]]
+
+u_cases <- tibble(
+  year     = df$year,
+  u_shaikh = df$u_shaikh,
+  u_hat    = res_c3$u,
+  yp_hat   = res_c3$lnYp
+)
 for (x in results) {
   u_cases[[paste0("u_case", x$case_id)]] <- x$u
 }
-u_cases_path <- file.path(CSV_DIR, paste0("SHAIKH_ARDL_u_cases_", WINDOW_TAG, ".csv"))
+u_cases_path <- file.path(CSV_DIR, "S0_utilization_series.csv")
 safe_write_csv(u_cases, u_cases_path)
 cat("Wrote u-cases CSV:\n  ", u_cases_path, "\n", sep="")
 
@@ -467,31 +546,38 @@ ggsave(fig_path, p, width = 11, height = 6.6, dpi = 300)
 cat("Saved figure:\n  ", fig_path, "\n", sep="")
 
 # ------------------------------------------------------------
-# 10) Manifest append
+# 10) Verification block — canonical benchmark comparison
 # ------------------------------------------------------------
-manifest_path <- file.path(MAN_DIR, "RUN_MANIFEST_stage4.md")
-cat(
-  paste0(
-    "# Run Manifest (Stage 4)\n",
-    "- stage: Study A (ARDL faithful + cases)\n",
-    "- window_tag: ", WINDOW_TAG, "\n",
-    "- window_start: ", WINDOW_START, "\n",
-    "- window_end: ", WINDOW_END, "\n",
-    "- script: codes/20_shaikh_ardl_replication.R\n",
-    "- order_pq: (", paste(ORDER, collapse=","), ")\n",
-    "- cases: ", paste(CASES, collapse=","), "\n",
-    "- exact_test: ", EXACT_TEST, "\n",
-    "- outputs:\n",
-    "  - ", contest_path, "\n",
-    "  - ", coef_path, "\n",
-    "  - ", u_cases_path, "\n",
-    "  - ", fig_path, "\n",
-    "  - ", log_path, "\n",
-    "- Timestamp: ", Sys.time(), "\n\n"
-  ),
-  file = manifest_path,
-  append = TRUE
-)
+# Case 3 LR coefficients for verification against Shaikh Table 6.7.14
+lr_c3      <- res_c3$lr_full
+theta_v    <- extract_lr_row(lr_c3, "lnK")$est
+a_v        <- extract_lr_row(lr_c3, "(Intercept)")$est
+c_d74_v    <- extract_lr_row(lr_c3, "d1974")$est
+c_d56_v    <- extract_lr_row(lr_c3, "d1956")$est
+c_d80_v    <- extract_lr_row(lr_c3, "d1980")$est
 
-cat("\nAppended manifest:\n  ", manifest_path, "\n", sep = "")
+fit_c3     <- res_c3$fit
+aic_v      <- AIC(fit_c3)
+bic_v      <- BIC(fit_c3)
+loglik_v   <- as.numeric(logLik(fit_c3))
+r2_v       <- summary(fit_c3)$r.squared
+
+# RMSE vs Shaikh published series
+rmse_s0 <- sqrt(mean((res_c3$u - df$u_shaikh)^2, na.rm = TRUE))
+
+cat("\n=== S0 VERIFICATION vs SHAIKH TABLE 6.7.14 ===\n")
+cat("theta_hat:", round(theta_v, 4),  "| Target: 0.6609\n")
+cat("a_hat:    ", round(a_v, 4),      "| Target: 2.1782\n")
+cat("c_d74:    ", round(c_d74_v, 4),  "| Target: -0.8548\n")
+cat("c_d56:    ", round(c_d56_v, 4),  "| Target: -0.7428\n")
+cat("c_d80:    ", round(c_d80_v, 4),  "| Target: -0.4780\n")
+cat("AIC:      ", round(aic_v, 4),    "| Target: -319.3801\n")
+cat("BIC:      ", round(bic_v, 4),    "| Target: -296.1605\n")
+cat("loglik:   ", round(loglik_v, 4), "| Target: 170.6901\n")
+cat("R2:       ", round(r2_v, 4),     "| Target: 0.9992\n")
+cat("RMSE vs Shaikh:", round(rmse_s0, 6), "\n")
+cat("==============================================\n")
+
+# NOTE: Manifest append removed — 24_manifest_runner.R is the sole manifest writer.
+cat("STAGE_STATUS_HINT: stage=S0 status=complete\n")
 cat("\nDONE.\n")

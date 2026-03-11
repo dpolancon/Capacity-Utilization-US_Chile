@@ -88,77 +88,11 @@ gate_check_min_T <- function(T, m, p_max) {
 now_stamp <- function() format(Sys.time(), "%Y-%m-%d %H:%M:%S")
 
 
-results_pack_manifest_path <- function(CONFIG, file_name = "RESULTSPACK_EXPORT_LOG.csv") {
-  file.path(CONFIG$OUT_CR$manifest, "logs", file_name)
-}
-
-append_results_pack_export_log <- function(CONFIG,
-                                           run_id,
-                                           stage_tag,
-                                           obj_type = c("table_csv","table_tex","index_md","fig_copy","data_csv"),
-                                           file_path,
-                                           caption = "",
-                                           notes = "") {
-  obj_type <- match.arg(obj_type)
-  path <- here::here(results_pack_manifest_path(CONFIG))
-  dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
-
-  row <- data.frame(
-    timestamp = now_stamp(),
-    run_id    = as.character(run_id),
-    stage_tag = as.character(stage_tag),
-    obj_type  = as.character(obj_type),
-    file_path = as.character(file_path),
-    caption   = truncate_msg(caption, 240L),
-    notes     = truncate_msg(notes, 240L),
-    stringsAsFactors = FALSE
-  )
-
-  if (file.exists(path)) {
-    old <- tryCatch(utils::read.csv(path, stringsAsFactors = FALSE), error = function(e) NULL)
-    out <- if (is.null(old)) row else rbind(old, row)
-    utils::write.csv(out, path, row.names = FALSE)
-  } else {
-    utils::write.csv(row, path, row.names = FALSE)
-  }
-  invisible(path)
-}
-
 log_line <- function(path, msg) {
   dir.create(dirname(path), showWarnings = FALSE, recursive = TRUE)
   cat(sprintf("[%s] %s\n", now_stamp(), msg), file = path, append = TRUE)
 }
 
-stage4_manifest_log_path <- function(file_name = "SPEC_FEASIBILITY_LOG.csv") {
-  file.path("output", "CriticalReplication", "Manifest", "logs", file_name)
-}
-
-append_stage4_spec_log <- function(script_name,
-                                   spec_key,
-                                   status,
-                                   reason_code,
-                                   message,
-                                   file_name = "SPEC_FEASIBILITY_LOG.csv") {
-  path <- here::here(stage4_manifest_log_path(file_name))
-  dir.create(dirname(path), showWarnings = FALSE, recursive = TRUE)
-  row <- data.frame(
-    timestamp = now_stamp(),
-    script = as.character(script_name),
-    spec_key = as.character(spec_key),
-    status = as.character(status),
-    reason_code = as.character(reason_code),
-    message = truncate_msg(message, 240L),
-    stringsAsFactors = FALSE
-  )
-  if (file.exists(path)) {
-    old <- tryCatch(utils::read.csv(path, stringsAsFactors = FALSE), error = function(e) NULL)
-    out <- if (is.null(old)) row else rbind(old, row)
-    utils::write.csv(out, path, row.names = FALSE)
-  } else {
-    utils::write.csv(row, path, row.names = FALSE)
-  }
-  invisible(path)
-}
 
 preflight_vecm_spec <- function(include, LRinclude, p, T_window, m, r = NULL, min_te = 8L) {
   include <- resolve_include(include)
@@ -313,18 +247,6 @@ k_total_rr <- function(p_vecm, r, m, DSR, DLR) {
   k_sr(p_vecm, m, DSR) + k_lr(r, m, DLR)
 }
 
-pic_components <- function(ll, T_eff, k_total, Cn = NA_real_, lr_dim = NA_real_) {
-  core <- -2 * ll
-  lag_pen <- k_total * log(T_eff)
-  lr_pen <- if (is.finite(Cn) && is.finite(lr_dim)) Cn * lr_dim else NA_real_
-  
-  list(
-    core = core,
-    lag_pen = lag_pen,
-    lr_pen = lr_pen,
-    PIC = core + lag_pen + ifelse(is.finite(lr_pen), lr_pen, 0)
-  )
-}
 
 # ============================================================
 # Structured failure capture
@@ -349,57 +271,6 @@ as_fail_record <- function(status = c("runtime_fail","infeasible","gate_fail"),
   )
 }
 
-# ============================================================
-# Stage-4 geometry complexity row helper
-# ============================================================
-
-compute_complexity_record <- function(exercise,
-                                      model_class,
-                                      window,
-                                      window_tag,
-                                      window_start,
-                                      window_end,
-                                      p,
-                                      r,
-                                      logLik,
-                                      k,
-                                      ICOMP_pen,
-                                      RICOMP_pen,
-                                      AIC,
-                                      BIC,
-                                      HQ,
-                                      AICc,
-                                      SI_Y,
-                                      s_K,
-                                      notes = "",
-                                      extra = list()) {
-  row <- c(
-    list(
-      exercise = exercise,
-      model_class = model_class,
-      window = window,
-      window_tag = window_tag,
-      window_start = window_start,
-      window_end = window_end,
-      p = p,
-      r = r,
-      logLik = logLik,
-      k = k,
-      ICOMP_pen = ICOMP_pen,
-      RICOMP_pen = RICOMP_pen,
-      AIC = AIC,
-      BIC = BIC,
-      HQ = HQ,
-      AICc = AICc,
-      SI_Y = SI_Y,
-      s_K = s_K,
-      notes = notes
-    ),
-    extra
-  )
-
-  as.data.frame(row, stringsAsFactors = FALSE)
-}
 
 # ============================================================
 # det_pairs(CONFIG) — supports list-of-pairs DET_PAIRS
@@ -512,81 +383,13 @@ det_pairs <- function(CONFIG) {
   out
 }
 
-# ============================================================
-# admissible_gate — kappa is diagnostic unless enforce_kappa=TRUE
-# ============================================================
-
-admissible_gate <- function(dfw, p, slack = 5, hard_kappa = 1e12, enforce_kappa = FALSE) {
-  
-  dfw <- as.matrix(dfw)
-  p   <- as.integer(p)
-  
-  T_eff <- nrow(dfw)
-  m     <- ncol(dfw)
-  
-  if (any(!is.finite(dfw))) {
-    return(list(
-      ok = FALSE,
-      msg = "non-finite entries in dfw",
-      reason = "non_finite",
-      diagnostics = list(T_eff = T_eff, m = m, p = p)
-    ))
-  }
-  
-  if ((T_eff - (p + 1L)) < slack * m) {
-    return(list(
-      ok = FALSE,
-      msg = "T too small given (p,m)",
-      reason = "T_too_small",
-      diagnostics = list(T_eff = T_eff, m = m, p = p, slack = slack)
-    ))
-  }
-  
-  S <- try(stats::cov(dfw), silent = TRUE)
-  if (inherits(S, "try-error") || any(!is.finite(S))) {
-    return(list(
-      ok = FALSE,
-      msg = "cov(dfw) failed / non-finite",
-      reason = "cov_fail",
-      diagnostics = list(T_eff = T_eff, m = m, p = p)
-    ))
-  }
-  
-  kap_raw <- try(kappa(S), silent = TRUE)
-  kap_raw <- if (inherits(kap_raw, "try-error")) NA_real_ else as.numeric(kap_raw)
-  
-  kap_scaled <- try(kappa(stats::cov(scale(dfw))), silent = TRUE)
-  kap_scaled <- if (inherits(kap_scaled, "try-error")) NA_real_ else as.numeric(kap_scaled)
-  
-  reason <- "ok"
-  msg    <- "ok"
-  ok     <- TRUE
-  
-  kap_to_use <- kap_scaled
-  if (is.finite(kap_to_use) && kap_to_use > hard_kappa) {
-    reason <- "kappa_high"
-    msg    <- sprintf("kappa(scale(cov)) too large: %.3e (diagnostic)", kap_to_use)
-    ok     <- !isTRUE(enforce_kappa)
-  }
-  
-  list(
-    ok = ok,
-    msg = msg,
-    reason = reason,
-    diagnostics = list(
-      T_eff = T_eff, m = m, p = p,
-      kappa_raw = kap_raw,
-      kappa_scaled = kap_scaled,
-      hard_kappa = hard_kappa,
-      enforce_kappa = enforce_kappa
-    )
-  )
-}
 
 # ============================================================
-# Orthogonalization layer (NO standardization)
+# CH4: Orthogonalization layer (NO standardization)
+# These basis functions are used by Chapter 4 only.
 # ============================================================
 
+# CH4: basis_build_rawpowers_qr
 basis_build_rawpowers_qr <- function(df, e_col = "e", degree = 2) {
   if (!(e_col %in% names(df))) stop("basis_build_rawpowers_qr: missing column ", e_col, call. = FALSE)
   
@@ -621,6 +424,7 @@ basis_build_rawpowers_qr <- function(df, e_col = "e", degree = 2) {
   )
 }
 
+# CH4: basis_apply_rawpowers_qr
 basis_apply_rawpowers_qr <- function(df, basis, prefix = "Q") {
   if (!(basis$e_col %in% names(df))) stop("basis_apply_rawpowers_qr: missing e column ", basis$e_col, call. = FALSE)
   e <- as.numeric(df[[basis$e_col]])
@@ -636,6 +440,7 @@ basis_apply_rawpowers_qr <- function(df, basis, prefix = "Q") {
   out
 }
 
+# CH4: basis_apply_rawpowers
 basis_apply_rawpowers <- function(df, e_col = "e", degree = 2, prefix = "Q") {
   if (!(e_col %in% names(df))) stop("basis_apply_rawpowers: missing e column ", e_col, call. = FALSE)
   e <- as.numeric(df[[e_col]])
@@ -671,113 +476,3 @@ tsdyn_loglik_safe2 <- function(fit, m) {
 }
 
 
-
-# ============================================================
-#  table_as_is
-# ============================================================
-# -------- Table export with optional kableExtra footnote/styling --------
-table_as_is <- function(data, file_path,
-                        column_labels = NULL,
-                        caption = "Table",
-                        format = c("latex", "html"),
-                        overwrite = TRUE,
-                        escape = TRUE,
-                        return_string = FALSE,
-                        footnote = NULL,
-                        manifest_hook = NULL) {
-  format <- match.arg(format)
-  if (!is.data.frame(data) && !is.matrix(data)) stop("data must be a data.frame or matrix.")
-  if (!is.null(column_labels)) {
-    if (length(column_labels) != ncol(data)) stop("column_labels length mismatch.")
-    colnames(data) <- column_labels
-  }
-  dir_path <- dirname(file_path)
-  if (!dir.exists(dir_path)) dir.create(dir_path, recursive = TRUE, showWarnings = FALSE)
-  if (file.exists(file_path) && !isTRUE(overwrite)) stop("File exists and overwrite = FALSE: ", file_path)
-  
-  if (!requireNamespace("knitr", quietly = TRUE)) stop("Package 'knitr' is required")
-  tbl <- knitr::kable(data, format = format, booktabs = TRUE, caption = caption, escape = escape)
-  
-  if (requireNamespace("kableExtra", quietly = TRUE)) {
-    if (format == "latex") {
-      tbl <- kableExtra::kable_styling(tbl, latex_options = c("hold_position"))
-      if (!is.null(footnote)) tbl <- kableExtra::footnote(tbl, general = footnote, threeparttable = TRUE)
-    } else {
-      tbl <- kableExtra::kable_styling(tbl, bootstrap_options = c("condensed","responsive"))
-      if (!is.null(footnote)) tbl <- kableExtra::footnote(tbl, general = footnote)
-    }
-    tbl_string <- as.character(tbl)
-  } else {
-    tbl_string <- paste(tbl, collapse = "\n")
-    if (!is.null(footnote)) tbl_string <- paste0(tbl_string, sprintf("\n\nNote: %s\n", footnote))
-  }
-  
-  if (isTRUE(return_string)) return(tbl_string)
-  
-  tryCatch({
-    writeLines(tbl_string, con = file_path, useBytes = TRUE)
-    if (is.function(manifest_hook)) manifest_hook(list(type = "table", file = file_path, caption = caption))
-    invisible(file_path)
-  }, error = function(e) stop("Failed to write table: ", conditionMessage(e)))
-}
-
-
-
-# -----------------------------
-# Table export wrapper (CSV + TEX) using your table_as_is()
-# -----------------------------
-export_table_bundle <- function(CONFIG,
-                                tbl,
-                                name,
-                                tables_dir,
-                                caption,
-                                stage_tag = "RESULTSPACK",
-                                run_id = NA_character_,
-                                column_labels = NULL,
-                                footnote = NULL,
-                                escape = TRUE) {
-  
-  if (!exists("table_as_is", mode = "function")) {
-    stop("Missing helper `table_as_is()`. Source the file that defines it.", call. = FALSE)
-  }
-  if (!is.data.frame(tbl) && !is.matrix(tbl)) stop("tbl must be data.frame or matrix", call. = FALSE)
-  
-  dir.create(tables_dir, recursive = TRUE, showWarnings = FALSE)
-  
-  csv_path <- file.path(tables_dir, paste0(name, ".csv"))
-  tex_path <- file.path(tables_dir, paste0(name, ".tex"))
-  
-  readr::write_csv(as.data.frame(tbl), csv_path)
-  tryCatch({
-    if (exists("append_results_pack_export_log", mode = "function")) {
-      append_results_pack_export_log(CONFIG, run_id, stage_tag, "table_csv", csv_path, caption)
-    } else {
-      warning("append_results_pack_export_log() unavailable; CSV manifest logging skipped.", call. = FALSE)
-    }
-  }, error = function(e) {
-    warning("CSV manifest logging failed: ", conditionMessage(e), call. = FALSE)
-  })
-  
-  table_as_is(
-    data = tbl,
-    file_path = tex_path,
-    column_labels = column_labels,
-    caption = caption,
-    format = "latex",
-    overwrite = TRUE,
-    escape = escape,
-    footnote = footnote,
-    manifest_hook = NULL
-  )
-  tryCatch({
-    if (exists("append_results_pack_export_log", mode = "function")) {
-      append_results_pack_export_log(CONFIG, run_id, stage_tag, "table_tex", tex_path, caption)
-    } else {
-      warning("append_results_pack_export_log() unavailable; TEX manifest logging skipped.", call. = FALSE)
-    }
-  }, error = function(e) {
-    warning("TEX manifest logging failed: ", conditionMessage(e), call. = FALSE)
-  })
-  
-  invisible(list(csv = csv_path, tex = tex_path))
-}

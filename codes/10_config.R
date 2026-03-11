@@ -111,16 +111,15 @@ CONFIG <- list(
   OUT_RANK  = "output/InferenceRank_tsDyn",
   
   ## ----------------------------------------------------------
-  ## Critical replication canonical outputs (no window subdir)
+  ## Critical replication canonical outputs (S0/S1/S2 structure)
   ## ----------------------------------------------------------
   OUT_CR_ROOT = "output/CriticalReplication",
   OUT_CR = list(
-    exercise_a = "output/CriticalReplication/Exercise_a_ARDL_faithful",
-    exercise_b = "output/CriticalReplication/Exercise_b_ARDL_grid",
-    exercise_c = "output/CriticalReplication/Exercise_c_VECM_S1_r1",
-    exercise_d = "output/CriticalReplication/Exercise_d_VECM_S2_m3_rank",
-    crosswalk  = "output/CriticalReplication/Crosswalk",
-    manifest   = "output/CriticalReplication/Manifest"
+    S0_faithful  = "output/CriticalReplication/S0_faithful",
+    S1_geometry  = "output/CriticalReplication/S1_geometry",
+    S2_vecm      = "output/CriticalReplication/S2_vecm",
+    results_pack = "output/CriticalReplication/ResultsPack",
+    manifest     = "output/CriticalReplication/Manifest"
   ),
 
   ## ----------------------------------------------------------

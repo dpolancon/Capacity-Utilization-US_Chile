@@ -1,0 +1,85 @@
+=== S1 ARDL Specification Geometry ===
+Timestamp:  2026-03-11 13:45:27 
+Grid:      p=1: 5  q=1: 5  cases= 1,2,3,4,5  s={ s0,s1,s2,s3 }
+Total:      500  specs
+Bounds:    exact= FALSE 
+F gate:    alpha= 0.1 
+Window:     shaikh_window  ( 1947 - 2011 , T= 65 )
+
+Estimating 500 specifications...
+  [25/500] done | 25 failed | elapsed 0.3s
+  [50/500] done | 25 failed | elapsed 10.7s
+  [75/500] done | 25 failed | elapsed 21.3s
+  [100/500] done | 25 failed | elapsed 29.1s
+  [125/500] done | 25 failed | elapsed 40.7s
+  [150/500] done | 50 failed | elapsed 41.2s
+  [175/500] done | 50 failed | elapsed 49.9s
+  [200/500] done | 50 failed | elapsed 62.5s
+  [225/500] done | 50 failed | elapsed 65.6s
+  [250/500] done | 50 failed | elapsed 69.9s
+  [275/500] done | 75 failed | elapsed 70.0s
+  [300/500] done | 75 failed | elapsed 72.5s
+  [325/500] done | 75 failed | elapsed 76.4s
+  [350/500] done | 75 failed | elapsed 79.0s
+  [375/500] done | 75 failed | elapsed 83.0s
+  [400/500] done | 100 failed | elapsed 83.1s
+  [425/500] done | 100 failed | elapsed 88.7s
+  [450/500] done | 100 failed | elapsed 98.6s
+  [475/500] done | 100 failed | elapsed 106.0s
+  [500/500] done | 100 failed | elapsed 117.5s
+
+Grid complete: 500 specs | 100 failed | 69 admissible
+A_S1 (admissible set): 69 specs
+F^(0.20) frontier: 14 specs (AIC <= -261.71 )
+F^(0.20) BIC:      14 specs (BIC <= -244.86 )
+
+m0 (p=2,q=4,c=3,s3): admissible= FALSE  | in F^(0.20)= FALSE 
+  theta_m0 = 0.7489  | AIC_m0 = -252.91 
+              AIC winner: p=1 q=3 c=2 s=s0 | AIC=-267.42 | theta=0.5922
+              BIC winner: p=1 q=3 c=2 s=s0 | BIC=-254.66 | theta=0.5922
+               HQ winner: p=1 q=3 c=2 s=s0 | HQ=-262.41 | theta=0.5922
+            ICOMP winner: p=1 q=3 c=2 s=s0 | ICOMP=-261.36 | theta=0.5922
+    ICOMP_Misspec winner: p=3 q=3 c=2 s=s0 | ICOMP_Misspec=-259.03 | theta=0.4506
+
+IC DIAGNOSTIC:  2 distinct winner(s) across 5 criteria
+
+Theta across F^(0.20):
+  range: 0.4302 0.787 
+  mean:  0.6143 
+  sd:    0.1063 
+
+Utilization band across F^(0.20):
+  mean(u_med): 0.6361 
+  mean band width: 0.4142 
+
+s_K across F^(0.20):
+  range: 0.4 0.75 
+  mean:  0.6274 
+
+Case distribution in F^(0.20):
+
+ 2  3 
+12  2 
+
+Dummy structure distribution in F^(0.20):
+
+s0 s1 s2 s3 
+ 8  4  1  1 
+
+CSVs written to: C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S1_geometry/csv 
+Figures saved to: C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S1_geometry/figures 
+
+=== S1 VERIFICATION ===
+Total grid:        500 
+Failed:            100 
+Estimated:         400 
+Admissible (A_S1): 69 
+F^(0.20) specs:    14 
+m0 admissible:     FALSE 
+m0 in F^(0.20):    FALSE 
+IC distinct winners: 2 / 5 
+Theta range F020: [ 0.4302 , 0.787 ]
+========================
+STAGE_STATUS_HINT: stage=S1 status=complete
+
+DONE.

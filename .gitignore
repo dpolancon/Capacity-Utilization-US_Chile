@@ -24,6 +24,9 @@ output/Manifest/
 # ── Docs bundles ─────────────────────────────────────
 docs/**/*.zip
 docs/**/*.docx
+docs/essay_tex/*.tex
+docs/essay_tex/*.pdf
+
 
 # ── OS ───────────────────────────────────────────────
 .DS_Store

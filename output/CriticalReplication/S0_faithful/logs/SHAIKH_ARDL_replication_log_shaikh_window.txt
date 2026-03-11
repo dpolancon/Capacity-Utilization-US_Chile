@@ -1,0 +1,271 @@
+=== Shaikh ARDL replication — CASE TOGGLE (Study A) ===
+Timestamp: 2026-03-11 13:45:15
+Window:    shaikh_window (1947-2011)
+Order:     (p,q) = (2,4)
+Cases:     1,2,3,4,5
+Bounds:    exact=FALSE (FALSE=asymptotic; TRUE=in-sample)
+
+------------------------------------------------------------
+CASE 1 | order=2,4 | exact=FALSE
+CASE  1  FAILED:  The length of 'order' is not correct 
+------------------------------------------------------------
+CASE 2 | order=2,4 | exact=FALSE
+Formula: lnY ~ lnK | d1956 + d1974 + d1980
+
+Time series regression with "ts" data:
+Start = 1951, End = 2011
+
+Call:
+dynlm::dynlm(formula = full_formula, data = data, start = start, 
+    end = end)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.076779 -0.012272  0.004353  0.017786  0.051726 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.233238   0.120757   1.931 0.059104 .  
+L(lnY, 1)    0.911396   0.149198   6.109 1.48e-07 ***
+L(lnY, 2)   -0.022020   0.151966  -0.145 0.885372    
+lnK          0.704487   0.212086   3.322 0.001678 ** 
+L(lnK, 1)   -1.023760   0.279170  -3.667 0.000594 ***
+L(lnK, 2)    0.029285   0.295187   0.099 0.921370    
+L(lnK, 3)    0.261679   0.268058   0.976 0.333662    
+L(lnK, 4)    0.111155   0.188647   0.589 0.558364    
+d1956       -0.009676   0.017102  -0.566 0.574086    
+d1974       -0.009420   0.021260  -0.443 0.659600    
+d1980       -0.007469   0.019060  -0.392 0.696816    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.02808 on 50 degrees of freedom
+Multiple R-squared:  0.9981,	Adjusted R-squared:  0.9977 
+F-statistic:  2654 on 10 and 50 DF,  p-value: < 2.2e-16
+
+
+Bounds F:
+
+	Bounds F-test (Wald) for no cointegration
+
+data:  d(lnY) ~ L(lnY, 1) + L(lnK, 1) + d(L(lnY, 1)) + d(lnK) + d(L(lnK,     1)) + d(L(lnK, 2)) + d(L(lnK, 3)) + d1956 + d1974 + d1980
+F = 3.8218, Lower-bound I(0) = 3.6209, Upper-bound I(1) = 4.1351,
+p-value = 0.07112
+alternative hypothesis: Possible cointegration
+null values:
+   k    T 
+   1 1000 
+
+
+Bounds t: not applicable for case  2 
+
+Theta (LR lnK): 0.748901 | p=2.39114e-05
+Alpha (UECM L(lnY,1)): -0.110624
+------------------------------------------------------------
+CASE 3 | order=2,4 | exact=FALSE
+Formula: lnY ~ lnK | d1956 + d1974 + d1980
+
+Time series regression with "ts" data:
+Start = 1951, End = 2011
+
+Call:
+dynlm::dynlm(formula = full_formula, data = data, start = start, 
+    end = end)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.076779 -0.012272  0.004353  0.017786  0.051726 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.233238   0.120757   1.931 0.059104 .  
+L(lnY, 1)    0.911396   0.149198   6.109 1.48e-07 ***
+L(lnY, 2)   -0.022020   0.151966  -0.145 0.885372    
+lnK          0.704487   0.212086   3.322 0.001678 ** 
+L(lnK, 1)   -1.023760   0.279170  -3.667 0.000594 ***
+L(lnK, 2)    0.029285   0.295187   0.099 0.921370    
+L(lnK, 3)    0.261679   0.268058   0.976 0.333662    
+L(lnK, 4)    0.111155   0.188647   0.589 0.558364    
+d1956       -0.009676   0.017102  -0.566 0.574086    
+d1974       -0.009420   0.021260  -0.443 0.659600    
+d1980       -0.007469   0.019060  -0.392 0.696816    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.02808 on 50 degrees of freedom
+Multiple R-squared:  0.9981,	Adjusted R-squared:  0.9977 
+F-statistic:  2654 on 10 and 50 DF,  p-value: < 2.2e-16
+
+
+Bounds F:
+
+	Bounds F-test (Wald) for no cointegration
+
+data:  d(lnY) ~ L(lnY, 1) + L(lnK, 1) + d(L(lnY, 1)) + d(lnK) + d(L(lnK,     1)) + d(L(lnK, 2)) + d(L(lnK, 3)) + d1956 + d1974 + d1980
+F = 1.1351, Lower-bound I(0) = 4.9186, Upper-bound I(1) = 5.7434,
+p-value = 0.7839
+alternative hypothesis: Possible cointegration
+null values:
+   k    T 
+   1 1000 
+
+
+Bounds t:
+
+	Bounds t-test for no cointegration
+
+data:  d(lnY) ~ L(lnY, 1) + L(lnK, 1) + d(L(lnY, 1)) + d(lnK) + d(L(lnK,     1)) + d(L(lnK, 2)) + d(L(lnK, 3)) + d1956 + d1974 + d1980
+t = -1.1955, Lower-bound I(0) = -2.8606, Upper-bound I(1) = -3.2240,
+p-value = 0.7608
+alternative hypothesis: Possible cointegration
+null values:
+   k    T 
+   1 1000 
+
+
+Theta (LR lnK): 0.748901 | p=2.39114e-05
+Alpha (UECM L(lnY,1)): -0.110624
+------------------------------------------------------------
+CASE 4 | order=2,4 | exact=FALSE
+Formula: lnY ~ lnK | trend(lnY) + d1956 + d1974 + d1980
+
+Time series regression with "ts" data:
+Start = 1951, End = 2011
+
+Call:
+dynlm::dynlm(formula = full_formula, data = data, start = start, 
+    end = end)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.077982 -0.011819  0.004266  0.018076  0.050893 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.4034913  0.6380072   0.632  0.53005    
+trend(lnY)   0.0008354  0.0030729   0.272  0.78687    
+L(lnY, 1)    0.9054586  0.1521750   5.950 2.79e-07 ***
+L(lnY, 2)   -0.0236378  0.1535087  -0.154  0.87826    
+lnK          0.7070758  0.2142899   3.300  0.00181 ** 
+L(lnK, 1)   -1.0352785  0.2849592  -3.633  0.00067 ***
+L(lnK, 2)    0.0346948  0.2986232   0.116  0.90798    
+L(lnK, 3)    0.2581122  0.2708930   0.953  0.34536    
+L(lnK, 4)    0.1018394  0.1934771   0.526  0.60101    
+d1956       -0.0058732  0.0222186  -0.264  0.79263    
+d1974       -0.0052191  0.0264447  -0.197  0.84436    
+d1980       -0.0065418  0.0195389  -0.335  0.73920    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.02834 on 49 degrees of freedom
+Multiple R-squared:  0.9981,	Adjusted R-squared:  0.9977 
+F-statistic:  2368 on 11 and 49 DF,  p-value: < 2.2e-16
+
+
+Bounds F:
+
+	Bounds F-test (Wald) for no cointegration
+
+data:  d(lnY) ~ trend(lnY) + L(lnY, 1) + L(lnK, 1) + d(L(lnY, 1)) +     d(lnK) + d(L(lnK, 1)) + d(L(lnK, 2)) + d(L(lnK, 3)) + d1956 +     d1974 + d1980
+F = 0.76736, Lower-bound I(0) = 4.7003, Upper-bound I(1) = 5.1921,
+p-value = 0.9879
+alternative hypothesis: Possible cointegration
+null values:
+   k    T 
+   1 1000 
+
+
+Bounds t: not applicable for case  4 
+
+Theta (LR lnK): 0.562229 | p=0.423506
+Alpha (UECM L(lnY,1)): -0.118179
+------------------------------------------------------------
+CASE 5 | order=2,4 | exact=FALSE
+Formula: lnY ~ lnK | trend(lnY) + d1956 + d1974 + d1980
+
+Time series regression with "ts" data:
+Start = 1951, End = 2011
+
+Call:
+dynlm::dynlm(formula = full_formula, data = data, start = start, 
+    end = end)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.077982 -0.011819  0.004266  0.018076  0.050893 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.4034913  0.6380072   0.632  0.53005    
+trend(lnY)   0.0008354  0.0030729   0.272  0.78687    
+L(lnY, 1)    0.9054586  0.1521750   5.950 2.79e-07 ***
+L(lnY, 2)   -0.0236378  0.1535087  -0.154  0.87826    
+lnK          0.7070758  0.2142899   3.300  0.00181 ** 
+L(lnK, 1)   -1.0352785  0.2849592  -3.633  0.00067 ***
+L(lnK, 2)    0.0346948  0.2986232   0.116  0.90798    
+L(lnK, 3)    0.2581122  0.2708930   0.953  0.34536    
+L(lnK, 4)    0.1018394  0.1934771   0.526  0.60101    
+d1956       -0.0058732  0.0222186  -0.264  0.79263    
+d1974       -0.0052191  0.0264447  -0.197  0.84436    
+d1980       -0.0065418  0.0195389  -0.335  0.73920    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.02834 on 49 degrees of freedom
+Multiple R-squared:  0.9981,	Adjusted R-squared:  0.9977 
+F-statistic:  2368 on 11 and 49 DF,  p-value: < 2.2e-16
+
+
+Bounds F:
+
+	Bounds F-test (Wald) for no cointegration
+
+data:  d(lnY) ~ trend(lnY) + L(lnY, 1) + L(lnK, 1) + d(L(lnY, 1)) +     d(lnK) + d(L(lnK, 1)) + d(L(lnK, 2)) + d(L(lnK, 3)) + d1956 +     d1974 + d1980
+F = 0.73871, Lower-bound I(0) = 6.6080, Upper-bound I(1) = 7.3664,
+p-value = 0.968
+alternative hypothesis: Possible cointegration
+null values:
+   k    T 
+   1 1000 
+
+
+Bounds t:
+
+	Bounds t-test for no cointegration
+
+data:  d(lnY) ~ trend(lnY) + L(lnY, 1) + L(lnK, 1) + d(L(lnY, 1)) +     d(lnK) + d(L(lnK, 1)) + d(L(lnK, 2)) + d(L(lnK, 3)) + d1956 +     d1974 + d1980
+t = -1.2128, Lower-bound I(0) = -3.4234, Upper-bound I(1) = -3.7057,
+p-value = 0.9208
+alternative hypothesis: Possible cointegration
+null values:
+   k    T 
+   1 1000 
+
+
+Theta (LR lnK): 0.562229 | p=0.423506
+Alpha (UECM L(lnY,1)): -0.118179
+
+Wrote contest CSV:
+  C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S0_faithful/csv/S0_spec_report.csv
+Wrote coef CSV:
+  C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S0_faithful/csv/S0_fivecase_summary.csv
+Wrote u-cases CSV:
+  C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S0_faithful/csv/S0_utilization_series.csv
+Saved figure:
+  C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S0_faithful/figures/FIG_S1_ARDL_u_compare_cases_Fpass_shaikh_window.png
+
+=== S0 VERIFICATION vs SHAIKH TABLE 6.7.14 ===
+theta_hat: 0.7489 | Target: 0.6609
+a_hat:     2.1084 | Target: 2.1782
+c_d74:     -0.0852 | Target: -0.8548
+c_d56:     -0.0875 | Target: -0.7428
+c_d80:     -0.0675 | Target: -0.4780
+AIC:       -250.9067 | Target: -319.3801
+BIC:       -225.5762 | Target: -296.1605
+loglik:    137.4534 | Target: 170.6901
+R2:        0.9981 | Target: 0.9992
+RMSE vs Shaikh: 0.274983 
+==============================================
+STAGE_STATUS_HINT: stage=S0 status=complete
+
+DONE.

@@ -1,0 +1,63 @@
+=== S2 VECM Bivariate (m=2, r=1) ===
+Timestamp:  2026-03-11 13:47:34 
+Lattice:   p=1: 4  d={ d0,d1,d2,d3 } h={ h0,h1,h2 }
+Total:      48  specs
+Window:     shaikh_window  ( 1947 - 2011 , T= 65 )
+
+Estimating 48 specifications...
+  [25/48] done | 6 failed | 13 admissible | elapsed 1.9s
+  [48/48] done | 12 failed | 21 admissible | elapsed 2.5s
+
+Grid complete: 48 specs | 12 failed | 21 admissible
+A_S2_m2 (admissible): 21 specs
+
+Gate diagnostics (m=2):
+  Convergence failures: 0 
+  Rank test failures:  15 
+  Stability failures:  0 
+Omega_20_m2: 5 specs (neg2logL <= -586.7 )
+              AIC winner: p=1 d=d2 h=h1 | AIC=-572.62 | theta=0.8999
+              BIC winner: p=1 d=d0 h=h0 | BIC=-565.69 | theta=0.8844
+               HQ winner: p=1 d=d0 h=h0 | HQ=-568.30 | theta=0.8844
+            ICOMP winner: p=1 d=d0 h=h1 | ICOMP=-575.35 | theta=0.9117
+
+IC DIAGNOSTIC (m=2): 3 distinct winner(s) across 5 criteria
+
+Theta (beta_k) across Omega_20_m2:
+  range: 0.5741 0.9123 
+  mean:  0.8087 
+
+Utilization band Omega_20_m2:
+  mean(u_med): 1.0052 
+  mean band width: 0.2476 
+
+Alpha across Omega_20_m2:
+  alpha_y range: 0.0242 0.1246 
+  alpha_k range: 0.1949 0.2612 
+
+Deterministic branch in Omega_20_m2:
+
+d2 d3 
+ 2  3 
+
+Shock structure in Omega_20_m2:
+
+h0 h1 
+ 1  4 
+
+CSVs written to: C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S2_vecm/csv 
+Figures saved to: C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S2_vecm/figures 
+
+=== S2 BIVARIATE (m=2) VERIFICATION ===
+Total grid:        48 
+Failed:            12 
+Estimated:         36 
+Admissible (A_S2): 21 
+Omega_20 specs:    5 
+IC distinct winners: 3 / 5 
+Theta range Omega_20: [ 0.5741 , 0.9123 ]
+========================================
+STAGE_STATUS_HINT: stage=S2_m2 status=complete
+Omega_20_m2 non-empty: TRUE 
+
+DONE.
