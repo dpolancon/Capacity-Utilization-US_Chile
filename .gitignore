@@ -1,9 +1,11 @@
-.Rproj.user
+# ── R artifacts ──────────────────────────────────────
 .Rhistory
 .RData
+.Rproj.user/
 .Ruserdata
+Rplots.pdf
 
-# LaTeX build artifacts
+# ── LaTeX build artifacts ────────────────────────────
 *.aux
 *.bbl
 *.blg
@@ -11,3 +13,17 @@
 *.out
 *.synctex.gz
 *.toc
+*.fdb_latexmk
+*.fls
+
+# ── Output data (large/reproducible) ────────────────
+output/**/*.rds
+output/**/*.RData
+output/Manifest/
+
+# ── Docs bundles ─────────────────────────────────────
+docs/**/*.zip
+docs/**/*.docx
+
+# ── OS ───────────────────────────────────────────────
+.DS_Store
