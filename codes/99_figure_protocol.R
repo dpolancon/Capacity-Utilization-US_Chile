@@ -131,20 +131,29 @@ scale_x_k <- function(k_range = NULL) {
 }
 
 
-# ---- 5. Save helper ----
+# ---- 5. Save helper (dual PDF + PNG) ----
 
-#' Save a ggplot figure as PDF, 7x5 inches, 300 DPI.
+#' Save a ggplot figure as both PDF (archival/LaTeX) and PNG (Notion embed).
 #' @param plot ggplot2 object
-#' @param filename just the filename, not full path
+#' @param filename filename with or without extension (stem is extracted)
 #' @param dir target directory
 #' @param width,height inches
-#' @param dpi resolution
+#' @param dpi resolution (PNG only; PDF is vector)
 save_ch3_fig <- function(plot, filename, dir, width = 7, height = 5, dpi = 300) {
-  path <- file.path(dir, filename)
-  dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
-  ggplot2::ggsave(path, plot, width = width, height = height, dpi = dpi)
-  cat("  Figure:", path, "\n")
-  invisible(path)
+  dir.create(dir, recursive = TRUE, showWarnings = FALSE)
+  stem <- tools::file_path_sans_ext(filename)
+
+  # PDF — archival / LaTeX
+  pdf_path <- file.path(dir, paste0(stem, ".pdf"))
+  ggplot2::ggsave(pdf_path, plot, width = width, height = height, device = "pdf")
+
+  # PNG — GitHub raw → Notion embed
+  png_path <- file.path(dir, paste0(stem, ".png"))
+  ggplot2::ggsave(png_path, plot, width = width, height = height, dpi = dpi,
+                  device = "png", bg = "white")
+
+  cat("  Figure:", stem, "(PDF + PNG)\n")
+  invisible(pdf_path)
 }
 
 

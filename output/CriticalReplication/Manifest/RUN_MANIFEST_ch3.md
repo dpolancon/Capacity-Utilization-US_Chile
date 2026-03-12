@@ -1,10 +1,10 @@
 # RUN MANIFEST — Chapter 3 Critical Replication
 
 ## Run metadata
-- Run ID: `ch3_20260311_225357`
-- Timestamp: `2026-03-11T22:53:57-0300`
+- Run ID: `ch3_20260312_020945`
+- Timestamp: `2026-03-12T02:09:45-0300`
 - Timezone: `America/Santiago`
-- Git hash: `a198c2d`
+- Git hash: `2ea2261`
 - Seed: `123456`
 - Machine/OS: `sysname Windows; release 10 x64; version build 26200; nodename DIEGO-ASUS; machine x86-64; login User; user User; effective_user User; udomain DIEGO-ASUS`
 
@@ -30,25 +30,45 @@
 - `output/CriticalReplication/Manifest/logs/80_pack_ch3_replication_run.log`
 - `output/CriticalReplication/Manifest/logs/SESSIONINFO_ch3.txt`
 - `output/CriticalReplication/ResultsPack/figures/fig_CROSS_synthesis.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_CROSS_synthesis.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S0_capacity_benchmark.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S0_capacity_benchmark.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S0_fitcomplexity_seed.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S0_fitcomplexity_seed.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S0_fivecase_comparison.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S0_fivecase_comparison.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S0_utilization_replication.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S0_utilization_replication.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S1_global_frontier.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S1_global_frontier.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S1_ic_tangencies.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S1_ic_tangencies.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S1_informational_domain.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S1_informational_domain.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S1_sK_distribution.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S1_sK_distribution.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S1_theta_distribution.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S1_theta_distribution.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S1_utilization_band.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S1_utilization_band.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S2_alpha_heatmap.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_alpha_heatmap.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S2_global_frontier_m2.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_global_frontier_m2.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S2_global_frontier_m3.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_global_frontier_m3.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S2_ic_tangencies_m2.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_ic_tangencies_m2.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S2_ic_tangencies_m3.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_ic_tangencies_m3.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S2_informational_domain_m2.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_informational_domain_m2.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S2_informational_domain_m3.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_informational_domain_m3.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S2_theta_distribution.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_theta_distribution.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S2_utilization_band.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_utilization_band.png`
 - `output/CriticalReplication/ResultsPack/INDEX_RESULTS_PACK.md`
 - `output/CriticalReplication/ResultsPack/tables/TAB_CROSS_theta_comparison.csv`
 - `output/CriticalReplication/ResultsPack/tables/TAB_S0_bounds_report.csv`
