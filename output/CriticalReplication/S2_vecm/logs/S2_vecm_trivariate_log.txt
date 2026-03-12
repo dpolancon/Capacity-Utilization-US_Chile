@@ -1,13 +1,13 @@
 === S2 VECM Trivariate (m=3, r in {1,2}) ===
-Timestamp:  2026-03-11 22:55:39 
+Timestamp:  2026-03-12 02:11:32 
 Lattice:   p=1: 4  d={ d0,d1,d2,d3 } h={ h0,h1,h2 } r={ 1,2 }
 Total:      96  specs
 Window:     shaikh_window  ( 1947 - 2011 , T= 65 )
 
 Estimating 96 specifications...
   [25/96] done | 6 failed | 0 admissible | elapsed 0.4s
-  [50/96] done | 12 failed | 1 admissible | elapsed 0.6s
-  [75/96] done | 18 failed | 2 admissible | elapsed 0.7s
+  [50/96] done | 12 failed | 1 admissible | elapsed 0.5s
+  [75/96] done | 18 failed | 2 admissible | elapsed 0.6s
   [96/96] done | 24 failed | 2 admissible | elapsed 0.8s
 
 Grid complete: 96 specs | 24 failed | 2 admissible
