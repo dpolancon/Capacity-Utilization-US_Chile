@@ -8,7 +8,7 @@
 #
 # Produces:
 #   - 8 CSV tables (paper-facing summary tables)
-#   - 20 PDF figures (minimalist, Okabe-Ito, ggrepel-labeled)
+#   - 20 figures as dual PDF + PNG (minimalist, Okabe-Ito, ggrepel-labeled)
 #
 # Reads:
 #   S0: S0_spec_report.csv, S0_utilization_series.csv, S0_fivecase_summary.csv
@@ -76,8 +76,8 @@ s0_u     <- read.csv(s0_utilization)
 s0_cases <- read.csv(s0_fivecase)
 
 # ---- S1 inputs ----
-s1_lattice_path <- assert_file(file.path(S1_DIR, "S1_lattice_full.csv"))
-s1_admiss_path  <- assert_file(file.path(S1_DIR, "S1_admissible.csv"))
+s1_lattice_path  <- assert_file(file.path(S1_DIR, "S1_lattice_full.csv"))
+s1_admiss_path   <- assert_file(file.path(S1_DIR, "S1_admissible.csv"))
 s1_frontier_path <- assert_file(file.path(S1_DIR, "S1_frontier_F020.csv"))
 
 cat("S1 inputs verified.\n")
@@ -262,59 +262,59 @@ cat("Tables written to:", PACK_TABLES, "\n")
 
 
 # ============================================================
-# BUILD FIGURES
+# BUILD FIGURES (dual PDF + PNG via save_ch3_fig)
 # ============================================================
 
-cat("\n--- Building figures ---\n")
+cat("\n--- Building figures (PDF + PNG) ---\n")
 
 # ---- S0 figures ----
 
 # S0.1: Utilization replication
 fig <- build_fig_S0_utilization(s0_u)
-save_ch3_fig(fig, "fig_S0_utilization_replication.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S0_utilization_replication", PACK_FIGURES)
 
 # S0.2: Capacity benchmark
 fig <- build_fig_S0_capacity_benchmark(s0_u, lnY_vec)
-save_ch3_fig(fig, "fig_S0_capacity_benchmark.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S0_capacity_benchmark", PACK_FIGURES)
 
 # S0.3: Five-case comparison
 fig <- build_fig_S0_fivecase(s0_u, s0_spec)
-if (!is.null(fig)) save_ch3_fig(fig, "fig_S0_fivecase_comparison.pdf", PACK_FIGURES,
+if (!is.null(fig)) save_ch3_fig(fig, "fig_S0_fivecase_comparison", PACK_FIGURES,
                                  width = 11, height = 4)
 
 # S0.4: Fit-complexity seed point
 fig <- build_fig_S0_seed(s0_spec, s1_adm)
-if (!is.null(fig)) save_ch3_fig(fig, "fig_S0_fitcomplexity_seed.pdf", PACK_FIGURES)
+if (!is.null(fig)) save_ch3_fig(fig, "fig_S0_fitcomplexity_seed", PACK_FIGURES)
 
 
 # ---- S1 figures ----
 
 # S1.1: Global frontier
 fig <- build_fig_S1_global_frontier(s1_adm, m0_row)
-save_ch3_fig(fig, "fig_S1_global_frontier.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S1_global_frontier", PACK_FIGURES)
 
 # S1.2: IC tangencies
 fig <- build_fig_S1_ic_tangencies(s1_adm, m0_row)
-save_ch3_fig(fig, "fig_S1_ic_tangencies.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S1_ic_tangencies", PACK_FIGURES)
 
 # S1.3: Informational domain
 fig <- build_fig_S1_informational_domain(s1_adm, s1_f20, m0_row)
-save_ch3_fig(fig, "fig_S1_informational_domain.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S1_informational_domain", PACK_FIGURES)
 
 # S1 supplementary
 if (!is.null(s1_theta) && nrow(s1_theta) > 0) {
   fig <- build_fig_S1_theta_dist(s1_theta)
-  save_ch3_fig(fig, "fig_S1_theta_distribution.pdf", PACK_FIGURES)
+  save_ch3_fig(fig, "fig_S1_theta_distribution", PACK_FIGURES)
 }
 
 if (!is.null(s1_u_band) && nrow(s1_u_band) > 0) {
   fig <- build_fig_S1_u_band(s1_u_band)
-  save_ch3_fig(fig, "fig_S1_utilization_band.pdf", PACK_FIGURES)
+  save_ch3_fig(fig, "fig_S1_utilization_band", PACK_FIGURES)
 }
 
 if (nrow(s1_f20) > 0 && "s_K" %in% names(s1_f20)) {
   fig <- build_fig_S1_sK_dist(s1_f20)
-  save_ch3_fig(fig, "fig_S1_sK_distribution.pdf", PACK_FIGURES)
+  save_ch3_fig(fig, "fig_S1_sK_distribution", PACK_FIGURES)
 }
 
 
@@ -322,48 +322,48 @@ if (nrow(s1_f20) > 0 && "s_K" %in% names(s1_f20)) {
 
 # S2.1 m=2: Global frontier
 fig <- build_fig_S2_global_frontier(s2_m2_a, s2_m2_o, m_dim = 2)
-save_ch3_fig(fig, "fig_S2_global_frontier_m2.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S2_global_frontier_m2", PACK_FIGURES)
 
 # S2.1 m=3: Global frontier
 fig <- build_fig_S2_global_frontier(s2_m3_a, s2_m3_o, m_dim = 3,
                                      include_r = TRUE)
-save_ch3_fig(fig, "fig_S2_global_frontier_m3.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S2_global_frontier_m3", PACK_FIGURES)
 
 # S2.2 m=2: IC tangencies
 fig <- build_fig_S2_ic_tangencies(s2_m2_a, m_dim = 2)
-save_ch3_fig(fig, "fig_S2_ic_tangencies_m2.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S2_ic_tangencies_m2", PACK_FIGURES)
 
 # S2.2 m=3: IC tangencies
 fig <- build_fig_S2_ic_tangencies(s2_m3_a, m_dim = 3)
-save_ch3_fig(fig, "fig_S2_ic_tangencies_m3.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S2_ic_tangencies_m3", PACK_FIGURES)
 
 # S2.3 m=2: Informational domain
 fig <- build_fig_S2_informational_domain(s2_m2_a, s2_m2_o, m_dim = 2)
-save_ch3_fig(fig, "fig_S2_informational_domain_m2.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S2_informational_domain_m2", PACK_FIGURES)
 
 # S2.3 m=3: Informational domain
 fig <- build_fig_S2_informational_domain(s2_m3_a, s2_m3_o, m_dim = 3,
                                           include_r = TRUE)
-save_ch3_fig(fig, "fig_S2_informational_domain_m3.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S2_informational_domain_m3", PACK_FIGURES)
 
 # S2 supplementary: theta distribution
 fig <- build_fig_S2_theta_dist(s2_m2_o, s2_m3_o)
-save_ch3_fig(fig, "fig_S2_theta_distribution.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S2_theta_distribution", PACK_FIGURES)
 
 # S2 supplementary: utilization bands
 if (!is.null(s2_m2_uband) && !is.null(s2_m3_uband)) {
   fig <- build_fig_S2_u_band(s2_m2_uband, s2_m3_uband)
-  save_ch3_fig(fig, "fig_S2_utilization_band.pdf", PACK_FIGURES, width = 10, height = 5)
+  save_ch3_fig(fig, "fig_S2_utilization_band", PACK_FIGURES, width = 10, height = 5)
 }
 
 # S2 supplementary: alpha heatmap
 fig <- build_fig_S2_alpha_heatmap(s2_m2_o, s2_m3_o)
-save_ch3_fig(fig, "fig_S2_alpha_heatmap.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_S2_alpha_heatmap", PACK_FIGURES)
 
 
 # ---- Cross-stage synthesis ----
 fig <- build_fig_cross_synthesis(s1_adm, s2_m2_a, s2_m3_a, m0_row)
-save_ch3_fig(fig, "fig_CROSS_synthesis.pdf", PACK_FIGURES)
+save_ch3_fig(fig, "fig_CROSS_synthesis", PACK_FIGURES)
 
 
 cat("\nPack complete. Output:", PACK_ROOT, "\n")
@@ -372,6 +372,9 @@ cat("\nPack complete. Output:", PACK_ROOT, "\n")
 # ============================================================
 # INDEX
 # ============================================================
+pdf_files <- sort(list.files(PACK_FIGURES, pattern = "\\.pdf$"))
+png_files <- sort(list.files(PACK_FIGURES, pattern = "\\.png$"))
+
 index_lines <- c(
   "# INDEX \u2014 Chapter 3 Results Pack",
   sprintf("Generated: %s", Sys.time()),
@@ -379,8 +382,11 @@ index_lines <- c(
   "## Tables",
   paste0("- ", sort(list.files(PACK_TABLES))),
   "",
-  "## Figures",
-  paste0("- ", sort(list.files(PACK_FIGURES, pattern = "\\.pdf$")))
+  "## Figures (PDF \u2014 archival)",
+  paste0("- ", pdf_files),
+  "",
+  "## Figures (PNG \u2014 Notion embed)",
+  paste0("- ", png_files)
 )
 writeLines(index_lines, file.path(PACK_ROOT, "INDEX_RESULTS_PACK.md"))
 cat("Index written.\n")

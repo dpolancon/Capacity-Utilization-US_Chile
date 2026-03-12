@@ -1,5 +1,5 @@
 # INDEX — Chapter 3 Results Pack
-Generated: 2026-03-11 22:55:51.91271
+Generated: 2026-03-12 02:11:59.938328
 
 ## Tables
 - TAB_CROSS_theta_comparison.csv
@@ -11,7 +11,7 @@ Generated: 2026-03-11 22:55:51.91271
 - TAB_S2_ic_winners.csv
 - TAB_S2_rotation_check.csv
 
-## Figures
+## Figures (PDF — archival)
 - fig_CROSS_synthesis.pdf
 - fig_S0_capacity_benchmark.pdf
 - fig_S0_fitcomplexity_seed.pdf
@@ -32,3 +32,25 @@ Generated: 2026-03-11 22:55:51.91271
 - fig_S2_informational_domain_m3.pdf
 - fig_S2_theta_distribution.pdf
 - fig_S2_utilization_band.pdf
+
+## Figures (PNG — Notion embed)
+- fig_CROSS_synthesis.png
+- fig_S0_capacity_benchmark.png
+- fig_S0_fitcomplexity_seed.png
+- fig_S0_fivecase_comparison.png
+- fig_S0_utilization_replication.png
+- fig_S1_global_frontier.png
+- fig_S1_ic_tangencies.png
+- fig_S1_informational_domain.png
+- fig_S1_sK_distribution.png
+- fig_S1_theta_distribution.png
+- fig_S1_utilization_band.png
+- fig_S2_alpha_heatmap.png
+- fig_S2_global_frontier_m2.png
+- fig_S2_global_frontier_m3.png
+- fig_S2_ic_tangencies_m2.png
+- fig_S2_ic_tangencies_m3.png
+- fig_S2_informational_domain_m2.png
+- fig_S2_informational_domain_m3.png
+- fig_S2_theta_distribution.png
+- fig_S2_utilization_band.png
