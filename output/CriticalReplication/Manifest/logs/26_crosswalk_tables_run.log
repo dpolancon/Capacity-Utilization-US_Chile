@@ -1,6 +1,0 @@
-[crosswalk] Output directory: C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Crosswalk
-Aviso:
-In canonical$boundary_p[canonical$boundary_p == ""] <- ifelse(is.finite(canonical$p) &  :
-  número de elementos para sustituir no es un múltiplo de la longitud del reemplazo
-[crosswalk] Wrote: C:/ReposGitHub/capacity_utilization/output/CriticalReplication/Crosswalk/crosswalk_representatives.csv
-[crosswalk] Rows: 43

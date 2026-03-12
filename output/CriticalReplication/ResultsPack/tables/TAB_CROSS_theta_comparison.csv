@@ -1,0 +1,6 @@
+"stage","theta"
+"S0 (ARDL m0)","0.7489"
+"S1 (F020 mean)","0.6143"
+"S1 (F020 range)","[0.4302, 0.787]"
+"S2 m=2 (Omega20 mean)","0.8087"
+"S2 m=3 (Omega20 mean)","-0.7032"

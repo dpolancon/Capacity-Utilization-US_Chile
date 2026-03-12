@@ -1,0 +1,78 @@
+=== S2 VECM Trivariate (m=3, r in {1,2}) ===
+Timestamp:  2026-03-11 22:55:39 
+Lattice:   p=1: 4  d={ d0,d1,d2,d3 } h={ h0,h1,h2 } r={ 1,2 }
+Total:      96  specs
+Window:     shaikh_window  ( 1947 - 2011 , T= 65 )
+
+Estimating 96 specifications...
+  [25/96] done | 6 failed | 0 admissible | elapsed 0.4s
+  [50/96] done | 12 failed | 1 admissible | elapsed 0.6s
+  [75/96] done | 18 failed | 2 admissible | elapsed 0.7s
+  [96/96] done | 24 failed | 2 admissible | elapsed 0.8s
+
+Grid complete: 96 specs | 24 failed | 2 admissible
+A_S2_m3 (admissible): 2 specs
+
+Gate diagnostics (m=3):
+  Convergence failures: 0 
+  Rank test failures:  69 
+  Stability failures:  7 
+  r=1 admissible: 2
+  r=2 admissible: 0
+Omega_20_m3: 1 specs (neg2logL <= -812.32 )
+
+Rank distribution in Omega_20_m3:
+
+1 
+1 
+              AIC winner: p=3 d=d3 h=h0 r=1 | AIC=-762.17 | theta=-0.7032
+              BIC winner: p=3 d=d0 h=h0 r=1 | BIC=-710.25 | theta=0.9513
+               HQ winner: p=3 d=d3 h=h0 r=1 | HQ=-739.62 | theta=-0.7032
+            ICOMP winner: p=3 d=d0 h=h0 r=1 | ICOMP=-755.80 | theta=0.9513
+
+IC DIAGNOSTIC (m=3): 2 distinct winner(s) across 5 criteria
+IC winner ranks: 1, 1, 1, 1, NA 
+
+Theta (beta_k) across Omega_20_m3:
+  range: -0.7032 -0.7032 
+  mean:  -0.7032 
+
+Utilization band Omega_20_m3:
+  mean(u_med): 1.8347 
+  mean band width: 0 
+
+Alpha across Omega_20_m3:
+  alpha_y range: -0.0043 -0.0043 
+  alpha_k range: 2e-04 2e-04 
+  alpha_e range: -0.3561 -0.3561 
+
+Deterministic branch in Omega_20_m3:
+
+d3 
+ 1 
+
+Shock structure in Omega_20_m3:
+
+h0 
+ 1 
+
+=== P8 ROTATION DIAGNOSTIC ===
+Omega_20_m3 with r=2: 0 specs
+  No r=2 specs in Omega_20_m3 -- rotation diagnostic skipped
+
+CSVs written to: C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S2_vecm/csv 
+Figures saved to: C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S2_vecm/figures 
+
+=== S2 TRIVARIATE (m=3) VERIFICATION ===
+Total grid:        96 
+Failed:            24 
+Estimated:         72 
+Admissible (A_S2): 2 
+Omega_20 specs:    1 
+IC distinct winners: 2 / 5 
+Theta range Omega_20: [ -0.7032 , -0.7032 ]
+========================================
+STAGE_STATUS_HINT: stage=S2_m3 status=complete
+Omega_20_m3 non-empty: TRUE 
+
+DONE.

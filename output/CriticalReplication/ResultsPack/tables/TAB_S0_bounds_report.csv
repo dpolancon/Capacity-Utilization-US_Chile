@@ -1,0 +1,6 @@
+"case_id","boundsF_stat","boundsF_p","boundsT_stat","boundsT_p","theta_hat","alpha_hat","F_pass"
+1,NA,NA,NA,NA,NA,NA,FALSE
+2,3.822,0.0711,NA,NA,0.7489,-0.1106,TRUE
+3,1.135,0.7839,-1.196,0.7608,0.7489,-0.1106,FALSE
+4,0.767,0.9879,NA,NA,0.5622,-0.1182,FALSE
+5,0.739,0.968,-1.213,0.9208,0.5622,-0.1182,FALSE
