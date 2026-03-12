@@ -1,10 +1,10 @@
 # RUN MANIFEST — Chapter 3 Critical Replication
 
 ## Run metadata
-- Run ID: `ch3_20260311_183129`
-- Timestamp: `2026-03-11T18:31:29-0300`
+- Run ID: `ch3_20260311_225357`
+- Timestamp: `2026-03-11T22:53:57-0300`
 - Timezone: `America/Santiago`
-- Git hash: `ea10042`
+- Git hash: `a198c2d`
 - Seed: `123456`
 - Machine/OS: `sysname Windows; release 10 x64; version build 26200; nodename DIEGO-ASUS; machine x86-64; login User; user User; effective_user User; udomain DIEGO-ASUS`
 
@@ -29,17 +29,39 @@
 - `output/CriticalReplication/Manifest/logs/23_S2_vecm_trivariate_run.log`
 - `output/CriticalReplication/Manifest/logs/80_pack_ch3_replication_run.log`
 - `output/CriticalReplication/Manifest/logs/SESSIONINFO_ch3.txt`
+- `output/CriticalReplication/ResultsPack/figures/fig_CROSS_synthesis.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S0_capacity_benchmark.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S0_fitcomplexity_seed.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S0_fivecase_comparison.pdf`
 - `output/CriticalReplication/ResultsPack/figures/fig_S0_utilization_replication.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S1_global_frontier.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S1_ic_tangencies.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S1_informational_domain.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S1_sK_distribution.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S1_theta_distribution.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S1_utilization_band.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_alpha_heatmap.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_global_frontier_m2.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_global_frontier_m3.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_ic_tangencies_m2.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_ic_tangencies_m3.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_informational_domain_m2.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_informational_domain_m3.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_theta_distribution.pdf`
+- `output/CriticalReplication/ResultsPack/figures/fig_S2_utilization_band.pdf`
 - `output/CriticalReplication/ResultsPack/INDEX_RESULTS_PACK.md`
+- `output/CriticalReplication/ResultsPack/tables/TAB_CROSS_theta_comparison.csv`
 - `output/CriticalReplication/ResultsPack/tables/TAB_S0_bounds_report.csv`
 - `output/CriticalReplication/ResultsPack/tables/TAB_S0_fivecase.csv`
 - `output/CriticalReplication/ResultsPack/tables/TAB_S1_frontier_summary.csv`
+- `output/CriticalReplication/ResultsPack/tables/TAB_S1_ic_winners.csv`
 - `output/CriticalReplication/ResultsPack/tables/TAB_S2_admissibility_summary.csv`
+- `output/CriticalReplication/ResultsPack/tables/TAB_S2_ic_winners.csv`
 - `output/CriticalReplication/ResultsPack/tables/TAB_S2_rotation_check.csv`
 - `output/CriticalReplication/S0_faithful/csv/S0_fivecase_summary.csv`
 - `output/CriticalReplication/S0_faithful/csv/S0_spec_report.csv`
 - `output/CriticalReplication/S0_faithful/csv/S0_utilization_series.csv`
-- `output/CriticalReplication/S0_faithful/figures/FIG_S1_ARDL_u_compare_cases_Fpass_shaikh_window.png`
+- `output/CriticalReplication/S0_faithful/figures/FIG_S0_ARDL_u_compare_cases_Fpass_shaikh_window.png`
 - `output/CriticalReplication/S0_faithful/logs/SHAIKH_ARDL_replication_log_shaikh_window.txt`
 - `output/CriticalReplication/S1_geometry/csv/S1_admissible.csv`
 - `output/CriticalReplication/S1_geometry/csv/S1_frontier_F020.csv`

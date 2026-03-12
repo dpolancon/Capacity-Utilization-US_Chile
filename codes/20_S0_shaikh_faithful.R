@@ -541,7 +541,7 @@ p <- ggplot(plot_df, aes(x = year, y = u, color = label, linetype = label)) +
     subtitle = "Legend robustness stars apply only when t-bounds is admissible (cases 1,3,5) and F-pass"
   )
 
-fig_path <- file.path(FIG_DIR, paste0("FIG_S1_ARDL_u_compare_cases_Fpass_", WINDOW_TAG, ".png"))
+fig_path <- file.path(FIG_DIR, paste0("FIG_S0_ARDL_u_compare_cases_Fpass_", WINDOW_TAG, ".png"))
 ggsave(fig_path, p, width = 11, height = 6.6, dpi = 300)
 cat("Saved figure:\n  ", fig_path, "\n", sep="")
 

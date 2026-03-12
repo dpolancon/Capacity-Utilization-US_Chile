@@ -1,5 +1,5 @@
 === Shaikh ARDL replication — CASE TOGGLE (Study A) ===
-Timestamp: 2026-03-11 18:31:32
+Timestamp: 2026-03-11 22:54:00
 Window:    shaikh_window (1947-2011)
 Order:     (p,q) = (2,4)
 Cases:     1,2,3,4,5
@@ -252,7 +252,7 @@ Wrote coef CSV:
 Wrote u-cases CSV:
   C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S0_faithful/csv/S0_utilization_series.csv
 Saved figure:
-  C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S0_faithful/figures/FIG_S1_ARDL_u_compare_cases_Fpass_shaikh_window.png
+  C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S0_faithful/figures/FIG_S0_ARDL_u_compare_cases_Fpass_shaikh_window.png
 
 === S0 VERIFICATION vs SHAIKH TABLE 6.7.14 ===
 theta_hat: 0.7489 | Target: 0.6609
