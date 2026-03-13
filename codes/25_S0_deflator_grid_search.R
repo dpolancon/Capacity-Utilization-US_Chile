@@ -28,6 +28,7 @@ rm(list = ls())
 suppressPackageStartupMessages({
   library(here)
   library(readr)
+  library(readxl)
   library(dplyr)
   library(tidyr)
   library(purrr)
@@ -314,6 +315,82 @@ build_candidates <- function(df) {
 
 candidates <- build_candidates(df_base)
 
+# ------- PHASE 2b: Load Py (GDP deflator) from RepData.xlsx -------
+# Shaikh (2016) uses Py = NIPA Table 1.1.4 GDP price index (base 2011=100)
+# for BOTH Y and K deflation, with Y = GVAcorp (not VAcorp).
+cat("\n--- PHASE 2b: Load Py from RepData.xlsx ---\n")
+repdata_path <- here::here("data/raw/Shaikh_RepData.xlsx")
+py_success <- FALSE
+if (file.exists(repdata_path)) {
+  tryCatch({
+    rep_long <- readxl::read_excel(repdata_path, sheet = "long")
+    if ("Py" %in% names(rep_long) && "year" %in% names(rep_long)) {
+      py_df <- rep_long |>
+        transmute(year = as.integer(year), Py = as.numeric(Py)) |>
+        filter(is.finite(year), is.finite(Py))
+      df_base <- df_base |> left_join(py_df, by = "year")
+      py_success <- TRUE
+      cat("Py loaded:", nrow(py_df), "observations\n")
+      cat("Py(1947) =", round(df_base$Py[df_base$year == 1947], 4), "(base 2011=100)\n")
+    }
+  }, error = function(e) cat("Py load failed:", conditionMessage(e), "\n"))
+} else {
+  cat("RepData.xlsx not found — Py candidates skipped\n")
+}
+
+# ------- PHASE 2c: Build expanded candidate grid (Y×K variants) -------
+cat("\n--- PHASE 2c: Expanded candidate grid ---\n")
+
+# Add Py-based candidates if available
+if (py_success) {
+  # RepData winner: Y = GVAcorp / Py, K = KGCcorp / Py
+  candidates$Y_RepData <- df_base |> mutate(
+    label   = "GVAcorp / Py (RepData)",
+    Y_real  = GVAcorp_nom / (Py / 100),
+    K_real  = KGCcorp / (Py / 100),
+    lnY     = log(Y_real),
+    lnK     = log(K_real)
+  )
+
+  # Mixed: Y = GVAcorp/Py, K = KGCcorp/pKN
+  if (any(is.finite(df_base$pKN_2005))) {
+    candidates$Y_GVA_Py_K_pKN <- df_base |> mutate(
+      label  = "GVAcorp/Py + K/pKN",
+      Y_real = GVAcorp_nom / (Py / 100),
+      K_real = KGCcorp / (pKN_2005 / 100),
+      lnY    = log(Y_real),
+      lnK    = log(K_real)
+    )
+  }
+}
+
+# pKN-deflated K variants for existing Y candidates
+if (any(is.finite(df_base$pKN_2005))) {
+  candidates$Y5_Kb <- df_base |> mutate(
+    label  = "GVAcorp_nom / pKN, K / pKN",
+    Y_real = GVAcorp_nom / (pKN_2005 / 100),
+    K_real = KGCcorp / (pKN_2005 / 100),
+    lnY    = log(Y_real),
+    lnK    = log(K_real)
+  )
+  candidates$Y4_Kb <- df_base |> mutate(
+    label  = "VAcorp / pKN, K / pKN",
+    Y_real = VAcorp / (pKN_2005 / 100),
+    K_real = KGCcorp / (pKN_2005 / 100),
+    lnY    = log(Y_real),
+    lnK    = log(K_real)
+  )
+}
+
+# K undeflated variants
+candidates$Y1_Kc <- df_base |> mutate(
+  label  = "VAcorp / pIG, K nominal",
+  Y_real = VAcorp / (pIG_2005 / 100),
+  K_real = KGCcorp,
+  lnY    = log(Y_real),
+  lnK    = log(K_real)
+)
+
 # Report candidate coverage
 for (nm in names(candidates)) {
   cd <- candidates[[nm]]
@@ -339,7 +416,8 @@ results_list <- imap(candidates, function(cd, nm) {
       c_d56 = NA_real_, c_d74 = NA_real_, c_d80 = NA_real_,
       alpha = NA_real_, AIC = NA_real_, BIC = NA_real_,
       loglik = NA_real_, R2 = NA_real_, rmse_u = NA_real_,
-      n_obs = n_valid, failed = TRUE, error_msg = "Insufficient data"
+      n_obs = n_valid, failed = TRUE, error_msg = "Insufficient data",
+      candidate_id = nm, loss = Inf
     ))
   }
 
