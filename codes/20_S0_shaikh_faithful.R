@@ -200,7 +200,8 @@ compute_u_from_lr <- function(df, lnY_name, lnK_name, lr_full, dummy_names) {
 # ------------------------------------------------------------
 # 0) Load dataset (CONFIG) + build deflator base 2011 only
 # ------------------------------------------------------------
-df_raw <- readxl::read_excel(here::here(CONFIG$data_shaikh), sheet = CONFIG$data_shaikh_sheet)
+df_raw <- readr::read_csv(here::here(CONFIG$data_shaikh))
+df_raw <- df_raw |> rename(u_shaikh = uK)
 stopifnot(all(c(CONFIG$year_col, CONFIG$y_nom, CONFIG$k_nom, CONFIG$p_index) %in% names(df_raw)))
 
 # ledger for p rebase (fail fast)
@@ -212,11 +213,11 @@ p_ledger <- df_raw |>
   filter(is.finite(year), is.finite(p_raw), p_raw > 0) |>
   arrange(year)
 
-stopifnot(any(p_ledger$year == 2011L))
+stopifnot(any(p_ledger$year == 2005L))
 
 p_ledger <- p_ledger |>
-  mutate(p2011 = rebase_to_year_to_100(p_raw, year, 2011L, strict = TRUE)) |>
-  select(year, p2011)
+  mutate(p2005 = rebase_to_year_to_100(p_raw, year, 2005L, strict = TRUE)) |>
+  select(year, p2005)
 
 df0 <- df_raw |>
   transmute(
@@ -237,7 +238,7 @@ df0 <- df_raw |>
   arrange(year) |>
   left_join(p_ledger, by = "year")
 
-stopifnot(all(is.finite(df0$p2011)))
+stopifnot(all(is.finite(df0$p2005)))
 
 # ------------------------------------------------------------
 # 1) Window lock
@@ -283,7 +284,7 @@ dummy_names <- paste0("d", DUMMY_YEARS)
 
 df <- df0 |>
   mutate(
-    p = p2011,
+    p = p2005,
     p_scale = p / 100,
     Y_real  = Y_nom / p_scale,
     K_real  = K_nom / p_scale,

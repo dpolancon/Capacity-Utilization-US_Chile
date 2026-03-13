@@ -289,3 +289,65 @@ needed_cov <- 0.6609 * var(df$lnK)
 cat("\nYour Cov(lnY, lnK):  ", round(cov(df$lnY, df$lnK), 6), "\n")
 cat("Cov needed for 0.661:", round(needed_cov, 6), "\n")
 cat("Cov gap:             ", round(cov(df$lnY, df$lnK) - needed_cov, 6), "\n")
+
+
+library(readxl)
+xl_path <- here::here("data/raw/_Appendix6.8DataTablesCorrected.xlsx")
+sheets <- excel_sheets(xl_path)
+sheets
+
+
+for (s in sheets) {
+  df_s <- tryCatch(read_excel(xl_path, sheet = s, n_max = 5), error = function(e) NULL)
+  if (!is.null(df_s)) {
+    cat("\n--- Sheet:", s, "---\n")
+    print(names(df_s))
+  }
+}
+
+
+df_I13 <- read_excel(xl_path, sheet = "Appndx6.8.I.1-3", skip = 5, col_names = FALSE)
+
+# Rows are variables, columns are years — inspect the first 3 columns (labels)
+df_I13[, 1:3]
+
+
+
+
+# Find rows that mention "real", "price", "deflator", "constant", "chained"
+label_col <- as.character(df_I13[[1]])
+grep("real|price|deflat|constant|chain|pric|P|VA|value added", 
+     label_col, ignore.case = TRUE, value = TRUE)
+
+
+
+for (s in paste0("AppFig6.7.", 1:11)) {
+  df_s <- tryCatch(
+    read_excel(xl_path, sheet = s, col_names = FALSE, n_max = 10),
+    error = function(e) NULL
+  )
+  if (!is.null(df_s)) {
+    cat("\n--- Sheet:", s, "---\n")
+    print(df_s[, 1:min(6, ncol(df_s))])
+  } else {
+    cat("\n--- Sheet:", s, "FAILED ---\n")
+  }
+}
+#We are looking for a sheet that contains a column with log or real output that shows values around 6.5 in 1947 — because working backwards from Shaikh's intercept (2.178) and theta (0.661) with lnK_1947=6.60:
+#lnYp_1947 = 2.178 + 0.661 × 6.60 = 6.54
+
+
+df_II1 <- read_excel(xl_path, sheet = "Appndx 6.8.II.1", col_names = TRUE)
+
+# First three columns are metadata — show all variable names
+df_II1[, 1:3]
+
+
+df_raw |>
+  filter(year %in% c(1947, 1956, 1957, 1974, 1975, 1980, 1981, 2007, 2011)) |>
+  mutate(
+    GVAcorp  = VAcorp + DEPCcorp,
+    Y_real   = GVAcorp / (pIGcorpbea / 100),
+    lnY_GVA  = log(Y_real)
+  ) |>
+  select(year, VAcorp, DEPCcorp, GVAcorp, lnY_GVA)
