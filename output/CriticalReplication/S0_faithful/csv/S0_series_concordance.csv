@@ -1,0 +1,11 @@
+Variable,Definition,BEA_Source,Appendix_Sheet,CSV_Column,RepData_Column,Role
+GVAcorp,"Gross Value Added, Corporate (= VAcorp + DEPCcorp)",NIPA T1.14,I.1-3 row 123,GVAcorp,GVAcorp,Y (output)
+VAcorp,"Net Value Added, Corporate",NIPA T1.14,II.7 row 22,VAcorp,—,component of GVAcorp
+DEPCcorp,"Depreciation (CFC), Corporate",FA T6.4,II.1 row 25 / II.7 row 64,DEPCcorp,—,component of GVAcorp
+KGCcorp,"Gross Current-Cost Capital Stock, Corporate",GPIM (Shaikh II.5),II.5 row 17 / II.7 row 26,KGCcorp,KGCcorp,K (capital)
+Py,GDP Price Index (base 2011=100),NIPA T1.1.4,—,Py,Py,P (deflator for both Y and K)
+pIGcorpbea,Investment Goods Deflator (base 2005=100),FA T6.8,II.1 row 31,pIGcorpbea,—,NOT used in ARDL (informational)
+pKN,Net Stock Deflator (Implicit Price Index),FA T6.2,II.1 row 22,pKN,—,NOT used in ARDL (quality-adjusted alternative)
+uK,Capacity Utilization (Shaikh's estimate),Derived,II.7 row 51,uK,u_shaikh,Validation benchmark
+Profshcorp,"Profit Share, Corporate",Derived,II.7 row 31,Profshcorp,Profshcorp,Trivariate VECM input
+exploit_rate,Exploitation Rate = Profshcorp / (1 - Profshcorp),Derived,—,exploit_rate,e,Trivariate VECM input
