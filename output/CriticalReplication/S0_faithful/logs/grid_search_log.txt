@@ -1,0 +1,25 @@
+=== S0 DEFLATOR GRID SEARCH ===
+Started: 2026-03-13 01:25:20 
+
+--- PHASE 1: FRED direct fetch ---
+Fetching from FRED: https://fred.stlouisfed.org/graph/fredgraph.csv?id=A455RX1A020NBEA 
+FRED fetch failed: no se puede abrir la conexión 
+Y3/Y6/Y7 will be skipped.
+
+--- PHASE 2: Build Y candidates ---
+indexing Shaikh_canonical_series_v1.csv [==========] 15.07MB/s, eta:  0s                                                                          Y1 [VAcorp / pIG_2005]: 65 valid obs in window
+  Y2 [GVAcorp_nom / pIG_2005]: 65 valid obs in window
+  Y3 [BEA_real_GVA (T1.14 direct)]: 0 valid obs in window
+  Y4 [VAcorp / pKN_2005]: 0 valid obs in window
+  Y5 [GVAcorp_nom / pKN_2005]: 0 valid obs in window
+  Y6 [VAcorp / implicit_GVA_deflator]: 0 valid obs in window
+  Y7 [GVAcorp_nom / implicit_GVA_deflator]: 0 valid obs in window
+
+--- PHASE 3: Grid run ---
+Running Y1: VAcorp / pIG_2005 ... theta=0.8356 | a=0.8715 | c_d74=NA | AIC=-231.84 | L=NA
+Running Y2: GVAcorp_nom / pIG_2005 ... theta=0.8381 | a=0.9366 | c_d74=NA | AIC=-242.51 | L=NA
+Running Y3: BEA_real_GVA (T1.14 direct) ... SKIPPED (insufficient data)
+Running Y4: VAcorp / pKN_2005 ... SKIPPED (insufficient data)
+Running Y5: GVAcorp_nom / pKN_2005 ... SKIPPED (insufficient data)
+Running Y6: VAcorp / implicit_GVA_deflator ... SKIPPED (insufficient data)
+Running Y7: GVAcorp_nom / implicit_GVA_deflator ... SKIPPED (insufficient data)

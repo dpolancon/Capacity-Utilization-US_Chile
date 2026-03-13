@@ -404,6 +404,32 @@ plot_informational_domain <- function(df, frontier_df, envelope = NULL, m0 = NUL
   p
 }
 
+
+# codes/98_ardl_runner.R
+# Minimal ARDL(2,4) Case 3 runner for grid search
+# Args: df (with lnY, lnK, d1956, d1974, d1980), window
+# Returns: list(theta, a, c_d56, c_d74, c_d80, AIC, loglik)
+run_ardl_case_S0helper <- function(df, window = c(1947, 2011)) {
+  df <- df |> filter(year >= window[1], year <= window[2])
+  df_ts <- ts(df |> select(lnY, lnK, d1956, d1974, d1980),
+              start = min(df$year), frequency = 1)
+  fit <- ARDL::ardl(lnY ~ lnK | d1956 + d1974 + d1980,
+                    data = df_ts, order = c(2, 4))
+  lr  <- ARDL::multipliers(fit, type = "lr")
+  get_lr <- function(term) {
+    r <- lr[lr$Term == term, "Estimate"]
+    if (length(r)) r else NA_real_
+  }
+  list(
+    theta  = get_lr("lnK"),
+    a      = get_lr("(Intercept)"),
+    c_d56  = get_lr("d1956"),
+    c_d74  = get_lr("d1974"),
+    c_d80  = get_lr("d1980"),
+    AIC    = AIC(fit),
+    loglik = as.numeric(logLik(fit))
+  )
+}
 # ============================================================
 # END 98_ardl_helpers.R
 # ============================================================
