@@ -156,3 +156,162 @@ BEA data. Possible sources:
 For the purposes of this replication exercise, the confirmed specification (GVAcorp/Py)
 with current-vintage data is the correct approach. The theta gap is documented as a
 data-vintage artifact, not a specification error.
+
+---
+
+## 8. Replication Guidelines for Future Modifications
+
+### 8.1 Running the full pipeline from scratch
+
+1. Ensure `data/raw/Shaikh_canonical_series_v1.csv` contains `GVAcorp` and `Py` columns
+2. Ensure `10_config.R` has `y_nom = "GVAcorp"` and `p_index = "Py"`
+3. Run scripts in order:
+   ```bash
+   Rscript codes/26_series_identification.R   # Series ID + cross-validation
+   Rscript codes/20_S0_shaikh_faithful.R       # S0 faithful replication (5 cases)
+   Rscript codes/21_S1_ardl_geometry.R         # S1 ARDL geometry (500 specs)
+   Rscript codes/22_S2_vecm_bivariate.R        # S2 bivariate VECM (48 specs)
+   Rscript codes/23_S2_vecm_trivariate.R       # S2 trivariate VECM (96 specs)
+   ```
+4. Outputs are written to `output/CriticalReplication/{S0,S1,S2}/csv/`
+
+### 8.2 Extending the sample beyond 2011
+
+To extend the estimation window (e.g., to 2023):
+
+**Step 1 — Update GVAcorp**:
+Download NIPA Table 1.14 (Gross Value Added by Sector) from [BEA Interactive Tables](https://apps.bea.gov/iTable/).
+Corporate business = line 3. `GVAcorp` = line 3 value directly.
+Alternatively: compute `GVAcorp = VAcorp + DEPCcorp` from separate NIPA tables.
+
+**Step 2 — Update KGCcorp**:
+Requires GPIM construction from BEA Fixed Assets data. Use the `17_shaikh_gpim_adjust.py`
+script (when completed) to build KGCcorp from:
+- FA Table 6.1 (net stock → initial value K₀)
+- FA Table 6.4 (depreciation → depletion rate z_t)
+- FA Table 6.7 (investment → IG_t)
+
+Apply GPIM accumulation rule (eq. 3-4 from GPIM Formalization v3) with the four
+Shaikh adjustments (GPIM_DEPLETION, GPIM_INITIAL, WWII_ADJ, INV_AUGMENT).
+
+**Step 3 — Update Py**:
+Download NIPA Table 1.1.4 (Price Indexes for GDP), line 1.
+Rebase to 2011=100 to match Shaikh's base year convention.
+
+**Step 4 — Update dummies**:
+Keep d1956, d1974, d1980 as-is (structural breaks, not sample-dependent).
+Consider whether additional step dummies are warranted for the extended sample
+(e.g., 2008 financial crisis, post-COVID recovery).
+
+**Step 5 — Update window**:
+In `10_config.R`, change:
+```r
+shaikh_window = c(1947, 2023)  # was c(1947, 2011)
+```
+
+**Step 6 — Append to CSV**:
+Add new rows to `data/raw/Shaikh_canonical_series_v1.csv` for years 2012–2023.
+At minimum, the columns `year`, `GVAcorp`, `KGCcorp`, `Py`, `VAcorp`, `DEPCcorp`
+must be populated. Other columns (uK, Profshcorp, etc.) can be left NA if not
+available — the ARDL scripts only require Y, K, and P.
+
+### 8.3 Changing the deflator
+
+The deflator grid search (`25_S0_deflator_grid_search.R`) tested 18 specifications.
+Key alternatives and their consequences:
+
+| Deflator | CSV Column | theta | intercept | Stock-flow consistent? |
+|----------|-----------|-------|-----------|----------------------|
+| **Py** (confirmed) | `Py` | 0.750 | 2.100 | Yes (same P for Y and K) |
+| pIGcorpbea | `pIGcorpbea` | 0.836 | 0.871 | Yes (same P for Y and K) |
+| pKN | `pKN` | 0.768 | 1.428 | Yes (same P for Y and K) |
+| Mixed (Py/pKN) | — | 0.879 | 0.457 | **No** — artificial fit |
+
+**Critical rule**: The same deflator must be applied to **both** Y and K.
+To change the deflator:
+1. Update `CONFIG$p_index` in `10_config.R`
+2. Ensure the deflator column exists in the CSV
+3. Re-run the full pipeline (S0 → S1 → S2)
+
+### 8.4 Modifying the ARDL specification
+
+**Lag order**: S1 already tests p ∈ {1,...,5} and q ∈ {1,...,5} (25 order combinations
+× 5 PSS cases × 4 dummy subspaces = 500 specifications). To change the maximum lag:
+edit `P_GRID` and `Q_GRID` in `21_S1_ardl_geometry.R`.
+
+**PSS case**: Cases 1–5 are all tested in S0. Shaikh uses Case 3. To restrict/expand:
+edit `CASES` in `20_S0_shaikh_faithful.R`.
+
+**Dummy subspaces**: S1 tests 4 subspaces:
+- s0: no dummies
+- s1: {d1974}
+- s2: {d1956, d1974}
+- s3: {d1956, d1974, d1980} ← Shaikh's choice
+
+To add a new dummy (e.g., d2008): add `2008L` to `DUMMY_YEARS` in the estimation
+scripts, and define a new dummy subspace in S1.
+
+### 8.5 Adding the trivariate VECM
+
+The trivariate VECM (S2, script `23_S2_vecm_trivariate.R`) uses:
+- X_t = (lnY_t, lnK_t, e_t)′ where e_t = log(exploit_rate)
+- `exploit_rate` = Profshcorp / (1 − Profshcorp)
+
+To update: ensure `exploit_rate` and `Profshcorp` are in the CSV for the extended sample.
+Sources: NIPA corporate income accounts (operating surplus, employee compensation).
+
+### 8.6 Using the BEA data build pipeline (scripts 15–17)
+
+When completed, the 15/16/17 pipeline will provide:
+
+| Script | Purpose | Key Output |
+|--------|---------|------------|
+| `15_bea_data_build.py` | Extract BEA Fixed Assets + NIPA data | `bea_extended_dataset_v1.csv` |
+| `16_bea_validation.py` | Cross-source consistency checks | Validation report |
+| `17_shaikh_gpim_adjust.py` | From-scratch GPIM with 4 toggles | `bea_extended_dataset_v1_adjusted.csv` |
+
+These scripts feed into the canonical CSV. After running 15→16→17:
+1. Merge the new K columns into `Shaikh_canonical_series_v1.csv`
+2. Re-run the S0/S1/S2 pipeline
+
+### 8.7 Key files reference
+
+| File | Purpose |
+|------|---------|
+| `codes/10_config.R` | Global configuration: variable names, windows, paths |
+| `codes/20_S0_shaikh_faithful.R` | S0: Fixed-spec ARDL(2,4) replication at (2,4,Case 3,s3) |
+| `codes/21_S1_ardl_geometry.R` | S1: Full ARDL lattice (500 specs), admissibility gate, frontier |
+| `codes/22_S2_vecm_bivariate.R` | S2: Bivariate VECM (lnY, lnK), Johansen ML, 48 specs |
+| `codes/23_S2_vecm_trivariate.R` | S2: Trivariate VECM (lnY, lnK, e), rotation check, 96 specs |
+| `codes/25_S0_deflator_grid_search.R` | Deflator identification grid (18 candidates) |
+| `codes/26_series_identification.R` | Series ID, cross-validation, report generation |
+| `codes/98_ardl_helpers.R` | ARDL/VECM helpers: ICOMP, Pareto frontier, q-profiles |
+| `codes/99_utils.R` | General utilities: timestamps, safe CSV write |
+| `data/raw/Shaikh_canonical_series_v1.csv` | Canonical input data (34 columns, 1946–2011) |
+| `data/raw/Shaikh_RepData.xlsx` | Shaikh's replication data (validation reference) |
+| `data/raw/_Appendix6.8DataTablesCorrected.xlsx` | Raw BEA extractions (9 data sheets) |
+| `docs/notation.md` | Fixed asset taxonomy and naming conventions |
+| `docs/ClaudeCode_Handoff_S0S1S2.md` | Architectural overview of S0/S1/S2 pipeline |
+
+### 8.8 Expected outputs per stage
+
+**S0** (`output/CriticalReplication/S0_faithful/csv/`):
+- `S0_spec_report.csv` — Five-case contest table (F-bounds, t-bounds, theta, alpha)
+- `S0_fivecase_summary.csv` — Coefficient summary across all 5 PSS cases
+- `S0_utilization_series.csv` — Annual u_hat + lnYp series
+- `S0_series_id_summary.csv` — Parameter comparison (current vs Shaikh targets)
+- `S0_grid_results.csv` — Full deflator grid search results (18 candidates)
+
+**S1** (`output/CriticalReplication/S1_geometry/csv/`):
+- `S1_lattice_full.csv` — All 500 specifications with IC values
+- `S1_admissible.csv` — F-bounds pass at α=0.10
+- `S1_frontier_F020.csv` — Fattened frontier (bottom 20% AIC among admissible)
+- `S1_frontier_u_band.csv` — Utilization band across frontier specs
+- `S1_frontier_theta.csv` — Theta distribution across frontier
+
+**S2** (`output/CriticalReplication/S2_vecm/csv/`):
+- `S2_m2_admissible.csv` — Bivariate VECM admissible specs (convergence + trace + stability)
+- `S2_m2_omega20.csv` — Bottom 20% log-likelihood among admissible
+- `S2_m3_admissible.csv` — Trivariate VECM admissible specs
+- `S2_m3_omega20.csv` — Trivariate frontier
+- `S2_rotation_check.csv` — Reserve-army rotation diagnostic (λ < 0 check)
