@@ -90,26 +90,58 @@ for (fpath in component_files) {
     label = paste0(asset, "_chain_weighted")
   ) |> mutate(year = df$year[-1], asset = asset, valuation = "chain_weighted")
 
-  ## SFC check 3: GPIM-deflated
+  ## SFC check 3: GPIM-deflated NET
   ## Should be ~ 0 by construction (same deflator for K, I, D)
   sfc_gpim <- validate_sfc_identity(
     K     = df$K_net_real[-1],
     K_lag = df$K_net_real[-n],
     I     = df$IG_real[-1],
     D     = df$D_real[-1],
-    label = paste0(asset, "_gpim_real")
-  ) |> mutate(year = df$year[-1], asset = asset, valuation = "gpim_real")
+    label = paste0(asset, "_net_gpim_real")
+  ) |> mutate(year = df$year[-1], asset = asset, valuation = "net_gpim_real")
 
-  # Report
-  for (sfc in list(sfc_cc, sfc_chain, sfc_gpim)) {
+  ## ---- GROSS STOCK SFC ----
+  ## Per GPIM_Formalization_v3, §1: z_it = retirement rate for gross stocks.
+  ## Gross SFC: K^G_t = K^G_{t-1} + IG_t - Ret_t
+
+  has_gross <- all(c("K_gross_real", "Ret_real") %in% names(df))
+
+  if (has_gross) {
+    ## SFC check 4: GPIM-deflated GROSS
+    ## Should be ~ 0 by construction (eq. 5 with retirement rates)
+    sfc_gross_gpim <- validate_gross_sfc(
+      K_gross     = df$K_gross_real[-1],
+      K_gross_lag = df$K_gross_real[-n],
+      I           = df$IG_real[-1],
+      Ret         = df$Ret_real[-1],
+      label       = paste0(asset, "_gross_gpim_real")
+    ) |> mutate(year = df$year[-1], asset = asset, valuation = "gross_gpim_real")
+
+    ## SFC check 5: Chain-weighted GROSS (expect failure)
+    ## Implicit chain gross: K_gross_cc * (K_net_chain / K_net_cc)
+    K_gross_chain <- df$K_gross_cc * (df$K_net_chain / df$K_net_cc)
+    sfc_gross_chain <- validate_gross_sfc(
+      K_gross     = K_gross_chain[-1],
+      K_gross_lag = K_gross_chain[-n],
+      I           = df$IG_cc[-1],
+      Ret         = df$Ret_cc[-1],
+      label       = paste0(asset, "_gross_chain")
+    ) |> mutate(year = df$year[-1], asset = asset, valuation = "gross_chain")
+  }
+
+  # Report all SFC checks
+  net_checks <- list(sfc_cc, sfc_chain, sfc_gpim)
+  if (has_gross) net_checks <- c(net_checks, list(sfc_gross_gpim, sfc_gross_chain))
+
+  for (sfc in net_checks) {
     max_r <- max(abs(sfc$pct_residual), na.rm = TRUE)
     mean_r <- mean(abs(sfc$pct_residual), na.rm = TRUE)
     val <- sfc$valuation[1]
     msg <- sprintf("  %s: mean|resid|=%.6f, max|resid|=%.6f", val, mean_r, max_r)
 
-    if (val == "gpim_real" && max_r < GDP_CONFIG$GPIM$sfc_tolerance) {
+    if (grepl("gpim_real", val) && max_r < GDP_CONFIG$GPIM$sfc_tolerance) {
       msg <- paste0(msg, " [PASS]")
-    } else if (val == "chain_weighted" && max_r > GDP_CONFIG$GPIM$sfc_tolerance) {
+    } else if (grepl("chain", val) && max_r > GDP_CONFIG$GPIM$sfc_tolerance) {
       msg <- paste0(msg, " [EXPECTED FAIL — confirms Shaikh §2]")
     } else if (val == "current_cost") {
       msg <- paste0(msg, " [revaluation term]")
@@ -117,7 +149,9 @@ for (fpath in component_files) {
     message(msg)
   }
 
-  sfc_all[[asset]] <- bind_rows(sfc_cc, sfc_chain, sfc_gpim)
+  all_sfc <- bind_rows(sfc_cc, sfc_chain, sfc_gpim)
+  if (has_gross) all_sfc <- bind_rows(all_sfc, sfc_gross_gpim, sfc_gross_chain)
+  sfc_all[[asset]] <- all_sfc
 }
 
 sfc_combined <- bind_rows(sfc_all)
@@ -137,8 +171,8 @@ if (nrow(sfc_combined) > 0) {
     geom_hline(yintercept = 0, linetype = "dashed", color = "grey50") +
     facet_wrap(~asset, scales = "free_y") +
     labs(
-      title = "Stock-Flow Consistency: Residuals by Valuation Mode",
-      subtitle = "GPIM-real ~ 0 (validates GPIM); chain-weighted deviates (confirms Shaikh §2)",
+      title = "Stock-Flow Consistency: Net + Gross, by Valuation Mode",
+      subtitle = "GPIM ~ 0 (net + gross); chain-weighted deviates (confirms Shaikh §2)",
       x = "Year",
       y = "SFC Residual (%)",
       color = "Valuation"

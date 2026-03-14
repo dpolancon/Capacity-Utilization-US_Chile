@@ -94,11 +94,19 @@ by construction when investment and depreciation are deflated by the same price 
 
 **Net stock**: Total accumulated investment minus accumulated depreciation over the
 asset's service life. Reflects the remaining productive value of the asset.
+GPIM accumulation: `K^net_R_t = IG_R_t + (1 - z_dep_t) × K^net_R_{t-1}` (eq. 5)
 
 **Gross stock**: Total accumulated investment minus retirements (not depreciation).
 Reflects the physical stock of surviving assets valued at replacement cost.
+GPIM accumulation: `K^gross_R_t = IG_R_t + (1 - z_ret_t) × K^gross_R_{t-1}` (eq. 5)
 
-**Construction**: `Gross_cc_t = Net_cc_t + CumulativeDepreciation_cc_t`
+Per §1 of the GPIM formalization: equations (3) and (5) apply to both net and
+gross stocks — the only difference is whether the depletion rate `z_it` is the
+depreciation rate (net) or the retirement rate (gross). SFC holds for both under
+GPIM single deflation; breaks for both under chain-weighted aggregation.
+
+**Retirement rates**: Estimated from BEA average service lives as `ret = 1/L`:
+ME = 1/15, NRC = 1/38, RC = 1/50, IP = 1/5.
 
 ---
 
@@ -291,5 +299,5 @@ Adjustments and deflator choice are orthogonal dimensions (section 7.7).
 
 ---
 
-*Notation v1 | 2026-03-13*
+*Notation v2 | 2026-03-14*
 *Do not edit without version increment*

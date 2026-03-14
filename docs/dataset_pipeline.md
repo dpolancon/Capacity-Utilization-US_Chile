@@ -121,26 +121,45 @@ Merges FRED series into a single GDP dataset. Computes:
 The central script. For each asset type (ME, NRC, RC, IP):
 
 1. **Extract** asset-level series from parsed BEA tables (by line number)
-2. **Build gross stock**: `K_gross_cc = K_net_cc + D_cc` (first-order approximation)
-3. **Compute own-price implicit deflators**: `p_K = K_net_cc / K_net_chain`, rebased to base_year = 1.0
-4. **Build GPIM real stocks** via single deflation (eq. 5):
+2. **Compute own-price implicit deflators**: `p_K = K_net_cc / K_net_chain`, rebased to base_year = 1.0
+3. **Build GPIM NET stocks** via single deflation (eq. 5 with depreciation rate):
    - `K_net_real = K_net_cc / p_K`
    - `IG_real = IG_cc / p_K`
    - `D_real = D_cc / p_K`
    - SFC identity validated: max |residual| < `sfc_tolerance`
-5. **Compute GPIM diagnostics**: depreciation rate z_t (eq. 6), Whelan-Liu rate (eq. 8), critical rate z*, half-life
-6. **Aggregate composites**: NR = ME + NRC, TOTAL_PRODUCTIVE = ME + NRC + RC, TOTAL_ALL = ME + NRC + RC + IP
+4. **Build GPIM GROSS stocks** via forward accumulation (eq. 5 with retirement rate):
+   - Per GPIM_Formalization_v3, §1: `z_it` = retirement rate for gross stocks
+   - Retirement rates estimated from BEA average service lives (1/L)
+   - `K_gross_R_t = IG_R_t + (1 - ret_t) × K_gross_R_{t-1}`
+   - Initial condition: `K_gross_0 ≈ K_net_0 × (dep_rate / ret_rate)`
+   - SFC validated: GPIM gross passes, chain-weighted gross fails (confirms §2)
+5. **Compute GPIM diagnostics**: depreciation rate z_t (eq. 6), retirement rate,
+   Whelan-Liu rate (eq. 8), critical rate z*, half-life for both net and gross
+6. **Aggregate composites**: TOTAL_PRODUCTIVE = ME + NRC, TOTAL_WITH_RC, TOTAL_ALL
+
+**BEA average service lives** (for retirement rate estimation):
+
+| Asset | Service Life L | Declining Balance δ | Depreciation d = δ/L | Retirement ret = 1/L |
+|-------|---------------|--------------------|--------------------|---------------------|
+| ME | 15 years | 1.65 | 0.110 | 0.067 |
+| NRC | 38 years | 0.91 | 0.024 | 0.026 |
+| RC | 50 years | 1.14 | 0.023 | 0.020 |
+| IP | 5 years | 1.65 | 0.330 | 0.200 |
+
+**Convergence regimes** (§5.3): Net stocks use depreciation rates (z > z* → convergent).
+Gross stocks use retirement rates (ret may be < z* → potentially non-convergent).
+This confirms Shaikh's observation that gross stocks may not converge over the sample.
 
 **Outputs**:
 
 | File | Content |
 |------|---------|
-| `kstock_private_current_cost.csv` | Wide: {asset}\_K\_net\_cc, {asset}\_K\_gross\_cc, {asset}\_IG\_cc, {asset}\_D\_cc |
-| `kstock_private_gpim_real.csv` | Wide: {asset}\_K\_net\_real, {asset}\_K\_gross\_real, {asset}\_IG\_real, {asset}\_D\_real |
+| `kstock_private_current_cost.csv` | Wide: {asset}\_{K\_net\_cc, K\_gross\_cc, IG\_cc, D\_cc, Ret\_cc} |
+| `kstock_private_gpim_real.csv` | Wide: {asset}\_{K\_net\_real, K\_gross\_real, IG\_real, D\_real, Ret\_real} |
 | `kstock_private_chain_qty.csv` | Wide: {asset}\_K\_net\_chain (comparison only) |
 | `price_deflators.csv` | Wide: {asset}\_p\_K |
 | `data/interim/kstock_components/kstock_{asset}.csv` | Long per-asset files |
-| `data/interim/validation/gpim_diagnostics.csv` | z_avg, z*, tau_half by asset |
+| `data/interim/validation/gpim_diagnostics.csv` | z\_dep, z\_ret, z*, tau\_half (net + gross) |
 
 **Asset taxonomy**:
 
@@ -197,18 +216,24 @@ Flags series for non-hedonic deflation. Operationalized in script 47 (T1-T3).
 
 ### 47_stock_flow_consistency.R — SFC Validation + Deflator Tests
 
-#### Part A: Stock-Flow Consistency
+#### Part A: Stock-Flow Consistency (NET + GROSS)
 
-For each asset and valuation mode, checks:
-```
-residual_t = K_t − (K_{t-1} + I_t − D_t)
-```
+For each asset and valuation mode, validates SFC identities:
 
-| Valuation | Expected residual | Interpretation |
-|-----------|-------------------|----------------|
-| Current-cost | Non-zero | Revaluation (holding gains/losses) |
-| Chain-weighted | Non-zero | Index artifact (confirms Shaikh §2) |
-| GPIM-deflated | ~ 0 | Validates GPIM single-deflation |
+**Net stock SFC**: `residual_t = K^net_t − (K^net_{t-1} + IG_t − D_t)`
+**Gross stock SFC**: `residual_t = K^gross_t − (K^gross_{t-1} + IG_t − Ret_t)`
+
+| Stock | Valuation | Expected residual | Interpretation |
+|-------|-----------|-------------------|----------------|
+| Net | Current-cost | Non-zero | Revaluation (holding gains/losses) |
+| Net | Chain-weighted | Non-zero | Index artifact (confirms Shaikh §2) |
+| Net | GPIM-deflated | ~ 0 | Validates GPIM single-deflation |
+| Gross | GPIM-deflated | ~ 0 | Validates GPIM with retirement rates |
+| Gross | Chain-weighted | Non-zero | Chain breaks SFC for gross too (§2) |
+
+Per GPIM_Formalization_v3, §1: the same accumulation equations (3) and (5) apply
+to both net and gross stocks — the only difference is `z_it` = depreciation rate
+(net) vs retirement rate (gross).
 
 **Output**: `data/interim/validation/sfc_residuals.csv`, `fig_sfc_residual.png`
 
@@ -297,6 +322,18 @@ D^R_t  = D^cc_t  / p^K_t
 ```
 
 This preserves SFC by construction: `K^R_t = K^R_{t-1} + IG^R_t − D^R_t`.
+
+### Net vs Gross Stocks
+
+Per the GPIM formalization (§1), equations (3) and (5) apply to **both**
+net and gross stocks — the only difference is the depletion rate:
+
+- **Net stocks**: `z_t` = depreciation rate → `K^net_R_t = IG_R_t + (1 - z_dep) × K^net_R_{t-1}`
+- **Gross stocks**: `z_t` = retirement rate → `K^gross_R_t = IG_R_t + (1 - z_ret) × K^gross_R_{t-1}`
+
+Since `ret < dep` (assets survive longer in the gross stock), gross stocks are
+larger than net stocks. The SFC identity holds for **both** under GPIM, and
+breaks for **both** under chain-weighted aggregation.
 
 ### Convergence Properties
 
