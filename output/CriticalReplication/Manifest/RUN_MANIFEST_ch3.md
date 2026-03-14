@@ -1,16 +1,16 @@
 # RUN MANIFEST — Chapter 3 Critical Replication
 
 ## Run metadata
-- Run ID: `ch3_20260312_020945`
-- Timestamp: `2026-03-12T02:09:45-0300`
-- Timezone: `America/Santiago`
-- Git hash: `2ea2261`
+- Run ID: `ch3_20260314_145532`
+- Timestamp: `2026-03-14T14:55:32+0000`
+- Timezone: `Etc/UTC`
+- Git hash: `41530dd`
 - Seed: `123456`
-- Machine/OS: `sysname Windows; release 10 x64; version build 26200; nodename DIEGO-ASUS; machine x86-64; login User; user User; effective_user User; udomain DIEGO-ASUS`
+- Machine/OS: `sysname Linux; release 6.18.5; version #2 SMP PREEMPT_DYNAMIC Wed Jan 14 17:56:08 UTC 2026; nodename (none); machine x86_64; login unknown; user root; effective_user root`
 
 ## Input data and variable mapping
-- Dataset path: `data/raw/Shaikh_RepData.xlsx`
-- Sheet: `long`
+- Dataset path: `data/raw/Shaikh_canonical_series_v1.csv`
+- Shock type: `permanent`
 - Window lock: `shaikh_window` (1947-2011)
 
 ## Script execution log
@@ -29,6 +29,7 @@
 - `output/CriticalReplication/Manifest/logs/23_S2_vecm_trivariate_run.log`
 - `output/CriticalReplication/Manifest/logs/80_pack_ch3_replication_run.log`
 - `output/CriticalReplication/Manifest/logs/SESSIONINFO_ch3.txt`
+- `output/CriticalReplication/ResultsPack/INDEX_RESULTS_PACK.md`
 - `output/CriticalReplication/ResultsPack/figures/fig_CROSS_synthesis.pdf`
 - `output/CriticalReplication/ResultsPack/figures/fig_CROSS_synthesis.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S0_capacity_benchmark.pdf`
@@ -69,7 +70,6 @@
 - `output/CriticalReplication/ResultsPack/figures/fig_S2_theta_distribution.png`
 - `output/CriticalReplication/ResultsPack/figures/fig_S2_utilization_band.pdf`
 - `output/CriticalReplication/ResultsPack/figures/fig_S2_utilization_band.png`
-- `output/CriticalReplication/ResultsPack/INDEX_RESULTS_PACK.md`
 - `output/CriticalReplication/ResultsPack/tables/TAB_CROSS_theta_comparison.csv`
 - `output/CriticalReplication/ResultsPack/tables/TAB_S0_bounds_report.csv`
 - `output/CriticalReplication/ResultsPack/tables/TAB_S0_fivecase.csv`
