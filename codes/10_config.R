@@ -23,13 +23,18 @@ CONFIG <- list(
   # data/raw/Shaikh_exploitation_rate_faithful_v1.csv
 
   ## Variables in the Shaikh sheet
+  ## Series identification: confirmed from Shaikh_RepData.xlsx (sheet "long")
+  ## and S0 deflator grid search (25_S0_deflator_grid_search.R, S0_agent_report.md).
+  ## Shaikh uses GVAcorp (= VAcorp + DEPCcorp) deflated by Py (GDP price index,
+  ## NIPA T1.1.4, base 2011=100) for BOTH output and capital.
+  ## See docs/ardl_series_identification.md for full provenance.
   year_col = "year",
-  y_nom    = "VAcorp",       # was "GVAcorp"
+  y_nom    = "GVAcorp",      # Gross Value Added = VAcorp + DEPCcorp
   k_nom    = "KGCcorp",
-  u_shaikh = "uK",           # was "u_shaikh" — used by CONFIG$u_shaikh path in S0 line 227
+  u_shaikh = "uK",
   pi_share = "Profshcorp",
-  p_index  = "pIGcorpbea",   # was "Py"
-  e_rate   = "exploit_rate",  # verify this matches CSV column name — it does
+  p_index  = "Py",           # GDP price index (NIPA T1.1.4, base 2011=100)
+  e_rate   = "exploit_rate",
 
   
 
