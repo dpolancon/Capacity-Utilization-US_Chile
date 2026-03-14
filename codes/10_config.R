@@ -18,23 +18,28 @@ CONFIG <- list(
   ## ----------------------------------------------------------
   ## Shaikh replication data (raw)
   ## ----------------------------------------------------------
-  data_shaikh       = "data/raw/Shaikh_RepData.xlsx",
-  data_shaikh_sheet = "long",
+  data_shaikh       = "data/raw/Shaikh_canonical_series_v1.csv",
+  # exploitation rate construction audit trail (not loaded directly):
+  # data/raw/Shaikh_exploitation_rate_faithful_v1.csv
 
   ## Variables in the Shaikh sheet
   year_col = "year",
-  y_nom    = "GVAcorp",
+  y_nom    = "VAcorp",       # was "GVAcorp"
   k_nom    = "KGCcorp",
-  p_index  = "Py",
-  u_shaikh = "u_shaikh",
+  u_shaikh = "uK",           # was "u_shaikh" — used by CONFIG$u_shaikh path in S0 line 227
   pi_share = "Profshcorp",
-  e_rate   = "e",
+  p_index  = "pIGcorpbea",   # was "Py"
+  e_rate   = "exploit_rate",  # verify this matches CSV column name — it does
 
+  
+
+  
+  
   ## ----------------------------------------------------------
   ## Sample windows (full sample must be first)
   ## ----------------------------------------------------------
   WINDOWS_LOCKED = list(
-    shaikh_window = c(1947, 2011),
+    shaikh_window = c(1947, 2011),   # was c(1947, 2011) — T=61 per Table 6.7.14
     full          = c(-Inf, Inf),
     fordism       = c(-Inf, 1973),
     post_fordism  = c(1974,  Inf)
