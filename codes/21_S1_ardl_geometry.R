@@ -20,7 +20,7 @@ rm(list = ls())
 
 suppressPackageStartupMessages({
   library(here)
-  library(readxl)
+  library(readr)
   library(dplyr)
   library(tidyr)
   library(purrr)
@@ -63,8 +63,7 @@ T_BOUNDS_CASES <- c(1L, 3L, 5L)
 # ------------------------------------------------------------
 # 0) Data preparation (mirrors S0)
 # ------------------------------------------------------------
-df_raw <- readxl::read_excel(here::here(CONFIG$data_shaikh),
-                              sheet = CONFIG$data_shaikh_sheet)
+df_raw <- readr::read_csv(here::here(CONFIG$data_shaikh), show_col_types = FALSE)
 
 Py <- as.numeric(df_raw[[CONFIG$p_index]])
 p_scale <- Py / 100
@@ -78,8 +77,8 @@ df0 <- df0[complete.cases(df0) & df0$year > 0, ]
 df0$lnY <- log(df0$Y_nom / p_scale[match(df0$year, as.integer(df_raw[[CONFIG$year_col]]))])
 df0$lnK <- log(df0$K_nom / p_scale[match(df0$year, as.integer(df_raw[[CONFIG$year_col]]))])
 
-# Step dummies
-for (yy in DUMMY_YEARS) df0[[paste0("d", yy)]] <- as.integer(df0$year >= yy)
+# Dummies (shock-type from CONFIG)
+df0 <- make_dummies(df0, DUMMY_YEARS, CONFIG$SHOCK_TYPE)
 
 # Window
 w <- CONFIG$WINDOWS_LOCKED[[WINDOW_TAG]]
@@ -93,7 +92,7 @@ df_ts <- ts(df[, c("lnY", "lnK", all_dum_names)],
             start = min(df$year), frequency = 1)
 
 # Shaikh u for RMSE (load separately)
-u_shaikh <- as.numeric(df_raw[["u_shaikh"]])[match(df$year, as.integer(df_raw[[CONFIG$year_col]]))]
+u_shaikh <- as.numeric(df_raw[[CONFIG$u_shaikh]])[match(df$year, as.integer(df_raw[[CONFIG$year_col]]))]
 
 # ------------------------------------------------------------
 # 1) Output directories + log
