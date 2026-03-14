@@ -136,15 +136,8 @@ if (tp_k_real %in% names(master) && "gdp_real_2017" %in% names(master)) {
   message("  Computed: Y/K, I/Y, D/Y, I/K, D/K for TOTAL_PRODUCTIVE")
 }
 
-# Also compute for NR = ME + NRC (non-residential productive)
-nr_k_real <- "NR_K_net_real"
-if (nr_k_real %in% names(master)) {
-  master <- master |>
-    mutate(
-      yk_ratio_NR_real = gdp_real_2017 / !!sym(nr_k_real)
-    )
-  message("  Computed: Y/K for NR (non-residential)")
-}
+# NOTE: NR = TOTAL_PRODUCTIVE = ME + NRC (RC excluded from productive capital).
+# No separate NR ratio needed — yk_ratio_real already covers this.
 
 
 ## ==============================================================

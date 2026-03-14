@@ -148,13 +148,17 @@ The central script. For each asset type (ME, NRC, RC, IP):
 |------|-----------|----------------------|------------|
 | ME | Machinery & Equipment | 6 | Yes |
 | NRC | Non-Residential Construction (Structures) | 3 | Yes |
-| RC | Residential Construction | 13 | Yes |
-| IP | Intellectual Property Products | 9 | No* |
+| RC | Residential Construction | 13 | No |
+| IP | Intellectual Property Products | 9 | No |
 | NR | Non-Residential (ME + NRC) | Derived | Yes |
-| TOTAL_PRODUCTIVE | ME + NRC + RC | Derived | Yes |
-| TOTAL_ALL | ME + NRC + RC + IP | Derived | — |
+| TOTAL_PRODUCTIVE | ME + NRC | Derived | Yes |
+| TOTAL_WITH_RC | ME + NRC + RC | Derived | Comparison |
+| TOTAL_ALL | ME + NRC + RC + IP | Derived | Comparison |
 
-*IP tracked separately; excluded from productive capital in Shaikh's framework.
+TOTAL_PRODUCTIVE = NR = ME + NRC. Following Shaikh's corporate sector concept,
+only non-residential fixed capital enters the output-capital ratio. Residential
+(RC) and Intellectual Property (IP) are tracked but excluded from the productive
+aggregate. TOTAL_WITH_RC and TOTAL_ALL are available as comparison measures.
 
 ### 45_build_kstock_government.R — Government Capital Stock
 
@@ -390,12 +394,11 @@ Half-life: ~24 years for US corporate sector.
 
 | Column | Formula | Scope |
 |--------|---------|-------|
-| `yk_ratio_real` | gdp_real_2017 / TOTAL_PRODUCTIVE_K_net_real | Total productive |
-| `iy_ratio_nom` | TOTAL_PRODUCTIVE_IG_cc / gdp_nominal | Total productive |
-| `dy_ratio_nom` | TOTAL_PRODUCTIVE_D_cc / gdp_nominal | Total productive |
-| `ik_ratio_nom` | TOTAL_PRODUCTIVE_IG_cc / TOTAL_PRODUCTIVE_K_net_cc | Total productive |
-| `dk_ratio_nom` | TOTAL_PRODUCTIVE_D_cc / TOTAL_PRODUCTIVE_K_net_cc | Total productive |
-| `yk_ratio_NR_real` | gdp_real_2017 / NR_K_net_real | Non-residential |
+| `yk_ratio_real` | gdp_real_2017 / TOTAL_PRODUCTIVE_K_net_real | ME + NRC |
+| `iy_ratio_nom` | TOTAL_PRODUCTIVE_IG_cc / gdp_nominal | ME + NRC |
+| `dy_ratio_nom` | TOTAL_PRODUCTIVE_D_cc / gdp_nominal | ME + NRC |
+| `ik_ratio_nom` | TOTAL_PRODUCTIVE_IG_cc / TOTAL_PRODUCTIVE_K_net_cc | ME + NRC |
+| `dk_ratio_nom` | TOTAL_PRODUCTIVE_D_cc / TOTAL_PRODUCTIVE_K_net_cc | ME + NRC |
 
 ---
 

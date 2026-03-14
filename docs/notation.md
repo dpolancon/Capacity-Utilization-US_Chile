@@ -15,12 +15,16 @@ Appendix 6.5 section V, Appendix 6.6 section I, and Appendix 6.7 section V.
 |-------|--------------------------------|-------------|------------------------------|
 | ME    | Machinery & Equipment          | Yes         | BEA "Equipment" lines        |
 | NRC   | Non-Residential Construction   | Yes         | BEA "Structures" lines       |
-| RC    | Residential Construction       | Yes         | BEA "Residential" lines      |
+| RC    | Residential Construction       | No*         | BEA "Residential" lines      |
 | IP    | Intellectual Property Products | No*         | BEA "IP products" lines      |
 | NR    | Non-Residential aggregate      | Yes         | NR = ME + NRC                |
-| TOTAL | Total productive fixed capital | Yes         | TOTAL = ME + NRC + RC        |
+| TOTAL | Total productive fixed capital | Yes         | TOTAL = ME + NRC             |
 
-*IP is identified and tracked separately but **excluded** from productive capital.
+*RC and IP are identified and tracked separately but **excluded** from productive
+capital. TOTAL_PRODUCTIVE = NR = ME + NRC, following Shaikh's corporate sector
+concept where only non-residential fixed capital enters the output-capital ratio.
+TOTAL_WITH_RC (ME + NRC + RC) and TOTAL_ALL (ME + NRC + RC + IP) are available
+as comparison aggregates.
 
 ### Government Fixed Assets
 

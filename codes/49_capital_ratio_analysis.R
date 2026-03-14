@@ -11,7 +11,7 @@
 # Analysis sections:
 #   A. Y/K ratio time series (GPIM vs chain-weighted)
 #   B. Period decomposition (Fordism, post-Fordism)
-#   C. Asset-level Y/K ratios
+#   C. Asset-level Y/K ratios (ME, NRC, TOTAL_PRODUCTIVE = ME+NRC)
 #   D. Capital deepening vs. output growth decomposition
 #   E. Formal T1-T3 summary table
 #   F. Cross-validation with Shaikh canonical Y/K
@@ -116,11 +116,8 @@ if (has_chain && "TOTAL_PRODUCTIVE_K_net_chain" %in% names(kstock_chain)) {
     mutate(yk_chain = gdp_real_2017 / K_chain)
 }
 
-# NR (non-residential) Y/K
-if ("yk_ratio_NR_real" %in% names(master)) {
-  ratio_df <- ratio_df |>
-    left_join(master |> select(year, yk_NR_gpim = yk_ratio_NR_real), by = "year")
-}
+# NOTE: TOTAL_PRODUCTIVE = NR = ME + NRC (RC excluded from productive capital).
+# yk_gpim already reflects this definition. No separate NR ratio needed.
 
 # Nominal Y/K (current-cost)
 if ("TOTAL_PRODUCTIVE_K_net_cc" %in% names(master)) {
@@ -220,7 +217,7 @@ message("\n--- §C: Asset-level Y/K ratios ---")
 
 asset_ratios <- list()
 
-for (asset_code in c("ME", "NRC", "RC", "NR", "TOTAL_PRODUCTIVE")) {
+for (asset_code in c("ME", "NRC", "TOTAL_PRODUCTIVE", "TOTAL_WITH_RC")) {
   k_col_real <- paste0(asset_code, "_K_net_real")
 
   if (!k_col_real %in% names(master)) next
@@ -449,7 +446,7 @@ if ("yk_gpim" %in% names(ratio_df)) {
                linetype = "dashed", color = "grey50", alpha = 0.5) +
     labs(
       title = "Output-Capital Ratio: Period Trends",
-      subtitle = "GPIM-deflated productive capital (ME + NRC + RC)",
+      subtitle = "GPIM-deflated productive capital (ME + NRC)",
       x = "Year", y = "Y / K",
       color = "Period"
     ) +
@@ -551,7 +548,7 @@ message("\n--- Writing outputs ---")
 # 1. Capital ratio analysis dataset
 out_ratio <- ratio_df |>
   select(year, any_of(c("gdp_real_2017", "yk_gpim", "yk_chain",
-                          "yk_nominal", "yk_NR_gpim",
+                          "yk_nominal",
                           "ln_yk_gpim", "ln_yk_chain", "ln_divergence")))
 safe_write_csv(out_ratio,
   file.path(GDP_CONFIG$PROCESSED, "capital_ratio_analysis.csv"))
