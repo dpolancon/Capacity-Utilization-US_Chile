@@ -1,5 +1,5 @@
-# INDEX — Chapter 3 Results Pack
-Generated: 2026-03-12 02:11:59.938328
+# INDEX <U+2014> Chapter 3 Results Pack
+Generated: 2026-03-14 14:56:24.7056
 
 ## Tables
 - TAB_CROSS_theta_comparison.csv
@@ -11,7 +11,7 @@ Generated: 2026-03-12 02:11:59.938328
 - TAB_S2_ic_winners.csv
 - TAB_S2_rotation_check.csv
 
-## Figures (PDF — archival)
+## Figures (PDF <U+2014> archival)
 - fig_CROSS_synthesis.pdf
 - fig_S0_capacity_benchmark.pdf
 - fig_S0_fitcomplexity_seed.pdf
@@ -33,7 +33,7 @@ Generated: 2026-03-12 02:11:59.938328
 - fig_S2_theta_distribution.pdf
 - fig_S2_utilization_band.pdf
 
-## Figures (PNG — Notion embed)
+## Figures (PNG <U+2014> Notion embed)
 - fig_CROSS_synthesis.png
 - fig_S0_capacity_benchmark.png
 - fig_S0_fitcomplexity_seed.png

@@ -33,7 +33,7 @@ suppressPackageStartupMessages({
   library(tidyr)
   library(ggplot2)
   library(ggrepel)
-  library(readxl)
+  library(readr)
 })
 
 source(here::here("codes", "10_config.R"))
@@ -120,8 +120,7 @@ if (nrow(m0_row) == 0) {
 
 # ---- lnY series for S0.2 capacity benchmark ----
 # Read raw data to compute lnY (same logic as 20_S0)
-df_raw <- readxl::read_excel(here::here(CONFIG$data_shaikh),
-                              sheet = CONFIG$data_shaikh_sheet)
+df_raw <- readr::read_csv(here::here(CONFIG$data_shaikh), show_col_types = FALSE)
 Py <- as.numeric(df_raw[[CONFIG$p_index]])
 p_scale <- Py / 100
 w <- CONFIG$WINDOWS_LOCKED[["shaikh_window"]]

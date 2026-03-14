@@ -249,7 +249,7 @@ md <- c(
   "",
   "## Input data and variable mapping",
   sprintf("- Dataset path: `%s`", CONFIG$data_shaikh),
-  sprintf("- Sheet: `%s`", CONFIG$data_shaikh_sheet),
+  sprintf("- Shock type: `%s`", CONFIG$SHOCK_TYPE),
   sprintf("- Window lock: `shaikh_window` (%s)", window_label),
   "",
   "## Script execution log",
