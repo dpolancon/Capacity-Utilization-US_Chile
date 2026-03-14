@@ -19,6 +19,7 @@ CONFIG <- list(
   ## Shaikh replication data (raw)
   ## ----------------------------------------------------------
   data_shaikh       = "data/raw/Shaikh_canonical_series_v1.csv",
+  SHOCK_TYPE        = "permanent",   # "permanent" (step) or "transitory" (impulse)
   # exploitation rate construction audit trail (not loaded directly):
   # data/raw/Shaikh_exploitation_rate_faithful_v1.csv
 
