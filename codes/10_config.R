@@ -82,5 +82,12 @@ CONFIG <- list(
   ## ----------------------------------------------------------
   ## Logging behaviour
   ## ----------------------------------------------------------
-  HEARTBEAT_EVERY = 25L
+  HEARTBEAT_EVERY = 25L,
+
+  ## ----------------------------------------------------------
+  ## GDP & Capital Stock module (40-series)
+  ## ----------------------------------------------------------
+  gdp_kstock_config = "codes/40_gdp_kstock_config.R",
+  DATA_INTERIM      = "data/interim",
+  DATA_PROCESSED    = "data/processed"
 )
