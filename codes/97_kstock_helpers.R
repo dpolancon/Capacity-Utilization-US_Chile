@@ -352,25 +352,176 @@ quality_adjustment_wedge <- function(p_QA, p_obs) {
 
 
 # ==================================================================
-# §E. Stock Construction Functions
+# §E. Gross Stock Construction Functions (GPIM)
+#
+# Per GPIM_Formalization_v3, §1: the depletion rate z_it is
+# "depreciation for net stocks; retirement for gross stocks."
+# Equations (3) and (5) apply to BOTH net and gross stocks —
+# the only difference is whether z_t is the depreciation rate
+# (net) or the retirement rate (gross).
+#
+# Gross stock SFC identity (GPIM real):
+#   K^G_R_t = K^G_R_{t-1} + IG_R_t - Ret_R_t
+# where Ret_R_t = ret_t × K^G_R_{t-1}
+#
+# This is eq. (5) with z_t := ret_t.
 # ==================================================================
+
+#' Estimate retirement rate from BEA average service life
+#'
+#' Under BEA's geometric depreciation model (post-1997), the
+#' depreciation rate is d = declining_balance_rate / service_life.
+#' The retirement rate (for gross stocks) is approximately 1/L,
+#' since on average an asset cohort is fully retired after L years.
+#'
+#' More precisely, under a truncated Winfrey retirement distribution
+#' (BEA 1993 methodology), the average retirement rate is:
+#'   ret_t ≈ 1/L (uniform discard)
+#' Under geometric depreciation with no formal retirement (BEA 2011),
+#' retirement is implicit in the geometric rate. In this case:
+#'   ret_t < d_t (retirement is slower than depreciation)
+#'
+#' We use the BEA 2003 methodology paper's average service lives:
+#'   Equipment: ~15 years (δ = 1.65, declining balance)
+#'   Structures: ~38 years (δ = 0.91)
+#'   Residential: ~50 years (δ = 1.14)
+#'   IP: ~5 years (δ = 1.65)
+#'
+#' @param asset_code One of "ME", "NRC", "RC", "IP"
+#' @return Named list: service_life, ret_rate, db_rate
+bea_service_life_params <- function(asset_code) {
+  params <- switch(asset_code,
+    ME  = list(service_life = 15L,  db_rate = 1.65),
+    NRC = list(service_life = 38L,  db_rate = 0.91),
+    RC  = list(service_life = 50L,  db_rate = 1.14),
+    IP  = list(service_life = 5L,   db_rate = 1.65),
+    stop("Unknown asset code: ", asset_code)
+  )
+  # Retirement rate: 1/L (uniform discard approximation)
+  params$ret_rate <- 1 / params$service_life
+  # Depreciation rate (geometric): δ/L
+  params$dep_rate <- params$db_rate / params$service_life
+  params
+}
+
+#' Build GPIM gross stock via forward accumulation
+#'
+#' Applies the GPIM accumulation rule (eq. 5) with retirement
+#' rates instead of depreciation rates:
+#'
+#'   K^G_R_t = IG_R_t + (1 - ret_t) × K^G_R_{t-1}
+#'
+#' For current-cost gross stocks (eq. 3):
+#'   K^G_t = IG_t + ζ*_t × K^G_{t-1}
+#'   where ζ*_t = (1 - ret_t) × (p_t / p_{t-1})
+#'
+#' Initial condition: K^G_0 estimated from K^net_0 and the
+#' net-to-gross ratio implied by the depreciation and retirement
+#' rates: K^G_0 ≈ K^net_0 × (dep_rate / ret_rate)
+#' This follows from the steady-state identity:
+#'   net/gross = 1 - (d-r)×L/2 ≈ r/d (approximate)
+#'
+#' @param IG_R      Real gross investment (vector, length T)
+#' @param ret       Retirement rate (scalar or vector length T)
+#' @param K_net_R_0 Initial real net stock (for K_gross_0 estimation)
+#' @param dep_rate  Depreciation rate (for initial condition)
+#' @return Named list: K_gross_R (vector), ret_R (vector), K0_gross_R
+gpim_build_gross_real <- function(IG_R, ret, K_net_R_0, dep_rate) {
+  T <- length(IG_R)
+
+  # Vectorize retirement rate if scalar
+  if (length(ret) == 1) ret <- rep(ret, T)
+  stopifnot(length(ret) == T)
+
+  # Initial gross stock: K^G_0 ≈ K^net_0 × (dep_rate / ret_rate)
+  # Because in steady state: K_net / K_gross = 1 - accumulated_dep/K_gross
+  # ≈ ret/dep (higher depreciation relative to retirement means
+  # more of the gross stock is "used up")
+  K0_gross_R <- K_net_R_0 * (dep_rate / mean(ret))
+
+  # Forward accumulation via eq. (5) with retirement rates
+  K_gross_R <- gpim_accumulate_real(IG_R, ret, K0_gross_R)
+
+  # Implied retirement flows
+  ret_R <- ret * c(K0_gross_R, K_gross_R[-T])
+
+  list(
+    K_gross_R  = K_gross_R,
+    ret_R      = ret_R,
+    K0_gross_R = K0_gross_R,
+    ret_rate   = ret
+  )
+}
+
+#' Build GPIM gross stock in current cost
+#'
+#' Applies eq. (3) with retirement-based survival-revaluation:
+#'   K^G_t = IG_t + ζ*_t × K^G_{t-1}
+#'   ζ*_t = (1 - ret_t) × (p_t / p_{t-1})
+#'
+#' @param IG_cc  Gross investment, current cost (vector, length T)
+#' @param ret    Retirement rate (scalar or vector)
+#' @param p_K    Own-price deflator (vector, length T)
+#' @param K_net_cc_0 Initial current-cost net stock
+#' @param dep_rate   Depreciation rate (for initial condition)
+#' @return Named list: K_gross_cc (vector), K0_gross_cc
+gpim_build_gross_cc <- function(IG_cc, ret, p_K, K_net_cc_0, dep_rate) {
+  T <- length(IG_cc)
+  if (length(ret) == 1) ret <- rep(ret, T)
+  stopifnot(length(ret) == T, length(p_K) == T)
+
+  K0_gross_cc <- K_net_cc_0 * (dep_rate / mean(ret))
+
+  # Survival-revaluation factor for gross stocks (eq. 4 with ret)
+  p_lag <- c(p_K[1], p_K[-T])  # Use first period's price as p_0
+  zeta_star <- (1 - ret) * (p_K / p_lag)
+
+  K_gross_cc <- gpim_accumulate_cc(IG_cc, zeta_star, K0_gross_cc)
+
+  list(
+    K_gross_cc  = K_gross_cc,
+    K0_gross_cc = K0_gross_cc
+  )
+}
+
+#' Validate gross stock SFC identity
+#'
+#' For gross stocks, the SFC identity uses retirements instead
+#' of depreciation:
+#'   residual_t = K^G_t - (K^G_{t-1} + IG_t - Ret_t)
+#'
+#' GPIM real: residual should be ~ 0 by construction
+#' Chain-weighted: residual should be non-zero (confirms Shaikh §2)
+#'
+#' @param K_gross Capital stock (gross), length T
+#' @param K_gross_lag Lagged gross stock, length T
+#' @param I Investment, length T
+#' @param Ret Retirement, length T
+#' @param label Character label for logging
+#' @return tibble: t, K_actual, K_implied, residual, pct_residual
+validate_gross_sfc <- function(K_gross, K_gross_lag, I, Ret, label = "") {
+  T <- length(K_gross)
+  stopifnot(length(K_gross_lag) == T, length(I) == T, length(Ret) == T)
+
+  K_implied <- K_gross_lag + I - Ret
+  residual  <- K_gross - K_implied
+  pct_resid <- ifelse(abs(K_gross) > 0, residual / K_gross, NA_real_)
+
+  dplyr::tibble(
+    t            = seq_len(T),
+    K_actual     = K_gross,
+    K_implied    = K_implied,
+    residual     = residual,
+    pct_residual = pct_resid,
+    label        = label
+  )
+}
 
 #' Build gross stock from net stock + cumulative depreciation
 #'
-#' Gross_cc_t = Net_cc_t + CumulativeDepreciation_cc_t
-#'
-#' Since BEA publishes net stocks and depreciation flows,
-#' cumulative depreciation is approximated by accumulating
-#' annual depreciation flows. However, the more direct approach:
-#' Gross = Net + (cumulative D since asset installation), which
-#' for aggregate stocks means Gross_t ~ Net_t + D_t / z_t
-#' (i.e., Net + average remaining depreciation). We use the
-#' empirical identity: if we know IG and net stock accumulation,
-#' gross stock can be backed out.
-#'
-#' For current-cost stocks:
-#'   K^gross_t = K^net_t + sum of depreciation allowances
-#'   still embedded in surviving assets
+#' @deprecated Use gpim_build_gross_real() or gpim_build_gross_cc() instead.
+#'   This function uses a crude first-order approximation that does NOT
+#'   satisfy SFC. Retained for backward compatibility only.
 #'
 #' Approximation: Use the BEA convention where
 #'   K^gross ~ K^net + D_t * average_age / 2

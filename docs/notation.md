@@ -15,12 +15,16 @@ Appendix 6.5 section V, Appendix 6.6 section I, and Appendix 6.7 section V.
 |-------|--------------------------------|-------------|------------------------------|
 | ME    | Machinery & Equipment          | Yes         | BEA "Equipment" lines        |
 | NRC   | Non-Residential Construction   | Yes         | BEA "Structures" lines       |
-| RC    | Residential Construction       | Yes         | BEA "Residential" lines      |
+| RC    | Residential Construction       | No*         | BEA "Residential" lines      |
 | IP    | Intellectual Property Products | No*         | BEA "IP products" lines      |
 | NR    | Non-Residential aggregate      | Yes         | NR = ME + NRC                |
-| TOTAL | Total productive fixed capital | Yes         | TOTAL = ME + NRC + RC        |
+| TOTAL | Total productive fixed capital | Yes         | TOTAL = ME + NRC             |
 
-*IP is identified and tracked separately but **excluded** from productive capital.
+*RC and IP are identified and tracked separately but **excluded** from productive
+capital. TOTAL_PRODUCTIVE = NR = ME + NRC, following Shaikh's corporate sector
+concept where only non-residential fixed capital enters the output-capital ratio.
+TOTAL_WITH_RC (ME + NRC + RC) and TOTAL_ALL (ME + NRC + RC + IP) are available
+as comparison aggregates.
 
 ### Government Fixed Assets
 
@@ -90,11 +94,19 @@ by construction when investment and depreciation are deflated by the same price 
 
 **Net stock**: Total accumulated investment minus accumulated depreciation over the
 asset's service life. Reflects the remaining productive value of the asset.
+GPIM accumulation: `K^net_R_t = IG_R_t + (1 - z_dep_t) × K^net_R_{t-1}` (eq. 5)
 
 **Gross stock**: Total accumulated investment minus retirements (not depreciation).
 Reflects the physical stock of surviving assets valued at replacement cost.
+GPIM accumulation: `K^gross_R_t = IG_R_t + (1 - z_ret_t) × K^gross_R_{t-1}` (eq. 5)
 
-**Construction**: `Gross_cc_t = Net_cc_t + CumulativeDepreciation_cc_t`
+Per §1 of the GPIM formalization: equations (3) and (5) apply to both net and
+gross stocks — the only difference is whether the depletion rate `z_it` is the
+depreciation rate (net) or the retirement rate (gross). SFC holds for both under
+GPIM single deflation; breaks for both under chain-weighted aggregation.
+
+**Retirement rates**: Estimated from BEA average service lives as `ret = 1/L`:
+ME = 1/15, NRC = 1/38, RC = 1/50, IP = 1/5.
 
 ---
 
@@ -287,5 +299,5 @@ Adjustments and deflator choice are orthogonal dimensions (section 7.7).
 
 ---
 
-*Notation v1 | 2026-03-13*
+*Notation v2 | 2026-03-14*
 *Do not edit without version increment*

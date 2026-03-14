@@ -15,6 +15,7 @@
 #   46 → Shaikh adjustments (toggle-able)
 #   47 → Stock-flow consistency + deflator tests T1-T3
 #   48 → Final assembly
+#   49 → Capital-output ratio analysis
 ############################################################
 
 GDP_CONFIG <- list(
@@ -72,10 +73,15 @@ GDP_CONFIG <- list(
   ),
 
   ## Composite aggregates (computed, not extracted from BEA)
+  ##
+  ## TOTAL_PRODUCTIVE excludes RC (Residential) and IP, following
+  ## Shaikh's corporate sector concept: only non-residential fixed
+  ## capital (Equipment + Structures) enters the output-capital ratio.
   ASSET_COMPOSITES = list(
-    NR              = c("ME", "NRC"),
-    TOTAL_PRODUCTIVE = c("ME", "NRC", "RC"),
-    TOTAL_ALL       = c("ME", "NRC", "RC", "IP")
+    NR               = c("ME", "NRC"),
+    TOTAL_PRODUCTIVE = c("ME", "NRC"),
+    TOTAL_WITH_RC    = c("ME", "NRC", "RC"),
+    TOTAL_ALL        = c("ME", "NRC", "RC", "IP")
   ),
 
   ## ----------------------------------------------------------
