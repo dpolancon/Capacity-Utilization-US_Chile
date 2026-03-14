@@ -149,4 +149,27 @@ This file must be manually prepared and placed in `data/raw/bea/`.
 
 ---
 
-*Sources v1 | 2026-03-13*
+## 7. Capital-Output Ratio References
+
+1. **Shaikh, A.** (2016). Chapter 6, "The Classical Theory of Accumulation":
+   Y/K as the inverse of the organic composition; secular tendency in
+   competitive capitalism. See especially §6.1-6.3 and Appendix 6.7 §V.
+
+2. **Shaikh, A.** (2016). Appendix 6.7 §V: Quality adjustment and the
+   stock-flow distortion. Testable implications T1-T3 for hedonic deflators.
+
+3. **Gordon, R.J.** (1990). *The Measurement of Durable Goods Prices*.
+   University of Chicago Press. Foundational critique of hedonic quality
+   adjustments in equipment price indices.
+
+4. **Basu, D. and Manolakos, P.T.** (2013). "Is There a Tendency for the Rate
+   of Profit to Fall? Econometric Evidence for the U.S. Economy, 1948-2007."
+   *Review of Radical Political Economics*, 45(1), 76-95.
+
+5. **Duménil, G. and Lévy, D.** (2004). *Capital Resurgent: Roots of the
+   Neoliberal Revolution*. Harvard University Press. Alternative Y/K series
+   and periodization (Fordism/post-Fordism).
+
+---
+
+*Sources v2 | 2026-03-14*

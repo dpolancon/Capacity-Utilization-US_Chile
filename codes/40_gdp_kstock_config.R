@@ -15,6 +15,7 @@
 #   46 → Shaikh adjustments (toggle-able)
 #   47 → Stock-flow consistency + deflator tests T1-T3
 #   48 → Final assembly
+#   49 → Capital-output ratio analysis
 ############################################################
 
 GDP_CONFIG <- list(
