@@ -1,90 +1,137 @@
-# CLAUDE.md — Project Context
+﻿# CLAUDE.md — Capacity-Utilization-US_Chile
+## Chapter 2: Reduced-Rank VECM | Track B Pipeline
 
-## Overview
+**Dissertation**: *A Historical Trace of Capacity Utilization Measurements*
+**Author**: Diego Polanco | UMass Amherst | Supervisor: Michael Ash
+**Last updated**: 2026-03-15
 
-Critical replication of Shaikh's (2016) capacity utilization estimation for the US corporate sector. Uses ARDL and Johansen VECM cointegration methods to stress-test the original ARDL(2,4) specification across a broad specification lattice. UMass heterodox macroeconomics dissertation.
+---
 
-## Pipeline Architecture
+## 1. What this repo is
 
-| Script | Stage | Description |
-|--------|-------|-------------|
-| `10_config.R` | Config | Global CONFIG list: paths, column maps, sample windows, shock type, seed |
-| `99_utils.R` | Utility | `safe_write_csv()`, `make_dummies()`, `now_stamp()` |
-| `98_ardl_helpers.R` | Utility | Covariance sanitization, ICOMP computation, `make_spec_row()`, `extract_envelope()` |
-| `99_figure_protocol.R` | Utility | Figure protocol: Tufte theme, colorblind-safe palette, dual PDF+PNG export, 20 builder functions |
-| `20_S0_shaikh_faithful.R` | S0 | Faithful ARDL(2,4) replication across 5 PSS cases |
-| `21_S1_ardl_geometry.R` | S1 | 500-spec ARDL lattice with F-bounds admissibility + frontier extraction |
-| `22_S2_vecm_bivariate.R` | S2 | Johansen VECM bivariate (m=2), 48 specs, triple admissibility gate |
-| `23_S2_vecm_trivariate.R` | S2 | Johansen VECM trivariate (m=3) + rotation check, 96 specs |
-| `24_manifest_runner.R` | Runner | Pipeline orchestrator: S0 → S1 → S2(m=2) → S2(m=3) → Pack |
-| `80_pack_ch3_replication.R` | Pack | Results packaging: 8 summary tables, 20 dual-format figures |
+This is the Chapter 2 empirical pipeline. The object of estimation is a
+**five-dimensional (or six-dimensional) reduced-rank VECM with cointegration
+rank r=3**, estimating nonlinear productivity-exploitation interactions in the
+US corporate sector. This is NOT a replication of Shaikh — that lives in
+Critical-Replication-Shaikh.
 
-Auxiliary (not in main pipeline): `25_S0_deflator_grid_search.R`, `20_S0_shaikh_faithful_aux_manual_override_code.R`, `s0_manual_override_repdata.R`
+The theoretical specification is fully locked in
+02_theoretical_estimation_blueprint.md (V2). All coding decisions trace back
+to that document. Do not deviate without explicit instruction from Diego.
 
-## How to Run
+---
 
-```bash
-# Full pipeline
-Rscript codes/24_manifest_runner.R
+## 2. State vector and model identity
 
-# Individual stage
-Rscript codes/20_S0_shaikh_faithful.R
+Base specification (m=5):
+```
+X_t = [y_t, k_t, k_t*e_t, k_t*e_t^2, e_t]
 ```
 
-**Shock toggle:** Edit `CONFIG$SHOCK_TYPE` in `codes/10_config.R`:
-- `"permanent"` — step dummies (d(year >= break))
-- `"transitory"` — impulse dummies (d(year == break))
-
-Dummy years: 1956, 1974, 1980 (fixed).
-
-## Variable Mapping (from `10_config.R`)
-
-| CONFIG key | Column | Meaning |
-|------------|--------|---------|
-| `y_nom` | `VAcorp` | Nominal value added (corporate) |
-| `k_nom` | `KGCcorp` | Nominal gross capital stock (corporate) |
-| `p_index` | `pIGcorpbea` | BEA price deflator for investment goods |
-| `u_shaikh` | `uK` | Shaikh's capacity utilization |
-| `e_rate` | `exploit_rate` | Exploitation rate |
-| `pi_share` | `Profshcorp` | Corporate profit share |
-
-- **Sample window:** 1947–2011 (T=65)
-- **Seed:** 123456
-
-## Data Layout
-
+Extended specification (m=6, toggle-controlled):
 ```
-data/raw/                              # Read-only source data
-  Shaikh_canonical_series_v1.csv       # Primary dataset (31 cols, 1929–2011)
-  ALFRED_GDPDEF_vintage2012.csv        # GDP deflator vintage (FRED/ALFRED)
-  Shaikh_RepData.xlsx                  # Original replication workbook
-  _Appendix6.8DataTablesCorrected.xlsx # Shaikh Appendix 6.8 tables
-  ddbb_cu_US_kgr.xlsx                 # Extended CU database
-
-output/CriticalReplication/
-  S0_faithful/  csv/ figures/ logs/
-  S1_geometry/  csv/ figures/ logs/
-  S2_vecm/      csv/ figures/ logs/
-  ResultsPack/  tables/ figures/
-  Manifest/     logs/
+X_t = [y_t, k_t, k_t*e_t, k_t*e_t^2, e_t, ln(p_Y/p_K)]
 ```
 
-## Coding Conventions
+Variable definitions:
+- y_t = ln(Y_t / p_Y): log corporate output deflated by output price
+- k_t = ln(K_t / p_K): log corporate capital stock deflated by investment price
+- e_t = (1 - omega_t)/omega_t: exploitation rate IN LEVELS (never log)
+- ln(p_Y/p_K): log relative price of output to capital — enters X_t only if I(1)
+- Interaction block (k_t*e_t, k_t*e_t^2) is structural — never remove it
+- Structural break at 1973: Fordist (1947-1973) vs post-Fordist (1974-2007)
 
-- All scripts source config + utilities via `here::here("codes/10_config.R")` etc.
-- CSVs: use `safe_write_csv(df, path)` — auto-creates parent directories
-- Figures: use the figure protocol in `99_figure_protocol.R` (dual PDF+PNG, 7x5 default)
-- Spec rows: use `make_spec_row()` from `98_ardl_helpers.R` for consistent lattice structure
-- Frontier: use `extract_envelope()` for Pareto frontier extraction
-- Dummies: use `make_dummies(df, years, CONFIG$SHOCK_TYPE)` from `99_utils.R`
+DEFLATOR RULE: Y and K use SEPARATE deflators (p_Y for output, p_K for
+capital). This differs from Track A. The relative price p_Y/p_K is a
+substantive variable, not a nuisance.
 
-## R Dependencies
+TOGGLE in 10_config_trackb.R:
+  INCLUDE_REL_PRICE <- TRUE   # m=6, extended spec
+  INCLUDE_REL_PRICE <- FALSE  # m=5, base spec
+Both specs must be run and compared. Rank r=3 is pre-specified for base spec;
+re-test rank under extended spec if INCLUDE_REL_PRICE = TRUE.
 
-`here`, `readr`, `dplyr`, `tidyr`, `purrr`, `stringr`, `ARDL`, `tsDyn`, `urca`, `ggplot2`, `ggrepel`
+---
 
-## Git Notes
+## 3. Repo structure
+```
+Capacity-Utilization-US_Chile/
+├── scripts/
+│   ├── track_b/          <- ACTIVE: M0-M13 pipeline
+│   │   ├── 50_fetch_bea_corporate.R
+│   │   ├── 51_build_corp_output.R
+│   │   ├── 52_build_corp_kstock.R
+│   │   ├── 53_build_corp_exploitation.R
+│   │   ├── 54_assemble_corp_dataset.R
+│   │   ├── 55_source_runner.R
+│   │   ├── 97_kstock_helpers.R
+│   │   ├── 99_figure_protocol.R
+│   │   └── 99_utils.R
+│   └── _archive_trackA/  <- READ-ONLY reference
+├── data/
+│   ├── raw/
+│   ├── interim/
+│   └── processed/
+├── output/figures/
+├── results/
+└── docs/
+```
 
-- `.gitignore` excludes: `output/**/*.rds`, `output/**/*.RData`, `output/Manifest/`
-- CSV tables and PNG/PDF figures **are** version-controlled
-- `data/raw/` is read-only — never modify source data
-- Detailed handoff spec: `docs/ClaudeCode_Handoff_S0S1S2.md`
+---
+
+## 4. Module pipeline (M0-M13)
+
+| Module | File | Key decision |
+|--------|------|-------------|
+| M0 | M0_data_construction.R | Build X_t base + extended; construct k_t*e_t, k_t*e_t^2; build ln(p_Y/p_K) |
+| M1 | M1_integration_tests.R | ADF/KPSS/Zivot-Andrews on ALL X_t components including products AND ln(p_Y/p_K); I(1) verdict on relative price gates INCLUDE_REL_PRICE |
+| M2 | M2_concentration_step.R | R_0t, R_1t, S_00, S_01, S_11 |
+| M3 | M3_eigenvalue_problem.R | Generalized eigenvalue decomp; no economic interpretation of unrestricted beta |
+| M4 | M4_rank_ladder.R | Trace + max-eigenvalue; confinement contribution ratios rho_i; CVs from M13 |
+| M5 | M5_unrestricted_vecm.R | Unrestricted (alpha, beta, Gamma) |
+| M6 | M6_smooth_reproduction.R | Quadratic inversion for e_t^S; discriminant check Delta_t > 0 |
+| M7 | M7_restricted_beta.R | 14 restrictions (5 over-identifying); switching algorithm |
+| M8 | M8_restricted_alpha.R | Sparsity pattern a_1; weak exogeneity test |
+| M9 | M9_hierarchical_beta2.R | Sequential + full-info beta2; generated regressor; CR check |
+| M10 | M10_deterministic.R | Restricted constant; crisis dummy entry rule |
+| M11 | M11_overid_diagnostics.R | Sequential LR tests; profile likelihood; binding set B |
+| M12 | M12_robustness.R | Perturbation around Spec*; discriminant monitoring |
+| M13 | M13_unified_bootstrap.R | Parametric bootstrap B=999/4999 |
+
+Dependency graph:
+M0 -> M1 -> M2 -> M3 -> M4
+                  |
+                  M5 -> M6 -> M9
+                  |           |
+                  M7 <--------+
+                  |
+                  M8 -> M10 -> M11 -> M12 -> M13
+
+M13 feeds back: CVs -> M4; kappa* -> M11; GR validation -> M9; LR size -> M11
+
+---
+
+## 5. Hard constraints — never violate
+
+- GATE: do NOT begin M0 until Track A S9 confirms e_corp loads on independent cointegrating vector
+- e_t enters in levels, not logs — logistic properties are level properties
+- Interaction block (k_t*e_t, k_t*e_t^2) is structural — never remove
+- Rank r=3 is pre-specified for base spec; re-test only if relative price is I(1) and enters X_t
+- I(1) test on ln(p_Y/p_K) in M1 is mandatory before setting INCLUDE_REL_PRICE
+- CR threshold = 0.15 for generated regressor; if CR > 0.15 trigger M13 before proceeding
+- Bootstrap B=999 screening / B=4999 publication — always set and report seed
+- Critical values from M13 bootstrap ONLY — never use MHM (1999) tabulated values
+- Structural break at 1973 is pre-specified — not a free estimation parameter
+- All figures: save_png_pdf_dual() from 99_figure_protocol.R — no ad-hoc ggsave
+- All deliverable documents: .md files only — never Word/docx
+
+---
+
+## 6. What NOT to do
+
+- Do not apply common deflator to Y and K — they use separate deflators here
+- Do not run Track A scripts (S0/S1/S2/ARDL) — those live in Critical-Replication-Shaikh
+- Do not modify scripts/_archive_trackA/ — read-only
+- Do not push directly to main — feature branches: track-b-M{n}-{label}
+- Do not assign economic interpretation to unrestricted beta — output to M7 only (D2)
+- Do not use MHM critical values — bootstrap only
