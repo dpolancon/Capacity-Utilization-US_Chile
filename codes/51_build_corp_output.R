@@ -104,8 +104,8 @@ BankMonIntPaid <- extract_line(t7011, 4, "BankMonIntPaid")
 ## Line 53: Imputed interest received by nonfinancial corporate
 ## Line 74: Imputed interest paid by nonfinancial corporate
 ## CorpNFNetImpIntPaid = Line 74 - Line 53
-line74 <- extract_line(t7011, 74, "imp_int_paid_nf")
-line53 <- extract_line(t7011, 53, "imp_int_recv_nf")
+line74 <- extract_line(t7011, 49, "imp_int_paid_nf")
+line53 <- extract_line(t7011, 58, "imp_int_recv_nf")
 
 CorpNFNetImpIntPaid <- line74 |>
   left_join(line53, by = "year") |>

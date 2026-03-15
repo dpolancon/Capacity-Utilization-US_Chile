@@ -18,7 +18,7 @@ CONFIG <- list(
   ## ----------------------------------------------------------
   ## Shaikh replication data (raw)
   ## ----------------------------------------------------------
-  data_shaikh       = "data/raw/Shaikh_canonical_series_v1.csv",
+  data_shaikh       = "data/processed/corporate_sector_dataset.csv",
   # exploitation rate construction audit trail (not loaded directly):
   # data/raw/Shaikh_exploitation_rate_faithful_v1.csv
 
