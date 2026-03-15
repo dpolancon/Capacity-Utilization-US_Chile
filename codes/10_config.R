@@ -16,26 +16,25 @@
 CONFIG <- list(
 
   ## ----------------------------------------------------------
-  ## Shaikh replication data
+  ## Shaikh replication data (raw)
   ## ----------------------------------------------------------
-  ## Corporate sector dataset (built by 50-series pipeline)
-  data_shaikh       = "data/processed/corporate_sector_dataset.csv",
-  SHOCK_TYPE        = "permanent",   # "permanent" (step) or "transitory" (impulse)
+  data_shaikh       = "data/raw/Shaikh_canonical_series_v1.csv",
   # exploitation rate construction audit trail (not loaded directly):
   # data/raw/Shaikh_exploitation_rate_faithful_v1.csv
 
-  ## Previous (canonical CSV, whole-economy):
-  ##   data_shaikh = "data/raw/Shaikh_canonical_series_v1.csv"
-  ##   y_nom = "VAcorp", k_nom = "KGCcorp", p_index = "pIGcorpbea"
-
-  ## Variables in the corporate dataset
+  ## Variables in the Shaikh sheet
+  ## Series identification: confirmed from Shaikh_RepData.xlsx (sheet "long")
+  ## and S0 deflator grid search (25_S0_deflator_grid_search.R, S0_agent_report.md).
+  ## Shaikh uses GVAcorp (= VAcorp + DEPCcorp) deflated by Py (GDP price index,
+  ## NIPA T1.1.4, base 2011=100) for BOTH output and capital.
+  ## See docs/ardl_series_identification.md for full provenance.
   year_col = "year",
-  y_nom    = "GVAcorp",      # Corporate GVA (imputed interest adjusted)
-  k_nom    = "KGCcorp",      # Shaikh-adjusted gross K stock (GPIM)
-  u_shaikh = "uK",           # Capacity utilization (NA until ARDL run)
-  pi_share = "profit_share", # Corporate profit share
-  p_index  = "Py",           # GDP implicit price deflator (common deflator)
-  e_rate   = "exploit_rate",  # Exploitation rate: NOScorp/ECcorp
+  y_nom    = "GVAcorp",      # Gross Value Added = VAcorp + DEPCcorp
+  k_nom    = "KGCcorp",
+  u_shaikh = "uK",
+  pi_share = "Profshcorp",
+  p_index  = "Py",           # GDP price index (NIPA T1.1.4, base 2011=100)
+  e_rate   = "exploit_rate",
 
   
 
@@ -88,12 +87,5 @@ CONFIG <- list(
   ## ----------------------------------------------------------
   ## Logging behaviour
   ## ----------------------------------------------------------
-  HEARTBEAT_EVERY = 25L,
-
-  ## ----------------------------------------------------------
-  ## GDP & Capital Stock module (40-series)
-  ## ----------------------------------------------------------
-  gdp_kstock_config = "codes/40_gdp_kstock_config.R",
-  DATA_INTERIM      = "data/interim",
-  DATA_PROCESSED    = "data/processed"
+  HEARTBEAT_EVERY = 25L
 )

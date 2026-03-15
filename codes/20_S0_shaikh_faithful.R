@@ -59,6 +59,11 @@ DUMMY_YEARS <- c(1956L, 1974L, 1980L)
 # ------------------------------------------------------------
 # Helpers (local)
 # ------------------------------------------------------------
+make_step_dummies <- function(df, years) {
+  for (yy in years) df[[paste0("d", yy)]] <- as.integer(df$year >= yy)
+  df
+}
+
 rebase_to_year_to_100 <- function(p_vec, year_vec, base_year, strict = TRUE) {
   idx <- which(year_vec == base_year)
   if (length(idx) != 1) {
@@ -274,7 +279,7 @@ cat("Bounds:    exact=", EXACT_TEST, " (FALSE=asymptotic; TRUE=in-sample)\n\n", 
 # ------------------------------------------------------------
 # 3) Dummies + build real logs (base 2011 only)
 # ------------------------------------------------------------
-df0 <- make_dummies(df0, DUMMY_YEARS, CONFIG$SHOCK_TYPE)
+df0 <- make_step_dummies(df0, DUMMY_YEARS)
 dummy_names <- paste0("d", DUMMY_YEARS)
 
 df <- df0 |>

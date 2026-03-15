@@ -5,8 +5,8 @@
 #
 # Downloads:
 #   BEA FixedAssets: FAAt601-FAAt607 (Private FA by Legal Form)
-#   BEA NIPA: T10114 (Table 1.14, Corporate GVA)
-#             T70011 (Table 7.11, Interest Paid/Received)
+#   BEA NIPA: T11400 (Table 1.14, Corporate GVA)
+#             T71100 (Table 7.11, Interest Paid/Received)
 #   FRED: A191RD3A086NBEA (GDP Implicit Price Deflator)
 #
 # Writes to:
@@ -47,8 +47,8 @@ CORP_BEA_TABLES <- list(
 
 ## BEA NIPA tables
 NIPA_TABLES <- list(
-  nipa_t1014 = "T10114",   # Table 1.14: Corporate GVA
-  nipa_t7011 = "T70011"    # Table 7.11: Interest Paid/Received
+  nipa_t1014 = "T11400",   # Table 1.14: Corporate GVA
+  nipa_t7011 = "T71100"    # Table 7.11: Interest Paid/Received
 )
 
 ## FRED series
@@ -61,7 +61,7 @@ FRED_DEFLATOR <- "A191RD3A086NBEA"  # GDP implicit price deflator (annual)
 
 #' Fetch a BEA table via API (supports FixedAssets and NIPA datasets)
 #'
-#' @param table_name  BEA table name (e.g., "FAAt601" or "T10114")
+#' @param table_name  BEA table name (e.g., "FAAt601" or "T11400")
 #' @param api_key     BEA API key
 #' @param dataset     BEA dataset name ("FixedAssets" or "NIPA")
 #' @param year        Year parameter ("ALL" for FixedAssets, "X" for NIPA)

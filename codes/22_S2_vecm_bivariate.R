@@ -29,7 +29,7 @@ rm(list = ls())
 
 suppressPackageStartupMessages({
   library(here)
-  library(readr)
+  library(readxl)
   library(dplyr)
   library(tidyr)
   library(ggplot2)
@@ -78,7 +78,8 @@ IC_NAMES <- c("AIC", "BIC", "HQ", "ICOMP", "ICOMP_Misspec")
 # ------------------------------------------------------------
 # 0) Data preparation (mirrors S0/S1)
 # ------------------------------------------------------------
-df_raw <- readr::read_csv(here::here(CONFIG$data_shaikh), show_col_types = FALSE)
+df_raw <- readxl::read_excel(here::here(CONFIG$data_shaikh),
+                              sheet = CONFIG$data_shaikh_sheet)
 
 Py <- as.numeric(df_raw[[CONFIG$p_index]])
 p_scale <- Py / 100
@@ -92,8 +93,8 @@ df0 <- df0[complete.cases(df0) & df0$year > 0, ]
 df0$lnY <- log(df0$Y_nom / p_scale[match(df0$year, as.integer(df_raw[[CONFIG$year_col]]))])
 df0$lnK <- log(df0$K_nom / p_scale[match(df0$year, as.integer(df_raw[[CONFIG$year_col]]))])
 
-# Dummies (shock-type from CONFIG)
-df0 <- make_dummies(df0, DUMMY_YEARS, CONFIG$SHOCK_TYPE)
+# Step dummies
+for (yy in DUMMY_YEARS) df0[[paste0("d", yy)]] <- as.integer(df0$year >= yy)
 
 # Window
 w <- CONFIG$WINDOWS_LOCKED[[WINDOW_TAG]]
@@ -106,7 +107,7 @@ X2 <- as.matrix(df[, c("lnY", "lnK")])
 colnames(X2) <- c("lnY", "lnK")
 
 # Shaikh u for overlay
-u_shaikh <- as.numeric(df_raw[[CONFIG$u_shaikh]])[match(df$year, as.integer(df_raw[[CONFIG$year_col]]))]
+u_shaikh <- as.numeric(df_raw[["u_shaikh"]])[match(df$year, as.integer(df_raw[[CONFIG$year_col]]))]
 
 # ------------------------------------------------------------
 # 1) Output directories + log
