@@ -1,103 +1,0 @@
-=== S0 DEFLATOR GRID SEARCH ===
-Started: 2026-03-13 16:37:45 
-
---- PHASE 1: FRED direct fetch ---
-Fetching from FRED: https://fred.stlouisfed.org/graph/fredgraph.csv?id=A455RX1A020NBEA 
-FRED fetch failed: no se puede abrir la conexión 
-Y3/Y6/Y7 will be skipped.
-
---- PHASE 2: Build Y candidates ---
-indexing Shaikh_canonical_series_v1.csv [=========] 437.66MB/s, eta:  0s                                                                        
---- PHASE 2b: Load Py from RepData.xlsx ---
--/                                                                      /                                                                      -                                                                      Py loaded: 65 observations
-Py(1947) = 12.4746 (base 2011=100)
-
---- PHASE 2c: Expanded candidate grid ---
-  Y1 [VAcorp / pIG_2005]: 65 valid obs in window
-  Y2 [GVAcorp_nom / pIG_2005]: 65 valid obs in window
-  Y3 [BEA_real_GVA (T1.14 direct)]: 0 valid obs in window
-  Y4 [VAcorp / pKN_2005]: 65 valid obs in window
-  Y5 [GVAcorp_nom / pKN_2005]: 65 valid obs in window
-  Y6 [VAcorp / implicit_GVA_deflator]: 0 valid obs in window
-  Y7 [GVAcorp_nom / implicit_GVA_deflator]: 0 valid obs in window
-  Y_RepData [GVAcorp / Py (RepData)]: 65 valid obs in window
-  Y_GVA_Py_K_pKN [GVAcorp/Py + K/pKN]: 65 valid obs in window
-  Y5_Kb [GVAcorp_nom / pKN, K / pKN]: 65 valid obs in window
-  Y4_Kb [VAcorp / pKN, K / pKN]: 65 valid obs in window
-  Y1_Kc [VAcorp / pIG, K nominal]: 65 valid obs in window
-
---- PHASE 3: Grid run ---
-Running Y1: VAcorp / pIG_2005 ... theta=0.8356 | a=0.8715 | c_d74=NA | AIC=-231.84 | L=NA
-Running Y2: GVAcorp_nom / pIG_2005 ... theta=0.8381 | a=0.9366 | c_d74=NA | AIC=-242.51 | L=NA
-Running Y3: BEA_real_GVA (T1.14 direct) ... SKIPPED (insufficient data)
-Running Y4: VAcorp / pKN_2005 ... theta=0.8311 | a=0.1491 | c_d74=NA | AIC=-225.92 | L=NA
-Running Y5: GVAcorp_nom / pKN_2005 ... theta=0.8125 | a=0.5683 | c_d74=NA | AIC=-236.18 | L=NA
-Running Y6: VAcorp / implicit_GVA_deflator ... SKIPPED (insufficient data)
-Running Y7: GVAcorp_nom / implicit_GVA_deflator ... SKIPPED (insufficient data)
-Running Y_RepData: GVAcorp / Py (RepData) ... theta=0.7495 | a=2.1004 | c_d74=NA | AIC=-250.89 | L=NA
-Running Y_GVA_Py_K_pKN: GVAcorp/Py + K/pKN ... theta=0.8787 | a=0.4565 | c_d74=NA | AIC=-326.70 | L=NA
-Running Y5_Kb: GVAcorp_nom / pKN, K / pKN ... theta=0.7683 | a=1.4277 | c_d74=NA | AIC=-283.67 | L=NA
-Running Y4_Kb: VAcorp / pKN, K / pKN ... theta=0.7613 | a=1.4174 | c_d74=NA | AIC=-276.04 | L=NA
-Running Y1_Kc: VAcorp / pIG, K nominal ... theta=0.7223 | a=2.8024 | c_d74=NA | AIC=-234.76 | L=NA
-wrote 2.15GB in  0s, 2.15GB/s                                                                      
-Grid results written to: C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S0_faithful/csv/S0_grid_results.csv 
-
-=== RANKED RESULTS ===
-# A tibble: 12 × 8
-   candidate_id   label            theta      a c_d74   AIC  loss failed
-   <chr>          <chr>            <dbl>  <dbl> <dbl> <dbl> <dbl> <lgl> 
- 1 Y3             BEA_real_GVA (… NA     NA        NA   NA    Inf TRUE  
- 2 Y6             VAcorp / impli… NA     NA        NA   NA    Inf TRUE  
- 3 Y7             GVAcorp_nom / … NA     NA        NA   NA    Inf TRUE  
- 4 Y1             VAcorp / pIG_2…  0.836  0.872    NA -232.    NA FALSE 
- 5 Y2             GVAcorp_nom / …  0.838  0.937    NA -243.    NA FALSE 
- 6 Y4             VAcorp / pKN_2…  0.831  0.149    NA -226.    NA FALSE 
- 7 Y5             GVAcorp_nom / …  0.812  0.568    NA -236.    NA FALSE 
- 8 Y_RepData      GVAcorp / Py (…  0.750  2.10     NA -251.    NA FALSE 
- 9 Y_GVA_Py_K_pKN GVAcorp/Py + K…  0.879  0.456    NA -327.    NA FALSE 
-10 Y5_Kb          GVAcorp_nom / …  0.768  1.43     NA -284.    NA FALSE 
-11 Y4_Kb          VAcorp / pKN, …  0.761  1.42     NA -276.    NA FALSE 
-12 Y1_Kc          VAcorp / pIG, …  0.722  2.80     NA -235.    NA FALSE 
-
---- PHASE 4: Winner validation ---
-Winner: Y1 [VAcorp / pIG_2005]
-  theta = 0.8356 | target = 0.6609 | gap = 0.1747
-STATUS: PARTIAL — closest candidate but gap exceeds threshold
-
-=== WINNER VERIFICATION BLOCK ===
-theta_hat: 0.8356 | Target: 0.6609
-a_hat:     0.8715 | Target: 2.1782
-c_d56:     NA | Target: -0.7428
-c_d74:     NA | Target: -0.8548
-c_d80:     NA | Target: -0.4780
-AIC:       -231.8431 | Target: -319.3800
-loglik:    127.9215 | Target: 170.6900
-RMSE_u:    NaN
-
---- PHASE 5: Writing report ---
-Report written to: C:/ReposGitHub/capacity_utilization/output/CriticalReplication/S0_faithful/S0_agent_report.md 
-
-=== GRID SEARCH COMPLETE ===
-Finished: 2026-03-13 16:37:50 
-Status: PARTIAL 
-# A tibble: 66 × 44
-    year VAcorp NOScorp Pcorpnipa NMINT KGCcorp INVcorp KTCcorp  Rcorp
-   <int>  <dbl>   <dbl>     <dbl> <dbl>   <dbl>   <dbl>   <dbl>  <dbl>
- 1  1946    NA     NA        NA   NA        NA     20.7    173. NA    
- 2  1947   119.    24.9      22.5  2.4     171.    25.2    196.  0.685
- 3  1948   136     32.1      29.6  2.5     192.    28.8    220.  0.695
- 4  1949   132.    30.2      27.6  2.7     201.    28.5    229.  0.601
- 5  1950   151.    37.2      34.4  2.8     230.    35.7    266.  0.657
- 6  1951   173.    42.5      39.1  3.5     256.    42.2    298.  0.650
- 7  1952   181.    40.6      37    3.7     277.    44.2    321.  0.607
- 8  1953   194.    41.1      37.3  3.80    297.    46.1    343.  0.603
- 9  1954   190.    40.3      36.4  4       311.    46.0    357.  0.556
-10  1955   216.    51.3      46.6  4.70    348.    52.8    401.  0.604
-# ℹ 56 more rows
-# ℹ 35 more variables: Profshcorp <dbl>, rcorp <dbl>, VAcorpnipa <dbl>,
-#   KNCcorpbea <dbl>, Rcorpnipa <dbl>, Profshcorpnipa <dbl>,
-#   rcorpnipa <dbl>, u_shaikh <dbl>, uFRB <dbl>, Rcorpn <dbl>,
-#   Profshcorpn <dbl>, rcorpn <dbl>, IGCcorpbea <dbl>, DEPCcorp <dbl>,
-#   pIGcorpbea <dbl>, GOSRcorp <dbl>, ECcorp <dbl>, WEQ2 <dbl>,
-#   VAcorp_check <dbl>, Pcorp <dbl>, rcorp_sectoral <dbl>, …
-# ℹ Use `print(n = ...)` to see more rows
