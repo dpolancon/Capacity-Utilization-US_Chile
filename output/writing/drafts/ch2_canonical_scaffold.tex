@@ -1,0 +1,794 @@
+%% ============================================================
+%%  CHAPTER 2 — CANONICAL SCAFFOLD
+%%  Capacity Utilization in the Center and the Periphery:
+%%  Old Debates and New Estimates
+%%
+%%  Status   : SCAFFOLD — prose stubs marked [DRAFT PROSE]
+%%  Equations: LOCKED from RRR_Accumulation_Framework.md
+%%             and capital_accumulation_dynamics_v5.md
+%%  Spine    : RRR_Accumulation_Framework.md
+%%  Outline  : Ch2_Outline_v1_DRAFT.md (§2.1–§2.11)
+%%  Date     : 2026-03-29
+%% ============================================================
+
+\documentclass[12pt,letterpaper]{article}
+
+%% -- Packages ------------------------------------------------
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[margin=1in]{geometry}
+\usepackage[authoryear,round]{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+%% -- Custom commands (locked notation) ----------------------
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+
+%% Structural objects (Ch2 locked)
+\newcommand{\mut}{\mu_t}           % capacity utilization
+\newcommand{\Yp}{Y^p_t}            % productive capacity
+\newcommand{\thetaL}{\theta(\Lambda)}  % transformation elasticity
+\newcommand{\pit}{\pi_t}           % profit share
+\newcommand{\iotat}{\iota_t}       % gross accumulation rate
+\newcommand{\betat}{\beta_t}       % recapitalization rate
+\newcommand{\Bt}{B_t}              % capital productivity at normal capacity
+\newcommand{\phit}{\phi_t}         % investment share
+
+%% Prose stub marker (REMOVE IN FINAL)
+\newcommand{\draftnote}[1]{%
+  \textcolor{red}{\textbf{[DRAFT PROSE: #1]}}}
+
+%% -- Theorem environments -----------------------------------
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{definition}{Definition}[section]
+
+%% -- Document -----------------------------------------------
+\begin{document}
+
+\begin{titlepage}
+  \vspace*{2cm}
+  \begin{center}
+    {\Large \textbf{Chapter 2}}\\[0.5em]
+    {\large Capacity Utilization in the Center and the Periphery:\\
+    Old Debates and New Estimates}\\[2em]
+    {\normalsize Dissertation Chapter — Canonical Scaffold}\\[0.5em]
+    {\normalsize Version: 2026-03-29}
+  \end{center}
+  \vspace{1cm}
+  \begin{abstract}
+    \draftnote{Abstract: 150--200 words. State: (1)~the structural deficiency
+    of existing CU estimates and why it matters for crisis theory; (2)~the
+    RRR/CVAR identification strategy and what it recovers; (3)~the behavioral
+    recapitalization law and its nested closures; (4)~the Tavares peripheral
+    twist as the chapter's distinctive contribution; (5)~the three downstream
+    objects inherited by Ch3.}
+  \end{abstract}
+\end{titlepage}
+
+\doublespacing
+
+%% ===========================================================
+\section{Introduction}
+\label{sec:intro}
+%% ===========================================================
+%
+% Arc: crisis theory → CU as the missing structural link →
+%      two-stage empirical machine → center/periphery comparison
+%
+% Deliverables flagged: (1) mu_hat, (2) B_hat + theta_hat, (3) behavioral law
+
+\draftnote{§2.1 Introduction, approx.~3--4 pages.
+  Lead with: Ch1 showed existing CU estimates impose balanced growth
+  by construction ($\theta=1$), suppressing regime-dependent content.
+  Ch2 asks: \emph{what does CU do in the economy?}
+  Following Okishio (1961): CU path is a crisis trigger.
+  Then: (i)~identify CU as latent confinement object of the long-run
+  reproduction structure via RRR/CVAR; (ii)~estimate behavioral
+  recapitalization law conditional on recovered objects.
+  Run same machine on US and Chile. The BoP constraint enters the
+  recapitalization process differentially in the periphery: you have
+  the surplus but cannot buy the machines \citep{tavares1985}.
+  Three downstream objects: $\hat{\mu}_t$, $\hat{B}_t$/$\hat{\theta}_t$,
+  behavioral accumulation law with tested closures.
+  Roadmap paragraph at end.}
+
+The remainder of the chapter is organized as follows.
+Section~\ref{sec:crisis} establishes the crisis-theoretic motivation.
+Section~\ref{sec:primitives} develops the accounting scaffold.
+Section~\ref{sec:distribution} introduces the distributive micro-foundation.
+Section~\ref{sec:bridge} bridges the Ch1 focal data pair to Ch2's state vector.
+Section~\ref{sec:stageA} estimates the structural identification (Stage A).
+Section~\ref{sec:accounting} derives the accounting law of capital accumulation.
+Section~\ref{sec:stageB} estimates the behavioral recapitalization law (Stage B).
+Section~\ref{sec:tavares} formalizes the peripheral twist.
+Section~\ref{sec:comparison} synthesizes the center--periphery comparison.
+Section~\ref{sec:conclusions} concludes.
+
+
+%% ===========================================================
+\section{Crisis Theory: Stagnation Tendencies, Cumulative Disequilibrium,
+  and the Role of Capacity Utilization}
+\label{sec:crisis}
+%% ===========================================================
+
+\draftnote{§2.2 intro paragraph: Establish that CU is the mechanism through
+  which accumulation dynamics trigger crisis. Ch1 established
+  \emph{measurement} failure; this section establishes \emph{why it matters}.}
+
+
+%%------------------------------------------------------------
+\subsection{Stagnation and Crisis: A Typology}
+\label{sec:crisis_typology}
+%%------------------------------------------------------------
+
+\draftnote{§2.2.1: 1--2 pages. Present the Vidal (2014, 2019) / Basu (2019)
+  typology. Distinguish partial crisis (interruption resolvable by partial
+  institutional reconfiguration of $\Lambda$) from structural crisis (deep
+  interruption requiring drastic restructuring). Include Table~\ref{tab:typology}.}
+
+\begin{table}[h]
+  \centering
+  \caption{Stagnation Tendencies: A Typology}
+  \label{tab:typology}
+  \begin{tabular}{lcc}
+    \toprule
+     & Excess of Surplus Value & Deficit of Surplus Value \\
+    \midrule
+    Demand side     & Under-consumption / realization crisis
+                    & Profit squeeze (rising labor strength) \\
+    Financial side  & Financial fragility
+                    & Falling (normal) rate of profit \\
+    \bottomrule
+  \end{tabular}
+  \bigskip
+
+  \noindent{\small \textit{Notes}: Following \citet{vidal2014,vidal2019}.
+  Each cell denotes a qualitatively distinct stagnation tendency.
+  Partial crisis $\equiv$ interruption resolvable by partial reconfiguration
+  of the institutional space $\Lambda$.
+  Structural crisis $\equiv$ deep interruption requiring drastic restructuring.}
+\end{table}
+
+
+%%------------------------------------------------------------
+\subsection{Okishio's Crisis Trigger and Cumulative Disequilibrium}
+\label{sec:okishio}
+%%------------------------------------------------------------
+
+\draftnote{§2.2.2: 1.5 pages. Okishio (1961): decentralized decisions produce
+  secular cumulative disequilibrium in CU. The path of CU (not a static level)
+  is the crisis trigger. Connect to Weisskopf's decomposition
+  $r = \mu b \pi$: profitability is demand-led, so the CU path directly
+  mediates the link between accumulation dynamics and crisis episodes.
+  Note: $\mu$ here corresponds to our $\mut$ — utilization rate, not
+  the mathematical constant.}
+
+The \citeauthor{weisskopf1979} (\citeyear{weisskopf1979}) decomposition of
+the profit rate furnishes a compact expression for the demand-mediation channel:
+\begin{equation}
+  r_t = \mut \cdot \Bt \cdot \pit,
+  \label{eq:weisskopf}
+\end{equation}
+where $r_t \equiv \Pi_t/K_t$ is the profit rate, $\mut \equiv Y_t/\Yp$ is
+capacity utilization, $\Bt \equiv \Yp/K_t$ is capital productivity at normal
+capacity, and $\pit \equiv \Pi_t/Y_t$ is the profit share.
+\draftnote{Continue: the crisis trigger is the path of $\mut$, not a static
+  level. Foreshadow the identification problem: to read~\eqref{eq:weisskopf}
+  as an empirical relationship, one needs a structurally identified $\mut$.}
+
+
+%%------------------------------------------------------------
+\subsection{From Profitability to Accumulation: The Missing Link}
+\label{sec:missing_link}
+%%------------------------------------------------------------
+
+\draftnote{§2.2.3: 1 page. The literature has studied the tendency of the
+  profit rate to fall \citep{basu2012,basu2013} but the causal link from
+  profitability to crisis runs through accumulation demand
+  \citep{basu2017,ibarra2023,ibarra2024}. This chapter formalizes that link
+  through the behavioral recapitalization law. The mechanism differs
+  structurally between center and periphery (Tavares 1985 — foreshadow §2.9).
+  Transition sentence to §2.3.}
+
+
+%% ===========================================================
+\section{Structural Primitives: Production, Capacity,
+  and Unbalanced Growth}
+\label{sec:primitives}
+%% ===========================================================
+
+\draftnote{§2.3 intro paragraph: This section establishes the accounting scaffold.
+  All steps are pure accounting — no behavioral equation is imposed until §2.7.
+  Emphasize the distinction between the accounting identity and the behavioral
+  closure (a load-bearing architectural separation).}
+
+We adopt a Leontief production structure in which both capital and labor bind
+at full capacity utilization:
+\begin{equation}
+  Y_t = \min\!\left(B_t K_t,\; A_t L_t\right),
+  \label{eq:leontief}
+\end{equation}
+with both constraints binding at $\mut = 1$. Output decomposes into
+productive capacity and utilization:
+\begin{align}
+  Y_t &= \mut \cdot \Yp, \label{eq:decomp}\\
+  y_t &= y^p_t + \ln\mut, \label{eq:decomp_log}
+\end{align}
+where lowercase denotes natural logarithms of the corresponding uppercase
+level, $y_t \equiv \ln Y_t$, $k_t \equiv \ln K_t$.
+Capital productivity at normal capacity is
+\begin{equation}
+  \Bt \equiv \frac{\Yp}{K_t},
+  \qquad
+  \ln \Bt = y^p_t - k_t.
+  \label{eq:caprod}
+\end{equation}
+
+The long-run transformation of capital stock into productive capacity is
+governed by the \emph{unbalanced growth closure}:
+\begin{equation}
+  y^p_t = \thetaL \cdot k_t,
+  \label{eq:ugclosure}
+\end{equation}
+where $\thetaL$ is the capacity transformation elasticity — a regime
+parameter, pinned by the institutional space $\Lambda$ and not derivable
+from within-period optimization.
+Balanced growth ($\thetaL = 1$) is the knife-edge special case;
+the general case is $\thetaL \neq 1$.
+
+\begin{proposition}[Confinement Identity]
+\label{prop:confinement}
+Given the decomposition~\eqref{eq:decomp_log} and the unbalanced growth
+closure~\eqref{eq:ugclosure},
+\begin{equation}
+  \ln\mut = y_t - \thetaL\, k_t.
+  \label{eq:confinement}
+\end{equation}
+Capacity utilization is identified as the deviation of realized output from
+the productive-capacity manifold.
+\end{proposition}
+
+\draftnote{§2.3 remainder: explain the economic content of
+  Proposition~\ref{prop:confinement}. Emphasize: (i)~this is an accounting
+  identity, not a behavioral claim; (ii)~$\theta\neq 1$ implies persistent
+  structural disequilibrium in the capital--output ratio; (iii)~the
+  Harrodian benchmark corresponds to $\theta = 1$ (the knife-edge), which
+  existing CU measures impose by construction. Transition to §2.4:
+  to estimate~\eqref{eq:confinement}, we need an empirically tractable
+  specification of $\theta$.}
+
+
+%% ===========================================================
+\section{Distribution-Conditioned Capacity: The Interaction Term}
+\label{sec:distribution}
+%% ===========================================================
+
+\draftnote{§2.4 intro paragraph: Introduce the distributive micro-foundation.
+  The transformation elasticity is not fixed — it varies with the profit share
+  through the mechanization incentive (FMT).}
+
+Let the exploitation rate $e_t$ map into the profit share as
+\begin{equation}
+  \pit = \frac{e_t}{1 + e_t},
+  \label{eq:profitshare}
+\end{equation}
+and introduce the interaction term $z_t \equiv \pit \cdot k_t$ as the
+empirical proxy for $\theta(e|\Lambda)\cdot k_t$ in the cointegrating space.
+The long-run capacity relation then takes the estimable form:
+\begin{equation}
+  y_t = c + \beta_1 k_t + \beta_2(\pit k_t) + \xi_t,
+  \qquad
+  \xi_t \equiv \ln\mut,
+  \label{eq:cv}
+\end{equation}
+so that the endogenous long-run transformation elasticity is
+\begin{equation}
+  \theta_t = \beta_1 + \beta_2\, \pit.
+  \label{eq:theta_linear}
+\end{equation}
+
+\begin{proposition}[Rank-1 Identification]
+\label{prop:rank1}
+If $\xi_t = y_t - c - \beta_1 k_t - \beta_2(\pit k_t)$ is stationary, then
+\begin{equation}
+  \widehat{\ln\mut} = y_t - \hat{c} - \hat{\beta}_1 k_t - \hat{\beta}_2(\pit k_t)
+  \label{eq:cv_estimated}
+\end{equation}
+is the recovered latent utilization object. This is the dissertation's
+primary identification problem.
+\end{proposition}
+
+\draftnote{§2.4 remainder: three points. (1)~$\theta$ is upstream: $\beta_1$
+  and $\beta_2$ are structural parameters of the cointegrating relation, not
+  behavioral choices. The linearization~\eqref{eq:theta_linear} is the
+  empirical proxy for the general $\theta(e|\Lambda)$; the quadratic
+  approximation $\theta_0 + \theta_1 e + \theta_2 e^2$ from
+  \texttt{theory\_estimation\_mapping.md} is the theoretical object it
+  approximates. (2)~The interaction term $z_t = \pit k_t$ rotates the
+  cointegrating space: it is a constructed object needed to represent
+  $\theta(e)\cdot k$ in the VECM, not a primitive state variable.
+  (3)~IICS as a falsifiable hypothesis: the sign and magnitude of $\beta_2$
+  determine whether higher exploitation raises or depresses the
+  capacity-transformation elasticity. Transition to §2.5.}
+
+
+%% ===========================================================
+\section{From Chapter~1 to Chapter~2: The Focal Data Pair
+  and the State Vector}
+\label{sec:bridge}
+%% ===========================================================
+
+\draftnote{§2.5 intro: 1 paragraph bridging Ch1 to Ch2.
+  Ch1 established VAcorp/KGCcorp as the empirically validated CU proxy pair
+  for the US; ran ARDL bounds tests and Shaikh-style replication (S0--S2).
+  This section maps the Ch1 focal pair into Ch2's cointegrating state vector
+  and extends the logic to Chile.}
+
+
+%%------------------------------------------------------------
+\subsection{US: From Ch1's ARDL to Ch2's Cointegrating Relation}
+\label{sec:bridge_us}
+%%------------------------------------------------------------
+
+\draftnote{§2.5.1: 1.5 pages. Ch1's bivariate ARDL on $(y_t, k_t)$ with
+  VAcorp/KGCcorp recovered $\hat{\theta}^{S1}$ and diagnosed rank-1
+  confinement (S2). Ch2 augments with $z_t = \pit k_t$, allowing $\theta_t$
+  to vary with distribution. State vector:
+  $\mathbf{X}_t^{US} = (y_t,\, k_t,\, \pit k_t)'$.
+  Data: BEA/FRED $(y,k)$ from Ch1; NIPA Table~1.12 $(e \to \pi)$.
+  Sample: 1947--2019. Positioning: contrast with CBO, Adams--Coe,
+  multivariate filter methods that impose $\theta=1$.}
+
+The state vector for the US system is
+\begin{equation}
+  \mathbf{X}_t^{US} = \begin{pmatrix} y_t \\ k_t \\ \pit k_t \end{pmatrix},
+  \label{eq:statevec_us}
+\end{equation}
+estimated on annual data from 1947 to 2019, with output and capital stock
+inherited from the Chapter~1 BEA/FRED pipeline, and the profit share
+constructed from NIPA Table~1.12.
+
+
+%%------------------------------------------------------------
+\subsection{Chile: Constructing the Parallel}
+\label{sec:bridge_chile}
+%%------------------------------------------------------------
+
+\draftnote{§2.5.2: 2 pages. Parallel data construction: $y_t$ from Central Bank /
+  PWT real GDP; $k_t$ from PWT \texttt{rnna} or Hofman (2000)/Lüders et al.\ (2016)/
+  Pérez-Eyzaguirre (2019) spliced series; $e_t \to \pi_t$ from national accounts
+  spliced with Alarco Tosoni (2014) and Astorga (2023) wage share series.
+  Sample: 1960--2019. Positioning against Chilean CU literature: BCCh structural
+  balance framework, Magud--Medina, Fuentes--Gredig--Larraín; emphasize that
+  Ch2's identification permits $\theta\neq 1$ and recovers the distribution-conditioned
+  slope — an \emph{alternative} to the governance variable embedded in the
+  structural fiscal rule.}
+
+The state vector for the Chilean system mirrors~\eqref{eq:statevec_us}:
+\begin{equation}
+  \mathbf{X}_t^{CL} = \begin{pmatrix} y^{CL}_t \\ k^{CL}_t \\ \pi^{CL}_t k^{CL}_t \end{pmatrix}.
+  \label{eq:statevec_cl}
+\end{equation}
+
+
+%%------------------------------------------------------------
+\subsection{The Parallel Construction as Method}
+\label{sec:bridge_method}
+%%------------------------------------------------------------
+
+\draftnote{§2.5.3: 0.5 page. Emphasize: same $\mathbf{X}_t$, same Johansen procedure,
+  same rank-1 identification for both countries. The structural comparison in §2.10
+  is meaningful \emph{because} the measurement apparatus is identical.
+  The key asymmetries (US budget-baseline embedding vs.\ Chilean structural-balance
+  embedding) are \emph{findings} of the comparison, not artefacts of measurement.
+  Transition to §2.6.}
+
+
+%% ===========================================================
+\section{Stage A: Structural Identification (RRR/CVAR)}
+\label{sec:stageA}
+%% ===========================================================
+
+\draftnote{§2.6 intro: 1 paragraph. State the estimating logic:
+  reduced-rank regression on $\mathbf{X}_t = (y_t, k_t, z_t)'$ where $z_t = \pit k_t$.
+  Methodology: Johansen (1988) trace and max-eigenvalue tests;
+  restricted constant specification; Gregory-Hansen endogenous break detection.}
+
+
+%%------------------------------------------------------------
+\subsection{Estimation}
+\label{sec:stageA_est}
+%%------------------------------------------------------------
+
+\draftnote{§2.6.1: 1 page. Standard Johansen setup.
+  Trace test $H_0: r \leq j$ vs.\ $H_1: r > j$ for $j = 0, 1, 2$.
+  Expected rank: $r = 1$ (rank-1 confinement hypothesis).
+  Finite-sample critical values (Johansen--Juselius 1990).
+  Restricted constant specification: drift absorbed into the
+  cointegrating space, not the common trends.
+  Break detection: Gregory--Hansen (1996) for structural break
+  at unknown date — relevant given the 1973/1982 Chilean regime shifts.}
+
+
+%%------------------------------------------------------------
+\subsection{Results: US Baseline}
+\label{sec:stageA_us}
+%%------------------------------------------------------------
+
+\draftnote{§2.6.2: 2--3 pages (to be filled after estimation).
+  Report: $\hat{\beta}_1$, $\hat{\beta}_2$ $\Rightarrow$ $\hat{\theta}_t^{US}$.
+  Recovered $\widehat{\ln\mut^{US}}$. Regime classification: does $\hat{\theta}^{US}$
+  cross unity? When? Loading coefficients and speed of adjustment.
+  Diagnostics: CUSUM, recursive eigenvalues.}
+
+
+%%------------------------------------------------------------
+\subsection{Results: Chile}
+\label{sec:stageA_chile}
+%%------------------------------------------------------------
+
+\draftnote{§2.6.3: 2--3 pages (to be filled after estimation).
+  Same structure as §2.6.2. First structural comparison:
+  $\hat{\theta}^{US}$ vs.\ $\hat{\theta}^{CL}$ — the mechanization gap in
+  $\theta$-units. Discuss regime breaks: pre-/post-1973, pre-/post-1982.}
+
+
+%%------------------------------------------------------------
+\subsection{Derived Structural Objects}
+\label{sec:stageA_derived}
+%%------------------------------------------------------------
+
+Once the cointegrating parameters are recovered, the following structural
+objects are constructed by definition:
+
+\begin{definition}[Recovered Productive Capacity]
+\label{def:yp}
+\begin{equation}
+  \hat{y}^p_t = y_t - \widehat{\ln\mut}.
+  \label{eq:yp_hat}
+\end{equation}
+\end{definition}
+
+\begin{definition}[Recovered Capital Productivity at Normal Capacity]
+\label{def:B}
+\begin{equation}
+  \widehat{\ln\Bt} = \hat{y}^p_t - k_t,
+  \qquad
+  \hat{B}_t = \exp\!\left(\hat{y}^p_t - k_t\right).
+  \label{eq:B_hat}
+\end{equation}
+\end{definition}
+
+These are the Stage B inputs: $\widehat{\mut}$ and $\hat{B}_t$ are
+passed into the behavioral accumulation law.
+
+\draftnote{§2.6.4 narrative: emphasize the two-stage architecture.
+  Stage A recovers $\hat{\mu}$ and $\hat{B}$ cleanly only after the
+  identification problem is solved. An ARDL investment equation cannot
+  perform this identification — it can only describe how accumulation responds
+  to utilization once utilization has been structurally recovered.}
+
+
+%% ===========================================================
+\section{The Accounting Law of Capital Accumulation}
+\label{sec:accounting}
+%% ===========================================================
+
+\draftnote{§2.7 intro: 1 paragraph. This section bridges Stage A (identification)
+  to Stage B (behavioral estimation). The accounting law is derived from
+  pure identity manipulation — no behavioral content is imposed. The behavioral
+  margin is whether the recapitalization rate $\betat$ is constant.}
+
+Define the gross accumulation rate as
+\begin{equation}
+  \iotat \equiv \frac{I_t}{K_t}.
+  \label{eq:iota}
+\end{equation}
+The accounting decomposition of accumulation is:
+\begin{align}
+  \iotat &= \phit \cdot \mut \cdot \Bt,
+  \qquad \phit \equiv \frac{I_t}{Y_t},
+  \label{eq:iota_decomp}
+\end{align}
+and since $\phit \cdot \mut = (I_t/Y_t)(Y_t/\Yp) = I_t/\Yp \equiv \phi^p_t$,
+we have the equivalent form
+\begin{equation}
+  \iotat = \phi^p_t \cdot \Bt,
+  \qquad
+  \phi^p_t \equiv \frac{I_t}{\Yp},
+  \label{eq:iota_phip}
+\end{equation}
+where utilization drops out at this level of abstraction.
+Introducing the recapitalization rate $\betat \equiv I_t/\Pi_t$,
+and using $\pit \equiv \Pi_t/Y_t$ and $r_t \equiv \Pi_t/K_t = \pit\mut\Bt$:
+\begin{equation}
+  \boxed{\iotat = \betat \cdot \pit \cdot \mut \cdot \Bt = \betat \cdot r_t.}
+  \label{eq:iota_full}
+\end{equation}
+
+Equation~\eqref{eq:iota_full} is an identity. There are two recapitalization lenses:
+\begin{itemize}
+  \item $\betat = I_t/\Pi_t$: funding of investment out of profits;
+  \item $\phi^p_t = I_t/\Yp$: claim of investment on productive-capacity output.
+\end{itemize}
+They are linked accounting representations of the same accumulation law.
+
+\draftnote{§2.7 remainder: emphasize the dual-lens interpretation.
+  The behavioral content enters through the question of whether $\betat$ is
+  constant. If it is, the accounting decomposition holds mechanically and
+  accumulation is fully determined by the structural objects. If not,
+  the deviation $\eta_j = b_j - 1$ carries the behavioral information.
+  Note the Weisskopf decomposition~\eqref{eq:weisskopf} as a special case.
+  Transition: §2.8 makes $\betat$ the object of behavioral estimation.}
+
+
+%% ===========================================================
+\section{Stage B: Behavioral Accumulation Law (ARDL)}
+\label{sec:stageB}
+%% ===========================================================
+
+\draftnote{§2.8 intro: 1 paragraph. Stage B treats the recovered structural
+  objects $(\hat{\mu}_t, \hat{B}_t)$ as given and estimates how capitalists
+  behaviorally determine the recapitalization rate. This is a conditional
+  behavioral module nested inside the structural-identification architecture.}
+
+
+%%------------------------------------------------------------
+\subsection{Specification}
+\label{sec:stageB_spec}
+%%------------------------------------------------------------
+
+If recapitalization responds behaviorally to distribution, demand, and
+structural conditions, then
+\begin{equation}
+  \ln\betat = \eta_0 + \eta_1\ln\pit + \eta_2\ln\mut + \eta_3\ln\Bt,
+  \label{eq:beta_behavioral}
+\end{equation}
+which, substituted into the log of~\eqref{eq:iota_full}, yields the
+long-run behavioral accumulation law:
+\begin{equation}
+  \boxed{
+  \ln\iotat = c + b_1\ln\pit + b_2\ln\mut + b_3\ln\Bt + \varepsilon_t
+  }
+  \label{eq:accumulation_law}
+\end{equation}
+with $b_j = 1 + \eta_j$.
+
+\begin{proposition}[Dual Interpretation of Coefficients]
+\label{prop:dual}
+Each coefficient in~\eqref{eq:accumulation_law} has both an accounting
+and a behavioral reading:
+\end{proposition}
+
+\begin{table}[h]
+  \centering
+  \caption{Dual Interpretation of Accumulation Law Coefficients}
+  \label{tab:dual}
+  \begin{tabular}{lll}
+    \toprule
+    Coefficient & Accounting reading & Behavioral reading \\
+    \midrule
+    $b_1$ & Profit-share elasticity of accumulation
+           & $\eta_1 = b_1 - 1$: recapitalization response to distribution \\
+    $b_2$ & Utilization elasticity of accumulation
+           & $\eta_2 = b_2 - 1$: recapitalization response to demand \\
+    $b_3$ & Capital-productivity elasticity of accumulation
+           & $\eta_3 = b_3 - 1$: recapitalization response to structural conditions \\
+    \bottomrule
+  \end{tabular}
+  \bigskip
+
+  \noindent{\small \textit{Notes}: Each $b_j = 1 + \eta_j$.
+  The deviation from unity is the behavioral content.
+  Estimation uses ARDL with Pesaran--Shin--Smith (2001) bounds test.}
+\end{table}
+
+
+%%------------------------------------------------------------
+\subsection{Nested Restriction Menu}
+\label{sec:restrictions}
+%%------------------------------------------------------------
+
+The behavioral coefficients generate a hierarchy of accumulation closures:
+
+\begin{table}[h]
+  \centering
+  \caption{Nested Restriction Menu}
+  \label{tab:restrictions}
+  \begin{tabular}{lll}
+    \toprule
+    Restriction & Null & Model name \\
+    \midrule
+    Cambridge closure       & $b_1 = b_2 = b_3 = 1$ & $\betat$ constant \\
+    Bhaduri--Marglin type   & $b_3 = 1$; $b_1, b_2$ free & Blind to capital productivity \\
+    Full structural model   & All $b_j$ free & All channels active \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+%%------------------------------------------------------------
+\subsection{Results: US}
+\label{sec:stageB_us}
+%%------------------------------------------------------------
+
+\draftnote{§2.8.3: 2--3 pages (to be filled after estimation).
+  ARDL estimation with PSS bounds test. Report $\hat{b}_1, \hat{b}_2, \hat{b}_3$
+  and associated Wald tests. Which closure is supported?
+  Interpret $\eta_j = b_j - 1$ economically.}
+
+
+%%------------------------------------------------------------
+\subsection{Results: Chile}
+\label{sec:stageB_chile}
+%%------------------------------------------------------------
+
+\draftnote{§2.8.4: 2--3 pages (to be filled after estimation).
+  Same procedure. Key question: does $b_3$ behave differently from the US?
+  Does the capital-productivity channel operate freely or is it structurally
+  constrained? Transition: §2.9 provides the mechanism.}
+
+
+%% ===========================================================
+\section{The Peripheral Twist: BoP Constraint and the Import
+  Content of Recapitalization}
+\label{sec:tavares}
+%% ===========================================================
+
+\draftnote{§2.9 intro: 1 paragraph. This is the chapter's distinctive
+  theoretical contribution. The Tavares (1985, 2000) channel formalized:
+  the binding constraint on peripheral accumulation is not on output
+  directly but on the ability to convert surplus into re-investment.}
+
+
+%%------------------------------------------------------------
+\subsection{The Tavares Channel}
+\label{sec:tavares_channel}
+%%------------------------------------------------------------
+
+\draftnote{§2.9.1: 2 pages. Mechanism:
+  (1)~peripheral accumulation requires imported machinery — capital goods sector
+  structurally incomplete (Tavares's ``hard phase'' of ISI,
+  Fajnzylber's ``truncated industrialization'');
+  (2)~the recapitalization rate $\betat$ is structurally conditioned by
+  forex availability: profits exist but recapitalization collapses when
+  imported capital goods are unaffordable;
+  (3)~sudden stops in $\betat$ — debt-cycle reversals, terms-of-trade
+  collapses, Volcker shock — express financial dependency as a constraint
+  on the technical composition of accumulated capital.
+  Reference: \citet{tavares1985}, \citet{vernengo2006}.}
+
+
+%%------------------------------------------------------------
+\subsection{Formalization}
+\label{sec:tavares_formal}
+%%------------------------------------------------------------
+
+\draftnote{§2.9.2: 1.5 pages. The recapitalization response
+  $\eta_3 = b_3 - 1$ is not a free behavioral parameter in the periphery —
+  it is structurally constrained by the import content of investment and
+  the availability of foreign exchange.
+  Candidate specifications: (i)~augment Chilean ARDL with forex availability
+  proxy (terms of trade, real exchange rate, current account balance);
+  (ii)~test whether $b_3^{CL}$ is stable across BoP regimes or breaks at
+  sudden stops; (iii)~compare $b_3^{US}$ (unconstrained) vs.\ $b_3^{CL}$
+  (BoP-mediated).}
+
+Let $\tilde{\phi}^{ME}_t$ denote the import content of investment —
+the share of machinery and equipment in gross capital formation that is
+sourced from abroad. The peripheral behavioral law gains a
+forex-mediation channel:
+\begin{equation}
+  \eta^{CL}_3 = \eta^{CL}_3\!\left(\tilde{\phi}^{ME}_t, \text{BoP}_t\right),
+  \label{eq:tavares_constraint}
+\end{equation}
+where $\text{BoP}_t$ is a measure of external constraint intensity
+(terms of trade, real exchange rate, or current account balance).
+
+
+%%------------------------------------------------------------
+\subsection{The Technical Composition Channel}
+\label{sec:tech_composition}
+%%------------------------------------------------------------
+
+\draftnote{§2.9.3: 1 page. When $\theta < 1$ (over-mechanization), the economy
+  needs \emph{more} imported capital goods per unit of capacity created, but its
+  capacity to earn forex is \emph{lower} because the accumulated capital is less
+  productive. The peripheral trap: over-mechanization raises the import bill for
+  investment while degrading the export capacity that finances it.
+  Link to Prebisch--Singer: the secular deterioration of the terms of trade
+  is not just a price phenomenon — it is a structural constraint on the
+  technical composition of peripheral capital accumulation.
+  Approved punchline: \emph{``demand conditions intervene on the political economy
+  of the ceiling, i.e.\ the class struggle over distribution, utilization, and
+  the institutional forms that govern whether accumulation can proceed.''}}
+
+
+%% ===========================================================
+\section{Structural Comparison: Center vs.\ Periphery}
+\label{sec:comparison}
+%% ===========================================================
+
+\draftnote{§2.10 intro: 1 paragraph. Synthesize the results across both countries.
+  The parallel construction (§2.5.3) ensures the comparison is structural,
+  not an artefact of measurement.}
+
+\begin{table}[h]
+  \centering
+  \caption{Center--Periphery Structural Comparison}
+  \label{tab:comparison}
+  \begin{tabular}{llll}
+    \toprule
+    Diagnostic & US & Chile & Reading \\
+    \midrule
+    $\hat{\theta}$               & --- & --- & Mechanization gap \\
+    Regime breaks                & --- & --- & When does $\theta$ shift? \\
+    $b_1$ (distribution)         & --- & --- & Profit-share response \\
+    $b_2$ (demand)               & --- & --- & Utilization response \\
+    $b_3$ (structural)           & --- & --- & Capital-productivity response \\
+    $b_3$ stability              & --- & --- & Does $b_3^{CL}$ break at BoP crises? \\
+    $\widehat{\mu}_t$ volatility & --- & --- & Utilization instability \\
+    $\hat{B}_t$ trend            & --- & --- & Capital productivity trajectory \\
+    \bottomrule
+  \end{tabular}
+  \bigskip
+
+  \noindent{\small \textit{Notes}: Cells filled after Stage A and Stage B
+  estimation. $b_3$ is the key comparison: in the US, the recapitalization
+  function responds to the capital-productivity channel relatively freely;
+  in Chile, $b_3^{CL}$ is mediated by the BoP constraint (§2.9).}
+\end{table}
+
+\draftnote{§2.10 narrative: explain each row of Table~\ref{tab:comparison}.
+  Punchline: financial dependency shows up empirically as a structurally
+  constrained recapitalization response. The Tavares channel provides the
+  mechanism; Table~\ref{tab:comparison} provides the evidence.}
+
+
+%% ===========================================================
+\section{Conclusions}
+\label{sec:conclusions}
+%% ===========================================================
+
+\draftnote{§2.11: approx.\ 3 pages. Three deliverables:
+  (1)~CU series: structurally identified $\hat{\mu}_t$ for both countries,
+  available as inputs to Ch3.
+  (2)~Regime classification: $\hat{\theta}^{US}$ vs.\ $\hat{\theta}^{CL}$
+  — the empirical realization of the core-periphery mechanization gap.
+  (3)~Financial dependency formalized: the Tavares channel — inability to
+  convert surplus into re-investment due to lack of foreign currency —
+  is not a narrative but an estimable structural constraint on the
+  recapitalization function.
+  Forward references: Ch3 inherits $\hat{\mu}_t$, $\hat{B}_t$, $\hat{\theta}_t$
+  as given inputs for profitability analysis and investment function
+  hypothesis testing. The Weisskopf decomposition and Okishio crisis
+  trigger become Ch3 applications of the Stage A recovered objects.}
+
+
+%% ===========================================================
+%%  BIBLIOGRAPHY
+%% ===========================================================
+\bibliographystyle{plainnat}
+\bibliography{ch2_refs}
+
+%% Placeholder references (to be migrated to .bib file)
+%
+% \bibitem Okishio (1961): "Technical Change and the Rate of Profit"
+% \bibitem Weisskopf (1979): "Marxian crisis theory and the rate of profit"
+% \bibitem Tavares (1985): "Auge e declínio do processo de substituição"
+% \bibitem Vernengo (2006): "Technology, finance, and dependency"
+% \bibitem Basu & Das (2017): "Foreign capital, fiscal policy, and crisis"
+% \bibitem Vidal (2014, 2019): "Stagnation tendencies"
+% \bibitem Basu (2019): "Financialization, stagnation"
+% \bibitem Hansen-Seo (2002): threshold VECM
+% \bibitem Kaldor (1959): "Problemas Económicos de Chile"
+% \bibitem Palma & Marcel (1989): surplus and development
+
+\end{document}
