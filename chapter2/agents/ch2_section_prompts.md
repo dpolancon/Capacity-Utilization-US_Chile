@@ -489,7 +489,7 @@ Identifies α₁, α₂, q*_t. Tests θ₂ = 1/2 against 4-variable system.
 Route 2 (Chile primary): restricted VECM on (y,k,π,πk) with θ₁,θ₂,ϱ,δ constrained
 equal across CV1-CV3. No employment needed. Rank tested, not imposed.
 
-TARGET: ~900 words. Include all four cointegrating vectors as displayed equations. This is
+TARGET: ~900-1200 words. Include all four cointegrating vectors as displayed equations. This is
 the chapter's core methodological contribution — write with precision and confidence.
 ```
 

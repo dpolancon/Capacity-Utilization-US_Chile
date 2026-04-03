@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/ReposGitHub/US-BEA-Income-FixedAssets-Dataset/codes/**)",
+      "Read(//c/ReposGitHub/K-Stock-Harmonization/codes/**)",
+      "Read(//c/ReposGitHub/K-Stock-Harmonization/docs/**)",
+      "Read(//c/ReposGitHub/K-Stock-Harmonization/**)"
+    ]
+  }
+}
