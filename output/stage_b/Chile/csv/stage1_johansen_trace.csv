@@ -1,0 +1,9 @@
+regime,H0,trace_stat,cv_10,cv_05,cv_01,decision_5pct
+pre_1973,r<=0,54.4387,49.65,53.12,60.16,reject_5pct
+pre_1973,r<=1,27.9119,32,34.91,41.07,fail_to_reject
+pre_1973,r<=2,11.0756,17.85,19.96,24.6,fail_to_reject
+pre_1973,r<=3,4.0559,7.52,9.24,12.97,fail_to_reject
+post_1973,r<=0,70.749,49.65,53.12,60.16,reject_1pct
+post_1973,r<=1,32.7546,32,34.91,41.07,fail_to_reject
+post_1973,r<=2,13.049,17.85,19.96,24.6,fail_to_reject
+post_1973,r<=3,4.1689,7.52,9.24,12.97,fail_to_reject

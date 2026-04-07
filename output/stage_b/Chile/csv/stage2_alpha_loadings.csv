@@ -1,0 +1,8 @@
+regime,variable,alpha
+pre_1973,y,-0.023977
+pre_1973,k_NR,-0.00318
+pre_1973,lphi,0.003514
+pre_1973,omega_lphi,0.005921
+post_1973,y,-0.249661
+post_1973,k_NR,-0.021845
+post_1973,lphi,-0.018906

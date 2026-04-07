@@ -1,0 +1,9 @@
+regime,variable,LR_stat,p_value,decision
+pre_1973,m,6.4931,0.0108,not_WE
+pre_1973,k_ME,1.6814,0.1947,weakly_exogenous
+pre_1973,nrs,2.591,0.1075,weakly_exogenous
+pre_1973,omega,5.5978,0.018,not_WE
+post_1973,m,8.969,0.0027,not_WE
+post_1973,k_ME,2.8474,0.0915,weakly_exogenous
+post_1973,nrs,0.1567,0.6922,weakly_exogenous
+post_1973,omega,1.8143,0.178,weakly_exogenous

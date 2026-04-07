@@ -1,0 +1,7 @@
+regime,test,p_value
+pre_1973,Portmanteau,0.5054
+pre_1973,ARCH-LM,0.8996
+pre_1973,Jarque-Bera,0.7186
+post_1973,Portmanteau,0.6302
+post_1973,ARCH-LM,0.8435
+post_1973,Jarque-Bera,0

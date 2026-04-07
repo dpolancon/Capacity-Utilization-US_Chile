@@ -1,0 +1,9 @@
+regime,parameter,coefficient,sd_regressor,standardized_impact
+pre_1973,zeta_0 (const),-5.804008,NA,NA
+pre_1973,zeta_1 (k_ME),0.930278,0.38866,0.361562
+pre_1973,zeta_2 (nrs),0.444505,0.597778,0.265715
+pre_1973,zeta_3 (omega),-3.918774,0.068673,-0.269116
+post_1973,zeta_0 (const),9.332394,NA,NA
+post_1973,zeta_1 (k_ME),0.3091,1.329517,0.410954
+post_1973,zeta_2 (nrs),0.238616,0.649912,0.155079
+post_1973,zeta_3 (omega),-7.128355,0.069633,-0.496371

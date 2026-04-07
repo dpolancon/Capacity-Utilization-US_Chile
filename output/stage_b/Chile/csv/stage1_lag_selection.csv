@@ -1,0 +1,9 @@
+regime,criteria,selected_K,K_used
+pre_1973,AIC,2,2
+pre_1973,HQ,2,2
+pre_1973,SC,2,2
+pre_1973,FPE,2,2
+post_1973,AIC,2,2
+post_1973,HQ,2,2
+post_1973,SC,1,2
+post_1973,FPE,2,2

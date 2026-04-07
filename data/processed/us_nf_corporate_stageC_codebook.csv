@@ -1,0 +1,54 @@
+variable,description
+year,Year
+r,Nominal profit rate = GOS / KNC
+r_net,Net profit rate = NOS / KNC
+mu,"Capacity utilization (pinned mu(1948)=0.80, g(Y*)=theta*g(K))"
+mu_ect,"Capacity utilization (ECT-based, centered on 1)"
+B,Nominal capital productivity at normal capacity = r/(mu*pi)
+B_real,Real capital productivity = B*(pK/Py)
+PyPK,Relative output-to-capital price = Py/pK
+pi,Profit share = GOS/GVA (includes TPI in denominator)
+omega,Wage share = EC/GVA
+e,Rate of exploitation = GOS/EC
+theta,Transformation elasticity theta(omega) = 8.924 - 12.851*omega
+chi,Recapitalization rate = IGC/GOS
+g_K,Real gross capital accumulation rate = d(ln KGR)
+g_Kn,Real net capital accumulation rate = d(ln KNR)
+g_Y,Real output growth rate = d(ln GVA_real)
+g_Yp,Potential output growth = theta * g_K
+tax_rate,Effective corporate tax rate = CorpTax/PBT
+ret_rate,Retention rate = Retained/PAT
+div_payout,Dividend payout ratio = Dividends/PAT
+cash_flow,After-tax cash flow rate = (GOS-CorpTax)/KNC
+int_share,Net interest share of GOS = NetInt/GOS
+cca_rate,Depreciation rate = CCA/KGC
+GVA,"Gross Value Added, nominal (millions $)"
+GOS,"Gross Operating Surplus, nominal (millions $)"
+EC,"Employment Compensation, nominal (millions $)"
+KNC,"Net capital stock, current prices (millions $)"
+KNR,"Net capital stock, 2024 prices (millions $)"
+KGC,"Gross capital stock, current prices (millions $)"
+KGR,"Gross capital stock, 2024 prices (millions $)"
+IGC,"Gross investment, current prices (millions $)"
+Py,GDP deflator index (2024=100)
+pK,Capital price deflator index (2024=100)
+GVA_real,GVA in 2024 constant prices (millions $)
+EC_real,EC in 2024 constant prices (millions $)
+GOS_real,GOS in 2024 constant prices (millions $)
+CCA_NF,"Consumption of fixed capital, nominal (millions $)"
+NVA_NF,"Net Value Added, nominal (millions $)"
+NOS_NF,"Net Operating Surplus, nominal (millions $)"
+TPI_NF,Taxes on production and imports (millions $)
+NetInt_NF,"Net interest paid, nominal (millions $)"
+CorpTax_NF,"Corporate income tax, nominal (millions $)"
+PBT_NF,"Profit before tax, nominal (millions $)"
+PAT_NF,"Profit after tax, nominal (millions $)"
+Dividends_NF,"Dividends paid, nominal (millions $)"
+Retained_NF,"Retained earnings, nominal (millions $)"
+dlnr,d(ln r) — annual log-change in profit rate
+phi_mu,mu contribution to d(ln r)
+phi_PyPK,Py/PK contribution to d(ln r)
+phi_Br,B_real contribution to d(ln r)
+phi_pi,pi contribution to d(ln r)
+regime,Accumulation regime (Pre-Fordist / Fordist / Post-Fordist)
+tendency_label,Stagnation tendency classification

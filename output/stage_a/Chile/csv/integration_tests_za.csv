@@ -1,0 +1,6 @@
+variable,za_stat,crit5pct,breakpoint,conclusion_za
+y,-4.2579,-5.08,33,CHECK
+k_NR,-4.1993,-5.08,33,CHECK
+k_ME,-3.5557,-5.08,32,CHECK
+pi,-6.66,-5.08,19,I(1) PASS
+pi_kME,-6.6731,-5.08,19,I(1) PASS

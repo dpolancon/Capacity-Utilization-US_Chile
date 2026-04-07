@@ -1,0 +1,9 @@
+regime,test,statistic,df,p_value,decision
+pre_1973,Portmanteau,114.1724,132,0.8664,pass
+pre_1973,ARCH-LM,460,500,0.8996,pass
+pre_1973,Jarque-Bera,52.9399,8,0,fail
+pre_1973,ADF_on_ECT,-4.447,NA,NA,stationary
+post_1973,Portmanteau,129.9804,132,0.5334,pass
+post_1973,ARCH-LM,450,500,0.9469,pass
+post_1973,Jarque-Bera,16.791,8,0.0324,fail
+post_1973,ADF_on_ECT,-3.1685,NA,NA,borderline

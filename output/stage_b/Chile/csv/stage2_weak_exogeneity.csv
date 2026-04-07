@@ -1,0 +1,8 @@
+regime,variable,LR,p,decision
+pre_1973,y,9.6875,0.0019,not WE
+pre_1973,k_NR,6.9952,0.0082,not WE
+pre_1973,lphi,3.3446,0.0674,WE
+pre_1973,omega_lphi,0.7931,0.3732,WE
+post_1973,y,4.633,0.0314,not WE
+post_1973,k_NR,1.2111,0.2711,WE
+post_1973,lphi,0.2361,0.627,WE

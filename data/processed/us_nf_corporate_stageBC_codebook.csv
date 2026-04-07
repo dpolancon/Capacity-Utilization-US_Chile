@@ -1,0 +1,21 @@
+variable,description
+year,Year
+GVA,"Gross Value Added, nominal (millions $)"
+EC,"Total Employment Compensation, nominal (millions $)"
+GOS,"Gross Operating Surplus, nominal (millions $)"
+omega,Wage share = EC / GVA
+pi,Profit share = GOS / GVA
+e,Rate of exploitation = GOS / EC
+KNC,"Net capital stock, current prices (millions $)"
+KNR,"Net capital stock, 2024 constant prices (millions $)"
+KGC,"Gross capital stock, current prices (millions $)"
+KGR,"Gross capital stock, 2024 constant prices (millions $)"
+IGC,"Gross investment, current prices (millions $)"
+Py,GDP deflator index (2024 = 100)
+pK,Capital price deflator index (2024 = 100)
+GVA_real,"Gross Value Added, 2024 prices (millions $)"
+EC_real,"Employment Compensation, 2024 prices (millions $)"
+GOS_real,"Gross Operating Surplus, 2024 prices (millions $)"
+theta,theta(omega) = 8.924 - 12.851*omega (transformation elasticity)
+mu,"Capacity utilization, pinned mu(1948) = 0.80, closure g(Y*) = theta*g(K)"
+mu_ect,"Capacity utilization, exp(ECT1 - mean(ECT1)), centered on 1"
