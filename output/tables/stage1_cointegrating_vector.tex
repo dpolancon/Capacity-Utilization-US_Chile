@@ -1,28 +1,27 @@
 \begin{table}[htbp]
 \centering
-\caption{Stage 1 Cointegrating Vector --- Import Propensity, Split-Sample}
+\caption{Stage~1 Cointegrating Vector --- Import Propensity, Split-Sample}
 \label{tab:stage1_cv1}
-\begin{tabular}{lcc}
+\begin{tabular}{lcccc}
 \toprule
-Parameter & Pre-1973 (ISI) & Post-1973 (Neoliberal) \\
+ & \multicolumn{2}{c}{Pre-1973 (ISI)} & \multicolumn{2}{c}{Post-1973 (Neoliberal)} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+Parameter & Estimate & 95\% CI & Estimate & 95\% CI \\
 \midrule
-$\zeta_0$ (constant) & $-5.8040$ & $9.3324$ \\
-$\zeta_1$ ($k^{ME}_t$) & $0.9303$ & $0.3091$ \\
-$\zeta_2$ ($nrs_t$) & $0.4445$ & $0.2386$ \\
-$\zeta_3$ ($\omega_t$) & $-3.9188$ & $-7.1284$ \\
+$\zeta_0$ & $-5.8040$ & $[-79.708,\; 86.442]$ & $9.3324$ & $[-124.396,\; 134.176]$ \\
+$\zeta_1\;(k^{ME})$ & $0.9303$ & $[-4.512,\; 5.561]$ & $0.3091$ & $[-2.055,\; 2.697]$ \\
+$\zeta_2\;(nrs)$ & $0.4445$ & $[-2.347,\; 3.612]$ & $0.2386$ & $[-7.176,\; 6.972]$ \\
+$\zeta_3\;(\omega)$ & $-3.9188$ & $[-29.070,\; 17.290]$ & $-7.1284$ & $[-66.480,\; 60.857]$ \\
 \midrule
-$\alpha_m$ & $-0.1779$ & $-0.1796$ \\
-Rank $r$ & 1 & 1 \\
-$N$ & 53 & 52 \\
-$K$ (VAR lag) & 2 & 2 \\
+$\alpha_m$ & $-0.1779$ & $[-0.486,\; 0.024]$ & $-0.1796$ & $[-0.616,\; 0.116]$ \\
+Rank $r$ & 1 & & 1 & \\
+$N$ & 53 & & 52 & \\
+$K$ (VAR lag) & 2 & & 2 & \\
 \bottomrule
 \end{tabular}
 \vspace{0.5em}
-\begin{minipage}{0.85\textwidth}
+\begin{minipage}{0.95\textwidth}
 \footnotesize
-\textit{Notes:} Independent Johansen VECM (Case~3, restricted constant)
-estimated on each sub-sample. Sample split at 1973 (Chilean coup).
-Pre-1973: 1920--1972. Post-1973: 1973--2024.
-Post-1973 includes $D_{1975}$ as unrestricted impulse dummy.
+\textit{Notes:} Independent Johansen VECM (Case~3, restricted constant, \texttt{spec=transitory}) on $Y_t = (m_t, k_t^{ME}, nrs_t, \omega_t)'$. Sample split at 1973 (Chilean coup). Pre-1973: 1920--1972 (N=53). Post-1973: 1973--2024 (N=52), with $D_{1975}$ as unrestricted impulse dummy. 95\% CIs from 999 recursive-bootstrap replications.
 \end{minipage}
 \end{table}

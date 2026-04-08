@@ -1,0 +1,7 @@
+variable,adf_tau,d_adf_rej,d_adf_d73_rej,za_d_rej,verdict
+y,0.21892778227545504,TRUE,TRUE,TRUE,I(1) — confirmed
+k_NR,0.22844353403107473,TRUE,TRUE,FALSE,I(1) — confirmed
+k_ME,0.16757528117902773,FALSE,FALSE,FALSE,I(2) — investigate
+omega_kME,-2.6632590099492464,TRUE,TRUE,FALSE,I(1) — confirmed
+omega,-1.6576564575305395,TRUE,TRUE,FALSE,I(1) — confirmed
+phi,-1.2977403524960762,FALSE,FALSE,FALSE,I(2) — investigate

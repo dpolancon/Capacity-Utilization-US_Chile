@@ -1,9 +1,9 @@
 regime,variable,LR_stat,p_value,decision
-pre_1973,m,6.4931,0.0108,not_WE
-pre_1973,k_ME,1.6814,0.1947,weakly_exogenous
-pre_1973,nrs,2.591,0.1075,weakly_exogenous
-pre_1973,omega,5.5978,0.018,not_WE
-post_1973,m,8.969,0.0027,not_WE
-post_1973,k_ME,2.8474,0.0915,weakly_exogenous
-post_1973,nrs,0.1567,0.6922,weakly_exogenous
-post_1973,omega,1.8143,0.178,weakly_exogenous
+pre_1973,m,6.493084748398927,0.010829490053537727,NOT weakly exogenous
+pre_1973,k_ME,1.6814106107569666,0.19473712094014994,weakly exogenous
+pre_1973,nrs,2.591008556414044,0.10747188196760771,weakly exogenous
+pre_1973,omega,5.597793960972256,0.01798310765453981,NOT weakly exogenous
+post_1973,m,8.969031899372096,0.0027459405594955077,NOT weakly exogenous
+post_1973,k_ME,2.8474028107878406,0.09152167827042978,weakly exogenous
+post_1973,nrs,0.15669268832495856,0.6922199138513523,weakly exogenous
+post_1973,omega,1.8142778893725275,0.17799590771750295,weakly exogenous
