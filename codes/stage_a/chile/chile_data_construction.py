@@ -353,7 +353,7 @@ print("\n--- Writing validation report ---")
 report_lines = []
 report_lines.append("# Chile TVECM Panel — Validation Report")
 report_lines.append(f"\nGenerated: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
-report_lines.append(f"Pipeline: `codes/stage_b/chile/chile_data_construction.py`")
+report_lines.append(f"Pipeline: `codes/stage_a/chile/chile_data_construction.py`")
 report_lines.append(f"Source panel: `output/panel/chile_panel_extended.csv`")
 report_lines.append(f"\n## Panel dimensions")
 report_lines.append(f"- Rows: {panel.shape[0]} (years {panel['year'].min()}-{panel['year'].max()})")

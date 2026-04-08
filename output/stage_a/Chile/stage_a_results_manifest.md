@@ -2,7 +2,7 @@
 
 **Generated:** 2026-04-08
 **Script:** `codes/stage_a/chile/30_results_package.py`
-**Data source:** `output/stage_b/Chile/csv/` (all estimation CSVs) + `data/processed/Chile/ECT_m_stage1.csv`
+**Data source:** `output/stage_a/Chile/csv/` (all estimation CSVs) + `data/processed/Chile/ECT_m_stage1.csv`
 
 ---
 

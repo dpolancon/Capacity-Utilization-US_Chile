@@ -383,7 +383,7 @@ The Tavares channel sign is reversed — machinery accumulation reduces imports.
 
 ## OUTPUTS
 
-1. `codes/stage_b/chile/02_stage1_vecm.R` — fully documented estimation script
+1. `codes/stage_a/chile/02_stage1_vecm.R` — fully documented estimation script
 2. `data/processed/chile/ECT_m_stage1.csv` — the ECT series (year + ECT_m)
 3. `output/diagnostics/stage1_vecm_crosswalk.md` — formatted crosswalk for this chat
 4. `output/tables/stage1_cointegrating_vector.tex` — LaTeX table of the CV1 coefficients

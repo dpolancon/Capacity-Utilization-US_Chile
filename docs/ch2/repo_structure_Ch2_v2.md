@@ -145,8 +145,8 @@ mkdir -p data/processed/chile
 echo "Creating output/ structure..."
 mkdir -p output/stage_a/us/{csv,figs,logs}
 mkdir -p output/stage_a/chile/{csv,figs,logs}
-mkdir -p output/stage_b/us output/stage_b/chile
-mkdir -p output/stage_c/us output/stage_c/chile output/stage_c/comparison
+mkdir -p output/stage_b/us output/stage_a/chile
+mkdir -p output/stage_c/US output/stage_c/chile output/stage_c/comparison
 
 echo "Moving agent files to chapter2/agents/..."
 # Run after copying outputs from this session:

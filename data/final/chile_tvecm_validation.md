@@ -1,7 +1,7 @@
 # Chile TVECM Panel — Validation Report
 
 Generated: 2026-04-06 21:04
-Pipeline: `codes/stage_b/chile/chile_data_construction.py`
+Pipeline: `codes/stage_a/chile/chile_data_construction.py`
 Source panel: `output/panel/chile_panel_extended.csv`
 
 ## Panel dimensions

@@ -538,7 +538,7 @@ for (sp in c("3ch", "4ch")) {
 }
 
 rpt <- c(rpt, "", "---", "",
-  sprintf("*Script: codes/stage_c/us/23_ardl_extended_netK_us.R*"),
+  sprintf("*Script: codes/stage_c/US/23_ardl_extended_netK_us.R*"),
   sprintf("*Generated: %s*", Sys.Date()))
 
 writeLines(rpt, file.path(REPO, "output/stage_c/US/stageC_US_netK_ardl_extended_report.md"))

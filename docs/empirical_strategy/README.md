@@ -17,7 +17,7 @@ constructing the capacity utilization series $\hat{\mu}_t^{CL}$.
 
 The notebooks are **not executable scripts**. They document the identification
 logic, architectural decisions, and expected results that underpin the code in
-`codes/stage_b/chile/`. Read them before running the estimation scripts. They
+`codes/stage_a/chile/`. Read them before running the estimation scripts. They
 are the paper trail for the committee.
 
 ---
@@ -63,7 +63,7 @@ finds the SSR-minimizing threshold. Bootstrap inference under the null (linear V
 is valid. This follows Hansen-Seo (2002) CLS logic with external classifier per
 Gonzalo-Pitarakis (2006) and Krishnakumar-Neto (2009).
 
-**Code:** `codes/stage_b/chile/03_stage2_cls_tvecm.R`  
+**Code:** `codes/stage_a/chile/03_stage2_cls_tvecm.R`  
 **Prompt:** `agents/claudecode_prompt_03_stage2_cls_v2.md`
 
 ### Decision 2: Reparameterized state vector to eliminate structural collinearity
@@ -114,13 +114,13 @@ Stage 2 CLS on (y, k_CL, c_t, ω c_t)
 
 | Notebook | Execution counterpart |
 |----------|-----------------------|
-| NB-01, NB-02 | `codes/stage_b/chile/03_stage2_cls_tvecm.R` (Steps 0–1) |
-| NB-03 | `codes/stage_b/chile/02b_stage1_deliver.R` (Stage 1, completed) |
-| NB-04 | `codes/stage_b/chile/03_stage2_cls_tvecm.R` (Steps 3–7) |
-| NB-05 | `codes/stage_b/chile/03_stage2_cls_tvecm.R` (Steps 2–3) |
-| NB-06 | `codes/stage_b/chile/03_stage2_cls_tvecm.R` (Steps 9–10) |
+| NB-01, NB-02 | `codes/stage_a/chile/03_stage2_cls_tvecm.R` (Steps 0–1) |
+| NB-03 | `codes/stage_a/chile/02b_stage1_deliver.R` (Stage 1, completed) |
+| NB-04 | `codes/stage_a/chile/03_stage2_cls_tvecm.R` (Steps 3–7) |
+| NB-05 | `codes/stage_a/chile/03_stage2_cls_tvecm.R` (Steps 2–3) |
+| NB-06 | `codes/stage_a/chile/03_stage2_cls_tvecm.R` (Steps 9–10) |
 
-Output CSVs land in `output/stage_b/Chile/csv/`. Key files:
+Output CSVs land in `output/stage_a/Chile/csv/`. Key files:
 
 | CSV | Content |
 |-----|---------|

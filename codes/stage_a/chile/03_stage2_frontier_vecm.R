@@ -25,7 +25,7 @@ library(strucchange)
 REPO <- "C:/ReposGitHub/Capacity-Utilization-US_Chile"
 setwd(REPO)
 
-OUT <- file.path(REPO, "output/stage_b/Chile")
+OUT <- file.path(REPO, "output/stage_a/Chile")
 CSV <- file.path(OUT, "csv")
 dir.create(CSV, recursive = TRUE, showWarnings = FALSE)
 dir.create(file.path(REPO, "output/diagnostics"), recursive = TRUE, showWarnings = FALSE)

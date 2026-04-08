@@ -139,7 +139,7 @@ theta_CL_t <- theta_0_hat + psi_hat * df$phi + theta_2_hat * df$omega * df$phi
 # Save
 write_csv(
   tibble(year=df$year, phi=df$phi, omega=df$omega, theta_CL=theta_CL_t),
-  "output/stage_b/Chile/csv/stage2_theta_CL_series.csv"
+  "output/stage_a/Chile/csv/stage2_theta_CL_series.csv"
 )
 ```
 

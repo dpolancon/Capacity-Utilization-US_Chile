@@ -16,9 +16,9 @@ from matplotlib.lines import Line2D
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 REPO = "/home/user/Capacity-Utilization-US_Chile"
-CSV1 = os.path.join(REPO, "output/stage_b/Chile/csv")
-FIG  = os.path.join(REPO, "output/stage_b/Chile/figs")
-TAB  = os.path.join(REPO, "output/stage_b/Chile/tables")
+CSV1 = os.path.join(REPO, "output/stage_a/Chile/csv")
+FIG  = os.path.join(REPO, "output/stage_a/Chile/figs")
+TAB  = os.path.join(REPO, "output/stage_a/Chile/tables")
 os.makedirs(FIG, exist_ok=True)
 os.makedirs(TAB, exist_ok=True)
 

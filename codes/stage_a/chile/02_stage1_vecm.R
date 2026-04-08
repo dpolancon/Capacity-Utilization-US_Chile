@@ -26,7 +26,7 @@ library(knitr)
 REPO <- "C:/ReposGitHub/Capacity-Utilization-US_Chile"
 setwd(REPO)
 
-OUT  <- file.path(REPO, "output/stage_b/Chile")
+OUT  <- file.path(REPO, "output/stage_a/Chile")
 CSV  <- file.path(OUT, "csv")
 dir.create(CSV, recursive = TRUE, showWarnings = FALSE)
 dir.create(file.path(REPO, "output/tables"), recursive = TRUE, showWarnings = FALSE)
@@ -917,7 +917,7 @@ for (regime_label in c("Pre-1973", "Post-1973")) {
 
 cat(sprintf("ECT_m: %d obs (%d–%d) → data/processed/Chile/ECT_m_stage1.csv\n",
     nrow(ect_df), min(ect_df$year), max(ect_df$year)))
-cat(sprintf("CSVs: output/stage_b/Chile/csv/ (15 files)\n"))
+cat(sprintf("CSVs: output/stage_a/Chile/csv/ (15 files)\n"))
 cat(sprintf("Bootstrap: Pre=%d/%d, Post=%d/%d successful\n",
     boot_pre$n_success, n_boot, boot_post$n_success, n_boot))
 cat("================================================================\n")

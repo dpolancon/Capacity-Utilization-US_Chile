@@ -730,7 +730,7 @@ for (alt in list(list(1978,0.95), list(1979,1.0), list(1980,1.0), list(1981,1.0)
 ## STEP 10: SAVE ALL OUTPUTS
 
 ```r
-out_dir <- "output/stage_b/Chile/csv/"
+out_dir <- "output/stage_a/Chile/csv/"
 dir.create(out_dir, showWarnings=FALSE, recursive=TRUE)
 
 # Panel

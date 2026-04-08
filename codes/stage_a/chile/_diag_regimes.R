@@ -1,5 +1,5 @@
 library(readr)
-regime_df <- read_csv("C:/ReposGitHub/Capacity-Utilization-US_Chile/output/stage_b/Chile/csv/stage2_regime_classification.csv",
+regime_df <- read_csv("C:/ReposGitHub/Capacity-Utilization-US_Chile/output/stage_a/Chile/csv/stage2_regime_classification.csv",
                       show_col_types = FALSE)
 
 cat("Regime 2 (binding) years:\n")

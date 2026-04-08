@@ -1,9 +1,9 @@
 # Stage 1 VECM — Output Manifest
-**Generated:** 2026-04-07 | **Script:** `codes/stage_b/chile/02b_stage1_deliver.R`
+**Generated:** 2026-04-07 | **Script:** `codes/stage_a/chile/02b_stage1_deliver.R`
 
 ---
 
-## CSV files (`output/stage_b/Chile/csv/`)
+## CSV files (`output/stage_a/Chile/csv/`)
 
 | File | Rows | Description |
 |------|------|-------------|
@@ -37,18 +37,18 @@
 
 ```r
 library(readr)
-ect   <- read_csv('output/stage_b/Chile/csv/stage1_ECT_m.csv')
-betas <- read_csv('output/stage_b/Chile/csv/stage1_cointegrating_vectors.csv')
-diag  <- read_csv('output/stage_b/Chile/csv/stage1_diagnostics.csv')
-sr    <- read_csv('output/stage_b/Chile/csv/stage1_short_run_coefficients.csv')
+ect   <- read_csv('output/stage_a/Chile/csv/stage1_ECT_m.csv')
+betas <- read_csv('output/stage_a/Chile/csv/stage1_cointegrating_vectors.csv')
+diag  <- read_csv('output/stage_a/Chile/csv/stage1_diagnostics.csv')
+sr    <- read_csv('output/stage_a/Chile/csv/stage1_short_run_coefficients.csv')
 ```
 
 ## How to load in Python
 
 ```python
 import pandas as pd
-ect   = pd.read_csv('output/stage_b/Chile/csv/stage1_ECT_m.csv')
-betas = pd.read_csv('output/stage_b/Chile/csv/stage1_cointegrating_vectors.csv')
+ect   = pd.read_csv('output/stage_a/Chile/csv/stage1_ECT_m.csv')
+betas = pd.read_csv('output/stage_a/Chile/csv/stage1_cointegrating_vectors.csv')
 ```
 
 ## Key objects for Stage 2
