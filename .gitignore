@@ -30,3 +30,7 @@ docs/essay_tex/*.pdf
 
 # ── OS ───────────────────────────────────────────────
 .DS_Store
+
+# Local figures — do not track
+*.pdf
+*.png
