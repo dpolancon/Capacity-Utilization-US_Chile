@@ -1,0 +1,11 @@
+marker_code,marker_label,marker_type,description,status,notes
+EM_ALIGNMENT_REFERENCE,EM_ALIGNMENT_REFERENCE,diplomatic,"reference to alignment, non-alignment, or bloc positioning",first_pass,used in source notes and registry
+EM_ARCHIVAL_SOVIET,EM_ARCHIVAL_SOVIET,archival,archival Soviet-party or Soviet-state documentary reference,first_pass,used in source notes and registry
+EM_BOOK_REVIEW,EM_BOOK_REVIEW,review,book-review style evaluative source rather than primary research article,first_pass,used in source notes and registry
+EM_CREDIT_SANCTIONS,EM_CREDIT_SANCTIONS,economic,"credit, sanctions, or financing-pressure reference",first_pass,used in source notes and registry
+EM_DECOLONIZATION_FRAME,EM_DECOLONIZATION_FRAME,conceptual,decolonization or Third World autonomy frame,first_pass,used in source notes and registry
+EM_PARTY_FINANCE,EM_PARTY_FINANCE,financial,"direct mention of party finance, transfers, or material aid",first_pass,used in source notes and registry
+EM_POLICY_PRESSURE,EM_POLICY_PRESSURE,policy,reference to overt policy pressure or coercive measures,first_pass,used in source notes and registry
+EM_RESOURCE_SOVEREIGNTY,EM_RESOURCE_SOVEREIGNTY,economic,resource sovereignty or copper-nationalization reference,first_pass,used in source notes and registry
+EM_SECURITY_FRAME,EM_SECURITY_FRAME,discursive,security or anticommunist legitimation frame,first_pass,used in source notes and registry
+EM_TRADE_CHANNEL,EM_TRADE_CHANNEL,economic,trade-channel disruption or embargo reference,first_pass,used in source notes and registry

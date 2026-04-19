@@ -1,0 +1,90 @@
+Run from repo root.
+
+You are using the folder `docs/method_classifier_reference/zavaleta_comparative_relational/` as a **reference classifier** for AR-variable construction.
+
+This folder is not a raw source archive and not a substitute for evidence.
+Use it to classify and route candidate objects before proposing AR variables.
+
+## Goal
+Given source-derived material, candidate indicators, notes, or bundles, classify them in comparative-relational terms and determine whether they support AR-variable building.
+
+## Required logic
+Use this sequence strictly:
+source -> source family -> scale -> operator route -> mechanism -> candidate variable -> translation risk -> AR relevance
+
+## Output format
+For each candidate object, populate the AR crosswalk table with:
+- candidate_object
+- source_id
+- source_family
+- scale
+- mechanism_family
+- configurational_role
+- temporal_layer
+- evidentiary_type
+- operator_route
+- translation_risk
+- ar_relevance
+- notes
+
+## Definitions
+### Source family
+archival / documentary
+evidentiary secondary
+historiographic synthetic
+conceptual / theoretical
+quantitative / statistical
+mixed
+
+### Scale
+plant
+firm
+sector
+state apparatus
+state power / regime
+international / geopolitical
+cross-scalar
+
+### Configurational role
+state apparatus
+state power
+ruling bloc articulation
+popular capacity / organization
+mediation structure
+external determination
+unresolved historical task
+crisis condensation
+
+### Temporal layer
+structural background
+layered persistence
+conjunctural trigger
+sequence / transition
+crisis marker
+aftermath / reorganization
+
+### Operator route
+relational axis
+external determination
+state differentiation
+temporality / layered time
+strategic corridor
+articulation / mediation
+crisis condensation
+
+### Translation risk
+low / medium / high
+
+### AR relevance
+core / supportive / peripheral / exclude
+
+## Hard rules
+- Do not generate a variable from theory notes alone.
+- Do not flatten Chile and the US into symmetric comparison.
+- Do not convert background historiography directly into a variable unless a relation is clearly identified.
+- If source anchor is missing, use `needs_manual_review`.
+- If translation risk is high, do not promote beyond tentative candidate status.
+- Prefer conservative classification over false precision.
+
+## Desired behavior
+Behave like a classifier and routing assistant, not like a theorist improvising labels.

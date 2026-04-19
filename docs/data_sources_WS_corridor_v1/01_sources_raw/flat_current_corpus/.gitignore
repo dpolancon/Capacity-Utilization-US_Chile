@@ -1,0 +1,9 @@
+﻿# Ignore the raw corpus contents
+*
+
+# Keep the ignore file itself
+!.gitignore
+
+# Optional keepers
+!README.md
+!.gitkeep

@@ -1,0 +1,45 @@
+source_a_ws_id,source_b_ws_id,overlap_type,overlap_basis,status,notes
+WS_001,WS_003,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment
+WS_001,WS_006,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment
+WS_001,WS_008,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,security_doctrine_legitimation
+WS_001,WS_009,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment; security_doctrine_legitimation
+WS_001,WS_011,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment; security_doctrine_legitimation
+WS_001,WS_013,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment
+WS_003,WS_006,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment; diplomatic_isolation
+WS_003,WS_008,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,diplomatic_isolation
+WS_003,WS_009,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment
+WS_003,WS_011,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment
+WS_003,WS_013,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment; diplomatic_isolation
+WS_004,WS_006,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment
+WS_004,WS_010,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment
+WS_004,WS_011,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment
+WS_004,WS_014,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment
+WS_004,WS_019,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment
+WS_004,WS_020,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment
+WS_006,WS_008,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,diplomatic_isolation
+WS_006,WS_009,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment
+WS_006,WS_010,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment; diplomatic_isolation
+WS_006,WS_011,shared_dimension_and_mechanism,Cold War geopolitics; Third World / Non-Aligned Movement / NIEO politics,first_pass,commodity_sovereignty_conflict; counter_hegemonic_alignment
+WS_006,WS_013,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment; diplomatic_isolation
+WS_006,WS_014,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment; diplomatic_isolation
+WS_006,WS_019,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment; diplomatic_isolation
+WS_006,WS_020,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment; diplomatic_isolation
+WS_007,WS_008,shared_dimension_and_mechanism,Inter-American order / hemispheric security doctrine,first_pass,diplomatic_isolation
+WS_007,WS_015,shared_dimension_and_mechanism,Inter-American order / hemispheric security doctrine; U.S. interventionism,first_pass,coercive_state_pressure
+WS_008,WS_009,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,security_doctrine_legitimation
+WS_008,WS_011,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,security_doctrine_legitimation
+WS_008,WS_013,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,diplomatic_isolation
+WS_008,WS_015,shared_dimension_and_mechanism,Inter-American order / hemispheric security doctrine,first_pass,security_doctrine_legitimation
+WS_009,WS_011,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment; security_doctrine_legitimation
+WS_009,WS_013,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment
+WS_010,WS_011,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment; security_doctrine_legitimation
+WS_010,WS_014,shared_dimension_and_mechanism,"Diplomatic isolation, blockade, recognition, and alliance structure; Third World / Non-Aligned Movement / NIEO politics",first_pass,counter_hegemonic_alignment; diplomatic_isolation; security_doctrine_legitimation
+WS_010,WS_019,shared_dimension_and_mechanism,"Diplomatic isolation, blockade, recognition, and alliance structure; Third World / Non-Aligned Movement / NIEO politics",first_pass,counter_hegemonic_alignment; diplomatic_isolation
+WS_010,WS_020,shared_dimension_and_mechanism,"Diplomatic isolation, blockade, recognition, and alliance structure; Third World / Non-Aligned Movement / NIEO politics",first_pass,counter_hegemonic_alignment; diplomatic_isolation; security_doctrine_legitimation
+WS_011,WS_013,shared_dimension_and_mechanism,Cold War geopolitics,first_pass,counter_hegemonic_alignment
+WS_011,WS_014,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment; security_doctrine_legitimation
+WS_011,WS_019,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment
+WS_011,WS_020,shared_dimension_and_mechanism,Third World / Non-Aligned Movement / NIEO politics,first_pass,counter_hegemonic_alignment; security_doctrine_legitimation
+WS_014,WS_019,shared_dimension_and_mechanism,"Diplomatic isolation, blockade, recognition, and alliance structure; Third World / Non-Aligned Movement / NIEO politics",first_pass,counter_hegemonic_alignment; diplomatic_isolation
+WS_014,WS_020,shared_dimension_and_mechanism,"Diplomatic isolation, blockade, recognition, and alliance structure; Third World / Non-Aligned Movement / NIEO politics",first_pass,counter_hegemonic_alignment; diplomatic_isolation; security_doctrine_legitimation
+WS_019,WS_020,shared_dimension_and_mechanism,"Diplomatic isolation, blockade, recognition, and alliance structure; Third World / Non-Aligned Movement / NIEO politics",first_pass,counter_hegemonic_alignment; diplomatic_isolation

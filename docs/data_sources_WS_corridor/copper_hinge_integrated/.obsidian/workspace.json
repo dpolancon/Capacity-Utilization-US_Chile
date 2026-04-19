@@ -1,0 +1,197 @@
+{
+  "main": {
+    "id": "d2482ab8aae6896a",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b5cb2c6a0ae5aa9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b3e99ccea7d4da9a",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Relational Bundle/base.base",
+                "viewName": "Tabla"
+              },
+              "icon": "lucide-layout-grid",
+              "title": "base"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c660a1b72e5d53bc",
+    "type": "split",
+    "children": [
+      {
+        "id": "0225ee38a9bd6106",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0902e89339bddbc7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "701635db21d4c5b4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "5a53980ab4fa55c7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "aec87e01503e0a62",
+    "type": "split",
+    "children": [
+      {
+        "id": "5f6e391f7f5a61b1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3e8158141afee150",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "20_Copper/COP_00_Dynamic_Hub.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de COP_00_Dynamic_Hub"
+            }
+          },
+          {
+            "id": "4aa47302a86d5f21",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "20_Copper/COP_00_Dynamic_Hub.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de COP_00_Dynamic_Hub"
+            }
+          },
+          {
+            "id": "a7ebe9ac6774a910",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "7886d18ca4a7a966",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "512e7d5d4e429f0c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "20_Copper/COP_00_Dynamic_Hub.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de COP_00_Dynamic_Hub"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "b3e99ccea7d4da9a",
+  "lastOpenFiles": [
+    "base.base",
+    "Relational Bundle/base.base",
+    "30_Static_Bridges/MOC_Copper_Relational_Perspective_Chile_US.md",
+    "20_Copper/COP_02_Corridor_and_Transition_Map.md",
+    "20_Copper/COP_04_Nested_Temporalities.md",
+    "Sin título.canvas",
+    "Sin título.md",
+    "Relational Bundle/Bienvenido.md",
+    "20_Copper/COP_00_Dynamic_Hub.md"
+  ]
+}

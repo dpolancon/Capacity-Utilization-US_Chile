@@ -1,0 +1,45 @@
+mechanism_code,mechanism_label,observable_code,observable_label,status,notes
+M01,Coercive State Pressure,OBS_M01_1,documented episodes of direct or indirect state pressure,first_pass,WS_005
+M01,Coercive State Pressure,OBS_M01_1,documented episodes of direct or indirect state pressure,first_pass,WS_007
+M01,Coercive State Pressure,OBS_M01_1,documented episodes of direct or indirect state pressure,first_pass,WS_015
+M01,Coercive State Pressure,OBS_M01_2,documented episodes of direct or indirect state pressure,first_pass,WS_012
+M01,Coercive State Pressure,OBS_M01_2,documented episodes of direct or indirect state pressure,first_pass,WS_017
+M02,Diplomatic Isolation,OBS_M02_1,"recognition shifts, OAS/UN positioning, or bilateral distancing",first_pass,WS_008
+M02,Diplomatic Isolation,OBS_M02_1,"recognition shifts, OAS/UN positioning, or bilateral distancing",first_pass,WS_014
+M02,Diplomatic Isolation,OBS_M02_1,"recognition shifts, OAS/UN positioning, or bilateral distancing",first_pass,WS_018
+M02,Diplomatic Isolation,OBS_M02_2,"recognition shifts, OAS/UN positioning, or bilateral distancing",first_pass,WS_003
+M02,Diplomatic Isolation,OBS_M02_2,"recognition shifts, OAS/UN positioning, or bilateral distancing",first_pass,WS_006
+M02,Diplomatic Isolation,OBS_M02_2,"recognition shifts, OAS/UN positioning, or bilateral distancing",first_pass,WS_007
+M02,Diplomatic Isolation,OBS_M02_2,"recognition shifts, OAS/UN positioning, or bilateral distancing",first_pass,WS_010
+M02,Diplomatic Isolation,OBS_M02_2,"recognition shifts, OAS/UN positioning, or bilateral distancing",first_pass,WS_013
+M02,Diplomatic Isolation,OBS_M02_2,"recognition shifts, OAS/UN positioning, or bilateral distancing",first_pass,WS_019
+M02,Diplomatic Isolation,OBS_M02_2,"recognition shifts, OAS/UN positioning, or bilateral distancing",first_pass,WS_020
+M03,Financial Strangulation,OBS_M03_3,"credit denial, sanctions, or financing pressure",first_pass,WS_007
+M04,Trade Channel Disruption,OBS_M04_3,"trade interruptions, embargoes, or channel restrictions",first_pass,WS_008
+M06,Commodity Sovereignty Conflict,OBS_M06_3,resource nationalization or copper-sovereignty disputes,first_pass,WS_006
+M06,Commodity Sovereignty Conflict,OBS_M06_3,resource nationalization or copper-sovereignty disputes,first_pass,WS_011
+M07,Counter-Hegemonic Alignment,OBS_M07_1,efforts to build non-hegemonic international alignment,first_pass,WS_001
+M07,Counter-Hegemonic Alignment,OBS_M07_1,efforts to build non-hegemonic international alignment,first_pass,WS_002
+M07,Counter-Hegemonic Alignment,OBS_M07_1,efforts to build non-hegemonic international alignment,first_pass,WS_003
+M07,Counter-Hegemonic Alignment,OBS_M07_1,efforts to build non-hegemonic international alignment,first_pass,WS_004
+M07,Counter-Hegemonic Alignment,OBS_M07_1,efforts to build non-hegemonic international alignment,first_pass,WS_006
+M07,Counter-Hegemonic Alignment,OBS_M07_1,efforts to build non-hegemonic international alignment,first_pass,WS_009
+M07,Counter-Hegemonic Alignment,OBS_M07_1,efforts to build non-hegemonic international alignment,first_pass,WS_010
+M07,Counter-Hegemonic Alignment,OBS_M07_1,efforts to build non-hegemonic international alignment,first_pass,WS_013
+M07,Counter-Hegemonic Alignment,OBS_M07_1,efforts to build non-hegemonic international alignment,first_pass,WS_016
+M07,Counter-Hegemonic Alignment,OBS_M07_1,efforts to build non-hegemonic international alignment,first_pass,WS_019
+M07,Counter-Hegemonic Alignment,OBS_M07_1,efforts to build non-hegemonic international alignment,first_pass,WS_020
+M07,Counter-Hegemonic Alignment,OBS_M07_1,efforts to build non-hegemonic international alignment,first_pass,WS_021
+M07,Counter-Hegemonic Alignment,OBS_M07_2,efforts to build non-hegemonic international alignment,first_pass,WS_011
+M07,Counter-Hegemonic Alignment,OBS_M07_2,efforts to build non-hegemonic international alignment,first_pass,WS_014
+M07,Counter-Hegemonic Alignment,OBS_M07_2,efforts to build non-hegemonic international alignment,first_pass,WS_018
+M08,Security Doctrine Legitimation,OBS_M08_1,anticommunist or hemispheric-security legitimation frames,first_pass,WS_011
+M08,Security Doctrine Legitimation,OBS_M08_1,anticommunist or hemispheric-security legitimation frames,first_pass,WS_012
+M08,Security Doctrine Legitimation,OBS_M08_1,anticommunist or hemispheric-security legitimation frames,first_pass,WS_017
+M08,Security Doctrine Legitimation,OBS_M08_2,anticommunist or hemispheric-security legitimation frames,first_pass,WS_001
+M08,Security Doctrine Legitimation,OBS_M08_2,anticommunist or hemispheric-security legitimation frames,first_pass,WS_008
+M08,Security Doctrine Legitimation,OBS_M08_2,anticommunist or hemispheric-security legitimation frames,first_pass,WS_009
+M08,Security Doctrine Legitimation,OBS_M08_2,anticommunist or hemispheric-security legitimation frames,first_pass,WS_015
+M08,Security Doctrine Legitimation,OBS_M08_3,anticommunist or hemispheric-security legitimation frames,first_pass,WS_010
+M08,Security Doctrine Legitimation,OBS_M08_3,anticommunist or hemispheric-security legitimation frames,first_pass,WS_014
+M08,Security Doctrine Legitimation,OBS_M08_3,anticommunist or hemispheric-security legitimation frames,first_pass,WS_020

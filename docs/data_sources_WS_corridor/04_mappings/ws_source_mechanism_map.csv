@@ -1,0 +1,45 @@
+ws_id,relative_path,mechanism_code,mechanism_label,confidence,status,notes
+WS_001,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Article_inSpanish_Ulianova2000_URSS_UP.pdf,M07,counter_hegemonic_alignment,high,first_pass,candidate_1
+WS_001,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Article_inSpanish_Ulianova2000_URSS_UP.pdf,M08,security_doctrine_legitimation,high,first_pass,candidate_2
+WS_002,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Article_inSpanish_Ulianova2003_Peasants_CommunistInternational.pdf,M07,counter_hegemonic_alignment,low,first_pass,candidate_1
+WS_003,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Article_inSpanish_UlianovaFediakova1998_URSS_PCCh_ColdWar.pdf,M07,counter_hegemonic_alignment,high,first_pass,candidate_1
+WS_003,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Article_inSpanish_UlianovaFediakova1998_URSS_PCCh_ColdWar.pdf,M02,diplomatic_isolation,high,first_pass,candidate_2
+WS_004,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Article_ReviewInternationalPoliticalEconomy_Ahumada2025.pdf,M07,counter_hegemonic_alignment,high,first_pass,candidate_1
+WS_005,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Bolshevik_Rasmussen_Knutsen_07_06_2020.pdf,M01,coercive_state_pressure,low,first_pass,candidate_1
+WS_006,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_[A New Press People's history] Vijay Prashad - The darker nations_ a people's history of the third world (2008, The New Press).pdf",M07,counter_hegemonic_alignment,high,first_pass,candidate_1
+WS_006,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_[A New Press People's history] Vijay Prashad - The darker nations_ a people's history of the third world (2008, The New Press).pdf",M02,diplomatic_isolation,high,first_pass,candidate_2
+WS_006,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_[A New Press People's history] Vijay Prashad - The darker nations_ a people's history of the third world (2008, The New Press).pdf",M06,commodity_sovereignty_conflict,high,first_pass,candidate_3
+WS_007,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_[New Cold War history] Harmer, Tanya - Allende’s Chile and the Inter-American Cold War (2011, University of North Carolina Press).pdf",M01,coercive_state_pressure,high,first_pass,candidate_1
+WS_007,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_[New Cold War history] Harmer, Tanya - Allende’s Chile and the Inter-American Cold War (2011, University of North Carolina Press).pdf",M02,diplomatic_isolation,high,first_pass,candidate_2
+WS_007,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_[New Cold War history] Harmer, Tanya - Allende’s Chile and the Inter-American Cold War (2011, University of North Carolina Press).pdf",M03,financial_strangulation,high,first_pass,candidate_3
+WS_008,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_Edited_Harmer, Tanya - Alfredo Riquelme Segovia - Chile y la Guerra Fría global-RIL Editores (2014).pdf",M02,diplomatic_isolation,medium,first_pass,candidate_1
+WS_008,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_Edited_Harmer, Tanya - Alfredo Riquelme Segovia - Chile y la Guerra Fría global-RIL Editores (2014).pdf",M08,security_doctrine_legitimation,medium,first_pass,candidate_2
+WS_008,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_Edited_Harmer, Tanya - Alfredo Riquelme Segovia - Chile y la Guerra Fría global-RIL Editores (2014).pdf",M04,trade_channel_disruption,medium,first_pass,candidate_3
+WS_009,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_inSpanish_UlianovaLoyolaAlvarez_Editors_1912-2012_El Siglo de los Comunistas Chilenos_InstitutoIDEA_2012.pdf,M07,counter_hegemonic_alignment,medium,first_pass,candidate_1
+WS_009,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_inSpanish_UlianovaLoyolaAlvarez_Editors_1912-2012_El Siglo de los Comunistas Chilenos_InstitutoIDEA_2012.pdf,M08,security_doctrine_legitimation,medium,first_pass,candidate_2
+WS_010,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_Jovan Cavoški - Non-Aligned Movement Summits_ A History (2022, Bloomsbury Academic).pdf",M07,counter_hegemonic_alignment,high,first_pass,candidate_1
+WS_010,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_Jovan Cavoški - Non-Aligned Movement Summits_ A History (2022, Bloomsbury Academic).pdf",M02,diplomatic_isolation,high,first_pass,candidate_2
+WS_010,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_Jovan Cavoški - Non-Aligned Movement Summits_ A History (2022, Bloomsbury Academic).pdf",M08,security_doctrine_legitimation,high,first_pass,candidate_3
+WS_011,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_Odd Arne Westad - The Cold War_ A World History (2017, Basic Books).pdf",M08,security_doctrine_legitimation,medium,first_pass,candidate_1
+WS_011,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_Odd Arne Westad - The Cold War_ A World History (2017, Basic Books).pdf",M07,counter_hegemonic_alignment,medium,first_pass,candidate_2
+WS_011,"docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Book_Odd Arne Westad - The Cold War_ A World History (2017, Basic Books).pdf",M06,commodity_sovereignty_conflict,medium,first_pass,candidate_3
+WS_012,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/BookReview_Hunneus_GonzalezVidela.pdf,M08,security_doctrine_legitimation,low,first_pass,candidate_1
+WS_012,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/BookReview_Hunneus_GonzalezVidela.pdf,M01,coercive_state_pressure,low,first_pass,candidate_2
+WS_013,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Boook_Edited_inSpanish_Ulianova2020_Chile_URSS_AnosSesenta.pdf,M07,counter_hegemonic_alignment,medium,first_pass,candidate_1
+WS_013,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Boook_Edited_inSpanish_Ulianova2020_Chile_URSS_AnosSesenta.pdf,M02,diplomatic_isolation,medium,first_pass,candidate_2
+WS_014,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/CIA_DeclassifiedDoc_NonAllignedMovement.pdf,M02,diplomatic_isolation,high,first_pass,candidate_1
+WS_014,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/CIA_DeclassifiedDoc_NonAllignedMovement.pdf,M07,counter_hegemonic_alignment,high,first_pass,candidate_2
+WS_014,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/CIA_DeclassifiedDoc_NonAllignedMovement.pdf,M08,security_doctrine_legitimation,high,first_pass,candidate_3
+WS_015,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/JournalColdWar_01_Tunstall2014.pdf,M01,coercive_state_pressure,medium,first_pass,candidate_1
+WS_015,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/JournalColdWar_01_Tunstall2014.pdf,M08,security_doctrine_legitimation,medium,first_pass,candidate_2
+WS_016,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/JournalColdWar_02_Friedman2018.pdf,M07,counter_hegemonic_alignment,low,first_pass,candidate_1
+WS_017,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/JournalColdWar_03_Buclin2017.pdf,M08,security_doctrine_legitimation,low,first_pass,candidate_1
+WS_017,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/JournalColdWar_03_Buclin2017.pdf,M01,coercive_state_pressure,low,first_pass,candidate_2
+WS_018,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/JournalColdWar_04_Henrich-Franke2014.pdf,M02,diplomatic_isolation,low,first_pass,candidate_1
+WS_018,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/JournalColdWar_04_Henrich-Franke2014.pdf,M07,counter_hegemonic_alignment,low,first_pass,candidate_2
+WS_019,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/JournalColdWar_05_ZivoticCavoski2014.pdf,M07,counter_hegemonic_alignment,medium,first_pass,candidate_1
+WS_019,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/JournalColdWar_05_ZivoticCavoski2014.pdf,M02,diplomatic_isolation,medium,first_pass,candidate_2
+WS_020,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/JournalColdWar_06_Luthi2016.pdf,M07,counter_hegemonic_alignment,high,first_pass,candidate_1
+WS_020,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/JournalColdWar_06_Luthi2016.pdf,M02,diplomatic_isolation,high,first_pass,candidate_2
+WS_020,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/JournalColdWar_06_Luthi2016.pdf,M08,security_doctrine_legitimation,high,first_pass,candidate_3
+WS_021,docs/data_sources_WS_corridor/01_sources_raw/flat_current_corpus/Ulianova1998_PCCh_Kominterm_PrimerosContactos.pdf,M07,counter_hegemonic_alignment,low,first_pass,candidate_1

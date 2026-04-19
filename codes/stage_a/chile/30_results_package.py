@@ -267,8 +267,10 @@ if not pin_row.empty:
     ax4.annotate(r"Pin: $\mu$(1980) = 1.0", xy=(1982, 1.03),
                  fontsize=9.5, ha="left")
 
-ax4.annotate(r"$\leftarrow$ Identification window",
-             xy=(1977, 0.50), fontsize=9, color=GREY40, ha="right")
+ax4.annotate(r"Identification window $\rightarrow$",
+             xy=(1965, 0.52), fontsize=9, color=GREY40, ha="right")
+ax4.annotate(r"$\leftarrow$ Extrapolation",
+             xy=(1983, 0.52), fontsize=9, color=GREY50, ha="left")
 
 ax4.set_ylabel(r"$\hat{\mu}_t^{CL}$", fontsize=13)
 ax4.set_xticks(range(1920, 2025, 10))
