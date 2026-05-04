@@ -1,0 +1,556 @@
+## curation/local-current-state-2026-05-03
+ M AGENTS.md
+ D AR_Corridor/00_governing_notes/estimation_strategy_note.md
+ D AR_Corridor/00_governing_notes/notation_and_objects.md
+ D AR_Corridor/00_governing_notes/scope_lock_note.md
+ D AR_Corridor/02_country_tracks/united_states/scripts/01_US_theta_DOLS.R
+ D AR_Corridor/02_country_tracks/united_states/scripts/02_US_theta_results_md.R
+ D AR_Corridor/02_country_tracks/united_states/scripts/03_US_theta_figures.R
+ D RRR_Accumulation_Framework.md
+ M agents/analyst_agent.md
+ D chapter2/Ch2_Outline_DEFINITIVE.md
+ D chapter2/ch2_modular_index.md
+ D chapter2/ch2_section_prompts.md
+ D chapter2/ch2_voice_guide.md
+ D chapter2/fire_ch2_drafts.py
+ D chapter2/s2_2_final_draft.md
+ D chapter2/s2_2_voice_constraints.md
+ D codes/stage_a/chile/00_deflator_splice_diagnostic.py
+ D codes/stage_a/chile/01_unit_root_tests.R
+ D codes/stage_a/chile/02_stage1_vecm.R
+ D codes/stage_a/chile/02b_stage1_deliver.R
+ D codes/stage_a/chile/03_stage2_frontier_vecm.R
+ D codes/stage_a/chile/03x_frontier_discovery.R
+ D codes/stage_a/chile/10_data_assembly.py
+ D codes/stage_a/chile/10_data_prep_us.R
+ D codes/stage_a/chile/11_construct_panel.py
+ D codes/stage_a/chile/12_extend_panel_bcch.py
+ D codes/stage_a/chile/13_merge_distribution.py
+ D codes/stage_a/chile/14_merge_kstock.py
+ D codes/stage_a/chile/20_integration_tests.R
+ D codes/stage_a/chile/22_vecm_structural_chile_seq.R
+ D codes/stage_a/chile/30_results_package.py
+ D codes/stage_a/chile/_audit_frontier_multicollinearity.R
+ D codes/stage_a/chile/_diag_compare_mu.py
+ D codes/stage_a/chile/_diag_enhanced_ur.R
+ D codes/stage_a/chile/_diag_isi_cv1.R
+ D codes/stage_a/chile/_diag_isi_rank.R
+ D codes/stage_a/chile/_diag_kstock.R
+ D codes/stage_a/chile/_diag_mu_regimes.py
+ D codes/stage_a/chile/_diag_optb_ur.R
+ D codes/stage_a/chile/_diag_phi.R
+ D codes/stage_a/chile/_diag_regimes.R
+ D codes/stage_a/chile/_regen_fig4.py
+ D codes/stage_a/chile/ch2_panel_scripts_v3/10_data_prep_us.R
+ D codes/stage_a/chile/ch2_panel_scripts_v3/11_construct_panel.py
+ D codes/stage_a/chile/chile_data_construction.py
+ D codes/stage_a/us/27_vecm_split_wk_exog.R
+ D codes/stage_a/us/28_vecm_trend_and_dols.R
+ D codes/stage_a/us/29_dols_robustness.R
+ D codes/stage_a/us/35_theta_omega_plot_us.R
+ D codes/stage_a/us/37_agnostic_absolute_us.R
+ D codes/stage_a/us/39_restricted_vecm_absolute_us.R
+ D codes/stage_a/us/39b_rank_under_restriction.R
+ D codes/stage_a/us/40_test_cv1_omega0_absolute_us.R
+ D codes/stage_a/us/41_test_beta_restrictions_all_cvs.R
+ D codes/stage_a/us/42_rank1_check.R
+ D codes/stage_b/chile/03b_reparam_frontier_steps0to3.R
+ D codes/stage_b/chile/04_stageB_profitability.R
+ D codes/stage_b/chile/_diag_4channel_table.R
+ D codes/stage_b/chile/_diag_decomposed_table.R
+ D codes/stage_b/chile/_diag_pY_coverage.R
+ D codes/stage_b/chile/_diag_panel_check.R
+ D codes/stage_b/chile/_diag_panel_check2.R
+ D codes/stage_b/chile/_diag_pk.R
+ D codes/stage_b/chile/_diag_raw_names.R
+ D codes/stage_b/chile/stageB_chile_4ch.R
+ D codes/stage_b/us/10_build_dataset_us.R
+ D codes/stage_b/us/20_profitability_decomposition_us.R
+ D codes/stage_b/us/20_profitability_decomposition_us_v2.R
+ D codes/stage_c/us/10_build_stageC_dataset_us.R
+ D codes/stage_c/us/20_ardl_investment_us.R
+ D codes/stage_c/us/21_ardl_4channel_us.R
+ D codes/stage_c/us/22_ardl_extended_samples_us.R
+ D codes/stage_c/us/23_ardl_extended_netK_us.R
+ D codes/stage_c/us/24_wald_pairwise.R
+ D codes/stage_c/us/25_ardl_rolling_wald_us.R
+ D codes/stage_c/us/26_ardl_rolling_wald_netK_exact.R
+ D data/final/chile_tvecm_panel.csv
+ D data/final/chile_tvecm_panel_README.txt
+ D data/processed/us_nf_corporate_stageBC.csv
+ D data/processed/us_nf_corporate_stageBC_codebook.csv
+ D data/processed/us_nf_corporate_stageC.csv
+ D data/processed/us_nf_corporate_stageC_codebook.csv
+ D docs/.obsidian/app.json
+ D docs/.obsidian/appearance.json
+ D docs/.obsidian/core-plugins.json
+ D "docs/.obsidian/themes/Comfort Smooth/manifest.json"
+ D "docs/.obsidian/themes/Comfort Smooth/theme.css"
+ D docs/.obsidian/workspace.json
+ D docs/_legacy/data_set_building/CORP_EXTENSION_AUDIT.md
+ D docs/_legacy/data_set_building/dataset_pipeline.md
+ D docs/_legacy/data_set_building/gdp_kstock_sources.md
+ D docs/_legacy/data_set_building/notation.md
+ D docs/_legacy/empirical_strategy/README.md
+ D docs/_legacy/empirical_strategy/nb_01_redesign_motivation.md
+ D docs/_legacy/empirical_strategy/nb_02_unit_root_battery.md
+ D docs/_legacy/empirical_strategy/nb_03_stage1_recap_ECTm.md
+ D docs/_legacy/empirical_strategy/nb_04_cls_threshold_estimation.md
+ D docs/_legacy/empirical_strategy/nb_05_parameter_recovery_theta.md
+ D docs/_legacy/empirical_strategy/nb_06_mu_construction_results.md
+ D docs/_legacy/results/US_self_discovery_results.md
+ D docs/_legacy/results/us_sequential_structural_results_omega.md
+ D docs/_legacy/results/us_structural_results.md
+ D docs/_legacy/trigger/FIRE_sec21.md
+ D docs/_legacy/trigger/FIRE_sec221.md
+ D docs/_legacy/trigger/FIRE_sec222.md
+ D docs/_legacy/trigger/FIRE_sec223.md
+ D docs/_legacy/trigger/FIRE_sec224.md
+ D docs/_legacy/trigger/FIRE_sec225.md
+ D docs/_legacy/trigger/FIRE_sec231.md
+ D docs/_legacy/trigger/FIRE_sec232.md
+ D docs/_legacy/trigger/FIRE_sec233.md
+ D docs/_legacy/trigger/FIRE_sec24.md
+ D docs/_legacy/trigger/FIRE_sec251.md
+ D docs/_legacy/trigger/FIRE_sec254.md
+ D docs/_legacy/trigger/FIRE_sec271_276.md
+ D docs/_legacy/trigger/FIRE_sec29.md
+ D docs/ch2/.gitkeep
+ D docs/ch2/repo_structure_Ch2_v2.md
+ D docs/ch2/stageC_handoff_US.md
+ D docs/chile_project_assets/00_index/__pycache__/ws_asset_integration.cpython-314.pyc
+ D docs/chile_project_assets/00_index/chile_assets_integration_log.md
+ D docs/chile_project_assets/00_index/chile_assets_master_index.md
+ D docs/chile_project_assets/00_index/ws_asset_integration.py
+ D docs/chile_project_assets/00_index/ws_asset_integration_registry.csv
+ D docs/chile_project_assets/01_source_control/bibliografia_y_auditoria.md
+ D docs/chile_project_assets/01_source_control/corpus_backbone_maps/source_integration_map_1925_1958.md
+ D docs/chile_project_assets/01_source_control/ledger_de_fuentes.md
+ D docs/chile_project_assets/01_source_control/reference_master_ledgers/industrial_patronage_reference_master_ledger.md
+ D docs/chile_project_assets/01_source_control/reference_master_ledgers/master_ledger.md
+ D docs/chile_project_assets/02_argument_architecture/argument_evidence_matrix.md
+ D docs/chile_project_assets/02_argument_architecture/dissertation_reframing_workbench.md
+ D docs/chile_project_assets/02_argument_architecture/mapa_argumental.md
+ D docs/chile_project_assets/02_argument_architecture/paper_conversion_blueprint.md
+ D docs/chile_project_assets/02_argument_architecture/periodization_control_sheet.md
+ D docs/chile_project_assets/03_manuscript_reservoir/industrial_patronage_english_apa.md
+ D docs/chile_project_assets/03_manuscript_reservoir/nota_maestra.md
+ D docs/chile_project_assets/04_communication/abstracts_and_pitch_versions.md
+ D docs/chile_project_assets/04_communication/handout_one_page.md
+ D docs/chile_project_assets/04_communication/talk_script_12_minutes.md
+ D docs/chile_project_assets/05_links_to_corridors/ar_support_assets.md
+ D docs/chile_project_assets/05_links_to_corridors/overlap_hinge_assets.md
+ D docs/chile_project_assets/05_links_to_corridors/ws_support_assets.md
+ D docs/chile_project_assets/05_links_to_corridors/ws_support_integration_map.md
+ D docs/chile_project_assets/06_original_bundle_mirror/UP_asset_pack/01_Abstracts_and_Pitch_Versions.md
+ D docs/chile_project_assets/06_original_bundle_mirror/UP_asset_pack/02_Talk_Script_12_Minutes.md
+ D docs/chile_project_assets/06_original_bundle_mirror/UP_asset_pack/03_Argument_Evidence_Matrix.md
+ D docs/chile_project_assets/06_original_bundle_mirror/UP_asset_pack/04_Periodization_Control_Sheet.md
+ D docs/chile_project_assets/06_original_bundle_mirror/UP_asset_pack/05_Paper_Conversion_Blueprint.md
+ D docs/chile_project_assets/06_original_bundle_mirror/UP_asset_pack/06_Handout_One_Page.md
+ D docs/chile_project_assets/06_original_bundle_mirror/UP_asset_pack/07_Source_Integration_Map_1925_1958.md
+ D docs/chile_project_assets/06_original_bundle_mirror/UP_asset_pack/README_asset_pack.md
+ D "docs/chile_project_assets/06_original_bundle_mirror/Unidad Popular/00_PLAN_DE_ARTIFACTO.md"
+ D "docs/chile_project_assets/06_original_bundle_mirror/Unidad Popular/01_NOTA_MAESTRA.md"
+ D "docs/chile_project_assets/06_original_bundle_mirror/Unidad Popular/02_MAPA_ARGUMENTAL.md"
+ D "docs/chile_project_assets/06_original_bundle_mirror/Unidad Popular/03_LEDGER_DE_FUENTES.md"
+ D "docs/chile_project_assets/06_original_bundle_mirror/Unidad Popular/04_BIBLIOGRAFIA_Y_AUDITORIA.md"
+ D "docs/chile_project_assets/06_original_bundle_mirror/Unidad Popular/05_REGISTRO_DE_TABLAS_Y_FIGURAS.md"
+ D "docs/chile_project_assets/06_original_bundle_mirror/Unidad Popular/06_PROXIMOS_PASOS.md"
+ D "docs/chile_project_assets/06_original_bundle_mirror/Unidad Popular/README.md"
+ D "docs/chile_project_assets/06_original_bundle_mirror/Unidad Popular/assets/README.md"
+ D docs/chile_project_assets/06_original_bundle_mirror/industrial_patronage/industrial_patronage_artifact_pack_index.md
+ D docs/chile_project_assets/06_original_bundle_mirror/industrial_patronage/industrial_patronage_dissertation_reframing_workbench.md
+ D docs/chile_project_assets/06_original_bundle_mirror/industrial_patronage/industrial_patronage_english_apa.md
+ D docs/chile_project_assets/06_original_bundle_mirror/industrial_patronage/industrial_patronage_reference_master_ledger.md
+ D docs/chile_project_assets/06_original_bundle_mirror/reusable_ledger/master_ledger.md
+ D docs/chile_project_assets/README.md
+ D docs/data_set_building/CORP_EXTENSION_AUDIT.md
+ D docs/data_set_building/dataset_pipeline.md
+ D docs/data_set_building/gdp_kstock_sources.md
+ D docs/data_set_building/notation.md
+ D docs/empirical_strategy/README.md
+ D docs/empirical_strategy/nb_01_redesign_motivation.md
+ D docs/empirical_strategy/nb_02_unit_root_battery.md
+ D docs/empirical_strategy/nb_03_stage1_recap_ECTm.md
+ D docs/empirical_strategy/nb_04_cls_threshold_estimation.md
+ D docs/empirical_strategy/nb_05_parameter_recovery_theta.md
+ D docs/empirical_strategy/nb_06_mu_construction_results.md
+ D docs/method_classifier_reference/zavaleta_comparative_relational/README.md
+ D docs/method_classifier_reference/zavaleta_comparative_relational/ar_variable_crosswalk_template.csv
+ D docs/method_classifier_reference/zavaleta_comparative_relational/classifier_digest.md
+ D docs/method_classifier_reference/zavaleta_comparative_relational/codex_prompt_ar_variable_classifier.txt
+ D docs/method_classifier_reference/zavaleta_comparative_relational/codex_use_rules.md
+ D docs/method_classifier_reference/zavaleta_comparative_relational/selected_core_manifest.md
+ D docs/results/US_self_discovery_results.md
+ D docs/results/us_sequential_structural_results_omega.md
+ D docs/results/us_structural_results.md
+ D docs/trigger/FIRE_sec21.md
+ D docs/trigger/FIRE_sec221.md
+ D docs/trigger/FIRE_sec222.md
+ D docs/trigger/FIRE_sec223.md
+ D docs/trigger/FIRE_sec224.md
+ D docs/trigger/FIRE_sec225.md
+ D docs/trigger/FIRE_sec231.md
+ D docs/trigger/FIRE_sec232.md
+ D docs/trigger/FIRE_sec233.md
+ D docs/trigger/FIRE_sec24.md
+ D docs/trigger/FIRE_sec251.md
+ D docs/trigger/FIRE_sec254.md
+ D docs/trigger/FIRE_sec271_276.md
+ D docs/trigger/FIRE_sec29.md
+ D docs/us_structural_results.md
+ D output/panel/chile_panel.csv
+ D output/panel/chile_panel_extended.csv
+ D output/stage_a/Chile/csv/.gitkeep
+ D output/stage_a/Chile/csv/chile_cv1_comparison.csv
+ D output/stage_a/Chile/csv/integration_tests.csv
+ D output/stage_a/Chile/csv/integration_tests_adf.csv
+ D output/stage_a/Chile/csv/integration_tests_pp.csv
+ D output/stage_a/Chile/csv/integration_tests_za.csv
+ D output/stage_a/Chile/csv/stage1_ECT_m.csv
+ D output/stage_a/Chile/csv/stage1_alpha_bootstrap_ci.csv
+ D output/stage_a/Chile/csv/stage1_alpha_loadings.csv
+ D output/stage_a/Chile/csv/stage1_bootstrap_ci.csv
+ D output/stage_a/Chile/csv/stage1_cointegrating_vectors.csv
+ D output/stage_a/Chile/csv/stage1_correlation_matrices.csv
+ D output/stage_a/Chile/csv/stage1_diagnostics.csv
+ D output/stage_a/Chile/csv/stage1_eigenvalues.csv
+ D output/stage_a/Chile/csv/stage1_johansen_maxeigen.csv
+ D output/stage_a/Chile/csv/stage1_johansen_trace.csv
+ D output/stage_a/Chile/csv/stage1_lag_selection.csv
+ D output/stage_a/Chile/csv/stage1_short_run_coefficients.csv
+ D output/stage_a/Chile/csv/stage1_standardized_impacts.csv
+ D output/stage_a/Chile/csv/stage1_variable_summary.csv
+ D output/stage_a/Chile/csv/stage1_weak_exogeneity.csv
+ D output/stage_a/Chile/csv/stage2_LR_bootstrap.csv
+ D output/stage_a/Chile/csv/stage2_alpha_loadings.csv
+ D output/stage_a/Chile/csv/stage2_cointegrating_vectors.csv
+ D output/stage_a/Chile/csv/stage2_diagnostics.csv
+ D output/stage_a/Chile/csv/stage2_panel_with_mu_v2.csv
+ D output/stage_a/Chile/csv/stage2_regime_classification.csv
+ D output/stage_a/Chile/csv/stage2_ssr_grid.csv
+ D output/stage_a/Chile/csv/stage2_structural_params.csv
+ D output/stage_a/Chile/csv/stage2_theta_CL_series.csv
+ D output/stage_a/Chile/csv/stage2_theta_mu_panel.csv
+ D output/stage_a/Chile/csv/stage2_ur_crosswalk.csv
+ D output/stage_a/Chile/csv/stage2_weak_exogeneity.csv
+ D output/stage_a/Chile/figs/.gitkeep
+ D output/stage_a/Chile/figs/fig1_ECTm_threshold.pdf
+ D output/stage_a/Chile/figs/fig1_ECTm_threshold.png
+ D output/stage_a/Chile/figs/fig2_theta_CL.pdf
+ D output/stage_a/Chile/figs/fig2_theta_CL.png
+ D output/stage_a/Chile/figs/fig3_regime_classification.pdf
+ D output/stage_a/Chile/figs/fig3_regime_classification.png
+ D output/stage_a/Chile/figs/fig4_mu_CL.pdf
+ D output/stage_a/Chile/figs/fig4_mu_CL.png
+ D output/stage_a/Chile/figs/figA1_ssr_surface.pdf
+ D output/stage_a/Chile/figs/figA1_ssr_surface.png
+ D output/stage_a/Chile/figs/figA2_bootstrap_LR.pdf
+ D output/stage_a/Chile/figs/figA2_bootstrap_LR.png
+ D output/stage_a/Chile/logs/.gitkeep
+ D output/stage_a/Chile/stage1_manifest.md
+ D output/stage_a/Chile/stage1_vecm_report.md
+ D output/stage_a/Chile/stage2_mu_CL_truncation_note.md
+ D output/stage_a/Chile/stage2_psi_fix_proposals.md
+ D output/stage_a/Chile/stage_a_results_manifest.md
+ D output/stage_a/Chile/tables/tab1_standardized_impacts.csv
+ D output/stage_a/Chile/tables/tab2_theta_mu_period_averages.csv
+ D output/stage_a/Chile/tables/tab3_shadow_price_test.csv
+ D output/stage_a/Chile/tables/tabA1_stage1_johansen_trace.csv
+ D output/stage_a/Chile/tables/tabA2_stage1_alpha_weakexog.csv
+ D output/stage_a/Chile/tables/tabA3_stage2_alpha_loadings.csv
+ D output/stage_a/Chile/tables/tabA4_structural_params.csv
+ D output/stage_a/Chile/tables/tabA5_pin_sensitivity.csv
+ D output/stage_a/US/csv/.gitkeep
+ D output/stage_a/US/csv/rank1_theta_mu_us.csv
+ D output/stage_a/US/csv/restricted_alpha.csv
+ D output/stage_a/US/csv/restricted_gamma.csv
+ D output/stage_a/US/csv/stage_a_raw_cointegrating_vectors.csv
+ D output/stage_a/US/csv/stage_a_raw_ects.csv
+ D output/stage_a/US/csv/theta_omega_tibble_us.csv
+ D output/stage_a/US/figs/.gitkeep
+ D output/stage_a/US/figs/mu_capacity_utilization.pdf
+ D output/stage_a/US/figs/mu_capacity_utilization.png
+ D output/stage_a/US/figs/mu_ect_capacity_utilization.pdf
+ D output/stage_a/US/figs/mu_ect_capacity_utilization.png
+ D output/stage_a/US/figs/omega_timeseries.pdf
+ D output/stage_a/US/figs/omega_timeseries.png
+ D output/stage_a/US/figs/r1_mu_capacity_utilization.pdf
+ D output/stage_a/US/figs/r1_mu_capacity_utilization.png
+ D output/stage_a/US/figs/r1_mu_ect.pdf
+ D output/stage_a/US/figs/r1_mu_ect.png
+ D output/stage_a/US/figs/r1_theta_timeseries.pdf
+ D output/stage_a/US/figs/r1_theta_timeseries.png
+ D output/stage_a/US/figs/theta_omega_joint_timeseries.pdf
+ D output/stage_a/US/figs/theta_omega_joint_timeseries.png
+ D output/stage_a/US/figs/theta_omega_plane_us.pdf
+ D output/stage_a/US/figs/theta_omega_plane_us.png
+ D output/stage_a/US/figs/theta_omega_scatter_full.pdf
+ D output/stage_a/US/figs/theta_omega_scatter_full.png
+ D output/stage_a/US/figs/theta_timeseries.pdf
+ D output/stage_a/US/figs/theta_timeseries.png
+ D output/stage_a/US/logs/.gitkeep
+ D output/stage_a/US/md/rank1_structural_report.md
+ D output/stage_a/US/results_report_stageA_US.md
+ D output/stage_a/US/vecm_results/dols_rolling_30yr.csv
+ D output/stage_a/US/vecm_results/post73_identification_assessment.md
+ D output/stage_a/US/vecm_results/split_sample_comparison.csv
+ D output/stage_a/US/vecm_results/split_sample_results.md
+ D output/stage_a/US/vecm_results/trend_dols_comparison.csv
+ D output/stage_b/Chile/csv/stageB_CL_panel_1940_1978.csv
+ D output/stage_b/Chile/csv/stageB_CL_panel_1940_1978_4ch.csv
+ D output/stage_b/Chile/csv/stageB_CL_subperiod_averages.csv
+ D output/stage_b/Chile/csv/stageB_CL_subperiod_averages_4ch.csv
+ D output/stage_b/Chile/csv/stageB_CL_swing_decomposition.csv
+ D output/stage_b/Chile/csv/stageB_CL_swing_decomposition_4ch.csv
+ D output/stage_b/Chile/tables/tab_B4_subperiod_CL.tex
+ D output/stage_b/Chile/tables/tab_B5_peaktotrough_CL.tex
+ D output/stage_b/Comparison/csv/.gitkeep
+ D output/stage_b/Comparison/figs/.gitkeep
+ D output/stage_b/US/csv/.gitkeep
+ D output/stage_b/US/csv/stageB_US_table_B1_annual_contributions.csv
+ D output/stage_b/US/csv/stageB_US_table_B1_annual_contributions_v2.csv
+ D output/stage_b/US/csv/stageB_US_table_B2_peaktotrough.csv
+ D output/stage_b/US/csv/stageB_US_table_B2_peaktotrough_v2.csv
+ D output/stage_b/US/csv/stageB_US_table_B3_subperiod_averages.csv
+ D output/stage_b/US/csv/stageB_US_table_B3_subperiod_averages_v2.csv
+ D output/stage_b/US/csv/stageB_US_table_B_robustness_mu_comparison.csv
+ D output/stage_b/US/figs/fig_B1a_r_levels.pdf
+ D output/stage_b/US/figs/fig_B1a_r_levels.png
+ D output/stage_b/US/figs/fig_B1b_mu_levels.pdf
+ D output/stage_b/US/figs/fig_B1b_mu_levels.png
+ D output/stage_b/US/figs/fig_B1c_Breal_levels.pdf
+ D output/stage_b/US/figs/fig_B1c_Breal_levels.png
+ D output/stage_b/US/figs/fig_B1d_PyPK_levels.pdf
+ D output/stage_b/US/figs/fig_B1d_PyPK_levels.png
+ D output/stage_b/US/figs/fig_B1e_pi_levels.pdf
+ D output/stage_b/US/figs/fig_B1e_pi_levels.png
+ D output/stage_b/US/figs/fig_B1f_B_levels.pdf
+ D output/stage_b/US/figs/fig_B1f_B_levels.png
+ D output/stage_b/US/figs/fig_B2a_cumulative.pdf
+ D output/stage_b/US/figs/fig_B2a_cumulative.png
+ D output/stage_b/US/figs/fig_B2b_annual_bars.pdf
+ D output/stage_b/US/figs/fig_B2b_annual_bars.png
+ D output/stage_b/US/figs/fig_B3_swing_composition.pdf
+ D output/stage_b/US/figs/fig_B3_swing_composition.png
+ D output/stage_b/US/figs/fig_B4_profit_rate_turning_points.pdf
+ D output/stage_b/US/figs/fig_B4_profit_rate_turning_points.png
+ D output/stage_b/US/logs/.gitkeep
+ D output/stage_c/US/csv/stageC_US_3ch_19301973_N44_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19301973_N44_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19301973_N44_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19301973_N44_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19301973_N44_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19301973_N44_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19301973_N44_wwii_comparison.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19401973_N34_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19401973_N34_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19401973_N34_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19401973_N34_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19401973_N34_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19401973_N34_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19471974_N28_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19471974_N28_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19471974_N28_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19471974_N28_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19471974_N28_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_3ch_19471974_N28_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19301973_N44_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19301973_N44_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19301973_N44_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19301973_N44_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19301973_N44_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19301973_N44_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19301973_N44_wwii_comparison.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19401973_N34_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19401973_N34_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19401973_N34_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19401973_N34_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19401973_N34_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19401973_N34_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19471974_N28_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19471974_N28_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19471974_N28_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19471974_N28_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19471974_N28_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_4ch_19471974_N28_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_4ch_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_4ch_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_4ch_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_4ch_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_4ch_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_4ch_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_extended_summary.csv
+ D output/stage_c/US/csv/stageC_US_integration_orders.csv
+ D output/stage_c/US/csv/stageC_US_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_model_comparison.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19301973_N44_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19301973_N44_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19301973_N44_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19301973_N44_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19301973_N44_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19301973_N44_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19301973_N44_wwii_comparison.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19401973_N34_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19401973_N34_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19401973_N34_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19401973_N34_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19401973_N34_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19401973_N34_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19471974_N28_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19471974_N28_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19471974_N28_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19471974_N28_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19471974_N28_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_netK_3ch_19471974_N28_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19301973_N44_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19301973_N44_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19301973_N44_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19301973_N44_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19301973_N44_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19301973_N44_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19301973_N44_wwii_comparison.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19401973_N34_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19401973_N34_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19401973_N34_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19401973_N34_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19401973_N34_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19401973_N34_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19471974_N28_ardl_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19471974_N28_bounds_tests.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19471974_N28_diagnostics.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19471974_N28_ecm_coefficients.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19471974_N28_longrun_multipliers.csv
+ D output/stage_c/US/csv/stageC_US_netK_4ch_19471974_N28_top5_models.csv
+ D output/stage_c/US/csv/stageC_US_netK_extended_summary.csv
+ D output/stage_c/US/csv/stageC_US_rolling_wald_backward.csv
+ D output/stage_c/US/csv/stageC_US_rolling_wald_forward.csv
+ D output/stage_c/US/csv/stageC_US_rolling_wald_grid.csv
+ D output/stage_c/US/csv/stageC_US_rolling_wald_grid_both_exact.csv
+ D output/stage_c/US/csv/stageC_US_rolling_wald_grid_grossK_exact.csv
+ D output/stage_c/US/csv/stageC_US_rolling_wald_grid_netK_exact.csv
+ D output/stage_c/US/csv/stageC_US_top5_models.csv
+ D output/stage_c/US/figs/fig_RC1a_wald_backward.pdf
+ D output/stage_c/US/figs/fig_RC1a_wald_backward.png
+ D output/stage_c/US/figs/fig_RC1b_wald_forward.pdf
+ D output/stage_c/US/figs/fig_RC1b_wald_forward.png
+ D output/stage_c/US/figs/fig_RC2_wald_grid_heatmap.pdf
+ D output/stage_c/US/figs/fig_RC2_wald_grid_heatmap.png
+ D output/stage_c/US/stageC_US_ardl_4channel_report.md
+ D output/stage_c/US/stageC_US_ardl_extended_report.md
+ D output/stage_c/US/stageC_US_ardl_report.md
+ D output/stage_c/US/stageC_US_netK_ardl_extended_report.md
+ D output/tables/stage1_cointegrating_vector.tex
+ D output/writing/drafts/.gitkeep
+ D output/writing/drafts/ch2_canonical_scaffold.pdf
+ D output/writing/drafts/ch2_canonical_scaffold.tex
+ D output/writing/drafts/ch2_draft_v1.pdf
+ D output/writing/drafts/ch2_draft_v1.tex
+ D output/writing/drafts/ch2_refs.bib
+ D output/writing/drafts/sec_2_1_introduction.md
+ D output/writing/drafts/sec_2_2_1_crisis_limit_accumulation.md
+ D output/writing/drafts/sec_2_2_1_stagnation_typology.md
+ D output/writing/drafts/sec_2_2_2_okishio.md
+ D output/writing/drafts/sec_2_2_2_spatial_fixes.md
+ D output/writing/drafts/sec_2_2_3_okishio_crisis_trigger.md
+ D output/writing/drafts/sec_2_2_3_profitability_accumulation.md
+ D output/writing/drafts/sec_2_2_4_multiscalar_contradictions.md
+ D output/writing/drafts/sec_2_2_5_synthesis_crisis_trigger.md
+ D output/writing/drafts/sec_2_3_1_crisis_typology.md
+ D output/writing/drafts/sec_2_3_2_layer1_accounting.md
+ D output/writing/drafts/sec_2_3_3_layer2_behavioral.md
+ D output/writing/drafts/sec_2_3_structural_primitives.md
+ D output/writing/drafts/sec_2_4_data.md
+ D output/writing/drafts/sec_2_4_distribution_capacity.md
+ D output/writing/drafts/sec_2_5_1_structural_problem.md
+ D output/writing/drafts/sec_2_5_2_chile_parallel.md
+ D output/writing/drafts/sec_2_5_2_mpf_cost_min.md
+ D output/writing/drafts/sec_2_5_3_first_stage_identification.md
+ D output/writing/drafts/sec_2_5_3_parallel_as_method.md
+ D output/writing/drafts/sec_2_5_4_periphery_capital_bop.md
+ D output/writing/drafts/sec_2_5_5_periphery_first_stage.md
+ D output/writing/drafts/sec_2_6_1_stage_a_setup.md
+ D output/writing/drafts/sec_2_6_4_derived_objects.md
+ D output/writing/drafts/sec_2_7_accounting_law.md
+ D output/writing/drafts/sec_2_7_stage_c_investment.md
+ D output/writing/drafts/sec_2_8_1_stage_b_spec.md
+ D output/writing/drafts/sec_2_9_1_tavares_channel.md
+ D output/writing/drafts/sec_2_9_2_tavares_formalization.md
+ D output/writing/drafts/sec_2_9_3_technical_composition.md
+ D output/writing/drafts/sec_2_9_conclusions.md
+ D reports/chile_frontier_multicollinearity_audit.md
+?? .Rprofile
+?? .qwen/
+?? QWEN.md
+?? agents/RRR_Accumulation_Framework.md
+?? agents/zavaleta_comparative_relational_protocol.md
+?? artifacts/AR_Corridor/
+?? artifacts/chapter2/
+?? artifacts/dataset_build_state_snapshot_2026-04-16.md
+?? artifacts/repo_map_current_2026-04-16.md
+?? artifacts/repo_state_logs/post_ws_extraction/
+?? codes/CL_00_source_of_truth_chile.R
+?? codes/CL_01_stage1_mu.R
+?? codes/CL_01_stage1_mu_source_truth_break_sig_STAGE1_ONLY.R
+?? codes/CL_01_stage1_mu_source_truth_break_sig_full.R
+?? codes/CL_03_results_package_mu_theta_wsh.R
+?? codes/CL_04_results_presentation.R
+?? codes/CL_05_profitability_analysis_core.R
+?? codes/CL_05_profitability_analysis_core_BENCH.R
+?? codes/CL_06_results_package_profitability.R
+?? codes/CL_07_results_package_profitability_diagnostics.R
+?? codes/CL_08_results_package_profitability_diagnostics_shortrun.R
+?? codes/CL_09_results_package_profitability_diagnostics_very_shortrun.R
+?? codes/CL_10_class_struggle_diagnostic.R
+?? codes/CL_11_dys_diagnostic_package.R
+?? codes/CL_12_capacity_utilization_diagnostic.R
+?? codes/CL_12_capacity_utilization_diagnostic_rebased2010.R
+?? codes/CL_12_capacity_utilization_diagnostic_rebased2010_v2.R
+?? codes/CL_A_stage1_ECT_audit.R
+?? codes/CL_B_stage2_mu_Diagnostic.R
+?? codes/US_dols_diagnostic.R
+?? codes/US_dols_try_fullsample.R
+?? codes/US_dols_try_fullsample_v2.R
+?? codes/_legacyV2/
+?? codes/chile_class_struggle_astorga_weisskopf_v2.R
+?? codes/contexter/
+?? codes/legacy/stage_a/
+?? codes/legacy/stage_b/
+?? codes/legacy/stage_c/
+?? codes/us_dols_mu_theta_graph.R
+?? codes/us_dols_spec_grid_cointReg.R
+?? codes/us_dols_theta_graph.R
+?? codes/us_profitability_analysis.R
+?? codes/us_profitability_analysis_results_pack.R
+?? data/final/chile_panel.csv
+?? data/final/chile_panel_README.txt
+?? data/processed/US/us_mu_theta_path_spec-S1_window-1940_1978_estActive-1943_1976_anchorYear-1973_norm-fullcap_pkg-cointRegD_p-2_kernel-ba_bw-3.csv
+?? data/processed/US/us_nf_corporate_stageBC.csv
+?? data/processed/US/us_nf_corporate_stageBC_codebook.csv
+?? data/processed/US/us_nf_corporate_stageC.csv
+?? data/processed/US/us_nf_corporate_stageC_codebook.csv
+?? data/processed/wbop_chile_us_panel.csv
+?? data/processed/wbop_chile_us_user_guide.md
+?? data/processed/wbop_variable_inventory.xlsx
+?? data/raw/Chile/harmonized_series_2003CLP_1900_2024.csv
+?? data/raw/other/
+?? output/US_dols_diagnostics/
+?? output/US_theta_break_core_1929_1978/
+?? output/US_theta_window_benchmark_and_robustness/
+?? output/_legacy/
+?? output/chile_2Smu_S1/
+?? output/chile_2Smu_S2_tdols/
+?? output/chile_class_struggle_astorga_weisskopf/
+?? output/chile_diagnostic_package/
+?? output/profitability_chile/
+?? output/profitability_chile_diagnostic/
+?? output/profitability_chile_diagnostic_short_very_19681975/
+?? output/profitability_chile_diagnostic_shortrun_19571978/
+?? output/profitability_us/
+?? output/source_of_truth_chile/
+?? output/wbop/
+?? scripts/
