@@ -86,3 +86,12 @@ Produce a clean local architecture:
 - Do not run `git clean -fd` on non-ignored files.
 - Do not push current state directly to `main`.
 - Do not commit all deletions without a curation ledger.
+
+## Shell-fragment cleanup
+
+During terminal auditing, two accidental top-level shell-fragment files were created:
+
+- `-type f`
+- `GitHub" `
+
+They were inspected as command-fragment artifacts and removed from the working tree. They were untracked and never part of the repository history.
