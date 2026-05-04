@@ -39,8 +39,8 @@ coeff_lines <- c(
 )
 
 # Build markdown table rows
-sample_names <- c("full", "pre1974", "post1973")
-col_labels  <- c("Full sample", "Pre-1974 (≤1973)", "Post-1973 (≥1974)")
+sample_names <- c("full", "pre1974", "post1973", "fordist")
+col_labels  <- c("Full sample", "Pre-1974 (≤1973)", "Post-1973 (≥1974)", "Fordist core (1945–1973)")
 
 # Header row
 header <- "| Parameter |"

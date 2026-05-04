@@ -1,0 +1,13 @@
+AR_Corridor/00_governing_notes/estimation_strategy_note.md
+AR_Corridor/00_governing_notes/notation_and_objects.md
+AR_Corridor/00_governing_notes/scope_lock_note.md
+AR_Corridor/02_country_tracks/united_states/scripts/01_US_theta_DOLS.R
+AR_Corridor/02_country_tracks/united_states/scripts/02_US_theta_results_md.R
+AR_Corridor/02_country_tracks/united_states/scripts/03_US_theta_figures.R
+chapter2/Ch2_Outline_DEFINITIVE.md
+chapter2/ch2_modular_index.md
+chapter2/ch2_section_prompts.md
+chapter2/ch2_voice_guide.md
+chapter2/fire_ch2_drafts.py
+chapter2/s2_2_final_draft.md
+chapter2/s2_2_voice_constraints.md

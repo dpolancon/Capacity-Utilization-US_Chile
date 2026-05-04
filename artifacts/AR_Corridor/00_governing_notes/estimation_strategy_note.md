@@ -1,11 +1,16 @@
 # AR Corridor — Estimation Strategy Note
 **Date:** 2026-04-13  
-**Estimator family:** DOLS (Dynamic OLS)
+**Estimator family:** DOLS (Dynamic OLS) via `cointRegD()` (cointReg R package)
 
 ## Theoretical lineage
 - Saikkonen (1991): foundational asymptotic efficiency theory for modified OLS in cointegrating regressions
 - Stock & Watson (1993): canonical operational form — regress on contemporaneous levels plus leads and
   lags of first differences; asymptotically equivalent to Johansen/Ahn-Reinsel in the I(1) single-vector case
+
+## Implementation
+- `cointRegD()` handles leads/lags construction and Newey-West long-run variance correction internally
+- `bandwidth = "nw"` (Newey-West) for HAC inference on β coefficients
+- Manual `lm()` run in parallel for R² reporting and delta-method SE of θ̄(ω̄) only
 
 ## US long-run identification target
 The identifying regression is:

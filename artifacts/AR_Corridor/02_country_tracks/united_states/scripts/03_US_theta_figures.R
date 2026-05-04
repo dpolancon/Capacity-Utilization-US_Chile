@@ -31,13 +31,15 @@ cat(sprintf("[figures] Loaded: %s\n", rds_path))
 sample_labels <- c(
   full     = "Full sample",
   pre1974  = "Pre-1974 (≤1973)",
-  post1973 = "Post-1973 (≥1974)"
+  post1973 = "Post-1973 (≥1974)",
+  fordist  = "Fordist core (1945–1973)"
 )
 
 sample_colors <- c(
-  "Full sample"         = "#1f77b4",
-  "Pre-1974 (≤1973)"    = "#2ca02c",
-  "Post-1973 (≥1974)"   = "#d62728"
+  "Full sample"          = "#1f77b4",
+  "Pre-1974 (≤1973)"     = "#2ca02c",
+  "Post-1973 (≥1974)"    = "#d62728",
+  "Fordist core (1945–1973)" = "#ff7f0e"
 )
 
 df_theta <- data.frame()
