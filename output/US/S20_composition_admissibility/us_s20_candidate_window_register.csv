@@ -1,0 +1,9 @@
+"window_label","start","end","role","available_start","available_end","available"
+"Full_1929_2024",1929,2024,"full_reference",1929,2024,TRUE
+"PreFordist_core_1929_1944",1929,1944,"predecessor",1929,1944,TRUE
+"Fordist_core_1945_1973",1945,1973,"benchmark",1945,1973,TRUE
+"Pre1974_broad_1929_1973",1929,1973,"support",1929,1973,TRUE
+"Bridge_1940_1978",1940,1978,"bridge",1940,1978,TRUE
+"Post1974_tight_1974_1983",1974,1983,"support_short",1974,1983,TRUE
+"Post1974_support_1974_1987",1974,1987,"support",1974,1987,TRUE
+"Post1974_broad_1974_2024",1974,2024,"post_reference",1974,2024,TRUE
