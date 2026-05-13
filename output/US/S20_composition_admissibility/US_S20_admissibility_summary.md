@@ -14,8 +14,18 @@ It does not perform final coefficient recovery and does not reconstruct producti
 
 ## Composition availability
 
-- s_t is not available in the current US source panel; S30 must use the wage-share interaction baseline or wait for a machinery/non-machinery capital split.
-- phi_t is not available in the current US source panel; this is acceptable for the center benchmark.
+- composition_status = proxy_available
+- composition_basis = ME_NRC_component_proxy
+- composition_tier = Tier B
+- direct_sector_asset_split = FALSE
+- sector_target = NFCorp
+- Estimation sample checked: 1929-2024 (N = 96)
+- The ME-NRC component proxy is present and non-missing for the S20 estimation sample.
+- s_t direct asset split is not available in the current US source panel.
+- phi_t direct investment-composition split is not available in the current US source panel.
+- Default proxy mappings: s_t_proxy = s_ME_over_ME_NRC_gross_real; phi_t_proxy = phi_ME_over_ME_NRC_real.
+- Diagnostic proxy mappings: s_t_proxy_cc = s_ME_over_ME_NRC_gross_cc; phi_t_proxy_cc = phi_ME_over_ME_NRC_cc; pK_relative_ME_NRC = pK_relative_ME_NRC.
+- Interpretation: Tier-B ME-NRC component proxy for the NFCorp-centered transformation relation; not a direct nonfinancial-corporate-by-asset-type split.
 
 ## Candidate windows
 

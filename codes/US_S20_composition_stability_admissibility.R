@@ -43,6 +43,12 @@ require_cols <- function(df, cols, object_name) {
   invisible(TRUE)
 }
 
+first_existing_name <- function(df, candidates) {
+  hit <- intersect(candidates, names(df))
+  if (length(hit) == 0L) return(NA_character_)
+  hit[1L]
+}
+
 safe_log <- function(x) {
   out <- rep(NA_real_, length(x))
   ok <- is.finite(x) & x > 0
@@ -59,6 +65,24 @@ safe_cor <- function(x, y) {
   ok <- is.finite(x) & is.finite(y)
   if (sum(ok) < 3L) return(NA_real_)
   suppressWarnings(cor(x[ok], y[ok]))
+}
+
+safe_min <- function(x) {
+  ok <- is.finite(x)
+  if (!any(ok)) return(NA_real_)
+  min(x[ok])
+}
+
+safe_mean <- function(x) {
+  ok <- is.finite(x)
+  if (!any(ok)) return(NA_real_)
+  mean(x[ok])
+}
+
+safe_max <- function(x) {
+  ok <- is.finite(x)
+  if (!any(ok)) return(NA_real_)
+  max(x[ok])
 }
 
 safe_vif_pair <- function(x1, x2) {
@@ -113,6 +137,79 @@ panel <- read.csv(in_panel_path, stringsAsFactors = FALSE)
 require_cols(panel, c("year", "y_t", "k_t", "omega_t", "Y_real", "K_total_real"), "US S10 panel")
 panel <- panel[order(panel$year), ]
 
+# ---- 2b. Composition proxy contract -----------------------------------------
+# The ME-NRC bridge is a Tier-B NFCorp-centered component proxy. It is not a
+# direct nonfinancial-corporate-by-asset-type split.
+s_proxy_source <- first_existing_name(panel, c("s_t_proxy", "s_ME_over_ME_NRC_gross_real"))
+phi_proxy_source <- first_existing_name(panel, c("phi_t_proxy", "phi_ME_over_ME_NRC_real"))
+s_proxy_cc_source <- first_existing_name(panel, c("s_t_proxy_cc", "s_ME_over_ME_NRC_gross_cc"))
+phi_proxy_cc_source <- first_existing_name(panel, c("phi_t_proxy_cc", "phi_ME_over_ME_NRC_cc"))
+pK_relative_source <- first_existing_name(panel, c("pK_relative_ME_NRC"))
+
+if (!"s_t_proxy" %in% names(panel)) {
+  panel$s_t_proxy <- if (!is.na(s_proxy_source)) panel[[s_proxy_source]] else NA_real_
+}
+if (!"phi_t_proxy" %in% names(panel)) {
+  panel$phi_t_proxy <- if (!is.na(phi_proxy_source)) panel[[phi_proxy_source]] else NA_real_
+}
+if (!"s_t_proxy_cc" %in% names(panel)) {
+  panel$s_t_proxy_cc <- if (!is.na(s_proxy_cc_source)) panel[[s_proxy_cc_source]] else NA_real_
+}
+if (!"phi_t_proxy_cc" %in% names(panel)) {
+  panel$phi_t_proxy_cc <- if (!is.na(phi_proxy_cc_source)) panel[[phi_proxy_cc_source]] else NA_real_
+}
+if (!"pK_relative_ME_NRC" %in% names(panel)) {
+  panel$pK_relative_ME_NRC <- if (!is.na(pK_relative_source)) panel[[pK_relative_source]] else NA_real_
+}
+
+panel$s_t_proxy <- suppressWarnings(as.numeric(panel$s_t_proxy))
+panel$phi_t_proxy <- suppressWarnings(as.numeric(panel$phi_t_proxy))
+panel$s_t_proxy_cc <- suppressWarnings(as.numeric(panel$s_t_proxy_cc))
+panel$phi_t_proxy_cc <- suppressWarnings(as.numeric(panel$phi_t_proxy_cc))
+panel$pK_relative_ME_NRC <- suppressWarnings(as.numeric(panel$pK_relative_ME_NRC))
+
+if (!"s_ME_over_ME_NRC_gross_real" %in% names(panel)) {
+  panel$s_ME_over_ME_NRC_gross_real <- panel$s_t_proxy
+}
+if (!"phi_ME_over_ME_NRC_real" %in% names(panel)) {
+  panel$phi_ME_over_ME_NRC_real <- panel$phi_t_proxy
+}
+if (!"s_ME_over_ME_NRC_gross_cc" %in% names(panel)) {
+  panel$s_ME_over_ME_NRC_gross_cc <- panel$s_t_proxy_cc
+}
+if (!"phi_ME_over_ME_NRC_cc" %in% names(panel)) {
+  panel$phi_ME_over_ME_NRC_cc <- panel$phi_t_proxy_cc
+}
+
+composition_estimation_sample <- is.finite(panel$year) &
+  is.finite(panel$y_t) &
+  is.finite(panel$k_t) &
+  is.finite(panel$omega_t)
+
+composition_proxy_available <- sum(composition_estimation_sample) > 0L &&
+  all(is.finite(panel$s_t_proxy[composition_estimation_sample])) &&
+  all(is.finite(panel$phi_t_proxy[composition_estimation_sample]))
+
+if (composition_proxy_available) {
+  composition_status_value <- "proxy_available"
+  composition_basis_value <- "ME_NRC_component_proxy"
+  composition_tier_value <- "Tier B"
+  direct_sector_asset_split_value <- FALSE
+  sector_target_value <- "NFCorp"
+} else {
+  composition_status_value <- "unavailable"
+  composition_basis_value <- NA_character_
+  composition_tier_value <- NA_character_
+  direct_sector_asset_split_value <- NA
+  sector_target_value <- NA_character_
+}
+
+panel$composition_status <- composition_status_value
+panel$composition_basis <- composition_basis_value
+panel$composition_tier <- composition_tier_value
+panel$direct_sector_asset_split <- direct_sector_asset_split_value
+panel$sector_target <- sector_target_value
+
 # ---- 3. Construct S20 variables --------------------------------------------
 # Core old interaction retained as a diagnostic surface.
 panel$omega_k_t <- panel$omega_t * panel$k_t
@@ -129,6 +226,16 @@ if (!is.finite(s_bar)) s_bar <- NA_real_
 panel$s_dev <- panel$s_t - s_bar
 panel$s_dev_k_t <- panel$s_dev * panel$k_t
 panel$omega_s_dev_k_t <- panel$omega_t * panel$s_dev_k_t
+
+s_proxy_bar <- mean(panel$s_t_proxy, na.rm = TRUE)
+if (!is.finite(s_proxy_bar)) s_proxy_bar <- NA_real_
+panel$s_proxy_dev <- panel$s_t_proxy - s_proxy_bar
+panel$s_proxy_dev_k_t <- panel$s_proxy_dev * panel$k_t
+panel$omega_s_proxy_dev_k_t <- panel$omega_t * panel$s_proxy_dev_k_t
+
+phi_proxy_bar <- mean(panel$phi_t_proxy, na.rm = TRUE)
+if (!is.finite(phi_proxy_bar)) phi_proxy_bar <- NA_real_
+panel$phi_proxy_dev <- panel$phi_t_proxy - phi_proxy_bar
 
 # Mechanization/productivity diagnostic variables when ingredients exist.
 if (!"K_machinery_real" %in% names(panel)) panel$K_machinery_real <- NA_real_
@@ -235,6 +342,19 @@ scan_one_window <- function(w) {
     condition_number_centered = safe_condition_number(X_ctr),
     s_available = any(is.finite(df$s_t)),
     phi_available = any(is.finite(df$phi_t)),
+    s_t_proxy_available = any(is.finite(df$s_t_proxy)),
+    phi_t_proxy_available = any(is.finite(df$phi_t_proxy)),
+    s_t_proxy_min = safe_min(df$s_t_proxy),
+    s_t_proxy_mean = safe_mean(df$s_t_proxy),
+    s_t_proxy_max = safe_max(df$s_t_proxy),
+    phi_t_proxy_min = safe_min(df$phi_t_proxy),
+    phi_t_proxy_mean = safe_mean(df$phi_t_proxy),
+    phi_t_proxy_max = safe_max(df$phi_t_proxy),
+    composition_status = composition_status_value,
+    composition_basis = composition_basis_value,
+    composition_tier = composition_tier_value,
+    direct_sector_asset_split = direct_sector_asset_split_value,
+    sector_target = sector_target_value,
     q_available = any(is.finite(df$q_t)),
     a_available = any(is.finite(df$a_t)),
     ols_uncentered_ok = isTRUE(ols_unc$ok),
@@ -263,16 +383,29 @@ write.csv(window_summary, window_summary_path, row.names = FALSE)
 write.csv(windows, window_register_path, row.names = FALSE)
 
 # ---- 7. Markdown summary -----------------------------------------------------
-composition_msg <- if (any(is.finite(panel$s_t))) {
-  "s_t is available and can support composition-weighted transformation surfaces."
+direct_composition_msg <- if (any(is.finite(panel$s_t))) {
+  "s_t is available as a direct composition variable."
 } else {
-  "s_t is not available in the current US source panel; S30 must use the wage-share interaction baseline or wait for a machinery/non-machinery capital split."
+  "s_t direct asset split is not available in the current US source panel."
 }
 
-phi_msg <- if (any(is.finite(panel$phi_t))) {
-  "phi_t is available."
+direct_phi_msg <- if (any(is.finite(panel$phi_t))) {
+  "phi_t is available as a direct investment-composition variable."
 } else {
-  "phi_t is not available in the current US source panel; this is acceptable for the center benchmark."
+  "phi_t direct investment-composition split is not available in the current US source panel."
+}
+
+proxy_msg <- if (composition_proxy_available) {
+  "The ME-NRC component proxy is present and non-missing for the S20 estimation sample."
+} else {
+  "The ME-NRC component proxy is unavailable or incomplete for the S20 estimation sample."
+}
+
+estimation_sample_years <- panel$year[composition_estimation_sample]
+estimation_sample_span <- if (length(estimation_sample_years) > 0L) {
+  paste0(min(estimation_sample_years), "-", max(estimation_sample_years))
+} else {
+  "none"
 }
 
 summary_md <- c(
@@ -292,8 +425,18 @@ summary_md <- c(
   "",
   "## Composition availability",
   "",
-  paste0("- ", composition_msg),
-  paste0("- ", phi_msg),
+  paste0("- composition_status = ", composition_status_value),
+  paste0("- composition_basis = ", ifelse(is.na(composition_basis_value), "NA", composition_basis_value)),
+  paste0("- composition_tier = ", ifelse(is.na(composition_tier_value), "NA", composition_tier_value)),
+  paste0("- direct_sector_asset_split = ", ifelse(is.na(direct_sector_asset_split_value), "NA", direct_sector_asset_split_value)),
+  paste0("- sector_target = ", ifelse(is.na(sector_target_value), "NA", sector_target_value)),
+  paste0("- Estimation sample checked: ", estimation_sample_span, " (N = ", sum(composition_estimation_sample), ")"),
+  paste0("- ", proxy_msg),
+  paste0("- ", direct_composition_msg),
+  paste0("- ", direct_phi_msg),
+  "- Default proxy mappings: s_t_proxy = s_ME_over_ME_NRC_gross_real; phi_t_proxy = phi_ME_over_ME_NRC_real.",
+  "- Diagnostic proxy mappings: s_t_proxy_cc = s_ME_over_ME_NRC_gross_cc; phi_t_proxy_cc = phi_ME_over_ME_NRC_cc; pK_relative_ME_NRC = pK_relative_ME_NRC.",
+  "- Interpretation: Tier-B ME-NRC component proxy for the NFCorp-centered transformation relation; not a direct nonfinancial-corporate-by-asset-type split.",
   "",
   "## Candidate windows",
   "",
