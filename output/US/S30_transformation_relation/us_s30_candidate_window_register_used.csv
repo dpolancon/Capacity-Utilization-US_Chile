@@ -1,0 +1,11 @@
+"window_id","year_start","year_end","role","source","available_start","available_end","available"
+"prefordist_core_1929_1944",1929,1944,"predecessor","S20_register",1929,1944,TRUE
+"pre_1974",1929,1973,"pre_reference","S30_mandatory+S20_register",1929,1973,TRUE
+"full_long_sample",1929,2024,"full_reference","S30_mandatory+S20_register",1929,2024,TRUE
+"pre_1974_alt_1940_1973",1940,1973,"support","S30_mandatory",1940,1973,TRUE
+"bridge_1940_1978",1940,1978,"bridge","S30_mandatory+S20_register",1940,1978,TRUE
+"fordist_core",1945,1973,"benchmark","S30_mandatory+S20_register",1945,1973,TRUE
+"pre_1974_alt_1947_1974",1947,1974,"support","S30_mandatory",1947,1974,TRUE
+"post_1974_tight",1974,1983,"support_short","S30_mandatory+S20_register",1974,1983,TRUE
+"post_1974_support",1974,1987,"support","S30_mandatory+S20_register",1974,1987,TRUE
+"post_1973",1974,2024,"post_reference","S30_mandatory+S20_register",1974,2024,TRUE

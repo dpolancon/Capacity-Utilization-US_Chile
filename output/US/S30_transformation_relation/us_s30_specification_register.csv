@@ -1,0 +1,7 @@
+"spec_id","formula_label","regressors","composition_required","proxy_type_required","promotion_eligible","diagnostic_only","role","notes"
+"SPEC_B0_CAPITAL_ONLY","y_t ~ k_t","k_t",FALSE,"none",FALSE,FALSE,"baseline_reference","Baseline reference only."
+"SPEC_B1_WAGE_BASELINE","y_t ~ k_t + omega_k_t","k_t|omega_k_t",FALSE,"none",TRUE,FALSE,"core_candidate","Core wage-share interaction baseline."
+"SPEC_C1_COMPOSITION_STOCK","y_t ~ k_t + omega_k_t + s_proxy_k_t","k_t|omega_k_t|s_proxy_k_t",TRUE,"default_real",TRUE,FALSE,"core_candidate","Core Tier-B stock-composition proxy specification."
+"SPEC_C2_FULL_COMPOSITION","y_t ~ k_t + omega_k_t + s_proxy_k_t + omega_s_proxy_k_t","k_t|omega_k_t|s_proxy_k_t|omega_s_proxy_k_t",TRUE,"default_real",TRUE,FALSE,"core_candidate","Core Tier-B stock-composition proxy with wage-composition interaction."
+"SPEC_D1_CURRENT_COST_DIAGNOSTIC","y_t ~ k_t + omega_k_t + s_proxy_cc_k_t","k_t|omega_k_t|s_proxy_cc_k_t",TRUE,"current_cost",FALSE,TRUE,"diagnostic_only","Current-cost diagnostic only."
+"SPEC_D2_PRICE_WEDGE_DIAGNOSTIC","y_t ~ k_t + omega_k_t + s_proxy_k_t + pKrel_k_t","k_t|omega_k_t|s_proxy_k_t|pKrel_k_t",TRUE,"price_wedge",FALSE,TRUE,"diagnostic_only","Relative-price wedge diagnostic only."
