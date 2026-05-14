@@ -1,0 +1,11 @@
+method,signal_col,signal_idx,signal_year,idx,year,value,type,signal_prev,signal_curr,signal_strength
+level_extrema,r_level,2,1958,2,1958,0.1375017495783098,peak,NA,NA,NA
+level_extrema,r_level,5,1961,5,1961,0.0806699493415625,trough,NA,NA,NA
+level_extrema,r_level,7,1963,7,1963,0.10577995614430469,peak,NA,NA,NA
+level_extrema,r_level,8,1964,8,1964,0.0753866261951969,trough,NA,NA,NA
+level_extrema,r_level,10,1966,10,1966,0.10850043927688323,peak,NA,NA,NA
+level_extrema,r_level,11,1967,11,1967,0.10176124100785724,trough,NA,NA,NA
+level_extrema,r_level,13,1969,13,1969,0.12022918546617364,peak,NA,NA,NA
+level_extrema,r_level,16,1972,16,1972,0.07463223801686555,trough,NA,NA,NA
+level_extrema,r_level,18,1974,18,1974,0.1336485373820318,peak,NA,NA,NA
+level_extrema,r_level,19,1975,19,1975,0.09634070108935348,trough,NA,NA,NA

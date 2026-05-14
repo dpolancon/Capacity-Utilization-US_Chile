@@ -1,0 +1,54 @@
+check_name,scope,source_sheet,original_variable_name,duplicate_count,details
+duplicate_entity_year_variable_rows_long,long_filtered,A1,Data series on GDP (current millions dollars MER),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,B1a,Data series on net trade balance (goods) (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,B1b,Data series on exports in goods (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,B1c,Data series on imports in goods (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,B2a,Data series on net trade balance (primary commodities) (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,B2b,Data series on exports in primary commodities (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,B2c,Data series on imports in primary commodities (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,B3a,Data series on net trade balance (manufactured goods) (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,B3b,Data series on exports in manufactured goods (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,B3c,Data series on imports in manufactured goods (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,C1a,Data series on net trade balance (services) (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,C1b,Data series on exports in services (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,C1c,Data series on imports in services (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,C1d,Data series on net trade balance (goods+services) (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,C1e,New series on exports in goods + services (% GDP) (MER $),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,C1f,New series on imports in goods + services (% GDP) (MER $),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,D1a,Data series on net income balance (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,D1b,Data series on foreign income inflows (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,D1c,Data series on foreign income outflows (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,E1a,Data series on net transfer balance (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,E1b,Data series on foreign transfer inflows (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,E1c,Data series on foreign transfer outflows (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,F1,Data series on net current account (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,G1a,Data series on foreign wealth across world regions (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,G1b,Data series on gross foreign assets (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_entity_year_variable_rows_long,long_filtered,G1c,Data series on gross foreign liabilities (% GDP),0,No duplicated entity-year-variable rows detected after normalization.
+duplicate_year_rows_sheet,sheet,A1,Data series on GDP (current millions dollars MER),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,B1a,Data series on net trade balance (goods) (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,B1b,Data series on exports in goods (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,B1c,Data series on imports in goods (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,B2a,Data series on net trade balance (primary commodities) (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,B2b,Data series on exports in primary commodities (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,B2c,Data series on imports in primary commodities (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,B3a,Data series on net trade balance (manufactured goods) (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,B3b,Data series on exports in manufactured goods (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,B3c,Data series on imports in manufactured goods (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,C1a,Data series on net trade balance (services) (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,C1b,Data series on exports in services (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,C1c,Data series on imports in services (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,C1d,Data series on net trade balance (goods+services) (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,C1e,New series on exports in goods + services (% GDP) (MER $),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,C1f,New series on imports in goods + services (% GDP) (MER $),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,D1a,Data series on net income balance (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,D1b,Data series on foreign income inflows (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,D1c,Data series on foreign income outflows (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,E1a,Data series on net transfer balance (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,E1b,Data series on foreign transfer inflows (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,E1c,Data series on foreign transfer outflows (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,F1,Data series on net current account (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,G1a,Data series on foreign wealth across world regions (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,G1b,Data series on gross foreign assets (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_year_rows_sheet,sheet,G1c,Data series on gross foreign liabilities (% GDP),0,No duplicated years detected in parsed sheet rows.
+duplicate_entity_year_rows_processed_panel,processed_panel,ALL,ALL,0,No duplicate entity-year rows detected in the processed Chile-US panel.

@@ -1,0 +1,15 @@
+Chile source of truth builder
+analysis_year_min: 1940
+analysis_year_max: 2024
+
+Resolved paths:
+- raw_panel: C:/ReposGitHub/Capacity-Utilization-US_Chile/data/raw/Chile/ch2_raw_panel_chile.csv
+- processed_panel: C:/ReposGitHub/Capacity-Utilization-US_Chile/data/processed/Chile/ch2_panel_chile.csv
+- harmonized_k: C:/ReposGitHub/Capacity-Utilization-US_Chile/data/raw/Chile/harmonized_series_2003CLP_1900_2024.csv
+- harmonized_pk: NA
+- prices_raw: C:/ReposGitHub/Capacity-Utilization-US_Chile/data/raw/Chile/W04_Precios_ClioLabPUC.xlsx
+- demand_raw: C:/ReposGitHub/Capacity-Utilization-US_Chile/data/raw/Chile/PerezEyzaguirre_DemandaAgregada.xlsx
+- distr_raw: C:/ReposGitHub/Capacity-Utilization-US_Chile/data/raw/Chile/distr_19202024.xlsx
+
+Design note:
+This panel stores shared primitives only. Structural-regime variables, class-struggle decomposition, profitability objects, wedges, ratios, logs, and motion indices are built downstream in their own scripts.

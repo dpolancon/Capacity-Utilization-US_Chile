@@ -1,0 +1,29 @@
+variable,primary_source,notes
+pY,W04_Precios_ClioLabPUC.xlsx::4.1.3::defpgb,output deflator primitive
+pC,W04_Precios_ClioLabPUC.xlsx::4.1.3::defc,consumption deflator primitive
+pG,W04_Precios_ClioLabPUC.xlsx::4.1.3::defg,government deflator primitive
+pK,harmonized_pk_2003base_1940_2024.csv preferred; W04 fallback,single Chilean capital-goods deflator taken as canonical pK
+pX,W04_Precios_ClioLabPUC.xlsx::4.1.3::defx,export deflator primitive
+pM,W04_Precios_ClioLabPUC.xlsx::4.1.3::defm,import deflator primitive
+pTI,W04_Precios_ClioLabPUC.xlsx::4.3.2::termint,price primitive kept raw
+wp,W04_Precios_ClioLabPUC.xlsx::4.4.1::iwr,wage-price primitive kept raw
+pCPI,W04_Precios_ClioLabPUC.xlsx::4.1.1::ipc,consumer price index primitive
+GDP_real,PerezEyzaguirre_DemandaAgregada.xlsx preferred; raw/processed panel fallback,canonical real GDP primitive
+C_real,PerezEyzaguirre_DemandaAgregada.xlsx if available,aggregate demand primitive
+G_real,PerezEyzaguirre_DemandaAgregada.xlsx if available,aggregate demand primitive
+FBKF_ME,PerezEyzaguirre_DemandaAgregada.xlsx preferred; processed panel fallback,machinery investment primitive
+FBKF_NR,PerezEyzaguirre_DemandaAgregada.xlsx preferred; processed panel fallback,construction/non-residential investment primitive in current chapter usage
+I_total,PerezEyzaguirre_DemandaAgregada.xlsx preferred; panel fallback,aggregate investment primitive
+X_FOB,Demand workbook if available; raw panel fallback,export flow primitive
+M_CIF,PerezEyzaguirre_DemandaAgregada.xlsx preferred; panel fallback,import flow primitive
+I_ME,harmonized_series_2003CLP_1900_2024.csv::ME::I,asset-level investment primitive
+I_NR,harmonized_series_2003CLP_1900_2024.csv::NR::I,asset-level investment primitive
+Kg_ME,harmonized_series_2003CLP_1900_2024.csv::ME::Kg,gross real capital primitive
+Kg_NR,harmonized_series_2003CLP_1900_2024.csv::NR::Kg,gross real capital primitive
+Kg_total,sum of Kg_ME + Kg_NR,locked aggregation rule from panel design
+Kn_ME,harmonized_series_2003CLP_1900_2024.csv::ME::Kn,net real capital primitive
+Kn_NR,harmonized_series_2003CLP_1900_2024.csv::NR::Kn,net real capital primitive
+Kn_total,sum of Kn_ME + Kn_NR,locked aggregation rule from panel design
+omega,distr_19202024.xlsx preferred; processed panel fallback,wage-share primitive
+pi,distr_19202024.xlsx preferred; processed panel fallback,profit-share primitive
+exploitation_rate,distr_19202024.xlsx preferred; processed panel fallback,distribution primitive

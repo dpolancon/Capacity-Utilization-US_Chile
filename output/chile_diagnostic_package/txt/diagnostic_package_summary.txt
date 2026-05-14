@@ -1,0 +1,38 @@
+Chile diagnostic package completed.
+
+Structural lock:
+ - Governing pre-1974 structural sample = ISI1931_1973
+ - ISI threshold gamma = -6.2317282075604
+ - Pinch year for rescued utilization path = 1980
+
+Required profitability primitives used to build the motion panel:
+ - year
+ - r_struct_t
+ - pi_t
+ - mu_t
+ - p_t
+ - B_t
+ - nu_t
+ - IGC
+ - GOS
+ - k_nr
+ - y
+
+Core exports:
+ - csv/annual_diagnostic_panel.csv
+ - csv/annual_component_trace_panel.csv
+ - csv/swing_source_trace_panel.csv
+ - csv/swing_summary_panel.csv
+ - csv/period_summary_panel.csv
+ - csv/period_classification_panel.csv
+ - csv/crosswalk_year_swing_period.csv
+
+Figures:
+ - figs/fig_dysfunctionality_1940_1978.(png/pdf)
+ - figs/fig_theta_mu_1940_1978.(png/pdf)
+ - figs/fig_growth_accumulation_1940_1978.(png/pdf)
+
+Notes:
+ - mu is the rescued capacity-utilization path under the threshold-theta splice.
+ - ext_bind_flag_isi is oriented so ECT <= gamma_isi denotes the bind side.
+ - Class-struggle integration is deferred to a later join through the crosswalk.

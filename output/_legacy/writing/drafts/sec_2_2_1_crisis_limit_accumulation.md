@@ -1,0 +1,17 @@
+# §2.2.1 — Crisis as the Limit of Capitalist Accumulation
+**Source authority:** Shaikh (2016); Itoh (1980)
+**Date drafted:** 2026-04-02
+**Word count:** ~340
+**Self-check:** PASS
+**Transition check:** Exit ramp hands off to §2.2.2 (channels through which the stagnation tendency operates: disproportionality, class struggle, spatial displacement).
+**Note:** This draft supersedes `sec_2_2_1_stagnation_typology.md` (Vidal/Basu version). The §2.2.3 draft opens with "The stagnation typology of §2.2.1" — that back-reference will require revision to match the new §2.2.1 framing.
+
+---
+
+Capitalist crisis is not a contingent failure of coordination or policy but an expression of the internal contradictions of capitalist accumulation itself. Shaikh (2016) and Itoh (1980) converge on this foundational claim from distinct analytical registers — Shaikh through the classical-Marxian theory of real competition, Itoh through the Uno-school reconstruction of crisis as the necessary form of capitalist reproduction — and both arrive at the same structural conclusion: the limit of capitalist accumulation is capital itself, not an external shock that interrupts an otherwise stable process.
+
+The analytical distinction that organizes this chapter follows directly. The *stagnation tendency* — persistent downward pressure on profitability arising from the competitive dynamics of capital accumulation — is the secular condition. It operates continuously, depressing the average rate of profit through capital deepening, distributional shifts, and demand-side realization constraints. But the stagnation tendency does not manifest as permanent collapse. It is provisionally contained within what this chapter designates the *accumulation regime* $\Lambda$: the historically specific institutional settlement — comprising the organization of production, the terms of the capital-labor compromise, the structure of international trade, and the financial architecture — through which capital temporarily resolves its internal contradictions. $\Lambda$ does not eliminate the stagnation tendency; it absorbs and displaces it across institutional channels. The regime holds so long as its containing capacity exceeds the pressure the tendency generates.
+
+*Structural crisis* is the moment at which the accumulation regime exhausts that containing capacity. The stagnation tendency breaks through the institutional settlement, and partial adjustments — policy recalibration, financial restructuring, localized devaluation — no longer suffice. What is required is drastic restructuring of $\Lambda$ itself: a transformation in the technology of production, the spatial division of labor, or the terms on which surplus value is produced and realized. The distinction between stagnation tendency and structural crisis is therefore not one of degree but of kind: the first is the permanent condition of capitalist accumulation; the second is the historical rupture through which that condition becomes politically and economically unsustainable.
+
+This chapter takes the endogeneity of crisis as given and asks a more specific question: through which channels does the stagnation tendency operate, and how do those channels interact within a concrete accumulation regime? The next subsection identifies the principal mechanisms — disproportionality, class struggle, and spatial displacement — through which the tendency finds institutional expression.

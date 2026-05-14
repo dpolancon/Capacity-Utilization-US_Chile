@@ -1,0 +1,105 @@
+source_sheet,original_variable_name,standardized_entity,raw_entity_label,total_obs_post_1900,nonmissing_obs_post_1900,missing_obs_post_1900,missingness_share,min_year_available,max_year_available,constant_series_yes_no,plotted_variable_yes_no
+A1,Data series on GDP (current millions dollars MER),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+A1,Data series on GDP (current millions dollars MER),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+A1,Data series on GDP (current millions dollars MER),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+A1,Data series on GDP (current millions dollars MER),United States,US,126,126,0,0.0,1900,2025,no,yes
+B1a,Data series on net trade balance (goods) (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+B1a,Data series on net trade balance (goods) (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+B1a,Data series on net trade balance (goods) (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+B1a,Data series on net trade balance (goods) (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+B1b,Data series on exports in goods (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+B1b,Data series on exports in goods (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+B1b,Data series on exports in goods (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+B1b,Data series on exports in goods (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+B1c,Data series on imports in goods (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+B1c,Data series on imports in goods (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+B1c,Data series on imports in goods (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+B1c,Data series on imports in goods (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+B2a,Data series on net trade balance (primary commodities) (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+B2a,Data series on net trade balance (primary commodities) (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+B2a,Data series on net trade balance (primary commodities) (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+B2a,Data series on net trade balance (primary commodities) (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+B2b,Data series on exports in primary commodities (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+B2b,Data series on exports in primary commodities (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+B2b,Data series on exports in primary commodities (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+B2b,Data series on exports in primary commodities (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+B2c,Data series on imports in primary commodities (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+B2c,Data series on imports in primary commodities (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+B2c,Data series on imports in primary commodities (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+B2c,Data series on imports in primary commodities (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+B3a,Data series on net trade balance (manufactured goods) (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+B3a,Data series on net trade balance (manufactured goods) (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+B3a,Data series on net trade balance (manufactured goods) (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+B3a,Data series on net trade balance (manufactured goods) (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+B3b,Data series on exports in manufactured goods (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+B3b,Data series on exports in manufactured goods (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+B3b,Data series on exports in manufactured goods (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+B3b,Data series on exports in manufactured goods (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+B3c,Data series on imports in manufactured goods (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+B3c,Data series on imports in manufactured goods (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+B3c,Data series on imports in manufactured goods (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+B3c,Data series on imports in manufactured goods (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+C1a,Data series on net trade balance (services) (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+C1a,Data series on net trade balance (services) (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+C1a,Data series on net trade balance (services) (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+C1a,Data series on net trade balance (services) (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+C1b,Data series on exports in services (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+C1b,Data series on exports in services (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+C1b,Data series on exports in services (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+C1b,Data series on exports in services (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+C1c,Data series on imports in services (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+C1c,Data series on imports in services (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+C1c,Data series on imports in services (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+C1c,Data series on imports in services (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+C1d,Data series on net trade balance (goods+services) (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+C1d,Data series on net trade balance (goods+services) (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+C1d,Data series on net trade balance (goods+services) (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+C1d,Data series on net trade balance (goods+services) (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+C1e,New series on exports in goods + services (% GDP) (MER $),Chile,CL,124,124,0,0.0,1900,2023,no,yes
+C1e,New series on exports in goods + services (% GDP) (MER $),Latin America,Latin America,124,124,0,0.0,1900,2023,no,yes
+C1e,New series on exports in goods + services (% GDP) (MER $),United Kingdom,GB,124,124,0,0.0,1900,2023,no,yes
+C1e,New series on exports in goods + services (% GDP) (MER $),United States,US,124,124,0,0.0,1900,2023,no,yes
+C1f,New series on imports in goods + services (% GDP) (MER $),Chile,CL,124,124,0,0.0,1900,2023,no,yes
+C1f,New series on imports in goods + services (% GDP) (MER $),Latin America,Latin America,124,124,0,0.0,1900,2023,no,yes
+C1f,New series on imports in goods + services (% GDP) (MER $),United Kingdom,GB,124,124,0,0.0,1900,2023,no,yes
+C1f,New series on imports in goods + services (% GDP) (MER $),United States,US,124,124,0,0.0,1900,2023,no,yes
+D1a,Data series on net income balance (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+D1a,Data series on net income balance (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+D1a,Data series on net income balance (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+D1a,Data series on net income balance (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+D1b,Data series on foreign income inflows (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+D1b,Data series on foreign income inflows (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+D1b,Data series on foreign income inflows (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+D1b,Data series on foreign income inflows (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+D1c,Data series on foreign income outflows (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+D1c,Data series on foreign income outflows (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+D1c,Data series on foreign income outflows (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+D1c,Data series on foreign income outflows (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+E1a,Data series on net transfer balance (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+E1a,Data series on net transfer balance (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+E1a,Data series on net transfer balance (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+E1a,Data series on net transfer balance (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+E1b,Data series on foreign transfer inflows (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+E1b,Data series on foreign transfer inflows (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+E1b,Data series on foreign transfer inflows (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+E1b,Data series on foreign transfer inflows (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+E1c,Data series on foreign transfer outflows (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+E1c,Data series on foreign transfer outflows (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+E1c,Data series on foreign transfer outflows (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+E1c,Data series on foreign transfer outflows (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+F1,Data series on net current account (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+F1,Data series on net current account (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+F1,Data series on net current account (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+F1,Data series on net current account (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+G1a,Data series on foreign wealth across world regions (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+G1a,Data series on foreign wealth across world regions (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+G1a,Data series on foreign wealth across world regions (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+G1a,Data series on foreign wealth across world regions (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+G1b,Data series on gross foreign assets (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+G1b,Data series on gross foreign assets (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+G1b,Data series on gross foreign assets (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+G1b,Data series on gross foreign assets (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes
+G1c,Data series on gross foreign liabilities (% GDP),Chile,CL,126,126,0,0.0,1900,2025,no,yes
+G1c,Data series on gross foreign liabilities (% GDP),Latin America,Latin America,126,126,0,0.0,1900,2025,no,yes
+G1c,Data series on gross foreign liabilities (% GDP),United Kingdom,GB,126,126,0,0.0,1900,2025,no,yes
+G1c,Data series on gross foreign liabilities (% GDP),United States,US,126,126,0,0.0,1900,2025,no,yes

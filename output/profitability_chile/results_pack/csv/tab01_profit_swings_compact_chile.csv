@@ -1,0 +1,6 @@
+swing_id,start_year,end_year,direction,duration_years,phase_label,amplitude_pct_diag,amplitude_log_struct,dist_share_pct,util_share_pct,price_share_pct,capacity_share_pct,wedge_share_pct,G_swing,N_swing,D_swing,S_off_swing,F_rev_swing,avg_chi,avg_accounting_wedge
+1,1942,1944,peak_to_trough,2,strong_reversal,-9.1,-0.255,56.4,-19.8,62.5,1.3,-0.4,0.3579,-0.2548,0.288,0.144,0.1682,0.2563,1.0313
+2,1944,1955,trough_to_peak,11,strong_offset,68.1,0.956,46,-12.1,45.7,53.3,-32.9,1.8161,0.9559,0.4737,0.2368,0.3103,0.3377,1.0773
+3,1955,1965,peak_to_trough,10,strong_reversal,-41.9,-0.835,56.8,25.9,35,-67.6,50,1.9656,-0.8354,0.575,0.2875,0.4035,0.3487,1.1027
+4,1965,1969,trough_to_peak,4,strong_offset,46.6,0.374,86.2,6.9,-2.3,46.9,-37.7,0.673,0.3738,0.4446,0.2223,0.2858,0.3666,0.9828
+5,1969,1976,peak_to_trough,7,strong_reversal,-16.4,-0.557,-5.3,43,67.8,-31.3,25.7,0.9651,-0.5573,0.4226,0.2113,0.2679,0.3443,0.8246

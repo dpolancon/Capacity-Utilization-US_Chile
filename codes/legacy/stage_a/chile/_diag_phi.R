@@ -1,0 +1,5 @@
+df <- read.csv("C:/ReposGitHub/Capacity-Utilization-US_Chile/data/final/chile_tvecm_panel.csv")
+cat(sprintf("phi range: [%.4f, %.4f]\n", min(df$phi, na.rm=TRUE), max(df$phi, na.rm=TRUE)))
+cat(sprintf("phi mean by period:\n"))
+cat(sprintf("  ISI (1940-72):    %.4f\n", mean(df$phi[df$year %in% 1940:1972], na.rm=TRUE)))
+cat(sprintf("  Neo (1983-2024):  %.4f\n", mean(df$phi[df$year %in% 1983:2024], na.rm=TRUE)))

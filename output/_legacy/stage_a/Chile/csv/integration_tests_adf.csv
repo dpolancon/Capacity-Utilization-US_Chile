@@ -1,0 +1,6 @@
+variable,adf_levels,kpss_levels,adf_diff,conclusion
+y,0.7315,0.01,0.0142,I(1) PASS
+k_NR,0.7994,0.01,0.5168,CHECK
+k_ME,0.8366,0.01,0.2845,CHECK
+pi,0.1224,0.01,0.0166,I(1) PASS
+pi_kME,0.2835,0.01,0.0157,I(1) PASS

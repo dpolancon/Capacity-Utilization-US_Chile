@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\centering
+\caption{DOLS Specification Grid --- US Nonfinancial Corporate}
+\label{tab:dols_spec_grid_us}
+\small
+\begin{tabular}{l c c c c c c c l}
+\hline
+Sample & Spec & $N$ & I/C & $\hat{\beta}_1/\hat{\bar{\theta}}$ & $\hat{\beta}_2$ & $t(\beta_2)$ & $\omega_H$ & Status \\
+\hline
+Deep~comparison & S1 & 34 & IU & 0.8320 & -0.0589 & -1.01 & -2.853 & no~admissible~positive~threshold \\
+Deep~comparison & S2 & 34 & IC & 0.7948 & -0.0589 & -1.01 & -2.853 & no~admissible~positive~threshold \\
+Deep~comparison & S3 & 34 & -U & 0.9050 & 0.0379 & 0.38 & --- & wrong-sign~slope \\
+Deep~comparison & S4 & 34 & -C & 0.9290 & 0.0379 & 0.38 & --- & wrong-sign~slope \\
+Fordist~core & S1 & 24 & IU & 0.8224 & 0.0310 & 1.20 & --- & wrong-sign~slope \\
+Fordist~core & S2 & 24 & IC & 0.8419 & 0.0310 & 1.20 & --- & wrong-sign~slope \\
+Fordist~core & S3 & 24 & -U & 0.9685 & -0.0515 & -0.43 & -0.612 & no~admissible~positive~threshold \\
+Fordist~core & S4 & 24 & -C & 0.9360 & -0.0515 & -0.43 & -0.612 & no~admissible~positive~threshold \\
+Full~sample & S1 & 91 & IU & 0.8705 & 0.0051 & 0.20 & --- & wrong-sign~slope \\
+Full~sample & S2 & 91 & IC & 0.8737 & 0.0051 & 0.20 & --- & wrong-sign~slope \\
+Full~sample & S3 & 91 & -U & 0.9431 & -0.0221 & -0.59 & -2.575 & no~admissible~positive~threshold \\
+Full~sample & S4 & 91 & -C & 0.9294 & -0.0221 & -0.59 & -2.575 & no~admissible~positive~threshold \\
+Post-1973 & S1 & 46 & IU & 0.8507 & 0.0109 & 0.51 & --- & wrong-sign~slope \\
+Post-1973 & S2 & 46 & IC & 0.8574 & 0.0109 & 0.51 & --- & wrong-sign~slope \\
+Post-1973 & S3 & 46 & -U & 0.9110 & 0.0374 & 1.54 & --- & wrong-sign~slope \\
+Post-1973 & S4 & 46 & -C & 0.9340 & 0.0374 & 1.54 & --- & wrong-sign~slope \\
+Pre-1974 & S1 & 40 & IU & 1.0798 & -0.1554 & -1.73 & 0.513 & positive~threshold~outside~observed~sample~range \\
+Pre-1974 & S2 & 40 & IC & 0.9818 & -0.1554 & -1.73 & 0.513 & positive~threshold~outside~observed~sample~range \\
+Pre-1974 & S3 & 40 & -U & 1.0704 & -0.1512 & -1.71 & 0.466 & positive~threshold~outside~observed~sample~range \\
+Pre-1974 & S4 & 40 & -C & 0.9751 & -0.1512 & -1.71 & 0.466 & positive~threshold~outside~observed~sample~range \\
+\hline
+\multicolumn{9}{l}{\footnotesize DOLS($p=2$), Newey-West HAC SEs. I=intercept, C=centered, U=uncentered.}
+\end{tabular}
+\end{table}

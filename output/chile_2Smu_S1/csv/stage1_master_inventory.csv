@@ -1,0 +1,11 @@
+object,rows,cols,columns
+alpha,72,6,"ECT, equation, sample, spec, lag, rank"
+beta,72,6,"r1, variable, sample, spec, lag, rank"
+ect_series,1536,6,"year, ECT, sample, spec, lag, rank"
+ect_summary,24,11,"sample, spec, lag, rank, ect_min, ect_max, ect_range, ect_mean, ect_sd, ect_var, alpha_first_eq"
+jb,12,4,"sample, spec, statistic, p_value"
+lm,12,5,"sample, spec, order, statistic, p_value"
+rank,144,10,"sample, spec, test, ecdet, K, rank_index, statistic, cv_10pct, cv_5pct, cv_1pct"
+unitroot_battery,72,8,"variable, sample, difference, test, det, lags, stat, cval"
+vif,24,4,"sample, spec, variable, vif"
+white,12,4,"sample, spec, statistic, p_value"

@@ -1,0 +1,17 @@
+method,idx,year,value,type
+smoothed_level_extrema,3,1942,0.5956413795904288,trough
+smoothed_level_extrema,5,1944,0.6109971606852103,peak
+smoothed_level_extrema,6,1945,0.6006119448602649,trough
+smoothed_level_extrema,7,1946,0.6194283899683771,peak
+smoothed_level_extrema,8,1947,0.616186196396754,trough
+smoothed_level_extrema,9,1948,0.6223522080494983,peak
+smoothed_level_extrema,11,1950,0.5604159882908002,trough
+smoothed_level_extrema,12,1951,0.5761219008960263,peak
+smoothed_level_extrema,15,1954,0.42576580847213763,trough
+smoothed_level_extrema,22,1961,0.6207998154589411,peak
+smoothed_level_extrema,23,1962,0.6035894076128995,trough
+smoothed_level_extrema,25,1964,0.6241881951175944,peak
+smoothed_level_extrema,30,1969,0.5164053760678319,trough
+smoothed_level_extrema,33,1972,0.5992311387201114,peak
+smoothed_level_extrema,36,1975,0.45759073520147475,trough
+smoothed_level_extrema,37,1976,0.49423984589487796,peak

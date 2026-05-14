@@ -1,0 +1,7 @@
+Stage 1 review note
+This session is confined to Stage 1 only.
+Review rank behavior, variable inclusion, and the ECT.
+ECT is an external disequilibrium object, not utilization.
+Compare FULL, PRE1974, ISI1931_1973, and POST1974.
+ISI1931_1973 includes 1931 strategically so the active lagged estimation window begins in 1932.
+Focus on ECT amplitude, variance, and speed of adjustment.

@@ -1,0 +1,13 @@
+Stage 1 add-on completed.
+Added: structural break tests for ISI vs POST with break at 1974.
+Added: significance-coded companion tables using 3/2/1/0 convention.
+Added: parsed VECM term table with estimates, standard errors, p-values, and significance codes.
+
+New exports:
+- csv/stage1__white_sig.csv
+- csv/stage1__lm_sig.csv
+- csv/stage1__jb_sig.csv
+- csv/stage1__rank_sig.csv
+- csv/stage1__vecm_terms_sig.csv
+- csv/stage1__structural_break_isi_post.csv
+- csv/stage1__structural_break_isi_post_terms.csv

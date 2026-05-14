@@ -1,0 +1,2 @@
+level_var,log_var,ect_var,n_candidates_primary,n_candidates_raw,n_candidates_level,candidate_method_used,n_candidates_used,n_after_prune,used_boundary_only
+r_diag_t,ln_r_diag_t,ect,14,17,23,smoothed_dlog_rule,14,8,FALSE

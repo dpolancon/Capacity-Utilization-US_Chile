@@ -1,0 +1,5 @@
+Preferred Stage 1 spec package
+spec: S1_B
+sample anchor: PRE1974
+lag: 1
+rank: 1

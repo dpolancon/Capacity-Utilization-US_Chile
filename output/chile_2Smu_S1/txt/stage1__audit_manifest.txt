@@ -1,0 +1,9 @@
+Stage 1 VECM audit completed.
+Preferred spec: S1_B
+Preferred lag: 1
+Preferred rank: 1
+
+Exports:
+- csv/stage1__audit_rank_summary.csv
+- csv/stage1__audit_vecm_preferred.csv
+- csv/stage1__audit_fit_summary.csv

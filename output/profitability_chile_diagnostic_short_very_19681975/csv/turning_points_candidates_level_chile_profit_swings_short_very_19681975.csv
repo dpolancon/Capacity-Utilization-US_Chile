@@ -1,0 +1,4 @@
+method,signal_col,signal_idx,signal_year,idx,year,value,type,signal_prev,signal_curr,signal_strength
+level_extrema,r_level,2,1969,2,1969,0.12022918546617364,peak,NA,NA,NA
+level_extrema,r_level,5,1972,5,1972,0.07463223801686555,trough,NA,NA,NA
+level_extrema,r_level,7,1974,7,1974,0.1336485373820318,peak,NA,NA,NA

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "defaultMode": "yolo",
+    "confirmShellCommands": false,
+    "confirmFileEdits": false,
+    "allow": [
+      "Read(c:\\ReposGitHub\\US-BEA-Income-FixedAssets-Dataset\\data\\processed/**)",
+      "Read(c:\\ReposGitHub\\US-BEA-Income-FixedAssets-Dataset/**)",
+      "Read(c:\\ReposGitHub\\US-BEA-Income-FixedAssets-Dataset\\data\\raw/**)",
+      "Read(c:\\ReposGitHub\\US-BEA-Income-FixedAssets-Dataset\\data\\interim\\bea_parsed/**)",
+      "Bash(rscript *)",
+      "Bash(findstr *)"
+    ]
+  },
+  "$version": 3
+}

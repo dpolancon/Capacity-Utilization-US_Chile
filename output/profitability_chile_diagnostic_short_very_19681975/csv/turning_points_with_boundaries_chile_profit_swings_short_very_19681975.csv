@@ -1,0 +1,4 @@
+method,signal_col,signal_idx,signal_year,idx,year,value,type,signal_prev,signal_curr,signal_strength
+boundary,NA,NA,NA,1,1968,0.11097788164075029,peak,NA,NA,NA
+smoothed_dlog_rule,dlog_r_smoothed,6,1973,5,1972,0.07463223801686555,trough,-0.04248751223059122,0.06868086735203945,0.11116837958263066
+boundary,NA,NA,NA,8,1975,0.09634070108935348,peak,NA,NA,NA

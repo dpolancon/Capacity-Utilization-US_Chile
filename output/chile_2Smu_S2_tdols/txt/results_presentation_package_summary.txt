@@ -1,0 +1,41 @@
+Chile results presentation package completed.
+
+Splice used:
+ - ISI1931_1973 active span 1932-1973
+ - POST1974 span 1974-2010
+ - Pinch year 1980 => u = 1
+
+Windows:
+ - full sample: 1932-2010
+ - zoom: 1932-1978
+
+Core exports:
+ - csv/results_ts_splice_1932_2010.csv
+ - csv/results_regime_episodes_1932_2010.csv
+ - tex/results_regime_episodes_1932_2010.tex
+ - csv/results_generated_figs_manifest.csv
+
+Figure stems generated:
+ - dual_u_theta_full_1932_2010.(png/pdf)
+ - dual_theta_wsh_full_1932_2010.(png/pdf)
+ - dual_theta_ect_full_1932_2010.(png/pdf)
+ - dual_u_theta_zoom_1932_1978.(png/pdf)
+ - dual_theta_wsh_zoom_1932_1978.(png/pdf)
+ - dual_theta_ect_zoom_1932_1978.(png/pdf)
+
+Baseline split-sample package completed.
+No threshold regime switching.
+
+Core exports:
+ - csv/results_ts_baseline_splice_1932_2010.csv
+ - csv/results_baseline_split_summary_1932_2010.csv
+ - tex/results_baseline_split_summary_1932_2010.tex
+ - csv/results_generated_figs_manifest_baseline.csv
+
+Baseline figure stems generated:
+ - dual_u_theta_baseline_full_1932_2010.(png/pdf)
+ - dual_theta_wsh_baseline_full_1932_2010.(png/pdf)
+ - dual_theta_ect_baseline_full_1932_2010.(png/pdf)
+ - dual_u_theta_baseline_zoom_1932_1978.(png/pdf)
+ - dual_theta_wsh_baseline_zoom_1932_1978.(png/pdf)
+ - dual_theta_ect_baseline_zoom_1932_1978.(png/pdf)

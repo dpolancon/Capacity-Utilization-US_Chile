@@ -1,0 +1,13 @@
+"ECT","equation","sample","spec","lag","rank"
+-0.380026950227563,"Equation log_M","FULL","S1_B",1,1
+-0.0283221840227867,"Equation log_KME","FULL","S1_B",1,1
+0.457279621922323,"Equation log_NRS_proxy","FULL","S1_B",1,1
+-0.752349065208818,"Equation log_M","PRE1974","S1_B",1,1
+-0.0129014713929392,"Equation log_KME","PRE1974","S1_B",1,1
+1.25952360951194,"Equation log_NRS_proxy","PRE1974","S1_B",1,1
+-0.752349065208818,"Equation log_M","ISI1931_1973","S1_B",1,1
+-0.0129014713929392,"Equation log_KME","ISI1931_1973","S1_B",1,1
+1.25952360951194,"Equation log_NRS_proxy","ISI1931_1973","S1_B",1,1
+-0.721245667738687,"Equation log_M","POST1974","S1_B",1,1
+-0.075901002260315,"Equation log_KME","POST1974","S1_B",1,1
+-0.186422905384449,"Equation log_NRS_proxy","POST1974","S1_B",1,1

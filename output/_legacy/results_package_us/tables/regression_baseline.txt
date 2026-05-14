@@ -1,0 +1,19 @@
+
+Call:
+lm(formula = gY_t ~ ln_r_t + RR_t + GD_t, data = d_reg)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.171844 -0.031017  0.002869  0.028066  0.158774 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.481932   0.426767  -1.129    0.267
+ln_r_t      -0.007453   0.027960  -0.267    0.791
+RR_t        -0.529359   0.431637  -1.226    0.228
+GD_t         0.931171   0.976522   0.954    0.347
+
+Residual standard error: 0.05751 on 34 degrees of freedom
+Multiple R-squared:  0.1338,	Adjusted R-squared:  0.05735 
+F-statistic:  1.75 on 3 and 34 DF,  p-value: 0.1753
+

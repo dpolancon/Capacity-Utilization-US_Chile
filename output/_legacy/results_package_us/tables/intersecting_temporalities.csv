@@ -1,0 +1,14 @@
+profit_swing,profit_dir,wage_swing,hinge_start,hinge_end,hinge_duration
+1,contraction,1,1943,1946,3
+1,contraction,2,1946,1947,1
+2,contraction,2,1947,1949,2
+2,contraction,3,1949,1954,5
+2,contraction,4,1954,1954,0
+3,contraction,3,1954,1954,0
+3,contraction,4,1954,1958,4
+3,contraction,5,1958,1958,0
+4,expansion,4,1958,1958,0
+4,expansion,5,1958,1960,2
+5,expansion,5,1960,1961,1
+5,expansion,6,1961,1965,4
+5,expansion,7,1965,1965,0

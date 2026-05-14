@@ -1,0 +1,2 @@
+analysis_year_min,analysis_year_max,turning_point_method,n_candidates_used,n_after_prune,used_boundary_only,k_smooth,min_years_between_tp,min_log_move,use_manual_tp
+1940,1978,smoothed_level_extrema,16,6,FALSE,3,2,0.02,FALSE

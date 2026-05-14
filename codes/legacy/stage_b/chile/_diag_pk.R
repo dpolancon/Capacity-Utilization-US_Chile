@@ -1,0 +1,6 @@
+library(readr)
+pk <- read_csv("C:/ReposGitHub/K-Stock-Harmonization/outputs/HARMONIZED_BCCH_2003CLP_v1/harmonized_pk_2003base_1940_2024.csv", show_col_types=FALSE)
+cat("Columns:\n"); cat(names(pk), sep="\n")
+cat(sprintf("\nN=%d, years %d-%d\n", nrow(pk), min(pk$year), max(pk$year)))
+cat("\nFirst 5:\n"); print(head(pk, 5))
+cat("\nLast 5:\n"); print(tail(pk, 5))

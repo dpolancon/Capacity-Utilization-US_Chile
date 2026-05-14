@@ -1,0 +1,77 @@
+Baseline DOLS results — pre1974
+
+----- A_main -----
+
+### D-OLS model ###
+
+Model:		df$y ~ matrix(1, nrow = nrow(df), ncol = 1) + as.data.frame(df[, xvars])
+
+Parameters:	Kernel = "ba"  //  Bandwidth = 9.704794 ("Andrews")
+
+		Leads = 1 / Lags = 0 / kmax = k4 / IC = BIC 
+
+Coefficients:
+                                      Estimate   Std.Err t value Pr(|t|>0)    
+matrix(1, nrow = nrow(df), ncol = 1) -2.943298  0.927964 -3.1718  0.002589 ** 
+k_nr                                  1.059567  0.050908 20.8135 < 2.2e-16 ***
+k_nr_sme                             -0.055648  0.041012 -1.3569  0.180911    
+k_nr_wsme                             0.022955  0.061306  0.3744  0.709665    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+----- A_centered -----
+
+### D-OLS model ###
+
+Model:		df$y ~ matrix(1, nrow = nrow(df), ncol = 1) + as.data.frame(df[, xvars])
+
+Parameters:	Kernel = "ba"  //  Bandwidth = 9.117089 ("Andrews")
+
+		Leads = 1 / Lags = 0 / kmax = k4 / IC = BIC 
+
+Coefficients:
+                                      Estimate   Std.Err t value Pr(|t|>0)    
+matrix(1, nrow = nrow(df), ncol = 1) -2.974254  0.858309 -3.4652  0.001097 ** 
+k_nr                                  1.043769  0.050110 20.8295 < 2.2e-16 ***
+k_nr_sme_c                           -0.020284  0.024616 -0.8240  0.413836    
+k_nr_wsme_c                          -0.217286  0.150897 -1.4400  0.156110    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+----- B_additive -----
+
+### D-OLS model ###
+
+Model:		df$y ~ matrix(1, nrow = nrow(df), ncol = 1) + as.data.frame(df[, xvars])
+
+Parameters:	Kernel = "ba"  //  Bandwidth = 9.716666 ("Andrews")
+
+		Leads = 1 / Lags = 0 / kmax = k4 / IC = BIC 
+
+Coefficients:
+                                      Estimate   Std.Err t value Pr(|t|>0)    
+matrix(1, nrow = nrow(df), ncol = 1) -2.680780  0.985478 -2.7203  0.008948 ** 
+k_nr                                  1.044213  0.053674 19.4546 < 2.2e-16 ***
+s_me                                 -0.947264  0.728373 -1.3005  0.199385    
+wsme                                  0.390069  1.088395  0.3584  0.721561    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+----- C_legacy -----
+
+### D-OLS model ###
+
+Model:		df$y ~ matrix(1, nrow = nrow(df), ncol = 1) + as.data.frame(df[, xvars])
+
+Parameters:	Kernel = "ba"  //  Bandwidth = 9.594117 ("Andrews")
+
+		Leads = 1 / Lags = 0 / kmax = k4 / IC = BIC 
+
+Coefficients:
+                                      Estimate   Std.Err t value Pr(|t|>0)    
+matrix(1, nrow = nrow(df), ncol = 1) -3.460967  0.805685 -4.2957 8.018e-05 ***
+k_nr                                  1.350778  0.110258 12.2511 < 2.2e-16 ***
+k_me                                 -0.303108  0.119001 -2.5471   0.01399 *  
+wsh_kme                               0.014034  0.020677  0.6787   0.50046    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

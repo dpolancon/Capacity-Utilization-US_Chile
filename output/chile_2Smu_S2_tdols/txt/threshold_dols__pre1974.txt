@@ -1,0 +1,22 @@
+Threshold DOLS — PRE1974
+
+### D-OLS model ###
+
+Model:		work$y ~ as.data.frame(work[, xvars])
+
+Parameters:	Kernel = "ba"  //  Bandwidth = 3.277377 ("Andrews")
+
+		Leads = 1 / Lags = 1 (set manually) 
+
+Coefficients:
+                        Estimate     Std.Err  t value Pr(|t|>0)    
+all.truncc0_r1       -4.2836e+00  2.4368e-03  -1757.9 < 2.2e-16 ***
+all.truncc0_r2       -3.1987e+01  1.4474e-03 -22100.2 < 2.2e-16 ***
+all.truncknr_r1       1.5011e+00  1.8088e-04   8298.9 < 2.2e-16 ***
+all.truncknr_r2       2.7961e+00  9.5724e-05  29210.2 < 2.2e-16 ***
+all.truncknr_sme_r1  -7.9660e-01  4.8163e-04  -1654.0 < 2.2e-16 ***
+all.truncknr_sme_r2  -1.6648e+00  2.6563e-04  -6267.4 < 2.2e-16 ***
+all.truncknr_wsme_r1 -5.5292e-01  4.3507e-04  -1270.9 < 2.2e-16 ***
+all.truncknr_wsme_r2  2.2220e+00  5.3142e-04   4181.3 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

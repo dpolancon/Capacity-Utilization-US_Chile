@@ -1,5 +1,0 @@
-library(readr)
-raw <- read_csv("C:/ReposGitHub/Capacity-Utilization-US_Chile/data/processed/Chile/ch2_panel_chile.csv", show_col_types=FALSE)
-cat("Columns:\n")
-cat(names(raw), sep="\n")
-cat(sprintf("\nN=%d, years %d-%d\n", nrow(raw), min(raw$year), max(raw$year)))

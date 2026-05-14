@@ -1,0 +1,7 @@
+method,idx,year,value,type
+smoothed_level_extrema,3,1942,0.5956413795904288,trough
+smoothed_level_extrema,9,1948,0.6223522080494983,peak
+smoothed_level_extrema,15,1954,0.42576580847213763,trough
+smoothed_level_extrema,25,1964,0.6241881951175944,peak
+smoothed_level_extrema,30,1969,0.5164053760678319,trough
+smoothed_level_extrema,33,1972,0.5992311387201114,peak

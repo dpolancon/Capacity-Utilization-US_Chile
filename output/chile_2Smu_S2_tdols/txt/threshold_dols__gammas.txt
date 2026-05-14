@@ -1,0 +1,4 @@
+Threshold DOLS gamma — full: -4.64173537047155
+Threshold DOLS gamma — pre1974: -4.63050034190795
+Threshold DOLS gamma — isi1931_1973: -4.63050034190795
+Threshold DOLS gamma — post1974: -5.99782346315872

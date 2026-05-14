@@ -1,0 +1,6 @@
+Stage 1 manifest
+data_path: C:/ReposGitHub/Capacity-Utilization-US_Chile/output/source_of_truth_chile/rds/source_of_truth_chile.rds
+samples: FULL, PRE1974, ISI1931_1973, POST1974
+specs: S1_A, S1_B, S1_C, S1_D
+vecm_lags: 1, 2
+vecm_ranks: 1

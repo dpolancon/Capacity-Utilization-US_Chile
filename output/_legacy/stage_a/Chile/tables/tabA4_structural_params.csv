@@ -1,0 +1,8 @@
+parameter,estimate,meaning,source
+theta_0,1.3369239641305115,infrastructure elasticity (ISI-identified),ISI subsample 1940-1972
+psi,-0.1758825512542755,machinery elasticity (ISI-identified),ISI subsample 1940-1972
+theta_2,-0.0259897723130535,distribution-composition interaction,ISI subsample 1940-1972
+kappa_1,-4.4411860715774125,intercept,ISI subsample 1940-1972
+beta_kNR_raw,1.3369239641305115,= theta_0 from ISI Johansen,ISI subsample 1940-1972
+beta_kME_raw,-0.1758825512542755,= psi from ISI Johansen,ISI subsample 1940-1972
+beta_omgkME_raw,-0.0259897723130535,= theta_2 from ISI Johansen,ISI subsample 1940-1972

@@ -1,0 +1,2 @@
+analysis_year_min,analysis_year_max,level_var,log_var,ect_var,k_smooth,ect_smooth_k,local_span,min_years_between_tp,min_log_move
+1968,1975,r_diag_t,ln_r_diag_t,ect,3,3,1,1,0.01

@@ -1,0 +1,6 @@
+swing_id,start_year,end_year,direction,duration_years,start_level,end_level,amplitude_pct,pace_pct_per_year,amplitude_log,pace_log_per_year
+1,1940,1944,peak_to_trough,4,0.68,0.511,-24.831,-6.887,-0.285,-0.071
+2,1944,1960,trough_to_peak,16,0.511,0.652,27.571,1.534,0.244,0.015
+3,1960,1966,peak_to_trough,6,0.652,0.587,-9.946,-1.731,-0.105,-0.017
+4,1966,1976,trough_to_peak,10,0.587,0.656,11.747,1.117,0.111,0.011
+5,1976,1978,peak_to_trough,2,0.656,0.633,-3.469,-1.75,-0.035,-0.018

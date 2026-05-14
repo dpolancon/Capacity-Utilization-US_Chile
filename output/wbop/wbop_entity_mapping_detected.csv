@@ -1,0 +1,5 @@
+original_label,standardized_label,entity_type_guess,included_in_visual_bundle,included_in_chile_us_panel,detection_source,detection_notes
+US,United States,country,yes,yes,data_sheet_headers,Detected from numeric data-sheet headers as 'US'.
+GB,United Kingdom,country,yes,no,data_sheet_headers,Detected from numeric data-sheet headers as 'GB'.
+CL,Chile,country,yes,yes,data_sheet_headers,Detected from numeric data-sheet headers as 'CL'.
+Latin America,Latin America,region,yes,no,data_sheet_headers,Detected from numeric data-sheet headers as 'Latin America'.

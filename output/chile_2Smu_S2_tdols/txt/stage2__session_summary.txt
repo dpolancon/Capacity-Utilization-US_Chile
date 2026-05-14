@@ -1,0 +1,23 @@
+Chile Stage 2 integrated DOLS run completed.
+
+Baseline DOLS fitted for:
+ - full
+ - pre1974
+ - isi1931_1973
+ - post1974
+
+Threshold DOLS fitted for Model A in:
+ - full gamma_hat = -4.64173537047155
+ - pre1974 gamma_hat = -4.63050034190795
+ - isi1931_1973 gamma_hat = -4.63050034190795
+ - post1974 gamma_hat = -5.99782346315872
+
+Core exports:
+ - baseline_dols__*.txt
+ - baseline_theta__*.csv
+ - threshold_dols_grid__*.csv
+ - threshold_dols__*.txt
+ - threshold_theta__*.csv
+ - threshold_audit__*.csv
+ - threshold_regime_episodes__all.csv
+ - threshold_theta__summary.csv

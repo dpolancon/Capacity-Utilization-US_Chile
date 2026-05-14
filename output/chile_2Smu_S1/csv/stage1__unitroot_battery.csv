@@ -1,0 +1,97 @@
+variable,sample,difference,test,det,lags,stat,cval
+log_M,FULL,level,ADF,drift,2,1.19165393237765; 5.98361483504335,      1pct  5pct 10pct tau2 -3.51 -2.89 -2.58 phi1  6.70  4.71  3.86
+log_M,FULL,level,PP,constant,short,1.27775667224964,                     1pct     5pct     10pct critical values -3.525169 -2.90292 -2.588557
+log_M,FULL,level,KPSS,mu,short,1.76917035544762,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_M,FULL,diff,ADF,drift,2,-4.90032617515425; 12.0637278872657,      1pct  5pct 10pct tau2 -3.51 -2.89 -2.58 phi1  6.70  4.71  3.86
+log_M,FULL,diff,PP,constant,short,-7.57543263821835,                     1pct      5pct     10pct critical values -3.526586 -2.903537 -2.588882
+log_M,FULL,diff,KPSS,mu,short,0.295378615992652,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_KME,FULL,level,ADF,drift,2,0.105052143984896; 2.81556608279149,      1pct  5pct 10pct tau2 -3.51 -2.89 -2.58 phi1  6.70  4.71  3.86
+log_KME,FULL,level,PP,constant,short,2.50755531114726,                     1pct     5pct     10pct critical values -3.509062 -2.89588 -2.584854
+log_KME,FULL,level,KPSS,mu,short,2.08118191332233,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_KME,FULL,diff,ADF,drift,2,-2.50799212888966; 3.20596104740853,      1pct  5pct 10pct tau2 -3.51 -2.89 -2.58 phi1  6.70  4.71  3.86
+log_KME,FULL,diff,PP,constant,short,-2.4581266100204,                     1pct      5pct     10pct critical values -3.510023 -2.896301 -2.585076
+log_KME,FULL,diff,KPSS,mu,short,0.82516325770388,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_NRS_proxy,FULL,level,ADF,drift,2,-0.459611363918581; 3.05047205551813,      1pct  5pct 10pct tau2 -3.51 -2.89 -2.58 phi1  6.70  4.71  3.86
+log_NRS_proxy,FULL,level,PP,constant,short,-0.800975114313003,                     1pct     5pct     10pct critical values -3.525169 -2.90292 -2.588557
+log_NRS_proxy,FULL,level,KPSS,mu,short,1.81691313042147,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_NRS_proxy,FULL,diff,ADF,drift,2,-6.57132585709713; 21.5949724883801,      1pct  5pct 10pct tau2 -3.51 -2.89 -2.58 phi1  6.70  4.71  3.86
+log_NRS_proxy,FULL,diff,PP,constant,short,-13.5831926698007,                     1pct      5pct     10pct critical values -3.526586 -2.903537 -2.588882
+log_NRS_proxy,FULL,diff,KPSS,mu,short,0.0313386370095906,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+omega,FULL,level,ADF,drift,2,-1.58212349808981; 1.52021594463694,      1pct  5pct 10pct tau2 -3.51 -2.89 -2.58 phi1  6.70  4.71  3.86
+omega,FULL,level,PP,constant,short,-2.2255217671934,                     1pct     5pct     10pct critical values -3.509062 -2.89588 -2.584854
+omega,FULL,level,KPSS,mu,short,1.84792915501945,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+omega,FULL,diff,ADF,drift,2,-7.56163825394598; 28.589219588773,      1pct  5pct 10pct tau2 -3.51 -2.89 -2.58 phi1  6.70  4.71  3.86
+omega,FULL,diff,PP,constant,short,-12.0034509355557,                     1pct      5pct     10pct critical values -3.510023 -2.896301 -2.585076
+omega,FULL,diff,KPSS,mu,short,0.0292162598982332,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_M,PRE1974,level,ADF,drift,2,0.536187180195688; 4.13140083973308,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_M,PRE1974,level,PP,constant,short,0.834358486090786,                     1pct      5pct    10pct critical values -3.642147 -2.952746 -2.61479
+log_M,PRE1974,level,KPSS,mu,short,0.924555741967947,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_M,PRE1974,diff,ADF,drift,2,-5.06015098295275; 12.9884289087082,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_M,PRE1974,diff,PP,constant,short,-6.43154694566321,                     1pct      5pct     10pct critical values -3.649533 -2.955827 -2.616413
+log_M,PRE1974,diff,KPSS,mu,short,0.274790343620834,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_KME,PRE1974,level,ADF,drift,2,-1.04749971911596; 3.05043085567928,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_KME,PRE1974,level,PP,constant,short,0.555036050303505,                     1pct      5pct    10pct critical values -3.642147 -2.952746 -2.61479
+log_KME,PRE1974,level,KPSS,mu,short,0.923966403860837,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_KME,PRE1974,diff,ADF,drift,2,-2.4783327972103; 3.16962725415352,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_KME,PRE1974,diff,PP,constant,short,-1.96913661609218,                     1pct      5pct     10pct critical values -3.649533 -2.955827 -2.616413
+log_KME,PRE1974,diff,KPSS,mu,short,0.292070403442469,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_NRS_proxy,PRE1974,level,ADF,drift,2,-0.98455695137415; 1.14598956461269,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_NRS_proxy,PRE1974,level,PP,constant,short,-1.91848396564723,                     1pct      5pct    10pct critical values -3.642147 -2.952746 -2.61479
+log_NRS_proxy,PRE1974,level,KPSS,mu,short,0.773759734134058,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_NRS_proxy,PRE1974,diff,ADF,drift,2,-4.28335898935572; 9.17577176683657,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_NRS_proxy,PRE1974,diff,PP,constant,short,-9.85022209642006,                     1pct      5pct     10pct critical values -3.649533 -2.955827 -2.616413
+log_NRS_proxy,PRE1974,diff,KPSS,mu,short,0.0628975069349956,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+omega,PRE1974,level,ADF,drift,2,-2.13199039804294; 2.27271437485984,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+omega,PRE1974,level,PP,constant,short,-3.63576870819254,                     1pct      5pct    10pct critical values -3.642147 -2.952746 -2.61479
+omega,PRE1974,level,KPSS,mu,short,0.117358232474017,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+omega,PRE1974,diff,ADF,drift,2,-4.36829054291939; 9.54098513952441,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+omega,PRE1974,diff,PP,constant,short,-8.46770892388695,                     1pct      5pct     10pct critical values -3.649533 -2.955827 -2.616413
+omega,PRE1974,diff,KPSS,mu,short,0.0715928808865184,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_M,ISI1931_1973,level,ADF,drift,2,0.536187180195688; 4.13140083973308,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_M,ISI1931_1973,level,PP,constant,short,0.834358486090786,                     1pct      5pct    10pct critical values -3.642147 -2.952746 -2.61479
+log_M,ISI1931_1973,level,KPSS,mu,short,0.924555741967947,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_M,ISI1931_1973,diff,ADF,drift,2,-5.06015098295275; 12.9884289087082,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_M,ISI1931_1973,diff,PP,constant,short,-6.43154694566321,                     1pct      5pct     10pct critical values -3.649533 -2.955827 -2.616413
+log_M,ISI1931_1973,diff,KPSS,mu,short,0.274790343620834,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_KME,ISI1931_1973,level,ADF,drift,2,-1.04749971911596; 3.05043085567928,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_KME,ISI1931_1973,level,PP,constant,short,0.555036050303505,                     1pct      5pct    10pct critical values -3.642147 -2.952746 -2.61479
+log_KME,ISI1931_1973,level,KPSS,mu,short,0.923966403860837,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_KME,ISI1931_1973,diff,ADF,drift,2,-2.4783327972103; 3.16962725415352,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_KME,ISI1931_1973,diff,PP,constant,short,-1.96913661609218,                     1pct      5pct     10pct critical values -3.649533 -2.955827 -2.616413
+log_KME,ISI1931_1973,diff,KPSS,mu,short,0.292070403442469,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_NRS_proxy,ISI1931_1973,level,ADF,drift,2,-0.98455695137415; 1.14598956461269,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_NRS_proxy,ISI1931_1973,level,PP,constant,short,-1.91848396564723,                     1pct      5pct    10pct critical values -3.642147 -2.952746 -2.61479
+log_NRS_proxy,ISI1931_1973,level,KPSS,mu,short,0.773759734134058,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_NRS_proxy,ISI1931_1973,diff,ADF,drift,2,-4.28335898935572; 9.17577176683657,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_NRS_proxy,ISI1931_1973,diff,PP,constant,short,-9.85022209642006,                     1pct      5pct     10pct critical values -3.649533 -2.955827 -2.616413
+log_NRS_proxy,ISI1931_1973,diff,KPSS,mu,short,0.0628975069349956,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+omega,ISI1931_1973,level,ADF,drift,2,-2.13199039804294; 2.27271437485984,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+omega,ISI1931_1973,level,PP,constant,short,-3.63576870819254,                     1pct      5pct    10pct critical values -3.642147 -2.952746 -2.61479
+omega,ISI1931_1973,level,KPSS,mu,short,0.117358232474017,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+omega,ISI1931_1973,diff,ADF,drift,2,-4.36829054291939; 9.54098513952441,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+omega,ISI1931_1973,diff,PP,constant,short,-8.46770892388695,                     1pct      5pct     10pct critical values -3.649533 -2.955827 -2.616413
+omega,ISI1931_1973,diff,KPSS,mu,short,0.0715928808865184,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_M,POST1974,level,ADF,drift,2,-0.0585316910364656; 3.68666593172584,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_M,POST1974,level,PP,constant,short,0.408103969468985,                     1pct      5pct     10pct critical values -3.622708 -2.944606 -2.610501
+log_M,POST1974,level,KPSS,mu,short,0.989571001410038,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_M,POST1974,diff,ADF,drift,2,-3.01173946154072; 4.54250363957682,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_M,POST1974,diff,PP,constant,short,-5.89136873576513,                     1pct      5pct     10pct critical values -3.628778 -2.947153 -2.611843
+log_M,POST1974,diff,KPSS,mu,short,0.163054800974483,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_KME,POST1974,level,ADF,drift,2,-0.735313964069153; 2.29239068681171,      1pct  5pct 10pct tau2 -3.51 -2.89 -2.58 phi1  6.70  4.71  3.86
+log_KME,POST1974,level,PP,constant,short,0.906327206320296,                    1pct      5pct     10pct critical values -3.56518 -2.920204 -2.597652
+log_KME,POST1974,level,KPSS,mu,short,1.34874550350575,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_KME,POST1974,diff,ADF,drift,2,-1.80124339225995; 1.62709841061524,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_KME,POST1974,diff,PP,constant,short,-1.99368615680687,                     1pct      5pct     10pct critical values -3.568111 -2.921459 -2.598313
+log_KME,POST1974,diff,KPSS,mu,short,0.416999153128579,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_NRS_proxy,POST1974,level,ADF,drift,2,-0.774144295968538; 1.94882623764737,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_NRS_proxy,POST1974,level,PP,constant,short,-0.249400786082435,                     1pct      5pct     10pct critical values -3.622708 -2.944606 -2.610501
+log_NRS_proxy,POST1974,level,KPSS,mu,short,0.978506174179038,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+log_NRS_proxy,POST1974,diff,ADF,drift,2,-4.29163641370314; 9.20989032288107,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+log_NRS_proxy,POST1974,diff,PP,constant,short,-6.55181128093427,                     1pct      5pct     10pct critical values -3.628778 -2.947153 -2.611843
+log_NRS_proxy,POST1974,diff,KPSS,mu,short,0.132700616651247,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+omega,POST1974,level,ADF,drift,2,-1.78765482075433; 1.73348773303457,      1pct  5pct 10pct tau2 -3.51 -2.89 -2.58 phi1  6.70  4.71  3.86
+omega,POST1974,level,PP,constant,short,-1.64762075494157,                    1pct      5pct     10pct critical values -3.56518 -2.920204 -2.597652
+omega,POST1974,level,KPSS,mu,short,1.06188801000853,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739
+omega,POST1974,diff,ADF,drift,2,-5.67753363134829; 16.1172244607715,      1pct  5pct 10pct tau2 -3.58 -2.93 -2.60 phi1  7.06  4.86  3.94
+omega,POST1974,diff,PP,constant,short,-6.79424815253065,                     1pct      5pct     10pct critical values -3.568111 -2.921459 -2.598313
+omega,POST1974,diff,KPSS,mu,short,0.101841350293075,                10pct  5pct 2.5pct  1pct critical values 0.347 0.463  0.574 0.739

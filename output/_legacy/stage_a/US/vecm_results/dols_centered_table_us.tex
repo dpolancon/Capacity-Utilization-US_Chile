@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\caption{Centered DOLS Estimates --- US Nonfinancial Corporate}
+\label{tab:dols_centered_us}
+\small
+\begin{tabular}{l c c c c c c l}
+\hline
+Window & $N$ & $\bar{\omega}$ & $\hat{\bar{\theta}}$ & $\hat{\beta}_2$ & $\omega_H$ & Status & Coint. \\
+\hline
+Full~sample & 91 & 0.6228 & 0.8648 & 0.0423 & --- & wrong-sign slope & yes \\
+Pre-1974~(<=~1973) & 40 & 0.6320 & 0.9397 & -0.2919 & 0.425 & threshold outside observed sample range & yes \\
+Post-1973~(>=~1974) & 46 & 0.6147 & 0.8616 & 0.0293 & --- & wrong-sign slope & yes \\
+Fordist~core~(1945-1973) & 24 & 0.6332 & 0.8352 & 0.0101 & --- & wrong-sign slope & yes \\
+Deep~comparison~(1940-1978) & 34 & 0.6309 & 0.8082 & -0.2770 & -0.062 & no admissible positive threshold & yes \\
+\hline
+\multicolumn{8}{l}{\footnotesize DOLS($p=2$), Newey-West HAC SEs. $\omega_H = \bar{\omega} + (1-\hat{\bar{\theta}})/\hat{\beta}_2$.}
+\end{tabular}
+\end{table}

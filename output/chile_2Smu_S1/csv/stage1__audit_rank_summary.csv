@@ -1,0 +1,17 @@
+sample,test,K,max_rank_rejected_10pct,max_rank_rejected_5pct,max_rank_rejected_1pct
+FULL,eigen,2,1,0,0
+FULL,eigen,3,0,0,0
+FULL,trace,2,1,0,0
+FULL,trace,3,0,0,0
+PRE1974,eigen,2,1,1,0
+PRE1974,eigen,3,0,0,0
+PRE1974,trace,2,1,1,0
+PRE1974,trace,3,0,0,0
+ISI1931_1973,eigen,2,1,1,0
+ISI1931_1973,eigen,3,0,0,0
+ISI1931_1973,trace,2,1,1,0
+ISI1931_1973,trace,3,0,0,0
+POST1974,eigen,2,1,1,0
+POST1974,eigen,3,0,0,0
+POST1974,trace,2,1,1,0
+POST1974,trace,3,0,0,0
