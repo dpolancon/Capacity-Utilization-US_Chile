@@ -1,0 +1,2 @@
+"run_timestamp","anchor_window","anchor_year_start","anchor_year_end","observations","mean_mu_t","min_mu_t","max_mu_t","sd_mu_t","mean_Y_real","mean_Yp","mean_theta_tot","anchor_tolerance","anchor_mean_passed","fragility_flag"
+"2026-05-14 17:16:04 -04","fordist_core",1945,1973,29,1,0.92216333628783,1.0898144766897,0.0355444917460298,2429992.70816371,2429337.74790314,0.838834187206623,1e-04,TRUE,TRUE

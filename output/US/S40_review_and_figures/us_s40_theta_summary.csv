@@ -1,0 +1,2 @@
+"run_timestamp","variable","year_min","year_max","n","min","q25","mean","median","q75","max","sd","fragility_flag","figure_scope"
+"2026-05-14 17:16:04 -04","theta_tot",1929,2024,96,0.834775099444644,0.838186073561149,0.839783086893113,0.839220697640284,0.840797814449319,0.845070441011278,0.002353336803013,TRUE,"theta_tot_only"
