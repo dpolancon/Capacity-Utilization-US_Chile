@@ -1,0 +1,2 @@
+"test_id","spec_id","diagnostic_scope","implementation_status","evidence_class","package_function_available","windows_redefined","non_b1_specs_promoted","s40_gate_effect","notes"
+"B1_GREGORY_HANSEN_ONE_BREAK_STRESS","SPEC_B1_WAGE_BASELINE","optional_one_break_diagnostic_only","not_implemented","unavailable",FALSE,FALSE,FALSE,"none","Not implemented because the bounded adjudication consumes S30 output tables rather than the raw cointegrating-regression panel required for an endogenous one-break Gregory-Hansen search."
