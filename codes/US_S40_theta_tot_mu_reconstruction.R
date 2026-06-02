@@ -57,6 +57,13 @@ COMPOSITION_BASIS <- "ME_NRC_component_proxy"
 COMPOSITION_TIER <- "Tier B"
 DIRECT_SECTOR_ASSET_SPLIT <- FALSE
 CAPACITY_REGISTER <- "gross_real_GPIM"
+ANCHOR_TYPE <- "point_year_external_pinch"
+ANCHOR_YEAR <- 1973L
+ANCHOR_VARIABLE <- "mu_t"
+ANCHOR_VALUE <- 1
+ANCHOR_SOURCE <- "externally_locked_by_D03_S40_contract"
+ANCHOR_STATUS <- "externally_locked"
+ANCHOR_TOL <- 1e-8
 
 # ---- 1. Helpers --------------------------------------------------------------
 read_csv_base <- function(path, check_names = FALSE) {
@@ -393,27 +400,45 @@ require_cols(
   panel,
   c(
     "year", "Y_real", "y_t", "k_t", "omega_t", "omega_k_t",
-    "sector_target", "composition_basis", "composition_tier",
-    "direct_sector_asset_split", "capacity_register"
+    "capacity_register"
   ),
   "S30 input panel"
 )
 
-if (!any(panel$sector_target == SECTOR_TARGET, na.rm = TRUE)) {
-  stop("Input panel does not preserve sector_target = NFCorp.", call. = FALSE)
-}
-if (!any(panel$composition_basis == COMPOSITION_BASIS, na.rm = TRUE)) {
-  stop("Input panel does not preserve composition_basis = ME_NRC_component_proxy.", call. = FALSE)
-}
-if (!any(panel$composition_tier == COMPOSITION_TIER, na.rm = TRUE)) {
-  stop("Input panel does not preserve composition_tier = Tier B.", call. = FALSE)
-}
-if (!any(as_bool(panel$direct_sector_asset_split) %in% FALSE, na.rm = TRUE)) {
-  stop("Input panel does not preserve direct_sector_asset_split = FALSE.", call. = FALSE)
-}
 if (!any(grepl("^gross_real_GPIM", panel$capacity_register), na.rm = TRUE)) {
   stop("Input panel does not preserve a gross real GPIM capacity register.", call. = FALSE)
 }
+
+if (!"sector_target" %in% names(panel)) panel$sector_target <- SECTOR_TARGET
+if (!"composition_basis" %in% names(panel)) panel$composition_basis <- COMPOSITION_BASIS
+if (!"composition_tier" %in% names(panel)) panel$composition_tier <- COMPOSITION_TIER
+if (!"direct_sector_asset_split" %in% names(panel)) panel$direct_sector_asset_split <- DIRECT_SECTOR_ASSET_SPLIT
+if (!"a00_baseline_available" %in% names(panel)) panel$a00_baseline_available <- TRUE
+if (!"omega_k_formula" %in% names(panel)) panel$omega_k_formula <- "omega_t * k_t"
+if (!"a03_composition_status" %in% names(panel)) panel$a03_composition_status <- NA_character_
+if (!"a03_composition_basis" %in% names(panel)) panel$a03_composition_basis <- panel$composition_basis
+if (!"a03_composition_tier" %in% names(panel)) panel$a03_composition_tier <- panel$composition_tier
+
+capacity_register_detected <- collapse_or_na(panel$capacity_register)
+sector_target_detected <- collapse_or_na(panel$sector_target)
+composition_basis_detected <- collapse_or_na(panel$composition_basis)
+composition_tier_detected <- collapse_or_na(panel$composition_tier)
+direct_split_idx <- which(!is.na(panel$direct_sector_asset_split))
+direct_sector_asset_split_detected <- if (length(direct_split_idx) == 0L) {
+  NA
+} else {
+  as_bool(panel$direct_sector_asset_split[direct_split_idx[1L]])
+}
+a00_idx <- which(!is.na(panel$a00_baseline_available))
+a00_baseline_available_detected <- if (length(a00_idx) == 0L) {
+  NA
+} else {
+  as_bool(panel$a00_baseline_available[a00_idx[1L]])
+}
+omega_k_formula_detected <- collapse_or_na(panel$omega_k_formula)
+a03_composition_status_detected <- collapse_or_na(panel$a03_composition_status)
+a03_composition_basis_detected <- collapse_or_na(panel$a03_composition_basis)
+a03_composition_tier_detected <- collapse_or_na(panel$a03_composition_tier)
 
 panel_recon <- data.frame(
   year = as.integer(as_num(panel$year)),
@@ -451,17 +476,17 @@ panel_recon$log_Yp_unanchored <- fm_const +
   (fm_omega_k * panel_recon$omega_k_t)
 panel_recon$Yp_unanchored <- exp(panel_recon$log_Yp_unanchored)
 
-anchor_rows <- panel_recon$year >= basis_year_start &
-  panel_recon$year <= basis_year_end &
+anchor_rows <- panel_recon$year == ANCHOR_YEAR &
   is.finite(panel_recon$Y_real) &
   is.finite(panel_recon$Yp_unanchored) &
   panel_recon$Yp_unanchored > 0
 
-if (!any(anchor_rows)) {
-  stop("No valid rows are available in the S30 benchmark anchor window.", call. = FALSE)
+if (sum(anchor_rows) != 1L) {
+  stop("Expected exactly one valid row for the externally locked 1973 anchor.", call. = FALSE)
 }
 
-anchor_scale_factor <- mean(panel_recon$Y_real[anchor_rows] / panel_recon$Yp_unanchored[anchor_rows])
+anchor_scale_factor <- (panel_recon$Y_real[anchor_rows] / panel_recon$Yp_unanchored[anchor_rows]) /
+  ANCHOR_VALUE
 if (!is.finite(anchor_scale_factor) || anchor_scale_factor <= 0) {
   stop("Computed anchor scale factor is not positive and finite.", call. = FALSE)
 }
@@ -471,7 +496,10 @@ panel_recon$Yp <- panel_recon$Yp_unanchored * anchor_scale_factor
 panel_recon$log_Yp <- log(panel_recon$Yp)
 panel_recon$mu_t <- panel_recon$Y_real / panel_recon$Yp
 
-anchor_check_mean_mu <- mean(panel_recon$mu_t[anchor_rows])
+anchor_check_mu <- panel_recon$mu_t[anchor_rows]
+if (!is.finite(anchor_check_mu) || abs(anchor_check_mu - ANCHOR_VALUE) > ANCHOR_TOL) {
+  stop("Externally locked 1973 anchor check failed: mu_t is not 1 within tolerance.", call. = FALSE)
+}
 anchor_observations <- sum(anchor_rows)
 
 # ---- 6. Output tables --------------------------------------------------------
@@ -486,11 +514,22 @@ common_metadata <- data.frame(
   reconstruction_window_role = basis_window_role,
   reconstruction_year_start = basis_year_start,
   reconstruction_year_end = basis_year_end,
-  sector_target = SECTOR_TARGET,
-  composition_basis = COMPOSITION_BASIS,
-  composition_tier = COMPOSITION_TIER,
-  direct_sector_asset_split = DIRECT_SECTOR_ASSET_SPLIT,
-  capacity_register = CAPACITY_REGISTER,
+  anchor_type = ANCHOR_TYPE,
+  anchor_year = ANCHOR_YEAR,
+  anchor_variable = ANCHOR_VARIABLE,
+  anchor_value = ANCHOR_VALUE,
+  anchor_source = ANCHOR_SOURCE,
+  anchor_status = ANCHOR_STATUS,
+  sector_target = sector_target_detected,
+  composition_basis = composition_basis_detected,
+  composition_tier = composition_tier_detected,
+  direct_sector_asset_split = direct_sector_asset_split_detected,
+  capacity_register = capacity_register_detected,
+  a00_baseline_available = a00_baseline_available_detected,
+  omega_k_formula = omega_k_formula_detected,
+  a03_composition_status = a03_composition_status_detected,
+  a03_composition_basis = a03_composition_basis_detected,
+  a03_composition_tier = a03_composition_tier_detected,
   fragility_flag = s40_fragility_flag,
   stringsAsFactors = FALSE
 )
@@ -527,14 +566,10 @@ productive_capacity_path <- cbind(
     drop = FALSE
   ],
   data.frame(
-    anchor_variable = "mu_t",
-    anchor_window_id = basis_window_id,
-    anchor_year_start = basis_year_start,
-    anchor_year_end = basis_year_end,
-    anchor_value = 1,
     anchor_scale_factor = anchor_scale_factor,
     log_anchor_shift = log_anchor_shift,
-    anchor_status = "newly_declared",
+    anchor_check_mu_t = anchor_check_mu,
+    anchor_tolerance = ANCHOR_TOL,
     stringsAsFactors = FALSE
   ),
   common_metadata[rep(1L, nrow(panel_recon)), , drop = FALSE]
@@ -548,12 +583,8 @@ mu_path_df <- cbind(
   ],
   data.frame(
     mu_formula = "Y_real / Yp",
-    anchor_variable = "mu_t",
-    anchor_window_id = basis_window_id,
-    anchor_year_start = basis_year_start,
-    anchor_year_end = basis_year_end,
-    anchor_value = 1,
-    anchor_check_mean_mu = anchor_check_mean_mu,
+    anchor_check_mu_t = anchor_check_mu,
+    anchor_tolerance = ANCHOR_TOL,
     stringsAsFactors = FALSE
   ),
   common_metadata[rep(1L, nrow(panel_recon)), , drop = FALSE]
@@ -562,27 +593,29 @@ mu_path_df <- cbind(
 anchor_register <- data.frame(
   run_timestamp = RUN_TIMESTAMP,
   candidate_spec_id = B1_SPEC_ID,
-  anchor_variable = "mu_t",
-  anchor_year = NA_integer_,
-  anchor_window = basis_window_id,
-  anchor_year_start = basis_year_start,
-  anchor_year_end = basis_year_end,
-  anchor_value = 1,
+  reconstruction_window_id = basis_window_id,
+  reconstruction_year_start = basis_year_start,
+  reconstruction_year_end = basis_year_end,
+  anchor_type = ANCHOR_TYPE,
+  anchor_variable = ANCHOR_VARIABLE,
+  anchor_year = ANCHOR_YEAR,
+  anchor_value = ANCHOR_VALUE,
+  anchor_source = ANCHOR_SOURCE,
+  anchor_status = ANCHOR_STATUS,
   normalization_rule = paste(
     "Scale FM-OLS B1 unanchored productive capacity by",
-    "mean(Y_real / Yp_unanchored) over the S30 benchmark window so",
-    "mean(mu_t) = 1 in that window."
+    "Y_real_1973 / Yp_unanchored_1973 so mu_t,1973 = 1."
   ),
   rationale = paste(
-    "No prior S30 anchor is clearly available. The default anchor is newly",
-    "declared from the predeclared S30 benchmark window, not from a searched",
-    "window or a new estimator."
+    "The utilization anchor is externally locked by the D03/S40 contract.",
+    "The S30 benchmark window supplies the reconstruction coefficients only;",
+    "it is not the utilization anchor."
   ),
-  inherited_new_status = "newly_declared",
   anchor_scale_factor = anchor_scale_factor,
   log_anchor_shift = log_anchor_shift,
   anchor_observations = anchor_observations,
-  anchor_check_mean_mu = anchor_check_mean_mu,
+  anchor_check_mu_t = anchor_check_mu,
+  anchor_tolerance = ANCHOR_TOL,
   input_panel_path = input_panel_path,
   fragility_flag = s40_fragility_flag,
   stringsAsFactors = FALSE
@@ -649,6 +682,11 @@ manifest <- rbind(
       "composition_tier",
       "direct_sector_asset_split",
       "capacity_register",
+      "a00_baseline_available",
+      "omega_k_formula",
+      "a03_composition_status",
+      "a03_composition_basis",
+      "a03_composition_tier",
       "reconstruction_basis_estimator",
       "robustness_metadata_estimator",
       "stress_metadata_estimator",
@@ -661,14 +699,15 @@ manifest <- rbind(
       "im_ols_metadata_status",
       "dols_fragility_metadata_status",
       "omega_k_identity_max_abs_gap",
+      "anchor_type",
       "anchor_variable",
-      "anchor_window",
-      "anchor_year_start",
-      "anchor_year_end",
+      "anchor_year",
       "anchor_value",
-      "anchor_inherited_new_status",
+      "anchor_source",
+      "anchor_status",
       "anchor_scale_factor",
-      "anchor_check_mean_mu",
+      "anchor_check_mu_t",
+      "anchor_tolerance",
       "new_cointegrating_relation_estimated",
       "estimator_grid_expanded",
       "dols_used_as_reconstruction_basis",
@@ -694,12 +733,17 @@ manifest <- rbind(
       "S30 run manifest item input_panel",
       safe_min(panel_recon$year),
       safe_max(panel_recon$year),
-      collapse_or_na(panel$capacity_register),
-      SECTOR_TARGET,
-      COMPOSITION_BASIS,
-      COMPOSITION_TIER,
-      DIRECT_SECTOR_ASSET_SPLIT,
-      CAPACITY_REGISTER,
+      capacity_register_detected,
+      sector_target_detected,
+      composition_basis_detected,
+      composition_tier_detected,
+      direct_sector_asset_split_detected,
+      capacity_register_detected,
+      a00_baseline_available_detected,
+      omega_k_formula_detected,
+      a03_composition_status_detected,
+      a03_composition_basis_detected,
+      a03_composition_tier_detected,
       MAIN_ESTIMATOR,
       ROBUSTNESS_ESTIMATOR,
       STRESS_ESTIMATOR,
@@ -712,14 +756,15 @@ manifest <- rbind(
       im_status,
       dols_status,
       omega_k_identity_max_abs_gap,
-      "mu_t",
-      basis_window_id,
-      basis_year_start,
-      basis_year_end,
-      1,
-      "newly_declared",
+      ANCHOR_TYPE,
+      ANCHOR_VARIABLE,
+      ANCHOR_YEAR,
+      ANCHOR_VALUE,
+      ANCHOR_SOURCE,
+      ANCHOR_STATUS,
       anchor_scale_factor,
-      anchor_check_mean_mu,
+      anchor_check_mu,
+      ANCHOR_TOL,
       FALSE,
       FALSE,
       FALSE,
@@ -799,9 +844,10 @@ basis_report <- data.frame(
 anchor_report <- anchor_register[
   ,
   c(
-    "anchor_variable", "anchor_window", "anchor_year_start", "anchor_year_end",
-    "anchor_value", "inherited_new_status", "anchor_scale_factor",
-    "anchor_check_mean_mu"
+    "reconstruction_window_id", "reconstruction_year_start",
+    "reconstruction_year_end", "anchor_type", "anchor_variable",
+    "anchor_year", "anchor_value", "anchor_source", "anchor_status",
+    "anchor_scale_factor", "anchor_check_mu_t"
   ),
   drop = FALSE
 ]
@@ -872,7 +918,8 @@ report_lines <- c(
     "The B1 reduced-form relation `y_t ~ k_t + omega_k_t` is transformed into",
     "`theta_tot = beta_k_t + beta_omega_k_t * omega_t`. Productive capacity is",
     "then reconstructed from the FM-OLS B1 fitted productive-capacity path,",
-    "level anchored explicitly, and mu_t is derived as `Y_real / Yp`."
+    "level anchored to the externally locked 1973 point-year pinch, and mu_t",
+    "is derived as `Y_real / Yp`."
   ),
   "",
   "## 6. Anchor",
@@ -905,5 +952,5 @@ writeLines(report_lines, report_path, useBytes = TRUE)
 
 message("US S40 restricted B1 reconstruction complete.")
 message("Input panel: ", input_panel_path)
-message("Anchor: ", basis_window_id, " ", basis_year_start, "-", basis_year_end, " mean(mu_t)=1")
+message("Anchor: ", ANCHOR_TYPE, " year=", ANCHOR_YEAR, " mu_t=", ANCHOR_VALUE)
 message("Fragility flag: ", s40_fragility_flag)

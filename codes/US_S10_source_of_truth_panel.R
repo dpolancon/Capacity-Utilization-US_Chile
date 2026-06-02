@@ -106,6 +106,11 @@ d$omega_k_t <- d$omega_t * d$k_t
 
 # Retain old script-compatible names, but mark them as aliases.
 d$K_real <- d$K_total_real
+d$K_t <- d$K_total_real
+d$capacity_register <- paste0(
+  "gross_real_GPIM_NFCorp_aggregate_KGC_NF_rebased_",
+  REBASE_YEAR
+)
 
 # ---- 5. Optional composition placeholders -----------------------------------
 # The updated analytical architecture requires composition variables whenever
@@ -257,6 +262,12 @@ if (composition_bridge_merged) {
   d$sector_target <- NA_character_
 }
 
+d$a00_baseline_available <- TRUE
+d$omega_k_formula <- "omega_t * k_t"
+d$a03_composition_status <- d$composition_status
+d$a03_composition_basis <- d$composition_basis
+d$a03_composition_tier <- d$composition_tier
+
 # US is the center benchmark. External mechanization pressure is not central here.
 d$external_pressure_t <- NA_real_
 d$D_external_high <- NA_real_
@@ -286,8 +297,9 @@ for (nm in names(alias_map)) {
 # ---- 7. Output panel ---------------------------------------------------------
 priority_cols <- c(
   "year",
-  "Y_real", "K_total_real", "K_real", "y_t", "k_t",
+  "Y_real", "K_total_real", "K_real", "K_t", "capacity_register", "y_t", "k_t",
   "omega_t", "omega_k_t",
+  "a00_baseline_available", "omega_k_formula",
   "K_machinery_real", "K_other_real", "s_t",
   "I_total", "I_machinery", "phi_t",
   "s_ME_over_ME_NRC_gross_real", "phi_ME_over_ME_NRC_real",
@@ -295,6 +307,7 @@ priority_cols <- c(
   "s_t_proxy", "phi_t_proxy", "s_t_proxy_cc", "phi_t_proxy_cc",
   "pK_relative_ME_NRC",
   "composition_status", "composition_basis", "composition_tier",
+  "a03_composition_status", "a03_composition_basis", "a03_composition_tier",
   "direct_sector_asset_split", "sector_target",
   "external_pressure_t", "D_external_high",
   "GVA", "EC", "GOS", "KNC", "KNR", "KGC", "KGR", "IGC", "pY", "pK", "GVA_real",
@@ -327,6 +340,10 @@ meta <- c(
   paste0("- First year: ", min(panel$year, na.rm = TRUE)),
   paste0("- Last year: ", max(panel$year, na.rm = TRUE)),
   paste0("- Observations: ", nrow(panel)),
+  paste0("- K_t alias: K_total_real"),
+  paste0("- capacity_register: ", unique(panel$capacity_register)[1L]),
+  paste0("- a00_baseline_available: ", unique(panel$a00_baseline_available)[1L]),
+  paste0("- omega_k_formula: ", unique(panel$omega_k_formula)[1L]),
   "",
   "## Composition availability",
   paste0("- Machinery stock column detected: ", ifelse(is.na(machinery_col), "none", machinery_col)),

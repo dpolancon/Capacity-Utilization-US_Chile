@@ -307,17 +307,33 @@ for (nm in setdiff(optional_composition_cols, names(panel))) {
   }
 }
 
+optional_architecture_cols <- c(
+  "capacity_register", "a00_baseline_available", "omega_k_formula",
+  "a03_composition_status", "a03_composition_basis", "a03_composition_tier"
+)
+
+for (nm in setdiff(optional_architecture_cols, names(panel))) {
+  if (nm %in% c("capacity_register", "omega_k_formula", "a03_composition_status",
+                "a03_composition_basis", "a03_composition_tier")) {
+    panel[[nm]] <- NA_character_
+  } else {
+    panel[[nm]] <- NA
+  }
+}
+
 composition_status_panel <- safe_unique_value(panel$composition_status, "unavailable")
 composition_basis_panel <- safe_unique_value(panel$composition_basis, NA_character_)
 composition_tier_panel <- safe_unique_value(panel$composition_tier, NA_character_)
 direct_sector_asset_split_panel <- safe_unique_logical(panel$direct_sector_asset_split)
+capacity_register_panel <- safe_unique_value(panel$capacity_register, NA_character_)
+a00_baseline_available_panel <- safe_unique_logical(panel$a00_baseline_available)
+omega_k_formula_panel <- safe_unique_value(panel$omega_k_formula, "omega_t * k_t")
+a03_composition_status_panel <- safe_unique_value(panel$a03_composition_status, composition_status_panel)
+a03_composition_basis_panel <- safe_unique_value(panel$a03_composition_basis, composition_basis_panel)
+a03_composition_tier_panel <- safe_unique_value(panel$a03_composition_tier, composition_tier_panel)
 
-if (!"omega_k_t" %in% names(panel) || all(!is.finite(panel$omega_k_t))) {
-  panel$omega_k_t <- panel$omega_t * panel$k_t
-} else {
-  idx <- !is.finite(panel$omega_k_t) & is.finite(panel$omega_t) & is.finite(panel$k_t)
-  panel$omega_k_t[idx] <- panel$omega_t[idx] * panel$k_t[idx]
-}
+panel$omega_k_t <- panel$omega_t * panel$k_t
+panel$omega_k_formula <- "omega_t * k_t"
 
 default_proxy_cols <- c("s_t_proxy", "phi_t_proxy")
 default_proxy_present <- all(default_proxy_cols %in% names(panel))
@@ -482,6 +498,23 @@ spec_register <- data.frame(
   proxy_type_required = c("none", "none", "default_real", "default_real", "current_cost", "price_wedge"),
   promotion_eligible = c(FALSE, TRUE, TRUE, TRUE, FALSE, FALSE),
   diagnostic_only = c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE),
+  architecture_layer = c(
+    "A00",
+    "A00",
+    "A03",
+    "A03",
+    "diagnostic",
+    "diagnostic"
+  ),
+  identification_role = c(
+    "capital_only_reference",
+    "aggregate_interaction_baseline",
+    "composition_proxy_escalation",
+    "composition_proxy_escalation",
+    "fragility_or_price_wedge_diagnostic",
+    "fragility_or_price_wedge_diagnostic"
+  ),
+  baseline_replacement_allowed = c(FALSE, TRUE, FALSE, FALSE, FALSE, FALSE),
   role = c(
     "baseline_reference",
     "core_candidate",
@@ -512,9 +545,7 @@ center_window_var <- function(x) {
 
 prepare_window_data <- function(df) {
   d <- df
-  if (!"omega_k_t" %in% names(d)) d$omega_k_t <- NA_real_
-  idx <- !is.finite(d$omega_k_t) & is.finite(d$omega_t) & is.finite(d$k_t)
-  d$omega_k_t[idx] <- d$omega_t[idx] * d$k_t[idx]
+  d$omega_k_t <- d$omega_t * d$k_t
 
   for (nm in c("s_t_proxy", "phi_t_proxy", "s_t_proxy_cc", "phi_t_proxy_cc", "pK_relative_ME_NRC")) {
     if (!nm %in% names(d)) d[[nm]] <- NA_real_
@@ -1187,6 +1218,12 @@ manifest <- data.frame(
     "rolling_window_length",
     "exact_hansen_type_test",
     "stability_test_type",
+    "capacity_register",
+    "a00_baseline_available",
+    "omega_k_formula",
+    "a03_composition_status",
+    "a03_composition_basis",
+    "a03_composition_tier",
     "warnings"
   ),
   value = c(
@@ -1203,6 +1240,12 @@ manifest <- data.frame(
     as.character(rolling_window_length),
     "not_implemented_in_this_S30",
     "proxy_stability_diagnostic",
+    capacity_register_panel,
+    as.character(a00_baseline_available_panel),
+    omega_k_formula_panel,
+    a03_composition_status_panel,
+    a03_composition_basis_panel,
+    a03_composition_tier_panel,
     ifelse(length(s30_warnings) == 0L, "none", paste(s30_warnings, collapse = " | "))
   ),
   stringsAsFactors = FALSE
@@ -1306,6 +1349,9 @@ report <- c(
   paste0("- Input panel: `", in_panel_path, "`"),
   paste0("- Panel span: ", min(panel$year, na.rm = TRUE), "-", max(panel$year, na.rm = TRUE)),
   paste0("- Observations: ", nrow(panel)),
+  paste0("- capacity_register: ", ifelse(is.na(capacity_register_panel), "NA", capacity_register_panel)),
+  paste0("- a00_baseline_available: ", bool_to_text(a00_baseline_available_panel)),
+  paste0("- omega_k_formula: ", omega_k_formula_panel),
   "",
   md_table(coverage_rows),
   "",
@@ -1315,6 +1361,9 @@ report <- c(
   paste0("- composition_basis: ", ifelse(is.na(composition_basis_panel), "NA", composition_basis_panel)),
   paste0("- composition_tier: ", ifelse(is.na(composition_tier_panel), "NA", composition_tier_panel)),
   paste0("- direct_sector_asset_split: ", bool_to_text(direct_sector_asset_split_panel)),
+  paste0("- a03_composition_status: ", ifelse(is.na(a03_composition_status_panel), "NA", a03_composition_status_panel)),
+  paste0("- a03_composition_basis: ", ifelse(is.na(a03_composition_basis_panel), "NA", a03_composition_basis_panel)),
+  paste0("- a03_composition_tier: ", ifelse(is.na(a03_composition_tier_panel), "NA", a03_composition_tier_panel)),
   "- The US composition variable is a Tier-B ME-NRC component proxy.",
   "- It is not a direct NFCorp-by-asset-type split.",
   "",
@@ -1336,7 +1385,10 @@ report <- c(
   "",
   paste0("- Register written: `", spec_register_path, "`"),
   "",
-  md_table(spec_register[, c("spec_id", "formula_label", "role", "promotion_eligible", "diagnostic_only"), drop = FALSE]),
+  md_table(spec_register[, c(
+    "spec_id", "formula_label", "architecture_layer", "identification_role",
+    "baseline_replacement_allowed", "role", "promotion_eligible", "diagnostic_only"
+  ), drop = FALSE]),
   "",
   "## 7. Main estimator grid summary",
   "",

@@ -11,6 +11,11 @@ It does not perform final coefficient recovery and does not reconstruct producti
 - First year: 1929
 - Last year: 2024
 - Observations: 96
+- capacity_register = gross_real_GPIM_stock
+- omega_k_formula = omega_t * k_t
+- B1/A00 = baseline interaction.
+- C1/C2 = A03 proxy/escalation.
+- D1/D2 = diagnostic.
 
 ## Composition availability
 
@@ -36,6 +41,6 @@ It does not perform final coefficient recovery and does not reconstruct producti
 
 OLS scans in this script are diagnostic only. They do not replace FM-OLS, IM-OLS, or DOLS in S30/S90.
 
-DOLS-era windows are treated as candidate historical/admissibility windows, not as final regimes.
+DOLS-era windows are treated as candidate historical/admissibility windows, not as final regimes or anchor choices.
 
 S30 may proceed only after this S20 layer is reviewed.

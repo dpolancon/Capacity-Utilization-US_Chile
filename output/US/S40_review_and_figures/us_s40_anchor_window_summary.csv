@@ -1,2 +1,2 @@
-"run_timestamp","anchor_window","anchor_year_start","anchor_year_end","observations","mean_mu_t","min_mu_t","max_mu_t","sd_mu_t","mean_Y_real","mean_Yp","mean_theta_tot","anchor_tolerance","anchor_mean_passed","fragility_flag"
-"2026-05-14 17:16:04 -04","fordist_core",1945,1973,29,1,0.92216333628783,1.0898144766897,0.0355444917460298,2429992.70816371,2429337.74790314,0.838834187206623,1e-04,TRUE,TRUE
+"run_timestamp","reconstruction_window","reconstruction_year_start","reconstruction_year_end","anchor_type","anchor_year","anchor_value","observations","anchor_mu_t","min_mu_t","max_mu_t","sd_mu_t","mean_Y_real","mean_Yp","mean_theta_tot","anchor_tolerance","anchor_point_passed","fragility_flag"
+"2026-06-02 10:40:56 -04","fordist_core",1945,1973,"point_year_external_pinch",1973,1,1,1,1,1,,4131343.18670208,4131343.18670208,0.837852959610231,1e-04,TRUE,TRUE

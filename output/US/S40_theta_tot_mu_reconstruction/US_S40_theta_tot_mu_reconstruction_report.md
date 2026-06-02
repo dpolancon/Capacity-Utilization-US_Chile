@@ -34,22 +34,22 @@ FM-OLS is the main reconstruction basis. IM-OLS is carried as robustness metadat
 | fragility/stress metadata estimator | DOLS |
 | basis specification | SPEC_B1_WAGE_BASELINE |
 | basis window | fordist_core (1945-1973) |
-| FM-OLS const | 1.82034175010722 |
-| FM-OLS k_t | 0.896535271842822 |
-| FM-OLS omega_k_t | -0.0911274319787481 |
+| FM-OLS const | 1.82034175009358 |
+| FM-OLS k_t | 0.896535271845096 |
+| FM-OLS omega_k_t | -0.0911274319814765 |
 
 ## 5. Reconstruction sequence
 
-The B1 reduced-form relation `y_t ~ k_t + omega_k_t` is transformed into `theta_tot = beta_k_t + beta_omega_k_t * omega_t`. Productive capacity is then reconstructed from the FM-OLS B1 fitted productive-capacity path, level anchored explicitly, and mu_t is derived as `Y_real / Yp`.
+The B1 reduced-form relation `y_t ~ k_t + omega_k_t` is transformed into `theta_tot = beta_k_t + beta_omega_k_t * omega_t`. Productive capacity is then reconstructed from the FM-OLS B1 fitted productive-capacity path, level anchored to the externally locked 1973 point-year pinch, and mu_t is derived as `Y_real / Yp`.
 
 ## 6. Anchor
 
-| anchor_variable | anchor_window | anchor_year_start | anchor_year_end | anchor_value | inherited_new_status | anchor_scale_factor | anchor_check_mean_mu |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| mu_t | fordist_core |    1945 |    1973 |       1 | newly_declared | 1.00036 |       1 |
+| reconstruction_window_id | reconstruction_year_start | reconstruction_year_end | anchor_type | anchor_variable | anchor_year | anchor_value | anchor_source | anchor_status | anchor_scale_factor | anchor_check_mu_t |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| fordist_core |    1945 |    1973 | point_year_external_pinch | mu_t |    1973 |       1 | externally_locked_by_D03_S40_contract | externally_locked | 1.01589 |       1 |
 
-- Normalization rule: Scale FM-OLS B1 unanchored productive capacity by mean(Y_real / Yp_unanchored) over the S30 benchmark window so mean(mu_t) = 1 in that window.
-- Rationale: No prior S30 anchor is clearly available. The default anchor is newly declared from the predeclared S30 benchmark window, not from a searched window or a new estimator.
+- Normalization rule: Scale FM-OLS B1 unanchored productive capacity by Y_real_1973 / Yp_unanchored_1973 so mu_t,1973 = 1.
+- Rationale: The utilization anchor is externally locked by the D03/S40 contract. The S30 benchmark window supplies the reconstruction coefficients only; it is not the utilization anchor.
 
 ## 7. Fragility
 

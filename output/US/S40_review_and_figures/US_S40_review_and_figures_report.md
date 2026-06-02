@@ -16,11 +16,12 @@ The anchor check uses a reconstruction-consistency tolerance rather than an exac
 | dols_reconstruction_basis_false | dols_reconstruction_basis = FALSE | FALSE | TRUE |  |  |
 | dols_veto_false | dols_veto = FALSE | FALSE | TRUE |  |  |
 | mu_formula | mu_formula = Y_real / Yp | Y_real / Yp | TRUE |  |  |
-| anchor_window | anchor window = fordist_core | fordist_core | TRUE |  |  |
-| anchor_years | anchor years = 1945-1973 | 1945-1973 | TRUE |  |  |
-| anchor_mean_mu | anchor mean(mu_t) = 1 within tolerance | 1 | TRUE |  0.0001 |  |
+| anchor_type | anchor_type = point_year_external_pinch | point_year_external_pinch | TRUE |  |  |
+| anchor_year | anchor_year = 1973 | 1973 | TRUE |  |  |
+| anchor_value | anchor_value = 1 | 1 | TRUE |  0.0001 |  |
+| mu_1973 | mu_t[year == 1973] = 1 within tolerance | 1 | TRUE |  0.0001 |  |
 | all_mu_finite | all mu_t values finite | 96/96 finite | TRUE |  |  |
-| mu_nonpathological | diagnostic guardrail: 0 < mu_t < 2.5 | range=0.641916073600041-1.23408248535147 | TRUE |  | Diagnostic guardrail only; not a theoretical restriction on utilization. |
+| mu_nonpathological | diagnostic guardrail: 0 < mu_t < 2.5 | range=0.632100221907304-1.21521152830197 | TRUE |  | Diagnostic guardrail only; not a theoretical restriction on utilization. |
 | all_yp_positive_finite | all Yp values positive and finite | 96/96 positive finite | TRUE |  |  |
 | no_profitability_variables | no profitability variables | profitability_columns_detected=FALSE; manifest_profitability_computed=FALSE | TRUE |  |  |
 | no_chile_outputs | no Chile outputs | manifest_chile_outputs_touched=FALSE | TRUE |  |  |
@@ -34,21 +35,21 @@ The anchor check uses a reconstruction-consistency tolerance rather than an exac
 
 ### mu_t
 
-| run_timestamp | variable | year_min | year_max | n | min | q25 | mean | median | q75 | max | sd | anchor_window | anchor_year_start | anchor_year_end | anchor_mean_mu | fragility_flag |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-05-14 17:16:04 -04 | mu_t |    1929 |    2024 |      96 | 0.641916 | 0.87841 | 0.936076 | 0.949855 | 0.995678 | 1.23408 | 0.103929 | fordist_core |    1945 |    1973 |       1 | TRUE |
+| run_timestamp | variable | year_min | year_max | n | min | q25 | mean | median | q75 | max | sd | reconstruction_window | reconstruction_year_start | reconstruction_year_end | anchor_type | anchor_year | anchor_value | anchor_mu_t | fragility_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-02 10:40:56 -04 | mu_t |    1929 |    2024 |      96 |  0.6321 | 0.864977 | 0.921762 | 0.93533 | 0.980452 | 1.21521 | 0.10234 | fordist_core |    1945 |    1973 | point_year_external_pinch |    1973 |       1 |       1 | TRUE |
 
 ### theta_tot
 
 | run_timestamp | variable | year_min | year_max | n | min | q25 | mean | median | q75 | max | sd | fragility_flag | figure_scope |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-05-14 17:16:04 -04 | theta_tot |    1929 |    2024 |      96 | 0.834775 | 0.838186 | 0.839783 | 0.839221 | 0.840798 | 0.84507 | 0.00235334 | TRUE | theta_tot_only |
+| 2026-06-02 10:40:56 -04 | theta_tot |    1929 |    2024 |      96 | 0.834775 | 0.838186 | 0.839783 | 0.839221 | 0.840798 | 0.84507 | 0.00235334 | TRUE | theta_tot_only |
 
-### Anchor window
+### Anchor point
 
-| run_timestamp | anchor_window | anchor_year_start | anchor_year_end | observations | mean_mu_t | min_mu_t | max_mu_t | sd_mu_t | mean_Y_real | mean_Yp | mean_theta_tot | anchor_tolerance | anchor_mean_passed | fragility_flag |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-05-14 17:16:04 -04 | fordist_core |    1945 |    1973 |      29 |       1 | 0.922163 | 1.08981 | 0.0355445 | 2429993 | 2429338 | 0.838834 |  0.0001 | TRUE | TRUE |
+| run_timestamp | reconstruction_window | reconstruction_year_start | reconstruction_year_end | anchor_type | anchor_year | anchor_value | observations | anchor_mu_t | min_mu_t | max_mu_t | sd_mu_t | mean_Y_real | mean_Yp | mean_theta_tot | anchor_tolerance | anchor_point_passed | fragility_flag |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-06-02 10:40:56 -04 | fordist_core |    1945 |    1973 | point_year_external_pinch |    1973 |       1 |       1 |       1 |       1 |       1 |  | 4131343 | 4131343 | 0.837853 |  0.0001 | TRUE | TRUE |
 
 ## 5. Hard prohibitions
 

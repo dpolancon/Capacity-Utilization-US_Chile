@@ -137,6 +137,16 @@ panel <- read.csv(in_panel_path, stringsAsFactors = FALSE)
 require_cols(panel, c("year", "y_t", "k_t", "omega_t", "Y_real", "K_total_real"), "US S10 panel")
 panel <- panel[order(panel$year), ]
 
+if (!"capacity_register" %in% names(panel)) {
+  panel$capacity_register <- NA_character_
+}
+if (!"a00_baseline_available" %in% names(panel)) {
+  panel$a00_baseline_available <- TRUE
+}
+if (!"omega_k_formula" %in% names(panel)) {
+  panel$omega_k_formula <- "omega_t * k_t"
+}
+
 # ---- 2b. Composition proxy contract -----------------------------------------
 # The ME-NRC bridge is a Tier-B NFCorp-centered component proxy. It is not a
 # direct nonfinancial-corporate-by-asset-type split.
@@ -211,8 +221,12 @@ panel$direct_sector_asset_split <- direct_sector_asset_split_value
 panel$sector_target <- sector_target_value
 
 # ---- 3. Construct S20 variables --------------------------------------------
-# Core old interaction retained as a diagnostic surface.
+# omega_k_t is the A00 baseline interaction variable.
 panel$omega_k_t <- panel$omega_t * panel$k_t
+panel$omega_k_formula <- "omega_t * k_t"
+panel$layer_B1_A00 <- "baseline interaction"
+panel$layer_C1_C2 <- "A03 proxy/escalation"
+panel$layer_D1_D2 <- "diagnostic"
 panel$omega_dev <- panel$omega_t - mean(panel$omega_t, na.rm = TRUE)
 panel$omega_dev_k_t <- panel$omega_dev * panel$k_t
 
@@ -422,6 +436,15 @@ summary_md <- c(
   paste0("- First year: ", min(panel$year, na.rm = TRUE)),
   paste0("- Last year: ", max(panel$year, na.rm = TRUE)),
   paste0("- Observations: ", nrow(panel)),
+  paste0("- capacity_register = ", ifelse(
+    all(is.na(panel$capacity_register)),
+    "NA",
+    unique(na.omit(panel$capacity_register))[1L]
+  )),
+  paste0("- omega_k_formula = ", unique(panel$omega_k_formula)[1L]),
+  "- B1/A00 = baseline interaction.",
+  "- C1/C2 = A03 proxy/escalation.",
+  "- D1/D2 = diagnostic.",
   "",
   "## Composition availability",
   "",
@@ -447,7 +470,7 @@ summary_md <- c(
   "",
   "OLS scans in this script are diagnostic only. They do not replace FM-OLS, IM-OLS, or DOLS in S30/S90.",
   "",
-  "DOLS-era windows are treated as candidate historical/admissibility windows, not as final regimes.",
+  "DOLS-era windows are treated as candidate historical/admissibility windows, not as final regimes or anchor choices.",
   "",
   "S30 may proceed only after this S20 layer is reviewed."
 )

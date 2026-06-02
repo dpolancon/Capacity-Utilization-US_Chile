@@ -12,6 +12,10 @@ Output processed compatibility panel: C:/ReposGitHub/Capacity-Utilization-US_Chi
 - First year: 1929
 - Last year: 2024
 - Observations: 96
+- K_t alias: K_total_real
+- capacity_register: gross_real_GPIM_stock
+- a00_baseline_available: TRUE
+- omega_k_formula: omega_t * k_t
 
 ## Composition availability
 - Machinery stock column detected: none

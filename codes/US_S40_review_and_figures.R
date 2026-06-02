@@ -190,6 +190,10 @@ add_anchor_shade <- function(year_min, year_max, y_min, y_max) {
   )
 }
 
+add_anchor_marker <- function(anchor_year) {
+  graphics::abline(v = anchor_year, col = "grey35", lty = 3, lwd = 1.2)
+}
+
 # ---- 2. Read and validate inputs --------------------------------------------
 missing_inputs <- names(input_paths)[!file.exists(input_paths)]
 if (length(missing_inputs) > 0L) {
@@ -216,16 +220,17 @@ require_cols(
 require_cols(
   mu_path_df,
   c(
-    "year", "Y_real", "Yp", "mu_t", "mu_formula", "anchor_window_id",
-    "anchor_year_start", "anchor_year_end", "fragility_flag"
+    "year", "Y_real", "Yp", "mu_t", "mu_formula", "anchor_type",
+    "anchor_year", "anchor_value", "fragility_flag"
   ),
   "us_s40_mu_path.csv"
 )
 require_cols(
   anchor_register,
   c(
-    "anchor_variable", "anchor_window", "anchor_year_start",
-    "anchor_year_end", "anchor_value", "anchor_check_mean_mu",
+    "reconstruction_window_id", "reconstruction_year_start",
+    "reconstruction_year_end", "anchor_type", "anchor_variable", "anchor_year",
+    "anchor_value", "anchor_source", "anchor_status", "anchor_check_mu_t",
     "fragility_flag"
   ),
   "us_s40_anchor_register.csv"
@@ -255,11 +260,14 @@ cap_yp <- as_num(productive_capacity_path_df$Yp)
 theta_year <- as.integer(as_num(theta_tot_path_df$year))
 theta_tot <- as_num(theta_tot_path_df$theta_tot)
 
-anchor_start <- as.integer(as_num(anchor_register$anchor_year_start[1L]))
-anchor_end <- as.integer(as_num(anchor_register$anchor_year_end[1L]))
-anchor_window <- anchor_register$anchor_window[1L]
-anchor_rows <- mu_year >= anchor_start & mu_year <= anchor_end
-anchor_mean_mu <- safe_mean(mu[anchor_rows])
+reconstruction_start <- as.integer(as_num(anchor_register$reconstruction_year_start[1L]))
+reconstruction_end <- as.integer(as_num(anchor_register$reconstruction_year_end[1L]))
+reconstruction_window <- anchor_register$reconstruction_window_id[1L]
+anchor_type <- anchor_register$anchor_type[1L]
+anchor_year <- as.integer(as_num(anchor_register$anchor_year[1L]))
+anchor_value <- as_num(anchor_register$anchor_value[1L])
+anchor_rows <- mu_year == anchor_year
+anchor_mu <- if (sum(anchor_rows) == 1L) mu[anchor_rows][1L] else NA_real_
 finite_mu <- mu[is.finite(mu)]
 mu_range_text <- if (length(finite_mu) == 0L) {
   "no finite mu_t values"
@@ -324,22 +332,29 @@ checks <- do.call(
       all(mu_path_df$mu_formula == "Y_real / Yp")
     ),
     check_row(
-      "anchor_window",
-      "anchor window = fordist_core",
-      anchor_window,
-      identical(anchor_window, "fordist_core")
+      "anchor_type",
+      "anchor_type = point_year_external_pinch",
+      anchor_type,
+      identical(anchor_type, "point_year_external_pinch")
     ),
     check_row(
-      "anchor_years",
-      "anchor years = 1945-1973",
-      paste(anchor_start, anchor_end, sep = "-"),
-      identical(anchor_start, 1945L) && identical(anchor_end, 1973L)
+      "anchor_year",
+      "anchor_year = 1973",
+      anchor_year,
+      identical(anchor_year, 1973L)
     ),
     check_row(
-      "anchor_mean_mu",
-      "anchor mean(mu_t) = 1 within tolerance",
-      anchor_mean_mu,
-      is.finite(anchor_mean_mu) && abs(anchor_mean_mu - 1) <= TOL,
+      "anchor_value",
+      "anchor_value = 1",
+      anchor_value,
+      is.finite(anchor_value) && abs(anchor_value - 1) <= TOL,
+      tolerance = TOL
+    ),
+    check_row(
+      "mu_1973",
+      "mu_t[year == 1973] = 1 within tolerance",
+      anchor_mu,
+      is.finite(anchor_mu) && abs(anchor_mu - 1) <= TOL,
       tolerance = TOL
     ),
     check_row(
@@ -396,10 +411,13 @@ mu_summary <- data.frame(
   year_min = min(mu_year, na.rm = TRUE),
   year_max = max(mu_year, na.rm = TRUE),
   mu_stats,
-  anchor_window = anchor_window,
-  anchor_year_start = anchor_start,
-  anchor_year_end = anchor_end,
-  anchor_mean_mu = anchor_mean_mu,
+  reconstruction_window = reconstruction_window,
+  reconstruction_year_start = reconstruction_start,
+  reconstruction_year_end = reconstruction_end,
+  anchor_type = anchor_type,
+  anchor_year = anchor_year,
+  anchor_value = anchor_value,
+  anchor_mu_t = anchor_mu,
   fragility_flag = TRUE,
   stringsAsFactors = FALSE
 )
@@ -418,19 +436,22 @@ theta_summary <- data.frame(
 
 anchor_window_summary <- data.frame(
   run_timestamp = RUN_TIMESTAMP,
-  anchor_window = anchor_window,
-  anchor_year_start = anchor_start,
-  anchor_year_end = anchor_end,
+  reconstruction_window = reconstruction_window,
+  reconstruction_year_start = reconstruction_start,
+  reconstruction_year_end = reconstruction_end,
+  anchor_type = anchor_type,
+  anchor_year = anchor_year,
+  anchor_value = anchor_value,
   observations = sum(anchor_rows),
-  mean_mu_t = anchor_mean_mu,
+  anchor_mu_t = anchor_mu,
   min_mu_t = min(mu[anchor_rows], na.rm = TRUE),
   max_mu_t = max(mu[anchor_rows], na.rm = TRUE),
   sd_mu_t = safe_sd(mu[anchor_rows]),
   mean_Y_real = safe_mean(mu_y[anchor_rows]),
   mean_Yp = safe_mean(mu_yp[anchor_rows]),
-  mean_theta_tot = safe_mean(theta_tot[theta_year >= anchor_start & theta_year <= anchor_end]),
+  mean_theta_tot = safe_mean(theta_tot[theta_year == anchor_year]),
   anchor_tolerance = TOL,
-  anchor_mean_passed = is.finite(anchor_mean_mu) && abs(anchor_mean_mu - 1) <= TOL,
+  anchor_point_passed = is.finite(anchor_mu) && abs(anchor_mu - 1) <= TOL,
   fragility_flag = TRUE,
   stringsAsFactors = FALSE
 )
@@ -447,21 +468,22 @@ plot_to_files(fig_mu_png, fig_mu_pdf, function() {
   if (!is.finite(pad) || pad == 0) pad <- 0.05
   ylim <- c(ylim[1L] - pad, ylim[2L] + pad)
   graphics::plot(mu_year, mu, type = "n", xlab = "Year", ylab = "mu_t", ylim = ylim)
-  add_anchor_shade(anchor_start, anchor_end, ylim[1L], ylim[2L])
+  add_anchor_marker(anchor_year)
   graphics::abline(h = 1, col = "grey35", lty = 2, lwd = 1.2)
   graphics::lines(mu_year, mu, col = "#1f6f8b", lwd = 2.2)
+  graphics::points(anchor_year, anchor_mu, pch = 16, col = "#8c3f2b", cex = 1.1)
   graphics::box()
   graphics::title(
     main = "US S40 mu_t path: restricted B1 under fragility",
-    sub = "Shaded anchor window: fordist_core, 1945-1973; anchor mean(mu_t)=1"
+    sub = "Point-year anchor: 1973, mu_t=1; reconstruction window is separate"
   )
   graphics::legend(
     "topright",
-    legend = c("mu_t", "anchor mean = 1", "anchor window"),
-    col = c("#1f6f8b", "grey35", grDevices::adjustcolor("grey80", alpha.f = 0.45)),
+    legend = c("mu_t", "mu_t = 1", "1973 anchor"),
+    col = c("#1f6f8b", "grey35", "#8c3f2b"),
     lty = c(1, 2, NA),
     lwd = c(2.2, 1.2, NA),
-    pch = c(NA, NA, 15),
+    pch = c(NA, NA, 16),
     bty = "n"
   )
 })
@@ -472,7 +494,7 @@ plot_to_files(fig_y_png, fig_y_pdf, function() {
   if (!is.finite(pad) || pad == 0) pad <- 1
   ylim <- c(ylim[1L] - pad, ylim[2L] + pad)
   graphics::plot(cap_year, cap_y, type = "n", xlab = "Year", ylab = "Real output", ylim = ylim)
-  add_anchor_shade(anchor_start, anchor_end, ylim[1L], ylim[2L])
+  add_anchor_marker(anchor_year)
   graphics::lines(cap_year, cap_y, col = "#2b5d34", lwd = 2.1)
   graphics::lines(cap_year, cap_yp, col = "#8c3f2b", lwd = 2.1)
   graphics::box()
@@ -482,11 +504,11 @@ plot_to_files(fig_y_png, fig_y_pdf, function() {
   )
   graphics::legend(
     "topleft",
-    legend = c("Observed Y_real", "Reconstructed Yp", "anchor window"),
-    col = c("#2b5d34", "#8c3f2b", grDevices::adjustcolor("grey80", alpha.f = 0.45)),
-    lty = c(1, 1, NA),
-    lwd = c(2.1, 2.1, NA),
-    pch = c(NA, NA, 15),
+    legend = c("Observed Y_real", "Reconstructed Yp", "1973 anchor"),
+    col = c("#2b5d34", "#8c3f2b", "grey35"),
+    lty = c(1, 1, 3),
+    lwd = c(2.1, 2.1, 1.2),
+    pch = c(NA, NA, NA),
     bty = "n"
   )
 })
@@ -497,7 +519,7 @@ plot_to_files(fig_theta_png, fig_theta_pdf, function() {
   if (!is.finite(pad) || pad == 0) pad <- 0.05
   ylim <- c(ylim[1L] - pad, ylim[2L] + pad)
   graphics::plot(theta_year, theta_tot, type = "n", xlab = "Year", ylab = "theta_tot", ylim = ylim)
-  add_anchor_shade(anchor_start, anchor_end, ylim[1L], ylim[2L])
+  add_anchor_marker(anchor_year)
   graphics::lines(theta_year, theta_tot, col = "#4f5d95", lwd = 2.2)
   graphics::box()
   graphics::title(
@@ -506,11 +528,11 @@ plot_to_files(fig_theta_png, fig_theta_pdf, function() {
   )
   graphics::legend(
     "topright",
-    legend = c("theta_tot", "anchor window"),
-    col = c("#4f5d95", grDevices::adjustcolor("grey80", alpha.f = 0.45)),
-    lty = c(1, NA),
-    lwd = c(2.2, NA),
-    pch = c(NA, 15),
+    legend = c("theta_tot", "1973 anchor"),
+    col = c("#4f5d95", "grey35"),
+    lty = c(1, 3),
+    lwd = c(2.2, 1.2),
+    pch = c(NA, NA),
     bty = "n"
   )
 })
@@ -573,7 +595,7 @@ report_lines <- c(
   "",
   md_table(theta_summary),
   "",
-  "### Anchor window",
+  "### Anchor point",
   "",
   md_table(anchor_window_summary),
   "",

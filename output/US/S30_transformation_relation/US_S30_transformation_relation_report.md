@@ -10,6 +10,9 @@ The purpose is coefficient recovery plus parameter-stability discipline. Histori
 - Input panel: `C:/ReposGitHub/Capacity-Utilization-US_Chile/data/processed/US/us_s20_admissibility_panel.csv`
 - Panel span: 1929-2024
 - Observations: 96
+- capacity_register: gross_real_GPIM_stock
+- a00_baseline_available: TRUE
+- omega_k_formula: omega_t * k_t
 
 | variable | present | finite_observations |
 | --- | --- | --- |
@@ -29,6 +32,9 @@ The purpose is coefficient recovery plus parameter-stability discipline. Histori
 - composition_basis: ME_NRC_component_proxy
 - composition_tier: Tier B
 - direct_sector_asset_split: FALSE
+- a03_composition_status: proxy_available
+- a03_composition_basis: ME_NRC_component_proxy
+- a03_composition_tier: Tier B
 - The US composition variable is a Tier-B ME-NRC component proxy.
 - It is not a direct NFCorp-by-asset-type split.
 
@@ -65,14 +71,14 @@ The purpose is coefficient recovery plus parameter-stability discipline. Histori
 
 - Register written: `C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S30_transformation_relation/us_s30_specification_register.csv`
 
-| spec_id | formula_label | role | promotion_eligible | diagnostic_only |
-| --- | --- | --- | --- | --- |
-| SPEC_B0_CAPITAL_ONLY | y_t ~ k_t | baseline_reference | FALSE | FALSE |
-| SPEC_B1_WAGE_BASELINE | y_t ~ k_t + omega_k_t | core_candidate | TRUE | FALSE |
-| SPEC_C1_COMPOSITION_STOCK | y_t ~ k_t + omega_k_t + s_proxy_k_t | core_candidate | TRUE | FALSE |
-| SPEC_C2_FULL_COMPOSITION | y_t ~ k_t + omega_k_t + s_proxy_k_t + omega_s_proxy_k_t | core_candidate | TRUE | FALSE |
-| SPEC_D1_CURRENT_COST_DIAGNOSTIC | y_t ~ k_t + omega_k_t + s_proxy_cc_k_t | diagnostic_only | FALSE | TRUE |
-| SPEC_D2_PRICE_WEDGE_DIAGNOSTIC | y_t ~ k_t + omega_k_t + s_proxy_k_t + pKrel_k_t | diagnostic_only | FALSE | TRUE |
+| spec_id | formula_label | architecture_layer | identification_role | baseline_replacement_allowed | role | promotion_eligible | diagnostic_only |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| SPEC_B0_CAPITAL_ONLY | y_t ~ k_t | A00 | capital_only_reference | FALSE | baseline_reference | FALSE | FALSE |
+| SPEC_B1_WAGE_BASELINE | y_t ~ k_t + omega_k_t | A00 | aggregate_interaction_baseline | TRUE | core_candidate | TRUE | FALSE |
+| SPEC_C1_COMPOSITION_STOCK | y_t ~ k_t + omega_k_t + s_proxy_k_t | A03 | composition_proxy_escalation | FALSE | core_candidate | TRUE | FALSE |
+| SPEC_C2_FULL_COMPOSITION | y_t ~ k_t + omega_k_t + s_proxy_k_t + omega_s_proxy_k_t | A03 | composition_proxy_escalation | FALSE | core_candidate | TRUE | FALSE |
+| SPEC_D1_CURRENT_COST_DIAGNOSTIC | y_t ~ k_t + omega_k_t + s_proxy_cc_k_t | diagnostic | fragility_or_price_wedge_diagnostic | FALSE | diagnostic_only | FALSE | TRUE |
+| SPEC_D2_PRICE_WEDGE_DIAGNOSTIC | y_t ~ k_t + omega_k_t + s_proxy_k_t + pKrel_k_t | diagnostic | fragility_or_price_wedge_diagnostic | FALSE | diagnostic_only | FALSE | TRUE |
 
 ## 7. Main estimator grid summary
 
