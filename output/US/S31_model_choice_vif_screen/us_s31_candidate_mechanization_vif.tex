@@ -1,0 +1,36 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{US S31 Candidate NRC-Envelope / Mechanization-Bias VIF Diagnostics}
+\label{tab:us_s31_candidate_mechanization_vif}
+\begin{tabular}{lllrrlll}
+\hline
+Spec & Window & Years & N & Max VIF & High-VIF variables & Flag & Diagnostic note \\
+\hline
+SPEC\_E1\_NRC\_ENVELOPE\_MECHANIZATION\_BIAS & pre\_1974 & 1929--1973 & 45 & 1.584 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E1\_NRC\_ENVELOPE\_MECHANIZATION\_BIAS & full\_long\_sample & 1929--2024 & 96 & 1.357 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E1\_NRC\_ENVELOPE\_MECHANIZATION\_BIAS & pre\_1974\_alt\_1940\_1973 & 1940--1973 & 34 & 1.239 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E1\_NRC\_ENVELOPE\_MECHANIZATION\_BIAS & bridge\_1940\_1978 & 1940--1978 & 39 & 1.242 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E1\_NRC\_ENVELOPE\_MECHANIZATION\_BIAS & fordist\_core & 1945--1973 & 29 & 1.009 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E1\_NRC\_ENVELOPE\_MECHANIZATION\_BIAS & pre\_1974\_alt\_1947\_1974 & 1947--1974 & 28 & 1.114 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E1\_NRC\_ENVELOPE\_MECHANIZATION\_BIAS & post\_1973 & 1974--2024 & 51 & 4.312 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E2A\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_FULL & pre\_1974 & 1929--1973 & 45 & 12.231 & m\_ME\_NRC\_t | omega\_m\_ME\_NRC\_t & TRUE & High VIF block for review variables: m\_ME\_NRC\_t | omega\_m\_ME\_NRC\_t \\
+SPEC\_E2A\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_FULL & full\_long\_sample & 1929--2024 & 96 & 6.054 &  & FALSE & Moderate VIF; review coefficient interpretation with caution. \\
+SPEC\_E2A\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_FULL & pre\_1974\_alt\_1940\_1973 & 1940--1973 & 34 & 5.566 &  & FALSE & Moderate VIF; review coefficient interpretation with caution. \\
+SPEC\_E2A\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_FULL & bridge\_1940\_1978 & 1940--1978 & 39 & 5.430 &  & FALSE & Moderate VIF; review coefficient interpretation with caution. \\
+SPEC\_E2A\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_FULL & fordist\_core & 1945--1973 & 29 & 5.861 &  & FALSE & Moderate VIF; review coefficient interpretation with caution. \\
+SPEC\_E2A\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_FULL & pre\_1974\_alt\_1947\_1974 & 1947--1974 & 28 & 3.252 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E2A\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_FULL & post\_1973 & 1974--2024 & 51 & 25.407 & k\_NRC\_proxy\_t | m\_ME\_NRC\_t & TRUE & High VIF block for review variables: k\_NRC\_proxy\_t | m\_ME\_NRC\_t \\
+SPEC\_E2B\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_RESTRICTED & pre\_1974 & 1929--1973 & 45 & 1.395 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E2B\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_RESTRICTED & full\_long\_sample & 1929--2024 & 96 & 1.090 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E2B\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_RESTRICTED & pre\_1974\_alt\_1940\_1973 & 1940--1973 & 34 & 1.112 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E2B\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_RESTRICTED & bridge\_1940\_1978 & 1940--1978 & 39 & 1.101 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E2B\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_RESTRICTED & fordist\_core & 1945--1973 & 29 & 1.003 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E2B\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_RESTRICTED & pre\_1974\_alt\_1947\_1974 & 1947--1974 & 28 & 1.248 &  & FALSE & Low VIF; no collinearity block for review. \\
+SPEC\_E2B\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_RESTRICTED & post\_1973 & 1974--2024 & 51 & 1.203 &  & FALSE & Low VIF; no collinearity block for review. \\
+\hline
+\end{tabular}
+\begin{minipage}{0.98\textwidth}
+\footnotesize \textit{Note:} These specifications are VIF-only candidate diagnostics. They are not estimated S30 specifications and report no coefficients. The envelope variable is log real NRC capital. The mechanization-bias variable is log(ME/NRC), so higher values indicate greater machinery intensity relative to the NRC envelope. VIF is a collinearity feasibility diagnostic and does not adjudicate cointegration or select a final model.
+\end{minipage}
+\end{table}

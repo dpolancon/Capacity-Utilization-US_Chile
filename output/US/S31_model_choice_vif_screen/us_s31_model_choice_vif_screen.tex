@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{US S31 VIF Screen for Model-Choice Review}
+\label{tab:us_s31_model_choice_vif_screen}
+\begin{tabular}{lllrrlll}
+\hline
+Spec & Layer & Estimated status & Max VIF & High windows & Worst window & VIF recommendation & Final screen status \\
+\hline
+SPEC\_B1\_WAGE\_BASELINE & A00\_baseline & estimated\_in\_S30 & 5.934 & 0 & bridge\_1940\_1978 & vif\_feasible\_with\_caution & baseline\_vif\_fragile\_for\_human\_adjudication \\
+SPEC\_C1\_COMPOSITION\_STOCK & A03\_proxy\_escalation & estimated\_in\_S30 & 6.475 & 0 & pre\_1974 & vif\_feasible\_with\_caution & proxy\_escalation\_vif\_fragile\_for\_human\_adjudication \\
+SPEC\_C2\_FULL\_COMPOSITION & A03\_proxy\_escalation & estimated\_in\_S30 & 4363.707 & 7 & pre\_1974\_alt\_1947\_1974 & vif\_block\_before\_estimation\_or\_promotion & proxy\_escalation\_vif\_fragile\_for\_human\_adjudication \\
+SPEC\_E1\_NRC\_ENVELOPE\_MECHANIZATION\_BIAS & A03\_candidate & not\_estimated\_vif\_only & 4.312 & 0 & post\_1973 & vif\_feasible\_for\_human\_review & vif\_feasible\_for\_possible\_future\_S30b\_or\_S32\_review \\
+SPEC\_E2A\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_FULL & A03\_candidate & not\_estimated\_vif\_only & 25.407 & 2 & post\_1973 & vif\_block\_before\_estimation\_or\_promotion & vif\_blocks\_candidate\_estimation\_pending\_human\_override \\
+SPEC\_E2B\_NRC\_ENVELOPE\_DISTRIBUTIVE\_MECHANIZATION\_RESTRICTED & A03\_candidate & not\_estimated\_vif\_only & 1.395 & 0 & pre\_1974 & vif\_feasible\_for\_human\_review & vif\_feasible\_for\_possible\_future\_S30b\_or\_S32\_review \\
+SPEC\_D1\_CURRENT\_COST\_DIAGNOSTIC & diagnostic\_only & estimated\_in\_S30 & 20.968 & 1 & post\_1973 & vif\_block\_before\_estimation\_or\_promotion & diagnostic\_only\_not\_promotable \\
+SPEC\_D2\_PRICE\_WEDGE\_DIAGNOSTIC & diagnostic\_only & estimated\_in\_S30 & 25.539 & 2 & post\_1973 & vif\_block\_before\_estimation\_or\_promotion & diagnostic\_only\_not\_promotable \\
+\hline
+\end{tabular}
+\begin{minipage}{0.98\textwidth}
+\footnotesize \textit{Note:} VIF is a collinearity screen for coefficient interpretation. It does not adjudicate cointegration, does not select a final model, and does not authorize S40 reconstruction. A00/B1 remains the baseline review object. A03 proxy specifications and A03 candidate specifications require human adjudication before any further use.
+\end{minipage}
+\end{table}
