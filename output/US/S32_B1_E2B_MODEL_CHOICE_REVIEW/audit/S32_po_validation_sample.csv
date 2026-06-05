@@ -1,0 +1,3 @@
+"spec_id","window_id","po_statistic","po_cv_1pct","po_cv_5pct","po_cv_10pct","phillips_ouliaris_gate"
+"SPEC_B1_WAGE_BASELINE","full_long_sample",51.2561882990238,109.4525,89.7619,80.2034,"fail"
+"SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED","full_long_sample",16.0339909452358,109.4525,89.7619,80.2034,"fail"

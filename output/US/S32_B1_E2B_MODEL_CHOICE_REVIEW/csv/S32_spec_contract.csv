@@ -1,0 +1,3 @@
+"spec_id","dependent_var","formula_label","regressors","architecture_layer","estimator_scope","S32_role","restriction","S40_authorized","final_model_selection_authorized"
+"SPEC_B1_WAGE_BASELINE","y_t","y_t ~ k_t + omega_k_t","k_t | omega_k_t","A00_baseline","FM_OLS | IM_OLS | DOLS","baseline_locked_comparison_object","includes aggregate capital and omega_k only",FALSE,FALSE
+"SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED","y_t","y_t ~ k_NRC_t + omega_m_ME_NRC_t","k_NRC_t | omega_m_ME_NRC_t","A03_candidate_restricted","FM_OLS | IM_OLS | DOLS","restricted_mechanization_bias_candidate","m_ME_NRC_t omitted by design; E2B is not E2A",FALSE,FALSE

@@ -1,0 +1,8 @@
+"spec_id","status","reason_not_in_S32_pair","allowed_future_use"
+"SPEC_B0_CAPITAL_ONLY","not_in_S32_pair","capital-only reference is not the locked B1 baseline","reference metadata only"
+"SPEC_C1_COMPOSITION_STOCK","not_in_S32_pair","proxy-escalation spec excluded by locked B1/E2B comparison","future governed review only"
+"SPEC_C2_FULL_COMPOSITION","not_in_S32_pair","full proxy-composition spec excluded by locked B1/E2B comparison","future governed review only"
+"SPEC_E1_NRC_ENVELOPE_MECHANIZATION_BIAS","not_in_S32_pair","unconditioned mechanization-bias candidate excluded by locked pair","future governed review only"
+"SPEC_E2A_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_FULL","not_in_S32_pair","full E2A candidate includes m_ME_NRC_t separately; S32 locks restricted E2B only","future governed review only"
+"SPEC_D1_CURRENT_COST_DIAGNOSTIC","diagnostic_only_not_in_S32_pair","diagnostic-only current-cost spec","diagnostic appendix only"
+"SPEC_D2_PRICE_WEDGE_DIAGNOSTIC","diagnostic_only_not_in_S32_pair","diagnostic-only price-wedge spec","diagnostic appendix only"

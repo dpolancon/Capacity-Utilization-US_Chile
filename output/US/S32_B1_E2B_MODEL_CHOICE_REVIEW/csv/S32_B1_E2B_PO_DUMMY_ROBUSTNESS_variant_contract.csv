@@ -1,0 +1,5 @@
+"dummy_variant","variant_label","rule","can_rescue_for_serious_human_review","interpretation_limit","historical_prior_used"
+"D0","no_dummies_current_S32_baseline","No pulse controls; current patched S32 baseline Pz / constant / short.",FALSE,"baseline only",FALSE
+"D1","strict_high_recurrence_high_priority","Use high-priority pulse years recurring across both specs, at least two estimators, and at least three windows.",TRUE,"only bounded dummy variant allowed to rescue a failed baseline for serious human review",FALSE
+"D2","all_high_priority_in_window","Use all high-priority pulse years inside the spec-window sample.",FALSE,"fragility diagnostic only; cannot define preferred relation",FALSE
+"D3","all_high_and_medium_priority_in_window","Use all high-priority and medium-priority pulse years inside the spec-window sample.",FALSE,"stress test only; cannot define preferred relation",FALSE
