@@ -9,6 +9,7 @@ stage: S30
 repo: Capacity-Utilization-US_Chile
 review_date: 2026-05-14
 superseded_by:
+  - R_distribution_conditioned_theta_identification
   - C04-US_S30_STABILITY_PROTOCOL
   - US_S40_Restricted_B1_Reconstruction_Contract
   - US_S40_Review_and_Figures_Contract
@@ -16,7 +17,7 @@ supersession_reason: formal_s30_gate_opened_restricted_b1_under_fragility
 active_contract: false
 historical_trace: true
 s40_blocked_conclusion_active: false
-s40_current_status: pass_restricted_fragility_flag
+s40_current_status: blocked_pending_corrected_s30_s32_review
 dols_veto_active: false
 dols_fragility_metadata_only: true
 s30_anchor_authority: false
@@ -24,7 +25,7 @@ s40_anchor_governed_by: D03_capacity_utilization_level_anchor_pinch_year_protoco
 us_s40_preferred_anchor_year: 1973
 us_s40_anchor_condition: mu_US_1973_equals_1
 created: 2026-05-14
-updated: 2026-05-14
+updated: 2026-06-08
 related_to:
   - C04-US_S30_STABILITY_PROTOCOL
   - D03_capacity_utilization_level_anchor_pinch_year_protocol
@@ -40,7 +41,7 @@ This memo is preserved as a historical trace of the preliminary S30 substantive 
 
 It is no longer an active implementation contract.
 
-Its original conclusion that S40 should remain blocked was superseded by the later formal S30 adjudication pathway, which opened a restricted B1 S40 pathway under fragility discipline.
+The later restricted B1 pathway was itself superseded on June 8, 2026 by [[R_distribution_conditioned_theta_identification]]. S40 is now blocked pending corrected S30/S32 review.
 
 The active implementation rules are now governed by:
 
@@ -49,10 +50,10 @@ The active implementation rules are now governed by:
 - `US S40 Review and Figures Contract.md`
 - `D03_capacity_utilization_level_anchor_pinch_year_protocol.md`
 
-Current status:
+Historical B1 status recorded by this memo:
 
-- B1 is the restricted S40 pathway.
-- S40 proceeds only under fragility discipline.
+- B1 was the restricted S40 pathway.
+- S40 proceeded only under fragility discipline.
 - DOLS is fragility metadata only.
 - DOLS does not veto Tier 1.
 - DOLS is not a reconstruction basis.
@@ -63,7 +64,7 @@ $$
 \mu_{US,1973}=1
 $$
 
-The historical content below should not be used to block the current restricted B1 S40 pathway.
+The historical content below does not authorize the current benchmark or S40.
 
 It remains useful only as a record of the earlier pre-formal-gate interpretation.
 

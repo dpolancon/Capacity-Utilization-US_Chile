@@ -1,6 +1,6 @@
 ---
 type: implementation_contract
-status: active
+status: superseded_blocked
 layer: code_stage_design
 design_role: us_s40_restricted_b1_reconstruction_contract
 scope: chapter2_results_repo
@@ -32,7 +32,7 @@ new_model_estimation_allowed: false
 review_figures_allowed: false
 s50_activation_allowed: false
 created: 2026-05-14
-updated: 2026-06-02
+updated: 2026-06-08
 related_to:
   - C01-US_00_MEMO_RECYCLING
   - C03-REPO_STRUCTURE
@@ -46,6 +46,9 @@ related_to:
 ---
 
 # US S40 Restricted B1 Reconstruction Contract
+
+> [!danger] S40 blocked
+> This contract is superseded because `SPEC_B1_WAGE_BASELINE` uses the rejected level interaction. It is retained as historical implementation governance only. S40 remains untouched until S30/S32 human review promotes a corrected accumulated-index coefficient object under [[R_distribution_conditioned_theta_identification]].
 
 ## 1. Purpose
 

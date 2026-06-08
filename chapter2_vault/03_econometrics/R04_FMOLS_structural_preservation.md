@@ -5,6 +5,7 @@ layer: method
 design_role: preferred_estimator_rule
 scope: chapter2_core_support
 related_to:
+  - R_distribution_conditioned_theta_identification
   - A00_Aggregate_Transformation_Benchmark
   - R03_super_consistency_mechanics_hinge
   - R05_LRV_kernel_bandwidth_regime_misalignment
@@ -55,19 +56,31 @@ $$
 
 For this sequence, preserving the theoretical regressor matrix matters.
 
-The A00 baseline structural regressor matrix is:
+The corrected A00 structural regressor matrix is:
 
 $$
-y_t = c + \beta_1 k_t + \beta_2(\omega_t k_t) + \xi_t,
+y_t^p
+=
+\alpha
++
+\theta_0 k_t
++
+\theta_\omega q_t^{\omega,h}
++
+u_t,
 $$
 
 so the recovered elasticity is:
 
 $$
-\hat{\theta}_t = \hat{\beta}_1 + \hat{\beta}_2 \omega_t.
+\hat{\theta}_t
+=
+\hat{\theta}_0
++
+\hat{\theta}_\omega m_{t-1}^{(h)}.
 $$
 
-FM-OLS preserves this A00 mapping more cleanly than DOLS because it does not introduce auxiliary lead-lag terms into the structural equation. The interaction term is not demoted; it is part of the baseline A00 matrix.
+FM-OLS preserves this A00 mapping more cleanly than DOLS because it does not introduce auxiliary lead-lag terms into the structural equation. The accumulated index must be constructed before estimation and remains part of the structural matrix.
 
 ---
 
@@ -79,7 +92,7 @@ This matters because the reconstructed productive-capacity path requires a clean
 
 The A00 preservation rule is:
 
-> the estimator may correct the coefficient, but it must preserve $c + \beta_1 k_t + \beta_2(\omega_t k_t) + \xi_t$ as the structural object being reconstructed.
+> the estimator may correct the coefficient, but it must preserve $\alpha+\theta_0 k_t+\theta_\omega q_t^{\omega,h}+u_t$ as the structural object being reconstructed.
 
 FM-OLS satisfies this rule better than DOLS.
 
@@ -160,7 +173,7 @@ Its result must be interpreted through the reconstruction sequence, not through 
 
 ## 8. Locked sentence for reuse
 
-**FM-OLS is preferred because it preserves the A00 structural regressor matrix $c + \beta_1 k_t + \beta_2(\omega_t k_t) + \xi_t$, and therefore preserves the mapping $\beta_1 + \beta_2\omega_t$. It can support productive-capacity reconstruction only after the relation is theoretically interpreted, empirically disciplined, and level-anchored; otherwise the residual remains an algebraic remainder, not utilization.**
+**FM-OLS is preferred because it preserves the corrected A00 structural regressor matrix $\alpha+\theta_0 k_t+\theta_\omega q_t^{\omega,h}+u_t$, and therefore preserves the mapping $\theta_t=\theta_0+\theta_\omega m_{t-1}^{(h)}$. It can support productive-capacity reconstruction only after the generated index is audited, the relation is admissible, and the path is level-anchored; otherwise the residual remains an algebraic remainder, not utilization.**
 
 ---
 

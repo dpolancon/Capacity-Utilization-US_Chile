@@ -181,25 +181,32 @@ Expected variables:
 - `pK`
 - profitability inputs
 
-### A00 interaction metadata
+### A00 accumulated-index metadata
 
 For A00 implementation metadata, `K_t` is aggregate real productive capital.
 
 `k_t` is the log of `K_t` or another dimensionally admissible aggregate-capital index declared in the source-of-truth panel.
 
-`omega_t` is the wage-share / distributive condition used in the aggregate transformation relation.
+`omega_t` is the wage-share / distributive condition used to construct inherited memory states.
 
-The A00 baseline interaction export is:
+The corrected A00 exports are:
 
-`omega_k_t = omega_t * k_t`
+```text
+q_omega_1
+q_omega_3
+q_omega_5
+```
 
 meaning:
 
 $$
-\omega_{k,t}=\omega_t k_t
+q_t^{\omega,h}
+=
+\sum_{s=1}^{t}
+m_{s-1}^{(h)}\Delta k_s.
 $$
 
-Restricted B1 is therefore the A00 aggregate interaction implementation before any A03 composition interpretation. Machinery and non-machinery capital variables may support A03 mechanism interpretation, but they do not replace the A00 baseline object.
+The panel must also export `q_ME_omega_1`, `q_ME_omega_3`, and `q_ME_omega_5` for governed A03/A05 review. The benchmark uses no full-sample centering. The former `omega_k_t` export is historical only and cannot define S30 promotion or S40 reconstruction.
 
 The current scripts appear to repeatedly rebuild real output, real capital, and wage-share objects internally. That should stop. Each script should not behave as a tiny independent republic.
 

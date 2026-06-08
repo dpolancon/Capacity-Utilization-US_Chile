@@ -73,30 +73,38 @@ $$
 
 ---
 
-## 4. Interaction-sequence rule
+## 4. Generated-index sequence rule
 
-If the specification contains interaction terms, the order of operations matters.
+If the specification contains an accumulated distribution-conditioned index, the order of operations matters.
 
-The interaction must be formed in level space before integration.
+The inherited memory state must weight capital growth before accumulation.
 
-For example, if the theoretical object is:
+The theoretical object is:
 
 $$
-z_t = \omega_t k_t,
+z_t
+=
+m_{t-1}^{(h)}\Delta k_t,
 $$
 
 then the correct sequence is:
 
 $$
-z_t = \omega_t k_t
+z_t
+=
+m_{t-1}^{(h)}\Delta k_t
 \rightarrow
-S_t^z = \sum_{j=1}^{t} z_j.
+q_t^{\omega,h}
+=
+\sum_{j=1}^{t} z_j.
 $$
 
 The incorrect sequence is:
 
 $$
-S_t^\omega \times S_t^k.
+\left(\sum_{j=1}^{t}\omega_j\right)
+\times
+\left(\sum_{j=1}^{t}\Delta k_j\right).
 $$
 
 That would create a different mathematical object and break the connection with the theoretical transformation relation.

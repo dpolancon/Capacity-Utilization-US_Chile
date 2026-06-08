@@ -1,6 +1,6 @@
 ---
 type: implementation_contract
-status: active
+status: superseded_blocked
 layer: code_stage_design
 design_role: us_s40_review_and_figures_contract
 scope: chapter2_results_repo
@@ -35,7 +35,7 @@ chile_outputs_allowed: false
 new_model_estimation_allowed: false
 s50_activation_allowed: false
 created: 2026-05-14
-updated: 2026-05-26
+updated: 2026-06-08
 related_to:
   - C05-FIGURE_PROTOCOL
   - US_S40_Restricted_B1_Reconstruction_Contract
@@ -49,6 +49,9 @@ related_to:
 ---
 
 # US S40 Review and Figures Contract
+
+> [!danger] S40 review parked
+> The upstream B1 reconstruction contract is superseded. This review contract cannot activate figures or validate reconstruction until S30/S32 human review promotes a corrected accumulated-index coefficient object under [[R_distribution_conditioned_theta_identification]].
 
 ## 1. Purpose
 

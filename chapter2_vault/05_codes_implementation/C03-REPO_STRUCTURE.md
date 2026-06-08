@@ -28,7 +28,7 @@ cl_s40_anchor_type: point_year_historical_pinch
 cl_s40_anchor_source: Ffrench_Davis_2018_full_capacity_reference
 window_average_anchor_allowed_as_baseline: false
 created: 2026-05-06
-updated: 2026-05-26
+updated: 2026-06-08
 related_to:
   - C01-US_00_MEMO_RECYCLING
   - C02-CL_00_MEMO_RECYCLING
@@ -41,6 +41,9 @@ related_to:
 ---
 
 # C03 - Results Repository Structure and Stage Governance
+
+> [!warning] June 8 methodological override
+> Repository paths remain valid, but all references in this note to an active restricted-B1 S40 pathway are superseded. S40 is blocked until the corrected accumulated-index object passes S30/S32 human review under [[R_distribution_conditioned_theta_identification]].
 
 ## 1. Purpose
 

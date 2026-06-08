@@ -106,22 +106,34 @@ FM-OLS remains the preferred main estimator for the long-run reconstruction laye
 
 However, its LRV correction is global unless the design explicitly modifies it.
 
-Here "global" does not mean constant $\theta$. It means global estimation of the A00 time-varying interaction mapping:
+Here "global" does not mean constant $\theta$. It means global estimation of the corrected A00 accumulated-index mapping:
 
 $$
-y_t = c + \beta_1 k_t + \beta_2(\omega_t k_t) + \xi_t,
+y_t^p
+=
+\alpha
++
+\theta_0 k_t
++
+\theta_\omega q_t^{\omega,h}
++
+u_t,
 $$
 
 with:
 
 $$
-\theta_t = \beta_1 + \beta_2\omega_t.
+\theta_t
+=
+\theta_0
++
+\theta_\omega m_{t-1}^{(h)}.
 $$
 
 So FM-OLS can support:
 
 $$
-\text{A00 aggregate interaction relation}
+\text{A00 accumulated-index relation}
 \rightarrow
 \hat{\theta}
 \rightarrow

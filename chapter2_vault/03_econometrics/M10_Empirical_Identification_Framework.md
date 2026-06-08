@@ -5,6 +5,7 @@ layer: method
 design_role: empirical_strategy_scaffold
 scope: chapter2_core_support
 related_to:
+  - R_distribution_conditioned_theta_identification
   - A00_Aggregate_Transformation_Benchmark
   - N01_CapacityUtilization_StructuralObject
   - N02_SuperConsistency
@@ -46,7 +47,7 @@ Do not identify $\mu_t$ by residual.
 Admissible sequence:
 
 $$
-\text{A00 aggregate interaction relation}
+\text{A00 accumulated-index relation}
 \rightarrow
 \hat{\theta}_t
 \rightarrow
@@ -114,7 +115,7 @@ Rule:
 
 FM-OLS preserves the theoretical regressor matrix, but its long-run variance correction may smooth across historical regime boundaries.
 
-Therefore, FM-OLS is preferred for global reconstruction of the A00 time-varying interaction mapping, not for identifying regime-dependent transformation elasticities by itself.
+Therefore, FM-OLS is preferred for the corrected A00 accumulated-index mapping, not for identifying regime-dependent transformation elasticities by itself.
 
 ---
 
@@ -168,7 +169,7 @@ Source notes:
 Final sequence:
 
 $$
-\text{A00 aggregate interaction relation}
+\text{A00 accumulated-index relation}
 \rightarrow
 \text{long-run coefficient recovery}
 \rightarrow
@@ -218,7 +219,11 @@ Do not scatter econometric references unless the note needs standalone portabili
 
 ## 10. Locked statement
 
-**Chapter 2 does not estimate utilization directly. It estimates the A00 aggregate interaction relation, recovers $\hat{\theta}_t$, reconstructs productive capacity, anchors its level, and only then derives utilization. FM-OLS is the main estimator, IM-OLS is the robustness check, DOLS is the fragility diagnostic, and threshold-FGLS belongs only to the regime layer after diagnostic admissibility.**
+Johansen/VECM is system-level robustness only. It does not replace the corrected single-equation cointegrating benchmark.
+
+Before estimation, S30 must generate $q_t^{\omega,1}$, $q_t^{\omega,3}$, and $q_t^{\omega,5}$ and audit missingness, integration order, correlation, VIF, path plausibility, capital-definition sensitivity, and distribution-measure sensitivity. S32 may perform the corresponding machinery-index review only after authorization.
+
+**Chapter 2 does not estimate utilization directly. It estimates the corrected A00 accumulated-index relation, recovers $\hat{\theta}_t$, reconstructs productive capacity, anchors its level, and only then derives utilization. FM-OLS is the main estimator, IM-OLS is the robustness check, DOLS is the fragility/robustness diagnostic, and Johansen/VECM remains system-level robustness. S40 stays blocked until S30/S32 human review promotes a corrected coefficient object.**
 
 ## Bridge note
 

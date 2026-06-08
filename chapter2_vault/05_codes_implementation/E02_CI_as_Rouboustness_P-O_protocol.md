@@ -4,7 +4,7 @@ id: "R_Phillips_Ouliaris_Implementation_Protocol"
 title: "Phillips-Ouliaris Implementation Protocol for Cointegration Robustness"
 status: "draft"
 created: "2026-06-03"
-updated: "2026-06-03"
+updated: "2026-06-08"
 project: "Chapter 2"
 repo_area: "02_econometrics"
 note_role: "implementation_guardrail"
@@ -42,8 +42,8 @@ forbidden_terms:
   - "S40 reconstruction authorized"
 
 related_specs:
-  - "SPEC_B1_WAGE_BASELINE"
-  - "SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED"
+  - "SPEC_A00_ACCUMULATED_DISTRIBUTION_BENCHMARK"
+  - "SPEC_A05_ME_ACCUMULATION_WEIGHTED"
 
 related_notes:
   - "R_Cointegration_Admissibility_Superconsistent_Estimators"
@@ -120,41 +120,36 @@ Estimator-specific residual ADF checks may remain as diagnostics, but they are n
 
 ## Candidate systems
 
-For B1, the candidate relation is:
+For the corrected A00 benchmark, the candidate relation is:
 
 $$  
-y_t = c + \beta_k k_t + \beta_{\omega k}(\omega_t k_t) + u_t^{B1}.  
+y_t^p = \alpha + \theta_0 k_t + \theta_\omega q_t^{\omega,h} + u_t^{A00}.
 $$
 
 The Phillips-Ouliaris data matrix is:
 
 ```r
-z_b1 <- cbind(
+z_a00 <- cbind(
   y_t = d$y_t,
   k_t = d$k_t,
-  omega_k_t = d$omega_k_t
+  q_omega_h = d$q_omega_h
 )
 ```
 
-For E2B, the candidate relation is:
+For the corrected A05 candidate, the relation is:
 
 $$  
-y_t = c + \beta_{NRC}k^{NRC}_t + \beta_{\omega m}(\omega_t m_t) + u_t^{E2B}.  
-$$
-
-where
-
-$$  
-m_t = k^{ME}_t - k^{NRC}_t.  
+y_t^p = \alpha + \beta_{NRC}k_t^{NRC} + \beta_{ME}k_t^{ME} + \beta_{\omega ME}q_t^{ME,\omega,h} + u_t^{A05}.
 $$
 
 The Phillips-Ouliaris data matrix is:
 
 ```r
-z_e2b <- cbind(
+z_a05 <- cbind(
   y_t = d$y_t,
   k_NRC_t = d$k_NRC_t,
-  omega_m_ME_NRC_t = d$omega_m_ME_NRC_t
+  k_ME_t = d$k_ME_t,
+  q_ME_omega_h = d$q_ME_omega_h
 )
 ```
 

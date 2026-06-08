@@ -8,7 +8,7 @@ design_role: "source_truth_construction"
 scope: "chapter2_us"
 stage: "S10"
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-06-08
 
 upstream_provider: "US-BEA-Income-FixedAssets-Dataset"
 analytical_source_truth_repo: "Capacity-Utilization-US_Chile"
@@ -77,6 +77,7 @@ downstream_blocked_until_s10_passes:
   - "S40"
 
 related_to:
+  - "R_distribution_conditioned_theta_identification"
   - "US-BEA-Income-FixedAssets-Dataset"
   - "Capacity-Utilization-US_Chile"
   - "GPIM_Application"
@@ -87,6 +88,41 @@ related_to:
   - "A00_Aggregate_Transformation_Benchmark"
   - "A03_TransformationElasticity_Two-CapitalCapacityComposition"
 ---
+
+## Distribution-conditioned index construction lock
+
+S10 must generate the corrected indexes before S30 estimation:
+
+$$
+q_t^{\omega,1}
+=
+\sum_{s=1}^{t}
+\omega_{s-1}\Delta k_s,
+\qquad
+q_t^{\omega,3}
+=
+\sum_{s=1}^{t}
+m_{s-1}^{(3)}\Delta k_s,
+\qquad
+q_t^{\omega,5}
+=
+\sum_{s=1}^{t}
+m_{s-1}^{(5)}\Delta k_s.
+$$
+
+It must also generate:
+
+$$
+q_t^{ME,\omega,1},
+\qquad
+q_t^{ME,\omega,3},
+\qquad
+q_t^{ME,\omega,5},
+$$
+
+using the corresponding inherited-distribution memory state and $\Delta k_s^{ME}$.
+
+The benchmark uses no full-sample centering. Every index export must record timing, memory state, first valid year, missingness, capital definition, and distribution measure. Downstream estimation remains blocked until these generated variables pass the feasibility checks in [[R10_Binding_Specification_Layering_Rule]].
 
 ## Sectoral-accounting lock: NFC, Shaikh-corrected corporate, and mixed Marxian conditioning
 
