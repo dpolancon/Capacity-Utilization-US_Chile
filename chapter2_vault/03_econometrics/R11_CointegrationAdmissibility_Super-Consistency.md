@@ -1,0 +1,271 @@
+---
+type: R-note
+id: R_Cointegration_Admissibility_Superconsistent_Estimators
+title: Cointegration Admissibility for Super-Consistent Estimators
+status: draft
+created: 2026-06-03
+updated: 2026-06-03
+project: Chapter 2
+repo_area: 02_econometrics
+note_role: identification_guardrail
+object_domain: long_run_transformation_relation
+method_family: super_consistent_cointegrating_regression
+primary_estimators:
+  - FM-OLS
+  - IM-OLS
+  - DOLS
+primary_gate: Phillips-Ouliaris residual-based cointegration test
+secondary_gate: residual ADF stationarity diagnostic
+scope:
+  - theoretical_admissibility
+  - residual_stationarity
+  - long_run_coefficient_interpretation
+  - super_consistency
+locked_terms:
+  - cointegration admissibility
+  - residual-based cointegration gate
+  - residual stationarity
+  - no-cointegration null
+  - super-consistent estimator
+forbidden_terms:
+  - FM-OLS cointegration test
+  - Phillips-Hansen cointegration test
+  - coefficient significance proves cointegration
+  - residual ADF proves cointegration
+related_specs:
+  - SPEC_B1_WAGE_BASELINE
+  - SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED
+related_notes:
+  - A00_Benchmark_Identification
+  - A05_Distributive_Mechanization_Bias
+  - A06_B1_E2B_Model_Choice_Lock
+tags:
+  - chapter2
+  - econometrics
+  - cointegration
+  - super-consistency
+  - residual-stationarity
+  - phillips-ouliaris
+  - fmols
+  - imols
+  - dols
+---
+
+# R11: Cointegration Admissibility for Super-Consistent Estimators
+
+## Purpose
+
+This note locks the theoretical admissibility rule for using super-consistent estimators in Chapter 2.
+
+FM-OLS, IM-OLS, and DOLS estimate candidate cointegrating regressions. They do not establish cointegration by themselves. Their long-run interpretation requires that the candidate relation define a stationary residual.
+
+The relevant admissibility question is therefore not whether a coefficient is statistically significant. The relevant admissibility question is whether the estimated long-run relation produces a residual that behaves as a stationary disequilibrium term.
+
+## Core rule
+
+For a candidate long-run relation,
+
+$$
+y_t = c + x_t'\beta + u_t,
+$$
+
+the coefficient vector $\beta$ is admissible as a cointegrating vector only if
+
+$$
+u_t \sim I(0).
+$$
+
+If $y_t$ and $x_t$ are nonstationary and no stationary linear combination exists, the levels regression is not a cointegrating regression. It may still produce large coefficients, high fit, or statistically significant terms, but those estimates are not admissible as long-run transformation parameters.
+
+The residual is the object that separates a cointegrating relation from a spurious levels regression.
+
+## Sequence of inference
+
+The correct sequence is:
+
+$$
+\text{candidate long-run relation}
+\rightarrow
+\text{residual stationarity / cointegration admissibility}
+\rightarrow
+\text{super-consistent estimation}
+\rightarrow
+\text{corrected coefficient inference}.
+$$
+
+The incorrect sequence is:
+
+$$
+\text{statistically significant coefficient}
+\rightarrow
+\text{cointegration}.
+$$
+
+Coefficient significance cannot establish cointegration. It can only be interpreted after the long-run relation has passed an admissibility check.
+
+## Role of the residual
+
+The residual is not a secondary diagnostic. In a cointegrating regression, the residual is the empirical form of the disequilibrium term.
+
+For Chapter 2, the candidate relation is not a short-run predictive regression. It is a long-run transformation relation linking output, capital accumulation, distribution, and capital composition. The residual must therefore represent bounded deviations from that relation.
+
+If the residual is nonstationary, the candidate relation does not identify a stable long-run transformation path.
+
+## Role of super-consistent estimators
+
+FM-OLS, IM-OLS, and DOLS operate after the cointegration object has been defined.
+
+OLS is super-consistent in a cointegrating regression, but super-consistency alone is not enough for valid inference. Long-run endogeneity, serial correlation, dynamic misspecification, bandwidth choices, lag choices, and finite-sample instability can distort standard inference.
+
+The three estimators address these problems differently.
+
+FM-OLS modifies least squares to correct long-run endogeneity and serial correlation.
+
+IM-OLS transforms the cointegrating regression through an integrated modified procedure and reduces dependence on estimator-side tuning choices.
+
+DOLS augments the long-run levels regression with leads and lags of first differences of the regressors, absorbing short-run dynamics and endogeneity effects through dynamic correction.
+
+These estimators improve estimation and inference conditional on the cointegrating-regression object. They do not replace the requirement that the residual be stationary.
+
+## Why Phillips-Ouliaris is required
+
+A generic unit-root test on estimated residuals is useful as a diagnostic, but it is not the strongest theoretical gate for cointegration admissibility.
+
+The residual is generated from an estimated long-run relation. It is not an ordinary observed time series. Its distribution reflects the prior estimation of the cointegrating vector.
+
+Phillips-Ouliaris is designed for this problem. It is a residual-based test of the null of no cointegration. It tests whether the residual behavior is compatible with a unit root once the residual has been generated from a levels relation among nonstationary variables.
+
+The conceptual null is:
+
+$$
+H_0: \text{no cointegration}.
+$$
+
+The alternative is:
+
+$$
+H_1: \text{cointegration}.
+$$
+
+Rejecting $H_0$ provides residual-based evidence that the variables form a stationary long-run combination.
+
+This makes Phillips-Ouliaris more appropriate than treating a generic residual ADF test as if it were a full cointegration test. A residual ADF gate can remain useful as a screening diagnostic, but Phillips-Ouliaris is the formal residual-based cointegration gate.
+
+## Normalization problem
+
+Residual-based tests can depend on how the cointegrating regression is normalized. For example, estimating
+
+$$
+y_t = c + x_t'\beta + u_t
+$$
+
+can produce a different residual-test outcome than normalizing the relation on one of the regressors. This is not desirable when the theoretical object is a relation among levels rather than a single predictive equation.
+
+The Phillips-Ouliaris framework addresses this problem through a normalization-invariant test. In implementation, the $P_z$ statistic is preferred because it does not depend on which variable is placed on the left-hand side of the cointegrating regression.
+
+This is especially important for Chapter 2. The objects B1 and E2B are written as single-equation specifications, but conceptually they represent candidate long-run relations among a vector of variables. A normalization-invariant residual-based gate is therefore more appropriate for admissibility than a test tied to a single left-hand-side normalization.
+
+## Chapter 2 specifications
+
+For B1, the candidate relation is:
+
+$$
+y_t = c + \beta_k k_t + \beta_{\omega k}(\omega_t k_t) + u_t^{B1}.
+$$
+
+The admissibility condition is:
+
+$$
+u_t^{B1} \sim I(0).
+$$
+
+If this condition holds, the transformation coefficient implied by B1 can be read as:
+
+$$
+\theta_t^{B1} = \beta_k + \beta_{\omega k}\omega_t.
+$$
+
+The distributive modulation of the transformation path is:
+
+$$
+\frac{\partial \theta_t^{B1}}{\partial \omega_t} = \beta_{\omega k}.
+$$
+
+For E2B, the candidate relation is:
+
+$$
+y_t = c + \beta_{NRC}k^{NRC}_t + \beta_{\omega m}(\omega_t m_t) + u_t^{E2B}.
+$$
+
+where
+
+$$
+m_t = k^{ME}_t - k^{NRC}_t.
+$$
+
+The admissibility condition is:
+
+$$
+u_t^{E2B} \sim I(0).
+$$
+
+If this condition holds, the distribution-conditioned mechanization-bias channel is:
+
+$$
+\frac{\partial y_t}{\partial m_t} = \beta_{\omega m}\omega_t.
+$$
+
+The cross-partial effect is:
+
+$$
+\frac{\partial^2 y_t}{\partial m_t \partial \omega_t} = \beta_{\omega m}.
+$$
+
+Without residual stationarity, these derivatives are not admissible as long-run transformation effects.
+
+## Distinction between admissibility and significance
+
+Residual stationarity and coefficient significance answer different questions.
+
+Residual stationarity asks whether the relation is admissible as a cointegrating relation.
+
+Coefficient significance asks whether a specific term matters conditional on that admissibility.
+
+A model can pass the residual gate and still have an insignificant coefficient of interest.
+
+A model can have a significant coefficient and still fail the residual gate.
+
+Only the first case can be retained as an admissible but substantively weak relation. The second case cannot be interpreted as a locked long-run relation.
+
+## Protocol implication
+
+The Chapter 2 model-choice workflow must separate four layers:
+
+1. Candidate relation definition.
+2. Cointegration admissibility.
+3. Coefficient inference.
+4. Reconstruction authorization.
+
+Phillips-Ouliaris belongs to layer 2.
+
+FM-OLS, IM-OLS, and DOLS belong to layer 3.
+
+S40 reconstruction belongs to layer 4 and remains unauthorized until separately locked.
+
+## Governance rule
+
+Use Phillips-Ouliaris as the formal residual-based cointegration admissibility gate.
+
+Keep residual ADF as a diagnostic screen only.
+
+Do not describe FM-OLS, IM-OLS, or DOLS as cointegration tests.
+
+Do not interpret a statistically significant long-run coefficient as evidence of cointegration.
+
+Do not promote any specification to reconstruction if coefficient significance and residual cointegration evidence conflict.
+
+## Locked statement
+
+Residual stationarity is an admissibility condition for interpreting a levels regression as a cointegrating relation. FM-OLS, IM-OLS, and DOLS provide corrected estimation and inference conditional on that cointegrating object. Phillips-Ouliaris is the appropriate formal residual-based gate because it is designed for generated residuals from candidate cointegrating regressions and tests the null of no cointegration.
+
+Coefficient significance cannot establish cointegration. Residual stationarity cannot establish substantive relevance by itself. A specification becomes credible only when residual-based cointegration evidence and coefficient robustness point in the same direction.
