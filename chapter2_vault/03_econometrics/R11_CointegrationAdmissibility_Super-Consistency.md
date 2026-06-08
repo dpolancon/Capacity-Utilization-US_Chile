@@ -33,8 +33,8 @@ forbidden_terms:
   - coefficient significance proves cointegration
   - residual ADF proves cointegration
 related_specs:
-  - SPEC_B1_WAGE_BASELINE
-  - SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED
+  - SPEC_A00_ACCUMULATED_DISTRIBUTION_BENCHMARK
+  - SPEC_A05_ME_ACCUMULATION_WEIGHTED
 related_notes:
   - A00_Benchmark_Identification
   - A05_Distributive_Mechanization_Bias
@@ -167,58 +167,56 @@ This is especially important for Chapter 2. The objects B1 and E2B are written a
 
 ## Chapter 2 specifications
 
-For B1, the candidate relation is:
+For the corrected A00 benchmark, the candidate relation is:
 
 $$
-y_t = c + \beta_k k_t + \beta_{\omega k}(\omega_t k_t) + u_t^{B1}.
+y_t^p
+=
+\alpha
++
+\theta_0 k_t
++
+\theta_\omega q_t^{\omega,h}
++
+u_t^{A00}.
 $$
 
 The admissibility condition is:
 
 $$
-u_t^{B1} \sim I(0).
+u_t^{A00} \sim I(0).
 $$
 
 If this condition holds, the transformation coefficient implied by B1 can be read as:
 
 $$
-\theta_t^{B1} = \beta_k + \beta_{\omega k}\omega_t.
+\theta_t
+=
+\theta_0
++
+\theta_\omega m_{t-1}^{(h)}.
 $$
 
-The distributive modulation of the transformation path is:
+For the corrected A05 candidate, the relation is:
 
 $$
-\frac{\partial \theta_t^{B1}}{\partial \omega_t} = \beta_{\omega k}.
-$$
-
-For E2B, the candidate relation is:
-
-$$
-y_t = c + \beta_{NRC}k^{NRC}_t + \beta_{\omega m}(\omega_t m_t) + u_t^{E2B}.
-$$
-
-where
-
-$$
-m_t = k^{ME}_t - k^{NRC}_t.
+y_t^p
+=
+\alpha
++
+\beta_{NRC}k_t^{NRC}
++
+\beta_{ME}k_t^{ME}
++
+\beta_{\omega ME}q_t^{ME,\omega,h}
++
+u_t^{A05}.
 $$
 
 The admissibility condition is:
 
 $$
-u_t^{E2B} \sim I(0).
-$$
-
-If this condition holds, the distribution-conditioned mechanization-bias channel is:
-
-$$
-\frac{\partial y_t}{\partial m_t} = \beta_{\omega m}\omega_t.
-$$
-
-The cross-partial effect is:
-
-$$
-\frac{\partial^2 y_t}{\partial m_t \partial \omega_t} = \beta_{\omega m}.
+u_t^{A05} \sim I(0).
 $$
 
 Without residual stationarity, these derivatives are not admissible as long-run transformation effects.

@@ -288,25 +288,32 @@ Estimator roles:
 - IM-OLS = robustness;
 - DOLS = fragility / stress.
 
-Chile S30 must begin from the A00 aggregate interaction baseline before escalating to composition or external-constraint surfaces.
+Chile S30 must begin from the corrected A00 accumulated-index baseline before escalating to composition or external-constraint surfaces.
 
 The hierarchy is:
 
-1. A00 aggregate interaction baseline:
+1. A00 accumulated-index baseline:
 
-`omega_k_t = omega_t * k_t`
+```text
+q_omega_1
+q_omega_3
+q_omega_5
+```
 
 meaning:
 
 $$
-\omega_{k,t}=\omega_t k_t
+q_t^{\omega,h}
+=
+\sum_{s=1}^{t}
+m_{s-1}^{(h)}\Delta k_s.
 $$
 
 2. A03 ME/NRC composition escalation, where machinery and non-machinery capital shares condition the aggregate relation.
 
 3. A04 external/peripheral realization escalation, where foreign-exchange, balance-of-payments, and peripheral mechanization variables are diagnostic or escalated realization variables.
 
-Chile must not begin directly from composition terms, threshold surfaces, or external-constraint terms as if they were baseline replacements. A04/external variables can diagnose or escalate the A00/A03 relation, but they do not replace the A00 aggregate interaction baseline.
+Chile must not begin directly from composition terms, threshold surfaces, or external-constraint terms as if they were baseline replacements. A04/external variables can diagnose or escalate the A00/A03 relation, but they do not replace the corrected A00 accumulated-index baseline.
 
 For Chile, the escalated S30 equation may allow composition-weighted transformation logic after the A00 baseline is declared.
 

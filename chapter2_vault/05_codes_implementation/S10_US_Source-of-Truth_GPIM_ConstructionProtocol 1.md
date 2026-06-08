@@ -9,7 +9,7 @@ design_role: "source_truth_construction"
 scope: "chapter2_us"  
 stage: "S10"  
 created: 2026-06-05  
-updated: 2026-06-05
+updated: 2026-06-08
 
 upstream_provider: "US-BEA-Income-FixedAssets-Dataset"  
 analytical_source_truth_repo: "Capacity-Utilization-US_Chile"  
@@ -193,9 +193,9 @@ It does not decide the final Chapter 2 theoretical variables.
 It does not own the canonical definitions of:
 
 $$  
-\omega_t k_t,\quad  
+q_t^{\omega,h},\quad
+q_t^{ME,\omega,h},\quad
 m_{ME,NRC,t},\quad  
-\omega_t m_{ME,NRC,t},\quad  
 \theta_t,\quad  
 \mu_t.  
 $$
@@ -899,20 +899,19 @@ m_{ME,NRC,t}
 k^{NRC}_t,  
 $$
 
-$$  
-\omega_t k_t,\quad  
-\omega_t m_{ME,NRC,t}.  
+S10 must construct:
+
+$$
+q_t^{\omega,1},\quad q_t^{\omega,3},\quad q_t^{\omega,5},
 $$
 
-S10 may also construct centered interaction variants:
+and:
 
-$$  
-(\omega_t-\omega_0)k_t,  
-\quad  
-(\omega_t-\omega_0)m_{ME,NRC,t}.  
+$$
+q_t^{ME,\omega,1},\quad q_t^{ME,\omega,3},\quad q_t^{ME,\omega,5}.
 $$
 
-The choice between uncentered and centered interactions is an econometric-specification decision downstream of S10. S10 may provide both.
+The benchmark variables are uncentered. S10 must not construct full-sample-centered versions as benchmark candidates.
 
 S10 does not construct:
 

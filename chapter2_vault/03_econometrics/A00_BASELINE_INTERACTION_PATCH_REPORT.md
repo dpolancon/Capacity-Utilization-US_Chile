@@ -1,12 +1,12 @@
 ---
 title: "A00 Baseline Interaction Patch Report"
 type: "report"
-status: "active"
+status: "superseded_historical_report"
 layer: "method"
 design_role: "patch_validation"
 scope: "chapter2_core_support"
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-08
 related_to:
   - "A00_Aggregate_Transformation_Benchmark"
   - "A03_TransformationElasticity_Two-CapitalCapacityComposition"
@@ -18,6 +18,9 @@ related_to:
 ---
 
 # A00 Baseline Interaction Patch Report
+
+> [!warning] Superseded historical report
+> This report records the June 1, 2026 level-interaction patch. Its benchmark conclusions were superseded on June 8, 2026 by [[R_distribution_conditioned_theta_identification]]. All old interaction references below are historical record only.
 
 ## Summary of Pass 1 Changes
 

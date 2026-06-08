@@ -1,11 +1,12 @@
 ---
 type: note
 subtype: protocol
-status: active
+status: active_bounded_robustness
 layer: data_measurement
 design_role: variable_construction_protocol
 scope: chapter2_core
 related_to:
+  - R_distribution_conditioned_theta_identification
   - A03_TransformationElasticity_Two-CapitalCapacityComposition
   - A05_NRCEnvelope_MechanizationBias
   - D01_GPIM_heterogeneous_capital_SFC
@@ -25,9 +26,12 @@ measurement_status:
   nominal_ratio: inadmissible
   mixed_price_ratio: inadmissible
 created: 2026-06-02
-updated: 2026-06-02
+updated: 2026-06-08
 ---
 # D04: ME/NRC Log-Ratio Construction Protocol
+
+> [!warning] Restricted role after June 8, 2026
+> The log-ratio variables remain admissible for descriptive and less-preferred robustness work. The active A05 distribution-conditioned object is the machinery accumulation-weighted index $q_t^{ME,\omega,h}$. The contemporaneous $\omega_t m_t$ interaction is superseded as a preferred candidate and is not promotion-eligible.
 
 ## Core claim
 
@@ -48,10 +52,13 @@ m_t = k_t^{ME} - k_t^{NRC}
 = \log\left(\frac{K_t^{ME}}{K_t^{NRC}}\right),  
 $$
 
-and:
+The ratio-growth robustness object is:
 
-$$  
-\omega_{m,t} = \omega_t m_t.  
+$$
+q_t^{m,\omega,h}
+=
+\sum_{s=1}^{t}
+m_{s-1}^{(h)}\Delta m_s.
 $$
 
 The construction rule is strict: (K_t^{ME}) and (K_t^{NRC}) must be real component stocks measured in constant-reference prices. Nominal stocks, mixed-price aggregates, and unqualified current-price ratios are inadmissible.
@@ -239,21 +246,24 @@ Do not use (m_t) and (c_t) in the same regression or VIF diagnostic.
 
 ---
 
-## 6. Distribution-conditioned mechanization-bias variable
+## 6. Distribution-conditioned ratio robustness variable
 
-Construct:
+Construct only as a less-preferred robustness object:
 
-$$  
-\omega_{m,t} = \omega_t m_t.  
+$$
+q_t^{m,\omega,h}
+=
+\sum_{s=1}^{t}
+m_{s-1}^{(h)}\Delta m_s.
 $$
 
 Implementation label:
 
 ```text
-omega_m_ME_NRC_t
+q_m_omega_h
 ```
 
-This variable captures the distribution-conditioned mechanization-bias channel.
+The preferred A05 variable is `q_ME_omega_h`, accumulated inherited distribution times machinery-capital growth. The ratio variant is secondary because the theory locates distribution more directly in machinery accumulation.
 
 It does not mean that distribution directly interacts with the NRC envelope.
 
@@ -279,12 +289,12 @@ If such a variable is ever used, it must be explicitly diagnostic and justified 
 
 ## 7. Candidate variables for A05 E-specifications
 
-D04 authorizes construction of the following variables for VIF-only diagnostics:
+D04 authorizes construction of the following variables for bounded robustness diagnostics:
 
 ```text
 k_NRC_t
 m_ME_NRC_t
-omega_m_ME_NRC_t
+q_m_omega_h
 ```
 
 Candidate E1:
@@ -553,4 +563,4 @@ D04 only governs variable construction.
 
 ## Locked formulation
 
-D04 locks the construction protocol for the ME/NRC log-ratio mechanization-bias variables. (K_t^{ME}) and (K_t^{NRC}) must be real component stocks in constant-reference prices. The operative mechanization-bias variable is (m_t = k_t^{ME} - k_t^{NRC} = \log(K_t^{ME}/K_t^{NRC})), where higher values mean greater machinery intensity relative to the NRC envelope. The distribution-conditioned variable is (\omega_{m,t} = \omega_t m_t). These variables may be constructed for A05 VIF-only candidate diagnostics, but they do not authorize estimation, promotion, or S40 reconstruction. If the available data are Tier-B ME/NRC component proxies rather than direct NFCorp-by-asset-type stocks, all outputs must be labeled as proxy-based and cannot be presented as direct sectoral asset-split estimates.
+D04 locks the descriptive construction of the ME/NRC log ratio and the less-preferred accumulated ratio-growth robustness object $q_t^{m,\omega,h}$. The active A05 candidate uses $q_t^{ME,\omega,h}$ instead. The old $\omega_t m_t$ level interaction is superseded, and no D04 object authorizes promotion or S40 reconstruction.

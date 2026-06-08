@@ -1,12 +1,12 @@
 ---
 title: "A00 Data Measurement Alignment Report"
 type: "report"
-status: "active"
+status: "superseded_historical_report"
 layer: "empirical_design"
 design_role: "data_measurement_alignment_review"
 scope: "chapter2_core_support"
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-08
 related_to:
   - A00_Aggregate_Transformation_Benchmark
   - A03_TransformationElasticity_Two-CapitalCapacityComposition
@@ -16,6 +16,9 @@ related_to:
 ---
 
 # A00 Data Measurement Alignment Report
+
+> [!warning] Superseded historical report
+> This report records the pre-June 8 level-interaction alignment pass. Its `omega_k_t` recommendations are superseded by [[R_distribution_conditioned_theta_identification]] and remain only as audit history.
 
 ## 1. Executive summary
 

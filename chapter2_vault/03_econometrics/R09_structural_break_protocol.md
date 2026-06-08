@@ -263,10 +263,18 @@ Operational rule:
 - DOLS records fragility from dynamic augmentation, effective-sample loss, and lead-lag sensitivity.
 - DOLS contradiction should be reported as fragility evidence, not as automatic evidence that the long-run transformation relation itself fails.
 
-This rule is especially important for interaction specifications such as:
+This rule is especially important for generated-index specifications such as:
 
 $$
-y_t = c + \beta_1 k_t + \beta_2(\omega_t k_t) + \xi_t.
+y_t^p
+=
+\alpha
++
+\theta_0 k_t
++
+\theta_\omega q_t^{\omega,h}
++
+u_t.
 $$
 
 In such cases, DOLS lead-lag expansion may generate auxiliary differenced terms without structural interpretation for productive-capacity reconstruction. Those terms can stress the coefficient recovery problem, but they do not become part of the transformation relation.

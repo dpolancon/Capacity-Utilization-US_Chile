@@ -5,6 +5,7 @@ layer: method
 design_role: structural_object_definition
 scope: chapter2_core_support
 related_to:
+  - R_distribution_conditioned_theta_identification
   - A00_Aggregate_Transformation_Benchmark
   - M10_Empirical_Identification_Framework
   - N02_SuperConsistency
@@ -79,24 +80,45 @@ In Chapter 2, the hinge object is the transformation elasticity $\theta_t$.
 
 It expresses how capital accumulation is converted into productive capacity.
 
-The A00 baseline econometric object is the aggregate interaction relation:
+The A00 baseline econometric object is the accumulated distribution-conditioned capital-growth relation:
 
 $$
-y_t = c + \beta_1 k_t + \beta_2(\omega_t k_t) + \xi_t,
+y_t^p
+=
+\alpha
++
+\theta_0 k_t
++
+\theta_\omega q_t^{\omega,h}
++
+u_t,
 $$
 
 which implies:
 
 $$
-\theta_t = \beta_1 + \beta_2\omega_t.
+\theta_t
+=
+\theta_0
++
+\theta_\omega m_{t-1}^{(h)}.
 $$
 
-In A00, the interaction term $\omega_t k_t$ is the baseline econometric device through which the aggregate transformation elasticity becomes time-varying while capital remains undifferentiated.
+Here:
+
+$$
+q_t^{\omega,h}
+=
+\sum_{s=1}^{t}
+m_{s-1}^{(h)}\Delta k_s.
+$$
+
+The generated index identifies distribution in the capacity payoff of accumulation. The old $\omega_t k_t$ level interaction is superseded under [[R_distribution_conditioned_theta_identification]].
 
 The reconstruction sequence is therefore:
 
 $$
-\text{A00 aggregate interaction relation}
+\text{A00 accumulated-index relation}
 \rightarrow
 \hat{\theta}_t
 \rightarrow

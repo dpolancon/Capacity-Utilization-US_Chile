@@ -5,6 +5,7 @@ layer: empirical_design
 design_role: gpim_stock_flow_valuation_protocol
 scope: chapter2_core_support
 related_to:
+  - R_distribution_conditioned_theta_identification
   - A00_Aggregate_Transformation_Benchmark
   - A03_TransformationElasticity_Two-CapitalCapacityComposition
   - N04_Composition_of_Accumulation_and_Transformation
@@ -12,6 +13,7 @@ related_to:
   - Price_Deflator_Protocol_ME_NRC_Composition
   - TARGET_REPO_STRUCTURE_AND_CODE_STAGE_IMPLEMENTATION
 created: 2026-05-06
+updated: 2026-06-08
 ---
 
 # GPIM, heterogeneous capital, stock-flow consistency, and valuation registers
@@ -91,18 +93,25 @@ A00 uses aggregate real productive capital ($K_t$), not the ME/NRC decomposition
 
 The aggregate $K_t$ should be constructed from coherent gross real GPIM capacity-relevant capital. ME/NRC component construction can be used as measurement input if needed, but in A00 it enters only to construct aggregate $K_t$.
 
-The A00 econometric baseline requires:
+The corrected A00 econometric baseline requires:
 
 - $y_t$;
 - $k_t$;
 - $\omega_t$;
-- the interaction $\omega_t k_t$.
+- $\Delta k_t$;
+- inherited-distribution memory states;
+- accumulated indexes $q_t^{\omega,1}$, $q_t^{\omega,3}$, and $q_t^{\omega,5}$.
 
-For implementation, `omega_k_t` should be understood as:
+Construct:
 
 $$
-\omega_{k,t} = \omega_t k_t.
+q_t^{\omega,h}
+=
+\sum_{s=1}^{t}
+m_{s-1}^{(h)}\Delta k_s.
 $$
+
+The former `omega_k_t = omega_t * k_t` export is superseded as the benchmark variable and may be retained only as a labeled historical diagnostic.
 
 ME/NRC shares ($s_t$), component stocks, and component-flow shares belong to A03 decomposition/proxy work. Current-cost shares remain diagnostics, not substitutes for real-volume capacity composition.
 
@@ -386,9 +395,9 @@ Interpretation:
 
 # 10. Relation to the transformation-elasticity model
 
-A00 identifies the aggregate time-varying transformation path using aggregate $K_t$ and the distributive interaction $\omega_t k_t$.
+A00 identifies the aggregate time-varying transformation path using aggregate $K_t$ and accumulated distribution-conditioned capital growth $q_t^{\omega,h}$.
 
-A03 decomposes that aggregate path using ME/NRC component proxies. In the A03 layer, the theoretical composition relation is:
+A03 decomposes that aggregate path using ME/NRC component proxies and the machinery accumulation-weighted index $q_t^{ME,\omega,h}$. In the A03 layer, the theoretical composition relation is:
 
 $$
 \theta_t^{tot}
@@ -553,7 +562,13 @@ The export script should include metadata fields:
 - `K_t = "aggregate gross real productive capital"`
 - `k_t = "log or dimensionally admissible index of aggregate real productive capital"`
 - `omega_t = "wage-share / distributive condition"`
-- `omega_k_t = "omega_t * k_t"`
+- `q_omega_1 = "cumulative sum of lagged omega times delta k"`
+- `q_omega_3 = "cumulative sum of three-year inherited-distribution memory times delta k"`
+- `q_omega_5 = "cumulative sum of five-year inherited-distribution memory times delta k"`
+- `q_ME_omega_1 = "cumulative sum of lagged omega times delta k_ME"`
+- `q_ME_omega_3 = "cumulative sum of three-year inherited-distribution memory times delta k_ME"`
+- `q_ME_omega_5 = "cumulative sum of five-year inherited-distribution memory times delta k_ME"`
+- `centering_rule = "no_full_sample_centering"`
 - `A00_capital_object = "aggregate_K_t"`
 - `A03_component_basis = "ME_NRC_component_proxy"`
 - `composition_basis = "ME_NRC_component_proxy"`

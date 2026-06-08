@@ -1,12 +1,12 @@
 ---
 title: "A00 Code Implementation Alignment Report"
 type: "report"
-status: "active"
+status: "superseded_historical_report"
 layer: "implementation_design"
 design_role: "code_implementation_alignment_audit"
 scope: "chapter2_results_repo"
 created: 2026-06-01
-updated: 2026-06-02
+updated: 2026-06-08
 related_to:
   - A00_Aggregate_Transformation_Benchmark
   - A03_TransformationElasticity_Two-CapitalCapacityComposition
@@ -17,6 +17,9 @@ related_to:
 ---
 
 # A00 Code Implementation Alignment Report
+
+> [!warning] Superseded historical report
+> This report records implementation alignment to the former `omega_k_t` benchmark. Its recommendations are superseded by [[R_distribution_conditioned_theta_identification]]. No old B1 export or S40 pathway described below is currently promotion-eligible.
 
 ## 1. Executive summary
 

@@ -1,6 +1,6 @@
 ---
 type: implementation_memo
-status: active
+status: superseded_pending_corrected_s30
 layer: code_stage_design
 design_role: us_s30_formal_stability_protocol
 scope: chapter2_results_repo
@@ -15,7 +15,7 @@ us_s40_anchor_type: point_year_external_pinch
 us_s40_anchor_source: FRB_maximum_utilization_series
 window_average_anchor_allowed_as_baseline: false
 created: 2026-05-14
-updated: 2026-06-02
+updated: 2026-06-08
 related_to:
   - US_S30_SUBSTANTIVE_REVIEW_2026-05-14_PRELIMINARY
   - R09_structural_break_protocol
@@ -26,6 +26,9 @@ related_to:
 ---
 
 # C04 - US S30 Stability Protocol
+
+> [!warning] Superseded method object
+> This protocol remains as the historical adjudication record for `SPEC_B1_WAGE_BASELINE`. The B1 level interaction is no longer the active benchmark. A corrected S30 pass must generate and estimate the accumulated indexes governed by [[R_distribution_conditioned_theta_identification]]. Nothing in this note opens S40 for the corrected object.
 
 ## 0. Purpose
 

@@ -5,6 +5,7 @@ layer: method
 design_role: estimation_clarification
 scope: chapter2_core_support
 related_to:
+  - R_distribution_conditioned_theta_identification
   - A00_Aggregate_Transformation_Benchmark
   - N01_CapacityUtilization_StructuralObject
   - R01_residual_vs_structural_identification
@@ -24,7 +25,7 @@ priority: high
 
 ## Core claim
 
-Super-consistency secures recovery of the first-layer coefficient vector in the A00 aggregate interaction benchmark.
+Super-consistency secures recovery of the first-layer coefficient vector in the corrected A00 accumulated-index benchmark.
 
 It does not secure the empirical reconstruction of $\mu$.
 
@@ -46,10 +47,18 @@ It does not establish:
 
 So the econometric target is not $\mu_t$ directly.
 
-The target is the A00 aggregate interaction relation that allows productive capacity to be reconstructed:
+The target is the A00 accumulated-index relation that allows productive capacity to be reconstructed:
 
 $$
-y_t = c + \beta_1 k_t + \beta_2(\omega_t k_t) + \xi_t.
+y_t^p
+=
+\alpha
++
+\theta_0 k_t
++
+\theta_\omega q_t^{\omega,h}
++
+u_t.
 $$
 
 ---
@@ -59,7 +68,7 @@ $$
 The empirical object is produced through a strict sequence:
 
 $$
-\text{A00 aggregate interaction relation}
+\text{A00 accumulated-index relation}
 \rightarrow
 \hat{\theta}_t
 \rightarrow
@@ -68,7 +77,7 @@ $$
 \hat{\mu}_t.
 $$
 
-Super-consistency applies only to the first step: coefficient recovery in the A00 aggregate interaction benchmark.
+Super-consistency applies only to the first step: coefficient recovery in the corrected A00 benchmark.
 
 Everything downstream remains contingent on:
 
@@ -189,7 +198,7 @@ So:
 
 In the U.S., the long-run transformation relation is comparatively cleaner.
 
-The A00 interaction term $\omega_t k_t$ is identifiable, and global super-consistent estimators are appropriate as the first layer of the aggregate interaction benchmark.
+The corrected A00 index $q_t^{\omega,h}$ must first be generated and shown to be integration- and collinearity-admissible. Global super-consistent estimators are appropriate only after that variable-generation gate.
 
 But the gain remains partial:
 
@@ -271,7 +280,7 @@ For Chile, the regime layer must be defined only after a diagnostic ladder has e
 
 ## 11. Locked statement
 
-**Super-consistency belongs to A00 first-layer coefficient recovery. The empirical reconstruction of $\mu$ requires a second operation: translating the aggregate interaction relation into productive capacity and only then into utilization under an explicit normalization rule.**
+**Super-consistency belongs to A00 first-layer coefficient recovery. The empirical reconstruction of $\mu$ requires a second operation: translating the accumulated-index relation into productive capacity and only then into utilization under an explicit normalization rule.**
 
 ## 12. Extended locked statement
 

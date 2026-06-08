@@ -1,3 +1,6 @@
+> [!warning] Superseded methodological snapshot
+> This paper-facing snapshot predates the June 8, 2026 identification lock. Any $\omega_t k_t$ or contemporaneous level-interaction specification below is superseded and must not be exported as the active Chapter 2 benchmark. See [[R_distribution_conditioned_theta_identification]].
+
 [[Chapter2_References]]
 [[00N_Chapter2_PaperFacing_Notes]]
 									⋮ (top right) → Export to PDF
