@@ -1,0 +1,8 @@
+"period_id","n_obs","complete_case_start","complete_case_end","missing_output_count","missing_k_Kcap_count","missing_g_Kcap_count","missing_omega_NFC_count","missing_lagged_omega_NFC_count","missing_q_count","q_resets_inside_period","uses_preperiod_q_history","uses_contemporaneous_omega","q_increment_matches_lagged_omega_times_g_Kcap","min_q","max_q","first_q_value","last_q_value","warning_flags"
+"full_long_sample",95,1930,2024,0,0,0,0,1,1,TRUE,FALSE,FALSE,TRUE,-0.144300228751573,3.33255411351018,-0.0326008806402068,3.33255411351018,"diagnostic_OLS_not_preferred_estimator"
+"pre_1974_full",44,1930,1973,0,0,0,0,1,1,TRUE,FALSE,FALSE,TRUE,-0.144300228751573,1.4682255704862,-0.0326008806402068,1.4682255704862,"diagnostic_OLS_not_preferred_estimator"
+"post_1973_full",51,1974,2024,0,0,0,0,0,0,TRUE,FALSE,FALSE,TRUE,0.132284355229392,1.86432854302397,0.132284355229392,1.86432854302397,"diagnostic_OLS_not_preferred_estimator"
+"fordist_core",29,1945,1973,0,0,0,0,0,0,TRUE,FALSE,FALSE,TRUE,0.0575222329347408,1.38595486302458,0.0575222329347408,1.38595486302458,"diagnostic_OLS_not_preferred_estimator"
+"bridge_1940_1978",39,1940,1978,0,0,0,0,0,0,TRUE,FALSE,FALSE,TRUE,0.0357324642898469,1.93596515243318,0.0357324642898469,1.93596515243318,"diagnostic_OLS_not_preferred_estimator"
+"pre_1974_alt_1940_1973",34,1940,1973,0,0,0,0,0,0,TRUE,FALSE,FALSE,TRUE,0.0357324642898469,1.53070440147271,0.0357324642898469,1.53070440147271,"diagnostic_OLS_not_preferred_estimator"
+"pre_1974_alt_1947_1973",27,1947,1973,0,0,0,0,0,0,TRUE,FALSE,FALSE,TRUE,0.117473206651317,1.20673305675244,0.117473206651317,1.20673305675244,"diagnostic_OLS_not_preferred_estimator"
