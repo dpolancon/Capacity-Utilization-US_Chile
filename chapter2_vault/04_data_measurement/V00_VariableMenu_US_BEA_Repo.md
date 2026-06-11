@@ -36,6 +36,9 @@ tags:
 
 # United States Variable Menu for Source-of-Truth Construction
 
+> [!important] Current identification lock
+> The active first-layer menu is governed by [[R_distribution_conditioned_theta_identification]]. Productive-capital scale and centered interaction variables are current; accumulated-index entries below are parked and non-baseline.
+
 ## 1. Repository Architecture
 
 The U.S. BEA-fetching repository is not the analytical authority. It is the provider, extractor, and staging layer for the variable menu.

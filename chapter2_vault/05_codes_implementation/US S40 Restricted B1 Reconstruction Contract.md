@@ -47,6 +47,9 @@ related_to:
 
 # US S40 Restricted B1 Reconstruction Contract
 
+> [!warning] Reconstruction blocked
+> This old B1 contract does not authorize current reconstruction. A new coefficient vector must be promoted under [[R_distribution_conditioned_theta_identification]], productive capacity must be reconstructed from its fitted long-run component, and utilization must then be derived under explicit anchoring.
+
 > [!danger] S40 blocked
 > This contract is superseded because `SPEC_B1_WAGE_BASELINE` uses the rejected level interaction. It is retained as historical implementation governance only. S40 remains untouched until S30/S32 human review promotes a corrected accumulated-index coefficient object under [[R_distribution_conditioned_theta_identification]].
 

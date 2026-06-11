@@ -10,7 +10,6 @@ related_to:
   - M10_Empirical_Identification_Framework
   - N02_SuperConsistency
   - R01_residual_vs_structural_identification
-  - L00_Econometrics_References
 priority: high
 ---
 
@@ -18,202 +17,72 @@ priority: high
 
 ## Core claim
 
-Capacity utilization is not directly observed and not identified by a residual.
-
-It is a derived level ratio:
+Capacity utilization is not directly observed and not identified by a residual. Observed output is effective-demand-realized output:
 
 $$
-\mu_t = \frac{Y_t}{Y_t^p},
+y_t=y_t^p+\log\mu_t.
 $$
 
-where observed output $Y_t$ is known, but productive capacity $Y_t^p$ is unobserved and must be structurally reconstructed.
+Productive capacity $y_t^p$ is latent. The empirical problem is its structural reconstruction.
 
----
+## Identification sequence
 
-## 1. Object definition
-
-The empirical object is not the residual from an output-capital relation.
-
-The empirical object is the ratio between observed output and reconstructed productive capacity.
-
-Therefore, the object requires two steps:
-
-1. identify the productive-capacity path;
-2. derive utilization from that path.
-
-The residual may describe the gap after reconstruction, but it cannot identify the denominator.
-
----
-
-## 2. Productive capacity comes first
-
-The admissible identification target is productive capacity, either as:
-
-1. the growth law of $Y_t^p$; or
-2. the log-level long-run path of $Y_t^p$.
-
-Only after this object is recovered can utilization be computed.
-
-Thus:
+The first layer identifies the distribution-conditioned capital-to-capacity elasticity:
 
 $$
-\text{structural relation}
+\text{long-run coefficient vector}
 \rightarrow
-\hat{Y}_t^p
+\hat\theta_t
 \rightarrow
-\hat{\mu}_t.
-$$
-
-Not:
-
-$$
-\text{residual}
+\hat y_t^p
 \rightarrow
-\hat{\mu}_t.
+\text{level anchoring}
+\rightarrow
+\hat\mu_t.
 $$
 
----
-
-## 3. Transformation elasticity
-
-In Chapter 2, the hinge object is the transformation elasticity $\theta_t$.
-
-It expresses how capital accumulation is converted into productive capacity.
-
-The A00 baseline econometric object is the accumulated distribution-conditioned capital-growth relation:
+After anchoring:
 
 $$
-y_t^p
+\widehat{\log\mu_t}=y_t-\hat y_t^p.
+$$
+
+The residual may diagnose the long-run relation. It does not identify the denominator of utilization.
+
+## First-layer equation
+
+$$
+y_t
 =
 \alpha
 +
 \theta_0 k_t
 +
-\theta_\omega q_t^{\omega,h}
+\phi\tilde d_t
 +
-u_t,
-$$
-
-which implies:
-
-$$
-\theta_t
-=
-\theta_0
+\theta_1(k_t\tilde d_t)
 +
-\theta_\omega m_{t-1}^{(h)}.
+\varepsilon_t,
 $$
 
-Here:
+where:
 
 $$
-q_t^{\omega,h}
-=
-\sum_{s=1}^{t}
-m_{s-1}^{(h)}\Delta k_s.
+\theta_t=\theta_0+\theta_1\tilde d_t.
 $$
 
-The generated index identifies distribution in the capacity payoff of accumulation. The old $\omega_t k_t$ level interaction is superseded under [[R_distribution_conditioned_theta_identification]].
+The object is the interaction-implied elasticity, not $\phi$ and not a wage-led/profit-led demand response.
 
-The reconstruction sequence is therefore:
+## Capital and anchoring rules
 
-$$
-\text{A00 accumulated-index relation}
-\rightarrow
-\hat{\theta}_t
-\rightarrow
-\hat{Y}_t^p
-\rightarrow
-\hat{\mu}_t.
-$$
+The capital variable must be restricted to productive-capacity capital before estimation. A coefficient vector disciplines the fitted path but does not fix its absolute capacity level. An explicit benchmark or pinch-year rule remains necessary.
 
-This is not yet utilization. It is the transformation rule used to reconstruct productive capacity.
+Without level anchoring, utilization is underidentified.
 
----
+## Methodological lock
 
-## 4. Dimensional admissibility
+**Capacity utilization is a level ratio between observed output and structurally reconstructed productive capacity. Identification must first recover and anchor $y_t^p$ before $\mu_t$ can be derived.**
 
-The log-level relation must be dimensionally disciplined.
+## Parked / not current baseline
 
-Following Basu’s dimensional-analysis critique, variables entering logarithms should be interpreted as dimensionless ratios, indexes, or rebased magnitudes, not raw dimensioned quantities.
-
-This matters because the transformation relation is not merely a convenient statistical equation. It is the empirical form through which productive capacity is reconstructed.
-
-Therefore, log output and log capital must be treated as admissible dimensionless objects before they can support reconstruction.
-
----
-
-## 5. Residualization versus residual ontology
-
-Residualization can be an admissible econometric operation.
-
-For example, Basu’s Yule-Frisch-Waugh-Lovell discussion clarifies that residualized regressions can recover the same coefficient vector as a full model under precise conditions.
-
-But this does not imply that residuals identify economic objects.
-
-Residualization is a conditioning or computational device. Residual ontology is the mistake of treating the residual itself as the object.
-
-For capacity utilization, the rule is strict:
-
-> residuals may help compute, condition, or diagnose; they do not identify $Y_t^p$ or $\mu_t$.
-
----
-
-## 6. Level anchoring
-
-Because $Y_t^p$ is unobserved, the reconstructed path requires level anchoring.
-
-A long-run coefficient can discipline the growth or slope of productive capacity, but it does not automatically determine the absolute level of capacity.
-
-Therefore, the reconstructed path must be normalized through an explicit benchmark rule, such as a pinch year or another theoretically justified level anchor.
-
-Without level anchoring, utilization remains underidentified.
-
----
-
-## 7. Operational sequence
-
-The admissible empirical sequence is:
-
-1. define the theoretical transformation relation;
-2. estimate the long-run coefficient vector;
-3. recover $\hat{\theta}_t$;
-4. reconstruct $\hat{Y}_t^p$;
-5. impose level anchoring;
-6. derive:
-
-$$
-\hat{\mu}_t = \frac{Y_t}{\hat{Y}_t^p}.
-$$
-
-This sequence prevents the residual from being mistaken for utilization.
-
----
-
-## 8. Methodological lock
-
-Capacity utilization is a reconstructed structural object.
-
-Its empirical identification requires:
-
-- a theoretically specified productive-capacity relation;
-- dimensionally admissible log variables;
-- econometrically defensible coefficient recovery;
-- explicit level anchoring;
-- and rejection of residual identification.
-
----
-
-## 9. Locked sentence for reuse
-
-**Capacity utilization is not the residual from an output-capital relation. It is a level ratio between observed output and structurally reconstructed productive capacity; therefore, identification must first recover and anchor $Y_t^p$ before $\mu_t$ can be derived.**
-
----
-
-## References
-
-Basu, D. (2022). *Dimensional analysis and logarithmic transformations in applied econometrics* (Working Paper No. 2022-22). University of Massachusetts Amherst, Department of Economics. https://doi.org/10.7275/6dk1-fw16
-
-Basu, D. (2023). *The Yule-Frisch-Waugh-Lovell theorem for linear instrumental variables estimation*. arXiv. https://arxiv.org/abs/2307.12731
-
-Shaikh, A. (1974). *Laws of production and laws of algebra: The humbug production function*. Bard Digital Commons.
+The accumulated $q_t^{\omega,h}$ index remains a possible historical-memory operator. It is not the current baseline identification object.

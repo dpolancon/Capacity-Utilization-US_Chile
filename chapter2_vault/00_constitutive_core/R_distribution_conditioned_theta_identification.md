@@ -5,217 +5,232 @@ layer: analytical_foundation
 scope: chapter2_core
 topic: distribution_conditioned_transformation_elasticity
 created: 2026-06-08
-updated: 2026-06-08
+updated: 2026-06-11
 design_role: specification_governance
 ---
 
 # Distribution-Conditioned Transformation Elasticity Identification
 
-## Binding rule
+## Binding object
 
-Chapter 2 identifies the distribution-conditioned transformation elasticity through accumulated distribution-conditioned capital accumulation. Distribution conditions the conversion of capital growth into productive-capacity growth; it does not operate through a contemporaneous multiplication between distribution and the capital-stock level.
-
-The active aggregate index is:
+Observed output is effective-demand-realized output. Productive capacity is latent:
 
 $$
-q_t^{\omega,h}
+y_t = y_t^p + \log \mu_t.
+$$
+
+The empirical problem is reconstruction of $y_t^p$, not direct measurement of $\mu_t$. The first layer identifies a distribution-conditioned capital-to-capacity elasticity. It does not identify utilization, short-run demand adjustment, or a wage-led/profit-led demand regime.
+
+The binding sequence is:
+
+$$
+\text{long-run coefficient vector}
+\rightarrow
+\hat{\theta}_t
+\rightarrow
+\hat{y}_t^p
+\rightarrow
+\hat{\mu}_t.
+$$
+
+After productive capacity has been reconstructed and explicitly anchored:
+
+$$
+\widehat{\log \mu_t}
 =
-\sum_{s=1}^{t}
-m_{s-1}^{(h)}\Delta k_s.
+y_t-\hat{y}_t^p.
 $$
 
-The binding benchmark relation is:
+**Coefficient consistency does not imply object consistency.**
+
+## First-layer specification
+
+The preferred first-layer equation is the primitive interaction:
 
 $$
-y_t^p
+y_t
 =
 \alpha
 +
 \theta_0 k_t
 +
-\theta_\omega q_t^{\omega,h}
+\phi \tilde d_t
 +
-u_t,
+\theta_1(k_t\tilde d_t)
++
+\varepsilon_t.
 $$
 
-with implied transformation coefficient:
+The identified object is:
 
 $$
 \theta_t
 =
-\theta_0
-+
-\theta_\omega m_{t-1}^{(h)}.
+\theta_0+\theta_1\tilde d_t.
 $$
 
-The accumulated index is the level-compatible econometric counterpart of a growth-rate transformation theory. It identifies $\theta_t$ where the theory locates it: in the transformation of capital accumulation into productive capacity.
+The direct distribution term remains as a nuisance control. Omitting it imposes:
 
-## Superseded route
+$$
+\phi=0,
+$$
 
-The former benchmark:
+and risks forcing the interaction to absorb distributional level effects. It also protects the interaction from arbitrary rebasing of capital:
+
+$$
+(k_t+c)\tilde d_t
+=
+k_t\tilde d_t+c\tilde d_t.
+$$
+
+The coefficient $\phi$ is not evidence of a wage-led or profit-led demand regime. The first-layer question is not:
+
+$$
+\frac{\partial y}{\partial d},
+$$
+
+but:
+
+$$
+\frac{\partial}{\partial d}
+\left(
+\frac{\partial y^p}{\partial k}
+\right).
+$$
+
+## Distribution reference
+
+The baseline uses a constant reference:
+
+$$
+\tilde d_t=d_t-\bar d.
+$$
+
+A rolling diagnostic may use:
+
+$$
+\tilde d_{t,w}=d_t-\bar d_w.
+$$
+
+HP-filter deviations are not the baseline. They change the object from distributional conditioning of $\theta_t$ to cyclical distribution-gap conditioning of $\theta_t$.
+
+## Productive-capital boundary
+
+The first-layer $k_t$ is productive-capacity capital, not all fixed capital. The productive boundary must be defined before estimation.
+
+Financial-circulation fixed assets, intellectual-property products, government transport, and similar assets may enter later as conditioners, diagnostics, or robustness objects. They do not enter automatically as baseline productive capital.
+
+## Open specification fork
+
+The vault does not lock an additive-capital conclusion or a one-to-one mapping from machinery to an intensive margin and structures to an extensive margin.
+
+The open question is:
+
+> Does distributional pressure condition the capital-to-capacity mapping directly through productive-capital scale, or indirectly through the composition of productive capital?
+
+### Specification A: direct scale-conditioning
 
 $$
 y_t
 =
-c
+\alpha
 +
-\beta_1 k_t
+\theta_0 \tilde k_t^{scale}
 +
-\beta_2(\omega_t k_t)
+\phi \tilde d_t
 +
-\xi_t
-$$
-
-and its mapping $\theta_t=\beta_1+\beta_2\omega_t$ are superseded as active identification devices. The $\omega_t k_t$ level interaction may appear only in a subsection or note explicitly labeled `superseded`, `rejected`, or `historical record`. It may not define the benchmark, an active implementation export, or an S40 reconstruction input.
-
-## Timing rule
-
-Distribution is inherited when current capital accumulation is converted into capacity. The benchmark therefore uses lagged distribution:
-
-$$
-m_{t-1}^{(1)}
-=
-\omega_{t-1}.
-$$
-
-Contemporaneous $\omega_t\Delta k_t$ is not the benchmark. Any alternative timing must be pre-specified, historically interpretable, and treated as robustness.
-
-## Centering rule
-
-The benchmark does not use full-sample centering of $\omega_t$, $m_{t-1}^{(h)}$, or the generated accumulation index. Full-sample centering imports future information into earlier observations and changes the historical meaning of the accumulated path. Local transformations may be used only as clearly labeled diagnostics that do not replace the uncentered benchmark.
-
-## Restricted memory-state menu
-
-The benchmark memory state is:
-
-$$
-m_{t-1}^{(1)}
-=
-\omega_{t-1}.
-$$
-
-The pre-specified moving-average robustness states are:
-
-$$
-m_{t-1}^{(3)}
-=
-\frac{1}{3}
-\left(
-\omega_{t-1}
+\theta_1(\tilde k_t^{scale}\tilde d_t)
 +
-\omega_{t-2}
-+
-\omega_{t-3}
-\right),
-$$
-
-and:
-
-$$
-m_{t-1}^{(5)}
-=
-\frac{1}{5}
-\sum_{j=1}^{5}
-\omega_{t-j}.
-$$
-
-Optional exponential-memory robustness is:
-
-$$
-m_{t-1}^{(\lambda)}
-=
-(1-\lambda)\omega_{t-1}
-+
-\lambda m_{t-2}^{(\lambda)},
+\varepsilon_t,
 $$
 
 with:
 
 $$
-\lambda
-\in
-\{0.25,0.50,0.75\}.
+\theta_t
+=
+\theta_0+\theta_1\tilde d_t.
 $$
 
-Unrestricted lag-weight estimation is prohibited in the benchmark.
-
-## Generated variables
-
-The aggregate generated indexes are:
+### Specification B: composition-mediated conditioning
 
 $$
-q_t^{\omega,1}
+y_t
+=
+\alpha
++
+\theta \tilde k_t^{scale}
++
+\psi \tilde\tau_t
++
+\phi \tilde d_t
++
+\lambda(\tilde\tau_t\tilde d_t)
++
+\varepsilon_t,
+$$
+
+where:
+
+$$
+\tilde\tau_t
+=
+\left(\ln K_t^{ME}-\ln K_t^{NR}\right)
+-
+\overline{\left(\ln K^{ME}-\ln K^{NR}\right)}.
+$$
+
+The composition response is:
+
+$$
+\frac{\partial \hat y_t^p}{\partial \tilde\tau_t}
+=
+\psi+\lambda\tilde d_t.
+$$
+
+Specification B tests whether distribution acts through technique or composition rather than directly through productive-capital scale.
+
+## Layer boundaries
+
+The first layer identifies the long-run capital-to-capacity elasticity. It does not identify:
+
+- the speed of adjustment;
+- an ECM coefficient;
+- a short-run multiplier;
+- full VECM dynamics;
+- a demand regime.
+
+Government expenditure, exports, consumption, imports, and other demand-composition variables remain theoretically relevant to realization, utilization, leakages, fixed points, and later interpretation. They are not direct first-layer productive-capacity builders.
+
+## Estimator hierarchy
+
+- FM-OLS is the preferred main estimator for the log-level reconstruction layer.
+- IM-OLS is a robustness check.
+- DOLS is a fragility diagnostic because leads and lags are costly in short samples.
+- Threshold-FGLS belongs only to a separate regime layer after diagnostic justification.
+
+The first layer assumes a stable long-run relation. A threshold or regime-switching layer can follow only after:
+
+1. integration order;
+2. deterministic components;
+3. structural breaks;
+4. nonlinear mean reversion;
+5. threshold admissibility.
+
+## Parked / not current baseline
+
+The accumulated historical-memory operator:
+
+$$
+q_t^{\omega,h}
 =
 \sum_{s=1}^{t}
-\omega_{s-1}\Delta k_s,
+m_{s-1}^{(h)}\Delta k_s
 $$
 
-$$
-q_t^{\omega,3}
-=
-\sum_{s=1}^{t}
-m_{s-1}^{(3)}\Delta k_s,
-$$
+is parked, not deleted. It may be tested after the primitive interaction problem is clarified. It is not the current baseline, does not govern first-layer exports, and does not authorize reconstruction.
 
-$$
-q_t^{\omega,5}
-=
-\sum_{s=1}^{t}
-m_{s-1}^{(5)}\Delta k_s.
-$$
-
-The machinery generated indexes are:
-
-$$
-q_t^{ME,\omega,1}
-=
-\sum_{s=1}^{t}
-\omega_{s-1}\Delta k_s^{ME},
-$$
-
-$$
-q_t^{ME,\omega,3}
-=
-\sum_{s=1}^{t}
-m_{s-1}^{(3)}\Delta k_s^{ME},
-$$
-
-$$
-q_t^{ME,\omega,5}
-=
-\sum_{s=1}^{t}
-m_{s-1}^{(5)}\Delta k_s^{ME}.
-$$
-
-These variables must be generated and audited before estimation.
-
-## Estimator-family implication
-
-The corrected benchmark remains a single-equation cointegrating regression:
-
-- FM-OLS is the main estimator.
-- IM-OLS is the robustness estimator.
-- DOLS is the fragility and robustness check.
-- Johansen/VECM may provide system-level robustness or rank evidence, but it may not replace the single-equation benchmark.
-
-Before coefficient interpretation, the generated indexes must be checked for missingness and lag-induced sample loss, integration order, correlation with $k_t$, VIF/collinearity, path plausibility, sensitivity to the capital-stock definition, and sensitivity to wage-share versus profit-share conditioning.
-
-Admissibility requires residual ADF evidence, Phillips-Ouliaris or an equivalent cointegration gate when available, an outlier screen, theoretically adjudicated dummy robustness, coefficient-sign coherence, estimator-family agreement, and historical interpretability. Passing one statistical gate never makes a coefficient dissertation-binding.
-
-## Promotion rule
-
-A corrected specification can be promoted only if all conditions hold:
-
-1. It preserves $\theta_t$ as endogenous to distribution.
-2. It does not use the rejected $\omega_t k_t$ level interaction as the benchmark device.
-3. Its generated index has an explicit inherited-distribution timing rule.
-4. Its memory filter is pre-specified.
-5. Its residuals pass stationarity and cointegration-admissibility checks.
-6. Its coefficients are stable across reasonable estimator variants.
-7. Its historical path is interpretable.
-8. Human review explicitly promotes it from candidate to reconstruction input.
-
-The corrected object must pass S30/S32 human review before S40 is opened. Existing S40 contracts based on the superseded level interaction do not authorize reconstruction with the corrected specification.
+Non-interacted distribution-control equations, ARDL short-run adjustment, full VECM dynamics, and threshold-FGLS are not preferred first-layer identification routes.
 
 ## Governing links
 

@@ -16,6 +16,9 @@ priority: high
 
 # IM-OLS and the Integration-Ladder Reconstruction Problem
 
+> [!important] Current identification lock
+> IM-OLS is a robustness check for the primitive centered-interaction first layer. Accumulated-index construction discussed below is parked historical-memory work, not the current baseline.
+
 ## Core claim
 
 IM-OLS is admissible as a robustness estimator for the long-run transformation relation, but not as a direct reconstruction device for capacity utilization.

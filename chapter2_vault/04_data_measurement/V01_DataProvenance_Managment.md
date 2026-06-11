@@ -12,6 +12,9 @@ downstream_repo: Capacity-Utilization-US_Chile
 ---
 # US BEA Upstream Provider Handoff
 
+> [!important] Current identification lock
+> Downstream construction must follow [[R_distribution_conditioned_theta_identification]]: productive-capital scale, constant-centered distribution, their primitive interaction, and the centered ME/NR composition fork. Accumulated-index requirements below are parked historical-memory requirements.
+
 ## Purpose
 
 This note records the local handoff route from the upstream BEA provider repository into the downstream Chapter 2 capacity-utilization repository.

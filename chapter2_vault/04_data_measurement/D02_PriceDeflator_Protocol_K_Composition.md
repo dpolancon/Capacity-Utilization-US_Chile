@@ -17,6 +17,9 @@ updated: 2026-06-08
 
 # Price-deflator protocol for ME–NRC nonfinancial-corporate composition
 
+> [!important] Current identification lock
+> This note supplies measurement for the open composition-mediated specification. It does not replace the primitive scale interaction or lock machinery and structures into fixed structural roles. Accumulated-index baseline language below is parked.
+
 ## Core claim
 
 Different capital accounts should not be merged as if their prices were identical.

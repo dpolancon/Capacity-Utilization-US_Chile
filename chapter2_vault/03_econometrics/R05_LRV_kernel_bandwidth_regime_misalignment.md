@@ -17,6 +17,9 @@ priority: high
 
 # Long-Run Variance Estimation and Regime Misalignment
 
+> [!important] Current identification lock
+> FM-OLS is preferred for the primitive centered-interaction first layer in [[R_distribution_conditioned_theta_identification]]. References below to an accumulated-index baseline are parked and non-authoritative.
+
 ## Core claim
 
 FM-OLS preserves the theoretical regressor matrix, but its correction depends on long-run variance estimation. That creates a regime-misalignment risk.

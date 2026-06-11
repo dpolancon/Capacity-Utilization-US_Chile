@@ -18,6 +18,9 @@ priority: high
 
 # FM-OLS and Structural Preservation in Productive-Capacity Reconstruction
 
+> [!important] Current identification lock
+> The preferred regressor matrix is the primitive centered interaction in [[R_distribution_conditioned_theta_identification]]. Any accumulated-index baseline language below is parked historical material and does not govern current reconstruction.
+
 ## Core claim
 
 FM-OLS is the preferred estimator for the main long-run reconstruction layer because it preserves the A00 structural regressor matrix while correcting for endogeneity and serial correlation.
@@ -56,18 +59,20 @@ $$
 
 For this sequence, preserving the theoretical regressor matrix matters.
 
-The corrected A00 structural regressor matrix is:
+The direct scale-conditioning regressor matrix is:
 
 $$
-y_t^p
+y_t
 =
 \alpha
 +
-\theta_0 k_t
+\theta_0\tilde k_t^{scale}
 +
-\theta_\omega q_t^{\omega,h}
+\phi\tilde d_t
 +
-u_t,
+\theta_1(\tilde k_t^{scale}\tilde d_t)
++
+\varepsilon_t,
 $$
 
 so the recovered elasticity is:
@@ -77,10 +82,10 @@ $$
 =
 \hat{\theta}_0
 +
-\hat{\theta}_\omega m_{t-1}^{(h)}.
+\hat{\theta}_1\tilde d_t.
 $$
 
-FM-OLS preserves this A00 mapping more cleanly than DOLS because it does not introduce auxiliary lead-lag terms into the structural equation. The accumulated index must be constructed before estimation and remains part of the structural matrix.
+The competing composition-mediated matrix replaces the scale interaction with $\tilde\tau_t\tilde d_t$ while retaining the direct distribution control. FM-OLS preserves either governed matrix more cleanly than DOLS because it does not introduce auxiliary lead-lag terms into the structural equation.
 
 ---
 
@@ -90,9 +95,9 @@ FM-OLS is preferred because it keeps the estimated equation aligned with the the
 
 This matters because the reconstructed productive-capacity path requires a clean mapping from the estimated coefficient vector to the theoretical transformation relation.
 
-The A00 preservation rule is:
+The preservation rule is:
 
-> the estimator may correct the coefficient, but it must preserve $\alpha+\theta_0 k_t+\theta_\omega q_t^{\omega,h}+u_t$ as the structural object being reconstructed.
+> the estimator may correct the coefficient, but it must preserve the selected primitive scale-conditioning or composition-mediated regressor matrix as the structural object being reconstructed.
 
 FM-OLS satisfies this rule better than DOLS.
 
@@ -173,7 +178,7 @@ Its result must be interpreted through the reconstruction sequence, not through 
 
 ## 8. Locked sentence for reuse
 
-**FM-OLS is preferred because it preserves the corrected A00 structural regressor matrix $\alpha+\theta_0 k_t+\theta_\omega q_t^{\omega,h}+u_t$, and therefore preserves the mapping $\theta_t=\theta_0+\theta_\omega m_{t-1}^{(h)}$. It can support productive-capacity reconstruction only after the generated index is audited, the relation is admissible, and the path is level-anchored; otherwise the residual remains an algebraic remainder, not utilization.**
+**FM-OLS is preferred because it preserves the governed primitive scale-conditioning or composition-mediated regressor matrix while correcting long-run endogeneity and serial correlation. IM-OLS remains the robustness check and DOLS the fragility diagnostic. Productive capacity can be reconstructed only after the selected relation is admissible and its fitted path is level-anchored; otherwise the residual remains an algebraic remainder, not utilization.**
 
 ---
 

@@ -36,6 +36,9 @@ updated: 2026-06-02
 
 # Memo 1 — US Code Recycling Map
 
+> [!important] Current identification lock
+> Recycled code must target the primitive centered scale interaction and the centered composition fork in [[R_distribution_conditioned_theta_identification]]. Accumulated-index and old B1 export instructions below are parked.
+
 ## 1. Status
 
 The US code batch should be treated as **recyclable DOLS-era material**, not as definitive production code.
@@ -181,32 +184,31 @@ Expected variables:
 - `pK`
 - profitability inputs
 
-### A00 accumulated-index metadata
+### A00 first-layer metadata
 
 For A00 implementation metadata, `K_t` is aggregate real productive capital.
 
 `k_t` is the log of `K_t` or another dimensionally admissible aggregate-capital index declared in the source-of-truth panel.
 
-`omega_t` is the wage-share / distributive condition used to construct inherited memory states.
+`d_t` is the declared distributive condition and must be centered on a constant reference.
 
-The corrected A00 exports are:
+The current A00 exports are:
 
 ```text
-q_omega_1
-q_omega_3
-q_omega_5
+k_prod_scale
+d_centered_constant
+k_prod_scale_x_d_centered
+tau_ME_NR_centered
+tau_ME_NR_x_d_centered
 ```
 
-meaning:
+The scale interaction identifies:
 
 $$
-q_t^{\omega,h}
-=
-\sum_{s=1}^{t}
-m_{s-1}^{(h)}\Delta k_s.
+\theta_t=\theta_0+\theta_1\tilde d_t.
 $$
 
-The panel must also export `q_ME_omega_1`, `q_ME_omega_3`, and `q_ME_omega_5` for governed A03/A05 review. The benchmark uses no full-sample centering. The former `omega_k_t` export is historical only and cannot define S30 promotion or S40 reconstruction.
+The accumulated `q_omega_*` and `q_ME_omega_*` exports are parked historical-memory variables. They cannot define S30 promotion or S40 reconstruction.
 
 The current scripts appear to repeatedly rebuild real output, real capital, and wage-share objects internally. That should stop. Each script should not behave as a tiny independent republic.
 
