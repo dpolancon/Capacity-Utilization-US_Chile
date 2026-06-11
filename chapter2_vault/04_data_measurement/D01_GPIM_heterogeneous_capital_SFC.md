@@ -18,6 +18,9 @@ updated: 2026-06-08
 
 # GPIM, heterogeneous capital, stock-flow consistency, and valuation registers
 
+> [!important] Current identification lock
+> D01 must first define the productive-capital boundary, then export productive-capital scale, constant-centered distribution, their interaction, and the centered ME/NR composition variables. Accumulated-index baseline language below is parked under [[R_distribution_conditioned_theta_identification]].
+
 ## Core claim
 
 GPIM should be used as the **stock-flow-consistency device** for reconstructing capital in operation.

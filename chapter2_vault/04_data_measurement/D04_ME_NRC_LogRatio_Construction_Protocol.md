@@ -30,8 +30,11 @@ updated: 2026-06-08
 ---
 # D04: ME/NRC Log-Ratio Construction Protocol
 
+> [!important] Current identification lock
+> This protocol constructs the centered composition candidate $\tilde\tau_t$. It does not establish a one-to-one intensive/extensive mapping. Any accumulated-index extension below is parked.
+
 > [!warning] Restricted role after June 8, 2026
-> The log-ratio variables remain admissible for descriptive and less-preferred robustness work. The active A05 distribution-conditioned object is the machinery accumulation-weighted index $q_t^{ME,\omega,h}$. The contemporaneous $\omega_t m_t$ interaction is superseded as a preferred candidate and is not promotion-eligible.
+> The log-ratio variables construct the centered composition candidate for the current A05 specification fork. Accumulated-index variants and the former contemporaneous $\omega_t m_t$ interaction are parked and not promotion-eligible.
 
 ## Core claim
 
@@ -263,17 +266,17 @@ Implementation label:
 q_m_omega_h
 ```
 
-The preferred A05 variable is `q_ME_omega_h`, accumulated inherited distribution times machinery-capital growth. The ratio variant is secondary because the theory locates distribution more directly in machinery accumulation.
+The current A05 composition variable is:
 
-It does not mean that distribution directly interacts with the NRC envelope.
+$$
+\tilde\tau_t
+=
+\left(\ln K_t^{ME}-\ln K_t^{NRC}\right)
+-
+\overline{\left(\ln K^{ME}-\ln K^{NRC}\right)}.
+$$
 
-The rule is:
-
-```text
-NRC is the extensive envelope.
-ME/NRC is the mechanization-bias index.
-omega × ME/NRC is the distribution-conditioned mechanization-bias channel.
-```
+Its interaction with centered distribution, $\tilde\tau_t\tilde d_t$, tests composition-mediated conditioning. ME and NRC remain asset categories; this specification does not establish that they map conclusively onto intensive and extensive accumulation margins.
 
 Do not construct:
 
@@ -563,4 +566,4 @@ D04 only governs variable construction.
 
 ## Locked formulation
 
-D04 locks the descriptive construction of the ME/NRC log ratio and the less-preferred accumulated ratio-growth robustness object $q_t^{m,\omega,h}$. The active A05 candidate uses $q_t^{ME,\omega,h}$ instead. The old $\omega_t m_t$ level interaction is superseded, and no D04 object authorizes promotion or S40 reconstruction.
+D04 locks the construction of the centered ME/NRC composition variable $\tilde\tau_t$ for the composition-mediated specification fork. The direct scale-conditioning specification remains the competing first-layer candidate. Accumulated $q_t$ variants and the old $\omega_t m_t$ interaction are parked, and no D04 object authorizes promotion or S40 reconstruction.

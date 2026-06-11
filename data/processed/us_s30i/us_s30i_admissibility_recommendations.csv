@@ -1,0 +1,54 @@
+"variable","family","role","i_order_recommendation","i2_risk_flag","rolling_instability_flag","s32_recommendation","notes","carry_to_S32"
+"y_t","effective_output_proxy","effective_output_proxy","I1_recommended",FALSE,TRUE,"carry_to_S32_baseline_cointegration_candidate_with_rolling_warning","Actual log output; productive capacity is latent and non-observable.",TRUE
+"K_ME","productive_capacity_capital","capital_level","I2_risk",TRUE,TRUE,"audit_only_high_i2_risk","",FALSE
+"K_NRC","productive_capacity_capital","capital_level","I2_risk",TRUE,TRUE,"audit_only_high_i2_risk","",FALSE
+"K_cap","productive_capacity_capital","capital_level","I2_risk",TRUE,TRUE,"audit_only_high_i2_risk","",FALSE
+"k_ME","productive_capacity_capital","capital_level","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"k_NRC","productive_capacity_capital","capital_level","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"k_Kcap","productive_capacity_capital","capital_level","I1_recommended",FALSE,TRUE,"carry_to_S32_baseline_cointegration_candidate_with_rolling_warning","",TRUE
+"g_K_ME","productive_capacity_capital","capital_growth","I0_recommended",FALSE,TRUE,"stationary_candidate_not_long_run_level_cointegrating_regressor","",FALSE
+"g_K_NRC","productive_capacity_capital","capital_growth","I0_recommended",FALSE,TRUE,"stationary_candidate_not_long_run_level_cointegrating_regressor","",FALSE
+"g_Kcap","productive_capacity_capital","capital_growth","I0_recommended",FALSE,TRUE,"stationary_capital_growth_input_not_preferred_long_run_level_regressor","",FALSE
+"ME_NRC_gap","mechanization_composition_diagnostics","composition_diagnostic","I2_risk",TRUE,TRUE,"audit_only_high_i2_risk","",FALSE
+"ME_share","mechanization_composition_diagnostics","composition_diagnostic","I2_risk",TRUE,TRUE,"audit_only_high_i2_risk","",FALSE
+"NRC_share","mechanization_composition_diagnostics","composition_diagnostic","I2_risk",TRUE,TRUE,"audit_only_high_i2_risk","",FALSE
+"Delta_ME_NRC_gap","mechanization_composition_diagnostics","audit_only_mechanization_change_variable","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"Delta_ME_share","mechanization_composition_diagnostics","audit_only_mechanization_change_variable","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"Delta_NRC_share","mechanization_composition_diagnostics","audit_only_mechanization_change_variable","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"omega_NFC","distribution_states","preferred_distribution_state","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"omega_CORP","distribution_states","distribution_robustness_or_diagnostic","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"pi_res_NFC","distribution_states","distribution_robustness_or_diagnostic","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"pi_res_CORP","distribution_states","distribution_robustness_or_diagnostic","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"e_NFC","distribution_states","distribution_robustness_or_diagnostic","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"e_CORP","distribution_states","distribution_robustness_or_diagnostic","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"ln_e_NFC","distribution_states","distribution_robustness_or_diagnostic","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"ln_e_CORP","distribution_states","distribution_robustness_or_diagnostic","I1_recommended",FALSE,TRUE,"carry_to_S32_cointegration_or_admissibility_candidate_with_rolling_warning","",TRUE
+"q_omega_h1_Kcap","aggregate_q_indexes","preferred_A00_q_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_baseline_cointegration_candidate_with_rolling_warning","",TRUE
+"q_omega_h3_Kcap","aggregate_q_indexes","memory_state_robustness_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_aggregate_q_cointegration_candidate_with_rolling_warning","",TRUE
+"q_omega_h5_Kcap","aggregate_q_indexes","memory_state_robustness_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_aggregate_q_cointegration_candidate_with_rolling_warning","",TRUE
+"q_e_h1_Kcap","aggregate_q_indexes","alternative_distribution_proxy_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_aggregate_q_cointegration_candidate_with_rolling_warning","",TRUE
+"q_e_h3_Kcap","aggregate_q_indexes","alternative_distribution_proxy_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_aggregate_q_cointegration_candidate_with_rolling_warning","",TRUE
+"q_e_h5_Kcap","aggregate_q_indexes","alternative_distribution_proxy_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_aggregate_q_cointegration_candidate_with_rolling_warning","",TRUE
+"q_omega_h1_Kcap__full_long_sample","periodized_q_indexes","periodized_A00_q_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_periodized_cointegration_candidate_with_rolling_warning","Period-reset q; interpret within its governed window.",TRUE
+"q_omega_h1_Kcap__pre_1974_full","periodized_q_indexes","periodized_A00_q_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_periodized_cointegration_candidate_with_rolling_warning","Period-reset q; interpret within its governed window.",TRUE
+"q_omega_h1_Kcap__post_1973_full","periodized_q_indexes","periodized_A00_q_candidate","I2_risk",TRUE,FALSE,"audit_only_high_i2_risk","Period-reset q; interpret within its governed window.",FALSE
+"q_omega_h1_Kcap__fordist_core","periodized_q_indexes","periodized_A00_q_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_periodized_cointegration_candidate_with_rolling_warning","Period-reset q; interpret within its governed window.",TRUE
+"q_omega_h1_Kcap__bridge_1940_1978","periodized_q_indexes","periodized_A00_q_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_periodized_cointegration_candidate_with_rolling_warning","Period-reset q; interpret within its governed window.",TRUE
+"q_omega_h1_Kcap__pre_1974_alt_1940_1973","periodized_q_indexes","periodized_A00_q_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_periodized_cointegration_candidate_with_rolling_warning","Period-reset q; interpret within its governed window.",TRUE
+"q_omega_h1_Kcap__pre_1974_alt_1947_1973","periodized_q_indexes","periodized_A00_q_candidate","I2_risk",TRUE,FALSE,"audit_only_high_i2_risk","Period-reset q; interpret within its governed window.",FALSE
+"q_omega_h1_ME","mechanization_bias_q_candidates","mechanization_bias_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_mechanization_cointegration_candidate_with_rolling_warning","",TRUE
+"q_omega_h1_NRC","mechanization_bias_q_candidates","mechanization_bias_candidate","I1_recommended",FALSE,TRUE,"carry_to_S32_mechanization_cointegration_candidate_with_rolling_warning","",TRUE
+"q_omega_h1_ME_minus_NRC","mechanization_bias_q_candidates","mechanization_bias_candidate","I2_risk",TRUE,TRUE,"audit_only_high_i2_risk","",FALSE
+"q_omega_h1_ME_share","mechanization_bias_q_candidates","mechanization_bias_candidate","I2_risk",TRUE,TRUE,"audit_only_high_i2_risk","",FALSE
+"q_omega_h1_NRC_share","mechanization_bias_q_candidates","mechanization_bias_candidate","I2_risk",TRUE,TRUE,"audit_only_high_i2_risk","",FALSE
+"q_omega_h1_ME_NRC_gap","mechanization_bias_q_candidates","mechanization_bias_candidate","I2_risk",TRUE,TRUE,"audit_only_high_i2_risk","",FALSE
+"IPP_stock","frontier_conditioners","frontier_conditioner","ambiguous_or_higher_order_risk",TRUE,TRUE,"audit_only_high_i2_risk","Not an additive K_cap component.",FALSE
+"IPP_growth","frontier_conditioners","frontier_conditioner","I0_recommended",FALSE,TRUE,"carry_to_S32_stationary_frontier_conditioner_candidate_with_rolling_warning","Not an additive K_cap component.",TRUE
+"IPP_share_total_fixed_assets","frontier_conditioners","frontier_conditioner","I1_recommended",FALSE,TRUE,"carry_to_S32_frontier_cointegrating_conditioner_candidate_with_rolling_warning","Not an additive K_cap component.",TRUE
+"IPP_share_capital_plus_IPP","frontier_conditioners","frontier_conditioner","I1_recommended",FALSE,TRUE,"carry_to_S32_frontier_cointegrating_conditioner_candidate_with_rolling_warning","Not an additive K_cap component.",TRUE
+"IPP_to_Kcap","frontier_conditioners","frontier_conditioner","I1_recommended",FALSE,TRUE,"carry_to_S32_frontier_cointegrating_conditioner_candidate_with_rolling_warning","Not an additive K_cap component.",TRUE
+"GOV_TRANS_stock","frontier_conditioners","frontier_conditioner","I2_risk",TRUE,TRUE,"audit_only_high_i2_risk","Not an additive K_cap component.",FALSE
+"GOV_TRANS_growth","frontier_conditioners","frontier_conditioner","I0_recommended",FALSE,FALSE,"carry_to_S32_stationary_frontier_conditioner_candidate","Not an additive K_cap component.",TRUE
+"GOV_TRANS_to_Kcap","frontier_conditioners","frontier_conditioner","I1_recommended",FALSE,TRUE,"carry_to_S32_frontier_cointegrating_conditioner_candidate_with_rolling_warning","Not an additive K_cap component.",TRUE
+"GOV_TRANS_to_NRC","frontier_conditioners","frontier_conditioner","I1_recommended",FALSE,TRUE,"carry_to_S32_frontier_cointegrating_conditioner_candidate_with_rolling_warning","Not an additive K_cap component.",TRUE
+"GOV_TRANS_to_ME","frontier_conditioners","frontier_conditioner","I1_recommended",FALSE,TRUE,"carry_to_S32_frontier_cointegrating_conditioner_candidate_with_rolling_warning","Not an additive K_cap component.",TRUE

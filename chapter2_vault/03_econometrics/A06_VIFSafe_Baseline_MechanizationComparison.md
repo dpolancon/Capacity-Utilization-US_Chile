@@ -33,7 +33,7 @@ updated: 2026-06-08
 # A06: VIF-Safe Baseline and Mechanization-Bias Comparison Pair
 
 > [!warning] Superseded comparison
-> This note preserves the June 2, 2026 VIF comparison for the former level-interaction specifications. Neither `SPEC_B1_WAGE_BASELINE` nor `SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED` is the active benchmark after [[R_distribution_conditioned_theta_identification]]. Their VIF results do not transfer to the accumulated indexes. This note is historical and not promotion-eligible.
+> This note preserves the June 2, 2026 VIF comparison for former specifications. Neither `SPEC_B1_WAGE_BASELINE` nor `SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED` is the active benchmark after [[R_distribution_conditioned_theta_identification]]. The current fork is primitive scale-conditioning versus centered composition-mediated conditioning. This note is historical and not promotion-eligible.
 
 ## Core claim
 

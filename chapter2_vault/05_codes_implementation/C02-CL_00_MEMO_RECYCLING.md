@@ -39,6 +39,9 @@ updated: 2026-06-02
 
 # Memo 2 — Chile Code Recycling Map
 
+> [!important] Current identification lock
+> Chile first-layer work begins with the primitive centered scale interaction, with composition mediation as the competing specification. Accumulated-index, threshold, and short-run routes below are parked or later-layer only.
+
 ## 1. Status
 
 The Chile code batch should be treated as **recyclable staged material**, not as definitive production code.
@@ -288,34 +291,47 @@ Estimator roles:
 - IM-OLS = robustness;
 - DOLS = fragility / stress.
 
-Chile S30 must begin from the corrected A00 accumulated-index baseline before escalating to composition or external-constraint surfaces.
+Chile S30 must begin from a current first-layer coefficient-vector candidate governed by [[R_distribution_conditioned_theta_identification]].
 
 The hierarchy is:
 
-1. A00 accumulated-index baseline:
-
-```text
-q_omega_1
-q_omega_3
-q_omega_5
-```
-
-meaning:
+1. Direct scale-conditioning:
 
 $$
-q_t^{\omega,h}
+y_t
 =
-\sum_{s=1}^{t}
-m_{s-1}^{(h)}\Delta k_s.
+\alpha
++
+\theta_0\tilde k_t^{scale}
++
+\phi\tilde d_t
++
+\theta_1(\tilde k_t^{scale}\tilde d_t)
++
+\varepsilon_t.
 $$
 
-2. A03 ME/NRC composition escalation, where machinery and non-machinery capital shares condition the aggregate relation.
+2. Composition-mediated conditioning:
+
+$$
+y_t
+=
+\alpha
++
+\theta\tilde k_t^{scale}
++
+\psi\tilde\tau_t
++
+\phi\tilde d_t
++
+\lambda(\tilde\tau_t\tilde d_t)
++
+\varepsilon_t.
+$$
 
 3. A04 external/peripheral realization escalation, where foreign-exchange, balance-of-payments, and peripheral mechanization variables are diagnostic or escalated realization variables.
 
-Chile must not begin directly from composition terms, threshold surfaces, or external-constraint terms as if they were baseline replacements. A04/external variables can diagnose or escalate the A00/A03 relation, but they do not replace the corrected A00 accumulated-index baseline.
-
-For Chile, the escalated S30 equation may allow composition-weighted transformation logic after the A00 baseline is declared.
+The first two equations are competing first-layer specifications. A04/external variables can diagnose or interpret realization constraints, but they do not replace first-layer coefficient recovery.
 
 The relevant interaction surface may include:
 
@@ -354,6 +370,10 @@ $$
 $$
 
 S30 may adjudicate whether S40 can open.
+
+## Parked / not current baseline
+
+Accumulated $q_t^{\omega,h}$ indexes are historical-memory operators, not the current Chile S30 baseline. Threshold and regime-switching logic belongs only after integration order, deterministic components, structural breaks, nonlinear mean reversion, and threshold admissibility have been assessed.
 
 S30 does not choose the utilization level anchor.
 

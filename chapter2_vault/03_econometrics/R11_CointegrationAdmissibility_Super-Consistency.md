@@ -4,7 +4,7 @@ id: R_Cointegration_Admissibility_Superconsistent_Estimators
 title: Cointegration Admissibility for Super-Consistent Estimators
 status: draft
 created: 2026-06-03
-updated: 2026-06-03
+updated: 2026-06-11
 project: Chapter 2
 repo_area: 02_econometrics
 note_role: identification_guardrail
@@ -33,8 +33,8 @@ forbidden_terms:
   - coefficient significance proves cointegration
   - residual ADF proves cointegration
 related_specs:
-  - SPEC_A00_ACCUMULATED_DISTRIBUTION_BENCHMARK
-  - SPEC_A05_ME_ACCUMULATION_WEIGHTED
+  - SPEC_A00_PRIMITIVE_INTERACTION
+  - SPEC_A05_COMPOSITION_INTERACTION
 related_notes:
   - A00_Benchmark_Identification
   - A05_Distributive_Mechanization_Bias
@@ -167,16 +167,18 @@ This is especially important for Chapter 2. The objects B1 and E2B are written a
 
 ## Chapter 2 specifications
 
-For the corrected A00 benchmark, the candidate relation is:
+For the preferred A00 benchmark, the candidate relation is:
 
 $$
-y_t^p
+y_t
 =
 \alpha
 +
 \theta_0 k_t
 +
-\theta_\omega q_t^{\omega,h}
+\phi\tilde d_t
++
+\theta_1(k_t\tilde d_t)
 +
 u_t^{A00}.
 $$
@@ -187,28 +189,30 @@ $$
 u_t^{A00} \sim I(0).
 $$
 
-If this condition holds, the transformation coefficient implied by B1 can be read as:
+If this condition holds, the transformation coefficient can be read as:
 
 $$
 \theta_t
 =
 \theta_0
 +
-\theta_\omega m_{t-1}^{(h)}.
+\theta_1\tilde d_t.
 $$
 
-For the corrected A05 candidate, the relation is:
+For the A05 composition-mediated candidate, the relation is:
 
 $$
-y_t^p
+y_t
 =
 \alpha
 +
-\beta_{NRC}k_t^{NRC}
+\theta\tilde k_t^{scale}
 +
-\beta_{ME}k_t^{ME}
+\psi\tilde\tau_t
 +
-\beta_{\omega ME}q_t^{ME,\omega,h}
+\phi\tilde d_t
++
+\lambda(\tilde\tau_t\tilde d_t)
 +
 u_t^{A05}.
 $$
@@ -219,7 +223,11 @@ $$
 u_t^{A05} \sim I(0).
 $$
 
-Without residual stationarity, these derivatives are not admissible as long-run transformation effects.
+Without residual stationarity, these interaction-implied effects are not admissible as long-run transformation effects.
+
+## Parked / not current baseline
+
+The accumulated $q_t^{\omega,h}$ and $q_t^{ME,\omega,h}$ relations remain possible historical-memory specifications. They are not the current A00 or A05 baseline.
 
 ## Distinction between admissibility and significance
 

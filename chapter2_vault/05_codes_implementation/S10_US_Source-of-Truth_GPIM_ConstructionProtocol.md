@@ -89,40 +89,19 @@ related_to:
   - "A03_TransformationElasticity_Two-CapitalCapacityComposition"
 ---
 
-## Distribution-conditioned index construction lock
+## First-layer variable construction lock
 
-S10 must generate the corrected indexes before S30 estimation:
+Before S30 estimation, S10 must define the productive-capital boundary and generate:
 
-$$
-q_t^{\omega,1}
-=
-\sum_{s=1}^{t}
-\omega_{s-1}\Delta k_s,
-\qquad
-q_t^{\omega,3}
-=
-\sum_{s=1}^{t}
-m_{s-1}^{(3)}\Delta k_s,
-\qquad
-q_t^{\omega,5}
-=
-\sum_{s=1}^{t}
-m_{s-1}^{(5)}\Delta k_s.
-$$
+```text
+k_prod_scale
+d_centered_constant
+k_prod_scale_x_d_centered
+tau_ME_NR_centered
+tau_ME_NR_x_d_centered
+```
 
-It must also generate:
-
-$$
-q_t^{ME,\omega,1},
-\qquad
-q_t^{ME,\omega,3},
-\qquad
-q_t^{ME,\omega,5},
-$$
-
-using the corresponding inherited-distribution memory state and $\Delta k_s^{ME}$.
-
-The benchmark uses no full-sample centering. Every index export must record timing, memory state, first valid year, missingness, capital definition, and distribution measure. Downstream estimation remains blocked until these generated variables pass the feasibility checks in [[R10_Binding_Specification_Layering_Rule]].
+Every export must record the asset boundary, distribution measure, constant reference, sample, and transformation rule. The accumulated $q_t^{\omega,h}$ indexes are parked historical-memory operators and are not required baseline exports.
 
 ## Sectoral-accounting lock: NFC, Shaikh-corrected corporate, and mixed Marxian conditioning
 

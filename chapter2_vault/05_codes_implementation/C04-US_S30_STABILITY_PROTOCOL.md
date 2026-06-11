@@ -27,8 +27,15 @@ related_to:
 
 # C04 - US S30 Stability Protocol
 
+> [!important] Current identification lock
+> S30 stability applies to the primitive centered scale interaction and the centered composition competitor. `omega_k_t` without the direct distribution control and accumulated-index specifications are historical only.
+
 > [!warning] Superseded method object
-> This protocol remains as the historical adjudication record for `SPEC_B1_WAGE_BASELINE`. The B1 level interaction is no longer the active benchmark. A corrected S30 pass must generate and estimate the accumulated indexes governed by [[R_distribution_conditioned_theta_identification]]. Nothing in this note opens S40 for the corrected object.
+> This protocol remains as the historical adjudication record for `SPEC_B1_WAGE_BASELINE`. The B1 level interaction is no longer the active benchmark. A corrected S30 pass must estimate the centered primitive interaction and/or the composition-mediated specification governed by [[R_distribution_conditioned_theta_identification]]. Nothing in this note opens S40 for the current object.
+
+## Parked / not current baseline
+
+Accumulated $q_t^{\omega,h}$ indexes are parked historical-memory operators. They are not required variables for the current S30 baseline and cannot authorize S40 reconstruction.
 
 ## 0. Purpose
 

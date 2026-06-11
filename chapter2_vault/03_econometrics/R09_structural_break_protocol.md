@@ -49,6 +49,9 @@ updated: "2026-05-14"
 
 # Parameter Stability and Window Discipline in S30
 
+> [!important] Current identification lock
+> Break diagnostics apply after the primitive centered-interaction first layer is specified. Accumulated-index and old `omega_k_t` labels below are historical implementation references.
+
 ## Core claim
 
 S30 should treat parameter stability as a guardrail on the long-run transformation relation, not as an invitation to search for the window with the most attractive coefficient.

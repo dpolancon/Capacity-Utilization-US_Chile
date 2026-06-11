@@ -42,8 +42,11 @@ related_to:
 
 # C03 - Results Repository Structure and Stage Governance
 
+> [!important] Current identification lock
+> Stage labels must follow [[R_distribution_conditioned_theta_identification]]. Any accumulated-index or old B1 reconstruction paths below are historical and not promotion-eligible.
+
 > [!warning] June 8 methodological override
-> Repository paths remain valid, but all references in this note to an active restricted-B1 S40 pathway are superseded. S40 is blocked until the corrected accumulated-index object passes S30/S32 human review under [[R_distribution_conditioned_theta_identification]].
+> Repository paths remain valid, but all references in this note to an active restricted-B1 S40 pathway are superseded. S40 is blocked until human review promotes a current first-layer coefficient vector under [[R_distribution_conditioned_theta_identification]]: either direct scale-conditioning or composition-mediated conditioning.
 
 ## 1. Purpose
 

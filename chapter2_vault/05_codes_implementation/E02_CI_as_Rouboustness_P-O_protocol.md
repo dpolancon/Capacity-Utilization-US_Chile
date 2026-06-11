@@ -42,10 +42,11 @@ forbidden_terms:
   - "S40 reconstruction authorized"
 
 related_specs:
-  - "SPEC_A00_ACCUMULATED_DISTRIBUTION_BENCHMARK"
-  - "SPEC_A05_ME_ACCUMULATION_WEIGHTED"
+  - "SPEC_A00_PRIMITIVE_SCALE_INTERACTION"
+  - "SPEC_A05_COMPOSITION_INTERACTION"
 
 related_notes:
+  - "R_distribution_conditioned_theta_identification"
   - "R_Cointegration_Admissibility_Superconsistent_Estimators"
   - "A06_B1_E2B_Model_Choice_Lock"
   - "S32_B1_E2B_MODEL_CHOICE_REVIEW"
@@ -69,6 +70,9 @@ tags:
 ---
 
 # Phillips-Ouliaris Implementation Protocol for Cointegration Robustness
+
+> [!important] Current identification lock
+> Phillips-Ouliaris gates the primitive centered-interaction and composition-mediated candidate relations. Accumulated-index specification labels below are parked historical labels.
 
 ## Purpose
 
@@ -120,10 +124,20 @@ Estimator-specific residual ADF checks may remain as diagnostics, but they are n
 
 ## Candidate systems
 
-For the corrected A00 benchmark, the candidate relation is:
+For the direct scale-conditioning candidate, the relation is:
 
 $$  
-y_t^p = \alpha + \theta_0 k_t + \theta_\omega q_t^{\omega,h} + u_t^{A00}.
+y_t
+=
+\alpha
++
+\theta_0\tilde k_t^{scale}
++
+\phi\tilde d_t
++
+\theta_1(\tilde k_t^{scale}\tilde d_t)
++
+\varepsilon_t^{A00}.
 $$
 
 The Phillips-Ouliaris data matrix is:
@@ -131,15 +145,28 @@ The Phillips-Ouliaris data matrix is:
 ```r
 z_a00 <- cbind(
   y_t = d$y_t,
-  k_t = d$k_t,
-  q_omega_h = d$q_omega_h
+  k_scale_centered = d$k_prod_scale_centered,
+  d_centered = d$d_centered_constant,
+  k_scale_x_d = d$k_prod_scale_x_d_centered
 )
 ```
 
-For the corrected A05 candidate, the relation is:
+For the composition-mediated candidate, the relation is:
 
 $$  
-y_t^p = \alpha + \beta_{NRC}k_t^{NRC} + \beta_{ME}k_t^{ME} + \beta_{\omega ME}q_t^{ME,\omega,h} + u_t^{A05}.
+y_t
+=
+\alpha
++
+\theta\tilde k_t^{scale}
++
+\psi\tilde\tau_t
++
+\phi\tilde d_t
++
+\lambda(\tilde\tau_t\tilde d_t)
++
+\varepsilon_t^{A05}.
 $$
 
 The Phillips-Ouliaris data matrix is:
@@ -147,9 +174,10 @@ The Phillips-Ouliaris data matrix is:
 ```r
 z_a05 <- cbind(
   y_t = d$y_t,
-  k_NRC_t = d$k_NRC_t,
-  k_ME_t = d$k_ME_t,
-  q_ME_omega_h = d$q_ME_omega_h
+  k_scale_centered = d$k_prod_scale_centered,
+  tau_centered = d$tau_ME_NRC_centered,
+  d_centered = d$d_centered_constant,
+  tau_x_d = d$tau_ME_NRC_x_d_centered
 )
 ```
 

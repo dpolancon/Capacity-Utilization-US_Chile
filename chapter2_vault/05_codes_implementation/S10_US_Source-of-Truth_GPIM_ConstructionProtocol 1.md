@@ -148,6 +148,9 @@ related_to:
 
 # S10: U.S. Source-of-Truth and GPIM Construction Protocol
 
+> [!warning] Duplicate historical protocol
+> The active identification variables are governed by [[R_distribution_conditioned_theta_identification]] and the non-suffixed S10 protocol. Accumulated-index requirements in this duplicate note are parked and non-authoritative.
+
 ## Core procedural lock
 
 S10 is the Chapter 2 stage that constructs the canonical U.S. source-of-truth panel.

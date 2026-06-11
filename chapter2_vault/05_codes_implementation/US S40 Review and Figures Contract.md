@@ -50,8 +50,11 @@ related_to:
 
 # US S40 Review and Figures Contract
 
+> [!warning] Reconstruction review only
+> No accumulated-index or old B1 path is currently authorized. Review must use a human-promoted primitive-interaction or composition-mediated coefficient vector and preserve the sequence $\hat\theta_t\rightarrow\hat y_t^p\rightarrow\hat\mu_t$ under explicit anchoring.
+
 > [!danger] S40 review parked
-> The upstream B1 reconstruction contract is superseded. This review contract cannot activate figures or validate reconstruction until S30/S32 human review promotes a corrected accumulated-index coefficient object under [[R_distribution_conditioned_theta_identification]].
+> The upstream B1 reconstruction contract is superseded. This review contract cannot activate figures or validate reconstruction until human review accepts a current first-layer coefficient vector under [[R_distribution_conditioned_theta_identification]] and the fitted productive-capacity path is explicitly anchored.
 
 ## 1. Purpose
 
@@ -75,11 +78,11 @@ It does not compute profitability.
 
 It does not touch Chile.
 
-The review layer verifies whether the S40 outputs obey the restricted B1 reconstruction contract, the D03 anchor protocol, and the C05 figure protocol.
+The review layer verifies whether the S40 outputs obey the canonical identification locks, the D03 anchor protocol, and the C05 figure protocol.
 
 The core review question is:
 
-> Did S40 reconstruct theta_tot, productive capacity, and mu under restricted B1 fragility discipline using the preferred U.S. point-year anchor, mu_US,1973 = 1?
+> Did S40 use a human-accepted first-layer coefficient vector to reconstruct productive capacity and derive utilization under the preferred U.S. point-year anchor, $\mu_{US,1973}=1$?
 
 The figure-level question is:
 
