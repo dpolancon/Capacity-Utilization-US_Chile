@@ -512,3 +512,13 @@ GVA rows remain unresolved true absences; FC real/price residuals remain
 prohibited. `FAAt402` remains comparison/validation-only. The project may now
 proceed to downstream source-of-truth variable construction under the existing
 stage gates.
+
+### S11C output-price proxy closure amendment
+
+S11C confirms that the missing CORP/FC GVA price objects should not be solved
+by residual construction or proxy relabeling. The baseline output-price object
+remains the same-boundary NFC implicit GVA deflator. The S11C proxy ledger
+retains GDP, business, nonfarm-business, BLS, finance-industry, and
+manufacturing price indexes as robustness-only or diagnostic-only candidates
+with transparent `P_Y_PROXY_*` names. The source-of-truth construction phase
+may now proceed using the S11B/S11C baseline/proxy hierarchy.
