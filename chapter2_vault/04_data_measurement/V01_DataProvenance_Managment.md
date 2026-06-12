@@ -5,7 +5,7 @@ project: Chapter 2
 repo: Capacity-Utilization-US_Chile
 topic: US BEA upstream provider handoff
 created: 2026-06-09
-updated: 2026-06-10
+updated: 2026-06-12
 upstream_repo: US-BEA-Income-FixedAssets-Dataset
 upstream_tag: us-bea-provider-menu-shaikh-blocked-2026-06-09
 downstream_repo: Capacity-Utilization-US_Chile
@@ -501,3 +501,14 @@ staged long file + provenance ledger + locked manifest
 This upstream provider pass is locked and has been imported through S00.
 
 S00 remains an import/validation boundary only. Later construction must preserve the A00 accumulated-index lock, the blocked current-release Shaikh-style protocol, and the classification of IPP and GOV_TRANS as frontier conditioners rather than additive capital terms.
+
+### S11B closure amendment
+
+S11B NIPA Handbook crosswalk audit confirms the provider lock. No source-menu
+patch is required before downstream construction. The NFC GVA deflator is valid
+as a source-level derived object from NIPA Table 1.14 lines 17 and 41, with
+Table 1.15 line 1 (`A455RD`) retained as validation-only. CORP and FC real/price
+GVA rows remain unresolved true absences; FC real/price residuals remain
+prohibited. `FAAt402` remains comparison/validation-only. The project may now
+proceed to downstream source-of-truth variable construction under the existing
+stage gates.
