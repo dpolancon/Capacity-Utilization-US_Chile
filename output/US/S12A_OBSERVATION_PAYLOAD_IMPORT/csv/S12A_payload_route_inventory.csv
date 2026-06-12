@@ -1,0 +1,6 @@
+"route_id","route_path","route_role","exists","files_found","observation_payload_present","metadata_payload_present","preferred_for_construction","notes"
+"downstream_provider_handoff","C:/ReposGitHub/Capacity-Utilization-US_Chile/data/provider_handoffs/US_BEA_FixedAssets/2026-06-11","downstream_provider_handoff",TRUE,9,FALSE,TRUE,FALSE,"Closed metadata-only handoff; no observation table."
+"downstream_external_provider_copy","C:/ReposGitHub/Capacity-Utilization-US_Chile/data/external/us_bea_provider","downstream_external_provider_copy",TRUE,6,TRUE,TRUE,FALSE,"Compact downstream copy; byte-identical to the preferred upstream staged and metadata files."
+"upstream_staged_observation_payload","C:/ReposGitHub/US-BEA-Income-FixedAssets-Dataset/data/staged","upstream_staged_observation_payload",TRUE,1,TRUE,FALSE,TRUE,"Preferred observation carrier: 9,438 staged rows and 94 source variable IDs."
+"upstream_metadata_payload","C:/ReposGitHub/US-BEA-Income-FixedAssets-Dataset/data/metadata","upstream_metadata_payload",TRUE,4,FALSE,TRUE,TRUE,"Preferred provenance ledger and locked manifest route."
+"raw_snapshot_audit_backup","C:/ReposGitHub/US-BEA-Income-FixedAssets-Dataset/data/raw/provider","raw_snapshot_audit_backup",TRUE,16,TRUE,TRUE,FALSE,"Discrepancy-audit backup only; not ingested by S12A."
