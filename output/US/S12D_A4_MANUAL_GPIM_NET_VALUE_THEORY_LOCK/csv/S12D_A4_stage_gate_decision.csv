@@ -1,0 +1,2 @@
+"decision_id","decision","authorization_scope","prerequisites_satisfied","manual_lock_recorded","final_gpim_stocks_constructed_in_this_pass","s20_s21_s22_run","econometric_output_created","notes"
+"S12D_A4_FINAL_STAGE_GATE","AUTHORIZE_S12D_B","Construct real ME/NRC investment and diagnostic/final GPIM objects only under the locked S12D-A4 net-value schedule and all inherited boundaries.","TRUE","TRUE","FALSE","FALSE","FALSE","Authorization is prospective. S12D-A4 itself is a lock pass only."

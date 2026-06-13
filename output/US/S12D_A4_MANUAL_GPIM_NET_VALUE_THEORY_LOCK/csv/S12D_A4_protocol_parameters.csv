@@ -1,0 +1,3 @@
+"asset_block","survival_profile","L","alpha","age_price_profile","d","net_value_schedule","baseline_status"
+"ME","Weibull",14,1.7,"declining_balance_geometric","0.110","V_ME(j)=S_ME(j)*(1-0.110)^j","LOCKED_FOR_S12D_B"
+"NRC","Weibull",30,1.6,"declining_balance_geometric","0.024","V_NRC(j)=S_NRC(j)*(1-0.024)^j","LOCKED_FOR_S12D_B"
