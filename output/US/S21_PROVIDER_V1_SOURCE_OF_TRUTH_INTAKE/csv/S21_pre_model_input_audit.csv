@@ -1,0 +1,9 @@
+audit_item,row_count_or_value,audit_status,notes,pass
+ready_baseline_objects,2,eligible_for_model_input_preparation_only,No modeling authorized.,PASS
+documentation_reconciliation_candidates,5,not_eligible_for_model_input_preparation,Remain candidates only.,PASS
+theoretically_mixed_objects,1,not_eligible_for_model_input_preparation,Require conceptual review.,PASS
+blocked_objects,2,blocked,No promotion.,PASS
+blocked_parked_ledger_rows,14,not_eligible_for_model_input_preparation,Blocked/parked statuses preserved.,PASS
+adjusted_shaikh_like_constructed_observation_rows,0,must_equal_zero,No adjusted Shaikh observations allowed.,PASS
+can_enter_modeling_yes_rows,0,must_equal_zero,S21 stops before modeling.,PASS
+can_construct_adjusted_shaikh_yes_rows,0,must_equal_zero,No adjusted Shaikh construction authorized.,PASS

@@ -1,0 +1,8 @@
+check_name,status,evidence,notes
+contract_present,PASS,V1_DOWNSTREAM_CONSUMPTION_CONTRACT.md exists,S21 contract validation
+provider_side_bundle_only,PASS,Contract identifies provider-created V1 bundle.,S21 contract validation
+chapter2_import_future_only,PASS,Contract keeps Chapter 2 import separate.,S21 contract validation
+no_adjusted_shaikh_authorization,PASS,Adjusted Shaikh construction is not authorized.,S21 contract validation
+no_econometrics_authorization,PASS,Econometrics is not authorized.,S21 contract validation
+post_s20_future_only,PASS,Post-S20 stages are not authorized.,S21 contract validation
+future_sequence_not_implemented,PASS,Future S21-S25 sequence is documentation only.,S21 contract validation
