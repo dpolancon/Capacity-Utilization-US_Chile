@@ -1,0 +1,7 @@
+"audit_item","status","evidence"
+"s24a_panel_rows_preserved","PASS","2813 S24A panel rows"
+"s24a_ledger_rows_preserved","PASS","29 S24A ledger rows"
+"s24a_provenance_rows_preserved","PASS","29 S24A provenance rows"
+"s24a_validation_preserved","PASS","S24A_validation_checks.csv PASS 30"
+"s24a_decision_authorizes_s24b","PASS","AUTHORIZE_S24B_FIXED_ASSETS_SOURCE_INPUTS_CONSTRUCTION"
+"s24b_only_adds_fixed_assets_family","PASS","56 S24B fixed-assets objects; 0 S24A fixed-assets objects"

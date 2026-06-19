@@ -1,0 +1,8 @@
+"construction_family","authorized_object_count","recommended_sequence_order","s24b_constructed_object_count","s24b_action"
+"income_distribution_source_inputs",29,1,0,"excluded_from_s24b_by_family_boundary"
+"fixed_assets_source_inputs",56,2,56,"constructed_in_s24b"
+"provider_source_inputs_other",31,4,0,"excluded_from_s24b_by_family_boundary"
+"theoretical_boundary_deferred",52,,0,"excluded_from_s24b_deferred_or_blocked_boundary"
+"documentation_only_deferred",14,,0,"excluded_from_s24b_deferred_or_blocked_boundary"
+"blocked_or_parked_deferred",14,,0,"excluded_from_s24b_deferred_or_blocked_boundary"
+"blocked",2,,0,"excluded_from_s24b_deferred_or_blocked_boundary"
