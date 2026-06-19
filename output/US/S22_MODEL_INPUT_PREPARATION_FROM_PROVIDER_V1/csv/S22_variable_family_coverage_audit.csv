@@ -1,0 +1,37 @@
+concept_family,BLOCKED_DOUBLE_COUNTING_RISK,BLOCKED_STOCK_FLOW_INCONSISTENT,DOCUMENTATION_AND_RECONCILIATION_CANDIDATE,READY_AS_BASELINE,THEORETICALLY_MIXED_REVIEW_REQUIRED,source_observation_rows,ready_baseline_objects,ready_source_observations,coverage_status,s22_use
+GOV_TRANS_GPIM,0,0,0,1,1,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+GOV_TRANS_GPIM_and_frontier_conditioning_variables,0,0,0,8,0,848,8,848,ready_baseline_available,eligible for future variable construction planning only
+IPP_NFC_GPIM,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+K_G_NFC_KCAP_GPIM,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+K_G_NFC_ME_GPIM,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+K_G_NFC_NRC_GPIM,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+K_N_NFC_KCAP_GPIM,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+K_N_NFC_ME_GPIM,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+K_N_NFC_NRC_GPIM,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+P_K_NFC_ME_GPIM,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+P_K_NFC_NRC_GPIM,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+S20E_stock_flow_labour_value_accounting,1,1,5,1,1,9,1,1,ready_baseline_available,eligible for future variable construction planning only
+Shaikh_income_correction,0,0,0,0,12,0,0,0,documentation_or_review_only,not eligible for planning; review/documentation only
+Shaikh_income_correction_and_distributive_variables,0,0,1,29,0,2910,29,2813,ready_baseline_available,eligible for future variable construction planning only
+downstream_GPIM_and_K_cap,0,0,0,24,0,2544,24,2544,ready_baseline_available,eligible for future variable construction planning only
+downstream_GPIM_benchmark,0,0,0,0,12,0,0,0,documentation_or_review_only,not eligible for planning; review/documentation only
+downstream_GPIM_diagnostics,0,0,0,0,12,0,0,0,documentation_or_review_only,not eligible for planning; review/documentation only
+e_adj_CORP,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+e_adj_NFC,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+e_x_Kcap,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+e_x_ME,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+e_x_ME_NRC_gap,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+e_x_NRC,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+financial_corporate_correction_layer,0,0,8,0,0,0,0,0,documentation_or_review_only,not eligible for planning; review/documentation only
+frontier_conditioning_variables,0,0,0,12,0,1272,12,1272,ready_baseline_available,eligible for future variable construction planning only
+inventory_diagnostic,0,0,0,0,1,0,0,0,documentation_or_review_only,not eligible for planning; review/documentation only
+ln_e_adj_CORP,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+ln_e_adj_NFC,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+official_BEA_price_diagnostic,0,0,0,0,12,0,0,0,documentation_or_review_only,not eligible for planning; review/documentation only
+omega_adj_CORP,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+omega_adj_NFC,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+pi_adj_CORP,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+pi_adj_NFC,0,0,0,1,0,0,1,0,ready_baseline_available,eligible for future variable construction planning only
+residential_exclusion_diagnostic,0,0,0,0,1,0,0,0,documentation_or_review_only,not eligible for planning; review/documentation only
+sector_total_diagnostic,0,0,0,12,0,1272,12,1272,ready_baseline_available,eligible for future variable construction planning only
+shaikh_candidate_semantic_audit_only,0,0,0,8,0,592,8,592,ready_baseline_available,eligible for future variable construction planning only
