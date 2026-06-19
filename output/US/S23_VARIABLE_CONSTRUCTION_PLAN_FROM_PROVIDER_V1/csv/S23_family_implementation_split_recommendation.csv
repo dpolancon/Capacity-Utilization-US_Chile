@@ -1,0 +1,4 @@
+construction_family,authorized_object_count,recommended_pass_mode,recommended_sequence_order,recommended_next_pass_name,rationale,s23_boundary
+income_distribution_source_inputs,29,family_specific_pass,1,S24_AUTHORIZED_BASELINE_VARIABLE_CONSTRUCTION_IMPLEMENTATION,Start with accounting/income source ingredients because they define distribution and source status boundaries.,recommendation only; no implementation in S23
+fixed_assets_source_inputs,56,family_specific_pass,2,S24_FIXED_ASSETS_SOURCE_INPUTS_IMPLEMENTATION_SUBPASS,Implement fixed-asset source inputs after source-status and role tags are preserved.,recommendation only; no implementation in S23
+provider_source_inputs_other,31,family_specific_pass,4,S24_PROVIDER_SOURCE_INPUTS_OTHER_IMPLEMENTATION_SUBPASS,Implement remaining provider source inputs last after review.,recommendation only; no implementation in S23

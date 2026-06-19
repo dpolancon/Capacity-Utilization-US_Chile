@@ -1,0 +1,4 @@
+construction_family,authorized_object_count,source_observation_rows,first_coverage_start,last_coverage_end,recommended_sequence_order,implementation_scope,rationale
+income_distribution_source_inputs,29,2813.0,1929.0,2025.0,1,future implementation only; no construction in S23,Start with accounting/income source ingredients because they define distribution and source status boundaries.
+fixed_assets_source_inputs,56,5936.0,1901.0,2024.0,2,future implementation only; no construction in S23,Implement fixed-asset source inputs after source-status and role tags are preserved.
+provider_source_inputs_other,31,593.0,1946.0,2024.0,4,future implementation only; no construction in S23,Implement remaining provider source inputs last after review.
