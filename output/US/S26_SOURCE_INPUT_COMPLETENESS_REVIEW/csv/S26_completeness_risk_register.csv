@@ -1,0 +1,5 @@
+"risk_id","risk_category","risk_or_caveat","required_future_interpretation_note","blocking_status"
+"S26_RISK_001","metadata_only_records","The 22 authorized metadata-only records are complete for source-input review but cannot be treated as observation-bearing series.","Use as metadata references only unless a later authorized source construction pass supplies observations.","not_blocking_s27_planning"
+"S26_RISK_002","deferred_excluded_boundary","Theoretical, documentation-only, blocked, and parked records remain outside the authorized source-input layer.","Do not promote excluded records because adjacent source availability exists.","not_blocking_s27_planning"
+"S26_RISK_003","future_planning_boundary","S26 authorizes only later planning; it does not select formulas or construct derived variables.","Begin derived-variable construction planning only after S26 authorization and in a separate S27 pass.","not_blocking_s27_planning"
+"S26_RISK_004","source_lineage","Future stages must preserve provider V1 and S21/S22/S23/S24/S25 lineage when deriving variables.","Carry lineage fields forward into any future planning ledger.","not_blocking_s27_planning"
