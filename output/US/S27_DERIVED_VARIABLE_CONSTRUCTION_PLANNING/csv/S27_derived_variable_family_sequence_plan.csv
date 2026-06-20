@@ -1,0 +1,8 @@
+"derived_variable_family","recommended_sequence_order","future_planning_status","implementation_authorized_in_s27","rationale"
+"real_output_and_price_inputs",1,"requires_source_review_before_implementation_sequence","no","Real-output source requirements must be explicitly reviewed before construction."
+"income_distribution_variables",2,"first_implementation_candidate_after_s28_setup","no","Income-account source inputs are complete and observation-bearing."
+"fixed_assets_and_capital_stock_variables",3,"candidate_after_distribution_source_mapping","no","Fixed-asset sources are complete but require future construction sequencing."
+"investment_and_accumulation_variables",4,"candidate_after_capital_stock_source_mapping","no","Gross-investment inputs are available as source inputs but no derived accumulation variable is built in S27."
+"relative_price_and_deflator_variables",5,"candidate_after_capital_stock_source_mapping","no","Price/quantity source inputs are available but relative price and q construction remain prohibited in S27."
+"metadata_reference_only_inputs",99,"reference_only_not_implementation_family","no","Metadata-only inputs can be referenced only as context."
+"blocked_or_deferred_inputs",100,"blocked_or_deferred_until_separately_authorized","no","Excluded and blocked records remain outside the authorized source-input layer."

@@ -1,0 +1,8 @@
+"derived_variable_family","future_construction_authorization","s27_implementation_authorized","s27_modeling_authorized","s27_econometrics_authorized"
+"real_output_and_price_inputs","review_required_before_implementation","no","no","no"
+"income_distribution_variables","may_enter_s28_implementation_sequence_setup","no","no","no"
+"fixed_assets_and_capital_stock_variables","may_enter_s28_implementation_sequence_setup_after_dependency_ordering","no","no","no"
+"investment_and_accumulation_variables","requires_prior_capital_stock_sequence_review","no","no","no"
+"relative_price_and_deflator_variables","requires_prior_capital_stock_sequence_review","no","no","no"
+"metadata_reference_only_inputs","reference_only_no_implementation","no","no","no"
+"blocked_or_deferred_inputs","blocked_or_deferred","no","no","no"

@@ -1,0 +1,5 @@
+"status_category","object_count","constructed_observation_rows","s25_action","s26_boundary_status","s26_review_action","s27_carry_forward_status","s27_future_authorization_requirement"
+"theoretical_boundary_deferred",52,0,"excluded_from_s25_not_authorized_for_consolidation","PASS","preserved_excluded_boundary_no_promotion","PASS","separate_review_required_before_any_promotion"
+"documentation_only_deferred",14,0,"excluded_from_s25_documentation_only","PASS","preserved_excluded_boundary_no_promotion","PASS","separate_review_required_before_any_promotion"
+"blocked_or_parked_deferred",14,0,"excluded_from_s25_blocked_or_parked","PASS","preserved_excluded_boundary_no_promotion","PASS","separate_review_required_before_any_promotion"
+"blocked",2,0,"excluded_from_s25_blocked","PASS","preserved_excluded_boundary_no_promotion","PASS","separate_review_required_before_any_promotion"
