@@ -1,0 +1,7 @@
+"status_category","object_count","constructed_observation_rows","s25_action"
+"authorized_observation_bearing",94,9342,"consolidated_from_s24_authorized_source_inputs"
+"authorized_zero_observation_metadata",22,0,"preserved_as_authorized_zero_observation_metadata"
+"theoretical_boundary_deferred",52,0,"excluded_from_s25_not_authorized_for_consolidation"
+"documentation_only_deferred",14,0,"excluded_from_s25_documentation_only"
+"blocked_or_parked_deferred",14,0,"excluded_from_s25_blocked_or_parked"
+"blocked",2,0,"excluded_from_s25_blocked"
