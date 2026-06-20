@@ -1,0 +1,8 @@
+"future_pass_id","derived_variable_family","future_pass_label","pass_authorization_status","implementation_authorized_in_s28","modeling_authorized","econometrics_authorized"
+"S29A","income_distribution_variables","Income Distribution Variables Construction","authorized_by_clean_s28_decision","no","no","no"
+"S29B","fixed_assets_and_capital_stock_variables","Fixed Assets And Capital Stock Variables Construction Setup","queued_after_s29a_dependency_review","no","no","no"
+"S29C","investment_and_accumulation_variables","Investment And Accumulation Variables Construction Setup","requires_prior_capital_stock_sequence_review","no","no","no"
+"S29D","relative_price_and_deflator_variables","Relative Price And Deflator Variables Construction Setup","requires_prior_capital_stock_sequence_review","no","no","no"
+"S29E","real_output_and_price_inputs","Real Output And Price Inputs Source Review","review_required_before_implementation","no","no","no"
+"S29Z_REF","metadata_reference_only_inputs","Metadata Reference Only Carry Forward","reference_only_no_implementation","no","no","no"
+"S29Z_BLOCKED","blocked_or_deferred_inputs","Blocked Or Deferred Boundary Carry Forward","blocked_or_deferred","no","no","no"

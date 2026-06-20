@@ -1,0 +1,8 @@
+"derived_variable_family","s28_sequence_order","s28_sequence_status","future_construction_authorization","s27_implementation_authorized","s27_modeling_authorized","s27_econometrics_authorized","s28_implementation_authorized","s28_modeling_authorized","s28_econometrics_authorized","next_action"
+"real_output_and_price_inputs",1,"review_required_before_implementation","review_required_before_implementation","no","no","no","no","no","no","review_before_implementation"
+"income_distribution_variables",2,"first_safe_implementation_family_for_s29a","may_enter_s28_implementation_sequence_setup","no","no","no","no","no","no","authorize_s29a_bounded_implementation_pass"
+"fixed_assets_and_capital_stock_variables",3,"queued_after_s29a_or_dependency_review","may_enter_s28_implementation_sequence_setup_after_dependency_ordering","no","no","no","no","no","no","may_enter_s28_implementation_sequence_setup_after_dependency_ordering"
+"investment_and_accumulation_variables",4,"queued_after_s29a_or_dependency_review","requires_prior_capital_stock_sequence_review","no","no","no","no","no","no","requires_prior_capital_stock_sequence_review"
+"relative_price_and_deflator_variables",5,"queued_after_s29a_or_dependency_review","requires_prior_capital_stock_sequence_review","no","no","no","no","no","no","requires_prior_capital_stock_sequence_review"
+"metadata_reference_only_inputs",99,"not_an_implementation_family","reference_only_no_implementation","no","no","no","no","no","no","reference_only_no_implementation"
+"blocked_or_deferred_inputs",100,"not_an_implementation_family","blocked_or_deferred","no","no","no","no","no","no","blocked_or_deferred"
