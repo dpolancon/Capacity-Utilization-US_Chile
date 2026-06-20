@@ -1,0 +1,6 @@
+"stage_id","forbidden_category","upstream_object_count","constructed_from_category_count","promotion_verdict"
+"S29A_INCOME_DISTRIBUTION_VARIABLES_CONSTRUCTION","metadata_reference_only",22,0,"PASS"
+"S29A_INCOME_DISTRIBUTION_VARIABLES_CONSTRUCTION","documentation_only_deferred",14,0,"PASS"
+"S29A_INCOME_DISTRIBUTION_VARIABLES_CONSTRUCTION","theoretical_boundary_deferred",52,0,"PASS"
+"S29A_INCOME_DISTRIBUTION_VARIABLES_CONSTRUCTION","blocked_or_parked_deferred",14,0,"PASS"
+"S29A_INCOME_DISTRIBUTION_VARIABLES_CONSTRUCTION","blocked",2,0,"PASS"
