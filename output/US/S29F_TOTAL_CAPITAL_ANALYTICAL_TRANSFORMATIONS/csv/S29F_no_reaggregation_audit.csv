@@ -1,0 +1,4 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","no_tot_aggregation_recomputed_in_s29f",0,"PASS","TOT aliases are copied from S29E CORE sources."
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","no_me_nrc_components_added_in_s29f",0,"PASS","No S29F formula constructs TOT as ME + NRC."
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","s29e_stock_flow_consistent_aggregation_inherited",0,"PASS","S29F consumes S29E validation and decision without rerunning aggregation."

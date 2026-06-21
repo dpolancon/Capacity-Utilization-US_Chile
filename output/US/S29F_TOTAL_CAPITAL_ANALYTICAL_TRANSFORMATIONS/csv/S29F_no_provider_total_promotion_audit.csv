@@ -1,0 +1,4 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","provider_total_category_not_promoted",0,"PASS","No S29F source or variable uses provider-side TOTAL aggregates."
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","no_confusion_between_tot_and_provider_total",0,"PASS","TOT is used only as an analytical alias for S29E CORE."
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","new_asset_scope_uses_tot",3823,"PASS","Generated aggregate analytical rows use asset_scope TOT, not CORE."

@@ -1,0 +1,6 @@
+"stage_id","alias_variable_id","core_source_variable_id","maximum_absolute_alias_residual","mean_absolute_alias_residual","observations_outside_tolerance","alias_status","evidence"
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","I_TOT_REAL_2017","I_CORE_REAL_2017",0,0,0,"PASS","TOT alias copied from S29E CORE source; no ME+NRC aggregation performed in S29F."
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","G_TOT_GPIM_2017","G_CORE_GPIM_2017",0,0,0,"PASS","TOT alias copied from S29E CORE source; no ME+NRC aggregation performed in S29F."
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","N_TOT_GPIM_2017","N_CORE_GPIM_2017",0,0,0,"PASS","TOT alias copied from S29E CORE source; no ME+NRC aggregation performed in S29F."
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","RET_TOT_GPIM_2017","RET_CORE_GPIM_2017",0,0,0,"PASS","TOT alias copied from S29E CORE source; no ME+NRC aggregation performed in S29F."
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","CFC_TOT_GPIM_2017","CFC_CORE_GPIM_2017",0,0,0,"PASS","TOT alias copied from S29E CORE source; no ME+NRC aggregation performed in S29F."

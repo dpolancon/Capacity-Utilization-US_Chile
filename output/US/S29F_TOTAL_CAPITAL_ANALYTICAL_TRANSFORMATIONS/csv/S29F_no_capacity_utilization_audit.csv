@@ -1,0 +1,5 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","no_productive_capacity",0,"PASS","No capacity, utilization, or output-capital variable is constructed."
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","no_utilization",0,"PASS","No capacity, utilization, or output-capital variable is constructed."
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","no_output_capital_ratio",0,"PASS","No capacity, utilization, or output-capital variable is constructed."
+"S29F_TOTAL_CAPITAL_ANALYTICAL_TRANSFORMATIONS","no_output_capital_gap",0,"PASS","No capacity, utilization, or output-capital variable is constructed."
