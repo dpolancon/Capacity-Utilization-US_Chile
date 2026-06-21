@@ -1,0 +1,6 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29H_TOTAL_CAPITAL_DOWNSTREAM_INPUT_SELECTION_CONTRACT","no_model_input_panel",0,"PASS","S29H creates no rectangular estimation dataset, complete-case sample, joins, or model matrix."
+"S29H_TOTAL_CAPITAL_DOWNSTREAM_INPUT_SELECTION_CONTRACT","no_complete_case_estimation_sample",0,"PASS","S29H creates no rectangular estimation dataset, complete-case sample, joins, or model matrix."
+"S29H_TOTAL_CAPITAL_DOWNSTREAM_INPUT_SELECTION_CONTRACT","no_dependent_variable_join",0,"PASS","S29H creates no rectangular estimation dataset, complete-case sample, joins, or model matrix."
+"S29H_TOTAL_CAPITAL_DOWNSTREAM_INPUT_SELECTION_CONTRACT","no_distribution_variable_join",0,"PASS","S29H creates no rectangular estimation dataset, complete-case sample, joins, or model matrix."
+"S29H_TOTAL_CAPITAL_DOWNSTREAM_INPUT_SELECTION_CONTRACT","no_sample_window_model_matrix",0,"PASS","S29H creates no rectangular estimation dataset, complete-case sample, joins, or model matrix."

@@ -1,0 +1,4 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29H_TOTAL_CAPITAL_DOWNSTREAM_INPUT_SELECTION_CONTRACT","no_theta_variables",0,"PASS","No theta or distribution-capital object is authorized or constructed."
+"S29H_TOTAL_CAPITAL_DOWNSTREAM_INPUT_SELECTION_CONTRACT","no_distribution_capital_interactions",0,"PASS","No theta or distribution-capital object is authorized or constructed."
+"S29H_TOTAL_CAPITAL_DOWNSTREAM_INPUT_SELECTION_CONTRACT","no_exploitation_weighted_capital_variables",0,"PASS","No theta or distribution-capital object is authorized or constructed."

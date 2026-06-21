@@ -1,0 +1,92 @@
+# S29H Total Capital Downstream Input Selection Contract Validation
+
+Validation result: `PASS 79`.
+Contracted variables: `99`.
+Baseline variables: `2`.
+Robustness variables: `2`.
+Conditional secondary variables: `11`.
+Diagnostic-only variables: `72`.
+Alias-interface variables: `12`.
+Excluded variables: `0`.
+
+## Checks
+
+- `s29g_outputs_present`: `PASS` - S29G_analytical_variable_inventory.csv; S29G_variable_admissibility_classification.csv; S29G_downstream_role_classification.csv; S29G_authoritative_variable_selection_ledger.csv; S29G_redundancy_map.csv; S29G_support_coverage_review.csv; S29G_warmup_restriction_ledger.csv; S29G_growth_measure_comparison_review.csv; S29G_max_arithmetic_log_gap_review.csv; S29G_large_movement_discontinuity_review.csv; S29G_composition_diagnostic_review.csv; S29G_intensity_diagnostic_review.csv; S29G_downstream_selection_recommendation.csv; S29G_review_needed_ledger.csv; S29G_no_new_variable_construction_audit.csv; S29G_no_provider_total_promotion_audit.csv; S29G_no_q_audit.csv; S29G_no_theta_audit.csv; S29G_no_capacity_utilization_audit.csv; S29G_no_modeling_audit.csv; S29G_validation_checks.csv; S29G_TOTAL_CAPITAL_ANALYTICAL_READINESS_REVIEW_VALIDATION.md; S29G_TOTAL_CAPITAL_ANALYTICAL_READINESS_REVIEW_DECISION.md
+- `s29g_validation_all_pass`: `PASS` - S29G validation PASS 66
+- `s29g_decision_authorizes_s29h`: `PASS` - AUTHORIZE_S29H_TOTAL_CAPITAL_DOWNSTREAM_INPUT_SELECTION_CONTRACT
+- `s29f_outputs_present`: `PASS` - S29F_total_capital_analytical_panel_long.csv; S29F_transformation_ledger.csv; S29F_formula_audit.csv; S29F_unit_audit.csv; S29F_tot_alias_reconciliation_audit.csv; S29F_support_propagation_audit.csv; S29F_validation_checks.csv
+- `s29f_validation_all_pass`: `PASS` - S29F validation PASS 87
+- `s29e_outputs_present`: `PASS` - S29E_validation_checks.csv; S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION_DECISION.md
+- `s29e_validation_all_pass`: `PASS` - S29E validation PASS 72
+- `s29g_variable_count_equals_99`: `PASS` - variables=99
+- `s29g_primary_count_equals_2`: `PASS` - AUTHORIZED_PRIMARY 2
+- `s29g_secondary_count_equals_13`: `PASS` - AUTHORIZED_SECONDARY 13
+- `s29g_diagnostic_count_equals_72`: `PASS` - DIAGNOSTIC_ONLY 72
+- `s29g_redundant_alias_count_equals_12`: `PASS` - REDUNDANT_ALIAS 12
+- `s29g_review_required_count_equals_0`: `PASS` - REVIEW_REQUIRED 0
+- `s29g_not_authorized_count_equals_0`: `PASS` - NOT_AUTHORIZED 0
+- `every_s29f_variable_present_in_contract`: `PASS` - all S29F variables contracted
+- `every_variable_has_exactly_one_contract_status`: `PASS` - one status per variable
+- `every_variable_has_permitted_use`: `PASS` - permitted uses populated
+- `every_variable_has_prohibited_use`: `PASS` - prohibited uses populated
+- `every_variable_has_authoritative_source`: `PASS` - authoritative source populated
+- `every_variable_has_support_window`: `PASS` - support windows populated
+- `primary_level_is_g_tot_gpim_2017`: `PASS` - primary level G_TOT_GPIM_2017
+- `primary_log_is_log_g_tot_gpim_2017`: `PASS` - primary log LOG_G_TOT_GPIM_2017
+- `primary_level_status_is_baseline_authorized`: `PASS` - G_TOT baseline authorized
+- `primary_log_status_is_baseline_authorized`: `PASS` - LOG_G_TOT baseline authorized
+- `gross_stock_primary_hierarchy_preserved`: `PASS` - gross hierarchy preserved
+- `net_tot_level_contracted_as_robustness`: `PASS` - N_TOT robustness
+- `net_tot_log_contracted_as_robustness`: `PASS` - LOG_N_TOT robustness
+- `net_stock_not_promoted_to_baseline`: `PASS` - net not baseline
+- `gross_log_growth_candidate_contracted`: `PASS` - DLOG_G_TOT conditional
+- `gross_arithmetic_growth_candidate_contracted`: `PASS` - GROWTH_ARITH_G_TOT conditional
+- `arithmetic_and_log_growth_not_treated_as_identical`: `PASS` - growth definitions separate
+- `growth_choice_requires_future_explicit_selection`: `PASS` - future selection required
+- `lagged_variables_contracted_conditionally`: `PASS` - lags conditional or diagnostic
+- `lag_availability_not_treated_as_automatic_authorization`: `PASS` - lag future authorization required
+- `investment_variables_not_contracted_as_stock_substitutes`: `PASS` - investment not baseline stock
+- `composition_shares_diagnostic_only`: `PASS` - shares diagnostic
+- `intensity_measures_diagnostic_only`: `PASS` - intensities diagnostic
+- `growth_gap_variables_diagnostic_only`: `PASS` - growth gaps diagnostic
+- `stock_flow_net_change_redundancy_preserved`: `PASS` - stock-flow net changes alias-only
+- `exact_aliases_not_treated_as_independent_objects`: `PASS` - K aliases interface only
+- `alias_authority_map_created`: `PASS` - alias map created
+- `authoritative_downstream_slot_contract_created`: `PASS` - slot contract created
+- `support_window_contract_created`: `PASS` - support contract created
+- `warmup_restriction_contract_created`: `PASS` - warmup contract created
+- `tot_level_baseline_start_equals_1931`: `PASS` - G_TOT baseline start 1931
+- `tot_log_baseline_start_equals_1931`: `PASS` - LOG_G_TOT baseline start 1931
+- `warmup_not_authorized_for_baseline_estimation`: `PASS` - warm-up baseline no
+- `warmup_observations_not_deleted`: `PASS` - warm-up observations retained in contract
+- `baseline_authorized_variable_file_created`: `PASS` - baseline file created
+- `robustness_authorized_variable_file_created`: `PASS` - robustness file created
+- `conditional_secondary_file_created`: `PASS` - conditional file created
+- `diagnostic_only_file_created`: `PASS` - diagnostic file created
+- `alias_interface_file_created`: `PASS` - alias file created
+- `excluded_variable_file_created`: `PASS` - excluded file created
+- `permitted_use_matrix_created`: `PASS` - permitted matrix created
+- `prohibited_use_matrix_created`: `PASS` - prohibited matrix created
+- `growth_measure_selection_contract_created`: `PASS` - growth contract created
+- `downstream_handoff_manifest_created`: `PASS` - handoff manifest created
+- `provider_total_not_promoted`: `PASS` - provider TOTAL not promoted
+- `no_new_level_variable_constructed`: `PASS` - no new level
+- `no_new_log_constructed`: `PASS` - no new log
+- `no_new_growth_rate_constructed`: `PASS` - no new growth
+- `no_new_difference_constructed`: `PASS` - no new difference
+- `no_new_lag_constructed`: `PASS` - no new lag
+- `no_new_share_constructed`: `PASS` - no new share
+- `no_new_intensity_measure_constructed`: `PASS` - no new intensity
+- `no_model_input_panel_constructed`: `PASS` - no model input panel
+- `no_complete_case_estimation_sample_constructed`: `PASS` - no complete-case sample
+- `no_q_variables_constructed`: `PASS` - no q
+- `no_omega_weighted_capital_variables_constructed`: `PASS` - no omega-weighted capital
+- `no_distribution_capital_interactions_constructed`: `PASS` - no distribution-capital interactions
+- `no_theta_variables_constructed`: `PASS` - no theta
+- `no_productive_capacity_variables_constructed`: `PASS` - no productive capacity
+- `no_utilization_variables_constructed`: `PASS` - no utilization
+- `no_output_capital_ratio_constructed`: `PASS` - no output-capital ratio
+- `no_modeling_outputs_created`: `PASS` - no modeling
+- `no_econometric_outputs_created`: `PASS` - no econometrics
+- `upstream_outputs_not_modified`: `PASS` - S29G/S29F/S29E input hashes unchanged
+- `provider_repository_not_modified`: `PASS` - provider tracked and staged diffs clean; pre-existing untracked files ignored
