@@ -1,0 +1,4 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29G_TOTAL_CAPITAL_ANALYTICAL_READINESS_REVIEW","no_new_economic_variable_constructed",0,"PASS","S29G outputs are inventories, classifications, recommendations, and audits only."
+"S29G_TOTAL_CAPITAL_ANALYTICAL_READINESS_REVIEW","no_new_transformation_constructed",0,"PASS","No S29G output panel of transformed values was created."
+"S29G_TOTAL_CAPITAL_ANALYTICAL_READINESS_REVIEW","no_model_input_panel_constructed",0,"PASS","No model-input panel was created."

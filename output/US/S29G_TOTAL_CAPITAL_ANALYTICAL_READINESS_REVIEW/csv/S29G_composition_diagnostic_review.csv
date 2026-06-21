@@ -1,0 +1,4 @@
+"stage_id","share_family","maximum_share_sum_residual","share_status","review_classification","review_note"
+"S29G_TOTAL_CAPITAL_ANALYTICAL_READINESS_REVIEW","gross",0.00000000000000310862446895044,"PASS","DIAGNOSTIC_ONLY","Composition shares are accounting diagnostics and must not be used to reconstruct stock levels or as productive-efficiency weights."
+"S29G_TOTAL_CAPITAL_ANALYTICAL_READINESS_REVIEW","net",0.00000000000000421884749357559,"PASS","DIAGNOSTIC_ONLY","Composition shares are accounting diagnostics and must not be used to reconstruct stock levels or as productive-efficiency weights."
+"S29G_TOTAL_CAPITAL_ANALYTICAL_READINESS_REVIEW","investment",0.00000000000000399680288865056,"PASS","DIAGNOSTIC_ONLY","Composition shares are accounting diagnostics and must not be used to reconstruct stock levels or as productive-efficiency weights."
