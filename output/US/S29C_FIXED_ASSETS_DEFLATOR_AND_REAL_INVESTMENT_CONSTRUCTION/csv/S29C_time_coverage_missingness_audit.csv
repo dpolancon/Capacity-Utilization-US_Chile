@@ -1,0 +1,3 @@
+"stage_id","asset_family","first_nominal_investment_year","first_price_observation_year","first_recovered_price_year","first_real_investment_year","last_observation_year","real_investment_observation_count","internal_missing_years","first_fully_supported_stock_year","required_prehistory_years","available_prehistory_years","prehistory_requirement_met"
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","ME",1901,1901,1925,1901,2024,124,0,1925,14,24,"yes"
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","NRC",1901,1901,1931,1901,2024,124,0,1931,30,30,"yes"

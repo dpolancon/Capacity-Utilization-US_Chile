@@ -1,0 +1,5 @@
+"stage_id","asset_family","constructed_variable_id","locked_baseline_variable_id","variable_role","constructed_observations","baseline_observations","overlap_years","maximum_absolute_difference","mean_absolute_difference","maximum_relative_difference","comparison_classification","unresolved_material_difference"
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","ME","P_ME_2017","P_K_SFC_ME_2017_100","price",124,100,100,0,0,0,"coverage_difference","no"
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","NRC","P_NRC_2017","P_K_SFC_NRC_2017_100","price",124,94,94,0,0,0,"coverage_difference","no"
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","ME","I_ME_REAL_2017","I_REAL_GPIM_ME","real_investment",124,124,124,7.6834112405777e-09,1.04304373023971e-09,4.76548035974855e-15,"exact_match","no"
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","NRC","I_NRC_REAL_2017","I_REAL_GPIM_NRC","real_investment",124,124,124,8.84756445884705e-09,1.86546164895258e-09,5.32240056810899e-15,"exact_match","no"

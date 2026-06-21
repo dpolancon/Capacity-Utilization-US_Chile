@@ -1,0 +1,4 @@
+"stage_id","audit_item","status","evidence"
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","no_chain_quantity_index_addition","PASS","No chain-type quantity indexes are summed."
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","no_aggregate_real_investment","PASS","S29C does not construct aggregate core investment."
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","real_flows_preserved_separately","PASS","ME and NRC real investment remain separate variables."

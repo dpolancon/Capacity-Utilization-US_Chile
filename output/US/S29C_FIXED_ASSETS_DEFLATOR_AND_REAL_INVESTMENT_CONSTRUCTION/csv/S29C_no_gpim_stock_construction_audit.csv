@@ -1,0 +1,7 @@
+"stage_id","object_family","constructed_object_count","status","evidence"
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","gross_stock",0,"PASS","S29C constructs only price and real-investment flow variables."
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","net_stock",0,"PASS","S29C constructs only price and real-investment flow variables."
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","retirements",0,"PASS","S29C constructs only price and real-investment flow variables."
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","consumption_of_fixed_capital",0,"PASS","S29C constructs only price and real-investment flow variables."
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","core_capital_stock",0,"PASS","S29C constructs only price and real-investment flow variables."
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","gpim_stock_paths",0,"PASS","S29C constructs only price and real-investment flow variables."

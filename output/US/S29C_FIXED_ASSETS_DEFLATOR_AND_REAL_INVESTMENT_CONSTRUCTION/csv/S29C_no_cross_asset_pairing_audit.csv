@@ -1,0 +1,5 @@
+"stage_id","audit_item","status","evidence"
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","ME_price_used_only_for_ME","PASS","P_ME_2017 deflates only I_NOMINAL_DIRECT_ME."
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","NRC_price_used_only_for_NRC","PASS","P_NRC_2017 deflates only I_NOMINAL_DIRECT_NRC."
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","no_cross_boundary_pairing","PASS","S29C uses only ME and NRC baseline-consumable source rows."
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","no_total_or_contextual_asset_selected","PASS","IPP, government transportation, highways/streets, totals, and review-required aggregates are not selected."

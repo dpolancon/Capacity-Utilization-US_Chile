@@ -1,0 +1,4 @@
+"stage_id","review_category","candidate_count","s29c_disposition","unresolved_material_difference","notes"
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","contextual_IPP",12,"not_selected_contextual_asset","no","IPP remains outside baseline ME/NRC real-investment construction."
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","contextual_government_transportation",8,"not_selected_contextual_infrastructure","no","Government transportation remains outside baseline private core stock construction."
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","review_required_totals",20,"not_selected_review_required_aggregate","no","Total fixed assets and boundary-sensitive rows require later review before any implementation."

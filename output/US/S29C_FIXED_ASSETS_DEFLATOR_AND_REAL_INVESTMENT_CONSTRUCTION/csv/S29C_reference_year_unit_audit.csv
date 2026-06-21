@@ -1,0 +1,3 @@
+"stage_id","asset_family","price_variable_id","real_investment_variable_id","original_price_reference_year","target_reference_year","rebasing_required","rebasing_factor","price_2017_value","nominal_unit","price_unit","real_unit","unit_verdict"
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","ME","P_ME_2017","I_ME_REAL_2017","2017","2017","no",1,100,"current_millions","index_2017_100","millions_2017_dollars","PASS"
+"S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION","NRC","P_NRC_2017","I_NRC_REAL_2017","2017","2017","no",1,100,"current_millions","index_2017_100","millions_2017_dollars","PASS"
