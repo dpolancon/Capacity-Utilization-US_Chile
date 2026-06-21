@@ -1,0 +1,3 @@
+"stage_id","asset_family","first_investment_year","first_constructed_stock_year","first_fully_supported_stock_year","last_stock_year","warmup_observations","fully_supported_observations"
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","ME",1901,1901,1925,2024,24,100
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","NRC",1901,1901,1931,2024,30,94

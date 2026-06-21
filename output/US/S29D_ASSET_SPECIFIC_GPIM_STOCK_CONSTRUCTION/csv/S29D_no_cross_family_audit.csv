@@ -1,0 +1,6 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","no_ipp_gpim_stock",0,"PASS","IPP remains outside S29D."
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","no_government_transport_gpim_stock",0,"PASS","Government transportation remains outside S29D."
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","no_residential_gpim_stock",0,"PASS","Residential assets remain outside S29D."
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","no_total_fixed_assets_gpim_stock",0,"PASS","Total fixed assets remain outside S29D."
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","no_cross_asset_schedule_use",0,"PASS","ME uses the ME schedule and NRC uses the NRC schedule."

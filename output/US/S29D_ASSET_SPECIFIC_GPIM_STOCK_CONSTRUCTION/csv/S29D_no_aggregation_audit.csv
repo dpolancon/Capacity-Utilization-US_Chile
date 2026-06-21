@@ -1,0 +1,8 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","no_aggregate_investment",0,"PASS","S29D constructs only separate ME and NRC stock-flow systems."
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","no_aggregate_gross_stock",0,"PASS","S29D constructs only separate ME and NRC stock-flow systems."
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","no_aggregate_net_stock",0,"PASS","S29D constructs only separate ME and NRC stock-flow systems."
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","no_aggregate_retirements",0,"PASS","S29D constructs only separate ME and NRC stock-flow systems."
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","no_aggregate_cfc",0,"PASS","S29D constructs only separate ME and NRC stock-flow systems."
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","no_core_capital_stock",0,"PASS","S29D constructs only separate ME and NRC stock-flow systems."
+"S29D_ASSET_SPECIFIC_GPIM_STOCK_CONSTRUCTION","no_weighted_growth_aggregate",0,"PASS","S29D constructs only separate ME and NRC stock-flow systems."
