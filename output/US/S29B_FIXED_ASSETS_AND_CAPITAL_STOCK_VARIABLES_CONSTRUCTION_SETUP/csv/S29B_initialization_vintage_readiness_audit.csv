@@ -1,0 +1,4 @@
+"stage_id","asset_family","minimum_surviving_vintage_history_years","earliest_real_investment_year_available","first_existing_gpim_stock_year","first_fully_supported_year","initialization_status","zero_initialization_authorized"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","ME",14,1901,1925,1925,"supported_by_locked_s12d_s13_history","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","NRC",30,1901,1931,1931,"supported_by_locked_s12d_s13_history","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","core",30,1901,1931,1931,"supported_after_both_asset_specific_stocks_exist_in_common_units","no"

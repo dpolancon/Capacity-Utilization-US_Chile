@@ -1,0 +1,8 @@
+"stage_id","future_pass_id","future_pass_label","pass_authorization_status","construction_authorized_in_s29b","modeling_authorized","econometrics_authorized"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","S29C","Fixed Assets Deflator And Real Investment Construction","authorized_by_clean_s29b_setup","no","no","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","S29D","ME/NRC GPIM Gross Stock Consumption And SFC Audit","queued_after_s29c","no","no","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","S29E","Core Capital Stock Aggregation Setup","queued_after_asset_specific_gpim_consumption","no","no","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","S29F","Capital Stock Growth And Decomposition Setup","queued_after_core_levels_exist","no","no","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","S29G","Contextual Asset Boundary Review","review_required_before_implementation","no","no","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","S29Z_REF","Metadata Reference Carry Forward","reference_only_no_implementation","no","no","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","S29Z_BLOCKED","Blocked Or Parked Boundary Carry Forward","blocked_or_deferred","no","no","no"

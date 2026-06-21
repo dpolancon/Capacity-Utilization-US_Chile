@@ -1,0 +1,8 @@
+"stage_id","aggregate_object","locked_rule","authorization_status","construction_authorized_in_s29b"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","G_core","G_core_t = G_ME_t + G_NRC_t","future_only_after_asset_specific_common_unit_stocks_exist","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","N_core","N_core_t = N_ME_t + N_NRC_t","future_only_after_asset_specific_common_unit_stocks_exist","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","I_core","I_core_t = I_ME_t + I_NRC_t","future_only_after_asset_specific_common_unit_stocks_exist","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","R_core","R_core_t = R_ME_t + R_NRC_t","future_only_after_asset_specific_common_unit_stocks_exist","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","CFC_core","CFC_core_t = CFC_ME_t + CFC_NRC_t","future_only_after_asset_specific_common_unit_stocks_exist","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","gross_core_identity","G_core_t = G_core_t_minus_1 + I_core_t - R_core_t","future_only_after_asset_specific_common_unit_stocks_exist","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","net_core_identity","N_core_t = N_core_t_minus_1 + I_core_t - CFC_core_t","future_only_after_asset_specific_common_unit_stocks_exist","no"

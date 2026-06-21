@@ -1,0 +1,6 @@
+"stage_id","requirement_id","requirement","status","construction_authorized_in_s29b"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","reference_year","All baseline real investment flows must be expressed in the same 2017 dollar convention.","locked","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","asset_specific_deflation","ME and NRC must keep separate asset-specific prices before accumulation.","locked","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","common_additive_unit","ME and NRC may be added only after conversion to compatible real-dollar stock or flow units.","locked","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","chain_quantity_warning","BEA chain-type quantity indexes are not additive and cannot be summed as levels.","locked","no"
+"S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP","rebasing_rule","If later accepted deflators differ in reference year, rebase each to the common S29B-locked reference year before real-flow construction.","locked","no"
