@@ -1,0 +1,7 @@
+"stage_id","audit_item","status","evidence"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","ME_unit","PASS","millions_2017_dollars"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","NRC_unit","PASS","millions_2017_dollars"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","frequency","PASS","annual calendar-year observations"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","coverage","PASS","1901-2024"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","timing","PASS","ME and NRC share identical calendar years"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","boundary","PASS","baseline core boundary contains ME and NRC only"

@@ -1,0 +1,3 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","no_gpim_rerun_on_aggregate_investment",0,"PASS","S29E adds validated S29D component stocks/flows only."
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","no_gpim_parameter_modification",0,"PASS","S29E does not estimate or change GPIM parameters."

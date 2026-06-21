@@ -1,0 +1,2 @@
+"stage_id","identity","maximum_absolute_residual","mean_absolute_residual","median_absolute_residual","tolerance","observations_outside_tolerance","first_tested_year","last_tested_year","tested_observations","residual_status"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","gross",0.000000098254531621933,0.0000000335647910549419,0.0000000316649675369263,0.000001,0,1902,2024,123,"PASS"

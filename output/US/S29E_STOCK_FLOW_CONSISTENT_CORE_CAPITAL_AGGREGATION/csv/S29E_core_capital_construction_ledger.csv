@@ -1,0 +1,6 @@
+"stage_id","constructed_variable_id","variable_role","construction_rule","observation_count","year_start","year_end","first_fully_supported_year","unit","construction_status"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","I_CORE_REAL_2017","core_real_investment_flow","I_ME_REAL_2017 + I_NRC_REAL_2017",124,1901,2024,1931,"millions_2017_dollars","constructed_by_exact_addition"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","G_CORE_GPIM_2017","core_gross_gpim_stock","G_ME_GPIM_2017 + G_NRC_GPIM_2017",124,1901,2024,1931,"millions_2017_dollars","constructed_by_exact_addition"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","N_CORE_GPIM_2017","core_net_gpim_stock","N_ME_GPIM_2017 + N_NRC_GPIM_2017",124,1901,2024,1931,"millions_2017_dollars","constructed_by_exact_addition"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","RET_CORE_GPIM_2017","core_retirement_flow","RET_ME_GPIM_2017 + RET_NRC_GPIM_2017",124,1901,2024,1931,"millions_2017_dollars","constructed_by_exact_addition"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","CFC_CORE_GPIM_2017","core_cfc_flow","CFC_ME_GPIM_2017 + CFC_NRC_GPIM_2017",124,1901,2024,1931,"millions_2017_dollars","constructed_by_exact_addition"

@@ -1,0 +1,4 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","no_weighted_level_construction",0,"PASS","Core levels are exact additions, not share-weighted levels."
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","no_weighted_growth_stock_construction",0,"PASS","Growth contribution audit is diagnostic and does not construct stock levels."
+"S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION","diagnostic_growth_only",0,"PASS","Arithmetic growth contribution identity is audit-only."
