@@ -25,3 +25,19 @@ output/US/S30_MERGE_READINESS_AUDIT/
 ```
 
 The Markdown report and decision files summarize the result without requiring the reader to inspect the PowerShell code.
+
+## Apply Controller
+
+`Test-S30MergeReadiness.ps1` is audit-only and never changes `main`.
+
+`Invoke-S30SequentialIntegration.ps1` is the explicit apply controller. It first reruns the dry-run readiness controller and proceeds only when that audit authorizes controlled S30 integration. It creates a temporary integration worktree outside the normal checkout, merges S30A, S30B, S30C, and S30D in that order, validates each uncommitted merge, and pushes only the validated merge commit to `origin/main`.
+
+Run the apply controller only with the exact confirmation token:
+
+```powershell
+.\automation\chapter2\Invoke-S30SequentialIntegration.ps1 `
+  -Apply `
+  -Confirmation "APPLY_S30_SEQUENTIAL_INTEGRATION"
+```
+
+It stops without applying if the readiness audit fails, `origin/main` diverges, a feature tip differs from the plan, a merge conflicts, a forbidden path appears, completion evidence fails, or the confirmation token is missing. It never force-pushes, never modifies S30 feature branches, and never uses the normal `main` checkout for merging.
