@@ -109,7 +109,7 @@ function Find-CompletionRecord {
         [string[]]$Files,
         [string]$Repo
     )
-    $matches = @()
+    $completionMatches = @()
     foreach ($file in $Files) {
         $normalized = Normalize-PathText $file
         $namespace = Normalize-PathText ([string]$Task.outputNamespace)
@@ -121,10 +121,10 @@ function Find-CompletionRecord {
         }
         $text = Get-BlobText -Repo $Repo -Branch ([string]$Task.branch) -Path $file
         if ($text.Contains("validation_status") -or $text.Contains("result_commit")) {
-            $matches += $file
+            $completionMatches += $file
         }
     }
-    $unique = @($matches | Sort-Object -Unique)
+    $unique = @($completionMatches | Sort-Object -Unique)
     if ($unique.Count -eq 1) {
         return [pscustomobject]@{ Status = "PASS"; Path = $unique[0]; Detail = "unique completion record found" }
     }
