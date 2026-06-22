@@ -1,0 +1,4 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","no_productive_capacity",0,"PASS","No capacity, utilization, or output-capital ratio is constructed or authorized."
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","no_utilization",0,"PASS","No capacity, utilization, or output-capital ratio is constructed or authorized."
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","no_output_capital_ratio",0,"PASS","No capacity, utilization, or output-capital ratio is constructed or authorized."

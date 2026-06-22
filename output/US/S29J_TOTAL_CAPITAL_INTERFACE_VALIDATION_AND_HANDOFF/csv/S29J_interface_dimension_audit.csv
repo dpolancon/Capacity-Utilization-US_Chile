@@ -1,0 +1,8 @@
+"interface_file","observed_rows","observed_columns","expected_rows","expected_columns","discrepancy_classification","dimension_status"
+"primary_level",124,6,124,6,"none","PASS"
+"primary_log",124,6,124,6,"none","PASS"
+"robustness_level",124,6,124,6,"none","PASS"
+"robustness_log",124,6,124,6,"none","PASS"
+"conditional_secondary_long",1353,22,1353,NA,"none","PASS"
+"active_candidate_long",1849,22,1849,NA,"none","PASS"
+"active_candidate_wide",124,16,124,16,"none","PASS"

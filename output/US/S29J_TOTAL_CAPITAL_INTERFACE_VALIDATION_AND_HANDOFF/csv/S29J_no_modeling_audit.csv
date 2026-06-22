@@ -1,0 +1,7 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","no_model_input_panel",0,"PASS","No model input, complete-case sample, joins, modeling, or econometric output is created."
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","no_complete_case_estimation_sample",0,"PASS","No model input, complete-case sample, joins, modeling, or econometric output is created."
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","no_output_variable_join",0,"PASS","No model input, complete-case sample, joins, modeling, or econometric output is created."
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","no_distribution_variable_join",0,"PASS","No model input, complete-case sample, joins, modeling, or econometric output is created."
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","no_modeling_outputs",0,"PASS","No model input, complete-case sample, joins, modeling, or econometric output is created."
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","no_econometric_outputs",0,"PASS","No model input, complete-case sample, joins, modeling, or econometric output is created."

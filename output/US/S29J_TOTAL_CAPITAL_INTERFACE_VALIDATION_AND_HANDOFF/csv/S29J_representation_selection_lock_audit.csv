@@ -1,0 +1,4 @@
+"stage_id","lock_item","lock_status","evidence"
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","primary_level_log_selection_lock","PASS","Level and log primary representations remain alternatives."
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","arithmetic_log_growth_selection_lock","PASS","DLOG_G_TOT and GROWTH_ARITH_G_TOT remain separate candidates."
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","no_automatic_growth_selection","PASS","No automatic growth preference is recorded."

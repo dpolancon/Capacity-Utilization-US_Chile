@@ -1,0 +1,4 @@
+"stage_id","audit_item","status","evidence"
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","no_common_complete_case_sample","PASS","No sample file is present in S29I outputs."
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","full_year_axis_preserved","PASS","Active candidate wide view preserves 1901-2024."
+"S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF","no_year_dropped_due_to_other_variable_missingness","PASS","No row filtering is applied across variables."
