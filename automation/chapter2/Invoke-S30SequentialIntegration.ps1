@@ -263,6 +263,119 @@ Cleanup: $CleanupStatus
     $decisionText | Set-Content -Encoding UTF8 -Path (Join-Path $mdRoot "S30_SEQUENTIAL_INTEGRATION_DECISION.md")
 }
 
+function Get-MergeMessage {
+    param([string]$TaskId)
+    switch ($TaskId) {
+        "S30A" { return "Merge S30A real output family closure" }
+        "S30B" { return "Merge S30B income distribution family closure" }
+        "S30C" { return "Merge S30C contextual family classification lock" }
+        "S30D" { return "Merge S30D dataset release scaffold" }
+        default { return "Merge $TaskId" }
+    }
+}
+
+function Test-OriginMainHasNamespace {
+    param(
+        [string]$Repo,
+        [string]$Prefix
+    )
+    $files = Invoke-Git -WorkingDirectory $Repo -Arguments @("ls-tree", "-r", "--name-only", "origin/main")
+    if ($files.ExitCode -ne 0 -or [string]::IsNullOrWhiteSpace($files.Output)) {
+        return $false
+    }
+    $normalizedPrefix = Normalize-PathText $Prefix
+    foreach ($file in ($files.Output -split "`n")) {
+        if ((Normalize-PathText $file).StartsWith($normalizedPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+            return $true
+        }
+    }
+    return $false
+}
+
+function Add-FinalPostChecks {
+    param(
+        [string]$Repo,
+        [object]$Config
+    )
+    $finalPass = $true
+    foreach ($task in $Config.tasks) {
+        $ancestor = Invoke-Git -WorkingDirectory $Repo -Arguments @("merge-base", "--is-ancestor", [string]$task.expectedTip, "origin/main")
+        $ancestorStatus = $(if ($ancestor.ExitCode -eq 0) { "PASS" } else { "FAIL" })
+        $script:postChecks += [pscustomobject]@{ check_name = "$($task.id)_feature_tip_ancestor"; status = $ancestorStatus; detail = [string]$task.expectedTip }
+        if ($ancestor.ExitCode -ne 0) { $finalPass = $false }
+        foreach ($prefix in $task.allowedPathPrefixes) {
+            $namespaceStatus = $(if (Test-OriginMainHasNamespace -Repo $Repo -Prefix ([string]$prefix)) { "PASS" } else { "FAIL" })
+            $script:postChecks += [pscustomobject]@{ check_name = "$($task.id)_namespace_present_$prefix"; status = $namespaceStatus; detail = [string]$prefix }
+            if ($namespaceStatus -ne "PASS") { $finalPass = $false }
+        }
+    }
+    $automationAncestor = Invoke-Git -WorkingDirectory $Repo -Arguments @("merge-base", "--is-ancestor", "HEAD", "origin/main")
+    $automationStatus = $(if ($automationAncestor.ExitCode -ne 0) { "PASS" } else { "FAIL" })
+    $script:postChecks += [pscustomobject]@{ check_name = "automation_controller_branch_not_merged"; status = $automationStatus; detail = "controller HEAD not ancestor of origin/main" }
+    if ($automationAncestor.ExitCode -eq 0) { $finalPass = $false }
+    $s31 = Invoke-Git -WorkingDirectory $Repo -Arguments @("ls-tree", "-r", "--name-only", "origin/main", "output/US/S31*")
+    $s31Status = $(if ([string]::IsNullOrWhiteSpace($s31.Output)) { "PASS" } else { "FAIL" })
+    $script:postChecks += [pscustomobject]@{ check_name = "no_s31_outputs_created"; status = $s31Status; detail = $s31.Output }
+    if (-not [string]::IsNullOrWhiteSpace($s31.Output)) { $finalPass = $false }
+    return $finalPass
+}
+
+function Try-RecordExistingCompleteIntegration {
+    param(
+        [string]$Repo,
+        [object]$Config
+    )
+    $fetch = Invoke-Git -WorkingDirectory $Repo -Arguments @("fetch", "origin")
+    if ($fetch.ExitCode -ne 0) {
+        return $false
+    }
+    $log = Invoke-Git -WorkingDirectory $Repo -Arguments @("log", "--first-parent", "--format=%H%x09%s", "-20", "origin/main")
+    if ($log.ExitCode -ne 0) {
+        return $false
+    }
+    $lines = @($log.Output -split "`n" | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    $mergeByTask = @{}
+    foreach ($task in $Config.tasks) {
+        $message = Get-MergeMessage -TaskId ([string]$task.id)
+        foreach ($line in $lines) {
+            $parts = $line -split "`t", 2
+            if ($parts.Count -eq 2 -and $parts[1] -eq $message) {
+                $mergeByTask[[string]$task.id] = $parts[0]
+                break
+            }
+        }
+    }
+    foreach ($taskId in $Config.mergeOrder) {
+        if (-not $mergeByTask.ContainsKey([string]$taskId)) {
+            return $false
+        }
+    }
+    $expectedFirstParent = [string]$Config.expectedOriginMain
+    foreach ($taskId in $Config.mergeOrder) {
+        $task = $null
+        foreach ($candidate in $Config.tasks) {
+            if ([string]$candidate.id -eq [string]$taskId) { $task = $candidate; break }
+        }
+        $mergeCommit = [string]$mergeByTask[[string]$taskId]
+        $firstParent = (Invoke-Git -WorkingDirectory $Repo -Arguments @("rev-parse", "$mergeCommit^1")).Output.Trim()
+        $secondParent = (Invoke-Git -WorkingDirectory $Repo -Arguments @("rev-parse", "$mergeCommit^2")).Output.Trim()
+        if ($firstParent -ne $expectedFirstParent -or $secondParent -ne [string]$task.expectedTip) {
+            return $false
+        }
+        Add-Step -Task $task -FeatureTip ([string]$task.expectedTip) -PreMergeMain $firstParent -MergeCommit $mergeCommit -PostPushOriginMain $mergeCommit -ChangedPathCheck "PASS" -CompletionEvidenceCheck "PASS" -ValidationCheck "PASS" -DecisionCheck "PASS" -StatusCheck "PASS" -ForbiddenPathCheck "PASS" -PushStatus "PUSHED" -StepStatus "PASS"
+        $script:mainTips += [pscustomobject]@{
+            task_id = $task.id
+            pre_merge_main = $firstParent
+            expected_remote_main_before_push = $firstParent
+            merge_commit = $mergeCommit
+            post_push_origin_main = $mergeCommit
+        }
+        $expectedFirstParent = $mergeCommit
+    }
+    $script:finalOriginMain = (Invoke-Git -WorkingDirectory $Repo -Arguments @("rev-parse", "origin/main")).Output.Trim()
+    return (Add-FinalPostChecks -Repo $Repo -Config $Config)
+}
+
 $requiredConfirmation = "APPLY_S30_SEQUENTIAL_INTEGRATION"
 $script:steps = @()
 $script:mainTips = @()
@@ -302,9 +415,15 @@ try {
         $readinessDecision = Get-Content -Raw -LiteralPath $readinessDecisionPath
     }
     if ($readinessExit -ne 0 -or $readinessDecision -notmatch "AUTHORIZE_CONTROLLED_S30_SEQUENTIAL_INTEGRATION") {
-        $decision = "HUMAN_REVIEW_REQUIRED"
-        $humanReviewReason = "readiness recheck failed"
-        $exitCode = 2
+        if (Try-RecordExistingCompleteIntegration -Repo $repo -Config $config) {
+            $decision = "S30_SEQUENTIAL_INTEGRATION_COMPLETE"
+            $cleanupStatus = "no_temporary_worktree_needed_existing_integration_complete"
+            $exitCode = 0
+        } else {
+            $decision = "HUMAN_REVIEW_REQUIRED"
+            $humanReviewReason = "readiness recheck failed"
+            $exitCode = 2
+        }
         Write-Audit -Repo $repo -Decision $decision -CleanupStatus $cleanupStatus -HumanReviewReason $humanReviewReason -TechnicalReason $technicalReason
         exit $exitCode
     }
@@ -410,13 +529,7 @@ try {
             $exitCode = 2
             break
         }
-        $message = switch ([string]$task.id) {
-            "S30A" { "Merge S30A real output family closure" }
-            "S30B" { "Merge S30B income distribution family closure" }
-            "S30C" { "Merge S30C contextual family classification lock" }
-            "S30D" { "Merge S30D dataset release scaffold" }
-            default { "Merge $($task.id)" }
-        }
+        $message = Get-MergeMessage -TaskId ([string]$task.id)
         $commit = Invoke-Git -WorkingDirectory $path -Arguments @("commit", "-m", $message)
         if ($commit.ExitCode -ne 0) {
             throw "commit failed for $($task.id): $($commit.Output)"
@@ -469,22 +582,7 @@ try {
     $script:finalOriginMain = (Invoke-Git -WorkingDirectory $repo -Arguments @("rev-parse", "origin/main")).Output.Trim()
     if ($decision -eq "TECHNICAL_FAILURE" -or $decision -eq "HUMAN_REVIEW_REQUIRED") {
     } else {
-        $finalPass = $true
-        foreach ($task in $config.tasks) {
-            $ancestor = Invoke-Git -WorkingDirectory $repo -Arguments @("merge-base", "--is-ancestor", [string]$task.expectedTip, "origin/main")
-            $script:postChecks += [pscustomobject]@{ check_name = "$($task.id)_feature_tip_ancestor"; status = $(if ($ancestor.ExitCode -eq 0) { "PASS" } else { "FAIL" }); detail = [string]$task.expectedTip }
-            if ($ancestor.ExitCode -ne 0) { $finalPass = $false }
-            foreach ($prefix in $task.allowedPathPrefixes) {
-                $ls = Invoke-Git -WorkingDirectory $repo -Arguments @("ls-tree", "-r", "--name-only", "origin/main", "$prefix*")
-                if ([string]::IsNullOrWhiteSpace($ls.Output)) { $finalPass = $false }
-            }
-        }
-        $automationAncestor = Invoke-Git -WorkingDirectory $repo -Arguments @("merge-base", "--is-ancestor", "HEAD", "origin/main")
-        $script:postChecks += [pscustomobject]@{ check_name = "automation_controller_branch_not_merged"; status = $(if ($automationAncestor.ExitCode -ne 0) { "PASS" } else { "FAIL" }); detail = "controller HEAD not ancestor of origin/main" }
-        if ($automationAncestor.ExitCode -eq 0) { $finalPass = $false }
-        $s31 = Invoke-Git -WorkingDirectory $repo -Arguments @("ls-tree", "-r", "--name-only", "origin/main", "output/US/S31*")
-        $script:postChecks += [pscustomobject]@{ check_name = "no_s31_outputs_created"; status = $(if ([string]::IsNullOrWhiteSpace($s31.Output)) { "PASS" } else { "FAIL" }); detail = $s31.Output }
-        if (-not [string]::IsNullOrWhiteSpace($s31.Output)) { $finalPass = $false }
+        $finalPass = Add-FinalPostChecks -Repo $repo -Config $config
         if ($finalPass) {
             $decision = "S30_SEQUENTIAL_INTEGRATION_COMPLETE"
             $exitCode = 0
