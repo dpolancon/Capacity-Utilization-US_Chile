@@ -1,0 +1,3 @@
+"stage_id","audit_name","audit_item","status","evidence"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_complete_case_sample_audit","complete_case_sample","PASS","S29L planning outputs only; prohibited action not performed"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_complete_case_sample_audit","estimation_window_filter","PASS","S29L planning outputs only; prohibited action not performed"

@@ -1,0 +1,2 @@
+"parallel_base_rule","upstream_preplanning_commit","floating_main_base_allowed","reason"
+"USE_EXACT_S29L_COMMIT_AFTER_S29L_IS_COMMITTED_AND_PUSHED","21f5b17c8a7d77b71da79cc643bb889c5ffb362a","no","S29L cannot know its own commit until after validation, commit, and push; cloud tasks must use that exact result commit."

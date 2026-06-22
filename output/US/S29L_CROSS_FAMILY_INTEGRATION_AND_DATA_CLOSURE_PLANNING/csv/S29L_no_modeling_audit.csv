@@ -1,0 +1,5 @@
+"stage_id","audit_name","audit_item","status","evidence"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_modeling_audit","econometrics","PASS","S29L planning outputs only; prohibited action not performed"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_modeling_audit","model_estimation","PASS","S29L planning outputs only; prohibited action not performed"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_modeling_audit","VECM","PASS","S29L planning outputs only; prohibited action not performed"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_modeling_audit","investment_function","PASS","S29L planning outputs only; prohibited action not performed"

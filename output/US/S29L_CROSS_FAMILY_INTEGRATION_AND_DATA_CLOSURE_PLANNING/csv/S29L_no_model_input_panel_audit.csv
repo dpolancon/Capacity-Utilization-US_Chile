@@ -1,0 +1,4 @@
+"stage_id","audit_name","audit_item","status","evidence"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_model_input_panel_audit","model_input_panel","PASS","S29L planning outputs only; prohibited action not performed"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_model_input_panel_audit","estimation_sample","PASS","S29L planning outputs only; prohibited action not performed"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_model_input_panel_audit","complete_case_sample","PASS","S29L planning outputs only; prohibited action not performed"

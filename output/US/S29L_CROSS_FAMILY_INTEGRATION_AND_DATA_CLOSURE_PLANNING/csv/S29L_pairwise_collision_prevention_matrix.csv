@@ -1,0 +1,7 @@
+"task_a","task_b","path_overlap","semantic_overlap","dependency","parallel_safe","required_mitigation"
+"S30A_REAL_OUTPUT_FAMILY_CLOSURE","S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","none","separate family closures","none","yes","branch from exact S29L commit and restrict writes to exclusive namespace"
+"S30A_REAL_OUTPUT_FAMILY_CLOSURE","S30C_CONTEXTUAL_FAMILY_CLASSIFICATION_LOCK","none","output closure versus contextual lock","none","yes","branch from exact S29L commit and restrict writes to exclusive namespace"
+"S30A_REAL_OUTPUT_FAMILY_CLOSURE","S30D_DATASET_RELEASE_SCHEMA_AND_VALIDATION_SCAFFOLD","none","output closure versus schema-only scaffold","none","yes","branch from exact S29L commit and restrict writes to exclusive namespace"
+"S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","S30C_CONTEXTUAL_FAMILY_CLASSIFICATION_LOCK","none","distribution closure versus contextual lock","none","yes","branch from exact S29L commit and restrict writes to exclusive namespace"
+"S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","S30D_DATASET_RELEASE_SCHEMA_AND_VALIDATION_SCAFFOLD","none","distribution closure versus schema-only scaffold","none","yes","branch from exact S29L commit and restrict writes to exclusive namespace"
+"S30C_CONTEXTUAL_FAMILY_CLASSIFICATION_LOCK","S30D_DATASET_RELEASE_SCHEMA_AND_VALIDATION_SCAFFOLD","none","contextual lock versus schema-only scaffold","none","yes","branch from exact S29L commit and restrict writes to exclusive namespace"

@@ -1,0 +1,5 @@
+"task_id","required_base_rule","allowed_input_paths","forbidden_input_mutation","provider_repo_read_only"
+"S30A_REAL_OUTPUT_FAMILY_CLOSURE","USE_EXACT_S29L_COMMIT_AFTER_S29L_IS_COMMITTED_AND_PUSHED","output/US/S12B*; output/US/S11C*; output/US/S12_SOURCE_OF_TRUTH*; output/US/S25*; output/US/S26*; output/US/S27*; output/US/S28*","S29K or earlier outputs must be read-only","yes"
+"S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","USE_EXACT_S29L_COMMIT_AFTER_S29L_IS_COMMITTED_AND_PUSHED","output/US/S29A*; output/US/S25*; output/US/S26*; output/US/S27*; output/US/S28*","S29K or earlier outputs must be read-only","yes"
+"S30C_CONTEXTUAL_FAMILY_CLASSIFICATION_LOCK","USE_EXACT_S29L_COMMIT_AFTER_S29L_IS_COMMITTED_AND_PUSHED","output/US/S22*; output/US/S24B*; output/US/S24C*; output/US/S25*; output/US/S26*; output/US/S27*; output/US/S28*; output/US/S29K*","S29K or earlier outputs must be read-only","yes"
+"S30D_DATASET_RELEASE_SCHEMA_AND_VALIDATION_SCAFFOLD","USE_EXACT_S29L_COMMIT_AFTER_S29L_IS_COMMITTED_AND_PUSHED","output/US/S29K*; output/US/S29L*; schema references only","S29K or earlier outputs must be read-only","yes"

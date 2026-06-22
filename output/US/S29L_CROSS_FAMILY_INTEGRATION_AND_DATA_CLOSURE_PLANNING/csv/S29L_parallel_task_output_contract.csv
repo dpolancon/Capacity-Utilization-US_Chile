@@ -1,0 +1,5 @@
+"task_id","required_output_directory","required_script_glob","required_validation","required_decision","prohibited_outputs"
+"S30A_REAL_OUTPUT_FAMILY_CLOSURE","output/US/S30A*","codes/US_S30A*","S30A validation PASS","AUTHORIZE_OUTPUT_FAMILY_CONSUMPTION","canonical dataset; complete-case sample; q; theta; productive capacity; utilization; model outputs"
+"S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","output/US/S30B*","codes/US_S30B*","S30B validation PASS","AUTHORIZE_DISTRIBUTION_FAMILY_CONSUMPTION","canonical dataset; complete-case sample; q; theta; productive capacity; utilization; model outputs"
+"S30C_CONTEXTUAL_FAMILY_CLASSIFICATION_LOCK","output/US/S30C*","codes/US_S30C*","S30C validation PASS","AUTHORIZE_CONTEXTUAL_REFERENCE_CONSUMPTION","canonical dataset; complete-case sample; q; theta; productive capacity; utilization; model outputs"
+"S30D_DATASET_RELEASE_SCHEMA_AND_VALIDATION_SCAFFOLD","output/US/S30D*","codes/US_S30D*","S30D validation PASS","AUTHORIZE_DATASET_RELEASE_SCAFFOLD_CONSUMPTION","canonical dataset; complete-case sample; q; theta; productive capacity; utilization; model outputs"

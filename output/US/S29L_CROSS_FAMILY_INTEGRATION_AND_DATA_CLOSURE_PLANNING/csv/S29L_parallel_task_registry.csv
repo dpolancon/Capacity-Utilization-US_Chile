@@ -1,0 +1,5 @@
+"task_id","branch_name","family_scope","exclusive_code_glob","exclusive_output_glob","acceptance_condition","may_construct_authorized_family_variables","must_stop_if_ambiguous","parallel_authorized"
+"S30A_REAL_OUTPUT_FAMILY_CLOSURE","feature/s30a-output-family-closure","real_effective_output","codes/US_S30A*","output/US/S30A*","OUTPUT_FAMILY_CLOSED_CONSUMABLE","yes_if_required_by_locked_evidence","yes","yes"
+"S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","feature/s30b-distribution-family-closure","income_distribution","codes/US_S30B*","output/US/S30B*","DISTRIBUTION_FAMILY_CLOSED_CONSUMABLE","no_new_shaikh_adjusted_variables","yes","yes"
+"S30C_CONTEXTUAL_FAMILY_CLASSIFICATION_LOCK","feature/s30c-contextual-family-lock","contextual_and_noncore_objects","codes/US_S30C*","output/US/S30C*","CONTEXTUAL_FAMILY_CLASSIFICATION_LOCKED","no","yes","yes"
+"S30D_DATASET_RELEASE_SCHEMA_AND_VALIDATION_SCAFFOLD","feature/s30d-dataset-release-scaffold","release_infrastructure","codes/US_S30D*","output/US/S30D*","DATASET_RELEASE_SCAFFOLD_READY","schema_only_or_zero_row_templates","yes","yes"

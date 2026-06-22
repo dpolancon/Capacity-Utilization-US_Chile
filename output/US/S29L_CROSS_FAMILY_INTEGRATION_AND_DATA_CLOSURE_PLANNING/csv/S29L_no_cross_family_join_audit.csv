@@ -1,0 +1,6 @@
+"stage_id","audit_name","audit_item","status","evidence"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_cross_family_join_audit","capital_output_join","PASS","S29L planning outputs only; prohibited action not performed"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_cross_family_join_audit","capital_distribution_join","PASS","S29L planning outputs only; prohibited action not performed"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_cross_family_join_audit","output_distribution_join","PASS","S29L planning outputs only; prohibited action not performed"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_cross_family_join_audit","contextual_family_join","PASS","S29L planning outputs only; prohibited action not performed"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_cross_family_join_audit","canonical_dataset_join","PASS","S29L planning outputs only; prohibited action not performed"

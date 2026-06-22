@@ -1,0 +1,3 @@
+"stage_id","audit_name","audit_item","status","evidence"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_capacity_utilization_audit","productive_capacity","PASS","S29L planning outputs only; prohibited action not performed"
+"S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING","no_capacity_utilization_audit","capacity_utilization_mu","PASS","S29L planning outputs only; prohibited action not performed"
