@@ -1,0 +1,3 @@
+"audit_id","source_file","copied_file","compared_rows","max_abs_residual","expected_residual","result"
+"primary_level_copy","output/US/S12B_OUTPUT_PRICE_REAL_OUTPUT/csv/S12B_real_output_objects_long.csv","output/US/S30A_REAL_OUTPUT_FAMILY_CLOSURE/csv/S30A_primary_level_interface.csv",97,0,0,"PASS"
+"robustness_level_copy","output/US/S12B_OUTPUT_PRICE_REAL_OUTPUT/csv/S12B_real_output_objects_long.csv","output/US/S30A_REAL_OUTPUT_FAMILY_CLOSURE/csv/S30A_robustness_level_interface.csv",409,0,0,"PASS"

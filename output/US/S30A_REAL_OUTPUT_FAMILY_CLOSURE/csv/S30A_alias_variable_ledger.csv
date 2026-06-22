@@ -1,0 +1,5 @@
+"variable_id","authoritative_variable_id","contract_status","consumer_lane","permitted_use","prohibited_use","value_bearing_consumer_input","alias_reference_only","validation_status"
+"Y_OUTPUT_AUTHORITY","Y_REAL_NFC_GVA_BASELINE","ALIAS_INTERFACE_ONLY","alias_reference","alias_compatibility","not_independent_variable; not_new_source; not_CORP_or_FC_real_GVA; not_productive_capacity; not_capacity_utilization","no","yes","PASS"
+"y_output_authority","y_real_nfc_gva_baseline","ALIAS_INTERFACE_ONLY","alias_reference","alias_compatibility","not_independent_variable; not_new_source; not_CORP_or_FC_real_GVA; not_productive_capacity; not_capacity_utilization","no","yes","PASS"
+"Y_EFFECTIVE_OUTPUT_NFC","Y_REAL_NFC_GVA_BASELINE","ALIAS_INTERFACE_ONLY","alias_reference","alias_compatibility","not_independent_variable; not_new_source; not_CORP_or_FC_real_GVA; not_productive_capacity; not_capacity_utilization","no","yes","PASS"
+"y_effective_output_nfc","y_real_nfc_gva_baseline","ALIAS_INTERFACE_ONLY","alias_reference","alias_compatibility","not_independent_variable; not_new_source; not_CORP_or_FC_real_GVA; not_productive_capacity; not_capacity_utilization","no","yes","PASS"

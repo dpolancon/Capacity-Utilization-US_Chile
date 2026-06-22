@@ -1,0 +1,7 @@
+"variable_id","blocked_reason","source_evidence","status"
+"gva_real_or_qindex_corp","No same-boundary CORP real GVA source exists; chained-dollar residual subtraction is prohibited.","S12_SOURCE_OF_TRUTH_CONSTRUCTION and S11B/S11C","BLOCKED_PROHIBITED"
+"gva_real_or_qindex_fc","No same-boundary FC real GVA source exists; chained-dollar residual subtraction is prohibited.","S12_SOURCE_OF_TRUTH_CONSTRUCTION and S11B/S11C","BLOCKED_PROHIBITED"
+"gva_price_or_deflator_corp","No same-boundary CORP real or price counterpart exists.","S12_SOURCE_OF_TRUTH_CONSTRUCTION and S11B/S11C","BLOCKED_PROHIBITED"
+"gva_price_or_deflator_fc","No same-boundary FC real or price counterpart exists.","S12_SOURCE_OF_TRUTH_CONSTRUCTION and S11B/S11C","BLOCKED_PROHIBITED"
+"corp_gva_deflator_PROXY_RELABEL","Proxy relabeling would falsely claim a corporate legal-form boundary.","S12_SOURCE_OF_TRUTH_CONSTRUCTION and S11B/S11C","BLOCKED_PROHIBITED"
+"fc_gva_deflator_PROXY_RELABEL","Proxy relabeling would falsely claim a financial-corporate boundary.","S12_SOURCE_OF_TRUTH_CONSTRUCTION and S11B/S11C","BLOCKED_PROHIBITED"

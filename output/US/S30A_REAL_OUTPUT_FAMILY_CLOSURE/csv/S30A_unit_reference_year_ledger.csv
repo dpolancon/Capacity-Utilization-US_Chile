@@ -1,0 +1,5 @@
+"object_group","unit","reference_year","unit_rule"
+"authoritative_real_output_level","Millions of 2017-price-equivalent dollars","2017","S12B baseline real output is benchmarked to BEA 2017 chained-dollar reference."
+"authoritative_real_output_log","natural_log_of_millions_2017_price_equivalent_dollars","2017","Natural log of the S30A level interface; no rebasing."
+"robustness_real_output_levels","Millions of 2017-price-equivalent dollars","2017","S12B proxy-deflated real-output variants use the same 2017 normalized price basis."
+"output_price_support","Index 2017=100","2017","All S12B price objects are normalized to 2017=100."

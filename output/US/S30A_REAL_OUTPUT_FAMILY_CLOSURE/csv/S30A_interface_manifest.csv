@@ -1,0 +1,6 @@
+"interface_file","interface_role","row_count","value_bearing_consumer_input","active_by_default"
+"output/US/S30A_REAL_OUTPUT_FAMILY_CLOSURE/csv/S30A_primary_level_interface.csv","authoritative_level",97,"yes","yes"
+"output/US/S30A_REAL_OUTPUT_FAMILY_CLOSURE/csv/S30A_primary_log_interface.csv","authoritative_log_level",97,"yes","yes"
+"output/US/S30A_REAL_OUTPUT_FAMILY_CLOSURE/csv/S30A_robustness_level_interface.csv","robustness_levels",409,"yes","no"
+"output/US/S30A_REAL_OUTPUT_FAMILY_CLOSURE/csv/S30A_robustness_log_interface.csv","robustness_log_levels",409,"yes","no"
+"output/US/S30A_REAL_OUTPUT_FAMILY_CLOSURE/csv/S30A_output_price_support_catalog.csv","deflator_and_price_support",8,"reference_support","no"
