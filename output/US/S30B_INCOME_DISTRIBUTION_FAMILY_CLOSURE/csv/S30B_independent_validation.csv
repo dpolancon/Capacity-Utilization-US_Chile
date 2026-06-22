@@ -1,0 +1,2 @@
+"stage_id","validation_result","check_count","pass_count","fail_count","final_decision","family_status"
+"S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","PASS",25,25,0,"AUTHORIZE_DISTRIBUTION_FAMILY_CONSUMPTION","DISTRIBUTION_FAMILY_CLOSED_CONSUMABLE"

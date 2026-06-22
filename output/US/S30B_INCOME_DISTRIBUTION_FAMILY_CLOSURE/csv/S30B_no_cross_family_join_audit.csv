@@ -1,0 +1,5 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","no_output_family_join",0,"PASS","S30B reads distribution and planning evidence only; the value-bearing interface copies S29A income-distribution rows without joining output, capital, contextual, or interaction objects."
+"S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","no_capital_family_join",0,"PASS","S30B reads distribution and planning evidence only; the value-bearing interface copies S29A income-distribution rows without joining output, capital, contextual, or interaction objects."
+"S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","no_contextual_family_join",0,"PASS","S30B reads distribution and planning evidence only; the value-bearing interface copies S29A income-distribution rows without joining output, capital, contextual, or interaction objects."
+"S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","no_distribution_capital_interaction",0,"PASS","S30B reads distribution and planning evidence only; the value-bearing interface copies S29A income-distribution rows without joining output, capital, contextual, or interaction objects."
