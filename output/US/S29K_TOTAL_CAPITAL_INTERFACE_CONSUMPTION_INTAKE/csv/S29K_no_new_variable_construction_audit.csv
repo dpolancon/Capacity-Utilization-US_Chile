@@ -1,0 +1,8 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_new_level_variable",0,"PASS","S29K is reference-based and constructs no analytical variables."
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_new_log",0,"PASS","S29K is reference-based and constructs no analytical variables."
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_new_growth_rate",0,"PASS","S29K is reference-based and constructs no analytical variables."
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_new_difference",0,"PASS","S29K is reference-based and constructs no analytical variables."
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_new_lag",0,"PASS","S29K is reference-based and constructs no analytical variables."
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_new_share",0,"PASS","S29K is reference-based and constructs no analytical variables."
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_new_intensity_measure",0,"PASS","S29K is reference-based and constructs no analytical variables."

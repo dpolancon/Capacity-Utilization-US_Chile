@@ -1,0 +1,5 @@
+"variable_id","consumer_lane","active_by_default","explicit_future_authorization_required","first_fully_supported_year","lag_activation_status"
+"L1_DLOG_G_TOT","conditional_secondary","no","yes",1933,"PASS"
+"L1_DLOG_N_TOT","conditional_secondary","no","yes",1933,"PASS"
+"L1_LOG_G_TOT","conditional_secondary","no","yes",1932,"PASS"
+"L1_LOG_N_TOT","conditional_secondary","no","yes",1932,"PASS"

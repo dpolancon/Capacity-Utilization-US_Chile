@@ -1,0 +1,4 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_q_variables",0,"PASS","No q-family object is constructed or authorized."
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_accumulated_q",0,"PASS","No q-family object is constructed or authorized."
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_omega_weighted_capital_variables",0,"PASS","No q-family object is constructed or authorized."

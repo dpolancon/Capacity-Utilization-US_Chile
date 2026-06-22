@@ -1,0 +1,94 @@
+# S29K Total Capital Interface Consumption Intake Validation
+
+Validation result: `PASS 85`.
+S29I files revalidated: `32`.
+S29I hash matches: `32`.
+Registered variables: `99`.
+
+## Checks
+
+- `s29j_outputs_present`: `PASS` - required S29J outputs present
+- `s29j_validation_all_pass`: `PASS` - S29J validation PASS 90
+- `s29j_decision_authorizes_downstream_consumption`: `PASS` - AUTHORIZE_DOWNSTREAM_TOTAL_CAPITAL_INTERFACE_CONSUMPTION
+- `s29i_outputs_present`: `PASS` - required S29I outputs present
+- `s29i_validation_all_pass`: `PASS` - S29I validation PASS 87
+- `s29h_outputs_present`: `PASS` - required S29H outputs present
+- `s29h_validation_all_pass`: `PASS` - S29H validation PASS 79
+- `s29j_integrity_manifest_present`: `PASS` - S29J integrity manifest present
+- `s29j_integrity_manifest_file_count_verified`: `PASS` - files=32
+- `all_required_s29i_files_present`: `PASS` - all S29I files present
+- `all_required_s29i_sha256_hashes_match`: `PASS` - matches=32
+- `no_s29i_hash_mismatch`: `PASS` - hash mismatches=0
+- `no_s29i_dimension_mismatch`: `PASS` - dimension mismatches=0
+- `contracted_variable_count_equals_99`: `PASS` - 99 registered variables
+- `baseline_count_equals_2`: `PASS` - baseline=2
+- `robustness_count_equals_2`: `PASS` - robustness=2
+- `conditional_secondary_count_equals_11`: `PASS` - conditional=11
+- `diagnostic_reference_count_equals_72`: `PASS` - diagnostic=72
+- `alias_reference_count_equals_12`: `PASS` - alias=12
+- `excluded_count_equals_0`: `PASS` - blocked=0
+- `active_candidate_count_equals_15`: `PASS` - active candidates=15
+- `every_variable_registered_once`: `PASS` - one row per variable
+- `every_variable_has_consumer_registration_status`: `PASS` - all statuses populated
+- `baseline_variables_registered_correctly`: `PASS` - baseline variables registered
+- `robustness_variables_registered_correctly`: `PASS` - robustness variables registered
+- `conditional_variables_registered_correctly`: `PASS` - 11 conditional variables
+- `diagnostic_variables_registered_as_reference_only`: `PASS` - diagnostics reference only
+- `alias_variables_registered_as_reference_only`: `PASS` - aliases reference only
+- `blocked_variable_count_equals_0`: `PASS` - blocked=0
+- `primary_level_variable_correct`: `PASS` - G_TOT
+- `primary_log_variable_correct`: `PASS` - LOG_G_TOT
+- `robustness_level_variable_correct`: `PASS` - N_TOT
+- `robustness_log_variable_correct`: `PASS` - LOG_N_TOT
+- `primary_level_log_selection_lock_preserved`: `PASS` - primary representation lock
+- `arithmetic_log_growth_selection_lock_preserved`: `PASS` - growth representation lock
+- `no_automatic_representation_selection`: `PASS` - no automatic representation selection
+- `no_automatic_growth_selection`: `PASS` - no automatic growth selection
+- `lag_variables_conditional_only`: `PASS` - lags conditional
+- `lag_variables_inactive_by_default`: `PASS` - lags inactive
+- `no_automatic_lag_activation`: `PASS` - lag activation lock
+- `source_units_preserved`: `PASS` - units populated from contract
+- `source_coverage_preserved`: `PASS` - coverage preserved
+- `variable_specific_support_preserved`: `PASS` - support dates preserved
+- `tot_baseline_start_equals_1931`: `PASS` - baseline starts 1931
+- `warmup_observations_preserved`: `PASS` - warmup preserved
+- `warmup_observations_not_baseline_eligible`: `PASS` - warmup restriction retained
+- `no_diagnostic_value_promoted`: `PASS` - diagnostics not promoted
+- `no_alias_value_duplicated_as_independent_input`: `PASS` - aliases not duplicated
+- `provider_total_not_promoted`: `PASS` - provider TOTAL not promoted
+- `no_cross_family_join_created`: `PASS` - no cross-family join
+- `no_output_variable_joined`: `PASS` - no output join
+- `no_distribution_variable_joined`: `PASS` - no distribution join
+- `no_common_complete_case_sample_created`: `PASS` - no common sample
+- `no_estimation_sample_created`: `PASS` - no estimation sample
+- `no_year_dropped_due_to_cross_variable_missingness`: `PASS` - no year dropped
+- `no_new_level_variable_constructed`: `PASS` - no level
+- `no_new_log_constructed`: `PASS` - no log
+- `no_new_growth_rate_constructed`: `PASS` - no growth
+- `no_new_difference_constructed`: `PASS` - no difference
+- `no_new_lag_constructed`: `PASS` - no lag
+- `no_new_share_constructed`: `PASS` - no share
+- `no_new_intensity_measure_constructed`: `PASS` - no intensity
+- `tot_not_reaggregated`: `PASS` - TOT not reaggregated
+- `gpim_not_rerun`: `PASS` - GPIM not rerun
+- `no_q_variables_constructed`: `PASS` - no q
+- `no_omega_weighted_capital_variables_constructed`: `PASS` - no omega-weighted capital
+- `no_distribution_capital_interactions_constructed`: `PASS` - no distribution interactions
+- `no_theta_variables_constructed`: `PASS` - no theta
+- `no_productive_capacity_variables_constructed`: `PASS` - no capacity
+- `no_utilization_variables_constructed`: `PASS` - no utilization
+- `no_output_capital_ratio_constructed`: `PASS` - no output-capital ratio
+- `no_modeling_outputs_created`: `PASS` - no modeling
+- `no_econometric_outputs_created`: `PASS` - no econometrics
+- `canonical_consumer_registry_created`: `PASS` - registry created
+- `integrity_revalidation_audit_created`: `PASS` - integrity audit created
+- `contract_reconciliation_audit_created`: `PASS` - contract reconciliation created
+- `lane_registration_audit_created`: `PASS` - lane audit created
+- `support_eligibility_audit_created`: `PASS` - support audit created
+- `representation_lock_audit_created`: `PASS` - representation audit created
+- `lag_activation_audit_created`: `PASS` - lag audit created
+- `consumer_handoff_manifest_created`: `PASS` - manifest created
+- `no_s29j_output_modified`: `PASS` - S29J input hashes unchanged
+- `no_s29i_output_modified`: `PASS` - S29I input hashes unchanged
+- `no_upstream_output_modified`: `PASS` - upstream input hashes unchanged
+- `provider_repository_not_modified`: `PASS` - provider tracked and staged diffs clean; pre-existing untracked files ignored

@@ -1,0 +1,5 @@
+"stage_id","lock_item","candidates","automatic_selection","joint_use_authorized","lock_status"
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","primary_level_log_selection_lock","G_TOT_GPIM_2017; LOG_G_TOT_GPIM_2017","none","no","PASS"
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","arithmetic_log_growth_selection_lock","DLOG_G_TOT; GROWTH_ARITH_G_TOT","none","no","PASS"
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_automatic_representation_selection","none selected","none","no","PASS"
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_automatic_growth_selection","none selected","none","no","PASS"

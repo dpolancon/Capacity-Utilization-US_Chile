@@ -1,0 +1,4 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_cross_family_join",0,"PASS","S29K creates only a capital consumer registry and no cross-family joins."
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_output_variable_join",0,"PASS","S29K creates only a capital consumer registry and no cross-family joins."
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_distribution_variable_join",0,"PASS","S29K creates only a capital consumer registry and no cross-family joins."

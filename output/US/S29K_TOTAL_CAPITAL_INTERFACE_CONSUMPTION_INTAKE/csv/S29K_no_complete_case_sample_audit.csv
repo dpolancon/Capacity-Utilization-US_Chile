@@ -1,0 +1,4 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_common_complete_case_sample",0,"PASS","S29K creates no sample or filtered panel."
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_estimation_sample",0,"PASS","S29K creates no sample or filtered panel."
+"S29K_TOTAL_CAPITAL_INTERFACE_CONSUMPTION_INTAKE","no_year_dropped_due_to_cross_variable_missingness",0,"PASS","S29K creates no sample or filtered panel."
