@@ -2,6 +2,8 @@
 
 This controller performs a dry-run audit for the S30 integration sequence. It checks remote branch tips, task-owned changed paths, committed completion evidence, expected task decisions and statuses, and a temporary sequential merge simulation.
 
+The remote branch tip is the authoritative result commit for each S30 task. Completion records may be created before the final Git commit exists, so a missing, pending, unavailable, or placeholder result-commit value in a completion record does not block readiness. A contradictory explicit commit hash in a completion record still requires human review.
+
 It does not merge `main`, push `main`, modify the four S30 feature branches, open a pull request, or begin S31A. The first version is audit-only.
 
 Run it from the repository worktree:

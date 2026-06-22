@@ -204,6 +204,106 @@ function Test-TextHasNeedle {
     return $false
 }
 
+function Get-NamedValueFromText {
+    param(
+        [string]$Text,
+        [string[]]$Names
+    )
+    $cleanText = $Text.TrimStart([char]0xFEFF)
+    try {
+        $json = $cleanText | ConvertFrom-Json
+        foreach ($name in $Names) {
+            if ($json.PSObject.Properties.Name -contains $name) {
+                return [pscustomobject]@{ Found = $true; Value = [string]$json.$name }
+            }
+        }
+    }
+    catch {
+    }
+    try {
+        $rows = @($cleanText | ConvertFrom-Csv)
+        if ($rows.Count -gt 0) {
+            foreach ($name in $Names) {
+                if ($rows[0].PSObject.Properties.Name -contains $name) {
+                    return [pscustomobject]@{ Found = $true; Value = [string]$rows[0].$name }
+                }
+            }
+        }
+    }
+    catch {
+    }
+    foreach ($line in ($cleanText -split "`r?`n")) {
+        foreach ($name in $Names) {
+            $namePattern = [regex]::Escape($name) -replace "\\_", "[_ -]"
+            $match = [regex]::Match($line, "(?i)^\s*[""']?\s*$namePattern\s*[""']?\s*[:=]\s*[""']?([^""',#\r\n]*)")
+            if ($match.Success) {
+                return [pscustomobject]@{ Found = $true; Value = [string]$match.Groups[1].Value }
+            }
+        }
+    }
+    return [pscustomobject]@{ Found = $false; Value = "" }
+}
+
+function Test-PlaceholderCommitValue {
+    param([string]$Value)
+    $normalized = ($Value -replace '["'']', '').Trim().ToLowerInvariant()
+    if ([string]::IsNullOrWhiteSpace($normalized)) {
+        return $true
+    }
+    $placeholderPatterns = @(
+        "^blank$",
+        "^none$",
+        "^null$",
+        "pending",
+        "not yet committed",
+        "not available",
+        "unavailable",
+        "to be populated",
+        "placeholder",
+        "post.commit",
+        "recorded.*final.*report",
+        "final.*report.*commit"
+    )
+    foreach ($pattern in $placeholderPatterns) {
+        if ($normalized -match $pattern) {
+            return $true
+        }
+    }
+    return $false
+}
+
+function Get-CompletionRecordCommitEvidence {
+    param(
+        [string]$Text,
+        [string]$ExpectedTip
+    )
+    $valueResult = Get-NamedValueFromText -Text $Text -Names @("result_commit", "commit_hash", "result commit")
+    if (-not $valueResult.Found) {
+        return [pscustomobject]@{
+            Status = "PASS_WITH_REMOTE_TIP_AUTHORITY"
+            Path = ""
+            Detail = "completion record was produced before the final commit; remote branch tip is authoritative"
+        }
+    }
+    $value = ([string]$valueResult.Value).Trim()
+    if (Test-PlaceholderCommitValue -Value $value) {
+        return [pscustomobject]@{
+            Status = "PASS_WITH_REMOTE_TIP_AUTHORITY"
+            Path = ""
+            Detail = "completion record was produced before the final commit; remote branch tip is authoritative"
+        }
+    }
+    $hashMatch = [regex]::Match($value, "(?i)\b[0-9a-f]{40}\b")
+    if ($hashMatch.Success -and $hashMatch.Value.ToLowerInvariant() -eq $ExpectedTip.ToLowerInvariant()) {
+        return [pscustomobject]@{ Status = "PASS"; Path = ""; Detail = "completion record result commit matches configured expectedTip" }
+    }
+    return [pscustomobject]@{
+        Status = "HUMAN_REVIEW_REQUIRED_COMPLETION_COMMIT_CONTRADICTION"
+        Path = ""
+        Detail = "completion record result commit contradicts configured expectedTip: $value"
+    }
+}
+
 $script:checks = @()
 $script:branchTipAudit = @()
 $script:changedPathAudit = @()
@@ -266,7 +366,7 @@ try {
             $tipStatus = "TECHNICAL_FAILURE"
             $technicalFailure = $true
         } elseif ($tipText -ne $expectedTip) {
-            $tipStatus = "HUMAN_REVIEW_REQUIRED"
+            $tipStatus = "HUMAN_REVIEW_REQUIRED_REMOTE_TIP_MISMATCH"
             Add-HumanReview "$($task.id) remote branch tip mismatch"
         }
         $script:branchTipAudit += [pscustomobject]@{
@@ -306,7 +406,24 @@ try {
         $validation = Find-UniqueEvidence -Task $task -Files $branchFiles -Kind "validation" -Needle ([string]$task.expectedValidation) -AlternateNeedles ([string[]]$task.acceptableValidationTokens) -Repo $repo
         $decision = Find-UniqueEvidence -Task $task -Files $branchFiles -Kind "decision" -Needle ([string]$task.expectedDecision) -AlternateNeedles @() -Repo $repo
         $familyStatus = Find-UniqueEvidence -Task $task -Files $branchFiles -Kind "status" -Needle ([string]$task.expectedStatus) -AlternateNeedles @() -Repo $repo
-        $resultCommit = Find-UniqueEvidence -Task $task -Files $branchFiles -Kind "result_commit" -Needle $expectedTip -AlternateNeedles @() -Repo $repo
+        if ($tipStatus -eq "PASS") {
+            $resultCommit = [pscustomobject]@{
+                Status = "PASS"
+                Path = "refs/remotes/origin/$branch"
+                Detail = "remote branch tip matches configured expectedTip"
+            }
+        } else {
+            $resultCommit = [pscustomobject]@{
+                Status = $tipStatus
+                Path = "refs/remotes/origin/$branch"
+                Detail = "remote branch tip does not match configured expectedTip"
+            }
+        }
+        $completionCommit = [pscustomobject]@{
+            Status = "HUMAN_REVIEW_REQUIRED_MISSING_COMPLETION_EVIDENCE"
+            Path = ""
+            Detail = "completion record unavailable for commit contradiction inspection"
+        }
         if ($completion.Status -eq "PASS") {
             $completionText = Get-BlobText -Repo $repo -Branch $branch -Path $completion.Path
             if (Test-TextHasNeedle -Text $completionText -Needle ([string]$task.expectedValidation) -AlternateNeedles ([string[]]$task.acceptableValidationTokens)) {
@@ -318,16 +435,19 @@ try {
             if (Test-TextHasNeedle -Text $completionText -Needle ([string]$task.expectedStatus) -AlternateNeedles @()) {
                 $familyStatus = [pscustomobject]@{ Status = "PASS"; Path = $completion.Path; Detail = "completion record contains status evidence" }
             }
+            $completionCommit = Get-CompletionRecordCommitEvidence -Text $completionText -ExpectedTip $expectedTip
+            $completionCommit.Path = $completion.Path
         }
         $evidenceItems = @()
         $evidenceItems += [pscustomobject]@{ kind = "completion_record"; evidence = $completion }
         $evidenceItems += [pscustomobject]@{ kind = "validation_result"; evidence = $validation }
         $evidenceItems += [pscustomobject]@{ kind = "final_decision"; evidence = $decision }
         $evidenceItems += [pscustomobject]@{ kind = "family_or_scaffold_status"; evidence = $familyStatus }
-        $evidenceItems += [pscustomobject]@{ kind = "result_commit"; evidence = $resultCommit }
+        $evidenceItems += [pscustomobject]@{ kind = "result_commit_remote_tip"; evidence = $resultCommit }
+        $evidenceItems += [pscustomobject]@{ kind = "completion_record_result_commit"; evidence = $completionCommit }
         foreach ($e in $evidenceItems) {
             $status = $e.evidence.Status
-            if ($status -ne "PASS") {
+            if ($status -ne "PASS" -and $status -ne "PASS_WITH_REMOTE_TIP_AUTHORITY") {
                 Add-HumanReview "$($task.id) $($e.kind): $status"
             }
             $script:completionEvidenceAudit += [pscustomobject]@{
