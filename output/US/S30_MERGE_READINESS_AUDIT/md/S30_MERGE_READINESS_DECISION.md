@@ -1,0 +1,11 @@
+﻿# S30 Merge-Readiness Decision
+
+Decision: HUMAN_REVIEW_REQUIRED
+
+Human review reasons:
+- S30A result_commit: HUMAN_REVIEW_REQUIRED_MISSING_COMPLETION_EVIDENCE
+- S30B result_commit: HUMAN_REVIEW_REQUIRED_MISSING_COMPLETION_EVIDENCE
+- S30C result_commit: HUMAN_REVIEW_REQUIRED_MISSING_COMPLETION_EVIDENCE
+- S30D result_commit: HUMAN_REVIEW_REQUIRED_MISSING_COMPLETION_EVIDENCE
+
+Temporary cleanup: worktree_remove_exit=0; branch_delete_exit=0

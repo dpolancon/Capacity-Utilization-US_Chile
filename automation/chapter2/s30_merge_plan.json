@@ -1,0 +1,64 @@
+{
+  "repositoryPath": "C:\\ReposGitHub\\CUUSChile_Automation\\S30MergeReadiness",
+  "expectedOriginMain": "92397d3150affde68f5a0a6594207a03175f05d9",
+  "commonS30Base": "911885ce763fdf4b73903ebb552682cfb108d0b3",
+  "temporaryAuditWorktreeRoot": "C:\\ReposGitHub\\CUUSChile_Automation\\S30MergeReadiness_AuditWorktrees",
+  "temporaryAuditBranchPrefix": "tmp/s30-merge-readiness-",
+  "mergeOrder": [ "S30A", "S30B", "S30C", "S30D" ],
+  "forbiddenPaths": [
+    "chapter2_vault/.obsidian/graph.json",
+    "chapter2_vault/.obsidian/workspace.json",
+    "data/provider_handoffs/*",
+    "C:/ReposGitHub/US-BEA-Income-FixedAssets-Dataset/*",
+    "C:/ReposGitHub/K-Stock-Harmonization/*",
+    "output/US/S30_FINAL*",
+    "output/US/CH2_CANONICAL*",
+    "output/US/S31*"
+  ],
+  "tasks": [
+    {
+      "id": "S30A",
+      "branch": "feature/s30a-output-family-closure",
+      "expectedTip": "c0dc4e3c89ddc7f5eb23d7b8d996f1bd7939a581",
+      "allowedPathPrefixes": [ "codes/US_S30A", "output/US/S30A" ],
+      "outputNamespace": "output/US/S30A",
+      "expectedValidation": "PASS 25/25",
+      "acceptableValidationTokens": [ "PASS 25/25", "PASS" ],
+      "expectedDecision": "AUTHORIZE_OUTPUT_FAMILY_CONSUMPTION",
+      "expectedStatus": "OUTPUT_FAMILY_CLOSED_CONSUMABLE"
+    },
+    {
+      "id": "S30B",
+      "branch": "feature/s30b-distribution-family-closure",
+      "expectedTip": "b475d69e0666655a5c7f59316bf02ec8089df3b7",
+      "allowedPathPrefixes": [ "codes/US_S30B", "output/US/S30B" ],
+      "outputNamespace": "output/US/S30B",
+      "expectedValidation": "PASS 25/25",
+      "acceptableValidationTokens": [ "PASS 25/25", "PASS" ],
+      "expectedDecision": "AUTHORIZE_DISTRIBUTION_FAMILY_CONSUMPTION",
+      "expectedStatus": "DISTRIBUTION_FAMILY_CLOSED_CONSUMABLE"
+    },
+    {
+      "id": "S30C",
+      "branch": "feature/s30c-contextual-family-lock",
+      "expectedTip": "1085aa81796d62fae35fc00532021198f33da21a",
+      "allowedPathPrefixes": [ "codes/US_S30C", "output/US/S30C" ],
+      "outputNamespace": "output/US/S30C",
+      "expectedValidation": "PASS 26/26",
+      "acceptableValidationTokens": [ "PASS 26/26", "PASS" ],
+      "expectedDecision": "AUTHORIZE_CONTEXTUAL_REFERENCE_CONSUMPTION",
+      "expectedStatus": "CONTEXTUAL_FAMILY_CLASSIFICATION_LOCKED"
+    },
+    {
+      "id": "S30D",
+      "branch": "feature/s30d-dataset-release-scaffold",
+      "expectedTip": "68cf4877e4662409f86c67ed6e6f9fd4f07cde90",
+      "allowedPathPrefixes": [ "codes/US_S30D", "output/US/S30D" ],
+      "outputNamespace": "output/US/S30D",
+      "expectedValidation": "PASS 30",
+      "acceptableValidationTokens": [ "PASS 30", "PASS" ],
+      "expectedDecision": "AUTHORIZE_DATASET_RELEASE_SCAFFOLD_CONSUMPTION",
+      "expectedStatus": "DATASET_RELEASE_SCAFFOLD_READY"
+    }
+  ]
+}
