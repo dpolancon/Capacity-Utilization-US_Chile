@@ -1,0 +1,4 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","no_automatic_growth_measure_selected",0,"PASS","DLOG_G_TOT and GROWTH_ARITH_G_TOT remain separate locked candidates."
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","arithmetic_and_log_growth_not_merged",0,"PASS","DLOG_G_TOT and GROWTH_ARITH_G_TOT remain separate locked candidates."
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","growth_selection_lock_created",0,"PASS","DLOG_G_TOT and GROWTH_ARITH_G_TOT remain separate locked candidates."

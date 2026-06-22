@@ -1,0 +1,5 @@
+"stage_id","variable_id","lag_order","source_variable_id","first_fully_supported_year","interface_lane","active_by_default","explicit_future_authorization_required","lock_status"
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","L1_DLOG_G_TOT",1,"DLOG_G_TOT",1933,"conditional_secondary","no","yes","PASS"
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","L1_DLOG_N_TOT",1,"DLOG_N_TOT",1933,"conditional_secondary","no","yes","PASS"
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","L1_LOG_G_TOT",1,"LOG_G_TOT_GPIM_2017",1932,"conditional_secondary","no","yes","PASS"
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","L1_LOG_N_TOT",1,"LOG_N_TOT_GPIM_2017",1932,"conditional_secondary","no","yes","PASS"

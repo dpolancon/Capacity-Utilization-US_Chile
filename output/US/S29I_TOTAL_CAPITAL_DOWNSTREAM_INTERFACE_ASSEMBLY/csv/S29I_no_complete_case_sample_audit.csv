@@ -1,0 +1,4 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","no_common_complete_case_sample",0,"PASS","Candidate-wide view preserves all source years and does not filter rows by missingness."
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","no_year_dropped_due_to_other_variable_missingness",0,"PASS","Candidate-wide view preserves all source years and does not filter rows by missingness."
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","no_complete_case_estimation_sample",0,"PASS","Candidate-wide view preserves all source years and does not filter rows by missingness."

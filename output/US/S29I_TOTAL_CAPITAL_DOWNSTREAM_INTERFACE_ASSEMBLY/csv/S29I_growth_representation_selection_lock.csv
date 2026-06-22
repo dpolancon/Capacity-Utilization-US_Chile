@@ -1,0 +1,3 @@
+"stage_id","variable_id","selection_group","joint_use_authorized","automatic_preference","future_selection_required","lock_status"
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","DLOG_G_TOT","gross_total_capital_growth_representation","no","none","yes","PASS"
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","GROWTH_ARITH_G_TOT","gross_total_capital_growth_representation","no","none","yes","PASS"

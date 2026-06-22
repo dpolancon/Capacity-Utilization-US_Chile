@@ -1,0 +1,4 @@
+"stage_id","audit_item","constructed_object_count","status","evidence"
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","alias_variables_not_in_active_candidate_interface",0,"PASS","Alias variables appear only in the alias authority catalog."
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","aliases_not_independent_objects",0,"PASS","Alias variables appear only in the alias authority catalog."
+"S29I_TOTAL_CAPITAL_DOWNSTREAM_INTERFACE_ASSEMBLY","no_alias_duplication",0,"PASS","Alias variables appear only in the alias authority catalog."

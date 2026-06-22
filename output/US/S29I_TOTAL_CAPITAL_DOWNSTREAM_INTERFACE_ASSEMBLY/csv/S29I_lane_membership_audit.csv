@@ -1,0 +1,8 @@
+"interface_lane","manifest_count","lane_status"
+"alias_authority",12,"PASS"
+"baseline_primary_level",1,"PASS"
+"baseline_primary_log",1,"PASS"
+"conditional_secondary",11,"PASS"
+"diagnostic_reference",72,"PASS"
+"net_robustness_level",1,"PASS"
+"net_robustness_log",1,"PASS"
