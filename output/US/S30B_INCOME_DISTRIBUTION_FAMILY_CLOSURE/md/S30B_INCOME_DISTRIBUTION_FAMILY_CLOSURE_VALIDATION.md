@@ -1,0 +1,35 @@
+# S30B Income Distribution Family Closure Validation
+
+Validation result: `PASS`
+
+Validation checks: `25 / 25 PASS`.
+
+All eight S29A constructed variables are classified. Support windows are explicit. Same-family interface copies have zero residual. No cross-family joins, interactions, complete-case sample, estimation sample, canonical dataset, q, theta, productive capacity, utilization, modeling, econometrics, or Shaikh-adjusted construction appears in S30B.
+
+## Checks
+
+- `exact_branch`: `PASS` - feature/s30b-distribution-family-closure
+- `exact_base_commit`: `PASS` - 911885ce763fdf4b73903ebb552682cfb108d0b3
+- `s29a_gate_verified`: `PASS` - S29A PASS 57; 8 variables; 776 rows; 1929-2025
+- `exclusive_namespace`: `PASS` - Script writes only codes/US_S30B* and output/US/S30B* paths.
+- `all_eight_constructed_variables_accounted_for`: `PASS` - CORP_COMPENSATION_SHARE_GVA; CORP_COMPENSATION_SHARE_NVA; CORP_NET_OPERATING_SURPLUS_SHARE_GVA; CORP_NET_OPERATING_SURPLUS_SHARE_NVA; NFC_COMPENSATION_SHARE_GVA; NFC_COMPENSATION_SHARE_NVA; NFC_NET_OPERATING_SURPLUS_SHARE_GVA; NFC_NET_OPERATING_SURPLUS_SHARE_NVA
+- `classification_status_set_valid`: `PASS` - BASELINE_AUTHORIZED; ROBUSTNESS_AUTHORIZED; DIAGNOSTIC_ONLY
+- `wage_share_preference_preserved`: `PASS` - NFC_COMPENSATION_SHARE_GVA is the sole baseline-authorized variable.
+- `exploitation_rate_alternative_preserved`: `PASS` - Exploitation-rate adjusted metadata remains blocked; no exploitation-rate series is constructed.
+- `no_shaikh_adjusted_construction`: `PASS` - Adjusted Shaikh objects are blocked metadata and absent from constructed S29A value interface.
+- `support_windows_explicit`: `PASS` - Eight constructed variables have explicit 1929-2025 annual support.
+- `aliases_controlled`: `PASS` - Alias map contains two interface aliases and no independent value-bearing alias object.
+- `zero_copy_residual`: `PASS` - 776 S30B interface rows copy S29A same-family values with zero residual.
+- `no_cross_family_joins`: `PASS` - No output, capital, contextual, or interaction join is created.
+- `no_interactions`: `PASS` - No distribution-capital interaction is created.
+- `no_complete_case_sample`: `PASS` - No complete-case sample is created.
+- `no_estimation_sample`: `PASS` - No estimation sample is created.
+- `no_canonical_dataset`: `PASS` - No canonical dataset artifact is created.
+- `no_q`: `PASS` - No mechanization-growth object is created.
+- `no_theta`: `PASS` - No transformation-elasticity object is created.
+- `no_productive_capacity`: `PASS` - No productive-capacity object is created.
+- `no_utilization`: `PASS` - No capacity-utilization object is created.
+- `no_modeling`: `PASS` - No modeling output is created.
+- `no_econometrics`: `PASS` - No econometric output is created.
+- `input_files_unchanged`: `PASS` - All required input md5 hashes unchanged.
+- `provider_repository_untouched`: `PASS` - Provider repository tracked and staged diffs are clean.

@@ -1,0 +1,3 @@
+"stage_id","alias_variable_id","authoritative_variable_id","alias_status","alias_value_bearing_independent_object","alias_source_evidence"
+"S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","WAGE_SHARE_UNADJUSTED_NFC_GVA_BASELINE","NFC_COMPENSATION_SHARE_GVA","ALIAS_INTERFACE_ONLY","no","S20C contract records WAGE_SHARE_UNADJUSTED_NFC_GVA_BASELINE = NFC_COMP / NFC_GVA; S29A constructed NFC_COMPENSATION_SHARE_GVA from the same formula."
+"S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE","WAGE_SHARE_UNADJUSTED_CORP_GVA_ROBUSTNESS","CORP_COMPENSATION_SHARE_GVA","ALIAS_INTERFACE_ONLY","no","S20C contract records a corporate GVA robustness wage-share lane; S29A constructed CORP_COMPENSATION_SHARE_GVA from the same formula."
