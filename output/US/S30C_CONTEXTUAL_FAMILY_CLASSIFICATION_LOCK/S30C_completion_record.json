@@ -1,0 +1,21 @@
+﻿{
+    "stage_id":  "S30C_CONTEXTUAL_FAMILY_CLASSIFICATION_LOCK",
+    "task_id":  "S30C_CONTEXTUAL_FAMILY_CLASSIFICATION_LOCK",
+    "branch":  "feature/s30c-contextual-family-lock",
+    "base_commit":  "911885ce763fdf4b73903ebb552682cfb108d0b3",
+    "result_commit":  "RECORDED_IN_FINAL_REPORT_AFTER_COMMIT",
+    "validation_status":  "PASS",
+    "decision":  "AUTHORIZE_CONTEXTUAL_REFERENCE_CONSUMPTION",
+    "family_status":  "CONTEXTUAL_FAMILY_CLASSIFICATION_LOCKED",
+    "authoritative_variable_count":  0,
+    "robustness_variable_count":  0,
+    "conditional_variable_count":  0,
+    "diagnostic_variable_count":  33,
+    "alias_variable_count":  0,
+    "metadata_only_count":  37,
+    "blocked_variable_count":  4,
+    "review_required_count":  147,
+    "handoff_ready":  true,
+    "consumer_intake_ready":  true,
+    "worker_status":  "COMPLETED"
+}
