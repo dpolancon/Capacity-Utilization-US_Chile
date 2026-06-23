@@ -1,0 +1,2 @@
+"stage_id","decision","status","validation_status","canonical_long_rows","canonical_long_variables","canonical_wide_rows","canonical_wide_variables","earliest_year","latest_year","handoff_ready","consumer_intake_ready"
+"S30E_INTEGRATED_DATASET_CLOSURE_AND_CANONICAL_ASSEMBLY","AUTHORIZE_S30F_DATASET_RELEASE_FREEZE","S30E_INTEGRATED_DATASET_CLOSED_AND_VALIDATED","PASS 30/30",3637,37,125,37,1901,2025,"yes","yes"

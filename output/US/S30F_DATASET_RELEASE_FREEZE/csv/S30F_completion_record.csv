@@ -1,0 +1,2 @@
+"stage_id","release_id","release_date","decision","status","validation_status","release_files","canonical_long_rows","canonical_long_variables","canonical_wide_rows","canonical_wide_variables","earliest_year","latest_year","downstream_consumption_ready"
+"S30F_DATASET_RELEASE_FREEZE","chapter2_us_source_of_truth_v1","2026-06-23","AUTHORIZE_DOWNSTREAM_CHAPTER2_SOURCE_OF_TRUTH_DATASET_CONSUMPTION","CHAPTER2_US_SOURCE_OF_TRUTH_DATASET_FROZEN","PASS 37/37",12,3637,37,125,37,1901,2025,"yes"
