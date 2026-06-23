@@ -1,0 +1,34 @@
+# S30E Validation
+
+Validation: PASS 30/30
+
+all_required_family_interfaces_consumed: PASS
+all_authoritative_objects_accounted_for: PASS
+every_candidate_object_classified: PASS
+no_conflicting_duplicate_year_variable_values: PASS
+canonical_long_key_unique: PASS
+canonical_wide_year_unique: PASS
+no_duplicate_variable_ids_in_dictionary: PASS
+no_independent_alias_duplication: PASS
+metadata_only_excluded_from_value_rows: PASS
+blocked_objects_excluded_from_value_rows: PASS
+parked_objects_excluded_from_value_rows: PASS
+contextual_objects_retain_contextual_status: PASS
+capital_boundary_preserved: PASS
+output_boundary_preserved: PASS
+distribution_hierarchy_preserved: PASS
+units_internally_consistent: PASS
+reference_years_explicit: PASS
+transformations_explicit: PASS
+source_copy_residual_zero: PASS
+long_wide_reconciliation_passes: PASS
+missingness_measured_not_removed: PASS
+support_windows_preserved: PASS
+no_complete_case_sample: PASS
+no_estimation_sample: PASS
+no_q_constructed: PASS
+no_theta_constructed: PASS
+no_productive_capacity_constructed: PASS
+no_utilization_constructed: PASS
+no_modeling: PASS
+no_econometrics: PASS
