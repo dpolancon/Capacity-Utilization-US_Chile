@@ -1,0 +1,4 @@
+"variable_id","display_name","family_id","global_available_variable_specific_1901_2025","pre_1974_variable_start_1973","post_1974_1974_2025","post_fordist_pre_gfc_1974_2008","post_gfc_2009_2025"
+"G_TOT_GPIM_2017","G_TOT_GPIM_2017","capital","2.61 (13.81) [n=123]","5.21 (17.64) [n=72]","-1.06 (0.65) [n=51]","-0.78 (0.53) [n=35]","-1.67 (0.46) [n=16]"
+"NFC_COMPENSATION_SHARE_GVA","NFC_COMPENSATION_SHARE_GVA","distribution","-0.07 (1.17) [n=96]","0.03 (1.37) [n=44]","-0.15 (0.96) [n=52]","-0.14 (0.94) [n=35]","-0.17 (1.04) [n=17]"
+"Y_REAL_NFC_GVA_BASELINE","Y_REAL_NFC_GVA_BASELINE","output","3.83 (5.46) [n=96]","4.66 (7.25) [n=44]","3.13 (3.19) [n=52]","3.52 (2.99) [n=35]","2.31 (3.54) [n=17]"

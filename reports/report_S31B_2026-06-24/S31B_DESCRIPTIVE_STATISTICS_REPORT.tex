@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{pdflscape}
+\usepackage{threeparttable}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{S31B Univariate Descriptive Diagnostics}
+\rhead{Chapter 2 U.S.}
+\cfoot{\thepage}
+\title{Chapter 2 U.S. Descriptive Statistics:\\Historical Windows, Growth Rates, and Output-Capital Correspondence}
+\author{S31B Univariate Descriptive Diagnostics}
+\date{June 24, 2026}
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+\section{Scope and stage boundary}
+S31B computes descriptive statistics and non-canonical diagnostic growth rates from the frozen S30 release.
+It does not alter the source-of-truth dataset, create new canonical variables, construct estimation samples, infer integration order, or estimate structural elasticities.
+\section{Frozen dataset and variable coverage}
+The frozen release contains 37 canonical variables, 3637 long-format observations, and 125 annual wide-panel rows spanning 1901--2025. Every canonical variable enters the master table; the descriptive architecture therefore preserves the release rather than selecting a convenient subset.
+\section{Historical-window architecture}
+The registry contains 16 windows: 4 structural or structural-umbrella windows, 6 nested windows, 4 transition windows, one global window, and one supplementary bridge. Transition and event windows are descriptive only and are not eligible for testing or estimation.
+\section{Variable inclusion and reporting tiers}
+Tier A contains 16 core representations, Tier B contains 17 robustness representations, and Tier C contains 4 reference-only variables. These are presentation tiers derived from frozen S30 and S31A metadata; they do not reclassify the underlying analytical roles.
+\section{Growth-rate construction protocol}
+Positive levels use direct annual percent changes, shares use percentage-point changes, and existing frozen growth or difference variables enter directly without another transformation. Log levels do not drive the headline evidence when a frozen level counterpart exists. The growth panel is diagnostic, non-canonical, and confined to S31B.
+\section{Broad structural comparison}
+\input{tables/table_01_structural_growth_comparison.tex}
+\section{Pre-1974 decomposition}
+The 1940--1946 consolidation window is too short to carry regime-level distributional claims; it remains a bounded descriptive interval whose endpoint and annual-change evidence complements the longer Fordist core.
+\input{tables/table_02_pre_1974_decomposition.tex}
+\section{Post-1974 decomposition}
+The post-1974 hierarchy separates the mature post-Volcker interval from the post-GFC configuration. The 2022--2025 interval remains descriptive only because four annual observations cannot establish a regime parameter.
+\input{tables/table_03_post_1974_decomposition.tex}
+\section{Transition and event profiles}
+Transition and event windows are descriptive only and are not eligible for testing or estimation.
+\input{tables/table_04_transition_event_summary.tex}
+\section{Output-capital growth correspondence}
+The correspondence table pairs the preferred frozen Tier A real-output level with the preferred frozen Tier A total-capital level. The descriptive output-capital growth ratio is not an estimate of the structural elasticity $\theta$.
+\input{tables/table_05_elasticity_oriented_growth_correspondence.tex}
+\section{Robustness and reference-only variables}
+Robustness variables remain visible in Appendix A and reference-only variables remain visible in Appendix B. Their inclusion preserves the frozen contract while preventing alternative representations from displacing the preferred Tier A evidence.
+\input{tables/appendix_a_robustness_descriptives.tex}
+\input{tables/appendix_b_reference_descriptives.tex}
+\section{Coverage and interpretation cautions}
+Missing observations are measured, never filled. Annual changes require consecutive calendar years, transition windows never support testing or estimation, and no annual output-growth/capital-growth ratio is constructed.
+\section{Validation summary}
+The authoritative validation ledger is copied into the report bundle. The final result requires the compiled PDF and page-by-page visual inspection to pass.
+\appendix
+\section{Complete master descriptives}
+\input{tables/appendix_c_complete_master_descriptives.tex}
+\end{document}
