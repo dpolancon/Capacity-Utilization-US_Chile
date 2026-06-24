@@ -1,0 +1,6 @@
+"required_condition","result","evidence","source_variable","failure_reason"
+"compatible financial-sector surplus or profit series","FAIL","No authorized compatible financial-sector surplus series is present in the inspected inputs.","","FINANCIAL_SURPLUS_INPUT_UNAVAILABLE"
+"NFC-to-finance transfer measure","FAIL","NFC_NET_INT identifies the NFC payment position but not the recipient sector.","NFC_NET_INT","COUNTERPARTY_UNRESOLVED"
+"selected interest embedded in financial-side aggregate","FAIL","Embedding cannot be established without an identified financial-side aggregate.","","ACCOUNTING_IDENTITY_UNRESOLVED"
+"compatible accounting basis and units","NOT_TESTABLE","No eligible two-sided construction pair exists.","","UPSTREAM_GATE_FAILED"
+"non-overlapping sector boundaries","NOT_TESTABLE","No eligible two-sided construction pair exists.","","UPSTREAM_GATE_FAILED"
