@@ -29,9 +29,13 @@ base_ok <- identical(system2("git", c("merge-base", "--is-ancestor", base_commit
 source_path <- file.path(root, "output", "US", "S24A_INCOME_DISTRIBUTION_SOURCE_INPUTS_CONSTRUCTION", "csv", "S24A_income_distribution_source_inputs_long.csv")
 s30g_completion_path <- file.path(root, "output", "US", "S30G_FINANCIAL_CLAIMS_PROXY_ADDENDUM", "csv", "S30G_completion_record.csv")
 s30g_panel_path <- file.path(root, "output", "US", "S30G_FINANCIAL_CLAIMS_PROXY_ADDENDUM", "csv", "S30G_new_variable_panel_long.csv")
+theory_lock_path <- file.path(root, "chapter2_vault", "04_data_measurement", "L05_Corporate_Surplus_and_Financial_Redistribution_Lock.md")
 source <- read_csv(source_path)
 s30g_completion <- read_csv(s30g_completion_path)
 s30g_panel <- read_csv(s30g_panel_path)
+if (!file.exists(theory_lock_path)) stop("Missing theory lock: ", theory_lock_path, call. = FALSE)
+theory_lock_text <- readLines(theory_lock_path, warn = FALSE, encoding = "UTF-8")
+read_files <- unique(c(read_files, rel(theory_lock_path)))
 
 pairs <- data.frame(
   concept = c("GVA", "CFC", "NVA", "COMP", "NOS", "NET_INT", "TRANSFERS_NET",
@@ -90,14 +94,25 @@ wide <- wide[order(wide$year), ]
 implied_wide <- data.frame(year = wide$year)
 for (i in seq_len(nrow(pairs))) implied_wide[[pairs$fin_id[i]]] <- wide[[pairs$corp_id[i]]] - wide[[pairs$nfc_id[i]]]
 
+locked_implied_roles <- c(
+  FIN_NOS_IMPLIED = "FINANCIAL_REDISTRIBUTED_PROFIT_TYPE_INCOME_PROXY",
+  FIN_COMP_IMPLIED = "UNPRODUCTIVE_FINANCIAL_LABOR_COST_FINANCED_FROM_PRIMARY_VALUE",
+  FIN_NVA_IMPLIED = "FINANCIAL_SECTOR_ABSORPTION_OF_PRIMARY_VALUE_PROXY",
+  FIN_GVA_IMPLIED = "FINANCIAL_GROSS_ABSORPTION_ACCOUNTING_RESIDUAL"
+)
 implied_long <- do.call(rbind, lapply(seq_len(nrow(pairs)), function(i) {
+  role <- if (pairs$fin_id[i] %in% names(locked_implied_roles)) {
+    unname(locked_implied_roles[pairs$fin_id[i]])
+  } else {
+    "IMPLIED_FINANCIAL_CORPORATE_ACCOUNT_DIAGNOSTIC"
+  }
   data.frame(
     year = implied_wide$year,
     variable_id = pairs$fin_id[i],
     value = implied_wide[[pairs$fin_id[i]]],
     unit = "Millions of current dollars",
     family_id = "distribution",
-    analytical_role = "IMPLIED_FINANCIAL_CORPORATE_ACCOUNT_DIAGNOSTIC",
+    analytical_role = role,
     contract_status = "DIAGNOSTIC_CANDIDATE",
     formula = paste(pairs$corp_id[i], "-", pairs$nfc_id[i]),
     source_stage = stage_id,
@@ -196,10 +211,14 @@ clean_specs <- data.frame(
   unit = c("Millions of current dollars", "ratio", "ratio", "Millions of current dollars",
            "Millions of current dollars", "ratio", "ratio", "Millions of current dollars"),
   analytical_role = c(
-    "CORPORATE_CONSOLIDATION_PROXY", "CORPORATE_CONSOLIDATION_PROXY",
-    "CORPORATE_CONSOLIDATION_PROXY", "FINANCIAL_RESIDUAL_DIAGNOSTIC",
-    "CORPORATE_CONSOLIDATION_SENSITIVITY", "CORPORATE_CONSOLIDATION_SENSITIVITY",
-    "CORPORATE_CONSOLIDATION_SENSITIVITY", "FINANCIAL_RESIDUAL_DIAGNOSTIC"
+    "PARTIAL_CORPORATE_FINANCIAL_CLAIMS_CONSOLIDATION_PROXY",
+    "PARTIAL_CORPORATE_FINANCIAL_CLAIMS_CONSOLIDATION_PROXY",
+    "PARTIAL_CORPORATE_FINANCIAL_CLAIMS_CONSOLIDATION_PROXY",
+    "FINANCIAL_REDISTRIBUTION_RESIDUAL_DIAGNOSTIC",
+    "PARTIAL_CORPORATE_CONSOLIDATION_MATCHED_POSITION_SENSITIVITY",
+    "PARTIAL_CORPORATE_CONSOLIDATION_MATCHED_POSITION_SENSITIVITY",
+    "PARTIAL_CORPORATE_CONSOLIDATION_MATCHED_POSITION_SENSITIVITY",
+    "FINANCIAL_REDISTRIBUTION_RESIDUAL_DIAGNOSTIC"
   ),
   contract_status = c(rep("ROBUSTNESS_CANDIDATE", 3), "DIAGNOSTIC_CANDIDATE",
                       rep("ROBUSTNESS_CANDIDATE", 3), "DIAGNOSTIC_CANDIDATE"),
@@ -271,6 +290,53 @@ extension_dictionary$coverage_end <- 2025
 extension_dictionary$candidate_status <- "READY_FOR_EXPLICIT_V1_1_EXTENSION_REVIEW"
 extension_dictionary$baseline_replacement <- "no"
 
+role_lock <- data.frame(
+  object_id = c(
+    "NFC_NOS",
+    "FIN_NOS_IMPLIED",
+    "FIN_COMP_IMPLIED",
+    "FIN_NVA_IMPLIED",
+    "FIN_GVA_IMPLIED",
+    "NFC_SURPLUS_AFTER_NET_INTEREST_PROXY",
+    "CORP_NOS_NET_NFC_FINANCIAL_CLAIMS_PROXY",
+    "FINANCIAL_RESIDUAL_FAMILY"
+  ),
+  locked_role = c(
+    "CORPORATE_PRODUCTIVE_ORIGIN_SURPLUS_BASELINE",
+    "FINANCIAL_REDISTRIBUTED_PROFIT_TYPE_INCOME_PROXY",
+    "UNPRODUCTIVE_FINANCIAL_LABOR_COST_FINANCED_FROM_PRIMARY_VALUE",
+    "FINANCIAL_SECTOR_ABSORPTION_OF_PRIMARY_VALUE_PROXY",
+    "FINANCIAL_GROSS_ABSORPTION_ACCOUNTING_RESIDUAL",
+    "NFC_SURPLUS_REMAINING_AFTER_BOUNDED_FINANCIAL_CLAIMS",
+    "PARTIAL_CORPORATE_FINANCIAL_CLAIMS_CONSOLIDATION_PROXY",
+    "DIAGNOSTIC_OR_SENSITIVITY_ONLY"
+  ),
+  baseline_eligible = c("yes", rep("no", 7)),
+  interpretation = c(
+    "Observable productive-origin corporate surplus proxy before financial distribution.",
+    "Financial profit form embedded in published corporate NOS; redistributed rather than independently produced surplus.",
+    "Unproductive financial labor cost financed from value generated in primary productive activity.",
+    "Total financial-sector absorption of primary value; broader than financial profit.",
+    "Gross accounting residual including CFC; not current redistributed net surplus.",
+    "NFC surplus remaining after the bounded net-interest and miscellaneous-payment position.",
+    "Published corporate NOS after removing one bounded NFC financial-claims channel.",
+    "No financial residual variable may replace NFC_NOS without an explicit theory-lock revision."
+  ),
+  prohibited_use = c(
+    "replacement by after-interest or financial-residual measure",
+    "independently produced surplus; bilateral transfer rate",
+    "financial profit; additive second profit component",
+    "financial profit alone; independently produced value",
+    "net surplus without qualification",
+    "productive-origin surplus baseline",
+    "fully cleaned productive-origin surplus; exact bilateral consolidation",
+    "baseline replacement; summation across decompositions"
+  ),
+  lock_status = "LOCKED",
+  lock_source = rel(theory_lock_path),
+  stringsAsFactors = FALSE
+)
+
 checks <- data.frame(check_id = character(), check_name = character(), status = character(), evidence = character())
 add <- function(id, name, ok, evidence) checks <<- rbind(checks, data.frame(
   check_id = id, check_name = name, status = ifelse(ok, "PASS", "FAIL"), evidence = as.character(evidence)))
@@ -299,6 +365,30 @@ add("S30H_VAL_21", "no_external_fetch", TRUE, "committed S24A and S30G inputs on
 add("S30H_VAL_22", "no_s31_regeneration", TRUE, "no S31 write path")
 add("S30H_VAL_23", "no_econometrics", TRUE, "accounting identities only")
 add("S30H_VAL_24", "outputs_scoped_to_s30h", TRUE, "code and S30H output namespace")
+add("S30H_VAL_25", "theory_lock_present", any(grepl("^\\*\\*LOCKED\\*\\*$", theory_lock_text)), rel(theory_lock_path))
+add("S30H_VAL_26", "productive_origin_role_locked",
+    role_lock$locked_role[role_lock$object_id == "NFC_NOS"] == "CORPORATE_PRODUCTIVE_ORIGIN_SURPLUS_BASELINE",
+    "NFC_NOS")
+add("S30H_VAL_27", "financial_nos_redistribution_role_locked",
+    unique(implied_long$analytical_role[implied_long$variable_id == "FIN_NOS_IMPLIED"]) ==
+      "FINANCIAL_REDISTRIBUTED_PROFIT_TYPE_INCOME_PROXY",
+    "FIN_NOS_IMPLIED")
+add("S30H_VAL_28", "financial_compensation_role_locked",
+    unique(implied_long$analytical_role[implied_long$variable_id == "FIN_COMP_IMPLIED"]) ==
+      "UNPRODUCTIVE_FINANCIAL_LABOR_COST_FINANCED_FROM_PRIMARY_VALUE",
+    "FIN_COMP_IMPLIED")
+add("S30H_VAL_29", "financial_nva_absorption_role_locked",
+    unique(implied_long$analytical_role[implied_long$variable_id == "FIN_NVA_IMPLIED"]) ==
+      "FINANCIAL_SECTOR_ABSORPTION_OF_PRIMARY_VALUE_PROXY",
+    "FIN_NVA_IMPLIED")
+add("S30H_VAL_30", "partial_clean_role_locked",
+    all(clean_specs$analytical_role[clean_specs$assumption == "FULL_NFC_ATTRIBUTION" &
+          clean_specs$contract_status == "ROBUSTNESS_CANDIDATE"] ==
+        "PARTIAL_CORPORATE_FINANCIAL_CLAIMS_CONSOLIDATION_PROXY"),
+    "full-attribution clean proxy family")
+add("S30H_VAL_31", "no_financial_residual_baseline_replacement",
+    all(extension_dictionary$baseline_replacement == "no"),
+    "all extension variables")
 
 write_csv(availability, "S30H_available_source_variable_registry.csv")
 write_csv(pairs, "S30H_corporate_nfc_pair_registry.csv")
@@ -313,6 +403,7 @@ write_csv(reconciliation, "S30H_nos_reconciliation_ledger.csv")
 write_csv(flags, "S30H_interpretation_flag_ledger.csv")
 write_csv(extension_long, "S30H_v1_1_extension_candidate_long.csv")
 write_csv(extension_dictionary, "S30H_v1_1_extension_candidate_dictionary.csv")
+write_csv(role_lock, "S30H_corporate_surplus_dataset_role_lock.csv")
 write_csv(checks, "S30H_validation_checks.csv")
 write_csv(data.frame(file_read = sort(read_files)), "S30H_files_read_manifest.csv")
 
@@ -361,9 +452,11 @@ write_md(c(
   "### Interpretation hierarchy",
   "",
   "- `NFC_NOS`: productive-origin surplus baseline.",
+  "- `FIN_NOS_IMPLIED`: redistributed financial profit-type income diagnostic.",
+  "- `FIN_COMP_IMPLIED`: unproductive financial labor-cost diagnostic.",
+  "- `FIN_NVA_IMPLIED`: total financial absorption diagnostic.",
   "- S30G after-interest variables: NFC surplus remaining after the bounded claims proxy.",
-  "- S30H corporate clean variables: published corporate NOS after removing the assumed NFC financial claim once.",
-  "- S30H implied financial variables: accounting residuals, not independently produced surplus.",
+  "- S30H corporate clean variables: partial consolidation sensitivity proxies.",
   "",
   "### Release-candidate disposition",
   "",
@@ -371,6 +464,23 @@ write_md(c(
   "",
   "The candidate remains bounded by unresolved counterparty attribution, the inclusion of miscellaneous payments, and the absence of an actual/imputed-interest decomposition."
 ), "S30H_CORPORATE_NOS_ACCOUNTING_RECONCILIATION_REPORT.md")
+
+write_md(c(
+  "# S30H Corporate Surplus Dataset-Role Lock",
+  "",
+  "**Status:** LOCKED",
+  "",
+  "| Object or family | Locked dataset role |",
+  "|---|---|",
+  "| `NFC_NOS` | `CORPORATE_PRODUCTIVE_ORIGIN_SURPLUS_BASELINE` |",
+  "| `FIN_NOS_IMPLIED` | `FINANCIAL_REDISTRIBUTED_PROFIT_TYPE_INCOME_PROXY` |",
+  "| `FIN_COMP_IMPLIED` | `UNPRODUCTIVE_FINANCIAL_LABOR_COST_FINANCED_FROM_PRIMARY_VALUE` |",
+  "| `FIN_NVA_IMPLIED` | `FINANCIAL_SECTOR_ABSORPTION_OF_PRIMARY_VALUE_PROXY` |",
+  "| S30G after-interest variables | Financial-claims burden and retained-surplus robustness |",
+  "| S30H corporate clean variables | Partial consolidation sensitivity proxies |",
+  "",
+  "No financial residual variable may replace `NFC_NOS` as the productive-origin baseline without an explicit theory-lock revision."
+), "S30H_CORPORATE_SURPLUS_DATASET_ROLE_LOCK.md")
 
 write_md(c(
   "# S30H Accounting Protocol",

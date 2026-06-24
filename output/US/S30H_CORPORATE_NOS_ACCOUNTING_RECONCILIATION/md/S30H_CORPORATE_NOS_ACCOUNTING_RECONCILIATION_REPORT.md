@@ -21,9 +21,11 @@ Neither proxy is an observed bilateral NFC-to-finance flow. The full-attribution
 ### Interpretation hierarchy
 
 - `NFC_NOS`: productive-origin surplus baseline.
+- `FIN_NOS_IMPLIED`: redistributed financial profit-type income diagnostic.
+- `FIN_COMP_IMPLIED`: unproductive financial labor-cost diagnostic.
+- `FIN_NVA_IMPLIED`: total financial absorption diagnostic.
 - S30G after-interest variables: NFC surplus remaining after the bounded claims proxy.
-- S30H corporate clean variables: published corporate NOS after removing the assumed NFC financial claim once.
-- S30H implied financial variables: accounting residuals, not independently produced surplus.
+- S30H corporate clean variables: partial consolidation sensitivity proxies.
 
 ### Release-candidate disposition
 

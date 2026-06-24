@@ -1,2 +1,2 @@
 "stage_id","validation_result","validation_status","decision","status","source_variables","accounting_identities","maximum_rounding_residual_millions","implied_financial_variables","clean_proxy_variables","extension_candidate_variables","extension_candidate_rows","matched_transfer_positive_years","matched_transfer_zero_years","full_financial_residual_negative_years"
-"S30H_CORPORATE_NOS_ACCOUNTING_RECONCILIATION","PASS","PASS 24/24","S30H_CORPORATE_NOS_RECONCILIATION_COMPLETE","V1_1_EXTENSION_READY_FOR_EXPLICIT_AUTHORIZATION",29,6,2,14,8,22,2134,90,7,60
+"S30H_CORPORATE_NOS_ACCOUNTING_RECONCILIATION","PASS","PASS 31/31","S30H_CORPORATE_NOS_RECONCILIATION_COMPLETE","V1_1_EXTENSION_READY_FOR_EXPLICIT_AUTHORIZATION",29,6,2,14,8,22,2134,90,7,60
