@@ -1,0 +1,7 @@
+"variable_id","coverage_start","coverage_end","calendar_span","observation_count","missing_count","internal_gap_count","first_complete_year","last_complete_year","support_reason"
+"NFC_NET_INTEREST_MISC_PAYMENTS_PROXY",1929,2025,97,97,0,0,1929,2025,"Annual inner alignment of NFC_NET_INT, NFC_NOS, NFC_NVA, and NFC_GVA as required by each identity."
+"NFC_FINANCIAL_CLAIMS_BURDEN_NOS",1929,2025,97,97,0,0,1929,2025,"Annual inner alignment of NFC_NET_INT, NFC_NOS, NFC_NVA, and NFC_GVA as required by each identity."
+"NFC_FINANCIAL_CLAIMS_BURDEN_NVA",1929,2025,97,97,0,0,1929,2025,"Annual inner alignment of NFC_NET_INT, NFC_NOS, NFC_NVA, and NFC_GVA as required by each identity."
+"NFC_SURPLUS_AFTER_NET_INTEREST_PROXY",1929,2025,97,97,0,0,1929,2025,"Annual inner alignment of NFC_NET_INT, NFC_NOS, NFC_NVA, and NFC_GVA as required by each identity."
+"NFC_SURPLUS_AFTER_NET_INTEREST_SHARE_NVA",1929,2025,97,97,0,0,1929,2025,"Annual inner alignment of NFC_NET_INT, NFC_NOS, NFC_NVA, and NFC_GVA as required by each identity."
+"NFC_SURPLUS_AFTER_NET_INTEREST_SHARE_GVA",1929,2025,97,97,0,0,1929,2025,"Annual inner alignment of NFC_NET_INT, NFC_NOS, NFC_NVA, and NFC_GVA as required by each identity."

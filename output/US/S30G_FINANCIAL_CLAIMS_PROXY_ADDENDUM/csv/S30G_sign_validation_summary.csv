@@ -1,0 +1,7 @@
+"metric","count","interpretation"
+"negative_interest_payment_years",0,"Flagged for interpretation; observations are retained without deletion or capping."
+"zero_interest_payment_years",0,"Flagged for interpretation; observations are retained without deletion or capping."
+"negative_after_interest_surplus_years",2,"Flagged for interpretation; observations are retained without deletion or capping."
+"burden_above_one_years",2,"Flagged for interpretation; observations are retained without deletion or capping."
+"after_interest_share_below_zero_years",2,"Flagged for interpretation; observations are retained without deletion or capping."
+"after_interest_share_above_one_years",0,"Flagged for interpretation; observations are retained without deletion or capping."
