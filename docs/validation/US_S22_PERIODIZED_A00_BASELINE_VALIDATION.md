@@ -11,7 +11,7 @@ S22 constructs periodized, window-reset `q_omega_h1_Kcap` indexes from NFC produ
 - `data/processed/us_s20/us_s20_capital_distribution_frontier_panel.csv`
 - `data/processed/us_s20/us_s20_validation_checks.csv`
 - `data/processed/US/us_s20_admissibility_panel.csv`
-- `output/US/S30I_INTEGRATION_ORDER_PRECHECK_B1_E2B/csv/S30I_variable_construction_ledger.csv`
+- `output/US/S31I_INTEGRATION_ORDER_PRECHECK_B1_E2B/csv/S31I_variable_construction_ledger.csv`
 - Optional canonical S21 q panel was not present and was not required.
 
 ## Period windows

@@ -18,21 +18,21 @@ input_paths <- c(
     repo_root, "data", "processed", "us_s22",
     "us_s22_periodized_q_panel.csv"
   ),
-  s30i_panel = file.path(
-    repo_root, "data", "processed", "us_s30i",
-    "us_s30i_candidate_audit_panel.csv"
+  s31i_panel = file.path(
+    repo_root, "data", "processed", "us_s31i",
+    "us_s31i_candidate_audit_panel.csv"
   ),
-  s30i_recommendations = file.path(
-    repo_root, "data", "processed", "us_s30i",
-    "us_s30i_admissibility_recommendations.csv"
+  s31i_recommendations = file.path(
+    repo_root, "data", "processed", "us_s31i",
+    "us_s31i_admissibility_recommendations.csv"
   ),
-  s30i_i2_ledger = file.path(
-    repo_root, "data", "processed", "us_s30i",
-    "us_s30i_i2_risk_ledger.csv"
+  s31i_i2_ledger = file.path(
+    repo_root, "data", "processed", "us_s31i",
+    "us_s31i_i2_risk_ledger.csv"
   ),
-  s30i_checks = file.path(
-    repo_root, "data", "processed", "us_s30i",
-    "us_s30i_validation_checks.csv"
+  s31i_checks = file.path(
+    repo_root, "data", "processed", "us_s31i",
+    "us_s31i_validation_checks.csv"
   )
 )
 s22_ledger_path <- file.path(
@@ -163,19 +163,19 @@ provider_hashes_before <- if (length(provider_files)) {
 
 s20 <- read_csv(input_paths[["s20_panel"]])
 s22 <- read_csv(input_paths[["s22_panel"]])
-panel <- read_csv(input_paths[["s30i_panel"]])
-s30i_rec <- read_csv(input_paths[["s30i_recommendations"]])
-s30i_i2 <- read_csv(input_paths[["s30i_i2_ledger"]])
-s30i_checks <- read_csv(input_paths[["s30i_checks"]])
+panel <- read_csv(input_paths[["s31i_panel"]])
+s31i_rec <- read_csv(input_paths[["s31i_recommendations"]])
+s31i_i2 <- read_csv(input_paths[["s31i_i2_ledger"]])
+s31i_checks <- read_csv(input_paths[["s31i_checks"]])
 s22_ledger <- read_csv(s22_ledger_path)
 
-s30i_rec$i2_risk_flag <- as_bool(s30i_rec$i2_risk_flag)
-s30i_rec$rolling_instability_flag <- as_bool(
-  s30i_rec$rolling_instability_flag
+s31i_rec$i2_risk_flag <- as_bool(s31i_rec$i2_risk_flag)
+s31i_rec$rolling_instability_flag <- as_bool(
+  s31i_rec$rolling_instability_flag
 )
-s30i_rec$carry_to_S32 <- as_bool(s30i_rec$carry_to_S32)
-require_condition(!any(s30i_checks$status == "FAIL"), "S30I has failed checks.")
-require_condition(!anyDuplicated(panel$year), "S30I panel years are duplicated.")
+s31i_rec$carry_to_S32 <- as_bool(s31i_rec$carry_to_S32)
+require_condition(!any(s31i_checks$status == "FAIL"), "S31I has failed checks.")
+require_condition(!anyDuplicated(panel$year), "S31I panel years are duplicated.")
 require_condition(
   all(c("y_t", "k_Kcap", "q_omega_h1_Kcap") %in% names(panel)),
   "S32 baseline variables are missing."
@@ -273,7 +273,7 @@ mechanization_models <- c(
 )
 for (model_id in names(mechanization_models)) {
   candidate <- mechanization_models[[model_id]]
-  rec <- s30i_rec[s30i_rec$variable == candidate, , drop = FALSE]
+  rec <- s31i_rec[s31i_rec$variable == candidate, , drop = FALSE]
   role <- if (nrow(rec) && isTRUE(rec$i2_risk_flag)) {
     "mechanization_i2_diagnostic_stress_test"
   } else {
@@ -310,11 +310,11 @@ model_data <- function(spec) {
   data[stats::complete.cases(data), , drop = FALSE]
 }
 rec_for <- function(variable) {
-  s30i_rec[s30i_rec$variable == variable, , drop = FALSE]
+  s31i_rec[s31i_rec$variable == variable, , drop = FALSE]
 }
-model_s30i_metadata <- function(spec) {
+model_s31i_metadata <- function(spec) {
   variables <- c(spec$dependent_variable, spec$regressors)
-  rows <- s30i_rec[match(variables, s30i_rec$variable), , drop = FALSE]
+  rows <- s31i_rec[match(variables, s31i_rec$variable), , drop = FALSE]
   found <- !is.na(rows$variable)
   rows <- rows[found, , drop = FALSE]
   statuses <- paste0(rows$variable, "=", rows$s32_recommendation)
@@ -337,7 +337,7 @@ model_s30i_metadata <- function(spec) {
 
 registry_rows <- lapply(model_specs, function(spec) {
   data <- model_data(spec)
-  s30 <- model_s30i_metadata(spec)
+  s30 <- model_s31i_metadata(spec)
   data.frame(
     model_id = spec$model_id,
     model_family = spec$model_family,
@@ -348,9 +348,9 @@ registry_rows <- lapply(model_specs, function(spec) {
     dependent_variable = metadata[["dependent_variable"]],
     dependent_variable_role = metadata[["dependent_variable_role"]],
     regressors = paste(spec$regressors, collapse = " + "),
-    s30i_carry_forward_status = s30$status,
-    s30i_i2_warning = s30$i2_warning,
-    s30i_rolling_warning = s30$rolling_warning,
+    s31i_carry_forward_status = s30$status,
+    s31i_i2_warning = s30$i2_warning,
+    s31i_rolling_warning = s30$rolling_warning,
     n_obs = nrow(data),
     status = ifelse(nrow(data) >= 25L, "ready_for_preliminary_screen", "insufficient_sample"),
     notes = spec$notes,
@@ -406,7 +406,7 @@ coefficient_frame <- function(
 for (spec in model_specs) {
   data <- model_data(spec)
   formula <- stats::reformulate(spec$regressors, response = "y_t")
-  s30 <- model_s30i_metadata(spec)
+  s30 <- model_s31i_metadata(spec)
   model_warning <- collapse_unique(c(
     s30$i2_warning, s30$rolling_warning,
     if (nrow(data) < 30L) "short_sample_under_30" else ""
@@ -729,7 +729,7 @@ summary_rows <- lapply(model_specs, function(spec) {
   ]
   screen <- screen_from_gates(po$po_gate, residual$residual_adf_gate)
   priority <- advisor_priority_for(
-    spec, screen, registry$s30i_i2_warning
+    spec, screen, registry$s31i_i2_warning
   )
   data.frame(
     model_id = spec$model_id,
@@ -742,8 +742,8 @@ summary_rows <- lapply(model_specs, function(spec) {
     residual_adf_gate = residual$residual_adf_gate,
     residual_kpss_gate = residual$residual_kpss_gate,
     cointegration_screen = screen,
-    s30i_i2_warning = registry$s30i_i2_warning,
-    s30i_rolling_warning = registry$s30i_rolling_warning,
+    s31i_i2_warning = registry$s31i_i2_warning,
+    s31i_rolling_warning = registry$s31i_rolling_warning,
     advisor_show_flag = priority != "6_do_not_show",
     advisor_priority = priority,
     notes = collapse_unique(c(spec$notes, po$error_message)),
@@ -788,8 +788,8 @@ advisor_row <- function(model_id) {
     residual_adf_gate = row$residual_adf_gate,
     residual_kpss_gate = row$residual_kpss_gate,
     cointegration_screen = row$cointegration_screen,
-    s30i_warnings = collapse_unique(
-      c(row$s30i_i2_warning, row$s30i_rolling_warning)
+    s31i_warnings = collapse_unique(
+      c(row$s31i_i2_warning, row$s31i_rolling_warning)
     ),
     advisor_show_flag = row$advisor_show_flag,
     stringsAsFactors = FALSE
@@ -822,8 +822,8 @@ mechanization_table <- do.call(rbind, lapply(
       po_gate = row$po_gate,
       residual_adf_gate = row$residual_adf_gate,
       cointegration_screen = row$cointegration_screen,
-      s30i_warnings = collapse_unique(
-        c(row$s30i_i2_warning, row$s30i_rolling_warning)
+      s31i_warnings = collapse_unique(
+        c(row$s31i_i2_warning, row$s31i_rolling_warning)
       ),
       advisor_show_flag = row$advisor_show_flag,
       comment = model_specs[[model_id]]$notes,
@@ -851,8 +851,8 @@ frontier_table <- do.call(rbind, lapply(frontier_ids, function(model_id) {
     residual_adf_gate = row$residual_adf_gate,
     residual_kpss_gate = row$residual_kpss_gate,
     cointegration_screen = row$cointegration_screen,
-    s30i_warnings = collapse_unique(
-      c(row$s30i_i2_warning, row$s30i_rolling_warning)
+    s31i_warnings = collapse_unique(
+      c(row$s31i_i2_warning, row$s31i_rolling_warning)
     ),
     advisor_show_flag = row$advisor_show_flag,
     stringsAsFactors = FALSE
@@ -953,8 +953,8 @@ source_path <- file.path(
   repo_root, "codes", "US_S32_model_choice_po_baseline_extensions.R"
 )
 source_text <- paste(readLines(source_path, warn = FALSE), collapse = "\n")
-baseline_rec <- s30i_rec[
-  match(c("y_t", "k_Kcap", "q_omega_h1_Kcap"), s30i_rec$variable),
+baseline_rec <- s31i_rec[
+  match(c("y_t", "k_Kcap", "q_omega_h1_Kcap"), s31i_rec$variable),
   ,
   drop = FALSE
 ]
@@ -978,10 +978,10 @@ checks <- do.call(rbind, list(
   validation_check("s22_exists", "S22 periodized q panel exists",
     if (file.exists(input_paths[["s22_panel"]])) "PASS" else "FAIL",
     input_paths[["s22_panel"]]),
-  validation_check("s30i_exists", "S30I recommendation files exist",
+  validation_check("s31i_exists", "S31I recommendation files exist",
     if (all(file.exists(input_paths[c(
-      "s30i_recommendations", "s30i_i2_ledger", "s30i_checks"
-    )]))) "PASS" else "FAIL", "Three S30I governance inputs checked."),
+      "s31i_recommendations", "s31i_i2_ledger", "s31i_checks"
+    )]))) "PASS" else "FAIL", "Three S31I governance inputs checked."),
   validation_check("y_role", "y_t exists and is labeled effective-output proxy",
     if (
       "y_t" %in% names(panel) &&
@@ -1005,7 +1005,7 @@ checks <- do.call(rbind, list(
         all(c(
           "q_omega_h3_Kcap", "q_omega_h5_Kcap",
           "q_e_h1_Kcap", "q_e_h3_Kcap", "q_e_h5_Kcap"
-        ) %in% s30i_rec$variable)
+        ) %in% s31i_rec$variable)
     ) "PASS" else "FAIL",
     "Preferred, memory, and alternative-distribution roles retained."
   ),
@@ -1020,10 +1020,10 @@ checks <- do.call(rbind, list(
   validation_check("i2_flagged", "I2-risk variables are flagged clearly",
     if (all(
       screening_summary$advisor_priority[
-        nzchar(screening_summary$s30i_i2_warning)
+        nzchar(screening_summary$s31i_i2_warning)
       ] == "6_do_not_show"
     )) "PASS" else "FAIL",
-    paste(sum(nzchar(screening_summary$s30i_i2_warning)), "models flagged.")),
+    paste(sum(nzchar(screening_summary$s31i_i2_warning)), "models flagged.")),
   validation_check("q_rule", "Preferred q increment rule is respected",
     if (q_rule_ok) "PASS" else "FAIL",
     "Delta q_omega_h1_Kcap equals lagged omega_NFC times g_Kcap."),
@@ -1097,7 +1097,7 @@ checks <- do.call(rbind, list(
   validation_check("provider_unchanged", "No provider artifacts are modified",
     if (identical(provider_hashes_before, provider_hashes_after))
       "PASS" else "FAIL", paste(length(provider_files), "hashes compared.")),
-  validation_check("upstream_unchanged", "S20/S22/S30I inputs are unchanged",
+  validation_check("upstream_unchanged", "S20/S22/S31I inputs are unchanged",
     if (identical(input_hashes_before, input_hashes_after))
       "PASS" else "FAIL", paste(length(input_hashes_before), "hashes compared.")),
   validation_check("advisor_written", "Advisor report is written",
@@ -1156,7 +1156,7 @@ validation_lines <- c(
   "## Hard-lock confirmation",
   "",
   paste(
-    "S32 fetched no BEA data, modified no S20/S22/S30I or provider output,",
+    "S32 fetched no BEA data, modified no S20/S22/S31I or provider output,",
     "constructed no adjusted distribution or level interaction, ran no",
     "Johansen/VECM or S40 step, reconstructed no productive capacity or",
     "capacity utilization, and promoted no coefficient as final."

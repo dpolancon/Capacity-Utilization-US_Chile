@@ -22,7 +22,7 @@ S14 registers the locked S13 GPIM baseline in the Chapter 2 source-of-truth arch
 - S14 consumes only the S13 panel, audit, validation table, and report.
 - S14 does not reconstruct GPIM or reopen provider discovery.
 - S14 does not read or modify provider files.
-- S14 does not invoke S20, S21, S22, S30I, S30, or S32.
+- S14 does not invoke S20, S21, S22, S31I, S30, or S32.
 - S14 creates no econometric or productive-efficiency object.
 - The diagnostic net-value stock does not enter S14.
 - `FAAt402` remains validation-only historical context.
@@ -39,7 +39,7 @@ S14 registers the locked S13 GPIM baseline in the Chapter 2 source-of-truth arch
 | S13_AUDIT_COVERS_EIGHT_BASELINE_OBJECTS | PASS | 8/8 S13 audit rows are consumed=yes. |
 | NO_NON_BASELINE_S12D_OBJECTS_ENTER_S14 | PASS | Non-baseline variable or role rows registered: 0. |
 | S13_OBSERVATIONS_PRESERVED_WITHOUT_TRANSFORMATION | PASS | 884 finite observations registered; duplicate keys: 0; transformations applied: none. |
-| NO_DOWNSTREAM_STAGE_SCRIPT_INVOKED | PASS | Executable S14 lines invoking S20/S21/S22/S30I/S30/S32: 0. |
+| NO_DOWNSTREAM_STAGE_SCRIPT_INVOKED | PASS | Executable S14 lines invoking S20/S21/S22/S31I/S30/S32: 0. |
 | S14_DATA_ARCHITECTURE_ONLY | PASS | Econometric function calls found: 0; output layer is registration-only. |
 | S13_INPUTS_UNCHANGED_DURING_CONSOLIDATION | PASS | 4/4 S13 input hashes unchanged after consumption. |
 | NO_PROVIDER_FILES_REFERENCED_OR_MODIFIED | PASS | All four inputs resolve inside the S13 output directory; S14 has no provider input or provider write target. |

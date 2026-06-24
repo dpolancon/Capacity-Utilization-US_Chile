@@ -498,7 +498,7 @@ handoff_manifest <- data.frame(
   review_required_count = nrow(review_needed_ledger),
   handoff_ready = "yes",
   consumer_intake_ready = "yes",
-  next_authorized_stage = "S31A_CROSS_FAMILY_CLOSURE_AUDIT_AFTER_ALL_S30_MERGES",
+  next_authorized_stage = "S30E_INTEGRATED_DATASET_CLOSURE_AFTER_ALL_S30_FAMILY_MERGES",
   cross_family_join_authorized = "no"
 )
 

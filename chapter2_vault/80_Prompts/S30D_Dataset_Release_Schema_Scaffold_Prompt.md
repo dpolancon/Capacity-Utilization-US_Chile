@@ -87,7 +87,7 @@ The acceptance target is:
 DATASET_RELEASE_SCAFFOLD_READY
 ```
 
-The final decision may authorize later use by S31B-S31E. It must not authorize canonical assembly.
+The final decision may authorize later use by S30E-S30F. It must not authorize canonical assembly.
 
 ## Required Inputs
 

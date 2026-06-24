@@ -194,7 +194,7 @@ The bounded S20 implementation prompt must require:
 | EXISTING_VAULT_NOTES_UNMODIFIED | PASS | This planning layer creates files only under the new S20 planning output directory. |
 | NO_PROVIDER_FILES_ACCESSED_OR_MODIFIED | PASS | Planning consumed only S14 and S15 output artifacts. |
 | NO_GPIM_RECONSTRUCTION | PASS | No GPIM construction or data transformation ran. |
-| NO_DOWNSTREAM_SCRIPTS_INVOKED | PASS | No S20, S21, S22, S30I, S30, or S32 script was invoked. |
+| NO_DOWNSTREAM_SCRIPTS_INVOKED | PASS | No S20, S21, S22, S31I, S30, or S32 script was invoked. |
 | NO_ECONOMETRICS_RUN | PASS | No estimator, test, coefficient, or model object was created. |
 | PLANNING_REPORT_CREATED | PASS | Markdown planning report and CSV decision ledger were created. |
 | FINAL_DECISION_EXPLICIT | PASS | The decision below is one of the permitted planning outcomes. |
@@ -203,4 +203,4 @@ The bounded S20 implementation prompt must require:
 
 **AUTHORIZE_S20_IMPLEMENTATION_PROMPT**
 
-This authorizes preparation of a bounded implementation prompt, not implementation itself. S21, S22, S30I, S30, and S32 remain closed.
+This permits preparation of a bounded implementation prompt, not implementation itself. S21, S22, S31I, S30, and S32 remain closed.

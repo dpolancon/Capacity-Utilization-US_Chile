@@ -1,0 +1,6 @@
+﻿"audit_scope","residual_count","allowed_exception_count","status","evidence"
+"live_tracked_content","0","0","PASS","No retired stage-label content outside the migration audit"
+"live_tracked_paths","0","0","PASS","No retired stage-label tracked or filesystem paths remain"
+"obsolete_s31_authorization_wording","0","0","PASS","Required governance regex returned no matches"
+"migration_audit_obsolete_label_quotes","0","4814","PASS","Pre-migration inventory and rename ledger quote the retired label and mark every row obsolete_label"
+"frozen_release_conflicts","0","0","PASS","Frozen release contains no taxonomy conflict and was not modified"

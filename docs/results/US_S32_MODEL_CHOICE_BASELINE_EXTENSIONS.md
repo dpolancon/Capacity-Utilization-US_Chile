@@ -7,13 +7,13 @@ The preferred baseline is y_t ~ k_Kcap + q_omega_h1_Kcap. Phillips-Ouliaris and 
 
 ## 2. Baseline result table
 
-|model_id|n_obs|best_available_estimator|theta_0_k_Kcap|theta_omega_q|po_gate|residual_adf_gate|residual_kpss_gate|cointegration_screen|s30i_warnings|advisor_show_flag|
+|model_id|n_obs|best_available_estimator|theta_0_k_Kcap|theta_omega_q|po_gate|residual_adf_gate|residual_kpss_gate|cointegration_screen|s31i_warnings|advisor_show_flag|
 |---|---|---|---|---|---|---|---|---|---|---|
 |S32_A00_baseline|    95|FM_OLS_preliminary|3.3304|-4.4253|fail|pass|pass|mixed_evidence|rolling_instability:y_t,k_Kcap,q_omega_h1_Kcap|TRUE|
 
 ### Aggregate q robustness
 
-|model_id|n_obs|best_available_estimator|theta_0_k_Kcap|theta_omega_q|po_gate|residual_adf_gate|residual_kpss_gate|cointegration_screen|s30i_warnings|advisor_show_flag|
+|model_id|n_obs|best_available_estimator|theta_0_k_Kcap|theta_omega_q|po_gate|residual_adf_gate|residual_kpss_gate|cointegration_screen|s31i_warnings|advisor_show_flag|
 |---|---|---|---|---|---|---|---|---|---|---|
 |S32_A00_q_h3|    93|FM_OLS_preliminary|3.1894|-4.2208|fail|pass|pass|mixed_evidence|rolling_instability:y_t,k_Kcap,q_omega_h3_Kcap|FALSE|
 |S32_A00_q_h5|    91|FM_OLS_preliminary|4.5655|-6.4223|fail|pass|pass|mixed_evidence|rolling_instability:y_t,k_Kcap,q_omega_h5_Kcap|FALSE|
@@ -23,7 +23,7 @@ The preferred baseline is y_t ~ k_Kcap + q_omega_h1_Kcap. Phillips-Ouliaris and 
 
 ## 3. Periodized results table
 
-|model_id|n_obs|best_available_estimator|theta_0_k_Kcap|theta_omega_q|po_gate|residual_adf_gate|residual_kpss_gate|cointegration_screen|s30i_warnings|advisor_show_flag|
+|model_id|n_obs|best_available_estimator|theta_0_k_Kcap|theta_omega_q|po_gate|residual_adf_gate|residual_kpss_gate|cointegration_screen|s31i_warnings|advisor_show_flag|
 |---|---|---|---|---|---|---|---|---|---|---|
 |S32_periodized_full_long_sample|    95|FM_OLS_preliminary|3.3304|-4.4253|fail|pass|pass|mixed_evidence|rolling_instability:y_t,k_Kcap,q_omega_h1_Kcap__full_long_sample|TRUE|
 |S32_periodized_pre_1974_full|    44|FM_OLS_preliminary|40.757|-63.424|fail|pass|pass|mixed_evidence|rolling_instability:y_t,k_Kcap,q_omega_h1_Kcap__pre_1974_full|TRUE|
@@ -37,7 +37,7 @@ All pre-1974 windows end in 1973. No short post-1974 window is added.
 
 ## 4. Mechanization-extension table
 
-|model_id|mechanization_candidate|n_obs|extension_coefficient|po_gate|residual_adf_gate|cointegration_screen|s30i_warnings|advisor_show_flag|comment|
+|model_id|mechanization_candidate|n_obs|extension_coefficient|po_gate|residual_adf_gate|cointegration_screen|s31i_warnings|advisor_show_flag|comment|
 |---|---|---|---|---|---|---|---|---|---|
 |S32_ME_growth_extension|q_omega_h1_ME|    95|1.6681|fail|pass|mixed_evidence|rolling_instability:y_t,k_Kcap,q_omega_h1_Kcap,q_omega_h1_ME|FALSE|Candidate extension, not a replacement for the aggregate baseline.|
 |S32_NRC_growth_extension|q_omega_h1_NRC|    95|-3.3082|fail|pass|mixed_evidence|rolling_instability:y_t,k_Kcap,q_omega_h1_Kcap,q_omega_h1_NRC|FALSE|Candidate extension, not a replacement for the aggregate baseline.|
@@ -50,7 +50,7 @@ I(2)-risk mechanization candidates are retained only as diagnostic stress tests 
 
 ## 5. Frontier-conditioner table
 
-|model_id|frontier_conditioner|n_obs|conditioner_coefficient|po_gate|residual_adf_gate|residual_kpss_gate|cointegration_screen|s30i_warnings|advisor_show_flag|
+|model_id|frontier_conditioner|n_obs|conditioner_coefficient|po_gate|residual_adf_gate|residual_kpss_gate|cointegration_screen|s31i_warnings|advisor_show_flag|
 |---|---|---|---|---|---|---|---|---|---|
 |S32_GOV_TRANS_growth_extension|GOV_TRANS_growth|    95|0.69291|fail|pass|pass|mixed_evidence|rolling_instability:y_t,k_Kcap,q_omega_h1_Kcap|FALSE|
 |S32_IPP_growth_extension|IPP_growth|    95|3.0115|fail|pass|pass|mixed_evidence|rolling_instability:y_t,k_Kcap,q_omega_h1_Kcap,IPP_growth|FALSE|

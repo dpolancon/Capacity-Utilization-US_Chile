@@ -225,7 +225,11 @@ S30C
     ↓ validate after merge
 S30D
     ↓ validate scaffold
-S31A cross-family closure audit
+S30E integrated dataset closure and canonical assembly
+    ↓ validate canonical dataset
+S30F dataset release freeze and downstream dataset-consumption authorization
+    ↓
+S31 diagnostic work begins; S31I is integration-order testing
 ```
 
 No automatic merge is authorized.

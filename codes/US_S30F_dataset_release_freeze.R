@@ -326,7 +326,7 @@ handoff_lines <- c(
   paste0("- SHA-256 manifest: `", rel_path(sha_manifest_path), "`"),
   paste0("- Decision: `", decision, "`"),
   "",
-  "Downstream Chapter 2 consumers may read the frozen long and wide panels and their ledgers. This handoff does not authorize S31 econometric readiness work."
+  "S30F is the authorization boundary for downstream Chapter 2 source-of-truth dataset consumption. The S30F dataset-consumption decision governs S31 diagnostic work, with S31I reserved for integration-order testing. This handoff does not permit econometric estimation, model selection, q, theta, productive capacity, utilization, complete-case samples, or estimation samples."
 )
 writeLines(handoff_lines, file.path(out_md, "S30F_DATASET_RELEASE_HANDOFF.md"), useBytes = TRUE)
 

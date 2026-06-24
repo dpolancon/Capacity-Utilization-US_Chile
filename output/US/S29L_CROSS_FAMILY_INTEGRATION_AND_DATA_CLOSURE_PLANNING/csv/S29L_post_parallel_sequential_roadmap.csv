@@ -1,6 +1,3 @@
 "sequence","stage_id","authorization_condition","execute_in_s29l"
-1,"S31A_CROSS_FAMILY_CLOSURE_AUDIT","all S30 family closure and scaffold tasks merged and validated","no"
-2,"S31B_CANONICAL_CHAPTER2_DATASET_ASSEMBLY","S31A verifies every family is closed","no"
-3,"S31C_CANONICAL_DATASET_INDEPENDENT_VALIDATION","S31B assembled only from authoritative family interfaces","no"
-4,"S31D_CHAPTER2_DATASET_RELEASE_HANDOFF","S31C requires assembled value minus authoritative family interface value equals zero for every copied observation","no"
-5,"S31E_CHAPTER2_DATASET_FREEZE_AND_TAG","S31D handoff complete and final target decision AUTHORIZE_DOWNSTREAM_CHAPTER2_SOURCE_OF_TRUTH_DATASET_CONSUMPTION","no"
+1,"S30E_INTEGRATED_DATASET_CLOSURE_AND_CANONICAL_ASSEMBLY","all S30 family closure and scaffold tasks merged and validated","no"
+2,"S30F_DATASET_RELEASE_FREEZE","S30E closure and validation complete; final target decision AUTHORIZE_DOWNSTREAM_CHAPTER2_SOURCE_OF_TRUTH_DATASET_CONSUMPTION","no"

@@ -7,4 +7,4 @@ Do not create branches from floating `main`. Use the exact S29L result commit af
 * `S30C_CONTEXTUAL_FAMILY_CLASSIFICATION_LOCK` -> `feature/s30c-contextual-family-lock`; writes `codes/US_S30C*` and `output/US/S30C*`.
 * `S30D_DATASET_RELEASE_SCHEMA_AND_VALIDATION_SCAFFOLD` -> `feature/s30d-dataset-release-scaffold`; writes `codes/US_S30D*` and `output/US/S30D*`.
 
-Merge order after all reports are reviewed: S30A, S30B, S30C, S30D. Then run S31A through S31E sequentially.
+Merge order after all reports are reviewed: S30A, S30B, S30C, S30D, then S30E and S30F sequentially. S30F is the downstream dataset-consumption authorization boundary; S31 begins diagnostic work, with S31I reserved for integration-order testing.

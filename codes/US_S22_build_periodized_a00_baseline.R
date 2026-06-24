@@ -19,8 +19,8 @@ input_paths <- c(
     repo_root, "data", "processed", "US", "us_s20_admissibility_panel.csv"
   ),
   actual_output_ledger = file.path(
-    repo_root, "output", "US", "S30I_INTEGRATION_ORDER_PRECHECK_B1_E2B",
-    "csv", "S30I_variable_construction_ledger.csv"
+    repo_root, "output", "US", "S31I_INTEGRATION_ORDER_PRECHECK_B1_E2B",
+    "csv", "S31I_variable_construction_ledger.csv"
   )
 )
 optional_s21_path <- file.path(

@@ -521,9 +521,9 @@ The baseline distributive-output family is wage-share-centered and unadjusted in
 
 ---
 
-## 14. Implications After S30I Bottlenecks
+## 14. Implications After S31I Bottlenecks
 
-The S30I bottleneck points directly back to the S10 data architecture.
+The S31I bottleneck points directly back to the S10 data architecture.
 
 The problem is not only estimator choice. The current capital variables, especially `k_NRC_t`, `k_ME_t`, and `m_ME_NRC_t`, show substantial integration-order risk. The next data-source pass must make the capital construction auditable enough to decide whether the problem comes from:
 

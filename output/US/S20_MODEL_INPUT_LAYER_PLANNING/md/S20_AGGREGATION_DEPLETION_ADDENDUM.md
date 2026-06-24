@@ -149,7 +149,7 @@ A future S20 implementation prompt must not construct:
 | NO_MODEL_INPUT_DATA_CONSTRUCTED | PASS | The addendum defines rules only and emits no model-input panel. |
 | NO_GPIM_RECONSTRUCTION | PASS | No GPIM construction or reconstruction was performed. |
 | NO_PROVIDER_FILES_ACCESSED_OR_MODIFIED | PASS | The addendum used existing S20 planning artifacts only. |
-| NO_DOWNSTREAM_SCRIPTS_INVOKED | PASS | No S20, S21, S22, S30I, S30, or S32 script was invoked. |
+| NO_DOWNSTREAM_SCRIPTS_INVOKED | PASS | No S20, S21, S22, S31I, S30, or S32 script was invoked. |
 | NO_ECONOMETRICS_RUN | PASS | No estimator, test, coefficient, or model object was created. |
 | COMPONENT_FIRST_GPIM_RULE_STATED | PASS | The lineage is stated as `I_nominal_j -> P_K_j -> I_real_j -> GPIM survival/depletion_j -> K_gross_j`. |
 | DEPLETION_COMPONENT_LEVEL_RULE_STATED | PASS | The addendum prohibits a primitive aggregate survival/depletion profile. |

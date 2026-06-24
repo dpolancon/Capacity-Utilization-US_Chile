@@ -346,7 +346,7 @@ for (p in legacy_paths) {
 
 downstream_refs <- c(
   "docs/validation/US_S22_PERIODIZED_A00_BASELINE_VALIDATION.md",
-  "docs/validation/US_S30I_EXPANDED_INTEGRATION_ORDER_AUDIT_VALIDATION.md",
+  "docs/validation/US_S31I_EXPANDED_INTEGRATION_ORDER_AUDIT_VALIDATION.md",
   "docs/validation/US_S32_MODEL_CHOICE_VALIDATION.md",
   "docs/validation/US_S32C_CORPORATE_BOUNDARY_VALIDATION.md"
 )
