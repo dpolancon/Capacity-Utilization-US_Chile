@@ -824,7 +824,7 @@ sha_verify <- all(vapply(seq_len(nrow(candidate_sha)), function(i) {
 }, logical(1)))
 
 checks <- list(
-  c("01", "exact_branch_and_base_checkpoint", current_branch == branch_name && base_is_ancestor && origin_main == base_commit, paste(current_branch, current_head, origin_main, base_is_ancestor)),
+  c("01", "exact_branch_and_base_checkpoint", current_branch == branch_name && base_is_ancestor && origin_main == base_commit, paste(current_branch, base_commit, origin_main, base_is_ancestor)),
   c("02", "provider_repository_read_only", TRUE, "script contains no provider write path"),
   c("03", "no_external_data_fetch", TRUE, "script contains no network or API operation"),
   c("04", "frozen_v1_tag_unchanged", tag_target_now == v1_tag_target, tag_target_now),
