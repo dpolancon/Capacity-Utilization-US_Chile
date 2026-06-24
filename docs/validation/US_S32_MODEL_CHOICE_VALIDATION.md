@@ -47,11 +47,11 @@ Phillips-Ouliaris uses `urca::ca.po` with Pz, a constant, and short bandwidth. R
 |Rolling instability is warning, not automatic block|PASS|Baseline I(1)/no-I(2) variables enter S32 with rolling warnings.|
 |S20 input exists|PASS|C:/ReposGitHub/Capacity-Utilization-US_Chile/data/processed/us_s20/us_s20_capital_distribution_frontier_panel.csv|
 |S22 periodized q panel exists|PASS|C:/ReposGitHub/Capacity-Utilization-US_Chile/data/processed/us_s22/us_s22_periodized_q_panel.csv|
-|S30I recommendation files exist|PASS|Three S30I governance inputs checked.|
-|S20/S22/S30I inputs are unchanged|PASS|7 hashes compared.|
+|S31I recommendation files exist|PASS|Three S31I governance inputs checked.|
+|S20/S22/S31I inputs are unchanged|PASS|7 hashes compared.|
 |y_t is not labeled canonical y_t^p|PASS|Actual log output is the effective-output proxy; capacity is latent.|
 |y_t exists and is labeled effective-output proxy|PASS|y_t; actual_log_output; effective_output_proxy; productive_capacity_formation_coefficient; latent_non_observable|
 
 ## Hard-lock confirmation
 
-S32 fetched no BEA data, modified no S20/S22/S30I or provider output, constructed no adjusted distribution or level interaction, ran no Johansen/VECM or S40 step, reconstructed no productive capacity or capacity utilization, and promoted no coefficient as final.
+S32 fetched no BEA data, modified no S20/S22/S31I or provider output, constructed no adjusted distribution or level interaction, ran no Johansen/VECM or S40 step, reconstructed no productive capacity or capacity utilization, and promoted no coefficient as final.

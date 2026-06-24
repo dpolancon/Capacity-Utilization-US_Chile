@@ -212,7 +212,7 @@ family_inventory <- data.frame(
   ),
   blockers = c("none", "no final distributive variable selected in S29L", "no output series selected in S29L", rep("classification not yet locked", 5), "canonical dataset assembly prohibited in S29L"),
   next_required_stage = c(
-    "S31A_CROSS_FAMILY_CLOSURE_AUDIT",
+    "S30E_INTEGRATED_DATASET_CLOSURE_AND_CANONICAL_ASSEMBLY",
     "S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE",
     "S30A_REAL_OUTPUT_FAMILY_CLOSURE",
     "S30C_CONTEXTUAL_FAMILY_CLASSIFICATION_LOCK",
@@ -507,20 +507,14 @@ merge_order <- data.frame(
 )
 
 roadmap <- data.frame(
-  sequence = 1:5,
+  sequence = 1:2,
   stage_id = c(
-    "S31A_CROSS_FAMILY_CLOSURE_AUDIT",
-    "S31B_CANONICAL_CHAPTER2_DATASET_ASSEMBLY",
-    "S31C_CANONICAL_DATASET_INDEPENDENT_VALIDATION",
-    "S31D_CHAPTER2_DATASET_RELEASE_HANDOFF",
-    "S31E_CHAPTER2_DATASET_FREEZE_AND_TAG"
+    "S30E_INTEGRATED_DATASET_CLOSURE_AND_CANONICAL_ASSEMBLY",
+    "S30F_DATASET_RELEASE_FREEZE"
   ),
   authorization_condition = c(
     "all S30 family closure and scaffold tasks merged and validated",
-    "S31A verifies every family is closed",
-    "S31B assembled only from authoritative family interfaces",
-    "S31C requires assembled value minus authoritative family interface value equals zero for every copied observation",
-    "S31D handoff complete and final target decision AUTHORIZE_DOWNSTREAM_CHAPTER2_SOURCE_OF_TRUTH_DATASET_CONSUMPTION"
+    "S30E closure and validation complete; final target decision AUTHORIZE_DOWNSTREAM_CHAPTER2_SOURCE_OF_TRUTH_DATASET_CONSUMPTION"
   ),
   execute_in_s29l = "no"
 )
@@ -645,7 +639,7 @@ fanout_md <- paste0(
   "# S29L Parallel Fanout Execution Guide\n\n",
   "Do not create branches from floating `main`. Use the exact S29L result commit after push.\n\n",
   paste0("* `", parallel_tasks$task_id, "` -> `", parallel_tasks$branch_name, "`; writes `", parallel_tasks$exclusive_code_glob, "` and `", parallel_tasks$exclusive_output_glob, "`.", collapse = "\n"),
-  "\n\nMerge order after all reports are reviewed: S30A, S30B, S30C, S30D. Then run S31A through S31E sequentially.\n"
+  "\n\nMerge order after all reports are reviewed: S30A, S30B, S30C, S30D, then S30E and S30F sequentially. S30F is the downstream dataset-consumption authorization boundary; S31 begins diagnostic work, with S31I reserved for integration-order testing.\n"
 )
 write_md(fanout_md, path(md_dir, "S29L_PARALLEL_FANOUT_EXECUTION_GUIDE.md"))
 
@@ -730,7 +724,7 @@ checks <- rbind(
   check("common_completion_schema_created", file.exists(path(csv_dir, "S29L_common_completion_record_schema.csv")), paste(nrow(completion_schema), "fields")),
   check("merge_order_contract_created", file.exists(path(csv_dir, "S29L_merge_order_contract.csv")), paste(nrow(merge_order), "steps")),
   check("post_parallel_roadmap_created", file.exists(path(csv_dir, "S29L_post_parallel_sequential_roadmap.csv")), paste(nrow(roadmap), "stages")),
-  check("final_sequential_stages_defined", all(grepl("^S31", roadmap$stage_id)), paste(roadmap$stage_id, collapse = "; ")),
+  check("final_sequential_stages_defined", identical(roadmap$stage_id, c("S30E_INTEGRATED_DATASET_CLOSURE_AND_CANONICAL_ASSEMBLY", "S30F_DATASET_RELEASE_FREEZE")), paste(roadmap$stage_id, collapse = "; ")),
   check("no_branches_created", current_branch == "main", "script stayed on main"),
   check("no_worktrees_created", identical(worktree_before, worktree_after), "git worktree list unchanged"),
   check("no_family_outputs_modified", identical(input_hash_before, input_hash_after), "required upstream input hashes unchanged"),

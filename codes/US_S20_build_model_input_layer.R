@@ -771,7 +771,7 @@ executable_lines <- script_lines[
 ]
 forbidden_stage_invocation <- paste0(
   "(source|sys\\.source|system|system2|shell)\\s*\\(",
-  "[^\\n]*(S21|S22|S30I|S30|S32)"
+  "[^\\n]*(S21|S22|S31I|S30|S32)"
 )
 forbidden_stage_hits <- grep(
   forbidden_stage_invocation,
@@ -783,7 +783,7 @@ add_check(
   "NO_DOWNSTREAM_SCRIPTS_INVOKED",
   length(forbidden_stage_hits) == 0L,
   paste0(
-    "Executable S20 lines invoking S21/S22/S30I/S30/S32: ",
+    "Executable S20 lines invoking S21/S22/S31I/S30/S32: ",
     length(forbidden_stage_hits), "."
   )
 )

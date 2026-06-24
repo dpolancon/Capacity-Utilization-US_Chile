@@ -1147,7 +1147,7 @@ validation_lines <- c(
   "",
   paste(
     "S32C fetched no BEA data, modified no provider artifacts, modified no",
-    "S20/S22/S30I/S32 outputs, constructed no Shaikh-adjusted variables,",
+    "S20/S22/S31I/S32 outputs, constructed no Shaikh-adjusted variables,",
     "constructed no level interactions, ran no Johansen/VECM, reconstructed",
     "no productive capacity or utilization, and promoted no coefficient as final."
   )

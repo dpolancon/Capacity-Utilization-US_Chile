@@ -115,7 +115,7 @@ downstream_blocked_until_s10_passes:
     
 - "S30"
     
-- "S30I"
+- "S31I"
     
 - "S32"
     
@@ -132,7 +132,7 @@ related_to:
     
 - "S20_US_SourceTruth_Panel"
     
-- "S30I_Integration_Order_Precheck"
+- "S31I_Integration_Order_Precheck"
     
 - "S32_B1_E2B_Model_Choice"
     
@@ -155,7 +155,7 @@ related_to:
 
 S10 is the Chapter 2 stage that constructs the canonical U.S. source-of-truth panel.
 
-S10 is not an estimation stage. It does not run S20, S30, S30I, S32, S40, theta reconstruction, productive-capacity reconstruction, or utilization reconstruction.
+S10 is not an estimation stage. It does not run S20, S30, S31I, S32, S40, theta reconstruction, productive-capacity reconstruction, or utilization reconstruction.
 
 S10 builds and validates the empirical objects that later stages are allowed to use.
 
@@ -1070,7 +1070,7 @@ S10 must export the layer identifiers `A_NFC_STRICT`, `B_CORP_SHAIKH_CORRECTED`,
 
 ### Gate 9: no downstream estimation
 
-S20, S30, S30I, S32, and S40 cannot run on a revised U.S. panel until S10 passes and the S10 validation report is exported.
+S20, S30, S31I, S32, and S40 cannot run on a revised U.S. panel until S10 passes and the S10 validation report is exported.
 
 ---
 

@@ -41,7 +41,7 @@ The boundary is closed around these objects. `FAAt402` remains validation-only; 
 
 8. **Centering uses a constant reference.** Rolling-window centering is diagnostic only. Any S20 export must record the reference value, sample, distribution measure, asset boundary, and transformation rule.
 
-9. **Econometric stages remain closed.** S20 may build and validate model inputs. It cannot reopen S30I, S30, or S32, and it cannot construct productive capacity or utilization.
+9. **Econometric stages remain closed.** S20 may build and validate model inputs. It cannot reopen S31I, S30, or S32, and it cannot construct productive capacity or utilization.
 
 10. **Accumulated `q` is parked under the binding method notes.** `R_distribution_conditioned_theta_identification`, M10, R10, R11, A05, and D04 all subordinate accumulated historical-memory operators to the primitive centered interaction and open composition fork.
 
@@ -61,7 +61,7 @@ The boundary is closed around these objects. `FAAt402` remains validation-only; 
 
 6. **Frontier conditioners:** decide whether S20 only registers future IPP and government-transport roles or constructs separate control inputs from an independently authorized source lane. Neither can become productive capital or productive efficiency by implication.
 
-7. **Stage gate:** define the exact S20 completion and validation decision that would permit later S21 or integration-order work. No direct jump to S30I, S30, or S32 is admissible.
+7. **Stage gate:** define the exact S20 completion and validation decision that would permit later S21 or integration-order work. No direct jump to S31I, S30, or S32 is admissible.
 
 ### S21
 
@@ -80,7 +80,7 @@ The boundary is closed around these objects. `FAAt402` remains validation-only; 
 | Note | Finding | Verdict |
 |---|---|---|
 | `04_data_measurement/V01_DataProvenance_Managment.md` | Closure stops at S11B/S11C; it still orders gross and net GPIM construction, an additive `K_cap`, and preferred accumulated `q`. | Mandatory post-S14 amendment before S20. |
-| `04_data_measurement/V00_VariableMenu_US_BEA_Repo.md` | The active-looking menu lists net GPIM, implied depreciation, frontier stocks, aggregate capital, and accumulated `q` beyond the eight-variable S14 registry. It also sends the next pass back to S30I-driven data discovery. | Mandatory S14 status block and current-lock rewrite. |
+| `04_data_measurement/V00_VariableMenu_US_BEA_Repo.md` | The active-looking menu lists net GPIM, implied depreciation, frontier stocks, aggregate capital, and accumulated `q` beyond the eight-variable S14 registry. It also sends the next pass back to S31I-driven data discovery. | Mandatory S14 status block and current-lock rewrite. |
 | `04_data_measurement/D01_GPIM_heterogeneous_capital_SFC.md` | The conceptual register distinction remains valid, but active sections still instruct future GPIM reconstruction and accumulated-`q` exports. | Mandatory status amendment; retain conceptual content. |
 | `04_data_measurement/D02_PriceDeflator_Protocol_K_Composition.md` | It correctly separates ME/NRC prices but still calls accumulated `q` the A00 baseline. | Mandatory correction before S20 uses it. |
 | `05_codes_implementation/S10_US_Source-of-Truth_GPIM_ConstructionProtocol.md` | The note is marked locked yet describes planned paths and requires promoted Shaikh-corrected layers while the current-release adjustment is blocked. | Mandatory supersession notice and S14 handoff replacement. |
@@ -96,7 +96,7 @@ No vault note mentions S12D, S13, S14, S21, the S14 decision, or any of the eigh
 | Priority | Note | Required update | Timing |
 |---|---|---|---|
 | 1 | `V01_DataProvenance_Managment.md` | Add an S13/S14 closure amendment; replace future GPIM construction with the eight-variable S14 registry and explicit exclusions. | Mandatory before S20 |
-| 2 | `V00_VariableMenu_US_BEA_Repo.md` | Add completed/parked/excluded status columns; remove S30I-driven provider reopening; rewrite the current lock around the primitive interaction and open composition fork. | Mandatory before S20 |
+| 2 | `V00_VariableMenu_US_BEA_Repo.md` | Add completed/parked/excluded status columns; remove S31I-driven provider reopening; rewrite the current lock around the primitive interaction and open composition fork. | Mandatory before S20 |
 | 3 | Non-suffixed S10 protocol | Mark the old S10 architecture superseded by S13/S14; point to actual S14 paths; keep Shaikh-adjusted layers blocked. | Mandatory before S20 |
 | 4 | `C01-US_00_MEMO_RECYCLING.md` | Replace the missing-S10-builder section with the S14 handoff and bounded S20 decisions. | Mandatory before S20 |
 | 5 | D01 and D02 | Preserve conceptual stock-flow and price logic, but change construction tense to locked-input consumption and remove accumulated-`q` baseline claims. | Mandatory before S20 |
@@ -115,7 +115,7 @@ The S20 planning note itself should not patch these notes indirectly. It should 
 | EXISTING_VAULT_NOTES_UNMODIFIED | PASS | S15 creates only a new report and ledger outside `chapter2_vault/`. |
 | NO_PROVIDER_FILES_ACCESSED_OR_MODIFIED | PASS | Audit inputs were vault Markdown and repository status only. |
 | NO_GPIM_RECONSTRUCTION | PASS | No data-construction script or GPIM calculation ran. |
-| NO_DOWNSTREAM_SCRIPTS_INVOKED | PASS | S20, S21, S22, S30I, S30, and S32 scripts were not invoked. |
+| NO_DOWNSTREAM_SCRIPTS_INVOKED | PASS | S20, S21, S22, S31I, S30, and S32 scripts were not invoked. |
 | AUDIT_REPORT_CREATED | PASS | S15 Markdown report and CSV ledger were created. |
 | FINAL_DECISION_EXPLICIT | PASS | Decision is stated below. |
 

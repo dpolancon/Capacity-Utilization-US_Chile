@@ -16,7 +16,7 @@ The exploitation rate and its log are retained only as alternative-proxy robustn
 
 ## Deferred objects
 
-Shaikh-adjusted variables remain blocked because the current-release semantic crosswalk has not passed. The `q_omega_*` and `q_e_*` accumulated indexes are deferred to S21. Integration testing and estimation are deferred to S30I and S30/S32.
+Shaikh-adjusted variables remain blocked because the current-release semantic crosswalk has not passed. The `q_omega_*` and `q_e_*` accumulated indexes are deferred to S21. Integration testing and estimation are deferred to S31I and S30/S32.
 Superseded `omega_x_*` and `e_x_*` level interactions are not analytical variables and are not constructed.
 
 ## Variable ledger

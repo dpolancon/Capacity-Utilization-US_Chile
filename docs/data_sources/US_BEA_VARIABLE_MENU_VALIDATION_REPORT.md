@@ -160,7 +160,7 @@ Live BEA snapshots were staged for download date(s): 2026-06-09. Raw snapshots a
 - Live BEA metadata identifies `FAAt705` as government investment and `FAAt707` as current-cost average age.
 - The audit-time `FAAt707` raw snapshot is retained but excluded from the locked investment menu.
 
-## S30I Diagnostic Readiness
+## S31I Diagnostic Readiness
 
 The staged menu separates source behavior by asset, stock/flow family, sector boundary,
 and official quantity-index status. This allows the downstream repo to distinguish BEA

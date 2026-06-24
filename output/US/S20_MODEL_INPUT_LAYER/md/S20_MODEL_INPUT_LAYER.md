@@ -94,7 +94,7 @@ GPIM is asset-account-specific first and aggregation second. S20 preserves ME an
 | SHAIKH_ADJUSTMENT_BLOCKED_UNLESS_CROSSWALK_PLUS_DATA_EXIST | PASS | Shaikh-adjusted distribution objects are blocked pending crosswalk plus data. |
 | NO_PROVIDER_FILES_ACCESSED_OR_MODIFIED | PASS | S20 reads only S14 consolidation artifacts and S20 planning gate reports. |
 | NO_GPIM_RECONSTRUCTION | PASS | S20 derives only a component-sum aggregate from S14 registered component stocks. |
-| NO_DOWNSTREAM_SCRIPTS_INVOKED | PASS | Executable S20 lines invoking S21/S22/S30I/S30/S32: 0. |
+| NO_DOWNSTREAM_SCRIPTS_INVOKED | PASS | Executable S20 lines invoking S21/S22/S31I/S30/S32: 0. |
 | NO_ECONOMETRICS_RUN | PASS | Econometric function calls found in S20 script: 0. |
 | FINAL_DECISION_EXPLICIT | PASS | Final decision resolved explicitly as AUTHORIZE_S20_MODEL_INPUT_CONSUMPTION. |
 

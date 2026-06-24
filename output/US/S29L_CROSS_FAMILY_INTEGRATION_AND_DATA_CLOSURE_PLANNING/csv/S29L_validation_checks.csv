@@ -59,7 +59,7 @@
 "common_completion_schema_created","PASS","18 fields"
 "merge_order_contract_created","PASS","15 steps"
 "post_parallel_roadmap_created","PASS","5 stages"
-"final_sequential_stages_defined","PASS","S31A_CROSS_FAMILY_CLOSURE_AUDIT; S31B_CANONICAL_CHAPTER2_DATASET_ASSEMBLY; S31C_CANONICAL_DATASET_INDEPENDENT_VALIDATION; S31D_CHAPTER2_DATASET_RELEASE_HANDOFF; S31E_CHAPTER2_DATASET_FREEZE_AND_TAG"
+"final_sequential_stages_defined","PASS","S30E_INTEGRATED_DATASET_CLOSURE_AND_CANONICAL_ASSEMBLY; S30F_DATASET_RELEASE_FREEZE"
 "no_branches_created","PASS","script stayed on main"
 "no_worktrees_created","PASS","git worktree list unchanged"
 "no_family_outputs_modified","PASS","required upstream input hashes unchanged"

@@ -72,7 +72,7 @@ validation_gates:
 downstream_blocked_until_s10_passes:
   - "S20"
   - "S30"
-  - "S30I"
+  - "S31I"
   - "S32"
   - "S40"
 
@@ -82,7 +82,7 @@ related_to:
   - "Capacity-Utilization-US_Chile"
   - "GPIM_Application"
   - "S20_US_SourceTruth_Panel"
-  - "S30I_Integration_Order_Precheck"
+  - "S31I_Integration_Order_Precheck"
   - "S32_B1_E2B_Model_Choice"
   - "S40_Restricted_B1_Reconstruction"
   - "A00_Aggregate_Transformation_Benchmark"

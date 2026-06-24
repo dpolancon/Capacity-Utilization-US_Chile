@@ -366,7 +366,7 @@ executable_lines <- script_lines[
 ]
 forbidden_stage_invocation <- paste0(
   "(source|sys\\.source|system|system2|shell)\\s*\\(",
-  "[^\\n]*(S20|S21|S22|S30I|S30|S32)"
+  "[^\\n]*(S20|S21|S22|S31I|S30|S32)"
 )
 forbidden_stage_hits <- grep(
   forbidden_stage_invocation,
@@ -378,7 +378,7 @@ add_check(
   "NO_DOWNSTREAM_STAGE_SCRIPT_INVOKED",
   length(forbidden_stage_hits) == 0L,
   paste0(
-    "Executable S14 lines invoking S20/S21/S22/S30I/S30/S32: ",
+    "Executable S14 lines invoking S20/S21/S22/S31I/S30/S32: ",
     length(forbidden_stage_hits), "."
   )
 )
@@ -529,7 +529,7 @@ report_lines <- c(
   "- S14 consumes only the S13 panel, audit, validation table, and report.",
   "- S14 does not reconstruct GPIM or reopen provider discovery.",
   "- S14 does not read or modify provider files.",
-  "- S14 does not invoke S20, S21, S22, S30I, S30, or S32.",
+  "- S14 does not invoke S20, S21, S22, S31I, S30, or S32.",
   "- S14 creates no econometric or productive-efficiency object.",
   "- The diagnostic net-value stock does not enter S14.",
   "- `FAAt402` remains validation-only historical context.",
