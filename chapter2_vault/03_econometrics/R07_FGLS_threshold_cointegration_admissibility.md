@@ -10,6 +10,7 @@ related_to:
   - R05_LRV_kernel_bandwidth_regime_misalignment
   - R06_IMOLS_integration_ladder_reconstruction
   - R08_threshold_break_diagnostics_to_FGLS
+  - R12_FGLS_implementation_protocol
   - M10_Empirical_Identification_Framework
   - L00_Econometrics_References
 priority: high
@@ -187,6 +188,12 @@ $$
 ## 9. Locked sentence for reuse
 
 **FGLS is admissible only after threshold behavior has been independently justified. It can support regime-specific coefficient recovery under threshold cointegration, but it cannot identify cointegration, activate regimes, or reconstruct utilization by itself.**
+
+---
+
+## 10. Practical Implementation Protocol
+
+For details on the practical execution of Cochrane-Orcutt FGLS with Saikkonen dynamic augmentation for capital stocks, see [[R12_FGLS_implementation_protocol]].
 
 ---
 
