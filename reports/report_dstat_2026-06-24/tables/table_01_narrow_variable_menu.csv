@@ -1,0 +1,8 @@
+"Economic family","Paper-facing label","Notation","Repository ID","Accounting boundary","Role in later regressions"
+"Output","Real gross value added of nonfinancial corporate business","$Y_t^{NFC}$","Y_REAL_NFC_GVA_BASELINE","NFC; gross value added","Output candidate"
+"Productive capital","Aggregate gross productive-capital stock","$K_t^{P}$","G_TOT_GPIM_2017","NFC productive-capital aggregate","Capital-scale candidate"
+"Capital composition","Machinery-to-nonresidential-structures capital-composition ratio","$\kappa_t^{ME/NRC}$","KAPPA_ME_NRC","NFC capital-component ratio","Composition candidate"
+"Distribution","Corporate compensation share of GVA","$\omega_t^{C,GVA}$","CORP_COMPENSATION_SHARE_GVA","Corporate; gross value added","Distributive candidate; eligible, not selected"
+"Distribution","Corporate compensation share of NVA","$\omega_t^{C,NVA}$","CORP_COMPENSATION_SHARE_NVA","Corporate; net value added","Distributive candidate; eligible, not selected"
+"Distribution","NFC compensation share of GVA","$\omega_t^{NFC,GVA}$","NFC_COMPENSATION_SHARE_GVA","NFC; gross value added","Distributive candidate; eligible, not selected"
+"Distribution","NFC compensation share of NVA","$\omega_t^{NFC,NVA}$","NFC_COMPENSATION_SHARE_NVA","NFC; net value added","Distributive candidate; eligible, not selected"

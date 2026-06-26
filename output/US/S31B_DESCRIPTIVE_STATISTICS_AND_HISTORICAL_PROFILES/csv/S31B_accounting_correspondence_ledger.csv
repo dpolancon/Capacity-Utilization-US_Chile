@@ -1,0 +1,5 @@
+"output_object","distribution_object","correspondence_class","accounting_identity_claim","model_mapping_status","note"
+"Y_REAL_CORP_GVA_BASELINE","CORP_COMPENSATION_SHARE_GVA","blocked_strict_pair","blocked","eligible_not_selected","Corporate real GVA is noncanonical."
+"Y_REAL_NFC_GVA_BASELINE","NFC_COMPENSATION_SHARE_GVA","strict_accounting_pair","yes","eligible_not_selected","Same NFC sector and gross-value-added boundary."
+"Y_REAL_CORP_GVA_BASELINE","CORP_COMPENSATION_SHARE_NVA","blocked_same_sector_net_alternative","no","eligible_not_selected","Corporate real GVA is noncanonical; NVA share is not a direct GVA counterpart."
+"Y_REAL_NFC_GVA_BASELINE","NFC_COMPENSATION_SHARE_NVA","same_sector_net_alternative","no","eligible_not_selected","Same NFC sector but net denominator; not a direct GVA counterpart."

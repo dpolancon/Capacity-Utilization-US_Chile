@@ -1,0 +1,8 @@
+"variable_id","sector_boundary","gross_or_net_denominator","strict_output_correspondence","later_regression_eligibility","selection_status"
+"Y_REAL_NFC_GVA_BASELINE","NFC","Gross value added","Output object","eligible","documented; not selected at S31B"
+"G_TOT_GPIM_2017","NFC productive capital","Not applicable","No","eligible","documented; not selected at S31B"
+"KAPPA_ME_NRC","NFC component ratio","Not applicable","No","eligible","documented; not selected at S31B"
+"CORP_COMPENSATION_SHARE_GVA","Corporate","GVA","No","eligible","documented; not selected at S31B"
+"CORP_COMPENSATION_SHARE_NVA","Corporate","NVA","No","eligible","documented; not selected at S31B"
+"NFC_COMPENSATION_SHARE_GVA","NFC","GVA","Yes: Y_REAL_NFC_GVA_BASELINE","eligible","documented; not selected at S31B"
+"NFC_COMPENSATION_SHARE_NVA","NFC","NVA","No: same-sector net alternative","eligible","documented; not selected at S31B"

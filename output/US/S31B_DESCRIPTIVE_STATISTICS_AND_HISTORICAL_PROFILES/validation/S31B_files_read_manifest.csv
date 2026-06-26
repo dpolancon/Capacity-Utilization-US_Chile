@@ -1,0 +1,8 @@
+"file_read"
+"data/releases/chapter2_us_source_of_truth_v1/CH2_US_SHA256_MANIFEST.csv"
+"data/releases/chapter2_us_source_of_truth_v1/CH2_US_SOURCE_OF_TRUTH_LONG.csv"
+"data/releases/chapter2_us_source_of_truth_v1/CH2_US_VARIABLE_DICTIONARY.csv"
+"output/US/S24A_INCOME_DISTRIBUTION_SOURCE_INPUTS_CONSTRUCTION/csv/S24A_income_distribution_source_inputs_long.csv"
+"output/US/S29E_STOCK_FLOW_CONSISTENT_CORE_CAPITAL_AGGREGATION/csv/S29E_core_capital_stocks_flows_long.csv"
+"output/US/S30H_CORPORATE_NOS_ACCOUNTING_RECONCILIATION/csv/S30H_corporate_surplus_dataset_role_lock.csv"
+"output/US/S30H_CORPORATE_NOS_ACCOUNTING_RECONCILIATION/csv/S30H_implied_financial_accounts_long.csv"

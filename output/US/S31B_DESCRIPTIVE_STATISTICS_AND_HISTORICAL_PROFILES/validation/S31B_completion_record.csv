@@ -1,0 +1,2 @@
+"stage_id","validation_pass","validation_blocked","validation_fail","decision","structural_rows","transition_rows","event_profile_rows","figures","blocked_objects"
+"S31B_DESCRIPTIVE_STATISTICS_AND_HISTORICAL_PROFILES",25,1,0,"DESCRIPTIVE_PASS_COMPLETE_WITH_DOCUMENTED_BLOCKED_OBJECTS",88,32,84,15,"corporate_output_resolved"
