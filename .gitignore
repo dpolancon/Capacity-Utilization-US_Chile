@@ -1,4 +1,4 @@
-# ── R artifacts ──────────────────────────────────────
+﻿# ── R artifacts ──────────────────────────────────────
 .Rhistory
 .RData
 .Rproj.user/
@@ -34,3 +34,5 @@ docs/essay_tex/*.pdf
 # Local figures — do not track
 *.pdf
 *.png
+chapter2_vault/.obsidian/workspace.json
+chapter2_vault/.obsidian/graph.json
