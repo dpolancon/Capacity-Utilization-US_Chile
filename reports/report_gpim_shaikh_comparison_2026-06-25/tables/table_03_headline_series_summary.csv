@@ -1,0 +1,5 @@
+"series_id","boundary","level_unit","start_year","end_year","start_value","end_value","peak_year","peak_value","peak_to_end_change_percent","cagr_percent","index_1947_at_end"
+"chapter2_frozen_G_TOT_GPIM_2017","NFC machinery/equipment plus NFC nonresidential structures","millions_2017_dollars",1901,2024,1723395.05606458,19322142.6372907,1930,92415645.8562277,-79.092130495576,1.98443777241408,35.8060989522271
+"shaikh_aggregate_weibull_KGR_NF_corp","aggregate nonfinancial corporate fixed assets","real_level_from_shaikh_pipeline",1929,2024,692152.884846524,32596821.3334506,2024,32596821.3334506,0,4.13824260133739,1769.29004983337
+"shaikh_asset_ME_NRC_gross_real","private machinery/equipment plus nonresidential structures","real_level_from_shaikh_asset_pipeline",1925,2024,2575632.30456575,16697850.383108,2024,16697850.383108,0,1.90600225413462,553.218565684601
+"shaikh_canonical_KGCcorp_real","Shaikh locked corporate fixed-capital series","millions_in_canonical_own_price_basis",1947,2011,1459557.07901184,19970938.664358,2011,19970938.664358,0,4.17242444557562,1368.28760940812

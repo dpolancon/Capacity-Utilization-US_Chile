@@ -1,0 +1,5 @@
+"series_id","legal_sector","asset_scope","construction","direct_level_comparison","trajectory_comparison","scope_warning"
+"chapter2_frozen_G_TOT_GPIM_2017","nonfinancial corporate","ME + NRC","asset-specific truncated cohort schedules, then exact addition","reference","yes, after 1947=100 rebasing","Frozen Chapter 2 baseline."
+"shaikh_canonical_KGCcorp_real","corporate","locked Shaikh corporate fixed capital","locked Shaikh canonical series, deflated by pKN","no","yes, after 1947=100 rebasing","Corporate boundary and vintage differ."
+"shaikh_aggregate_weibull_KGR_NF_corp","nonfinancial corporate","aggregate fixed assets represented by FAAt601 line","aggregate mean-age Weibull hazard, L=22 alpha=1.65","no","yes, after 1947=100 rebasing","Aggregate NFC account does not isolate ME and NRC."
+"shaikh_asset_ME_NRC_gross_real","private","ME + NRC from private asset tables","asset-specific constant retirement, ME=1/15 NRC=1/38","no","yes, after 1947=100 rebasing","Private asset tables are broader than NFC."

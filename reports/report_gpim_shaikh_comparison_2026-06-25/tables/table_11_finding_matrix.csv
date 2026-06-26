@@ -1,0 +1,6 @@
+"question_id","question","evidence","result"
+"Q1","Is the decline reproduced when retirement mechanics change?","End indexes on Chapter 2 input: truncated=35.8, untruncated=41.8, mean-age=34.6.","YES_UNDER_CURRENT_INPUT"
+"Q2","Does pooling heterogeneous assets materially alter the trend?","Separate untruncated end index=41.8; pooled L22 end index=43.7.","LIMITED_EFFECT"
+"Q3","Does the investment path reproduce the decline under Shaikh retirement?","1925 cold-start Shaikh-constant engine: Chapter 2 input end index=90.7; Shaikh input end index=980.5.","INPUT_PATH_CHANGES_TREND_DIRECTION"
+"Q4","How much remains attributable to incompatible asset scope?","The four headline series have non-identical legal-sector and asset boundaries; no additive percentage is identified.","SCOPE_NOT_IDENTIFIED"
+"Q5","Does the initialization and inherited vintage history change the trend?","Untruncated end indexes: 1901 history=41.8; 1925 cold start=64.9; 1931 cold start=121.1.","INITIALIZATION_CHANGES_TREND_DIRECTION"
