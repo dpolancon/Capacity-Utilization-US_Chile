@@ -1,0 +1,5 @@
+"scenario_id","input_id","engine_id","start_year","end_year","start_value","end_value","peak_year","peak_value","peak_to_end_change_percent","cagr_percent","index_1947_at_end"
+"chapter2_current__shaikh_constant","chapter2_current","shaikh_constant",1925,2024,6289055.23878259,36398689.1021724,1982,47290786.7425649,-23.0321768586456,1.78927558192077,90.7389155085005
+"shaikh_asset__shaikh_constant","shaikh_asset","shaikh_constant",1925,2024,139612.986191516,16528666.960942,2024,16528666.960942,0,4.94035900021497,980.531779058104
+"chapter2_current__untruncated_5L","chapter2_current","untruncated_5L",1925,2024,6289055.23878259,28517179.7432452,1957,46575052.3517369,-38.7715562230995,1.53868318363248,64.8667088524619
+"shaikh_asset__untruncated_5L","shaikh_asset","untruncated_5L",1925,2024,139612.986191516,15871035.6581686,2024,15871035.6581686,0,4.89733117446203,861.313571346451
