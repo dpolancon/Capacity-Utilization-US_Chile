@@ -1,0 +1,5 @@
+"initialization_window","first_investment_year_used","first_output_year","index_1947_availability","core_index_2024_1947_100","core_index_2024_first_valid_100","endpoint_ratio_relative_to_full_history_D01","interpretation"
+"full_available_history",1901,1901,"available",41.8088791137402,1659.73074889264,1,"Uses all S29C vintages available to D01 and should replicate the D01 full-history endpoint."
+"cold_start_1925",1925,1925,"available",64.8667224203617,453.441488829812,1.55150589528825,"Common cross-switch start; removes pre-1925 inherited vintage history."
+"cold_start_1931",1931,1931,"available",121.055947470369,1070.74441548117,2.8954602475957,"Fully supported diagnostic start; removes 1901-1930 inherited vintage history."
+"cold_start_1947",1947,1947,"available",1335.14048375243,1335.14048375243,31.9343764304279,"Postwar rebase start; removes all pre-1947 inherited vintage history."
