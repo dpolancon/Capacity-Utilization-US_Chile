@@ -1,0 +1,5 @@
+"comparison","start_year","stock_1947","stock_2024","index_1947_at_2024","interpretation"
+"full_history_cold_start_1901",1901,68415413.8468618,28603711.7050328,41.8088703944087,"Uses all available vintages; exact-history counterfactual."
+"cold_start_1925",1925,43962735.6586056,28517179.7432452,64.8667088524619,"Common cross-switch initialization."
+"cold_start_fully_supported_1931",1931,23457700.4894091,28396935.6210154,121.055922057818,"Starts at the first fully supported core year."
+"observed_trajectory_rebase_1947",1947,53963272.1874296,19322142.6372907,35.8060989522271,"Removes level initialization differences for observed trajectories."
