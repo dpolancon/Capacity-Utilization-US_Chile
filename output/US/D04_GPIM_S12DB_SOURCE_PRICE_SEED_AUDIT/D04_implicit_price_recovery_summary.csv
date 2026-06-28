@@ -1,0 +1,3 @@
+"asset","first_year","last_year","max_absolute_difference","max_relative_difference","mean_absolute_difference","years_with_nonzero_difference","recovery_pass","interpretation"
+"ME",1901,2024,0.000000000000397903932025656,0.00000000000000479002795785624,0.0000000000000266610210611094,0,TRUE,"Arithmetic recovery equals stored price, but the early span is seed-carried rather than independently recovered."
+"NRC",1901,2024,0.000000000000454747350886464,0.00000000000000534839408436605,0.0000000000000241836121021272,0,TRUE,"Arithmetic recovery equals stored price, but the early span is seed-carried rather than independently recovered."

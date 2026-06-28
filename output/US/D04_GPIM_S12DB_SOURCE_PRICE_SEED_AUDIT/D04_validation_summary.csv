@@ -1,0 +1,6 @@
+"metric","value"
+"validation_pass","15"
+"validation_fail","0"
+"decision_matrix_recommendation","RECONSTRUCT_PRICE_INDEX_BEFORE_WARMUP"
+"protected_upstream_unchanged","TRUE"
+"changed_path_scope_ok","TRUE"
