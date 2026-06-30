@@ -1,0 +1,8 @@
+"object","status","reason","allowed_future_use","prohibited_use"
+"provider_TOTAL","excluded","Provider total is not Chapter 2 capacity capital; D05 capacity capital is ME plus NRC only.","ledger_note_only_if_provider_TOTAL_appears","baseline_or_comparator_for_capacity_capital"
+"K_total","prohibited","Total capital is conceptually outside the Chapter 2 D05 baseline.","none_in_D05_baseline","construction_or_alias_for_capacity_capital"
+"IPP","parked","IPP is a parked conditioning/frontier object, not baseline capacity capital.","future_conditioning_or_frontier_review_only","baseline_capacity_capital_component"
+"residential","excluded","Residential capital is outside the D05 capacity-capital boundary.","none_in_D05_baseline","baseline_capacity_capital_component"
+"government_transportation","parked","Government transportation is a parked public-infrastructure/context object, not baseline capacity capital.","future_public_infrastructure_context_review_only","baseline_capacity_capital_component"
+"official_unmapped_price_indexes","review_only_unmapped","Official price-index rows are not silently mapped into the D05 baseline.","narrow_mapping_review_only","silent_baseline_price_input"
+"legal_form_by_asset_gross_stock_current_cost","unavailable_benchmark_gap","Legal-form-by-asset gross-stock current-cost objects are unavailable; D05 constructs GPIM stocks from investment vintages.","future_benchmark_review_if_provider_object_becomes_available","construction_blocker_or_substitute_for_ME_NRC_GPIM_vintage_stock"
