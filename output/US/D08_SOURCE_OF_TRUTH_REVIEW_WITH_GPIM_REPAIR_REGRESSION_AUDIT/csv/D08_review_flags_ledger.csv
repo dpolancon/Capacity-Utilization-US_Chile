@@ -1,0 +1,2 @@
+"flag_id","severity","audit_module","object_id","issue","recommended_followup","blocking_status","notes"
+"WARMUP_NRC","MEDIUM","gpim_warmup_sufficiency","NRC","Warmup is short relative to locked asset life.","Consider later sensitivity only: pinch-year level anchor, BEA current-cost level anchor, steady-state backcast, longer pre-1901 proxy, or post-warmup sample trimming.","REVIEW_REQUIRED","D08 does not implement alternatives; identity and scale audits passed, so this is not blocking."

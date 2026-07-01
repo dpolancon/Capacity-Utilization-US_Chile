@@ -1,0 +1,4 @@
+"object_id","first_year","last_year","n_obs","max_abs_residual","max_rel_residual","audit_status","notes"
+"K_current_ME_refrozen_identity","1925","2024","100","8.84756445884705e-09","6.746282789763e-15","PASS","Asset current-cost valuation identity checked."
+"K_current_NRC_refrozen_identity","1931","2024","94","1.02445483207703e-08","5.08698394443198e-15","PASS","Asset current-cost valuation identity checked."
+"K_current_capacity_refrozen_identity","1931","2024","94","1.86264514923096e-08","6.19109244770677e-15","PASS","Capacity current-cost valuation identity checked."

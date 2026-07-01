@@ -1,0 +1,8 @@
+"check_id","status","metric","value","notes"
+"D07_FILES_EXIST","PASS","files_present","8 of 8","All required D07 files must exist."
+"D07_PANEL_NONEMPTY","PASS","long_rows;wide_rows","4241;101","Long and wide panels are readable and non-empty."
+"LONG_UNIQUE_YEAR_VARIABLE","PASS","duplicate_pairs","0","Long panel must have unique year-variable_id pairs."
+"WIDE_UNIQUE_YEARS","PASS","duplicate_years","0","Wide panel must have unique years."
+"WIDE_COLUMNS_MATCH_LONG_IDS","PASS","wide_columns;long_ids","44;44","Wide variable columns must match consumed long variable IDs."
+"RESHAPE_LONG_TO_WIDE_EQUALS_D07_WIDE","PASS","max_abs_difference","0","Long-to-wide reshape must reproduce D07 wide values."
+"YEAR_VALUES_WELL_FORMED","PASS","malformed_year","FALSE","Year values must parse as integers."

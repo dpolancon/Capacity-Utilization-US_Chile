@@ -1,0 +1,3 @@
+"identity_id","first_year","last_year","n_obs","max_abs_residual","max_rel_residual","audit_status","notes"
+"K_real_capacity_refrozen_equals_ME_plus_NRC","1931","2024","94","1.02445483207703e-08","6.25827156625708e-15","PASS","D08 audit residual only; no source variable is created."
+"K_current_capacity_refrozen_equals_ME_plus_NRC","1931","2024","94","9.77888703346252e-09","4.42220889121915e-15","PASS","D08 audit residual only; no source variable is created."

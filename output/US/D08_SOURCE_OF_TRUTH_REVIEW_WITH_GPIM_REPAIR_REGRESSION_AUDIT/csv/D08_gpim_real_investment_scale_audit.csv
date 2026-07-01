@@ -1,0 +1,3 @@
+"asset","first_year","last_year","n_obs","max_abs_residual_I_real","max_rel_residual_I_real","audit_status","notes"
+"ME","1925","2024","100","4.80213202536106e-10","4.34017759692556e-15","PASS","I_real_guardian formula and D07 consumed values checked against D06."
+"NRC","1931","2024","94","4.94765117764473e-10","3.5166808655285e-15","PASS","I_real_guardian formula and D07 consumed values checked against D06."
