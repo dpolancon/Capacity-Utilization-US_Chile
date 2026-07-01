@@ -1,0 +1,878 @@
+                                 Measuring Capital in Japan
+                              - Challenges and Future Directions ∗
+
+                                    Koji Nomura† and Tadao Futakami‡
+
+                                                    October, 2005
+
+
+
+                                                         Abstract
+
+       Japan’s national accounts are moving toward reframing the capital measurement, which is one of the most
+     problematic areas today concerning the national accounts. The objective of this paper is to report current
+     problems on the official measurement of capital and our challenges and future directions for the “sweeping”
+     revision. We propose our plans for the revision on measuring for not only more appropriate capital stock
+     statistics, but more complete production accounts.
+
+
+
+
+∗ This paper was prepared for the 2005 OECD Working Party on National Accounts, October 11-14, 2005, Paris, France.         At
+    the ESRI Conference on Next Steps for the Japanese SNA:“Towards More Accurate Measurement and More Comprehensive
+    Accounts,” in Tokyo, March 25, 2005, Nomura (2005a) presented his proposals for the sweeping revision on measuring capital.
+    At the conference, we received valuable comments from Erwin Diewert (UBC, Canada), Steven Landefeld (BEA, the U.S.),
+    and Paul Schreyer (OECD). This paper resulted from his proposal, their comments, and the later discussion at the ESRI with
+    Masahiro Kuroda (president), Takashi Omori (vice president), and Masaaki Maruyama (director). The plans we report are
+    preliminary. Please contact the authors if you quote. Comments are welcome.
+†   Associate Professor, Keio Economic Observatory (KEO), Keio University (address: 2-15-45 Mita, Minato-ku, Tokyo, 108-8345
+    Japan, email:nomura@sanken.keio.ac.jp); Visiting Research Fellow of ESRI.)
+‡   Director of National Wealth Division, Economic and Social Research Institute (ESRI), Cabinet Office, Government of Japan (
+    address: 3-1-1, Kasumigaseki, Chiyoda-ku, Tokyo, 100-8970 Japan, email:tadao.futakami@cao.go.jp)
+1    Introduction
+
+    The Japanese economy expended many years eliminating worthless assets and reforming the economic
+system after the collapse of the bubble economy in the beginning of the 1990s. In the so-called “lost decade,”
+the economic system could not properly have changed against the rapid acceleration in technological
+change and globalization. It might not be an exception for the Japanese national accounts. In particular,
+there is a widespread view that the official Japanese stock statistics may be subject to substantial error, due
+to inappropriate concepts and parameters. Our objective in this paper is to recognize the current problems
+and propose Japan’s plan for “sweeping” improvement on measuring capital. This move is not only to
+make up for lost time, but to go forward. The next revision of the SNA in 2008 (1993 SNA Revision 1), and
+further revisions, are being considered.
+    In the National Wealth Survey (NWS), the Japanese government directly investigated detailed capital
+stocks owned by corporations, government, and households. The NWSs in 1955 and 1970 are the largest-
+scale surveys for direct observation of capital stock (DOC). *1 The main role of NWS is to directly attain
+actual “gross” capital stock that are surviving in the production process at the period of the investigation.
+From the point of view of the theory of capital measurement, however, the NWS’s net capital stock that can
+be observed in business accounts no longer provides appropriate measures for the wealth or productive
+capacity of capital stock, since it is based on tax-lives that can considerably differ from the actual service
+life of the asset. The problems in the current stock measurement in the Japanese national accounts may
+stem from the fact that its methodology and parameters still depend on the 1970 NWS.
+    The intensive discussions by the Canberra Group and the revision by the BEA in the late 1990s provide
+valuable insights for improving the measurement of capital to reframe capital measurement in the Japanese
+national accounts, it is appropriate to start with an accurate understanding of current problems in stock
+
+     *1   The NWS was implemented 12 times from 1905 to 1970, by the different ministries, government offices, and Bank of Japan.
+          The table below reports the history of the Japanese NWSs.
+
+                     Servey Year   Published Year   Organization          ref
+                            1905   N.A.             Bank of Japan
+                            1910   1912             Bank of Japan
+                            1913   Oct. 1921        Kokusuuin
+                            1917   N.A.             Bank of Japan
+                            1919   Oct. 1921        Kokusuuin
+                            1924   Feb. 1928        Naikaku Tokeikyoku    estimates existent statistics
+                            1930   Nov. 1933        Naikaku Tokeikyoku    representative NWS before WWII
+                            1935   Oct. 1948        Naikaku Tokeikyoku    based on similar method of the 1930 survey
+                            1955   Mar. 1958        EPA                   model for the NWS after WWII
+                            1960   Dec. 1964        EPA                   survey at small scale
+                            1965   Aug. 1967        EPA                   survey at small scale
+                            1970   Feb. 1975        EPA                   survey at large scale
+                        Source: Economic Planning Agency (1976).
+                        Kokusuuin → Naikaku Tokeikyoku → Statistics Bureau, MIC (present).
+                        EPA → Economic and Social Research Institute, Cabinet Office (present).
+
+
+                                                                      1
+statistics in Japan, based on the theory of capital measurement. In section 2, we begin with the clarification
+of capital stock concepts and the methodology to estimate. In section 3, we briefly introduce the current
+measurement of capital and examine some serious problems to be overcome.
+    In section 4, we report our plans to figure out our challenges for the sweeping improvement on measuring
+capital in the Japanese national accounts, with the brief introduction of the investigation into actual discards
+and the tentative estimates of average service lives for 66 assets. On reframing the capital measurement,
+we pursue three key concepts: internal-consistency, empirical verification, and reproducibility. The
+revised Japanese statistics will be able to propose accurate and internally consistent stock measures and
+consumption of fixed capital. We hope that Japan’s examination can contribute to international discussion
+for the further improvement on measuring capital and production account, like capital services, land as a
+capital, capital service cost for non-market production, and so forth. Section 5 briefly concludes.
+
+2    Capital Stock: Concepts and Our Goal
+
+2.1 Concepts
+
+2.1.1    Gross, Net, and Productive
+    What is the role of measurement of capital? Like other factors of production, which are used in
+production processes, capital has a productive capacity. Unlike other factors of production, however,
+capital is not consumed, but used beyond a single accounting period. This durability lets the capital retain
+its value so that capital can be used in future production processes. Capturing the two aspects of capital:
+the productive capacity and the value of capital, is the main purpose for measuring capital.
+    Traditionally, two distinctive concepts for capital stock, gross capital stock and net capital stock, were
+used. The distinction of the two concepts is based on depreciation. Gross capital stock is defined before
+the deduction of depreciation, and net capital stock is reduced by the depreciation. As the traditional
+gross concept still remains in the Japanese statistics of capital stock for production analysis, gross capital
+stock may have been sometimes thought suitable to measure the productive capacity of capital.
+    However, the traditional system of gross and net capital stock is incapable of portraying the two different
+aspects of capital, except under unrealistic assumptions. This was finally abandoned by BEA in 1997, a
+quarter century after the controversy between Jorgenson-Griliches (1972) and Denison, as Jorgenson (1989)
+had clearly pointed this out.
+    The intensive works of Dale W. Jorgenson, Robert E. Hall, Zvi Griliches, Charles R. Hulten, Walter E.
+Diewert, Jack E. Triplett, and many other researchers and statisticians, have developed the theory for
+measurement of capital and accumulated empirical results. The theory of capital measurement clarifies
+the distinction of these two aspects of capital: the productive capacity and the value of capital, based on
+
+
+                                                       2
+the concepts of age-efficiency profile and age-price profile. We use three distinctive stock concepts in this
+paper: gross, productive, and net capital stocks.*2
+
+2.1.2      Discard and Decay
+  There may be a consensus about the use of “retirement” and “discard.” In the OECD manual on
+measuring capital, Blades (2001) uses “retirement” and “discard” interchangeably to mean the removal of
+an asset from the capital stock, with the asset being exported, sold for scrap, dismantled, pulled down,
+or simply abandoned. Also, retirements and discards are distinguished from “disposals” which include
+sales of assets as second-hand goods for continued use in production.*3
+  Next, we describe the distinction between retirement and decay. Jack E. Triplett (1997) also gives
+the definitions. He defines the term “deterioration” to represent the relative efficiency in the (AEP).
+Deterioration arises from two sources: “retirement” and “decay,” which is defined by the loss of efficiency
+of a surviving asset. Retirement designates assets withdrawn from service and he uses “discard” and
+“scrap” synonymously. Following their definition, we use in this paper “discard of assets,” “decay of
+surviving assets,” and “deterioration” as combined concepts.
+
+
+
+
+   *2   We use the name of productive capital stock after Triplett (1996, 1997) and Hill (1998, 1999). Biørn (1989) and Biørn, Holmoy,
+        and Olsen (1989) call a productive capital stock in this paper a “gross” capital stock, since they do not need a traditional gross
+        concept of capital stock. Blades (2001) does not give a particular name for the productive capital stock in the OECD Manual
+        on Capital Stock Statistics.
+          Net capital stock in this paper is also called “wealth” capital stock, like Triplett (1997). The net capital stock is “generally,
+        a synonym for the wealth capital stock. The “net” language thus distinguishes the depreciated capital stock (the wealth
+        capital stock) from the undepreciated, or gross capital stock. However, the traditional “gross-net” capital dichotomy does
+        not encompass the productive capital stock, which could cause confusion (because the productive capital stock is “net” of
+        depreciation, compared to the undeteriorated gross stock). Once the distinction between productive and wealth capital stocks
+        fully enters the lexicon, it will probably be preferable to avoid the net capital stock terminology.” (Triplett, 1997) However,
+        we use net capital stock in this paper, partly because we cannot find an adequate term in Japanese corresponding to “wealth
+        capital stock,” and partly because net capital stock is identical with the traditional net capital stock, although the concept is
+        clarified.
+   *3 Disposal in Blades (2001) is identical with its definition in the 1993 SNA. In the 1993 SNA (United Nations, 1993), “Disposals
+
+        of assets (inventories, fixed assets or land or other non-produced assets) by institutional units occur when one of those units
+        sells or transfers any of the assets to another institutional unit; when the ownership of an existing fixed asset is transferred
+        from one resident producer to another, the value of the asset sold, bartered, or transferred is recorded as negative gross fixed
+        capital formation by the former and as positive gross fixed capital formation by the latter.” (paragraph 10.40).
+
+
+                                                                     3
+2.2       Two Routes for One Goal
+
+2.2.1      No Middle Reliever
+  Our goal is to measure the productive capital stock (PCS) that designates the productive capacity of
+capital, and the net capital stock (NCS) that designates the value of capital. In the framework of measuring
+capital stock, the key idea is the age-efficiency profile (AEP) and the age-price profile (APP). The AEP
+gives a schedule for the productive capacity associated with the pure aging of capital at the same point of
+time, taking an efficiency of a new asset as one to normalize. The APP gives a schedule of the capital value
+associated with its pure aging at the same point of time, normalizing the capital value of a new asset at
+one.
+  Based on the comprehensive empirical studies of Hulten and Wykoff (1981a, 1981b, 1981c), the geometric
+distribution in the AEP or APP is approximately accepted for many assets in the U.S. Also, Nomura (2004,
+ch-2) estimates depreciation rates based on a Box-Cox transformed APP, using data in the second-hand
+market for motor vehicles, and an AEP using data in the rental markets for housing in Japan. The geometric
+approach is accepted as an approximation for these assets. In the Hulten-Wykoff methodology, the AEP
+represents a “combined” profile of discard and decay. In other words, it is a profile of age-deterioration
+by Triplett’s terminology.
+                                                          P,k, j                N,k, j
+  For moving to our goal of measuring the PCS St,τ and the NCS St,τ , we may have two routes. At the
+starting point, we prepare quantities of investment measured in “efficiency units” among the assets k with
+different vintages (t − τ), regardless of the two routes. Here, let us assume the quantities of investment
+ kj
+At−τ are given for industry j.
+                                                                                         kj         P,k, j
+  In the first route, the AEP and APP pitch a complete game from the opening At−τ to the ending St,τ and
+ N,k, j
+St,τ . Figure 1 displays the first route to our goal. Assuming no change of the AEP over time, we write
+the AEP as dkτ , independently of time t. It satisfies the conditions below,
+
+                                    dk0 = 1, dk1 > 0, dkτ − dkτ−1 ≤ 0, lim dkτ = 0.                          (1)
+                                                                          τ→∞
+
+
+  These four conditions represent, respectively, normalization of AEP at τ = 0, durability of the asset,
+monotonic decreases of relative efficiency, and finite durability. Again, note that the AEP is defined as
+the combined distribution of the survival distribution of an asset and the efficiency distribution for the
+surviving asset.
+  Applying the AEP to assets with different ages, the quantity of investment with different vintages (t − τ)
+is transformed to the productive capital stock (PCS), as
+
+                                                     P,k, j        k, j
+                                                   St,τ = dkτ At−τ .                                         (2)
+
+                                                              4
+                                                            !" #%$& '   ( 
+
+
+
+                                                                                                                                *  & + 
+                                                                                                                
+                                                                                                                  
+                                                                                                                  
+                           01- ! .  . #
+                          ' 2 ! +" 3 . 4% ! .
+
+
+
+                                                                                                               
+                                                                                                                   
+                                                                                                                   
+                                                                                                                              ,  - (. /
+                                                         $&  )$& '   ( 
+
+
+
+                                      Fig. 1 Measuring Capital Stock: Route-1 (No Middle Reliever)
+
+
+
+The PCS is evaluated in the same efficiency unit among assets with different ages τ. Capital services can be
+produced from the PCS, as shown in Figure 1. The AEP transforms assets with different ages to be perfectly
+                                                                          P,k, j P      P,k, j *4
+substitutable, so that the PCSs with different ages can be simply added: St = ∞    τ=0 St,τ .     By the dual
+approach of capital, the capital service prices of assets with different ages have perfect complementary, so
+that they are equivalent: PtK,k = PK,k
+                                   t,τ , (Jorgenson, 1989).
+
+  Next, let us move to the value concept of capital. The schedule of the capital value in the APP depends on
+future capital services described in the AEP, the expected capital service price, and the expected discount
+rate. Here, we write the APP as dP,k
+                                 t,τ . Assets with different ages normally have a different value because of
+
+a finite service life of the asset, even if the productive capacity the asset has is exactly same. We assume
+the conditions for the APP as:
+
+                               P,k
+                              dt,0 = 1, dP,k > 0, dP,k    P,k             P,k
+                                                   t,τ − dt,τ−1 ≤ 0, lim dt,τ = 0,                                           lim dP,k = dkτ .   (3)
+                                         t,1                                                           τ→∞                  rt →∞ t,τ
+
+
+  The conditions required for the APP are similar to Equation (1) for the AEP. The fifth condition represents
+that the APP converging with the AEP, when the discount rate rt approaches infinity. Applying the APP
+to assets with different ages, the GCS will be transformed to the net capital stock (NCS):
+
+                                                                                      N,k, j           k, j
+                                                                                St,τ           = dP,k
+                                                                                                  t,τ At−τ .                                    (4)
+
+
+   *4   Diewert and Lawrence (2000) and Diewert (2001) provide a new approach in measuring capital and propose the use of a
+        superlative index number formula to aggregate assets with different ages (or vintages, under the fixed point of time). In this
+        paper, we assume perfect substitution in the PCSs with different ages, as if the AEP were specified independently.
+
+
+                                                                                                 5
+  Based on the NCS in Equation (4), the nominal value of assets with different ages is written as:
+
+                                                                 S,k, j                 N,k, j
+                                                               Vt,τ = PA,k
+                                                                       t St,τ ,                                                 (5)
+
+                                                                                                                       S,k, j
+where PA,k
+       t   is investment price for acquisition of new assets in time t and Vt,τ represents nominal value
+of net capital stock, which is capital wealth to be described in the balance sheet of the capital holders. The
+                                    N,k, j
+price for net capital stock St,τ is PA,k
+                                     t .
+
+  Economic researchers frequently, and sometimes unconsciously, assume the geometric distribution as
+the AEP in the model for economic growth. Theoretically, the geometric distribution alone has the desirable
+property that the AEP and the APP are identical. Also, therefore, the PCS and the NCS are identical, as
+
+                                                                    N,k, j          P,k, j
+                                                                  St,τ       = St,τ ,                                           (6)
+
+where
+                                                              dkτ = dP,k         k τ
+                                                                     t,τ = (1 − δ ) .                                           (7)
+
+  This assumption is called the “best geometric approach” (BGA). The two aspects of one entity of capital
+are captured by only one measure, based on the assumption of the BGA. Accepting the BGA makes it
+possible to neglect the age structure for aggregating assets with different ages, like a familiar perpetual
+inventory method (PIM),
+                                                                                             X
+                                                                                             ∞
+                                              P,k, j              P,k, j         k, j                          k, j
+                                             St        = (1 − δk )St−1 + At =                      (1 − δk )τ At−τ .            (8)
+                                                                                             τ=0
+
+  As a part of the comprehensive revision of NIPA, the U.S. Bureau of Economic Analysis (BEA) revised
+the methodology for estimating their capital stock and depreciation in 1997.*5 The revised methodology
+reflects the results of empirical studies, which have shown that depreciation for most types of equipment
+and structures does not follow a straight-line, but approximates the BGA. The improvement for the
+measurement of depreciation involves the use of the BGA as the default, instead of the use of combination
+of the straight-line depreciation and the survival distribution.*6
+  The outstanding property of the first route is that there is no role of gross capital stock. The BEA no
+longer produces estimates of gross capital stock and discard, after their revision.
+
+
+
+   *5   See Fraumeni (1997), Katz and Herman (1997), and BEA (2003). The BEA defines depreciation as “the decline in value due
+        to wear and tear, obsolescence, accidental damage, and aging,” which included discards (Katz and Herman, 1997; Fraumeni,
+        1997).
+   *6 Exceptionally, the BEA uses non-geometric patterns of depreciation for autos, computers, missiles, and nuclear fuel (Fraumeni,
+
+        1997). Therefore, the use of BEA’s stock as the productive capital stock is not appropriate.
+
+
+                                                                             6
+2.2.2   Middle Reliever
+  Next, we examine the second route. Here, the gross capital stock (GCD) has a role of a middle reliever.
+             G,k, j
+The GCS St,τ is defined as:
+                                                               G,k, j          k, j
+                                                              St,τ = skτ At−τ ,                                                         (9)
+
+where skτ is known as a survival distribution, which has same properties as dkτ represented in equation
+(1). We also call it as age-survival profile (ASP) in this paper. The GCS permits the difference of quality
+of assets with different ages τ, although the assets retired until t are excluded. In other words, the assets
+with different ages are evaluated at “as new” prices in the GCS, described in Blades (2001).
+  In the three capital stocks, the GCS may have very limited purposes to be used. If we assume a vintage
+production function, the GCS may give an appropriate concept as the factor input. However, for the
+economic analysis using an aggregate measure of capital with different ages, it may be no longer easy to
+find an appropriate role of the GCS, except under unrealistic assumptions. *7 The role can be found in the
+process of measuring the PCS and the NCS, as a middle reliever. When we reach the goal, the GCS ends
+its role.
+  Figure 2 displays the second route to our goal. In the second route, the AEP and APP are narrowly
+defined as the profiles of surviving assets. Let dˆkτ denote the AEP of surviving asset, to satisfy
+
+                                                                 dkτ = skτ dˆkτ .                                                      (10)
+
+  If the geometric approach for dkτ can adequately approximate the AEP, there is no need to decompose
+it into skτ and dˆkτ . Practically, however, the decomposition may be useful, partly because it is sometimes
+difficult to investigate dkτ for many kinds of assets, due to the lack of the market data for aged assets. In
+fact, there is sometimes no actual market for aged assets. Moreover, to estimate dkτ , some assumption for
+discard patterns, more concretely the functional form and its parameters of the distribution, are required,
+since the observed data at the market of aged assets is censored due to the lack of data for the assets that
+already retired at the period of the investigation. In the comprehensive studies of Hulten and Wykoff,
+they assume the Winfrey distributions to adjust the censored samples.
+
+
+
+   *7 The GCS is interpreted as a special case of the PCS, which is an appropriate concept for the productive capacity of capital
+
+      stock. Only if the AEP is “one-hoss shay,” where the relative efficiency of capital is constant throughout the lifetime Tk , the
+                                        P,k, j      G,k,j
+      GCS is identical with the PCS: St,τ        = St,τ , where dkτ = 1(τ < Tk ) and dkτ = 0(τ = Tk ). Only some exceptional assets like
+      electric light bulbs provide an example. The one-hoss shay distribution can hardly be observed in the empirical studies for
+                                                                                                                    N,k,j      P,k,j   G,k,j
+      measuring the AEP. Also, for new assets with τ = 0, the three measures of capital stock are identical: St,0           = St,0 = St,0 ,
+      since dP,k
+             t,0
+                 = dk0 = 1. The difference in the three measures occurs because of the durability of assets.
+
+
+                                                                        7
+                                                                   ! " !  #$" %'& ( )  ! * ) ,+$-( .! .! #$/ /  0
+
+                                                                                                                                                             + ( .! " 
+                                                                                                                                              
+                                                                                                                                           
+                                                                                                                                              
+                                                      +$-$( .! .$3 * & ( )  ! * 
+                  5-3 # 0 ! 0 %                                                                        
+                 )  6 # .$ / 0 7' # 0                                                                 
+                                                                                                            
+                                                                                                                                          
+                                                                                                                                           
+                                                                                                                                            
+                                                                                                                                                           2  3 *04
+                                                                     & ( ! " 1&( )  ! * )  +$-$( .! .! #$'/ /  0
+
+
+                                           Fig. 2 Measuring Capital Stock: Route-2 (Middle Reliever)
+
+
+
+  The second route closes to the traditional methodology for measuring capital based on the “gross-net”
+capital dichotomy. Although the BEA has stopped using the middle reliever, many other countries still
+continue to use it. The representative may be the estimates by Statistics Netherlands, which investigates
+the directly observed capital stock and discards (Meinen, Verbiest, and Wolf, 1998).
+  There are few empirical studies using Japanese data for the rates of depreciation or deterioration of
+assets. Lee (1978) for fishing fleets, Kuninori (1988) for construction machinery, Nomura (2004a, ch.2)
+for motor vehicles and housing give a few examples. Many studies of the Japanese economy use the
+depreciation rates of the BEA (Fraumeni, 1997). However, depreciation rates can differ between the U.S.
+and Japan, reflecting the difference in natural and environmental conditions, utilization, maintenance,
+and composition of capital goods. Base on Nomura’s estimates, the estimated depreciation rates are 16.3
+percent for passenger motor vehicles, 22.4-23.8 percent for trucks, and 3.1-4.8 percent for housing. In
+comparison with the U.S. depreciation rates that the BEA uses, passenger vehicles and housing are less
+durable and trucks are more durable in Japan. The differences in durability of assets among countries
+must be reflected in the stock measurement in each country.
+  Moreover, in Japan, there is no discard survey for detailed assets after the large-scale survey for the
+directly observed capital stock and discard at the National Wealth Survey in 1970. As Japan’s revision, we
+are now moving to the second route, since it is important to accumulate empirical evidence for discard
+and decay in Japan. Nomura (2005b) reports the preliminary estimates for the ASP skτ , based on Japan’s
+directly observed discard data investigated by Economic and Social Research Institution (ESRI) of the
+Cabinet Office (CAO) in 2003.
+
+
+                                                                                                       8
+3     Problems in Current Capital Stock
+
+3.1    Stock Estimates
+
+    We briefly introduce the measurement of capital stock in the present Japanese national accounts and
+discuss some problems to be overcome. ESRI, which is the producer of the Japanese national accounts,
+publishes two main estimates for capital stock.
+    Figure 3 shows the concepts and rough coverage of stock measurement in Japan. The first estimate is
+net capital stock, which is described in the balance sheet of the Japanese national accounts. We refer to
+this measure as ”JSNA-NCS.” The second estimate is Gross Capital Stock of Private Enterprises (GCSPE),
+which is frequently the main data source for analysis of production by industry. In addition, the CAO
+irregularly publishes gross capital stock for infrastructure, which is estimated almost separately from
+JSNA-NCS and GCSPE.
+
+
+
+
+                                                                                                   
+                                                                                                    
+                                                                                          
+                                                       
+
+                                                  ()*
+                                                                               + ,-  /.           
+                             #  $ %& '                                                              ! "
+                                                                                                  ?  @. A)
+
+
+                                                                                                                    0 6 0 & :);$ 1/4 < ' ! & 1 :
+                                       021 3)3(1/4 & ! 5768 1 9                                                           = ' ' 1 < :/! >
+
+
+
+
+                           Fig. 3 Current Capital Stock in the Japanese National Accounts
+
+
+
+
+3.2    Net Capital Stock
+
+    Depreciation in JSNA-NCS is based on the straight-line method for infrastructure and custom software,
+and on the geometric method for other assets. Conceptually, JSNA-NCS provides capital wealth in the
+Japanese economy. At the ESRI conference in March 2005, Nomura (2005a) indicated JSNA-NCS may
+be considerably underestimated because of the too-high depreciation rates. The gap that he tentatively
+computed was more than 30 percent in 2000. Ervin Diewert also pointed out that the official rates may
+
+                                                                                             9
+be much too high for some assets in Japan, based on his own examination. Although the service lives
+assumed in JSNA-NCS had been not published, ESRI showed the rates and that the depreciation rates
+assumed in JSNA-NCS were computed using the tax-lives in the 1970 Japanese National Wealth Survey
+(NWS), after the conference.
+
+               Table. 1 Service Lives and Depreciation Rates Used in the Present National Accounts
+
+                                                                                     T        δ                  JSNA-NCS∗
+          By Asstes
+        dwellings                                                                  28.0      7.9                       251163
+        other buildings                                                            37.4      6.0                       250712
+        other structures                                                           33.7      6.6                       190913
+        transportation equipment                                                    7.6     26.2                        26332
+        agriculture machinery                                                       9.2     22.2                         2902
+        other machinery                                                            10.6     19.5                       175055
+        cultivated assets                                                           5.4     12.1                         1674
+          total                                                                    27.8      9.9                       898749
+          By Institutional Sectors
+        private non-financial corporations                                         15.4     13.9                       469400
+        public non-financial corporations                                          27.1      8.1                        92103
+        private financial corporations                                             25.9      8.5                        24095
+        public financial corporations                                              35.5      6.3                          553
+        general government                                                         23.5      9.3                        51172
+        private non-profit institutions                                            26.1      8.5                        15510
+        households (including private unincorporated enterprises)                  17.8     12.1                       246368
+          total                                                                    18.2     12.3                       898749
+         T: retirement age, δ: depreciation rate to satisfy (1 − δ) = V 1/T (V=0.5 for cultivated asset, 0.1 for other assets.).
+         JSNA-NCS∗ is the adjusted value from the JSNA-NCS fixed assets in the end of 2000 (billion yen),
+         excluding consumption tax and the stock of infrastructure and custom software.
+
+
+
+  Table 1 reports the service lives and geometric depreciation rates by asset and institutional sector,
+assumed in JSNA-NCS. To define the aggregate depreciation rate, we describe the corresponding capital
+stock in 2000, excluding infrastructure and custom software, for which the straight-line depreciation
+method is used. Let us introduce the current methodology to estimate JSNA-NCS. Oddly enough, the
+JSNA-NCS is tentatively estimated in two ways: the stock by asset Sk using the service lives in each
+asset δk and the stock by institutional sector Ŝ j using the service lives in each institutional sector δ j .
+                                                    P
+Finally, the sum of capital stock is defined by k Sk and the stock by institutional sector is redefined as the
+            P        P
+S j = Ŝ j / j Ŝ j ∗ k Sk . Therefore, the estimates S j may be biased, since the asset composition has changed
+considerably until present, even if Sk could be estimated accurately.
+  In Table 1, we compute the average rate of depreciation at the aggregate level as a weighted average
+of depreciation rates by assets, using the capital stock shares as the weights. The average value is 9.9
+
+
+
+
+                                                                  10
+percent defined by δk .*8 This rate is higher than Nomura (2004a)’s estimates: 7.8 percent for the secondary
+industries and 9.2 percent for electric machinery industry, which has the relatively higher depreciation
+rate.
+  For dwellings, the geometric depreciation rates are 5.8 percent for wooden building and 3.8 percent for
+non-wooden building in 1988, estimated using the rental market data in Nomura (2004a). Although these
+estimates are much higher than the BEA’s depreciation rate for dwellings: 1.1-1.4 percent, they are much
+lower than 7.9 percent assumed in JSNA-NCS. The depreciation rate for transportation equipment (26.2
+percent) may be too high. Nomura’s estimates are 16.3 percent for passenger cars, 22.4-25.5 percent for
+trucks, based on the second-hand market data in Japan. Probably, other transportation equipment like
+ships and trains may have lower depreciation rates. For the results, we have to not only revise the current
+inappropriate methodology to estimate the JSNA-NCS, but also replace the current depreciation rates to
+a more appropriate one based on empirical studies in Japan.
+
+3.3     Consumption of Fixed Capital
+
+  We choose ”JSNA-CFC” to label the consumption of fixed capital in Japan’s national accounts. The main
+difficulty to be revised is that the JSNA-CFC is defined by historical prices, based on the book value in
+the corporate sector business accounts, and on similar estimates for private unincorporated enterprises
+and general government. For the estimates by industry, JSNA-CFC distributes the total CFC to industries,
+using the estimated industry shares, which are based on the share of CFC in gross output and the estimated
+values of gross output by industry (ESRI, 2000). It is significantly important to note that the assumptions
+to estimate JSNA-CFC are not consistent with those in JSNA-NCS.
+  Conceptually, CFC evaluated by historical prices has to be revised. To determine the value of the CFC,
+the 1993 SNA points out: “Its value may deviate considerably from depreciation as recorded in business
+accounts or as allowed for taxation purposes, especially when there is inflation.” (paragraph 6.179). The
+JSNA-CFC evaluated by historical prices generates a large bias when estimating net domestic product
+(NDP), which is a key concept as an appropriate measure of economic growth.
+
+
+3.4     Gross Capital Stock
+
+  For industry analysis of the Japanese economy, a main data source for the Japanese capital stock is
+GCSPE, which covers all fixed assets, excluding residential buildings owned by private corporations and
+unincorporated enterprises and fixed assets owned by private non-profit institutions. GCSPE is frequently
+
+
+      *8 The aggregate depreciation rate defined by δ j is 12.3 percent, as shown in Table 1.   The gap between two aggregate rates
+        represents the biases on the measurement of stock by institutional sector S j .
+
+
+                                                                    11
+used as a measure of the productive capacity of the private sector in Japan.*9
+  However, it is misleading to use this data as a measure of productive capacity, for conceptual and
+empirical reasons. First, GCSPE is defined by a traditional gross concept of capital stock. As we discussed
+the concepts for capital stock in section 2.1.1, the gross concept does not provide an appropriate measure
+for the productive capacity of capital. Second, the nominal investment in GCSPE is not related to the
+“commodity flow” data, and GCSPE does not have asset categories. This makes it difficult for GCSPE
+                                                 k, j
+to measure quantity of investment At in “efficiency units” and to consider the appropriate aggregation
+procedure for heterogeneous capital. Moreover, although GCSPE publishes the estimates of gross capital
+stock and investment by industry at constant prices, it does not publish nominal investment or investment
+prices by industry. The lack of reproducibility of the capital stock data does not allow the users of GCSPE
+to test different assumptions for measuring capital.
+  Nomura (2005a) indicates that GCSPE is 16-20 percent higher than proper estimates of the productive
+capital stock (PCS) during 1995-2000, when GCSPE is interpreted as a special case of the PCS. We can
+observe this by noting that the average rate of retirement in GCSPE is 4.6 percent in the 1990s. The
+retirement rate is 1.3 percentage points lower than the average rate of deterioration, which consists of
+retirement and decay in Triplett’s terminology, in his estimates of productive capital stock. To be an
+appropriate measure of productive capacity, GCSPE should be reformed to the PCS by asset and industry,
+sustaining the consistency with the JSNA-NCS in the national accounts.
+
+3.5 Classification
+
+  The JSNA-NCS covers fixed assets, land, inventories, and consumer durables of all capital holders
+in Japan. Although nominal investment in the JSNA-NCS is consistent with the commodity flow for
+certain aggregates, it has only six classifications for tangible assets and one intangible asset. The tangible
+assets consist of (1) dwellings, (2) other buildings, (3) other structures, (4) transport equipment, (5) other
+machinery and equipment, and (6) cultivated assets.*10 Erwin Diewert indicated that the current very
+
+
+
+   *9   To estimate productive capacity, the GCSPE intentionally excludes the residential capital owned by private sectors. There
+        may be no longer any reason to exclude it, since the capital service produced by the residence owned by a company may
+        be described as the consumption of fixed capital and operating surplus in the company. Also, it is difficult to identify it in
+        practice. The primary statistics to estimate nominal investment for corporations in GCSPE is the Annual Report of Financial
+        Statements of Corporations (ARFSC), by the Ministry of Finance. However, ARFSC does not investigate the investment for
+        residence the company has, in particular.
+  *10 As shown in Table 1, the stock for agriculture machinery is estimated separately, although it is not published. The classification
+
+        for consumer durables consists of (1) furniture and floor coverings, (2) household appliances, (3) personal transport equipment,
+        (4) information transmission equipment, and (5) others.
+
+
+                                                                   12
+aggregated asset classification is not very satisfactory at all, since high and low depreciation assets are
+bundled together in some of the classifications.
+    The only intangible asset included is custom software.*11 Although the conceptual expansion of capital
+recommended in the 1993 SNA was applied in the national accounts of many countries, it was not fully
+incorporated into the Japanese national accounts. As is widely known, the Japanese national accounts
+still do not capitalize own-account software and prepackaged software. In international comparisons of
+economic growth and productivity based on the 1993 SNA, Japan must be treated as an exception.
+    Finally, the JSNA-NCS is not estimated by industry, but by only seven institutional sectors described in
+Table 1. Also, it is not related to the industry classification in the GCSPE.
+
+4    Challenges and Future Directions
+
+4.1 Toward Reframing
+
+    As we examine the Japanese official stock statistics in the previous section, there are a number of
+problems to be revised. They may be caused from the lack of
+
+      • internal consistency,
+      • empirical verification,
+      • and reproducibility.
+
+The internal consistency in the estimates gives a key criterion to evaluate the accuracy on the framework
+of capital measurement. One important area is the consistency between the NCS and the CFC, as BEA
+resolved it. The importance for sustaining internal consistency in the measurement of NCS and CFC
+became a common objective in the national accounts, as in the international methodological standards
+recommended by the OECD (Schreyer, 2001; Blades, 2001). Also, the internal consistency among three
+measures in capital stock has to be sustained. As we displayed in Figure 3, we could scarcely find the
+consistency between the JSNA-NCS and the GCSPE.
+    The current official stock estimates depend on the 1970 National Wealth Survey, not only for the bench-
+mark capital stock, but for some parameters like service lives. These key parameters have already been
+obsolescent or conceptually inadequate. To revise the estimates with a detailed asset classification, empir-
+
+
+    *11   In Japan’s national accounts, expenditures for plant engineering, mineral exploration, and custom software are treated as
+          gross fixed capital formation (GFCF) of intangible assets, although plant engineering is not recommended to be treated as an
+          intangible asset in the 1993 SNA. Furthermore, it is added to ”tangible” assets in the Japanese stock accounts, so the treatment
+          is a halfway measure. Also, mineral exploration is not treated in the Japanese stock accounts, based on the assumption that it
+          has just a one-year service life. Both these issues should be revised.
+
+
+                                                                      13
+ical studies for approximating discard and decay have to be newly developed in Japan.
+  Finally, the reproducibility of capital stock may be required. It assures that the users of stock estimates
+could test different assumptions for measuring capital, so that it may contribute to a more open discussion.
+Also, the reproducibility could make it easy to revise the estimates, if additional empirical facts are
+discovered. We are pursuing these three criteria on reframing the capital measurement in Japan.
+
+4.2   Plans for Revision
+
+  ESRI is now preparing the 2000-year-based Japanese national accounts for its publication at the ending
+of 2005, based on, for example, the benchmark input-output table and the population census in 2000. As
+the next benchmark revision, the 2005 benchmark IO will be published in 2009, and the 2005-year-based
+Japanese national accounts is planned to be released in the end of 2010. At this time, we aim to revise the
+measurement of capital stocks and CFC.
+  For the sweeping revision of capital measurement in the Japanese national accounts, Nomura (2005a)
+suggested five proposals to catch up to international standards: (i) capitalization of software, (ii) reframing
+NCS and CFC, (iii) reframing GCS to the PCS, (iv) constant-quality prices, (v) empirical studies for AEP
+and APP, and three proposals to be prepared for the next revision of SNA in 2008 (1993 SNA Revision 1)
+or further revisions: (vi) measurement of price and quantity of capital service, (vii) land as capital, (viii)
+capital service cost for non-market production.
+  Here, we report more concrete plans for the revision. Our plans are divided into two groups: revision
+on measuring capital stock and research for more complete production accounts. Table 2 represents the
+plans for our challenges and future directions in Japan.
+  First, (1) capitalization of own-account and prepackaged software is the most urgent requirement.
+As Nomura (2004b) examined, it is possible to estimate own-account software investment by industry
+in Japan, applying similar methodology as that recommended by the OECD Task Force on software
+(Lequiller, Ahmad, Varjonen, Cave, and Ahn, 2003; Ahmad, 2003) and the industry approach used by the
+BEA (Grimm, Moulton, and Wasshausen, 2003). To estimate it, a time allocation survey for programmers
+is planned.
+  Our plans: (2)-(4), are highly desired to improve the measurement of investment in the Japanese national
+accounts. We plan to estimate time-series fixed capital formation matrixes (FCFM) in a detailed asset and
+almost three-digit industry classifications. Moreover, it is important to estimate the long-term constant-
+quality prices, as in our plan (5). The main purpose of price statistics is to measure current movement
+of prices, which can only be captured with constant-quality prices. However, the national accounts,
+and in particular measurement of capital, requires the constant-quality prices be extrapolated backward,
+
+
+                                                      14
+sustaining the consistency with newly developed methodology, if possible. Although this function is
+carried out by BEA in the U.S. (see Wasshausen, 2000 for computer equipment), we may not find any
+similar function in the Japanese statistical system, as pointed out by Nomura (2005a).
+  The traditional “gross-net” capital dichotomy is incapable of portraying the two different aspects of
+capital: the productive capacity and the value of capital, except under unrealistic assumptions. To
+estimate proper measures for the PCS, further empirical studies for approximating discard and decay in
+the Japanese economy is required. To recognize the discard patters by asset, ESRI investigates directly
+observed discard data in 2003 as the first trial. Nomura (2005b) reports the measurement results. We
+show the tentative results in the next section. Now, we are examining the use of complete records of
+assets in some particular companies and the registration data for particular assets, to chase the service
+life of individual assets. Also, for approximating decay patterns of particular assets, we examine the
+second-hand market data. A few years will be spent for the empirical studies of age-efficiency profile.
+  The theory for measuring capital can provide a consistent framework for measures of both capital stock
+and capital services. As Jorgenson (1989) clearly pointed out, measures of net capital stock and asset
+prices can be employed in the national wealth accounts, while measures of capital service input and
+capital service prices can be utilized in national production accounts. At present, although there is still
+no place for capital service cost in the SNA and the U.S. NIPA, only three countries - Australia, Canada,
+and the United States - produce time series of capital services as a part of their official statistics. Recently,
+work has also been taken up in the United Kingdom and New Zealand (Schreyer, 2003).
+  We are researching the introduction of capital services in production account. The Canberra II Group
+supports introducing measures of the cost of capital services into the national accounts, as ‘of-which’ items
+in the production account (Ahmad 2004; Diewert, Harrison, and Schreyer, 2004). In addition, the capital
+service cost of land should be evaluated. Land as a capital has a significant role in the measurement of
+capital and productivity in Japan, although most empirical studies for the Japanese economy do not fully
+recognize its importance.*12
+  Measuring capital service leads to the additional imputation of capital service cost for non-market
+production. In the 1993 SNA and also in NIPA, for non-market production, only consumption of fixed
+capital (CFC) is described in their production accounts. The CFC is only a part of the capital cost. We try
+to evaluate capital service cost for non-market production.*13 Although our plans are divided into two
+
+
+  *12 Nomura (2004a, ch.4) shows that neglecting land and inventories leads to a decline of 0.7 percent per year in the average
+
+        TFP growth rate during 1960-2000, compared to 1.5 percent annual average growth rate for Japanese TFP. TFP growth is
+        underestimated by a factor of almost 50 percent if land and inventories are ignored.
+  *13   See Jorgenson and Landefeld (2005) for the U.S. economy and Jorgenson and Nomura (2005) for the Japanese economy.
+
+
+                                                                  15
+groups in Table 2, we proceed with them simultaneously. We hope to accomplish sweeping improvement
+by overcoming all our plans, thereby anticipating the SNA 2008 (1993 SNA Revision 1) or further revision.
+
+4.3    Duration of Assets
+
+    In this final section, we briefly introduce our tentative estimates for average service lives by asset, based
+on the directly observed data for discards. ESRI implemented the Survey of Actual Capital Stock and
+Discard of Private Enterprises (SACD) in 2003, as the first step for revising capital measurement. Figure
+4 shows the average service lives for 66 assets, based on the estimated Weibull distribution.*14 Asset
+38, personal computers, has the shortest average service life (6.5 years) and asset 61, storehouse, has the
+longest one (39.9 years). The estimates for some assets may be still inappropriate. Although asset 22,
+semiconductor making equipment, has a relatively short service life (9.4 years), it seems too long. To
+examine more accurate estimates, we plan to make a pooled data of discards. We also plan to examine the
+use of service life of individual assets.
+
+5     Concluding Remarks
+
+    Japan’s national accounts are moving toward reframing capital measurement, which is one of the
+most problematic areas today regarding the national accounts. We reported current problems on the
+official measurement of capital and our challenges and future directions in concepts and methodology
+for a “sweeping” revision, where the estimates should be internally-consistent, empirically verified, and
+reproducible. We will spend the following three to five years reframing the measurement of capital stock
+and construct more complete production accounts.
+
+
+
+
+    *14 The SACD consists of two kinds of investigations. The first is the survey of capital stock, investment, depreciation, purchases
+
+       of second-hand assets, and discards by five capital groups and by eight asset groups of the private enterprises, which are
+       classified to 29 industries. The second investigation of the 2003-SACD provides more detailed data for discards of assets.
+       Here, assets are classified into eight asset groups. In each asset group, the three major assets retired in the 2002 fiscal year are
+       investigated, with the periods of the purchase and the retirement, and the asset value at the period of the purchases. Moreover,
+       the assets sold as second-hand goods for continued use in production are identified. The tentative estimation in Figure 4 does
+       not include the sold assets. See Nomura (2005b) for details.
+
+
+                                                                    16
+                                            Table. 2 Challenges and Future Directions for Measuring Capital in Japan
+
+                                                             works                                                                                                 schedule∗
+     Revisions on Measuring Capital Stock (until 2008)
+     (1)    Capitalization of Software                   capitalization of pre-packaged and own-account software by industry. time allocation survey for             2005-06
+                                                         programmers is planned.
+     (2)    Investment by Asset                          long-term investment data by a detailed asset classification, sustaining the consistency with the           2005-07
+                                                         commodity flows in the national accounts.
+     (3)    Industry Investment and Infrastructure       investment by industry (corporation, non-corporation, public, non-profit institutions, and gov-             2005-07
+                                                         ernment) and infrastructure.
+     (4)    Fixed Capital Formation Matrix               estimation of time-series gross FCFM. survey for investment composition is planned.                         2006-07
+     (5)    Long-term Constant-Quality Prices            long-term price indexes, especially for IT-related hardware and software prices, construction               2005-07
+                                                         prices.
+     (6)    Empirical Studies for Discard                direct observation for stock and discard patterns by asset (age-survival profile) was implemented           2005-07
+                                                         in 2003. continuous surveys are planned. in addition, a special investigation for a particular
+                                                         company and the use of registration data are examined.
+     (7)    Empirical Studies for Decay                  studies using market data (age-efficiency profile and age-price profile of surviving assets): motor         2005-07
+                                                         vehicle, dwellings, machinery, and so forth.
+
+
+
+
+17
+     (8)    Scraps and Second-hand Assets                examination of second-hand assets (sold and purchased) and scraps.                                          2005-07
+     (9)    Installation                                 direct observation for lag-distribution of installation by asset (especially for buildings and con-         2006-07
+                                                         struction) is planned.
+     (10)   Fixed Capital Stock and CFC                  estimation of time-series gross FCSM, productive FCSM, and net FCSM. consideration of a dis-                2007-08
+                                                         count factor. consistent estimates of the CFC.
+     (11)   Consumer Durables                            purchases and stocks for detailed consumer durables.                                                        2006-08
+     (12)   Inventory Stock                              matrix for inventory increase and stock. deflators for types of inventory, sustaining consistency           2006-08
+                                                    with the commodity prices.
+     Research for More Complete Production Accounts (until 2010)
+     (1)    Measurement of Capital Services              consideration of taxes and rate of returns (ex-ante, ex-post), to compute user costs of capital.            2007-10
+                                                         surveys for labor income for self-employed and family workers. relationship with FISM.
+     (2)    Land as a Capital                            land stock and services by industry, government, and household. land price index will be exam-              2006-09
+                                                         ined.
+     (3)    Rentals                                      survey for rental assets that are treated as intermediate inputs, to clarify the true capital contribu-     2008-10
+                                                         tion by industry.
+     (4)      Capital for Non-Market Production          user cost for publicly owned capital and household owned capital is estimated.                              2008-10
+     (5)      Expanding Boundary of Capital              research and development, and others.                                                                       2009-10
+      ∗ the schedule is our preferable target.
+         R'S T()U V &   *+   !  "$# % &   
+                                                                                                                                                                                                 ', ()63  "$# 0-.780 /1()"$--/ %%9 /2/0 &&+-4(:3  ;  05  <8 =6> % 0 # "$  &
+                                                                                                                                                                                                            
+                                                                                                                                                                                                         A ?,)%   10 0&"4%-.  <6 &02".$!".@! % / 0 /- & 00 <.()=2>  %- 00# "$  &
+                                                                                                                                                                                                              
+                                                                                                                                                                                                          B'' C!()*  0%&&&//; 03 &   <% D+ E   - % / & 
+                                                                                                                                                                                                      F B()=26&%"$/ 5& D 07/6 I+H-60% 3< /&%&9 #2& #01 0<J+ G8A 0E/ &9 % 0&  /2& %  -
+                                                                                                                                                                                                         G!@!# 1#1 070<&0-J0/ =2& ?/6& &-%-J"$03/6GJ/ =200 2&>6%& 00 #1 0"$/!- 0? &0 & & %0  "$<   & 
+                                                                                                                                                                                                                         F  K8()K!6# && 90/2&% KJ%A 0/10 D&1 <J00/ 2?!. 6()()& D% //"$99 00 &  77
+                                                                                                                                                                                                            =2G8,) 0/02& 6& 00/!/6 ,) 6-  060& 0/6". ".0 %-.<8 !0(:/ D& /0 9 .0  =2 > 7% 0 # "$  &
+                                                                                                                                                                                                                F FB K!6%& 09". &&#0202<8<J =2 >-.%-J&60 %C!# "$/". & 0#;D& 0 - 0  <8() / 9 0    7
+                                                                                                                                                                                                                  B ()?*+ 9-%/& 95 &00<00 #47J9@!10/8 D6-.3LJ& -. 0 -K85 0#/8&80=2/? > %- %?0 #  "4& & 7% "$&   & 
+                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                  F ()=2*   &// 9&#0(:/6 0(:&& /=29H >0 %%80 #/ *+0"40 <.0?$& *+1 & 6% "$? - % & &  7JM. 
+                                                                                                                                                                                                                  BF B NJ3 @!*+& 2 &-.0  -.0<# KJ?-J0 &G! %-.#;"$#0* %0<8D &G!/    
+                                                                                                                                                                                                                  ()()CC!6 %&".0&D62%  & 0-.&/ .=+0 A <%00< ()/  / 9 0    7
+                                                                                                                                                                                                                F F @!K*3 &&97. 1 ?3 P.-"$%0 &/&9 20 2 -O. @!-$35 PJ78/ &0=2& / 9 /D &  0 / - 
+                                                                                                                                                                                                                     'F AK8,:3 9110#0-J/#!# 0C6 %<J/ 0 - 0-J0  <<J (:/ ; 0 / 9<80 ()  7/ 9 0    7
+                                                                                                                                                                                                                                  F
+                                                                                                                                                                            FF  =2A@!29 //&0"$&- 000//6 &G!0 #() # C6 0/%90 0-/ 02 <71  +Q.0 & / 9  
+                                                                                                                                                                                             F '  N8?3  &- %  9& 0&%  2A %  -J (:/   &   
+       Fig. 4 Average Service Lives in Japan based on the Estimated Weibull Distribution
+
+
+                                                                                                                                                                     18
+References
+ [1] Ahmad, Nadim (2003), Measuring Investment in Software, STI Working Paper Series, OECD, May.
+ [2]       (2004). Introducing Capital Services into the Production Account, Meeting of the Advisory Expert Group on National Accounts, December.
+ [3] Biørn, Erik (1989). Taxation, Technology and the User Cost of Capital, Amsterdam: North-Holland, 325p.
+ [4] Biørn, Erik, Erling Holmoy, and Oystein Olsen (1989). Gross and Net Capital, and the Form of the Survival Function: Theory and Some Norwegian
+     Evidence, Review of Income and Wealth, 35, 133-149.
+ [5] Blades, Derek (2001), Measuring Capital: A Manual on the Measurement of Capital Stocks, Consumption of Fixed Capital, and Capital Services, Paris,
+     OECD, April.
+ [6] Bureau of Economic Analysis (2003), Fixed Assets and Consumer Durable Goods in the United States, 1925-99, Washington, DC: U.S. Government
+     Printing Office, September.
+ [7] Diewert, Erwin W. (2001). Measuring the Price and Quantity as Capital Service Under Alternative Assumptions, Department of Economics,
+     University of British Columbia, Discussion Paper No.01-24, June.
+ [8] Diewert, Erwin W. and Denis Lawrence A. (2000). Progress in Measuring the Price and Quantity of Capital, in Lawrence J. Lau eds., Econometrics
+     and the Cost of Capital: Essays in honor of Dale W. Jorgenson, Chapter 11, Cambridge, The MIT Press, 273-326.
+ [9] Diewert, Erwin W. Anne Harrison, and Paul Schreyer (2004). Cost of Capital Services in the Production Account, 20p.
+[10] Economic and Social Research Institute (2000). The Explanation of the Japanese National Accounts Based on the 1993 SNA, November (in Japanese).
+[11] Fraumeni, Barbara (1997). The Measurement of Depreciation in the U.S. National Income and Product Accounts, Survey of Current Business, July,
+     7-23.
+[12] Grimm, Bruce T., Brent R. Moulton, and David B. Wasshausen (2003). Information Processing Equipment and Software in the National Accounts,
+     revision of the paper prepared for the Conference on Measuring Capital in the New Economy, NBER/CRIW, April 26-27, 2002, Federal Reserve
+     Board, Washington, D.C., March.
+[13] Hermans, Tim (2002). Measurement of GFCF in Software in the Belgian National Accounts, Joint ECE/Eurostat/OECD Meeting on National
+     Accounts, April.
+[14] Hill, Peter (1998). Gross, Productive, Net Capital Stock, Second Meeting of the Canberra Group on Capital Stock Statistics, 20p.
+[15]       (1999). The Productive Capital Stock and the Quantity Index for Flow of Capital, Third Meeting of the Canberra Group on Capital Stock
+     Statistics, 5p.
+[16] Hulten, Charles R. and Frank C. Wykoff (1981a), Economic Depreciation and the Taxation of Structures in United States Manufacturing Industries:
+     An Empirical Analysis, in D. Usher eds., The Measurement of Capital, Chicago: University of Chicago Press, 83-120.
+[17]       (1981b), The Estimation of Economic Depreciation Using Vintage Asset Prices: An Application of the Box-Cox Power Transformation, Journal
+     of Econometrics, April, 367-396.
+[18]       (1981c), The Measurement of Economic Depreciation, in C. R. Hulten eds., Depreciation, Inflation, and the Taxation of Income from Capital,
+     Washington, D.C.: The Urban Institute Press, 81-125.
+[19] Jorgenson, Dale W. (1989). Capital as a Factor of Production, in D. W. Jorgenson and R. Landau, eds., Technology and Capital Formation, Cambridge:
+     The MIT Press, 1-35.
+[20] Jorgenson, Dale W., and Zvi Griliches (1972). Issues in Growth Accounting: A Reply to Edward F. Denison, Survey of Current Business, Vol.52,
+     No.4, 65-94.
+[21] Jorgenson, Dale W. and J. Steven Landefeld (2005). Blueprint for Expanded and Integrated U.S. National Accounts: Review, Assessment, and
+     Next Steps, in D.W. Jorgenson, J.S. Landefeld, and W.D. Nordhaus, eds., A New Architecture for the U.S. National Accounts, Chicago, University of
+     Chicago Press.
+[22] Jorgenson, Dale W. and Koji Nomura (2005). Industry Origins of Japanese Economic Growth, Journal of the Japanese and International Economics,
+     Vol.19, No.4.
+[23] Kuninori, Morio (1988). Measurement of Depreciation of Japanese Construction Machinery, Keizai Keiei Kenkyu, Vol.9 (in Japanese).
+[24] Lee, Bun S. (1978). Measurement of Capital Depreciation within the Japanese Fishing Fleet, Review of Economics and Statistics, 255-273.
+[25] Lequiller, Francois, Nadim Ahmad, Seppo Varjonen, William Cave, and Kil-Hyo Ahn (2003): Report of the OECD Task Force on Software
+     Measurement in the National Accounts, OECD Statistics Working Paper Series, OECD, March.
+[26] Meinen, Gerhard, Piet Verbiest and Peter-Paul de Wolf (1998). Perpetual Inventory Method - Service lives, Discard Patterns and Depreciation
+     Methods, Canberra Group on Capital Stock Statistics, September.
+[27] Nomura, Koji (2004a). Measurement of Capital and Productivity, Tokyo: Keio University Press. (in Japanese) , 633p.
+[28]       (2005a). Turn the Tables! Reframing Measurement of Capital in Japanese National Accounts, presented at the ESRI Conference on Next
+     Steps for the Japanese SNA:“Towards More Accurate Measurement and More Comprehensive Accounts,” Tokyo, March 25, 2005, 43p.
+[29]       (2005b). Duration of Assets: Examination of Directly Observed Discard Data in Japan Tokyo, September, mimeo.
+[30] Schreyer, Paul (2001), OECD Productivity Manual: A Guide to the Measurement of Industry-Level and Aggregate Productivity Growth, OECD, Paris,
+     March.
+[31]       (2003). Capital Stocks, Capital Services and Multi-Factor Productivity Measures, OECD Draft Paper Economic Studies , 22p.
+[32] Triplett, Jack E. (1996). Depreciation in Production Analysis and in Income and Wealth Accounts: Resolution of an OLD Debate, Economic Inquiry,
+     34(1), 93-115.
+[33]       (1997). Concepts of Capital for Production Accounts and for Wealth Accounts: The Implications for Statistical Programs, First Meeting of
+     the Canberra Group on Capital Stock Statistics, 57p.
+[34] United Nations (1993). System of National Accounts 1993, New York, United Nations.
+[35] Wasshausen, David (2000), Computer Prices in the National Income and Product Accounts, Draft Methodology Paper, Bureau of Economic
+     Analysis, 24p.
+
+
+
+
+                                                                         19
+

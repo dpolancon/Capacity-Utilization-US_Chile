@@ -1,0 +1,14 @@
+asset,case_id,L,alpha,max_abs_residual,audit_status
+ME,ME_baseline_L14_alpha1p7,14,1.7,0,PASS
+ME,ME_long_L18_alpha1p7,18,1.7,0,PASS
+ME,ME_longer_L22_alpha1p7,22,1.7,0,PASS
+ME,ME_short_L10_alpha1p7,10,1.7,0,PASS
+NRC,NRC_L30_alpha1p2,30,1.2,0,PASS
+NRC,NRC_L30_alpha2p0,30,2,0,PASS
+NRC,NRC_L50_alpha1p2,50,1.2,0,PASS
+NRC,NRC_L50_alpha2p0,50,2,0,PASS
+NRC,NRC_baseline_L30_alpha1p6,30,1.6,0,PASS
+NRC,NRC_long_L50_alpha1p6,50,1.6,0,PASS
+NRC,NRC_longer_L60_alpha1p6,60,1.6,0,PASS
+NRC,NRC_medium_L40_alpha1p6,40,1.6,0,PASS
+NRC,NRC_short_NomuraOffice_L23_alpha1p6,23,1.6,0,PASS

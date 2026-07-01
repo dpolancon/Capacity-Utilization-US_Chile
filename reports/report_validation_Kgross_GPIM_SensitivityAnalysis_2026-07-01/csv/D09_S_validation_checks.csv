@@ -1,0 +1,36 @@
+check_id,status,notes
+REPO_STATE_RECORDED,PASS,branch main HEAD d594ed0 origin/main d594ed0 status D09-S generated artifacts only after verified clean opening state
+D09_R_AUTHORIZATION_PRESENT,PASS,D09-R decision report authorizes double validation review.
+NOMURA_PDFS_PRESENT,PASS,docs/Nomura2005.pdf and docs/NomuraFutakami2005.pdf present.
+LITERATURE_SOURCE_LEDGER_CREATED,PASS,Literature source ledger written.
+NOMURA_2005_EXTRACTED_OR_REVIEW_FLAGGED,PASS,Nomura 2005 office-building extraction status: EXTRACTED
+NOMURA_FUTAKAMI_2005_EXTRACTED_OR_REVIEW_FLAGGED,PASS,Nomura-Futakami text extracted or source present.
+D06_BASELINE_READ,PASS,"D06 asset, capacity, investment, and warmup files read."
+D06_BASELINE_NOT_MODIFIED,PASS,D06 file md5 unchanged.
+D07_SOURCE_OF_TRUTH_NOT_MODIFIED,PASS,D07 source panel md5 unchanged.
+SERVICE_LIFE_ASSUMPTION_LEDGER_CREATED,PASS,Service-life assumption ledger written.
+ME_SENSITIVITY_CASES_CREATED,PASS,Four ME cases created.
+NRC_SENSITIVITY_CASES_CREATED,PASS,"Nine NRC cases created, including shape sensitivity."
+SURVIVAL_PROFILES_CREATED,PASS,Survival profile ledger written.
+SENSITIVITY_STOCKS_CREATED,PASS,Real stock sensitivity panel written.
+CURRENT_COST_SENSITIVITY_CREATED,PASS,Current-cost stocks equal real stocks times unchanged pKN.
+CAPACITY_SENSITIVITY_CREATED,PASS,Capacity cases written.
+STOCK_FLOW_IDENTITIES_PASS,PASS,Stock-flow identities pass.
+CURRENT_COST_IDENTITIES_PASS,PASS,Current-cost identities pass.
+CAPACITY_IDENTITIES_PASS,PASS,Capacity identities pass.
+WARMUP_SUFFICIENCY_AUDIT_CREATED,PASS,Warmup audit written.
+NRC_DECLINE_SENSITIVITY_AUDIT_CREATED,PASS,NRC decline sensitivity audit written.
+OUTPUT_CAPITAL_SENSITIVITY_ATTEMPTED,PASS,Output-capital sensitivity audit written.
+ME_NRC_COMPOSITION_SENSITIVITY_CREATED,PASS,ME/NRC composition sensitivity figure data written.
+FIGURE_MANIFEST_CREATED,PASS,26 figures recorded.
+LATEX_SOURCE_CREATED,PASS,LaTeX source written.
+PDF_REPORT_COMPILED,PASS,Compilation method: latexmk
+REPORT_ONLY_BOUNDARY_ENFORCED,PASS,All sensitivity ledgers carry report-only boundary labels.
+NO_MODEL_TRANSFORMATIONS_CREATED,PASS,No model transformations created.
+NO_ECONOMETRICS_RUN,PASS,No econometrics run.
+NO_GPIM_BASELINE_REWRITE,PASS,No GPIM baseline rewrite.
+NO_PKN_CHANGE,PASS,pKN paths read only and unchanged.
+NO_PROVIDER_REPO_MODIFICATION,PASS,Provider repo not touched.
+HUMAN_REVIEW_FLAGS_CREATED,PASS,Human review flags written.
+HUMAN_CHECKLIST_CREATED,PASS,Human checklist written.
+DECISION_RECORDED,PASS,AUTHORIZE_D10_TRANSFORMATION_PLANNING_WITH_NRC_ROBUSTNESS_FLAG

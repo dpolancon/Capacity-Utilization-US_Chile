@@ -1,0 +1,22 @@
+
+\begin{tabular}{lllll}
+\toprule
+item & status & evidence & recommended\_decision & notes\\
+\midrule
+Nomura literature reviewed and correctly bounded & PASS & D09\_S\_literature\_source\_ledger.csv & accept & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+Baseline D06 ME/NRC GPIM preserved & PASS & D06 md5 unchanged & accept & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+ME service-life sensitivity visually stable & PASS & Figures 5-8 & accept & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+NRC service-life sensitivity assessed & PASS & Figures 9-16 and decline audit & accept & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+NRC L=30 defensibility assessed & PASS\_WITH\_REVIEW\_FLAG & D09-R and D09-S NRC ledgers & accept & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+\addlinespace
+Longer NRC service lives do not create unacceptable warmup fragility & PASS\_WITH\_REVIEW\_FLAG & Warmup audit flags longer NRC L as high review risk, not blocking & accept & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+Stock-flow identities pass across cases & PASS & Stock-flow audit & accept & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+Current-cost identities pass across cases & PASS & Current-cost audit & accept & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+Capacity aggregation identities pass across cases & PASS & Capacity identity audit & accept & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+Output-capital relations inspected across cases & PASS & Figures 19-20 & accept & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+\addlinespace
+ME/NRC composition inspected across cases & PASS & Figures 17-18 & accept & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+No report-only sensitivity object promoted to source-of-truth & PASS & Boundary labels in ledgers and report & accept & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+Ready to proceed to D10 transformation planning & PASS\_WITH\_NRC\_ROBUSTNESS\_FLAG & Validation checks and human flags & AUTHORIZE\_D10\_TRANSFORMATION\_PLANNING\_WITH\_NRC\_ROBUSTNESS\_FLAG & D09-S is report-only and does not authorize any sensitivity object as a model transformation.\\
+\bottomrule
+\end{tabular}

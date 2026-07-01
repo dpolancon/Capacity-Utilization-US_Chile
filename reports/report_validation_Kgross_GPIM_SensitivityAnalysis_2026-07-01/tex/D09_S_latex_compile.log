@@ -1,0 +1,188 @@
+Initial Win CP for (console input, console output, system): (CP65001, CP65001, CP65001)
+I changed them all to CP65001
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  ../figures/D09_S_fig01_Nomura_literature_evidence_map.pdf
+  ../figures/D09_S_fig02_ME_survival_profiles.pdf
+  ../figures/D09_S_fig03_NRC_survival_profiles.pdf
+  ../figures/D09_S_fig04_warmup_to_L_ratio_by_case.pdf
+  ../figures/D09_S_fig05_real_ME_stock_sensitivity.pdf
+  ../figures/D09_S_fig06_current_ME_stock_sensitivity.pdf
+  ../figures/D09_S_fig07_real_ME_index_1947_100_sensitivity.pdf
+  ../figures/D09_S_fig08_real_ME_index_2017_100_sensitivity.pdf
+  ../figures/D09_S_fig09_real_NRC_stock_sensitivity.pdf
+  ../figures/D09_S_fig10_current_NRC_stock_sensitivity.pdf
+  ../figures/D09_S_fig11_real_NRC_index_1947_100_sensitivity.pdf
+  ../figures/D09_S_fig12_real_NRC_index_2017_100_sensitivity.pdf
+  ../figures/D09_S_fig13_real_capacity_NRC_life_sensitivity.pdf
+  ../figures/D09_S_fig14_current_capacity_NRC_life_sensitivity.pdf
+  ../figures/D09_S_fig15_capacity_index_1947_100_NRC_sensitivity.pdf
+  ../figures/D09_S_fig16_capacity_index_2017_100_NRC_sensitivity.pdf
+  ../figures/D09_S_fig17_ME_over_NRC_real_stock_ratio_sensitivity.pdf
+  ../figures/D09_S_fig18_ME_share_real_capacity_sensitivity.pdf
+  ../figures/D09_S_fig19_capacity_output_ratio_sensitivity.pdf
+  ../figures/D09_S_fig20_output_capacity_level_relation_sensitivity.pdf
+  ../figures/D09_S_fig21_NRC_peak_to_latest_decline_by_case.pdf
+  ../figures/D09_S_fig22_NRC_post_peak_path_by_case.pdf
+  ../figures/D09_S_fig23_NRC_decline_vs_service_life_summary.pdf
+  ../figures/D09_S_fig24_stock_flow_identity_residuals_by_case.pdf
+  ../figures/D09_S_fig25_current_cost_identity_residuals_by_case.pdf
+  ../figures/D09_S_fig26_capacity_identity_residuals_by_case.pdf
+Category 'changed_user':
+  ../figures/D09_S_fig01_Nomura_literature_evidence_map.pdf
+  ../figures/D09_S_fig02_ME_survival_profiles.pdf
+  ../figures/D09_S_fig03_NRC_survival_profiles.pdf
+  ../figures/D09_S_fig04_warmup_to_L_ratio_by_case.pdf
+  ../figures/D09_S_fig05_real_ME_stock_sensitivity.pdf
+  ../figures/D09_S_fig06_current_ME_stock_sensitivity.pdf
+  ../figures/D09_S_fig07_real_ME_index_1947_100_sensitivity.pdf
+  ../figures/D09_S_fig08_real_ME_index_2017_100_sensitivity.pdf
+  ../figures/D09_S_fig09_real_NRC_stock_sensitivity.pdf
+  ../figures/D09_S_fig10_current_NRC_stock_sensitivity.pdf
+  ../figures/D09_S_fig11_real_NRC_index_1947_100_sensitivity.pdf
+  ../figures/D09_S_fig12_real_NRC_index_2017_100_sensitivity.pdf
+  ../figures/D09_S_fig13_real_capacity_NRC_life_sensitivity.pdf
+  ../figures/D09_S_fig14_current_capacity_NRC_life_sensitivity.pdf
+  ../figures/D09_S_fig15_capacity_index_1947_100_NRC_sensitivity.pdf
+  ../figures/D09_S_fig16_capacity_index_2017_100_NRC_sensitivity.pdf
+  ../figures/D09_S_fig17_ME_over_NRC_real_stock_ratio_sensitivity.pdf
+  ../figures/D09_S_fig18_ME_share_real_capacity_sensitivity.pdf
+  ../figures/D09_S_fig19_capacity_output_ratio_sensitivity.pdf
+  ../figures/D09_S_fig20_output_capacity_level_relation_sensitivity.pdf
+  ../figures/D09_S_fig21_NRC_peak_to_latest_decline_by_case.pdf
+  ../figures/D09_S_fig22_NRC_post_peak_path_by_case.pdf
+  ../figures/D09_S_fig23_NRC_decline_vs_service_life_summary.pdf
+  ../figures/D09_S_fig24_stock_flow_identity_residuals_by_case.pdf
+  ../figures/D09_S_fig25_current_cost_identity_residuals_by_case.pdf
+  ../figures/D09_S_fig26_capacity_identity_residuals_by_case.pdf
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+(c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2026/texmf-dist/tex/latex/base/size11.clo))
+(c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/placeins/placeins.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.out)
+(./report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.out)
+(./report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.toc) [1{c:/texl
+ive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (16.1892pt too wide) in paragraph at lines 16--18
+\OT1/cmr/m/n/10.95 tiv-ity stocks, ra-tios, and in-dices are RE-PORT[]ONLY, SEN
+-SI-TIV-ITY[]ONLY, NOT[]SOURCE[]OF[]TRUTH,
+[2 <../figures/D09_S_fig01_Nomura_literature_evidence_map.pdf>] [3] [4 <../figu
+res/D09_S_fig02_ME_survival_profiles.pdf> <../figures/D09_S_fig03_NRC_survival_
+profiles.pdf>] [5 <../figures/D09_S_fig04_warmup_to_L_ratio_by_case.pdf>]
+[6 <../figures/D09_S_fig05_real_ME_stock_sensitivity.pdf> <../figures/D09_S_fig
+06_current_ME_stock_sensitivity.pdf>] [7 <../figures/D09_S_fig07_real_ME_index_
+1947_100_sensitivity.pdf> <../figures/D09_S_fig08_real_ME_index_2017_100_sensit
+ivity.pdf>] [8 <../figures/D09_S_fig09_real_NRC_stock_sensitivity.pdf>]
+[9 <../figures/D09_S_fig10_current_NRC_stock_sensitivity.pdf> <../figures/D09_S
+_fig11_real_NRC_index_1947_100_sensitivity.pdf>] [10 <../figures/D09_S_fig12_re
+al_NRC_index_2017_100_sensitivity.pdf> <../figures/D09_S_fig13_real_capacity_NR
+C_life_sensitivity.pdf>] [11 <../figures/D09_S_fig14_current_capacity_NRC_life_
+sensitivity.pdf> <../figures/D09_S_fig15_capacity_index_1947_100_NRC_sensitivit
+y.pdf>] [12 <../figures/D09_S_fig16_capacity_index_2017_100_NRC_sensitivity.pdf
+> <../figures/D09_S_fig17_ME_over_NRC_real_stock_ratio_sensitivity.pdf>]
+[13 <../figures/D09_S_fig18_ME_share_real_capacity_sensitivity.pdf> <../figures
+/D09_S_fig19_capacity_output_ratio_sensitivity.pdf>] [14 <../figures/D09_S_fig2
+0_output_capacity_level_relation_sensitivity.pdf>] [15 <../figures/D09_S_fig24_
+stock_flow_identity_residuals_by_case.pdf> <../figures/D09_S_fig25_current_cost
+_identity_residuals_by_case.pdf>] [16 <../figures/D09_S_fig26_capacity_identity
+_residuals_by_case.pdf>] [17 <../figures/D09_S_fig21_NRC_peak_to_latest_decline
+_by_case.pdf> <../figures/D09_S_fig22_NRC_post_peak_path_by_case.pdf>]
+(../tables/D09_S_human_decision_checklist.tex)
+Overfull \hbox (1322.97266pt too wide) in paragraph at lines 2--77
+[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--77
+
+[18 <../figures/D09_S_fig23_NRC_decline_vs_service_life_summary.pdf>]
+(c:/texlive/2026/texmf-dist/tex/latex/base/omscmr.fd)
+Overfull \hbox (23.763pt too wide) in paragraph at lines 84--85
+\OT1/cmr/m/n/10.95 Nomura 2005 ex-trac-tion lo-cated the office-building val-ue
+s 15.4, 22.2, and 23.0 and the SASD/Weibull/discard-
+[19] (./report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.aux) )
+(see the transcript file for additional information)<c:/texlive/2026/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/
+texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/20
+26/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2026/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb>
+Output written on report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.
+pdf (19 pages, 336908 bytes).
+Transcript written on report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07
+-01.log.
+Latexmk: Getting log file 'report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.log'
+Latexmk: Examining 'report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.fls'
+Latexmk: Examining 'report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.log'
+Latexmk: Log file says output to 'report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.pdf'
+Latexmk: All targets (report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.pdf) are up-to-date
+

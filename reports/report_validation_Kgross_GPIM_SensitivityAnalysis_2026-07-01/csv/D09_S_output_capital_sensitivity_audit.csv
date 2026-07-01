@@ -1,0 +1,17 @@
+capacity_case_id,case_group,first_year,latest_year,observations,status
+capacity_ME_baseline_L14_alpha1p7_plus_NRC_baseline,ME sensitivity capacity,1931,2024,94,PASS
+capacity_ME_baseline_plus_NRC_L30_alpha1p2,NRC sensitivity capacity,1931,2024,94,PASS
+capacity_ME_baseline_plus_NRC_L30_alpha2p0,NRC sensitivity capacity,1931,2024,94,PASS
+capacity_ME_baseline_plus_NRC_L50_alpha1p2,NRC sensitivity capacity,1931,2024,94,PASS
+capacity_ME_baseline_plus_NRC_L50_alpha2p0,NRC sensitivity capacity,1931,2024,94,PASS
+capacity_ME_baseline_plus_NRC_baseline_L30_alpha1p6,NRC sensitivity capacity,1931,2024,94,PASS
+capacity_ME_baseline_plus_NRC_long_L50_alpha1p6,NRC sensitivity capacity,1931,2024,94,PASS
+capacity_ME_baseline_plus_NRC_longer_L60_alpha1p6,NRC sensitivity capacity,1931,2024,94,PASS
+capacity_ME_baseline_plus_NRC_medium_L40_alpha1p6,NRC sensitivity capacity,1931,2024,94,PASS
+capacity_ME_baseline_plus_NRC_short_NomuraOffice_L23_alpha1p6,NRC sensitivity capacity,1931,2024,94,PASS
+capacity_ME_long_L18_alpha1p7_plus_NRC_baseline,ME sensitivity capacity,1931,2024,94,PASS
+capacity_ME_long_L18_plus_NRC_long_L50,combined sensitivity examples,1931,2024,94,PASS
+capacity_ME_longer_L22_alpha1p7_plus_NRC_baseline,ME sensitivity capacity,1931,2024,94,PASS
+capacity_ME_short_L10_alpha1p7_plus_NRC_baseline,ME sensitivity capacity,1931,2024,94,PASS
+capacity_ME_short_L10_plus_NRC_short_L23,combined sensitivity examples,1931,2024,94,PASS
+capacity_baseline_ME_L14_NRC_L30,baseline capacity,1931,2024,94,PASS
