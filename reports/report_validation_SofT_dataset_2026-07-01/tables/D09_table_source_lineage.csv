@@ -1,0 +1,7 @@
+"stage","decision","role"
+"D05","AUTHORIZE_D06_GPIM_REFREEZE_WITH_GPIM_GUARDED_pKN","pKN guardian"
+"D06","AUTHORIZE_D07_CAPACITY_PANEL_CONSUMPTION","GPIM refreeze"
+"D07-0","AUTHORIZE_D07_LEVEL_ACCOUNTING_PANEL_CONSUMPTION","consumption contract"
+"D07","AUTHORIZE_D08_SOURCE_OF_TRUTH_REVIEW","level/accounting panel"
+"D08","AUTHORIZE_D09_TRANSFORMATION_PLANNING","audit and repair-regression review"
+"D09","visual validation report","human inspection interface"

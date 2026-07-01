@@ -1,0 +1,5 @@
+"layer","label","status","x","y","availability_status"
+"A","NFC productive-origin baseline","authorized baseline/accounting",1,1,"AVAILABLE"
+"B","Corporate reconciliation variants","authorized reconciliation",2,1,"AVAILABLE"
+"C","Financial transfer/correction candidates","candidate only",3,1,"AVAILABLE"
+"D","Imputed-interest candidates","candidate only",4,1,"AVAILABLE"

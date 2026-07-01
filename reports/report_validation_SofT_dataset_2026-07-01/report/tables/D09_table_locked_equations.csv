@@ -1,0 +1,7 @@
+"object","equation","status"
+"Real investment","$I^R_{j,t}=I^C_{j,t}/(p^K_{j,t}/100)$","locked D05-D08 lineage"
+"Gross surviving GPIM stock","$K^R_{j,t}=\sum_{a=0}^{A}s_j(a)I^R_{j,t-a}$","locked D05-D08 lineage"
+"Current-cost valuation","$K^C_{j,t}=K^R_{j,t}p^K_{j,t}/100$","locked D05-D08 lineage"
+"Real capacity aggregation","$K^R_{cap,t}=K^R_{ME,t}+K^R_{NRC,t}$","locked D05-D08 lineage"
+"Current-cost capacity aggregation","$K^C_{cap,t}=K^C_{ME,t}+K^C_{NRC,t}$","locked D05-D08 lineage"
+"Capacity pKN","$p^K_{cap,t}=100K^C_{cap,t}/K^R_{cap,t}$","locked D05-D08 lineage"

@@ -1,0 +1,8 @@
+"object","metric","max_abs_residual","audit_status"
+"ME","I_real residual",4.80213202536106e-10,"PASS"
+"NRC","I_real residual",4.94765117764473e-10,"PASS"
+"K_current_ME_refrozen_identity","current-cost identity",8.84756445884705e-09,"PASS"
+"K_current_NRC_refrozen_identity","current-cost identity",1.02445483207703e-08,"PASS"
+"K_current_capacity_refrozen_identity","current-cost identity",1.86264514923096e-08,"PASS"
+"K_real_capacity_refrozen_equals_ME_plus_NRC","capacity identity",1.02445483207703e-08,"PASS"
+"K_current_capacity_refrozen_equals_ME_plus_NRC","capacity identity",9.77888703346252e-09,"PASS"
