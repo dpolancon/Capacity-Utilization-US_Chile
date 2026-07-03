@@ -1,0 +1,7 @@
+"menu_id","object","formula","status"
+"US-NFC-DOLS-1A","theta_ME","beta_c","FORMULA_ONLY_PENDING_ESTIMATION"
+"US-NFC-DOLS-1A","theta_NRC","beta_ln_K_NRC - beta_c","FORMULA_ONLY_PENDING_ESTIMATION"
+"US-NFC-DOLS-1B/2","theta_ME_t","beta_c + beta_omega_c * omega_t","FORMULA_ONLY_PENDING_ESTIMATION"
+"US-NFC-DOLS-1B/2","theta_NRC_t","beta_ln_K_NRC - beta_c - beta_omega_c * omega_t","FORMULA_ONLY_PENDING_ESTIMATION"
+"AGGREGATE_GROWTH","theta_aggregate_growth_t","w_growth_NRC_capacity_t * theta_NRC_t + w_growth_ME_capacity_t * theta_ME_t","FORMULA_ONLY_PENDING_ESTIMATION"
+"AGGREGATE_LEVELSHARE","theta_aggregate_levelshare_t","NRC_share_capacity_t * theta_NRC_t + ME_share_capacity_t * theta_ME_t","FORMULA_ONLY_PENDING_ESTIMATION"

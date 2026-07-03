@@ -1,0 +1,5 @@
+"d10_object","source_path","consumed_as_baseline","notes"
+"D06 capacity capital block","output/US/D06_GPIM_REFREEZE_WITH_GPIM_GUARDED_pKN/csv/D06_capacity_refrozen_panel.csv","YES_ME_NRC_CAPACITY_ONLY","ME L=14 alpha=1.7; NRC L=30 alpha=1.6"
+"D07 level accounting panel","output/US/D07_LEVEL_ACCOUNTING_PANEL_CONSUMPTION/csv/D07_level_accounting_panel_wide.csv","YES_ACCOUNTING_OUTPUT_DISTRIBUTION","D07 source-of-truth accounting panel"
+"D07-0 financial candidate ledger","output/US/D07_0_SOURCE_OF_TRUTH_LEVEL_ACCOUNTING_CONSUMPTION_CONTRACT/csv/D07_0_financial_correction_candidate_ledger.csv","NO_LEDGER_ONLY","Candidates preserved or flagged; not model ready"
+"D09-S sensitivity report","reports/report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01/tex/report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01.tex","NO_REPORT_ONLY_FLAG_ONLY","NRC_ROBUSTNESS_FLAG carried; sensitivity stocks not consumed"
