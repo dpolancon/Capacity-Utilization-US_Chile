@@ -1,0 +1,4 @@
+"protocol_item","status","notes"
+"theta_recovery","PROTOCOL_ONLY_NOT_ESTIMATED","D10 preserves protocol language but runs no elasticity estimation."
+"q_recovery","PROTOCOL_ONLY_NOT_ESTIMATED","Mechanization growth q remains a later-stage transformation, not estimated here."
+"q_omega","PARKED_NOT_CONSTRUCTED","Distribution-weighted accumulation indexes are prohibited in D10 clean."

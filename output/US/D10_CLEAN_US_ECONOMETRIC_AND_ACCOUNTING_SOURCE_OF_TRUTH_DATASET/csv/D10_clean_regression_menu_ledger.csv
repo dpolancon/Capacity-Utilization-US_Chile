@@ -1,0 +1,7 @@
+"menu_item","variable_id","authorization","notes"
+"baseline_output","Y_REAL_NFC_GVA_BASELINE_D09","BASELINE_ECONOMETRIC_OBJECT","D10 creates a menu and estimates nothing."
+"baseline_capacity_capital","K_capacity","BASELINE_ECONOMETRIC_OBJECT","D10 creates a menu and estimates nothing."
+"baseline_wage_share","omega_NFC_productive_origin_GVA","BASELINE_ECONOMETRIC_OBJECT","D10 creates a menu and estimates nothing."
+"baseline_surplus_share","pi_NFC_productive_origin_GVA","BASELINE_ECONOMETRIC_OBJECT","D10 creates a menu and estimates nothing."
+"raw_corporate_comparisons","omega_CORP_raw_GVA; omega_CORP_raw_NVA","COMPARISON_ONLY_NOT_BASELINE","D10 creates a menu and estimates nothing."
+"candidate_adjustments","corporate-clean and financial/imputed-interest candidates","NOT_MODEL_READY","D10 creates a menu and estimates nothing."
