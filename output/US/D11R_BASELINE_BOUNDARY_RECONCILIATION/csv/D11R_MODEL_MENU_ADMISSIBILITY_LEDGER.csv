@@ -1,0 +1,233 @@
+"variable_name","accounting_layer","D10_status","D11_role","reason","can_enter_D12_baseline_design","can_enter_D12_robustness_design","excluded_from_estimation","required_reconciliation"
+"ACCUMULATED_Q","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"ADD_PROFITS_TO_NOS","blocked_or_parked","BLOCKED","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"ADJUSTED_SHAIKH_CORPORATE_GOS","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"ADJUSTED_SHAIKH_CORPORATE_GVA","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"ADJUSTED_SHAIKH_CORPORATE_NOS","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"all_BEA_fixed_assets","blocked_or_parked","PARKED_EXCLUDED_FROM_BASELINE","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"BUSINESS_WIDE_SHAIKH_OBJECTS","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"BUSINESS_WIDE_SHAIKH_RECONCILIATION","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__current_transfer_payments","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__current_transfer_receipts","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__dividends_paid","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__dividends_received","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__IPP__cfc_current_cost","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP__IPP__gross_investment_current_cost","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP__IPP__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__IPP__net_stock_current_cost","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP__IPP__net_stock_quantity_index","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP__IPP__official_price_index","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP__IPP__retirements","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__IPP__revaluation_holding_gains","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__ME__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__ME__official_price_index","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP__ME__retirements","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__ME__revaluation_holding_gains","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__NRC__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__NRC__official_price_index","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP__NRC__retirements","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__NRC__revaluation_holding_gains","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__TOTAL__cfc_current_cost","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP__TOTAL__gross_investment_current_cost","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP__TOTAL__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"CORP__TOTAL__net_stock_current_cost","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP__TOTAL__net_stock_quantity_index","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP__TOTAL__official_price_index","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP_GOS_SHAIKH_RECONCILIATION","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP_GVA_SHAIKH_RECONCILIATION","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP_IMPUTED_INTEREST_ADJ","financial_imputed_interest_candidate","METADATA_REFERENCE_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"CORP_NET_OPERATING_SURPLUS_SHARE_GVA","distribution","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP_NET_OPERATING_SURPLUS_SHARE_NVA","distribution","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP_NOS_EBIT_SHAIKH_RECONCILIATION","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"CORP_NOS_NET_MATCHED_FINANCIAL_CLAIMS_PROXY","corporate_clean_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Corporate-clean candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"CORP_NOS_NET_MATCHED_FINANCIAL_CLAIMS_SHARE_GVA","corporate_clean_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Corporate-clean candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"CORP_NOS_NET_MATCHED_FINANCIAL_CLAIMS_SHARE_NVA","corporate_clean_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Corporate-clean candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"CORP_NOS_NET_NFC_FINANCIAL_CLAIMS_PROXY","corporate_clean_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Corporate-clean candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"CORP_NOS_NET_NFC_FINANCIAL_CLAIMS_SHARE_GVA","corporate_clean_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Corporate-clean candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"CORP_NOS_NET_NFC_FINANCIAL_CLAIMS_SHARE_NVA","corporate_clean_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Corporate-clean candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"CORP_SHAIKH_OPERATING_LADDER_RECONCILIATION_BUNDLE","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"D09_S_sensitivity_stocks","blocked_or_parked","REPORT_ONLY_NOT_BASELINE","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"DELTA_G_TOT","capital","CONDITIONAL_SECONDARY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DLOG_G_TOT","capital","CONDITIONAL_SECONDARY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DLOG_N_TOT","capital","CONDITIONAL_SECONDARY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__e_adj_CORP","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__e_adj_NFC","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__e_x_Kcap","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__e_x_ME","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__e_x_ME_NRC_gap","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__e_x_NRC","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__GOV_TRANS_GPIM","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__IPP_NFC_GPIM","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__K_G_NFC_KCAP_GPIM","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__K_G_NFC_ME_GPIM","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__K_G_NFC_NRC_GPIM","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__K_N_NFC_KCAP_GPIM","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__K_N_NFC_ME_GPIM","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__K_N_NFC_NRC_GPIM","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__ln_e_adj_CORP","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__ln_e_adj_NFC","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__omega_adj_CORP","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__omega_adj_NFC","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__P_K_NFC_ME_GPIM","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__P_K_NFC_NRC_GPIM","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__pi_adj_CORP","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"DOWNSTREAM__pi_adj_NFC","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"FIN__current_transfer_payments","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__current_transfer_receipts","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__dividends_paid","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__dividends_received","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__IPP__cfc_current_cost","financial_imputed_interest_candidate","CONTEXTUAL_AUTHORIZED","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN__IPP__gross_investment_current_cost","financial_imputed_interest_candidate","CONTEXTUAL_AUTHORIZED","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN__IPP__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__IPP__net_stock_current_cost","financial_imputed_interest_candidate","CONTEXTUAL_AUTHORIZED","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN__IPP__net_stock_quantity_index","financial_imputed_interest_candidate","CONTEXTUAL_AUTHORIZED","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN__IPP__official_price_index","financial_imputed_interest_candidate","DIAGNOSTIC_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN__ME__cfc_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__ME__gross_investment_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__ME__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__ME__net_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__ME__net_stock_quantity_index","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__ME__official_price_index","financial_imputed_interest_candidate","DIAGNOSTIC_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN__NRC__cfc_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__NRC__gross_investment_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__NRC__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__NRC__net_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__NRC__net_stock_quantity_index","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__NRC__official_price_index","financial_imputed_interest_candidate","DIAGNOSTIC_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN__TOTAL__cfc_current_cost","financial_imputed_interest_candidate","DIAGNOSTIC_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN__TOTAL__gross_investment_current_cost","financial_imputed_interest_candidate","DIAGNOSTIC_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN__TOTAL__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"FIN__TOTAL__net_stock_current_cost","financial_imputed_interest_candidate","DIAGNOSTIC_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN__TOTAL__net_stock_quantity_index","financial_imputed_interest_candidate","DIAGNOSTIC_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN__TOTAL__official_price_index","financial_imputed_interest_candidate","DIAGNOSTIC_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_AFTER_TAX_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_CFC","financial_imputed_interest_candidate","METADATA_REFERENCE_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_CFC_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_COMP","financial_imputed_interest_candidate","METADATA_REFERENCE_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_COMP_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_DIVIDENDS","financial_imputed_interest_candidate","METADATA_REFERENCE_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_DIVIDENDS_NET_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_GVA","financial_imputed_interest_candidate","METADATA_REFERENCE_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_GVA_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_NET_INT","financial_imputed_interest_candidate","METADATA_REFERENCE_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_NET_INT_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_NOS","financial_imputed_interest_candidate","METADATA_REFERENCE_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_NOS_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_NOS_RESIDUAL_AFTER_MATCHED_FINANCIAL_CLAIMS","corporate_clean_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Corporate-clean candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_NOS_RESIDUAL_AFTER_NFC_FINANCIAL_CLAIMS","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_NVA","financial_imputed_interest_candidate","METADATA_REFERENCE_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_NVA_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_PAT_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_PBT","financial_imputed_interest_candidate","METADATA_REFERENCE_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_PBT_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_PROFITS_IVA_CC_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_TAX_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_TRANSFERS","financial_imputed_interest_candidate","METADATA_REFERENCE_ONLY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_TRANSFERS_NET_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"FIN_UNDISTRIBUTED_IMPLIED","financial_imputed_interest_candidate","CANDIDATE_ADJUSTMENT_REQUIRES_CROSSWALK; NOT_MODEL_READY","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"G_TOT_GPIM_2017","nfc_productive_origin_baseline","EXCLUDED_FROM_BASELINE","EXCLUDED_FROM_MODEL_MENU","Total-capital GPIM object retained only outside baseline; baseline capacity capital remains ME + NRC.","no","yes","yes","Resolved by D11R baseline-boundary reconciliation."
+"GOV_TRANS__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"GOV_TRANS__HIGHWAYS_STREETS__cfc_current_cost","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"GOV_TRANS__HIGHWAYS_STREETS__gross_investment_current_cost","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"GOV_TRANS__HIGHWAYS_STREETS__net_stock_current_cost","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"GOV_TRANS__HIGHWAYS_STREETS__net_stock_quantity_index","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"GOV_TRANS__TRANSPORTATION_STRUCTURES__cfc_current_cost","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"GOV_TRANS__TRANSPORTATION_STRUCTURES__gross_investment_current_cost","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"GOV_TRANS__TRANSPORTATION_STRUCTURES__net_stock_current_cost","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"GOV_TRANS__TRANSPORTATION_STRUCTURES__net_stock_quantity_index","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"government_transportation","blocked_or_parked","PARKED_EXCLUDED_FROM_BASELINE","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"GPIM_RECONSTRUCTION","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"GROWTH_ARITH_G_TOT","capital","CONDITIONAL_SECONDARY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"GROWTH_ARITH_N_TOT","capital","CONDITIONAL_SECONDARY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"I_TOT_REAL_2017","capital","CONDITIONAL_SECONDARY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"INVENTORIES_MENU","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"IPP","blocked_or_parked","PARKED_EXCLUDED_FROM_BASELINE","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"K_capacity","nfc_productive_origin_baseline","BASELINE_AUTHORIZED","BASELINE_REGRESSOR_CANDIDATE","D10 clean baseline productive-origin variable.","yes","no","no",
+"K_ME","nfc_productive_origin_baseline","BASELINE_AUTHORIZED","BASELINE_REGRESSOR_CANDIDATE","D10 clean baseline productive-origin variable.","yes","no","no",
+"K_NRC","nfc_productive_origin_baseline","BASELINE_AUTHORIZED","BASELINE_REGRESSOR_CANDIDATE","D10 clean baseline productive-origin variable.","yes","no","no",
+"L1_DLOG_G_TOT","capital","CONDITIONAL_SECONDARY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"L1_DLOG_N_TOT","capital","CONDITIONAL_SECONDARY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"L1_LOG_G_TOT","capital","CONDITIONAL_SECONDARY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"L1_LOG_N_TOT","capital","CONDITIONAL_SECONDARY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"LOG_G_TOT_GPIM_2017","nfc_productive_origin_baseline","EXCLUDED_FROM_BASELINE","EXCLUDED_FROM_MODEL_MENU","Total-capital GPIM object retained only outside baseline; baseline capacity capital remains ME + NRC.","no","yes","yes","Resolved by D11R baseline-boundary reconciliation."
+"LOG_I_TOT_REAL_2017","capital","CONDITIONAL_SECONDARY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"LOG_N_TOT_GPIM_2017","capital","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"N_TOT_GPIM_2017","capital","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC__current_transfer_payments","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__current_transfer_receipts","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__dividends_paid","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__dividends_received","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__IPP__cfc_current_cost","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC__IPP__gross_investment_current_cost","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC__IPP__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__IPP__net_stock_current_cost","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC__IPP__net_stock_quantity_index","contextual","CONTEXTUAL_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC__IPP__official_price_index","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC__IPP__retirements","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__IPP__revaluation_holding_gains","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__ME__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__ME__official_price_index","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC__ME__retirements","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__ME__revaluation_holding_gains","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__NRC__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__NRC__official_price_index","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC__NRC__retirements","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__NRC__revaluation_holding_gains","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__TOTAL__cfc_current_cost","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC__TOTAL__gross_investment_current_cost","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC__TOTAL__gross_stock_current_cost","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"NFC__TOTAL__net_stock_current_cost","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC__TOTAL__net_stock_quantity_index","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC__TOTAL__official_price_index","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC_COMPENSATION_SHARE_GVA","nfc_productive_origin_baseline","BASELINE_AUTHORIZED","BASELINE_CONTROL_CANDIDATE","D10 baseline-authorized support variable.","yes","no","no",
+"NFC_COMPENSATION_SHARE_NVA","distribution","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC_FINANCIAL_CLAIMS_BURDEN_NOS","financial_imputed_interest_candidate","DIAGNOSTIC_OR_ROBUSTNESS_CANDIDATE","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"NFC_FINANCIAL_CLAIMS_BURDEN_NVA","financial_imputed_interest_candidate","DIAGNOSTIC_OR_ROBUSTNESS_CANDIDATE","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"NFC_NET_INTEREST_MISC_PAYMENTS_PROXY","financial_imputed_interest_candidate","DIAGNOSTIC_OR_ROBUSTNESS_CANDIDATE","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"NFC_NET_OPERATING_SURPLUS_SHARE_GVA","distribution","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC_NET_OPERATING_SURPLUS_SHARE_NVA","distribution","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"NFC_SURPLUS_AFTER_NET_INTEREST_PROXY","financial_imputed_interest_candidate","ROBUSTNESS_CANDIDATE","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"NFC_SURPLUS_AFTER_NET_INTEREST_SHARE_GVA","financial_imputed_interest_candidate","ROBUSTNESS_CANDIDATE","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"NFC_SURPLUS_AFTER_NET_INTEREST_SHARE_NVA","financial_imputed_interest_candidate","ROBUSTNESS_CANDIDATE","CANDIDATE_REQUIRES_CROSSWALK","Financial/imputed-interest candidate remains not model-ready.","no","no","yes","Explicit crosswalk decision required."
+"OLD_APPENDIX_6_7_LINE_REPLICATION","blocked_or_parked","BLOCKED","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"omega_CORP_raw_GVA","raw_corporate_comparison","AUTHORIZED_COMPARISON_RAW; NOT_CLEANED; NOT_BASELINE_PRODUCTIVE_ORIGIN; NOT_BASELINE_REGRESSOR","COMPARISON_LAYER_ONLY","Raw corporate comparison object, not baseline productive-origin.","no","yes","yes",
+"omega_CORP_raw_NVA","raw_corporate_comparison","AUTHORIZED_COMPARISON_RAW; NOT_CLEANED; NOT_BASELINE_PRODUCTIVE_ORIGIN; NOT_BASELINE_REGRESSOR","COMPARISON_LAYER_ONLY","Raw corporate comparison object, not baseline productive-origin.","no","yes","yes",
+"omega_NFC_productive_origin_GVA","nfc_productive_origin_baseline","BASELINE_AUTHORIZED","BASELINE_REGRESSOR_CANDIDATE","D10 clean baseline productive-origin variable.","yes","no","no",
+"pi_NFC_productive_origin_GVA","nfc_productive_origin_baseline","BASELINE_AUTHORIZED","BASELINE_REGRESSOR_CANDIDATE","D10 clean baseline productive-origin variable.","yes","no","no",
+"POST_S20_CHAPTER2_STAGES","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"PRODUCTIVE_CAPACITY","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"PRODUCTIVE_SURPLUS_VALUE_CORP_WHOLE","blocked_or_parked","BLOCKED","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"q_omega","blocked_or_parked","PARKED","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"q_omega_family_columns","blocked_or_parked","PARKED","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"QWEN_HOUSING_PROXY_PATHS","blocked_or_parked","BLOCKED","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"residential_capital","blocked_or_parked","PARKED_EXCLUDED_FROM_BASELINE","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"RESIDENTIAL_CAPITAL_MENU","contextual","EXCLUDED_FROM_CHAPTER2_DATASET","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"SHINY_APP","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"T711_L28","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"T711_L4","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"T711_L44","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"T711_L52","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"T711_L53","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"T711_L73","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"T711_L74","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"T711_L91","contextual","DIAGNOSTIC_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"THETA_ECONOMETRICS","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"total_capital","blocked_or_parked","PARKED_EXCLUDED_FROM_BASELINE","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"total_fixed_assets","blocked_or_parked","PARKED_EXCLUDED_FROM_BASELINE","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"UTILIZATION","blocked_or_parked","PARKED_FOR_FUTURE_RESEARCH","BLOCKED_OR_PARKED","Blocked or parked in D10.","no","no","yes",
+"WAGE_SHARE_UNADJUSTED_NFC_GVA_BASELINE","contextual","METADATA_REFERENCE_ONLY","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"y_real_nfc_gva_baseline","nfc_productive_origin_baseline","BASELINE_AUTHORIZED","BASELINE_CONTROL_CANDIDATE","D10 baseline-authorized support variable.","yes","no","no",
+"Y_REAL_NFC_GVA_BASELINE","nfc_productive_origin_baseline","BASELINE_AUTHORIZED","BASELINE_CONTROL_CANDIDATE","D10 baseline-authorized support variable.","yes","no","no",
+"Y_REAL_NFC_GVA_BASELINE_D09","nfc_productive_origin_baseline","BASELINE_AUTHORIZED","BASELINE_DEPENDENT_CANDIDATE","D10 clean baseline productive-origin output.","yes","no","no",
+"y_real_nfc_gva_proxy_business_output","output","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"Y_REAL_NFC_GVA_PROXY_BUSINESS_OUTPUT","output","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"y_real_nfc_gva_proxy_gdp_implicit","output","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"Y_REAL_NFC_GVA_PROXY_GDP_IMPLICIT","output","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"y_real_nfc_gva_proxy_gdpbyind_va_finance_insurance","output","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"Y_REAL_NFC_GVA_PROXY_GDPBYIND_VA_FINANCE_INSURANCE","output","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"y_real_nfc_gva_proxy_gdpbyind_va_manufacturing","output","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"Y_REAL_NFC_GVA_PROXY_GDPBYIND_VA_MANUFACTURING","output","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"y_real_nfc_gva_proxy_nonfarm_business_output","output","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"Y_REAL_NFC_GVA_PROXY_NONFARM_BUSINESS_OUTPUT","output","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"y_real_nfc_gva_proxy_nonfarm_business_output_bls","output","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
+"Y_REAL_NFC_GVA_PROXY_NONFARM_BUSINESS_OUTPUT_BLS","output","ROBUSTNESS_AUTHORIZED","EXCLUDED_FROM_MODEL_MENU","Metadata or contextual object not authorized for D12 baseline menu.","no","no","yes",
