@@ -5,7 +5,6 @@ layer: references
 design_role: econometrics_reference_ledger
 scope: chapter2_method_support
 estimator_status: reference-only
-updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - N02_SuperConsistency
   - R02_DOLS_reconstruction_dilemma
@@ -17,9 +16,29 @@ related_to:
   - R08_threshold_break_diagnostics_to_FGLS
   - M10_Empirical_Identification_Framework
 priority: high
+role: historical-reference
+stage: pre-estimation-design
+aliases:
+  - Econometrics references
+tags:
+  - chapter2/econometrics
+  - chapter2/historical-reference
+  - chapter2/fmols
+  - chapter2/imols
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # L00 Econometrics References
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
+
+> [!warning] D12V2 status
+> This note is not baseline authorization.
+> FM-OLS and IM-OLS are blocked for nonlinear/interacted/generated Chapter 2 baseline specifications.
+> Use [[D12V_Restricted_DOLS_Active_Estimator_Lock]], [[FMOLS_IMOLS_Failure_For_Interaction_Objects]], and [[Estimator_Status_Ledger_D12V]] before citing this note for estimation design.
+
 
 > [!warning] D12V estimator-use caveat
 > This ledger stores references. It does not authorize FM-OLS, IM-OLS, or generic DOLS as the Chapter 2 nonlinear/interacted baseline.
@@ -103,7 +122,7 @@ Use for unit-root diagnostics, structural breaks, break-adjusted unit-root testi
 
 ## Basu References on Discussing Structural Estimation
 
-Directly related to *Identification problem:* [[N01_CapacityUtilization_StructuralObject]] 
+Directly related to *Identification problem:* [[N01_CapacityUtilization_StructuralObject]]
 
 Basu, D. (2018). *Bias of OLS estimators due to exclusion of relevant variables and inclusion of irrelevant variables* (Working Paper No. 2018-19). University of Massachusetts Amherst, Department of Economics.
 

@@ -6,7 +6,6 @@ design_role: robustness_estimator_rule
 scope: chapter2_core_support
 estimator_status: historical-or-diagnostic
 requires_review_before_use: true
-updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - R03_super_consistency_mechanics_hinge
   - R04_FMOLS_structural_preservation
@@ -15,9 +14,33 @@ related_to:
   - M10_Empirical_Identification_Framework
   - L00_Econometrics_References
 priority: high
+role: superseded-for-baseline
+stage: pre-estimation-design
+aliases:
+  - IM-OLS integration ladder
+tags:
+  - chapter2/econometrics
+  - chapter2/superseded
+  - chapter2/imols
+  - chapter2/qomega-parked
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # IM-OLS and the Integration-Ladder Reconstruction Problem
+
+> [!warning] q_omega parked
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
+
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
+
+> [!warning] D12V2 status
+> This note is not baseline authorization.
+> FM-OLS and IM-OLS are blocked for nonlinear/interacted/generated Chapter 2 baseline specifications.
+> Use [[D12V_Restricted_DOLS_Active_Estimator_Lock]], [[FMOLS_IMOLS_Failure_For_Interaction_Objects]], and [[Estimator_Status_Ledger_D12V]] before citing this note for estimation design.
+
 
 > [!warning] D12V status update — IM-OLS
 > Standard IM-OLS is not baseline-authorized for nonlinear/interacted/generated Chapter 2 specifications.
@@ -35,7 +58,7 @@ priority: high
 > Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
 
 > [!warning] q_omega remains parked
-> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path.
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
 
 > [!important] Current identification lock
 > IM-OLS is a robustness check for the primitive centered-interaction first layer. Accumulated-index construction discussed below is parked historical-memory work, not the current baseline.

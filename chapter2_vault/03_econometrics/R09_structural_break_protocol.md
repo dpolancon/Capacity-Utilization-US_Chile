@@ -2,11 +2,9 @@
 type: "note"
 status: "active"
 estimator_status: restricted-dols-required-for-nonlinear-baseline
-updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 layer: "method"
 design_role: "parameter_stability_window_rule"
 scope: "chapter2_core_support"
-stage: "S30"
 related_to:
   - "M10_Empirical_Identification_Framework"
   - "N02_SuperConsistency"
@@ -47,9 +45,34 @@ method_classification_not_appropriate:
   - "ordinary OLS break tests as primary evidence for I(1) cointegrating regressions"
 created: "2026-05-13"
 updated: "2026-05-14"
+role: superseded-for-baseline
+stage: pre-estimation-design
+aliases:
+  - Structural break protocol
+tags:
+  - chapter2/econometrics
+  - chapter2/superseded
+  - chapter2/fmols
+  - chapter2/imols
+  - chapter2/qomega-parked
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # Parameter Stability and Window Discipline in S30
+
+> [!warning] q_omega parked
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
+
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
+
+> [!warning] D12V2 status
+> This note is not baseline authorization.
+> FM-OLS and IM-OLS are blocked for nonlinear/interacted/generated Chapter 2 baseline specifications.
+> Use [[D12V_Restricted_DOLS_Active_Estimator_Lock]], [[FMOLS_IMOLS_Failure_For_Interaction_Objects]], and [[Estimator_Status_Ledger_D12V]] before citing this note for estimation design.
+
 
 > [!warning] D12V status update — FM-OLS
 > Standard FM-OLS is superseded as the active baseline estimator for nonlinear/interacted/generated Chapter 2 specifications.
@@ -72,7 +95,7 @@ updated: "2026-05-14"
 > Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
 
 > [!warning] q_omega remains parked
-> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path.
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
 
 > [!important] Current identification lock
 > Break diagnostics apply after the primitive centered-interaction first layer is specified. Accumulated-index and old `omega_k_t` labels below are historical implementation references.

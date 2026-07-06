@@ -4,7 +4,6 @@ id: R_Cointegration_Admissibility_Superconsistent_Estimators
 title: Cointegration Admissibility for Super-Consistent Estimators
 status: draft
 estimator_status: restricted-dols-required-for-nonlinear-baseline
-updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 created: 2026-06-03
 updated: 2026-06-11
 project: Chapter 2
@@ -41,19 +40,34 @@ related_notes:
   - A00_Benchmark_Identification
   - A05_Distributive_Mechanization_Bias
   - A06_B1_E2B_Model_Choice_Lock
+role: methodological-rationale
+stage: pre-estimation-design
+aliases:
+  - Cointegration admissibility guardrail
 tags:
-  - chapter2
-  - econometrics
-  - cointegration
-  - super-consistency
-  - residual-stationarity
-  - phillips-ouliaris
-  - fmols
-  - imols
-  - dols
+  - chapter2/econometrics
+  - chapter2/methodological-rationale
+  - chapter2/fmols
+  - chapter2/imols
+  - chapter2/qomega-parked
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # R11: Cointegration Admissibility for Super-Consistent Estimators
+
+> [!warning] q_omega parked
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
+
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
+
+> [!warning] D12V2 status
+> This note is not baseline authorization.
+> FM-OLS and IM-OLS are blocked for nonlinear/interacted/generated Chapter 2 baseline specifications.
+> Use [[D12V_Restricted_DOLS_Active_Estimator_Lock]], [[FMOLS_IMOLS_Failure_For_Interaction_Objects]], and [[Estimator_Status_Ledger_D12V]] before citing this note for estimation design.
+
 
 > [!warning] D12V status update — FM-OLS
 > Standard FM-OLS is superseded as the active baseline estimator for nonlinear/interacted/generated Chapter 2 specifications.
@@ -76,7 +90,7 @@ tags:
 > Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
 
 > [!warning] q_omega remains parked
-> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path.
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
 
 ## Purpose
 

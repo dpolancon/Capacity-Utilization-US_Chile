@@ -10,6 +10,18 @@ caveats:
   - projection-lemma-requires-formal-caution
   - mixed-integration-case-requires-separate-treatment
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
+role: methodological-rationale
+stage: pre-estimation-design
+aliases:
+  - RDOLS asymptotic rationale
+  - Restricted DOLS proof caveats
+  - DOLS interaction rationale
+tags:
+  - chapter2/econometrics
+  - chapter2/methodological-rationale
+  - chapter2/restricted-dols
+  - chapter2/pre-estimation-design
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # Restricted DOLS Asymptotic Rationale and Caveats
@@ -79,3 +91,9 @@ The projection lemma requires formal caution. The vault can use it as design rat
 ## Operational rule for Chapter 2
 
 Use Restricted DOLS as the preferred baseline-design estimator only after [[Interaction_Term_Integration_Order_Gate]] passes. Keep the interaction in the long-run level relation. Restrict DOLS leads/lags to admissible base-variable differences. Block interaction-difference augmentation unless a separate nonlinear or polynomial-cointegration protocol authorizes it.
+
+## Links
+
+- [[D12V_Restricted_DOLS_Active_Estimator_Lock]]
+- [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]]
+- [[Interaction_Term_Integration_Order_Gate]]

@@ -9,6 +9,19 @@ applies_to:
   - interaction-terms
   - generated-regressors
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
+role: active-gate
+stage: pre-estimation-design
+aliases:
+  - Interaction order gate
+  - Integration order gate
+  - Restricted DOLS gate
+  - Interaction term gate
+tags:
+  - chapter2/econometrics
+  - chapter2/active-gate
+  - chapter2/restricted-dols
+  - chapter2/pre-estimation-design
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # Interaction-Term Integration Order Gate
@@ -73,3 +86,11 @@ BLOCK_MIXED_ORDER_UNRESOLVED
 BLOCK_QOMEGA_REINTRODUCTION
 BLOCK_BASELINE_BOUNDARY_LEAKAGE
 ```
+
+## Links
+
+- [[Interaction_Term_Integration_Order_Gate]]
+- [[D12V_Restricted_DOLS_Active_Estimator_Lock]]
+- [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]]
+- [[FMOLS_IMOLS_Failure_For_Interaction_Objects]]
+- [[Estimator_Status_Ledger_D12V]]

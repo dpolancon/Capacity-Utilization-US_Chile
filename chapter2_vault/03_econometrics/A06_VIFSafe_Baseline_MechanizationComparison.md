@@ -7,7 +7,6 @@ design_role: specification_lock
 scope: chapter2_core
 estimator_status: historical-or-diagnostic
 requires_review_before_use: true
-updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - A00_Aggregate_Transformation_Benchmark
   - A03_TransformationElasticity_Two-CapitalCapacityComposition
@@ -29,11 +28,29 @@ vif_status:
   SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED: vif_safe
 created: 2026-06-02
 updated: 2026-06-08
+role: superseded-for-baseline
+stage: pre-estimation-design
+aliases:
+  - A06 VIF comparison
+tags:
+  - chapter2/econometrics
+  - chapter2/superseded
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 
 
 # A06: VIF-Safe Baseline and Mechanization-Bias Comparison Pair
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
+
+> [!important] D12V2 status
+> The active Chapter 2 baseline-design candidate is Restricted DOLS, not generic DOLS.
+> Restricted DOLS keeps nonlinear/interacted terms in the long-run level equation and restricts dynamic corrections to admissible base-variable differences.
+> See [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]].
+
 
 > [!gate] D12V interaction-term gate
 > Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
@@ -74,20 +91,20 @@ A05 NRC-envelope / distribution-conditioned mechanization-bias candidate
 
 The A00 baseline remains:
 
-$$  
-y_t = c + \beta_k k_t + \beta_{\omega k}(\omega_t k_t) + \xi_t.  
+$$
+y_t = c + \beta_k k_t + \beta_{\omega k}(\omega_t k_t) + \xi_t.
 $$
 
 with:
 
-$$  
-\omega_{k,t} = \omega_t k_t.  
+$$
+\omega_{k,t} = \omega_t k_t.
 $$
 
 The implied aggregate transformation path is:
 
-$$  
-\theta_t^{A00} = \beta_k + \beta_{\omega k}\omega_t.  
+$$
+\theta_t^{A00} = \beta_k + \beta_{\omega k}\omega_t.
 $$
 
 Implementation label:
@@ -128,19 +145,19 @@ y_t ~ k_NRC_t + omega_m_ME_NRC_t
 
 where:
 
-$$  
-k_t^{NRC} = \log K_t^{NRC},  
+$$
+k_t^{NRC} = \log K_t^{NRC},
 $$
 
-$$  
-m_t = k_t^{ME} - k_t^{NRC}  
-= \log\left(\frac{K_t^{ME}}{K_t^{NRC}}\right),  
+$$
+m_t = k_t^{ME} - k_t^{NRC}
+= \log\left(\frac{K_t^{ME}}{K_t^{NRC}}\right),
 $$
 
 and:
 
-$$  
-\omega_{m,t} = \omega_t m_t.  
+$$
+\omega_{m,t} = \omega_t m_t.
 $$
 
 Interpretation:
@@ -245,17 +262,17 @@ or does the A05 NRC-envelope / distribution-conditioned mechanization-bias speci
 The comparison is not a mechanical horse race. It must be adjudicated through:
 
 1. coefficient signs;
-    
+
 2. estimator triangulation;
-    
+
 3. window behavior;
-    
+
 4. VIF and collinearity diagnostics;
-    
+
 5. conceptual consistency with A01, A02, A03, A05, D04, and R10;
-    
+
 6. reconstruction eligibility only after human adjudication.
-    
+
 
 ---
 
@@ -388,15 +405,15 @@ Neither B1 nor E2B is automatically S40-eligible from A06 alone.
 S40 can only be unparked after human adjudication decides:
 
 1. which specification is admissible;
-    
+
 2. which window is admissible;
-    
+
 3. which estimator is the reconstruction basis;
-    
+
 4. whether robustness and fragility checks support the selected coefficient object;
-    
+
 5. whether the selected object should reconstruct (\theta_t), (Y^p), and (\mu_t).
-    
+
 
 Until then:
 

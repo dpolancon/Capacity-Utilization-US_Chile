@@ -6,7 +6,6 @@ design_role: estimator_warning_rule
 scope: chapter2_core_support
 estimator_status: historical-or-diagnostic
 requires_review_before_use: true
-updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - A00_Aggregate_Transformation_Benchmark
   - R03_super_consistency_mechanics_hinge
@@ -16,9 +15,33 @@ related_to:
   - M10_Empirical_Identification_Framework
   - L00_Econometrics_References
 priority: high
+role: superseded-for-baseline
+stage: pre-estimation-design
+aliases:
+  - LRV regime misalignment
+tags:
+  - chapter2/econometrics
+  - chapter2/superseded
+  - chapter2/fmols
+  - chapter2/qomega-parked
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # Long-Run Variance Estimation and Regime Misalignment
+
+> [!warning] q_omega parked
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
+
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
+
+> [!warning] D12V2 status
+> This note is not baseline authorization.
+> FM-OLS and IM-OLS are blocked for nonlinear/interacted/generated Chapter 2 baseline specifications.
+> Use [[D12V_Restricted_DOLS_Active_Estimator_Lock]], [[FMOLS_IMOLS_Failure_For_Interaction_Objects]], and [[Estimator_Status_Ledger_D12V]] before citing this note for estimation design.
+
 
 > [!warning] D12V status update — FM-OLS
 > Standard FM-OLS is superseded as the active baseline estimator for nonlinear/interacted/generated Chapter 2 specifications.
@@ -41,7 +64,7 @@ priority: high
 > Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
 
 > [!warning] q_omega remains parked
-> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path.
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
 
 > [!important] Current identification lock
 > FM-OLS is preferred for the primitive centered-interaction first layer in [[R_distribution_conditioned_theta_identification]]. References below to an accumulated-index baseline are parked and non-authoritative.
@@ -98,7 +121,7 @@ These choices are not part of the theory of productive capacity. They belong to 
 
 The bandwidth determines the memory span of the correction.
 
-A small bandwidth uses a short memory window.  
+A small bandwidth uses a short memory window.
 A large bandwidth uses a longer memory window.
 
 This matters because macroeconomic time series often exhibit persistence. Larger bandwidths can help capture long-memory covariance structure, but they also increase the risk of averaging across structurally different periods.

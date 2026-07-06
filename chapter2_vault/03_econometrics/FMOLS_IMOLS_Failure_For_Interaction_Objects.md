@@ -12,6 +12,21 @@ requires:
   - base-variable-integration-gate
   - lead-lag-sensitivity
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
+role: methodological-warning
+stage: pre-estimation-design
+aliases:
+  - FM-OLS failure
+  - FMOLS failure
+  - IM-OLS failure
+  - IMOLS failure
+  - Restricted IM-OLS blocked
+tags:
+  - chapter2/econometrics
+  - chapter2/methodological-warning
+  - chapter2/fmols
+  - chapter2/imols
+  - chapter2/pre-estimation-design
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # FM-OLS and IM-OLS Failure for Interaction Objects
@@ -57,3 +72,8 @@ FM-OLS and IM-OLS remain legitimate references for standard linear cointegrating
 ## Operational vault rule
 
 Do not cite FM-OLS or IM-OLS notes as D12 baseline authorization for nonlinear/interacted/generated Chapter 2 specifications. Route the design through [[D12V_Restricted_DOLS_Active_Estimator_Lock]], [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]], and [[Interaction_Term_Integration_Order_Gate]].
+
+## Links
+
+- [[FMOLS_IMOLS_Failure_For_Interaction_Objects]]
+- [[Estimator_Status_Ledger_D12V]]

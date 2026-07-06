@@ -12,6 +12,21 @@ requires_gate:
   - interaction-term-classification
   - lead-lag-sensitivity
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
+role: active-lock
+stage: pre-estimation-design
+aliases:
+  - Restricted DOLS
+  - RDOLS
+  - Active estimator lock
+  - D12V estimator pivot
+  - Baseline estimator lock
+tags:
+  - chapter2/econometrics
+  - chapter2/active-lock
+  - chapter2/restricted-dols
+  - chapter2/pre-estimation-design
+  - chapter2/qomega-parked
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # D12V — Restricted DOLS Active Estimator Lock
@@ -87,6 +102,7 @@ D12B may construct a baseline estimation prompt only after this vault doctrine i
 
 ## Links
 
+- [[D12V_Restricted_DOLS_Active_Estimator_Lock]]
 - [[FMOLS_IMOLS_Failure_For_Interaction_Objects]]
 - [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]]
 - [[Interaction_Term_Integration_Order_Gate]]

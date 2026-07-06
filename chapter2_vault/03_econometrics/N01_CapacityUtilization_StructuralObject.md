@@ -5,7 +5,6 @@ layer: method
 design_role: structural_object_definition
 scope: chapter2_core_support
 estimator_status: restricted-dols-required-for-nonlinear-baseline
-updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - R_distribution_conditioned_theta_identification
   - A00_Aggregate_Transformation_Benchmark
@@ -13,16 +12,39 @@ related_to:
   - N02_SuperConsistency
   - R01_residual_vs_structural_identification
 priority: high
+role: methodological-rationale
+stage: pre-estimation-design
+aliases:
+  - Capacity utilization structural object
+tags:
+  - chapter2/econometrics
+  - chapter2/methodological-rationale
+  - chapter2/qomega-parked
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # Capacity Utilization as a Structural Object
+
+> [!warning] q_omega parked
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
+
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
+
+> [!important] D12V2 status
+> The active Chapter 2 baseline-design candidate is Restricted DOLS, not generic DOLS.
+> Restricted DOLS keeps nonlinear/interacted terms in the long-run level equation and restricts dynamic corrections to admissible base-variable differences.
+> See [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]].
+
 
 > [!gate] D12V interaction-term gate
 > Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
 > Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
 
 > [!warning] q_omega remains parked
-> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path.
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
 
 ## Core claim
 

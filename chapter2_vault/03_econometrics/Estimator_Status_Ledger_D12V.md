@@ -2,6 +2,16 @@
 status: active-ledger
 scope: chapter2-econometrics
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
+role: active-ledger
+stage: pre-estimation-design
+aliases:
+  - Estimator status ledger
+  - D12V estimator ledger
+  - Estimator admissibility ledger
+tags:
+  - chapter2/econometrics
+  - chapter2/pre-estimation-design
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # Estimator Status Ledger D12V
@@ -19,3 +29,11 @@ created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 | Phillips-Ouliaris | Diagnostic/admissibility test for residual-based cointegration. | Diagnostic/admissibility role only. | Diagnostic/admissibility role only. | Cointegration gate. | Final coefficient estimator. | Candidate-relation definition. | Tests no-cointegration null; does not choose estimator. |
 | Engle-Granger | Diagnostic/admissibility framework. | Diagnostic role only. | Diagnostic role only. | Residual-based cointegration reference or screen. | Final coefficient estimator for Chapter 2 baseline. | Candidate-relation definition. | Residual behavior is not utilization. |
 | Johansen / VECM | System cointegration and rank evidence under systems protocol. | Not automatically baseline. | Not automatically baseline. | System robustness or separate systems design. | Automatic replacement for single-equation Restricted DOLS design. | Separate systems protocol. | Requires its own identification and normalization discipline. |
+
+## Links
+
+- [[Estimator_Status_Ledger_D12V]]
+- [[D12V_Restricted_DOLS_Active_Estimator_Lock]]
+- [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]]
+- [[FMOLS_IMOLS_Failure_For_Interaction_Objects]]
+- [[Interaction_Term_Integration_Order_Gate]]

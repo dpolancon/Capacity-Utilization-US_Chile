@@ -5,7 +5,6 @@ layer: method
 design_role: estimator_admissibility_rule
 scope: chapter2_core_support
 estimator_status: restricted-dols-support
-updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - R01_residual_vs_structural_identification
   - N01_CapacityUtilization_StructuralObject
@@ -13,9 +12,22 @@ related_to:
   - M10_Empirical_Identification_Framework
   - L00_Econometrics_References
 priority: high
+role: methodological-rationale
+stage: pre-estimation-design
+aliases:
+  - DOLS reconstruction boundary
+tags:
+  - chapter2/econometrics
+  - chapter2/methodological-rationale
+  - chapter2/restricted-dols
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # DOLS, Reconstruction, and the Estimator-Layer Boundary
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
 
 > [!important] D12V status update — DOLS
 > The active Chapter 2 baseline-design candidate is Restricted DOLS, not generic DOLS.

@@ -7,7 +7,6 @@ design_role: "patch_validation"
 scope: "chapter2_core_support"
 estimator_status: "historical-or-diagnostic"
 requires_review_before_use: true
-updated_by: "D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT"
 created: 2026-06-01
 updated: 2026-06-08
 related_to:
@@ -18,16 +17,45 @@ related_to:
   - "R04_FMOLS_structural_preservation"
   - "N02_SuperConsistency"
   - "R05_LRV_kernel_bandwidth_regime_misalignment"
+role: historical-reference
+stage: pre-estimation-design
+aliases:
+  - A00 interaction patch report
+tags:
+  - chapter2/econometrics
+  - chapter2/historical-reference
+  - chapter2/qomega-parked
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # A00 Baseline Interaction Patch Report
+
+> [!warning] q_omega parked
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
+
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
+
+> [!important] D12V2 status
+> The active Chapter 2 baseline-design candidate is Restricted DOLS, not generic DOLS.
+> Restricted DOLS keeps nonlinear/interacted terms in the long-run level equation and restricts dynamic corrections to admissible base-variable differences.
+> See [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]].
+
+
+> [!warning] D12V2 status
+> This note is not baseline authorization.
+> FM-OLS and IM-OLS are blocked for nonlinear/interacted/generated Chapter 2 baseline specifications.
+> Use [[D12V_Restricted_DOLS_Active_Estimator_Lock]], [[FMOLS_IMOLS_Failure_For_Interaction_Objects]], and [[Estimator_Status_Ledger_D12V]] before citing this note for estimation design.
+
 
 > [!gate] D12V interaction-term gate
 > Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
 > Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
 
 > [!warning] q_omega remains parked
-> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path.
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
 
 > [!warning] Superseded historical report
 > This report records the June 1, 2026 level-interaction patch. Its benchmark conclusions were superseded on June 8, 2026 by [[R_distribution_conditioned_theta_identification]]. All old interaction references below are historical record only.

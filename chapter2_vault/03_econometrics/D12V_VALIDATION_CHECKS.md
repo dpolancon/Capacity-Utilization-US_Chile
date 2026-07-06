@@ -3,6 +3,14 @@ status: validation-checks
 scope: chapter2-econometrics
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 date: 2026-07-06
+role: validation
+stage: pre-estimation-design
+aliases:
+  - D12V validation checks
+tags:
+  - chapter2/econometrics
+  - chapter2/validation
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # D12V Validation Checks

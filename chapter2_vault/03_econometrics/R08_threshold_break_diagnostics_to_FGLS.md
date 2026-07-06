@@ -5,7 +5,6 @@ layer: method
 design_role: diagnostic_to_regime_bridge
 scope: chapter2_core_support
 estimator_status: regime-diagnostic-only
-updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - R07_FGLS_threshold_cointegration_admissibility
   - R03_super_consistency_mechanics_hinge
@@ -14,9 +13,27 @@ related_to:
   - M10_Empirical_Identification_Framework
   - L00_Econometrics_References
 priority: high
+role: diagnostic-only
+stage: pre-estimation-design
+aliases:
+  - Break diagnostics to FGLS
+tags:
+  - chapter2/econometrics
+  - chapter2/diagnostic-only
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # From Break Diagnostics to Threshold-FGLS
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
+
+> [!important] D12V2 status
+> The active Chapter 2 baseline-design candidate is Restricted DOLS, not generic DOLS.
+> Restricted DOLS keeps nonlinear/interacted terms in the long-run level equation and restricts dynamic corrections to admissible base-variable differences.
+> See [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]].
+
 
 > [!gate] D12V interaction-term gate
 > Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.

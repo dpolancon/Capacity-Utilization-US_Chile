@@ -5,16 +5,33 @@ layer: method
 design_role: identification_rule
 scope: chapter2_core_support
 estimator_status: structural-identification-guardrail
-updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - M10_Empirical_Identification_Framework
   - N02_SuperConsistency
   - N01_CapacityUtilization_StructuralObject
   - L00_Econometrics_References
 priority: high
+role: methodological-rationale
+stage: pre-estimation-design
+aliases:
+  - Residual identification guardrail
+tags:
+  - chapter2/econometrics
+  - chapter2/methodological-rationale
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # Residuals, Productive Capacity, and the Algebraic Illusion
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
+
+> [!important] D12V2 status
+> The active Chapter 2 baseline-design candidate is Restricted DOLS, not generic DOLS.
+> Restricted DOLS keeps nonlinear/interacted terms in the long-run level equation and restricts dynamic corrections to admissible base-variable differences.
+> See [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]].
+
 
 > [!gate] D12V interaction-term gate
 > Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.

@@ -5,7 +5,6 @@ layer: method
 design_role: regime_architecture_rule
 scope: chapter2_core_support
 estimator_status: restricted-dols-required-for-nonlinear-baseline
-updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - R03_super_consistency_mechanics_hinge
   - R04_FMOLS_structural_preservation
@@ -15,9 +14,27 @@ related_to:
   - M10_Empirical_Identification_Framework
   - L00_Econometrics_References
 priority: high
+role: diagnostic-only
+stage: pre-estimation-design
+aliases:
+  - FGLS threshold admissibility
+tags:
+  - chapter2/econometrics
+  - chapter2/diagnostic-only
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # FGLS and Threshold-Cointegration Admissibility
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
+
+> [!warning] D12V2 status
+> This note is not baseline authorization.
+> FM-OLS and IM-OLS are blocked for nonlinear/interacted/generated Chapter 2 baseline specifications.
+> Use [[D12V_Restricted_DOLS_Active_Estimator_Lock]], [[FMOLS_IMOLS_Failure_For_Interaction_Objects]], and [[Estimator_Status_Ledger_D12V]] before citing this note for estimation design.
+
 
 > [!warning] D12V status update — FM-OLS
 > Standard FM-OLS is superseded as the active baseline estimator for nonlinear/interacted/generated Chapter 2 specifications.

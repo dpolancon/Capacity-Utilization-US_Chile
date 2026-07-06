@@ -3,6 +3,13 @@ status: vault-audit
 scope: chapter2-econometrics
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 date: 2026-07-06
+role: audit
+aliases:
+  - D12V vault audit
+tags:
+  - chapter2/econometrics
+  - chapter2/audit
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # D12V Econometrics Vault Audit
@@ -145,7 +152,7 @@ q_omega-family or accumulated-memory references appeared in:
 - `R10_Binding_Specification_Layering_Rule.md`
 - `R11_CointegrationAdmissibility_Super-Consistency.md`
 
-The D12V canonical lock and patched notes state that q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path.
+The D12V canonical lock and patched notes state that q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path. See [[D12V_Restricted_DOLS_Active_Estimator_Lock]].
 
 ## Final D12V vault decision
 

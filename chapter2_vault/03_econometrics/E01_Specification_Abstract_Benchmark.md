@@ -7,15 +7,39 @@ design_role: ontological_guardrail
 scope: chapter2_core
 estimator_status: historical-or-diagnostic
 requires_review_before_use: true
-updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - H02_Theta_to_Empirical_Coefficients
   - R01_Marx_Okishio_Regime_Diagnostic_Guardrail
   - Okishio_Vidal_Transformation_Elasticity
 created: 2026-05-27
+role: superseded-for-baseline
+stage: pre-estimation-design
+aliases:
+  - E01 abstract benchmark
+tags:
+  - chapter2/econometrics
+  - chapter2/superseded
+  - chapter2/fmols
+updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
 # The Frontier of "Not Becoming" vs. Historical "Becoming"
+
+> [!gate] D12V2 gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+
+
+> [!important] D12V2 status
+> The active Chapter 2 baseline-design candidate is Restricted DOLS, not generic DOLS.
+> Restricted DOLS keeps nonlinear/interacted terms in the long-run level equation and restricts dynamic corrections to admissible base-variable differences.
+> See [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]].
+
+
+> [!warning] D12V2 status
+> This note is not baseline authorization.
+> FM-OLS and IM-OLS are blocked for nonlinear/interacted/generated Chapter 2 baseline specifications.
+> Use [[D12V_Restricted_DOLS_Active_Estimator_Lock]], [[FMOLS_IMOLS_Failure_For_Interaction_Objects]], and [[Estimator_Status_Ledger_D12V]] before citing this note for estimation design.
+
 
 > [!warning] D12V status update — FM-OLS
 > Standard FM-OLS is superseded as the active baseline estimator for nonlinear/interacted/generated Chapter 2 specifications.
@@ -27,14 +51,14 @@ created: 2026-05-27
 > Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
 
 ## Core Claim
-The mechanization productive frontier and the condition of smooth reproduction ($\mu = 1$) are **not** behavioral assumptions about how capitalist firms actually operate. 
+The mechanization productive frontier and the condition of smooth reproduction ($\mu = 1$) are **not** behavioral assumptions about how capitalist firms actually operate.
 
 They are analytical abstractions of **"not becoming"** (pure structural being). They serve strictly as a geometric and theoretical benchmark to measure the contradictory reality of historical **"becoming"** (where $\mu_t \neq 1$).
 
 ---
 
 ## 1. The Abstraction of "Not Becoming" (The Frontier)
-In dialectical terms, "not becoming" represents a static, frictionless limit devoid of market anarchy and internal contradiction. 
+In dialectical terms, "not becoming" represents a static, frictionless limit devoid of market anarchy and internal contradiction.
 *   **The Cajas Limit:** The cost-minimizing mechanization choice $q^*(\omega, E)$ on the technological frontier.
 *   **Smooth Reproduction:** The state where actual output perfectly matches reconstructed productive capacity ($\mu = 1$).
 *   **Function:** It defines the *maximum potential transformation elasticity* ($\theta^{max}$) and the directional bias of induced innovation under distributive and external constraints. It is a theoretical envelope, never a historical reality.
