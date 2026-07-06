@@ -1,9 +1,12 @@
 ---
 type: note
-status: active
+status: superseded-for-baseline
 layer: method
 design_role: preferred_estimator_rule
 scope: chapter2_core_support
+estimator_status: historical-or-diagnostic
+requires_review_before_use: true
+updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - R_distribution_conditioned_theta_identification
   - A00_Aggregate_Transformation_Benchmark
@@ -17,6 +20,21 @@ priority: high
 ---
 
 # FM-OLS and Structural Preservation in Productive-Capacity Reconstruction
+
+> [!warning] D12V status update — FM-OLS
+> Standard FM-OLS is superseded as the active baseline estimator for nonlinear/interacted/generated Chapter 2 specifications.
+> It remains available only as historical reference, diagnostic comparator, or possible estimator for strictly linear cointegration objects if the model object is explicitly classified as standard linear cointegration.
+> Do not use this note as baseline authorization without passing through [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Interaction_Term_Integration_Order_Gate]].
+
+> [!important] D12V status update — DOLS
+> The active Chapter 2 baseline-design candidate is Restricted DOLS, not generic DOLS.
+> Restricted DOLS keeps nonlinear/interacted terms in the long-run level equation but restricts the dynamic correction set to admissible base-variable differences.
+> Unrestricted DOLS is blocked for interaction objects unless a separate protocol authorizes leads/lags of interaction-term differences.
+> See [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]].
+
+> [!gate] D12V interaction-term gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+> Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
 
 > [!important] Current identification lock
 > The preferred regressor matrix is the primitive centered interaction in [[R_distribution_conditioned_theta_identification]]. Any accumulated-index baseline language below is parked historical material and does not govern current reconstruction.

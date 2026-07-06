@@ -4,6 +4,8 @@ status: locked
 layer: method
 design_role: structural_object_definition
 scope: chapter2_core_support
+estimator_status: restricted-dols-required-for-nonlinear-baseline
+updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - R_distribution_conditioned_theta_identification
   - A00_Aggregate_Transformation_Benchmark
@@ -14,6 +16,13 @@ priority: high
 ---
 
 # Capacity Utilization as a Structural Object
+
+> [!gate] D12V interaction-term gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+> Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
+
+> [!warning] q_omega remains parked
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path.
 
 ## Core claim
 

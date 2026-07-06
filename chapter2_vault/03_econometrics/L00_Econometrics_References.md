@@ -4,6 +4,8 @@ status: active
 layer: references
 design_role: econometrics_reference_ledger
 scope: chapter2_method_support
+estimator_status: reference-only
+updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - N02_SuperConsistency
   - R02_DOLS_reconstruction_dilemma
@@ -18,6 +20,16 @@ priority: high
 ---
 
 # L00 Econometrics References
+
+> [!warning] D12V estimator-use caveat
+> This ledger stores references. It does not authorize FM-OLS, IM-OLS, or generic DOLS as the Chapter 2 nonlinear/interacted baseline.
+> Use [[D12V_Restricted_DOLS_Active_Estimator_Lock]], [[FMOLS_IMOLS_Failure_For_Interaction_Objects]], and [[Estimator_Status_Ledger_D12V]] before using any reference below for D12 estimation design.
+
+> [!important] D12V status update — DOLS
+> The active Chapter 2 baseline-design candidate is Restricted DOLS, not generic DOLS.
+> Restricted DOLS keeps nonlinear/interacted terms in the long-run level equation but restricts the dynamic correction set to admissible base-variable differences.
+> Unrestricted DOLS is blocked for interaction objects unless a separate protocol authorizes leads/lags of interaction-term differences.
+> See [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]].
 
 ## Purpose
 

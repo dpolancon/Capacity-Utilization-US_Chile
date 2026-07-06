@@ -5,6 +5,9 @@ status: active
 layer: analytical_foundation
 design_role: ontological_guardrail
 scope: chapter2_core
+estimator_status: historical-or-diagnostic
+requires_review_before_use: true
+updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - H02_Theta_to_Empirical_Coefficients
   - R01_Marx_Okishio_Regime_Diagnostic_Guardrail
@@ -13,6 +16,15 @@ created: 2026-05-27
 ---
 
 # The Frontier of "Not Becoming" vs. Historical "Becoming"
+
+> [!warning] D12V status update — FM-OLS
+> Standard FM-OLS is superseded as the active baseline estimator for nonlinear/interacted/generated Chapter 2 specifications.
+> It remains available only as historical reference, diagnostic comparator, or possible estimator for strictly linear cointegration objects if the model object is explicitly classified as standard linear cointegration.
+> Do not use this note as baseline authorization without passing through [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Interaction_Term_Integration_Order_Gate]].
+
+> [!gate] D12V interaction-term gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+> Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
 
 ## Core Claim
 The mechanization productive frontier and the condition of smooth reproduction ($\mu = 1$) are **not** behavioral assumptions about how capitalist firms actually operate. 

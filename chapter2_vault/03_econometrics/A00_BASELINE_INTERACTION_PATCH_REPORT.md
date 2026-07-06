@@ -5,6 +5,9 @@ status: "superseded_historical_report"
 layer: "method"
 design_role: "patch_validation"
 scope: "chapter2_core_support"
+estimator_status: "historical-or-diagnostic"
+requires_review_before_use: true
+updated_by: "D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT"
 created: 2026-06-01
 updated: 2026-06-08
 related_to:
@@ -18,6 +21,13 @@ related_to:
 ---
 
 # A00 Baseline Interaction Patch Report
+
+> [!gate] D12V interaction-term gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+> Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
+
+> [!warning] q_omega remains parked
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path.
 
 > [!warning] Superseded historical report
 > This report records the June 1, 2026 level-interaction patch. Its benchmark conclusions were superseded on June 8, 2026 by [[R_distribution_conditioned_theta_identification]]. All old interaction references below are historical record only.

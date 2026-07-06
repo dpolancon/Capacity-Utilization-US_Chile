@@ -5,6 +5,9 @@ status: superseded
 layer: analytical_foundation
 design_role: specification_lock
 scope: chapter2_core
+estimator_status: historical-or-diagnostic
+requires_review_before_use: true
+updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - A00_Aggregate_Transformation_Benchmark
   - A03_TransformationElasticity_Two-CapitalCapacityComposition
@@ -31,6 +34,10 @@ updated: 2026-06-08
 
 
 # A06: VIF-Safe Baseline and Mechanization-Bias Comparison Pair
+
+> [!gate] D12V interaction-term gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+> Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
 
 > [!warning] Superseded comparison
 > This note preserves the June 2, 2026 VIF comparison for former specifications. Neither `SPEC_B1_WAGE_BASELINE` nor `SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED` is the active benchmark after [[R_distribution_conditioned_theta_identification]]. The current fork is primitive scale-conditioning versus centered composition-mediated conditioning. This note is historical and not promotion-eligible.

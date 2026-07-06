@@ -1,0 +1,8 @@
+"item","value","readiness_status","notes"
+"original_D11_terminal_block_confirmed",TRUE,"D12_AUTHORIZED_AFTER_D11R_BOUNDARY_RECONCILIATION","D11 block is retained as valid evidence."
+"target_variables_found",TRUE,"D12_AUTHORIZED_AFTER_D11R_BOUNDARY_RECONCILIATION","G_TOT_GPIM_2017; LOG_G_TOT_GPIM_2017"
+"target_variables_reclassified_out_of_baseline",TRUE,"D12_AUTHORIZED_AFTER_D11R_BOUNDARY_RECONCILIATION","Both target variables are retained but excluded from baseline eligibility under D11R."
+"q_omega_remains_parked",TRUE,"D12_AUTHORIZED_AFTER_D11R_BOUNDARY_RECONCILIATION","D11R constructs no q_omega-family object."
+"baseline_capital_remains_ME_NRC",TRUE,"D12_AUTHORIZED_AFTER_D11R_BOUNDARY_RECONCILIATION","D10 clean validation confirms K_capacity equals K_ME plus K_NRC."
+"new_boundary_leak_created",FALSE,"D12_AUTHORIZED_AFTER_D11R_BOUNDARY_RECONCILIATION","D11R only reclassifies the two target total-capital variables."
+"D12_baseline_estimation_design_authorized_after_D11R",TRUE,"D12_AUTHORIZED_AFTER_D11R_BOUNDARY_RECONCILIATION","Authorization is for D12 baseline estimation design only."
