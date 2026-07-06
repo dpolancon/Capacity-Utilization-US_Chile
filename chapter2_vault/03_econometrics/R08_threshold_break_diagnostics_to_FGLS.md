@@ -4,6 +4,8 @@ status: active
 layer: method
 design_role: diagnostic_to_regime_bridge
 scope: chapter2_core_support
+estimator_status: regime-diagnostic-only
+updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - R07_FGLS_threshold_cointegration_admissibility
   - R03_super_consistency_mechanics_hinge
@@ -15,6 +17,10 @@ priority: high
 ---
 
 # From Break Diagnostics to Threshold-FGLS
+
+> [!gate] D12V interaction-term gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+> Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
 
 ## Core claim
 

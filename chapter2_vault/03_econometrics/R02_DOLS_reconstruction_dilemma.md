@@ -1,9 +1,11 @@
 ---
 type: note
-status: active
+status: active-support
 layer: method
 design_role: estimator_admissibility_rule
 scope: chapter2_core_support
+estimator_status: restricted-dols-support
+updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - R01_residual_vs_structural_identification
   - N01_CapacityUtilization_StructuralObject
@@ -14,6 +16,16 @@ priority: high
 ---
 
 # DOLS, Reconstruction, and the Estimator-Layer Boundary
+
+> [!important] D12V status update — DOLS
+> The active Chapter 2 baseline-design candidate is Restricted DOLS, not generic DOLS.
+> Restricted DOLS keeps nonlinear/interacted terms in the long-run level equation but restricts the dynamic correction set to admissible base-variable differences.
+> Unrestricted DOLS is blocked for interaction objects unless a separate protocol authorizes leads/lags of interaction-term differences.
+> See [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]].
+
+> [!gate] D12V interaction-term gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+> Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
 
 ## Core claim
 

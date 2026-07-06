@@ -1,9 +1,12 @@
 ---
 type: note
-status: active
+status: superseded-for-baseline
 layer: method
 design_role: estimator_lineage_hinge
 scope: chapter2_core_support
+estimator_status: historical-or-diagnostic
+requires_review_before_use: true
+updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - R02_DOLS_reconstruction_dilemma
   - R04_FMOLS_structural_preservation
@@ -16,6 +19,22 @@ priority: high
 ---
 
 # Hinge: The Divergent Mechanics of Super-Consistency
+
+> [!warning] D12V status update — FM-OLS
+> Standard FM-OLS is superseded as the active baseline estimator for nonlinear/interacted/generated Chapter 2 specifications.
+> It remains available only as historical reference, diagnostic comparator, or possible estimator for strictly linear cointegration objects if the model object is explicitly classified as standard linear cointegration.
+> Do not use this note as baseline authorization without passing through [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Interaction_Term_Integration_Order_Gate]].
+
+> [!warning] D12V status update — IM-OLS
+> Standard IM-OLS is not baseline-authorized for nonlinear/interacted/generated Chapter 2 specifications.
+> A restricted IM-OLS analogue is blocked as a substitute for Restricted DOLS because cumulative sums of base variables do not resolve interaction-term endogeneity in the required way.
+> Use [[FMOLS_IMOLS_Failure_For_Interaction_Objects]] and [[Estimator_Status_Ledger_D12V]] before citing this note for estimation design.
+
+> [!important] D12V status update — DOLS
+> The active Chapter 2 baseline-design candidate is Restricted DOLS, not generic DOLS.
+> Restricted DOLS keeps nonlinear/interacted terms in the long-run level equation but restricts the dynamic correction set to admissible base-variable differences.
+> Unrestricted DOLS is blocked for interaction objects unless a separate protocol authorizes leads/lags of interaction-term differences.
+> See [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]].
 
 ## Core claim
 

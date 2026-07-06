@@ -1,9 +1,12 @@
 ---
 type: note
-status: active
+status: superseded-for-baseline
 layer: method
 design_role: robustness_estimator_rule
 scope: chapter2_core_support
+estimator_status: historical-or-diagnostic
+requires_review_before_use: true
+updated_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 related_to:
   - R03_super_consistency_mechanics_hinge
   - R04_FMOLS_structural_preservation
@@ -15,6 +18,24 @@ priority: high
 ---
 
 # IM-OLS and the Integration-Ladder Reconstruction Problem
+
+> [!warning] D12V status update — IM-OLS
+> Standard IM-OLS is not baseline-authorized for nonlinear/interacted/generated Chapter 2 specifications.
+> A restricted IM-OLS analogue is blocked as a substitute for Restricted DOLS because cumulative sums of base variables do not resolve interaction-term endogeneity in the required way.
+> Use [[FMOLS_IMOLS_Failure_For_Interaction_Objects]] and [[Estimator_Status_Ledger_D12V]] before citing this note for estimation design.
+
+> [!important] D12V status update — DOLS
+> The active Chapter 2 baseline-design candidate is Restricted DOLS, not generic DOLS.
+> Restricted DOLS keeps nonlinear/interacted terms in the long-run level equation but restricts the dynamic correction set to admissible base-variable differences.
+> Unrestricted DOLS is blocked for interaction objects unless a separate protocol authorizes leads/lags of interaction-term differences.
+> See [[D12V_Restricted_DOLS_Active_Estimator_Lock]] and [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]].
+
+> [!gate] D12V interaction-term gate
+> Any nonlinear/interacted/generated specification must pass [[Interaction_Term_Integration_Order_Gate]] before estimator selection.
+> Restricted DOLS is preferred only after base-variable integration status, interaction-term status, and sample-window adequacy are classified.
+
+> [!warning] q_omega remains parked
+> q_omega-family variables remain parked and are not part of the active Restricted DOLS baseline-design path.
 
 > [!important] Current identification lock
 > IM-OLS is a robustness check for the primitive centered-interaction first layer. Accumulated-index construction discussed below is parked historical-memory work, not the current baseline.
