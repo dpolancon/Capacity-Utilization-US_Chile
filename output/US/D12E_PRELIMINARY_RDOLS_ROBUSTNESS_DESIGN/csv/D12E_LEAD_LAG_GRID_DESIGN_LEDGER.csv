@@ -1,0 +1,5 @@
+"grid_id","n_lead","n_lag","grid_role","allowed_in_D12E","allowed_in_D12F","reason","notes"
+"LL00",0,0,"static levels plus current base differences only, diagnostic minimal-dynamics design",TRUE,TRUE,"Minimal dynamic diagnostic, not preferred baseline","No grid adds dynamic corrections for interaction/generated terms."
+"LL11",1,1,"D12C baseline grid already estimated",TRUE,TRUE,"Anchor grid inherited from D12C","No grid adds dynamic corrections for interaction/generated terms."
+"LL22",2,2,"D12C robustness grid already estimated",TRUE,TRUE,"Anchor robustness grid inherited from D12C","No grid adds dynamic corrections for interaction/generated terms."
+"LL33",3,3,"candidate high-dynamic grid only if sample/rank feasible",TRUE,TRUE,"High-dynamic diagnostic allowed only where sample/rank prechecks pass","No grid adds dynamic corrections for interaction/generated terms."
