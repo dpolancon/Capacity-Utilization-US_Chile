@@ -1,0 +1,27 @@
+check_name,status,details
+cointReg reviewed,PASS,Package suitability encoded in D12B_PACKAGE_SUITABILITY_LEDGER.csv
+cointRegD classified as linear DOLS benchmark only,PASS,cointReg::cointRegD role LINEAR_DOLS_BENCHMARK_ONLY and baseline_status NOT_BASELINE_ENGINE_FOR_INTERACTED_RDOLS
+manual RDOLS wrapper selected as baseline implementation path,PASS,manual_rdols_wrapper role BASELINE_IMPLEMENTATION_PATH
+interaction/generated terms excluded from dynamic corrections,PASS,RDOLS blueprint hard rule blocks mechanical dynamic corrections for generated terms
+RDOLS implementation blueprint written,PASS,D12B_RDOLS_IMPLEMENTATION_BLUEPRINT.md
+RDOLS engine requirements ledger written,PASS,csv/D12B_RDOLS_ENGINE_REQUIREMENTS_LEDGER.csv
+results UI blueprint written,PASS,D12B_RESULTS_INTERFACE_BLUEPRINT.md
+results UI requirements ledger written,PASS,csv/D12B_RESULTS_UI_REQUIREMENTS_LEDGER.csv
+D12C API contract written,PASS,D12B_D12C_API_CONTRACT.md
+print UI requires contract header before coefficients,PASS,results blueprint requires warnings before coefficients
+auxiliary dynamic coefficients hidden by default,PASS,print.ch2_rdols default show_auxiliary FALSE
+no coefficient estimation run,PASS,D12B created documents and ledgers only
+no real model result printed,PASS,no coefficient table or real model result produced
+baseline object classified,PASS,D12B_BASELINE_ESTIMATION_DESIGN.md
+variable roles assigned,PASS,D12B_BASELINE_ESTIMATION_DESIGN.md
+boundary clean,PASS,D11R boundary reconciliation consumed; no total-capital baseline authorization
+q_omega parked,PASS,q_omega blocked in all D12B contracts
+integration-order gate resolved or non-blocking,PASS,non-blocking for design; D12C must resolve before fitting
+interaction/generated-term gate resolved or no interaction term present,PASS,non-blocking for design; D12C must classify before fitting
+Restricted DOLS design admissible,PASS,manual RDOLS wrapper selected with restricted dynamics
+at least one lead/lag grid survives,PASS,D11 window supports 1/1 and 2/2 design grids subject to D12C exact alignment
+cointRegD not selected as nonlinear baseline engine,PASS,cointRegD blocked as nonlinear/interacted baseline engine
+manual RDOLS wrapper blueprint complete,PASS,D12B_RDOLS_IMPLEMENTATION_BLUEPRINT.md complete
+results UI blueprint complete,PASS,D12B_RESULTS_INTERFACE_BLUEPRINT.md complete
+D12C API contract complete,PASS,D12B_D12C_API_CONTRACT.md complete
+terminal decision written,PASS,D12B_TERMINAL_DECISION.md authorizes D12C controlled preliminary RDOLS estimation

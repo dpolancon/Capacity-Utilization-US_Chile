@@ -1,0 +1,8 @@
+interface_function,purpose,required_inputs,required_outputs,D12B_status,D12C_status,safety_rule
+new_ch2_rdols_result,construct contract-first RDOLS result object,model metadata gates specification sample coefficients validation,ch2_rdols object,BLUEPRINT_ONLY,IMPLEMENT_IF_AUTHORIZED,must set status CONTROLLED_PRELIMINARY
+print.ch2_rdols,print result with warnings before coefficients,ch2_rdols object and print options,console printout,BLUEPRINT_ONLY,IMPLEMENT_IF_AUTHORIZED,must print contract header before coefficients
+format_rdols_coef_table,format long-run coefficient table,long-run coefficient data and digits,display table,BLUEPRINT_ONLY,IMPLEMENT_IF_AUTHORIZED,long-run coefficients only; no auxiliary merge
+as_rdols_gate_table,format gate statuses,gate metadata,gate status table,BLUEPRINT_ONLY,IMPLEMENT_IF_AUTHORIZED,must show q_omega parked and interaction gate
+as_rdols_sample_table,format sample survival metadata,sample metadata,sample table,BLUEPRINT_ONLY,IMPLEMENT_IF_AUTHORIZED,must show lead/lag losses before coefficients
+as_rdols_contract_table,format vault contract warnings,contract metadata,contract table,BLUEPRINT_ONLY,IMPLEMENT_IF_AUTHORIZED,must include blocked FM-OLS/IM-OLS and restricted dynamics warning
+write_rdols_model_card,write model card for saved preliminary result,ch2_rdols object and destination path,model card file,BLUEPRINT_ONLY,IMPLEMENT_IF_AUTHORIZED,must label not final manuscript estimation

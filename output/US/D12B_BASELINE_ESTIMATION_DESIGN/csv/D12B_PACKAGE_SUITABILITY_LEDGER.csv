@@ -1,0 +1,6 @@
+package_object,role,baseline_status,reason,D12B_decision
+cointReg::cointRegD,LINEAR_DOLS_BENCHMARK_ONLY,NOT_BASELINE_ENGINE_FOR_INTERACTED_RDOLS,cointRegD applies DOLS dynamic corrections to all columns supplied in x,Do not select as nonlinear/interacted baseline engine
+cointReg internal DOLS construction logic,IMPLEMENTATION_TEMPLATE,ADMISSIBLE_AS_DESIGN_REFERENCE,useful for understanding DOLS matrix construction sample alignment lead/lag construction and coefficient display,Use as design reference only
+manual_rdols_wrapper,BASELINE_IMPLEMENTATION_PATH,REQUIRED_FOR_INTERACTED_RESTRICTED_DOLS,Chapter 2 baseline requires dynamic corrections only for admissible base-variable first differences,Select as D12C implementation path
+cointReg::cointRegFM,LINEAR_COINTEGRATION_COMPARATOR_ONLY,BLOCKED_FOR_NONLINEAR_INTERACTED_GENERATED_BASELINE,standard FM-OLS remains linear comparator/historical reference but is blocked as nonlinear interacted baseline,Do not select as nonlinear/interacted baseline
+cointReg::cointRegIM,LINEAR_COINTEGRATION_COMPARATOR_ONLY,BLOCKED_FOR_NONLINEAR_INTERACTED_GENERATED_BASELINE,standard IM-OLS remains linear comparator/historical reference but is blocked as nonlinear interacted baseline,Do not select as nonlinear/interacted baseline

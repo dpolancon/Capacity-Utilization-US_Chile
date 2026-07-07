@@ -1,0 +1,10 @@
+design_item,status,evidence,contract_note
+baseline_object_classified,PASS,nonlinear/interacted first-layer transformation relation governed by D12V,interaction/generated terms require gate before D12C fitting
+variable_roles_assigned,PASS,D12B_BASELINE_ESTIMATION_DESIGN.md variable role table,D12C must load variables from D10/D11R-authorized sources only
+boundary_clean,PASS,D11R reclassified total-capital variables out of baseline,ME/NRC remains baseline capital boundary
+q_omega_parked,PASS,D11R and D12V state q_omega remains parked,D12C stop if q_omega enters baseline
+integration_order_gate,NON_BLOCKING_FOR_DESIGN,D11 readiness shows likely I1 output/distribution and capital I2 risk requiring D12C gate,D12C must resolve before fitting
+interaction_generated_gate,NON_BLOCKING_FOR_DESIGN,D12V gate created and D12B excludes interaction dynamics,D12C must classify generated terms before fitting
+restricted_dols_design_admissible,PASS,manual RDOLS wrapper selected and cointRegD blocked as nonlinear baseline,only base-variable first differences receive dynamics
+lead_lag_grid_survival,PASS_FOR_DESIGN,D11 baseline capital window 1931-2024 has 94 observations,initial 1/1 and 2/2 grids survive at design level subject to D12C exact alignment
+no_coefficient_estimation_run,PASS,D12B wrote design artifacts only,no model output printed

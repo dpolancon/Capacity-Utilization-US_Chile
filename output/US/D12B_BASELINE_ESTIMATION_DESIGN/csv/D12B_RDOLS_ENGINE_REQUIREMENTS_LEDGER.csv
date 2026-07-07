@@ -1,0 +1,11 @@
+function_name,purpose,inputs,outputs,allowed_in_D12B,allowed_in_D12C,estimation_risk,contract_note
+build_level_matrix,assemble long-run level matrix,y plus admissible base levels plus authorized interactions/generated terms plus deterministic terms,level design matrix,TRUE,TRUE,LOW,no coefficient estimation
+build_base_difference_matrix,construct first differences only for admissible base I1 variables,admissible base variables,base difference matrix,TRUE,TRUE,LOW,do not difference interaction/generated terms for dynamic correction
+build_restricted_lead_lag_matrix,generate leads/lags only for base-variable differences,base difference matrix and lead/lag grid,restricted dynamic matrix,TRUE,TRUE,LOW,interaction/generated differences excluded
+align_rdols_sample,align level and restricted dynamic matrices after lead/lag construction,level matrix plus dynamic matrix plus sample window,aligned RDOLS design frame,TRUE,TRUE,LOW,report all sample losses
+fit_manual_rdols,fit OLS on the aligned RDOLS design matrix,aligned RDOLS design frame,controlled preliminary fit object,FALSE,TRUE_IF_AUTHORIZED,HIGH,D12B must not run; D12C may run only after gates
+extract_long_run_coefficients,separate structural long-run coefficients,fit object and level variable map,long-run coefficient table,FALSE,TRUE_IF_AUTHORIZED,MEDIUM,mark CONTROLLED_PRELIMINARY
+extract_auxiliary_dynamic_coefficients,separate dynamic correction coefficients,fit object and dynamic variable map,auxiliary coefficient table,FALSE,TRUE_IF_AUTHORIZED,MEDIUM,hidden by default in print method
+compute_design_rank,compute rank and collinearity diagnostics for design matrix,aligned RDOLS design frame,rank metadata,TRUE,TRUE,LOW,D12B may specify requirement; D12C computes
+compute_sample_survival,compute observations retained after missingness differencing and lead/lags,sample window and design matrices,sample survival metadata,TRUE,TRUE,LOW,must print before coefficients in D12C model card
+build_rdols_result_object,construct contract-first result object,fit metadata gates specification sample coefficient tables,object with class ch2_rdols and ch2_estimation_result,TRUE,TRUE,LOW,result object must include status and contract warnings
