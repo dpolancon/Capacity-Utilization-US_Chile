@@ -1,0 +1,23 @@
+Chapter 2 Restricted DOLS Result
+Model ID: RDOLS_ME_NRC_OMEGA_INT_LL11
+Estimator: RESTRICTED_DOLS
+Status: CONTROLLED_PRELIMINARY
+CONTROLLED_PRELIMINARY
+NOT FINAL MANUSCRIPT ESTIMATION
+q_omega PARKED
+FM-OLS BLOCKED FOR NONLINEAR/INTERACTED BASELINE
+IM-OLS BLOCKED FOR NONLINEAR/INTERACTED BASELINE
+RESTRICTED DOLS DYNAMIC CORRECTIONS APPLY ONLY TO BASE-VARIABLE FIRST DIFFERENCES
+Gate status: PASS_CONTROLLED_PRELIMINARY
+Specification: y_log_nfc_gva ~ k_me_log + k_nrc_log + omega_nfc + k_me_log_x_omega + k_nrc_log_x_omega + trend
+Sample: 1933 - 2023 n = 91
+Long-run coefficients:
+              term coefficient_role estimate std_error t_value p_value
+       (Intercept)    deterministic   2.2197    7.3285  0.3029  0.7628
+          k_me_log   long_run_level  -0.1733    0.1503 -1.1527  0.2527
+         k_nrc_log   long_run_level   0.8210    0.6041  1.3591  0.1782
+         omega_nfc   long_run_level  10.6278   11.7697  0.9030  0.3694
+  k_me_log_x_omega   long_run_level   0.3091    0.2261  1.3672  0.1756
+ k_nrc_log_x_omega   long_run_level  -0.9039    0.9729 -0.9290  0.3558
+             trend    deterministic   0.0282    0.0029  9.7262  0.0000
+Auxiliary dynamic coefficients are hidden by default. Use print(x, show_auxiliary = TRUE) only for design audit, not manuscript interpretation.
