@@ -1,0 +1,7 @@
+"term","comparison_scope","n_comparable_models","n_stable_sign","n_sign_changed","n_magnitude_shift","n_significance_shift","dominant_no_trend_sign","trend_sensitivity_classification","recommended_D12G_action","notes"
+"k_me_log","trend_included_vs_no_trend",17,12,5,5,3,"NEGATIVE","HIGH_TREND_SENSITIVITY","Review trend sensitivity without final interpretation.","Term-level trend sensitivity summary. DESIGN_STAGE_PRELIMINARY_ONLY"
+"k_nrc_log","trend_included_vs_no_trend",17,14,3,5,1,"POSITIVE","HIGH_TREND_SENSITIVITY","Review trend sensitivity without final interpretation.","Term-level trend sensitivity summary. DESIGN_STAGE_PRELIMINARY_ONLY"
+"omega_nfc","trend_included_vs_no_trend",17,13,4,4,1,"POSITIVE","HIGH_TREND_SENSITIVITY","Review trend sensitivity without final interpretation.","Term-level trend sensitivity summary. DESIGN_STAGE_PRELIMINARY_ONLY"
+"k_me_log_x_omega","trend_included_vs_no_trend",17,14,3,6,0,"POSITIVE","HIGH_TREND_SENSITIVITY","Review trend sensitivity without final interpretation.","Term-level trend sensitivity summary. DESIGN_STAGE_PRELIMINARY_ONLY"
+"k_nrc_log_x_omega","trend_included_vs_no_trend",17,13,4,4,1,"NEGATIVE","HIGH_TREND_SENSITIVITY","Review trend sensitivity without final interpretation.","Term-level trend sensitivity summary. DESIGN_STAGE_PRELIMINARY_ONLY"
+"(Intercept)","trend_included_vs_no_trend",17,14,3,5,0,"NEGATIVE","MODERATE_TREND_SENSITIVITY","Review trend sensitivity without final interpretation.","Term-level trend sensitivity summary. DESIGN_STAGE_PRELIMINARY_ONLY"
