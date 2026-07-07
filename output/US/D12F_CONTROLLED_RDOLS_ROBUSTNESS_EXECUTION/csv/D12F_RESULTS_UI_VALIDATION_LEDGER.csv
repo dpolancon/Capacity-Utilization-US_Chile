@@ -1,0 +1,7 @@
+"ui_requirement","status","evidence","notes"
+"contract-first model cards written","PASS","D12F generated result interface","D12F results UI validation"
+"coefficient ledgers marked preliminary","PASS","D12F generated result interface","D12F results UI validation"
+"coefficient ledgers marked design-stage preliminary only","PASS","D12F generated result interface","D12F results UI validation"
+"auxiliary coefficients hidden by default","PASS","D12F generated result interface","D12F results UI validation"
+"qomega parked banner present","PASS","D12F generated result interface","D12F results UI validation"
+"maximal feasible sample banner present","PASS","D12F generated result interface","D12F results UI validation"
