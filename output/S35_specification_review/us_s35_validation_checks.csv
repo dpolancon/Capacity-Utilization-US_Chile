@@ -1,0 +1,8 @@
+"check_id","status","details"
+"S35_OUTPUTS_CREATED","PASS","review TRUE; design TRUE; menu TRUE; memo TRUE; validation TRUE"
+"S35_SPEC_REVIEW_LEDGER_NONEMPTY","PASS","9 specification rows"
+"S35_DESIGN_DIAGNOSTICS_INCLUDE_QMESHARE","PASS","Required Q_MEshare designs are diagnosed."
+"S35_MENU_LEDGER_NONEMPTY","PASS","9 menu rows"
+"S35_NO_FINAL_ESTIMATION","PASS","No FM-OLS, DOLS, IM-OLS, VECM, Johansen, or final long-run estimator is called."
+"S35_NO_LOCKED_INPUTS_MODIFIED","PASS","6 input hashes compared"
+"S35_FINAL_DECISION","INFO","HOLD_FOR_DESIGN_REVIEW"
