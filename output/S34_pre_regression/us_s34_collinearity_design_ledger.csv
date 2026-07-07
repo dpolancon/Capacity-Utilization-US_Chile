@@ -1,0 +1,7 @@
+"design_id","regressors","n_obs","condition_number","pairwise_correlation_max","rank_status","notes"
+"DES_kcap_Qomega","k_Kcap + Q_omega",95,271.67373837309,0.999972902526911,"full_rank","High condition number; fragile design warning."
+"DES_kcap_Qq","k_Kcap + Q_q",98,2.67028608167994,0.754010482655265,"full_rank","Diagnostic only; not a model-selection result."
+"DES_kcap_MEshare","k_Kcap + ME_share",100,2.38961524851982,0.701949001792546,"full_rank","Diagnostic only; not a model-selection result."
+"DES_kME_kNRC","k_ME + k_NRC",100,18.8676763005455,0.994397589759919,"full_rank","Very high pairwise correlation; fragile design warning."
+"DES_kcap_Qq_Qomega","k_Kcap + Q_q + Q_omega",95,375.059797027374,0.999972902526911,"full_rank","High condition number; fragile design warning."
+"DES_kcap_Qq_MEshare","k_Kcap + Q_q + ME_share",98,16.8527211695681,0.986201960188301,"full_rank","Very high pairwise correlation; fragile design warning."

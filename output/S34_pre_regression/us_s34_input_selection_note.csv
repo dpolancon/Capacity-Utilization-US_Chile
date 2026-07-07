@@ -1,0 +1,4 @@
+"candidate_panel","status","reason"
+"data/processed/us_s31i/us_s31i_candidate_audit_panel.csv","PRIMARY_USED","Broadest current non-estimator Chapter 2 candidate menu: y_t, K_cap, ME/NRC, distribution, q paths, frontier conditioners."
+"data/processed/us_s32c/us_s32c_candidate_panel.csv","SECONDARY_DIAGNOSTIC_MERGED","Newer but narrower corporate-boundary robustness candidate panel; S32C-only columns are added without overwriting S31I."
+"data/releases/chapter2_us_source_of_truth_v1_1_candidate/CH2_US_V1_1_CANDIDATE_SOURCE_OF_TRUTH_WIDE.csv","DISCOVERED_NOT_PRIMARY","Release candidate source-of-truth panel; does not carry the full S31I q/composition menu needed for S34."
