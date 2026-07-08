@@ -2,8 +2,9 @@
 
 # Chapter 2 - Golden Age Capacity Path Reconstruction & Comparison
 # Reconstructs potential capacity output (yp) and latent utilization (mu)
-# for Specification B (composition-mediated), Specification A (Shaikh-style),
-# and a standard HP Filter decomposition.
+# for Specification B (composition-mediated using A03 growth-law integration),
+# Specification A (Shaikh-style), and HP Filter decomposition using total output (real GDP).
+# Plots time paths of utilization, elasticities (theta_total, theta_ME, theta_NRC), and wage share.
 
 repo_root <- "C:/ReposGitHub/Capacity-Utilization-US_Chile"
 panel_path <- file.path(repo_root, "output", "S34R_B_cpr_realigned_design_gate", "csv", "S34R_B_repaired_augmented_panel.csv")
@@ -14,6 +15,18 @@ if (!file.exists(panel_path)) {
 
 panel <- read.csv(panel_path, stringsAsFactors = FALSE, check.names = FALSE)
 panel <- panel[order(panel$year), ]
+
+# Load total output (real GDP proxy using implicit deflator)
+gdp_path <- file.path(repo_root, "output", "US", "S12B_OUTPUT_PRICE_REAL_OUTPUT", "csv", "S12B_real_output_objects_long.csv")
+if (!file.exists(gdp_path)) {
+  stop("S12B real output objects CSV not found.", call. = FALSE)
+}
+gdp_df <- read.csv(gdp_path, stringsAsFactors = FALSE)
+gdp_df <- subset(gdp_df, variable_name == "Y_REAL_NFC_GVA_PROXY_GDP_IMPLICIT")
+gdp_df$y_total <- log(gdp_df$real_output_value)
+
+# Merge total output into panel
+panel <- merge(panel, gdp_df[, c("year", "y_total")], by = "year", all.x = TRUE)
 
 # Calculate capital stock growth rates on the full panel
 panel$g_NRC <- c(NA, diff(panel$k_NRC))
@@ -26,16 +39,16 @@ beta_tau_B <- 0.31207
 beta_inter_B <- -1.02937
 
 # Calculate time-varying elasticities for Specification B
-panel$theta_ME_t <- beta_tau_B + beta_inter_B * panel$inter_tau_omega_orth
+panel$theta_ME_t <- beta_tau_B + beta_inter_B * panel$omega_NFC_centered
 panel$theta_NRC_t <- beta_k_B - panel$theta_ME_t
 
 # Reconstruct potential output growth rate using the A03 composition identity
 panel$g_Yp_B <- panel$theta_NRC_t * panel$g_NRC + panel$theta_ME_t * panel$g_ME
 
-# Integrate potential output growth rates anchored at 1973 (mu_1973 = 1.0)
+# Integrate potential output growth rates anchored at 1973 (mu_1973 = 1.0) using total output
 idx_1973 <- which(panel$year == 1973)
 panel$yp_spec_B <- NA
-panel$yp_spec_B[idx_1973] <- panel$y_t[idx_1973]
+panel$yp_spec_B[idx_1973] <- panel$y_total[idx_1973]
 
 # Integrate forward from 1973
 for (i in (idx_1973 + 1):nrow(panel)) {
@@ -55,7 +68,7 @@ for (i in (idx_1973 - 1):1) {
 ga_data <- subset(panel, year >= 1945 & year <= 1973)
 
 # Model 2: True Shaikh-Style (y_t regressed on k_Kcap_centered ONLY, no distribution terms)
-# estimated dynamically over the Golden Age window
+# estimated dynamically over the Golden Age window on NFC data
 library(cointReg)
 y <- ga_data$y_t
 x <- as.matrix(ga_data$k_Kcap_centered)
@@ -67,7 +80,7 @@ beta_k_A <- fit_shaikh$theta[2]
 
 ga_data$yp_spec_A <- alpha_A + beta_k_A * ga_data$k_Kcap_centered
 
-# Model 3: HP Filter (Output only, lambda = 100 for annual data)
+# Model 3: HP Filter (applied directly to total output y_total, lambda = 100)
 hp_filter <- function(y, lambda = 100) {
   n <- length(y)
   I <- diag(n)
@@ -82,39 +95,43 @@ hp_filter <- function(y, lambda = 100) {
   return(list(trend = as.vector(trend), cycle = as.vector(cycle)))
 }
 
-hp_res <- hp_filter(ga_data$y_t, lambda = 100)
+hp_res <- hp_filter(ga_data$y_total, lambda = 100)
 ga_data$yp_spec_HP <- hp_res$trend
 ga_data$ln_mu_spec_HP <- hp_res$cycle
 ga_data$mu_spec_HP <- exp(ga_data$ln_mu_spec_HP)
 
-# Compute latent capacity utilization: ln_mu = y - yp
-ga_data$ln_mu_spec_B <- ga_data$y_t - ga_data$yp_spec_B
-ga_data$ln_mu_spec_A <- ga_data$y_t - ga_data$yp_spec_A
+# Compute latent capacity utilization: ln_mu = y_total - yp
+ga_data$ln_mu_spec_B <- ga_data$y_total - ga_data$yp_spec_B
+ga_data$ln_mu_spec_A <- ga_data$y_total - ga_data$yp_spec_A
 
 # Normalization:
-# Specification B: Pinch-year normalization at 1973 (mu_1973 = 1.0)
-ga_data$ln_mu_spec_B_norm <- ga_data$ln_mu_spec_B # Already anchored at 1973 in levels
+# Specification B: Already anchored at 1973 relative to total output
+ga_data$ln_mu_spec_B_norm <- ga_data$ln_mu_spec_B
 ga_data$mu_spec_B <- exp(ga_data$ln_mu_spec_B_norm)
 
 # Specification A (Shaikh-style): Normalized residual (mean-normalized to 1.0)
 ga_data$ln_mu_spec_A_norm <- ga_data$ln_mu_spec_A - mean(ga_data$ln_mu_spec_A)
 ga_data$mu_spec_A <- exp(ga_data$ln_mu_spec_A_norm)
 
+# Calculate aggregate transformation elasticity theta_total = s_t * theta_ME_t + (1 - s_t) * theta_NRC_t
+ga_data$theta_total_t <- ga_data$ME_share * ga_data$theta_ME_t + (1 - ga_data$ME_share) * ga_data$theta_NRC_t
+
 # Save output
 out_dir <- file.path(repo_root, "output", "US", "reconstruction_comparison")
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 out_file <- file.path(out_dir, "us_golden_age_reconstructed_paths.csv")
-write.csv(ga_data[, c("year", "y_t", "yp_spec_B", "yp_spec_A", "yp_spec_HP", 
+write.csv(ga_data[, c("year", "y_total", "y_t", "yp_spec_B", "yp_spec_A", "yp_spec_HP", 
                       "ln_mu_spec_B_norm", "ln_mu_spec_A_norm", "ln_mu_spec_HP", 
-                      "mu_spec_B", "mu_spec_A", "mu_spec_HP")], 
+                      "mu_spec_B", "mu_spec_A", "mu_spec_HP",
+                      "theta_total_t", "theta_ME_t", "theta_NRC_t", "omega_NFC")], 
           out_file, row.names = FALSE)
 
-# Generate Plot
-plot_file <- file.path(out_dir, "us_golden_age_reconstruction_plot.png")
-png(plot_file, width = 800, height = 500)
+# Generate Plot 1: Capacity Utilization Comparison
+plot_file1 <- file.path(out_dir, "us_golden_age_reconstruction_plot.png")
+png(plot_file1, width = 800, height = 500)
 plot(ga_data$year, ga_data$mu_spec_B, type = "l", col = "blue", lwd = 2.5, 
      ylim = c(0.7, 1.3), xlab = "Year", ylab = "Capacity Utilization", 
-     main = "Capacity Utilization Comparison (1945-1973)")
+     main = "Capacity Utilization Comparison (1945-1973) - Total Output Basis")
 lines(ga_data$year, ga_data$mu_spec_A, col = "red", lwd = 2.5)
 lines(ga_data$year, ga_data$mu_spec_HP, col = "darkgreen", lwd = 2.5, lty = 2)
 abline(h = 1.0, col = "gray", lty = 2)
@@ -122,6 +139,25 @@ legend("bottomleft", legend = c("Specification B (Composition-Mediated growth, P
                                "Specification A (Shaikh-style, Mean-Normalized)",
                                "HP Filter (Output Trend, lambda = 100)"), 
        col = c("blue", "red", "darkgreen"), lwd = 2.5, lty = c(1, 1, 2))
+dev.off()
+
+# Generate Plot 2: Elasticities and Wage Share
+plot_file2 <- file.path(out_dir, "us_golden_age_elasticity_plot.png")
+png(plot_file2, width = 800, height = 500)
+# Set up a two-panel plot
+par(mar = c(4, 4, 3, 4))
+plot(ga_data$year, ga_data$theta_total_t, type = "l", col = "purple", lwd = 2.5, 
+     ylim = c(-0.2, 0.6), xlab = "Year", ylab = "Transformation Elasticity", 
+     main = "Transformation Elasticities & NFC Wage Share (1945-1973)")
+lines(ga_data$year, ga_data$theta_ME_t, col = "blue", lwd = 2, lty = 2)
+lines(ga_data$year, ga_data$theta_NRC_t, col = "orange", lwd = 2, lty = 3)
+par(new = TRUE)
+plot(ga_data$year, ga_data$omega_NFC, type = "l", col = "darkgray", lwd = 1.5, 
+     axes = FALSE, xlab = "", ylab = "")
+axis(side = 4, col = "darkgray", col.axis = "darkgray")
+mtext("NFC Wage Share", side = 4, line = 2.5, col = "darkgray")
+legend("bottomleft", legend = c("theta_total (Aggregate)", "theta_ME (Machinery)", "theta_NRC (Structures)", "omega_NFC (Wage Share, Right Axis)"), 
+       col = c("purple", "blue", "orange", "darkgray"), lwd = c(2.5, 2, 2, 1.5), lty = c(1, 2, 3, 1))
 dev.off()
 
 # Compute comparison metrics
@@ -136,7 +172,6 @@ mean_A <- mean(ga_data$mu_spec_A)
 mean_HP <- mean(ga_data$mu_spec_HP)
 
 cat("Reconstruction Comparison (1945-1973):\n")
-cat("FM-OLS Shaikh-style model fitted: Intercept =", alpha_A, ", beta_k =", beta_k_A, "\n")
 cat("Correlation Spec B / Spec A: ", correlation_B_A, "\n")
 cat("Correlation Spec B / HP: ", correlation_B_HP, "\n")
 cat("Correlation Spec A / HP: ", correlation_A_HP, "\n")
