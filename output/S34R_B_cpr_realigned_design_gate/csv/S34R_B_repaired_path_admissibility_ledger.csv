@@ -1,0 +1,16 @@
+object_id,object_type,variables_used,i_order_classification,admissibility_class,notes
+omega_NFC_centered,cpr_centered_state_or_interaction,omega_NFC_centered,I1,DIAGNOSTIC_ONLY,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+k_Kcap_centered,cpr_centered_state_or_interaction,k_Kcap_centered,I2_RISK,AUTHORIZE_POLYNOMIAL_CPR,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+k_NRC_centered,cpr_centered_state_or_interaction,k_NRC_centered,I2_RISK,AUTHORIZE_POLYNOMIAL_CPR,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+tau_centered,cpr_centered_state_or_interaction,tau_centered,I1,AUTHORIZE_POLYNOMIAL_CPR,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+inter_kKcap_omega,cpr_centered_state_or_interaction,inter_kKcap_omega,I1,AUTHORIZE_POLYNOMIAL_CPR,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+inter_kKcap_omega_orth,cpr_centered_state_or_interaction,inter_kKcap_omega_orth,I1,AUTHORIZE_POLYNOMIAL_CPR,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+inter_kNRC_omega,cpr_centered_state_or_interaction,inter_kNRC_omega,I1,AUTHORIZE_POLYNOMIAL_CPR,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+inter_kNRC_omega_orth,cpr_centered_state_or_interaction,inter_kNRC_omega_orth,I1,AUTHORIZE_POLYNOMIAL_CPR,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+inter_tau_omega,cpr_centered_state_or_interaction,inter_tau_omega,I1,AUTHORIZE_POLYNOMIAL_CPR,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+inter_tau_omega_orth,cpr_centered_state_or_interaction,inter_tau_omega_orth,I1,AUTHORIZE_POLYNOMIAL_CPR,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+omega_NFC,cpr_centered_state_or_interaction,omega_NFC,BOUNDED_PERSISTENT,DIAGNOSTIC_ONLY,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+k_Kcap,cpr_centered_state_or_interaction,k_Kcap,I2_RISK,AUTHORIZE_POLYNOMIAL_CPR,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+k_NRC,cpr_centered_state_or_interaction,k_NRC,I2_RISK,AUTHORIZE_POLYNOMIAL_CPR,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+k_ME,cpr_centered_state_or_interaction,k_ME,I2_RISK,DIAGNOSTIC_ONLY,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).
+y_t,cpr_centered_state_or_interaction,y_t,I1,AUTHORIZE_STANDARD_IF_I1,CPR polynomial cointegration admits I(2)/ambiguous regressors if residuals are I(0).

@@ -1,0 +1,10 @@
+criterion,passed,notes
+input_discovery_passed,True,Required S34R and D06 objects found.
+cpr_states_constructed,True,Centered and orthogonalized variables constructed.
+state_i_order_ledger_created,True,Integration orders checked under CPR guidelines.
+raw_interactions_screened,True,Raw and residual-centered interactions evaluated.
+nrc_envelope_design_available,True,NRC-scale designs with residual centering screened.
+core_eg_pass_exists,True,Type1 residual cointegration has weak/strong passes under CPR.
+distributional_state_dependence_identified,True,Orthogonalized interaction specifications pass gates and are promoted.
+no_final_estimators_run,True,Only design diagnostics and EG screens run.
+final_decision,True,AUTHORIZE_S35_ESTIMATOR_REFREEZE_PREP

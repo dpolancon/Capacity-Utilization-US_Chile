@@ -1,0 +1,16 @@
+check_id,status,details
+S34R_B_OPENING_REPO_STATE_RECORDED,PASS,"Opening branch, status, and log recorded."
+S34R_B_INPUT_DISCOVERY_CREATED,PASS,Input discovery ledger created.
+S34R_B_REQUIRED_INPUTS_FOUND,PASS,Required inputs found.
+S34R_B_AUGMENTED_PANEL_CREATED,PASS,Augmented panel created.
+S34R_B_STATE_VARIABLE_LEDGER_CREATED,PASS,State variable ledger created.
+S34R_B_STATE_I_ORDER_LEDGER_CREATED,PASS,State I-order ledger created.
+S34R_B_PATH_ADMISSIBILITY_LEDGER_CREATED,PASS,Path admissibility ledger created.
+S34R_B_DESIGN_DIAGNOSTICS_CREATED,PASS,Design diagnostics ledger created.
+S34R_B_EG_LEDGER_CREATED,PASS,EG ledger created.
+S34R_B_SPECIFICATION_REVIEW_LEDGER_CREATED,PASS,Specification review ledger created.
+S34R_B_DECISION_MATRIX_CREATED,PASS,Decision matrix created.
+S34R_B_DECISION_REPORT_CREATED,PASS,Decision report created.
+S34R_B_NO_FINAL_ESTIMATORS_RUN,PASS,"No FM-OLS, DOLS, IM-OLS, or final long-run model output was produced."
+S34R_B_NO_LOCKED_INPUTS_MODIFIED,PASS,Selected source hashes unchanged.
+S34R_B_FINAL_DECISION_RECORDED,PASS,AUTHORIZE_S35_ESTIMATOR_REFREEZE_PREP

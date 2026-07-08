@@ -1,0 +1,10 @@
+field,value
+recorded_at,2026-07-08T13:48:52
+cwd,C:\ReposGitHub\Capacity-Utilization-US_Chile
+git_branch,main
+git_status_short,"?? artifacts/artifact_assessment_report.md
+?? artifacts/multi_repo_system_prompt.md
+?? codes/S34R_B_cpr_realigned_design_gate/
+?? output/S34R_B_cpr_realigned_design_gate/"
+git_log_oneline_8,07b67d1 Implement S34R-A repaired design review state-dependence gate | e1a8cf5 Implement S34R GPIM-repaired pre-regression unblock loop | d2c3197 Implement S35 specification review gate | 9c6ce7b Implement S34 pre-regression variable admissibility report | 212e837 docs: add theta recovery specification ledger | a5fac5d Implement D12F-R no-trend RDOLS robustness reconciliation | 16f4592 Implement D12F controlled RDOLS robustness execution | 63db236 Implement D12E preliminary RDOLS robustness design
+stage,S34R_B_CPR_REALIGNED_DESIGN_REVIEW_GATE

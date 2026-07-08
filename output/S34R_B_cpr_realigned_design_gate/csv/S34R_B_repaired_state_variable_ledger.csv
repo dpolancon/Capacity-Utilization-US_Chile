@@ -1,0 +1,16 @@
+variable_name,definition,mechanization_state,distribution_state,accumulation_increment,bounded_expected,constructed,sample_start,sample_end,n_obs,notes
+omega_NFC_centered,Centered or residual centered variable,ME share,omega_NFC,,True,True,1931,2024,94,Realigned under June 8 lock.
+k_Kcap_centered,Centered or residual centered variable,ME share,,,False,True,1931,2024,94,Realigned under June 8 lock.
+k_NRC_centered,Centered or residual centered variable,ME share,,,False,True,1931,2024,94,Realigned under June 8 lock.
+tau_centered,Centered or residual centered variable,Composition ratio,,,False,True,1931,2024,94,Realigned under June 8 lock.
+inter_kKcap_omega,Centered or residual centered variable,ME share,omega_NFC,,True,True,1931,2024,94,Realigned under June 8 lock.
+inter_kKcap_omega_orth,Centered or residual centered variable,ME share,omega_NFC,,True,True,1931,2024,94,Realigned under June 8 lock.
+inter_kNRC_omega,Centered or residual centered variable,ME share,omega_NFC,,True,True,1931,2024,94,Realigned under June 8 lock.
+inter_kNRC_omega_orth,Centered or residual centered variable,ME share,omega_NFC,,True,True,1931,2024,94,Realigned under June 8 lock.
+inter_tau_omega,Centered or residual centered variable,Composition ratio,omega_NFC,,True,True,1931,2024,94,Realigned under June 8 lock.
+inter_tau_omega_orth,Centered or residual centered variable,Composition ratio,omega_NFC,,True,True,1931,2024,94,Realigned under June 8 lock.
+omega_NFC,Raw level stock/share,ME share,omega_NFC,,True,True,1931,2024,94,Realigned under June 8 lock.
+k_Kcap,Raw level stock/share,ME share,,,False,True,1931,2024,94,Realigned under June 8 lock.
+k_NRC,Raw level stock/share,ME share,,,False,True,1931,2024,94,Realigned under June 8 lock.
+k_ME,Raw level stock/share,ME share,,,False,True,1931,2024,94,Realigned under June 8 lock.
+y_t,Raw level stock/share,ME share,,,False,True,1931,2024,94,Realigned under June 8 lock.
