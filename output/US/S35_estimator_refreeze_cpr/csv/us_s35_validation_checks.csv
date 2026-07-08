@@ -1,0 +1,5 @@
+"check_id","status","details"
+"S35_ESTIMATION_COMPLETED","PASS","All specification-window-estimator cells evaluated."
+"S35_LEDGER_NONEMPTY","PASS","420 estimation coefficient rows written."
+"S35_TABLES_CREATED","PASS","LaTeX tables T01 and T02 successfully written for the paper."
+"S35_REPORT_CREATED","PASS","Refreeze summary report successfully generated."
