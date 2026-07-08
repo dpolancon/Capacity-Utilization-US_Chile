@@ -55,8 +55,8 @@ ln_mu_1973_B <- ga_data$ln_mu_spec_B[ga_data$year == 1973]
 ga_data$ln_mu_spec_B_norm <- ga_data$ln_mu_spec_B - ln_mu_1973_B
 ga_data$mu_spec_B <- exp(ga_data$ln_mu_spec_B_norm)
 
-# Specification A (Shaikh-style): Normalized residual (max-normalized to 1.0)
-ga_data$ln_mu_spec_A_norm <- ga_data$ln_mu_spec_A - max(ga_data$ln_mu_spec_A)
+# Specification A (Shaikh-style): Normalized residual (mean-normalized to 1.0)
+ga_data$ln_mu_spec_A_norm <- ga_data$ln_mu_spec_A - mean(ga_data$ln_mu_spec_A)
 ga_data$mu_spec_A <- exp(ga_data$ln_mu_spec_A_norm)
 
 # Save output
@@ -70,12 +70,12 @@ write.csv(ga_data[, c("year", "y_t", "yp_spec_B", "yp_spec_A", "ln_mu_spec_B_nor
 plot_file <- file.path(out_dir, "us_golden_age_reconstruction_plot.png")
 png(plot_file, width = 800, height = 500)
 plot(ga_data$year, ga_data$mu_spec_B, type = "l", col = "blue", lwd = 2.5, 
-     ylim = c(0.7, 1.1), xlab = "Year", ylab = "Capacity Utilization", 
+     ylim = c(0.7, 1.3), xlab = "Year", ylab = "Capacity Utilization", 
      main = "Capacity Utilization Comparison (1945-1973)")
 lines(ga_data$year, ga_data$mu_spec_A, col = "red", lwd = 2.5)
 abline(h = 1.0, col = "gray", lty = 2)
 legend("bottomleft", legend = c("Specification B (Composition-Mediated, Pinched 1973)", 
-                               "Specification A (Shaikh-style, Max-Normalized)"), 
+                               "Specification A (Shaikh-style, Mean-Normalized)"), 
        col = c("blue", "red"), lwd = 2.5)
 dev.off()
 
