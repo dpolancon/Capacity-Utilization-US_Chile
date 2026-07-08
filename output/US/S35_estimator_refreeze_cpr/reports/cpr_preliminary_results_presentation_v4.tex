@@ -105,7 +105,25 @@
   \end{itemize}
 \end{frame}
 
-% Slide 7: Results: Specification A (Scale-Conditioning)
+% Slide 7: Why CPR? Nonlinear Cointegration and the I(2) Trap
+\begin{frame}{Why CPR? Nonlinear Cointegration and the $I(2)$ Trap}
+  \begin{itemize}
+    \item \textbf{The $I(2)$ Interaction Trap:} 
+      If $\tilde{\tau}_t \sim I(1)$ and $\tilde{\omega}_t \sim I(1)$, their product $(\tilde{\tau}_t \cdot \tilde{\omega}_t)$ is integrated of order two ($I(2)$). Standard linear cointegration critical values are asymptotically invalid.
+    \item \textbf{Stochastic Trend Cancellation:} 
+      CPR theory proves that the $I(2)$ component of the interaction cancels out with the stochastic components of $y_t$, yielding a stationary ($I(0)$) error term.
+    \item \textbf{Asymptotic Bias Correction:} 
+      Naive OLS is superconsistent but suffers from endogeneity and serial correlation. 
+      \begin{itemize}
+        \item \textbf{FM-OLS:} Corrects covariance terms non-parametrically.
+        \item \textbf{IM-OLS:} Adds lead/lag adjustments directly to absorb short-run dynamics, avoiding unstable covariance estimation of product terms.
+      \end{itemize}
+    \item \textbf{VIF Stabilization:} 
+      Residual centering regresses the interaction on main effects to isolate the orthogonalized residual. This resolves collinearity (VIF = 1.0) without shifting the underlying cointegrating space.
+  \end{itemize}
+\end{frame}
+
+% Slide 8: Results: Specification A (Scale-Conditioning)
 \begin{frame}{Results: Specification A (Scale-Conditioning)}
   \begin{table}[htbp]
     \centering
@@ -135,7 +153,7 @@
   \end{itemize}
 \end{frame}
 
-% Slide 8: Results: Specification B (Composition-Mediated)
+% Slide 9: Results: Specification B (Composition-Mediated)
 \begin{frame}{Results: Specification B (Composition-Mediated)}
   \begin{table}[htbp]
     \centering
@@ -168,7 +186,7 @@
   \end{itemize}
 \end{frame}
 
-% Slide 9: Critical Discussion: Validation vs. Structural Crisis
+% Slide 10: Critical Discussion: Validation vs. Structural Crisis
 \begin{frame}{Critical Discussion: Validation vs. Structural Crisis}
   \begin{block}{Validation of the Theory}
     The negative and highly significant interaction coefficient ($\lambda < 0$) in the Fordist era ($1940-1973$) strongly validates the induced innovation theory. Higher wage shares ($\omega$) force capitalists to mechanize, but this drives the economy into the concave zone of lower marginal capacity conversion.
@@ -183,7 +201,7 @@
   \end{block}
 \end{frame}
 
-% Slide 9: Unpacking Specification B: Golden Age Case Study
+% Slide 11: Unpacking Specification B: Golden Age Case Study
 \begin{frame}{Unpacking Specification B: Golden Age Case Study (1945--1973)}
   \begin{block}{Estimated Cointegrating Equation (FM-OLS)}
     $$y_t = 14.8617 + 0.2378 \tilde{k}^{scale}_t + 0.3121 \tilde{\tau}_t - 5.1605 \tilde{\omega}_t - 1.0294 (\tilde{\tau}_t \cdot \tilde{\omega}_t)_{orth}$$
@@ -201,7 +219,7 @@
   \end{itemize}
 \end{frame}
 
-% Slide 10: Conclusion \& Next Steps
+% Slide 12: Conclusion \& Next Steps
 \begin{frame}{Conclusion \& Next Steps}
   \begin{itemize}
     \item We have established a robust, cointegrated long-run relationship using Cointegrating Polynomial Regression (CPR) and residual centering.
