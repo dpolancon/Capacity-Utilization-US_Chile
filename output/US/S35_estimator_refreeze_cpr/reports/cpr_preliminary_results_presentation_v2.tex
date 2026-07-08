@@ -58,32 +58,32 @@
 % Slide 4: The Intensive Margin \& Technique Choice
 \begin{frame}{The Intensive Margin ($K^{ME}/L$) \& Technique Choice}
   \begin{block}{Ontological Definition}
-    Machinery and equipment ($K^{ME}$) paired with labor ($L$) defines the tactical margin of accumulation. Capitalists optimize the mechanization rate $q = K^{ME}/L$ along the frontier.
+    Machinery ($K^{ME}$) paired with labor ($L$) defines the tactical margin of technique choice ($q = K^{ME}/L$).
   \end{block}
   \begin{itemize}
     \item \textbf{Tactical Cost-Minimization Problem:}
-      $$\min_{q} \ C = a - \pi \cdot q \quad \text{s.t.} \quad a = \lambda_0^{[s]} + \lambda_1^{[s]} q + \lambda_2^{[s]} q^2$$
-      where $a = Y/L$ (labor productivity growth), and $\pi = 1-\omega$ (profit share).
+      $$\min_{q} C = a - \pi q \quad \text{s.t.} \quad a = \lambda_0^{[s]} + \lambda_1^{[s]} q + \lambda_2^{[s]} q^2$$
+      where $a$ is labor productivity growth, and $\pi = 1-\omega$ (profit share).
     \item \textbf{First-Order Condition (FOC):}
       $$\frac{\partial C}{\partial q} = \lambda_1^{[s]} + 2\lambda_2^{[s]}q^* - \pi = 0 \implies q^*(\pi, s) = \frac{\pi - \lambda_1^{[s]}}{2\lambda_2^{[s]}}$$
     \item \textbf{Induced Innovation:} Since the frontier is concave ($\lambda_2^{[s]} < 0$):
-      $$\frac{\partial q^*}{\partial \omega} = -\frac{1}{2\lambda_2^{[s]}} > 0$$
-      Rising wage share ($\omega \uparrow \implies \pi \downarrow$) forces capitalists to accelerate mechanization growth ($q^* \uparrow$).
+      $$\frac{\partial q^*}{\partial \omega} = -\frac{1}{2\lambda_2^{[s]}} > 0 \quad (\text{since } \omega \uparrow \implies \pi \downarrow)$$
+      Rising wage share induces faster mechanization ($q^* \uparrow$) to save labor.
   \end{itemize}
 \end{frame}
 
 % Slide 5: Reconciliation: Diminishing Capacity Payoffs
 \begin{frame}{Reconciliation: Diminishing Capacity Payoffs}
   \begin{itemize}
-    \item Differentiating the capacity identity $Y^p_t = \frac{a^N}{q^*} K^{ME}_t + \Gamma(K^{NRC}_t)$ yields the aggregate transformation elasticity $\theta_t$:
+    \item Differentiating $Y^p_t = \frac{a^N}{q^*} K^{ME}_t + \Gamma(K^{NRC}_t)$ yields transformation elasticity $\theta_t$:
       $$\theta_t \approx \theta^{ME} = \frac{a^N}{q^*}$$
     \item Substituting the concave frontier ($a^N = \lambda_0 + \lambda_1 q^* + \lambda_2 (q^*)^2$):
-      $$\theta^{ME} = \frac{\lambda_0}{q^*} + \lambda_1 + \lambda_2 q^*$$
-    \item Differentiating with respect to the optimal mechanization rate $q^*$:
+      $$\theta^{ME} = \frac{\lambda_0}{q*} + \lambda_1 + \lambda_2 q^*$$
+    \item Differentiating with respect to mechanization rate $q^*$:
       $$\frac{\partial \theta^{ME}}{\partial q^*} = \frac{\lambda_2 (q^*)^2 - \lambda_0}{(q^*)^2} < 0 \quad (\text{since } \lambda_2 < 0 \text{ and } \lambda_0 > 0)$$
     \item \textbf{The Distributive Link:} Distributive pressure ($\omega \uparrow \implies q^* \uparrow$) drives the system into lower marginal capacity conversion efficiency:
       $$\frac{\partial \theta^{ME}}{\partial \omega} = \frac{\partial \theta^{ME}}{\partial q^*} \frac{\partial q^*}{\partial \omega} < 0$$
-    \item \textbf{Verdict:} The interaction coefficient between composition ($\tau = k^{ME} - k^{NR}$) and wage share ($\omega$) must be \textbf{negative}.
+    \item \textbf{Verdict:} The interaction coefficient between composition ($\tau$) and wage share ($\omega$) must be \textbf{negative}.
   \end{itemize}
 \end{frame}
 
@@ -98,18 +98,19 @@
       where $\tau = k_{ME} - k_{NRC}$ isolates the physical machinery-to-structures ratio.
     \item \textbf{The Econometric Resolution:}
       \begin{itemize}
-        \item Regressors are mixed-order integrated: the interaction term behaves as $I(2)$ / $I(2)$ risk.
-        \item We use \textbf{IM-OLS} and \textbf{FM-OLS} to obtain superconsistent, asymptotically valid inferences.
-        \item \textbf{Residual Centering:} Regressing $(\tilde{\tau}_t \tilde{\omega}_t)$ on $\tilde{k}^{scale}_t, \tilde{\tau}_t, \tilde{\omega}_t$ extracts the orthogonalized interaction, reducing VIFs to exactly 1.0 without changing OLS residuals.
+        \item Regressors are mixed-order integrated: the interaction term behaves as $I(2)$ / $I(2)$ risk. We use \textbf{IM-OLS} and \textbf{FM-OLS} to obtain superconsistent, asymptotically valid inferences.
+        \item \textbf{Residual Centering:} Regressing $(\tilde{\tau}_t \tilde{\omega}_t)$ on main effects extracts the orthogonalized interaction, reducing VIFs to exactly 1.0.
+        \item \textbf{Ex-Post Robustness Check:} Both Engle-Granger (EG) residual unit root tests and Phillips-Ouliaris (PO) multivariate cointegration tests verify the stationary cointegrating vector.
       \end{itemize}
   \end{itemize}
 \end{frame}
 
-% Slide 7: Curated Results: Specification A (Scale-Conditioning)
-\begin{frame}{Curated Results: Specification A (Scale-Conditioning)}
+% Slide 7: Results: Specification A (Scale-Conditioning)
+\begin{frame}{Results: Specification A (Scale-Conditioning)}
   \begin{table}[htbp]
     \centering
     \caption{Specification A: Direct Scale-Conditioning via $K^{NRC}$ (FM-OLS, Orthogonalized)}
+    \footnotesize
     \begin{tabular}{lcccc}
       \toprule
       \textbf{Window} & \textbf{Regressor} & \textbf{Coeff} & \textbf{t-stat} & \textbf{p-value} \\
@@ -129,16 +130,17 @@
     \end{tabular}
   \end{table}
   \begin{itemize}
-    \item Residuals pass Engle-Granger unit root tests across windows (EG p-value $\le$ 0.10).
     \item Scale coefficient is positive and robustly close to 1.0.
+    \item \textbf{Robustness:} Cointegration confirmed; residuals reject the null of no cointegration under both Engle-Granger and Phillips-Ouliaris tests.
   \end{itemize}
 \end{frame}
 
-% Slide 8: Curated Results: Specification B (Composition-Mediated)
-\begin{frame}{Curated Results: Specification B (Composition-Mediated)}
+% Slide 8: Results: Specification B (Composition-Mediated)
+\begin{frame}{Results: Specification B (Composition-Mediated)}
   \begin{table}[htbp]
     \centering
     \caption{Specification B: Composition-Mediated (FM-OLS, Orthogonalized)}
+    \footnotesize
     \begin{tabular}{lcccc}
       \toprule
       \textbf{Window} & \textbf{Regressor} & \textbf{Coeff} & \textbf{t-stat} & \textbf{p-value} \\
@@ -161,8 +163,8 @@
     \end{tabular}
   \end{table}
   \begin{itemize}
-    \item Intensive composition ($\tau$, machinery share) is positive and highly significant.
-    \item The interaction is \textbf{strongly negative and significant} during the Fordist era.
+    \item Composition effect ($\tau$) is highly significant. Interaction is negative and significant during the Fordist era.
+    \item \textbf{Robustness:} Cointegration validated by both Engle-Granger and Phillips-Ouliaris tests, ensuring stationary residuals.
   \end{itemize}
 \end{frame}
 
@@ -192,7 +194,6 @@
           $$\hat{y}_t^p = \hat{\alpha} + \hat{\theta} \tilde{k}^{scale}_t + \hat{\psi} \tilde{\tau}_t + \hat{\phi} \tilde{\omega}_t + \hat{\lambda} (\tilde{\tau}_t \tilde{\omega}_t)_{orth}$$
         \item Recover the latent capacity utilization series as the stationary cointegrating residual:
           $$\widehat{\ln \mu_t} = y_t - \hat{y}_t^p$$
-        \item Proceed to the Stage B investment function estimation using these recovered objects.
       \end{itemize}
   \end{itemize}
 \end{frame}
