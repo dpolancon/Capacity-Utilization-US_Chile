@@ -20,16 +20,15 @@ ga_data <- subset(panel, year >= 1945 & year <= 1973)
 
 # Model 1: Specification B (Composition-Mediated with K_NRC and tau)
 # FM-OLS coefficients for Golden Age (1945-1973):
+# NOTE: Potential capacity output yp excludes the direct wage-share realization term (nuisance control)
 alpha_B <- 14.86173
 beta_k_B <- 0.23784
 beta_tau_B <- 0.31207
-beta_w_B <- -5.16053
 beta_inter_B <- -1.02937
 
 ga_data$yp_spec_B <- alpha_B + 
   beta_k_B * ga_data$k_NRC_centered + 
   beta_tau_B * ga_data$tau_centered + 
-  beta_w_B * ga_data$omega_NFC_centered + 
   beta_inter_B * ga_data$inter_tau_omega_orth
 
 # Model 2: True Shaikh-Style (y_t regressed on k_Kcap_centered ONLY, no distribution terms)
