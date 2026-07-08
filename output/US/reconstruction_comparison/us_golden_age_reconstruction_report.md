@@ -1,10 +1,8 @@
 # Capacity Path Reconstruction & Comparison (Golden Age Case Study: 1945–1973)
 
 This report compares the reconstructed potential output ($\hat{y}^p_t$) and latent capacity utilization ($\mu_t$) paths derived from two distinct econometric models estimated via FM-OLS over the post-war Golden Age:
-1. **Specification B (Composition-Mediated):** Separates structures scale ($K^{NRC}$) and composition ($\tau = K^{ME}/K^{NRC}$) with distribution conditioning.
-2. **True Shaikh-Style Model:** Regresses output directly on total private capital stock ($K_{Kcap} = K^{ME} + K^{NRC}$) only, with **no** distributive or interaction terms.
-
-Both models are normalized to $\mu_{1973} = 1.0$ (strictly point-year baseline).
+1. **Specification B (Composition-Mediated):** Separates structures scale ($K^{NRC}$) and composition ($\tau = K^{ME}/K^{NRC}$) with distribution conditioning. Normalized to $\mu_{1973} = 1.0$.
+2. **True Shaikh-Style Model:** Regresses output directly on total private capital stock ($K_{Kcap} = K^{ME} + K^{NRC}$) only, with **no** distributive or interaction terms. Normalized such that its maximum in the sample is 1.0 (maximum residual normalization).
 
 ---
 
@@ -21,7 +19,7 @@ $$y_{t, A}^p = 14.4669 + 0.9099 \tilde{k}^{Kcap}_t$$
 ## 2. Path Comparison Metrics
 
 The reconstructed series are saved to:
-[us_golden_age_reconstructed_paths.csv](file:///C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/reconstruction_comparison/us_golden_age_reconstructed_paths.csv)
+[us_golden_age_reconstructed_paths.csv](us_golden_age_reconstructed_paths.csv)
 
 | Metric | Specification B (Composition-Mediated) | True Shaikh-Style Model |
 | :--- | :---: | :---: |
@@ -45,7 +43,13 @@ The reconstructed series are saved to:
 
 ---
 
-## 4. Theoretical & Empirical Interpretation
+## 4. Visualization
+
+![Capacity Utilization Comparison (1945-1973)](us_golden_age_reconstruction_plot.png)
+
+---
+
+## 5. Theoretical & Empirical Interpretation
 
 ### Why the True Shaikh-Style Model leads to high volatility ($\sigma = 7.71\%$):
 * **Single-Capital assumption:** By using $K_{Kcap} = K^{ME} + K^{NRC}$ as a single regressor without conditioning on the choice of technique (machinery composition), the model assumes that all capital forms expand scale uniformly.

@@ -49,14 +49,14 @@ ga_data$yp_spec_A <- alpha_A + beta_k_A * ga_data$k_Kcap_centered
 ga_data$ln_mu_spec_B <- ga_data$y_t - ga_data$yp_spec_B
 ga_data$ln_mu_spec_A <- ga_data$y_t - ga_data$yp_spec_A
 
-# Normalize such that mu_1973 = 1.0 (ln_mu_1973 = 0.0)
+# Normalization:
+# Specification B: Pinch-year normalization at 1973 (mu_1973 = 1.0)
 ln_mu_1973_B <- ga_data$ln_mu_spec_B[ga_data$year == 1973]
-ln_mu_1973_A <- ga_data$ln_mu_spec_A[ga_data$year == 1973]
-
 ga_data$ln_mu_spec_B_norm <- ga_data$ln_mu_spec_B - ln_mu_1973_B
-ga_data$ln_mu_spec_A_norm <- ga_data$ln_mu_spec_A - ln_mu_1973_A
-
 ga_data$mu_spec_B <- exp(ga_data$ln_mu_spec_B_norm)
+
+# Specification A (Shaikh-style): Normalized residual (max-normalized to 1.0)
+ga_data$ln_mu_spec_A_norm <- ga_data$ln_mu_spec_A - max(ga_data$ln_mu_spec_A)
 ga_data$mu_spec_A <- exp(ga_data$ln_mu_spec_A_norm)
 
 # Save output
@@ -65,6 +65,19 @@ dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 out_file <- file.path(out_dir, "us_golden_age_reconstructed_paths.csv")
 write.csv(ga_data[, c("year", "y_t", "yp_spec_B", "yp_spec_A", "ln_mu_spec_B_norm", "ln_mu_spec_A_norm", "mu_spec_B", "mu_spec_A")], 
           out_file, row.names = FALSE)
+
+# Generate Plot
+plot_file <- file.path(out_dir, "us_golden_age_reconstruction_plot.png")
+png(plot_file, width = 800, height = 500)
+plot(ga_data$year, ga_data$mu_spec_B, type = "l", col = "blue", lwd = 2.5, 
+     ylim = c(0.7, 1.1), xlab = "Year", ylab = "Capacity Utilization", 
+     main = "Capacity Utilization Comparison (1945-1973)")
+lines(ga_data$year, ga_data$mu_spec_A, col = "red", lwd = 2.5)
+abline(h = 1.0, col = "gray", lty = 2)
+legend("bottomleft", legend = c("Specification B (Composition-Mediated, Pinched 1973)", 
+                               "Specification A (Shaikh-style, Max-Normalized)"), 
+       col = c("blue", "red"), lwd = 2.5)
+dev.off()
 
 # Compute comparison metrics
 correlation <- cor(ga_data$mu_spec_B, ga_data$mu_spec_A)
