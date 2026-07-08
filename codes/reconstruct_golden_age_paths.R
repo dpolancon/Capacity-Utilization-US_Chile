@@ -2,8 +2,8 @@
 
 # Chapter 2 - Golden Age Capacity Path Reconstruction & Comparison
 # Reconstructs potential capacity output (yp) and latent utilization (mu)
-# for Specification B (composition-mediated) and a true Shaikh-style model
-# (y_t regressed on k_Kcap ONLY, with no distributional or interaction terms).
+# for Specification B (composition-mediated) using the A03 growth-law identity
+# and compares it with the Shaikh-style model (mean-normalized residual).
 
 repo_root <- "C:/ReposGitHub/Capacity-Utilization-US_Chile"
 panel_path <- file.path(repo_root, "output", "S34R_B_cpr_realigned_design_gate", "csv", "S34R_B_repaired_augmented_panel.csv")
@@ -15,24 +15,47 @@ if (!file.exists(panel_path)) {
 panel <- read.csv(panel_path, stringsAsFactors = FALSE, check.names = FALSE)
 panel <- panel[order(panel$year), ]
 
-# Filter to Golden Age (1945-1973)
-ga_data <- subset(panel, year >= 1945 & year <= 1973)
+# Calculate capital stock growth rates on the full panel
+panel$g_NRC <- c(NA, diff(panel$k_NRC))
+panel$g_ME <- c(NA, diff(panel$k_ME))
 
 # Model 1: Specification B (Composition-Mediated with K_NRC and tau)
 # FM-OLS coefficients for Golden Age (1945-1973):
-# NOTE: Potential capacity output yp excludes the direct wage-share realization term (nuisance control)
-alpha_B <- 14.86173
 beta_k_B <- 0.23784
 beta_tau_B <- 0.31207
 beta_inter_B <- -1.02937
 
-ga_data$yp_spec_B <- alpha_B + 
-  beta_k_B * ga_data$k_NRC_centered + 
-  beta_tau_B * ga_data$tau_centered + 
-  beta_inter_B * ga_data$inter_tau_omega_orth
+# Calculate time-varying elasticities for Specification B
+panel$theta_ME_t <- beta_tau_B + beta_inter_B * panel$inter_tau_omega_orth
+panel$theta_NRC_t <- beta_k_B - panel$theta_ME_t
+
+# Reconstruct potential output growth rate using the A03 composition identity
+panel$g_Yp_B <- panel$theta_NRC_t * panel$g_NRC + panel$theta_ME_t * panel$g_ME
+
+# Integrate potential output growth rates anchored at 1973 (mu_1973 = 1.0)
+idx_1973 <- which(panel$year == 1973)
+panel$yp_spec_B <- NA
+panel$yp_spec_B[idx_1973] <- panel$y_t[idx_1973]
+
+# Integrate forward from 1973
+for (i in (idx_1973 + 1):nrow(panel)) {
+  if (!is.na(panel$g_Yp_B[i])) {
+    panel$yp_spec_B[i] <- panel$yp_spec_B[i-1] + panel$g_Yp_B[i]
+  }
+}
+
+# Integrate backward from 1973
+for (i in (idx_1973 - 1):1) {
+  if (!is.na(panel$g_Yp_B[i+1])) {
+    panel$yp_spec_B[i] <- panel$yp_spec_B[i+1] - panel$g_Yp_B[i+1]
+  }
+}
+
+# Subset the panel to the Golden Age window (1945-1973) for comparison
+ga_data <- subset(panel, year >= 1945 & year <= 1973)
 
 # Model 2: True Shaikh-Style (y_t regressed on k_Kcap_centered ONLY, no distribution terms)
-# We estimate this FM-OLS model dynamically
+# estimated dynamically over the Golden Age window
 library(cointReg)
 y <- ga_data$y_t
 x <- as.matrix(ga_data$k_Kcap_centered)
@@ -50,8 +73,7 @@ ga_data$ln_mu_spec_A <- ga_data$y_t - ga_data$yp_spec_A
 
 # Normalization:
 # Specification B: Pinch-year normalization at 1973 (mu_1973 = 1.0)
-ln_mu_1973_B <- ga_data$ln_mu_spec_B[ga_data$year == 1973]
-ga_data$ln_mu_spec_B_norm <- ga_data$ln_mu_spec_B - ln_mu_1973_B
+ga_data$ln_mu_spec_B_norm <- ga_data$ln_mu_spec_B # Already anchored at 1973 in levels
 ga_data$mu_spec_B <- exp(ga_data$ln_mu_spec_B_norm)
 
 # Specification A (Shaikh-style): Normalized residual (mean-normalized to 1.0)
@@ -73,7 +95,7 @@ plot(ga_data$year, ga_data$mu_spec_B, type = "l", col = "blue", lwd = 2.5,
      main = "Capacity Utilization Comparison (1945-1973)")
 lines(ga_data$year, ga_data$mu_spec_A, col = "red", lwd = 2.5)
 abline(h = 1.0, col = "gray", lty = 2)
-legend("bottomleft", legend = c("Specification B (Composition-Mediated, Pinched 1973)", 
+legend("bottomleft", legend = c("Specification B (Composition-Mediated growth integration, Pinched 1973)", 
                                "Specification A (Shaikh-style, Mean-Normalized)"), 
        col = c("blue", "red"), lwd = 2.5)
 dev.off()
