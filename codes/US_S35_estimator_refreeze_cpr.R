@@ -23,6 +23,10 @@ if (!requireNamespace("cointReg", quietly = TRUE)) {
 if (!requireNamespace("aTSA", quietly = TRUE)) {
   install.packages("aTSA", repos = "https://cloud.r-project.org", quiet = TRUE)
 }
+if (!requireNamespace("tseries", quietly = TRUE)) {
+  install.packages("tseries", repos = "https://cloud.r-project.org", quiet = TRUE)
+}
+
 
 library(cointReg)
 
@@ -166,6 +170,18 @@ for (win_id in names(windows)) {
       
       eg_cls <- if (is.na(eg_p)) "EG_FAIL" else if (eg_p <= 0.05) "EG_PASS_STRONG" else if (eg_p <= 0.10) "EG_PASS_WEAK" else "EG_FAIL"
       
+      # Robust Phillips-Ouliaris test on levels
+      po_test <- tryCatch({
+        tseries::po.test(cbind(y, x), demean = TRUE, lshort = TRUE)
+      }, error = function(e) NULL)
+      
+      po_p <- NA_real_
+      po_stat <- NA_real_
+      if (!is.null(po_test)) {
+        po_p <- po_test$p.value
+        po_stat <- po_test$statistic
+      }
+      
       # Collect diagnostics
       vif <- compute_max_vif(w_data, rhs)
       cond <- compute_cond_num(w_data, rhs)
@@ -192,6 +208,8 @@ for (win_id in names(windows)) {
           eg_adf_stat = eg_stat,
           eg_p_value = eg_p,
           eg_classification = eg_cls,
+          po_statistic = po_stat,
+          po_p_value = po_p,
           stringsAsFactors = FALSE
         )
       }
