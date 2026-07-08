@@ -113,8 +113,8 @@ ga_data$mu_spec_B <- exp(ga_data$ln_mu_spec_B_norm)
 ga_data$ln_mu_spec_A_norm <- ga_data$ln_mu_spec_A - mean(ga_data$ln_mu_spec_A)
 ga_data$mu_spec_A <- exp(ga_data$ln_mu_spec_A_norm)
 
-# Calculate aggregate transformation elasticity theta_total = s_t * theta_ME_t + (1 - s_t) * theta_NRC_t
-ga_data$theta_total_t <- ga_data$ME_share * ga_data$theta_ME_t + (1 - ga_data$ME_share) * ga_data$theta_NRC_t
+# Calculate aggregate transformation elasticity theta_total = g_Yp_B / g_Kcap (growth-weighted average)
+ga_data$theta_total_t <- ga_data$g_Yp_B / ga_data$g_Kcap
 
 # Save output
 out_dir <- file.path(repo_root, "output", "US", "reconstruction_comparison")
@@ -146,18 +146,19 @@ plot_file2 <- file.path(out_dir, "us_golden_age_elasticity_plot.png")
 png(plot_file2, width = 800, height = 500)
 # Set up a two-panel plot
 par(mar = c(4, 4, 3, 4))
-plot(ga_data$year, ga_data$theta_total_t, type = "l", col = "purple", lwd = 2.5, 
-     ylim = c(-0.2, 0.6), xlab = "Year", ylab = "Transformation Elasticity", 
+plot(ga_data$year, ga_data$theta_total_t, type = "l", col = "red", lwd = 2.5, 
+     ylim = c(-0.3, 2.5), xlab = "Year", ylab = "Transformation Elasticity", 
      main = "Transformation Elasticities & NFC Wage Share (1945-1973)")
 lines(ga_data$year, ga_data$theta_ME_t, col = "blue", lwd = 2, lty = 2)
 lines(ga_data$year, ga_data$theta_NRC_t, col = "orange", lwd = 2, lty = 3)
+abline(h = 0, col = "black", lty = 2, lwd = 1)
 par(new = TRUE)
 plot(ga_data$year, ga_data$omega_NFC, type = "l", col = "darkgray", lwd = 1.5, 
      axes = FALSE, xlab = "", ylab = "")
 axis(side = 4, col = "darkgray", col.axis = "darkgray")
 mtext("NFC Wage Share", side = 4, line = 2.5, col = "darkgray")
-legend("bottomleft", legend = c("theta_total (Aggregate)", "theta_ME (Machinery)", "theta_NRC (Structures)", "omega_NFC (Wage Share, Right Axis)"), 
-       col = c("purple", "blue", "orange", "darkgray"), lwd = c(2.5, 2, 2, 1.5), lty = c(1, 2, 3, 1))
+legend("topright", legend = c("theta_total (Aggregate, Red)", "theta_ME (Machinery, Blue)", "theta_NRC (Structures, Orange)", "omega_NFC (Wage Share, Grey Axis)"), 
+       col = c("red", "blue", "orange", "darkgray"), lwd = c(2.5, 2, 2, 1.5), lty = c(1, 2, 3, 1))
 dev.off()
 
 # Compute comparison metrics
@@ -185,5 +186,5 @@ cat("Standard Deviation of HP utilization: ", sd_HP, "\n")
 # Print values for key years
 cat("\nKey Years Comparison:\n")
 key_years <- c(1945, 1950, 1960, 1970, 1973)
-key_data <- subset(ga_data, year %in% key_years)[, c("year", "mu_spec_B", "mu_spec_A", "mu_spec_HP")]
+key_data <- subset(ga_data, year %in% key_years)[, c("year", "mu_spec_B", "mu_spec_A", "mu_spec_HP", "theta_total_t")]
 print(key_data)

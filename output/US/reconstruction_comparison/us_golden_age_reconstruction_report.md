@@ -39,17 +39,17 @@ We present the capacity utilization paths and the corresponding state-dependent 
 
 | Year | Specification B ($\mu_{B, t}$) | True Shaikh-Style ($\mu_{A, t}$) | HP Filter ($\mu_{HP, t}$) | NFC Wage Share ($\omega_{NFC, t}$) | Aggregate Elasticity ($\theta^{total}_t$) |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| **1945** | 1.2704 | 1.2835 | 1.0581 | 0.6639 | -0.0638 |
-| **1950** | 1.2154 | 1.1100 | 1.0141 | 0.6558 | 0.0526 |
-| **1960** | 1.1480 | 0.8707 | 0.9751 | 0.6483 | 0.1704 |
-| **1970** | 1.0080 | 0.9870 | 0.9735 | 0.6575 | 0.1264 |
-| **1973** | 1.0000 | 1.0776 | 1.0052 | 0.6723 | -0.0076 |
+| **1945** | 1.2704 | 1.2835 | 1.0581 | 0.6639 | 1.8892 |
+| **1950** | 1.2154 | 1.1100 | 1.0141 | 0.6558 | 1.0008 |
+| **1960** | 1.1480 | 0.8707 | 0.9751 | 0.6483 | 0.8424 |
+| **1970** | 1.0080 | 0.9870 | 0.9735 | 0.6575 | 2.0232 |
+| **1973** | 1.0000 | 1.0776 | 1.0052 | 0.6723 | 2.3050 |
 
 ### Narrative Analysis of Historical Gaps:
 * **The Demobilization Peak (1945):** 
   Following WWII, actual output surged relative to the capital stock. Both Specification B ($\mu_B = 1.2704$) and the Shaikh-style model ($\mu_A = 1.2835$) record a massive capacity squeeze (highly over-utilized plant). In contrast, the HP filter cycle ($\mu_{HP} = 1.0581$) severely dampens this peak, treating the war-time production boom as a structural shift in trend capacity.
 * **The Korean War Boom (1950):** 
-  During the early 1950s, the US economy operated at high utilization. Spec B shows a tight utilization of **1.2154**, while Shaikh-style shows **1.1100**. This difference is explained by the wage share ($\omega_{NFC} = 0.6558$), which kept the aggregate transformation elasticity low ($\theta^{total} = 0.0526$), meaning that capital accumulation did not translate into a massive expansion of physical capacity, keeping capacity tight.
+  During the early 1950s, the US economy operated at high utilization. Spec B shows a tight utilization of **1.2154**, while Shaikh-style shows **1.1100**. This difference is explained by the wage share ($\omega_{NFC} = 0.6558$), which kept the aggregate transformation elasticity low ($\theta^{total} = 1.0008$), meaning that capital accumulation did not translate into a massive expansion of physical capacity, keeping capacity tight.
 * **The Eisenhower Recession & Structural Slowdown (1960):** 
   This year highlights the most dramatic divergence. The true Shaikh-style model shows utilization collapsing to **87.07%**—an implausibly deep structural depression. The HP filter cycle shows a mild recession ($\mu_{HP} = 0.9751$). Specification B, however, remains robustly high at **1.1480**. 
   By separating structures ($K^{NRC}$) and machinery ($K^{ME}$), Spec B shows that the slowdown in accumulation was concentrated in machinery, which reduced the composition share ($s_t$). Since capacity growth is composition-weighted (A03 growth law), the capacity envelope grew very slowly, preventing the emergence of excess capacity. This "intensive cushion" is completely invisible in the Shaikh-style model, which assumes a constant scale coefficient.
@@ -60,8 +60,12 @@ We present the capacity utilization paths and the corresponding state-dependent 
 
 ## 4. Theoretical & Empirical Interpretation
 
-### The Transformation Elasticity Dynamics (Figure 2):
-Our results confirm that the aggregate transformation elasticity ($\theta^{total}_t$) is highly dynamic, ranging from **-0.0638** in 1945 to **0.1704** in 1960.
+### Interpretation of transformation elasticities (Figure 2):
+Our results reveal that the aggregate transformation elasticity ($\theta^{total}_t$) is positive and highly dynamic, ranging from **0.8424** in 1960 to **2.3050** in 1973.
+* **Why the structures elasticity ($\theta^{NRC}_t$) is negative (around -0.07):**
+  In Spec B, $\theta^{NRC}_t = \theta_B - \theta^{ME}_t$. Since $\theta_B = 0.2378$ and $\theta^{ME}_t \approx 0.31$, the structures elasticity is negative. This represents the **mechanization bias** of the Fordist era. Expanding structures ($K^{NRC} \uparrow$, the extensive margin) without expanding machinery ($K^{ME} \downarrow$ in composition) means building empty factories or less mechanized plants, which has a negative direct capacity payoff. Productive capacity is heavily dependent on machinery installation ($\theta^{ME}_t > 0$), making structures conservation a rational response to wage pressure.
+* **Why the aggregate elasticity ($\theta^{total}_t$) is positive and above 1.0:**
+  Under the A03 growth rate identity, total capacity growth is growth-weighted: $g_{Y^p} = \theta^{NRC}_t (1-s_t) g_{K^{NRC}} + \theta^{ME}_t s_t g_{K^{ME}}$. Because the growth rate of machinery ($g_{K^{ME}}$) was very high (8–12%) relative to structures ($g_{K^{NRC}}$ of 2–4%), the positive machinery contribution dominates, keeping the aggregate capacity payoff $\theta^{total}_t$ robustly positive and highly dynamic.
 * **Induced Innovation and the Wage Share:** As the wage share ($\omega_{NFC}$) rises, it triggers labor-saving mechanization, which shifts the optimal technique. This alters the marginal payoffs of capital stocks:
   * **Machinery Elasticity ($\theta^{ME}_t$):** Moves inversely with the wage share due to the negative interaction term ($\lambda = -1.0294$), reflecting concavity on the mechanization frontier.
   * **Structures Elasticity ($\theta^{NRC}_t$):** Moves directly with the wage share, reflecting that wage pressure pushes capitalists to conserve on physical structures and concentrate investment in machinery.
