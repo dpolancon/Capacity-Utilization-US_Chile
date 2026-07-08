@@ -1,0 +1,244 @@
+\documentclass[10pt]{beamer}
+\usetheme{Boadilla}
+\usecolortheme{dove}
+
+% Custom styling to make the presentation feel premium and clean
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamercolor{titlelike}{parent=structure,bg=gray!10}
+\setbeamercolor{item}{fg=gray!80}
+\setbeamercolor{block title}{bg=gray!20,fg=black}
+\setbeamercolor{block body}{bg=gray!5,fg=black}
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\title[Extensive vs. Intensive Accumulation]{Extensive vs. Intensive Accumulation: Choice of Technique and Capacity Utilization}
+\subtitle{Preliminary CPR Estimation Results for the US Corporate Sector}
+\author{Dissertation Chapter 2}
+\institute[UMass Amherst]{Department of Economics \\ University of Massachusetts Amherst}
+\date{July 2026}
+
+\begin{document}
+
+% Slide 1: Title Slide
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Slide 2: Bottom Line Up Front (BLUF)
+\begin{frame}{Bottom Line Up Front (BLUF)}
+  \begin{itemize}
+    \item \textbf{Core Question:} How do distributive struggles and capital structure condition long-run productive capacity?
+    \item \textbf{Methodology:} We resolve the $I(2)$ cointegration trap by treating the levels relationship as a \textbf{Cointegrating Polynomial Regression (CPR)} estimated via FM-OLS and IM-OLS. 
+    \item \textbf{Multicollinearity Solution:} Residual centering (orthogonalization) stabilizes the design matrix, reducing interaction VIFs from $>80.0$ to exactly \textbf{1.0}.
+    \item \textbf{Key Empirical Result:} 
+      \begin{itemize}
+        \item We find a \textbf{negative and highly significant} interaction between intensive accumulation ($\tau_t$) and the wage share ($\omega_t$) in the Fordist era, validating the induced innovation theory on a concave frontier.
+        \item A stark \textbf{structural break} occurs post-1974: the interaction becomes positive and statistically non-significant, reflecting the rise of financialization and global supply chains.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Slide 3: The Extensive Margin ($K^{NRC}_t$)
+\begin{frame}{The Extensive Margin ($K^{NRC}_t$)}
+  \begin{block}{Ontological Definition}
+    Nonresidential structures and infrastructure ($K^{NRC}_t$) represent the physical plant capacity, logistical networks, and spatial layout of production.
+  \end{block}
+  \begin{itemize}
+    \item \textbf{Temporal Properties:} High lumpiness, long gestation periods, and high irreversibility.
+    \item \textbf{Asset Role:} Under the locked theory, structures act as the direct physical scale parameter for capacity ($K_t^{scale} \equiv K_t^{NRC}$).
+    \item \textbf{Hypothesized Sign:} $\theta > 0$. Expanding physical plants directly increases the maximum potential capacity of the system.
+  \end{itemize}
+\end{frame}
+
+% Slide 4: The Intensive Margin ($\tau_t \equiv K^{ME}_t / K^{NRC}_t$)
+\begin{frame}{The Intensive Margin ($\tau_t \equiv K^{ME}_t / K^{NRC}_t$)}
+  \begin{block}{Ontological Definition}
+    The capital composition ratio ($\tau_t$) represents the choice of technique—the machinery and equipment ($K^{ME}_t$) installed per unit of physical structure ($K^{NRC}_t$).
+  \end{block}
+  \begin{itemize}
+    \item \textbf{Temporal Properties:} Highly modular, shorter service lives, faster depreciation, and faster adaptation to technical change.
+    \item \textbf{Asset Role:} Direct productive capacity capital that determines the technological intensity of the plant.
+    \item \textbf{Hypothesized Sign:} $\psi > 0$. Higher machinery density increases the capacity payoff per unit of physical structure.
+  \end{itemize}
+\end{frame}
+
+% Slide 5: The Cost-Minimization FOC under Unbalanced Growth
+\begin{frame}{The Cost-Minimization FOC under Unbalanced Growth}
+  \begin{block}{The Transformation Frontier}
+    Productive capacity $Y^p_t$ is generated on a concave transformation frontier:
+    $$Y^p_t = F(K^{NRC}_t, K^{ME}_t; \omega_t) = A_t (K^{NRC}_t)^{\theta} (K^{ME}_t)^{\psi + \lambda \omega_t}$$
+  \end{block}
+  \begin{itemize}
+    \item \textbf{Induced Innovation:} Wage pressure ($\omega_t$) forces capitalists to increase machinery density ($\tau_t \equiv K^{ME}_t / K^{NRC}_t$) to save on labor costs.
+    \item \textbf{Unbalanced Gestation:} Machinery and structures cannot be substituted frictionlessly. The cost-minimization FOC yields:
+      $$\theta^{\tau}_t \equiv \frac{\partial \ln Y^p_t}{\partial \ln \tau_t} = \psi + \lambda \omega_t$$
+    \item \textbf{Frontier Concavity:} Due to diminishing returns to mechanization on a concave frontier, the composition payoff must fall as the wage share rises:
+      $$\lambda \equiv \frac{\partial^2 \ln Y^p_t}{\partial \ln \tau_t \partial \omega_t} < 0$$
+  \end{itemize}
+\end{frame}
+
+% Slide 6: The Estimator Design Matrix
+\begin{frame}{The Estimator Design Matrix}
+  \begin{block}{Specification A: Single-Capital Aggregate (Shaikh-style)}
+    $$\ln Y_t = \alpha + \beta_k \ln K^{cap}_t + \beta_{\omega} \omega_t + u_t$$
+    where $K^{cap}_t \equiv K^{ME}_t + K^{NRC}_t$ is the single capital aggregate.
+  \end{block}
+  \begin{block}{Specification B: Composition-Mediated (Growth-Law Basis)}
+    $$\ln Y_t = \alpha + \theta \tilde{k}^{NRC}_t + \psi \tilde{\tau}_t + \phi \tilde{\omega}_t + \lambda (\tilde{\tau}_t \cdot \tilde{\omega}_t)_{orth} + \epsilon_t$$
+    where variables are centered around their sample means.
+  \end{block}
+  \begin{itemize}
+    \item \textbf{Residual Centering (Orthogonalization):}
+      To resolve severe multicollinearity, the interaction term is replaced by the residuals of its regression on the linear terms:
+      $$(\tilde{\tau}_t \cdot \tilde{\omega}_t)_{orth} = (\tilde{\tau}_t \cdot \tilde{\omega}_t) - \hat{\delta}_1 \tilde{k}^{NRC}_t - \hat{\delta}_2 \tilde{\tau}_t - \hat{\delta}_3 \tilde{\omega}_t$$
+  \end{itemize}
+\end{frame}
+
+% Slide 7: Cointegrating Polynomial Regression (CPR)
+\begin{frame}{Cointegrating Polynomial Regression (CPR)}
+  \begin{block}{The $I(2)$ Cointegration Trap}
+    Because $\tilde{\tau}_t$ and $\tilde{\omega}_t$ are both $I(1)$ processes, their product $\tilde{\tau}_t \tilde{\omega}_t$ contains $I(2)$ stochastic trends. Standard linear cointegration (e.g. Johansen) breaks down.
+  \end{block}
+  \begin{itemize}
+    \item \textbf{Asymptotic Corrections (FM-OLS \& IM-OLS):}
+      \begin{itemize}
+        \item \textbf{FM-OLS (Fully Modified OLS):} Adjusts for endogeneity and serial correlation in the residuals using a non-parametric long-run covariance matrix estimator.
+        \item \textbf{IM-OLS (Integrated Modified OLS):} Applies a parametric lead-and-lag correction to eliminate the endogenous feedback loop from the integrated regressors.
+      \end{itemize}
+    \item \textbf{Trend Cancellation:} Cointegration is achieved because the $I(2)$ components in the interaction term cancel out with the non-linear dynamics of output, yielding an $I(0)$ stationary residual.
+    \item \textbf{VIF Stabilization:} Residual centering drops the maximum VIF from over 80.0 in the raw interaction model to exactly \textbf{1.0}, stabilizing all parameters.
+  \end{itemize}
+\end{frame}
+
+% Slide 8: Results: Specification A (Single-Capital Baseline)
+\begin{frame}{Results: Specification A (Single-Capital Baseline)}
+  \begin{table}[htbp]
+    \centering
+    \caption{Specification A: Single-Capital Aggregate (FM-OLS, Raw)}
+    \footnotesize
+    \begin{tabular}{lcccc}
+      \toprule
+      \textbf{Window} & \textbf{Regressor} & \textbf{Coeff} & \textbf{t-stat} & \textbf{p-value} \\
+      \midrule
+      \textbf{Golden Age} & Centered Aggregate stock ($k^{cap}_t$) & 0.9984 & 18.2751 & 0.0000 \\
+      (1945--1973) & Centered NFC wage share ($\omega_t$) & -0.5824 & -0.4052 & 0.6881 \\
+      \midrule
+      \textbf{Post-War Fordist} & Centered Aggregate stock ($k^{cap}_t$) & 0.9821 & 24.1122 & 0.0000 \\
+      (1940--1973) & Centered NFC wage share ($\omega_t$) & -0.7104 & -0.5211 & 0.6045 \\
+      \midrule
+      \textbf{Post-Fordist} & Centered Aggregate stock ($k^{cap}_t$) & 1.0543 & 35.8821 & 0.0000 \\
+      (1974--2024) & Centered NFC wage share ($\omega_t$) & -4.8824 & -2.8912 & 0.0051 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{itemize}
+    \item Scale coefficient is positive and robustly close to 1.0.
+    \item \textbf{Robustness:} Cointegration confirmed; residuals reject the null of no cointegration under both Engle-Granger and Phillips-Ouliaris tests.
+  \end{itemize}
+\end{frame}
+
+% Slide 9: Results: Specification B (Composition-Mediated)
+\begin{frame}{Results: Specification B (Composition-Mediated)}
+  \begin{table}[htbp]
+    \centering
+    \caption{Specification B: Composition-Mediated (FM-OLS, Orthogonalized)}
+    \footnotesize
+    \begin{tabular}{lcccc}
+      \toprule
+      \textbf{Window} & \textbf{Regressor} & \textbf{Coeff} & \textbf{t-stat} & \textbf{p-value} \\
+      \midrule
+      \textbf{Golden Age} & Centered structures ($k^{NRC}_t$) & 0.2378 & 3.7248 & 0.0010 \\
+      (1945--1973) & Centered composition ($\tau_t$) & 0.3121 & 10.5266 & 0.0000 \\
+      & Centered NFC wage share ($\omega_t$) & -5.1605 & -3.6241 & 0.0014 \\
+      & Centered interaction, orth ($(\tau_t \cdot \omega_t)_{orth}$) & \textbf{-1.0294} & \textbf{-2.4892} & \textbf{0.0201} \\
+      \midrule
+      \textbf{Post-War Fordist} & Centered structures ($k^{NRC}_t$) & 0.0773 & 1.1122 & 0.2752 \\
+      (1940--1973) & Centered composition ($\tau_t$) & 0.3809 & 11.7582 & 0.0000 \\
+      & Centered NFC wage share ($\omega_t$) & -7.6639 & -4.8891 & 0.0000 \\
+      & Centered interaction, orth ($(\tau_t \cdot \omega_t)_{orth}$) & \textbf{-2.0342} & \textbf{-4.9555} & \textbf{0.0000} \\
+      \midrule
+      \textbf{Post-Fordist} & Centered structures ($k^{NRC}_t$) & 0.2146 & 4.2083 & 0.0001 \\
+      (1974--2024) & Centered composition ($\tau_t$) & 0.3520 & 16.9510 & 0.0000 \\
+      & Centered NFC wage share ($\omega_t$) & 1.1260 & 0.7747 & 0.4425 \\
+      & Centered interaction, orth ($(\tau_t \cdot \omega_t)_{orth}$) & 0.0821 & 0.1257 & 0.9006 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{itemize}
+    \item Composition effect ($\tau_t$) is highly significant. Interaction is negative and significant during the Fordist era.
+    \item \textbf{Robustness:} Cointegration validated by both Engle-Granger and Phillips-Ouliaris tests, ensuring stationary residuals.
+  \end{itemize}
+\end{frame}
+
+% Slide 10: Critical Discussion: Validation vs. Structural Crisis
+\begin{frame}{Critical Discussion: Validation vs. Structural Crisis}
+  \begin{block}{Validation of the Theory}
+    The negative and highly significant interaction coefficient ($\lambda < 0$) in the Fordist era ($1940-1973$) strongly validates the induced innovation theory. Higher wage shares ($\omega_t$) force capitalists to mechanize, but this drives the economy into the concave zone of lower marginal capacity conversion.
+  \end{block}
+  \begin{block}{The Post-Fordist Structural Break}
+    Post-1974, the interaction collapses to zero ($0.0821$, p-value 0.90).
+    \begin{itemize}
+      \item \textbf{Global Offshoring:} Domestic wage bargaining no longer drives technique choice in the same way because capital can relocate.
+      \item \textbf{Financialization:} Capital accumulation shifts away from real plant investment to financial channels.
+      \item \textbf{Off-shoring/Subcontracting:} The domestic wage share $\omega_t$ ceases to act as a reliable proxy for the total cost of labor involved in global production chains.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% Slide 11: Unpacking Specification B: Golden Age Case Study
+\begin{frame}{Unpacking Specification B: Golden Age Case Study (1945--1973)}
+  \begin{block}{Estimated Cointegrating Equation (FM-OLS)}
+    $$y_t = 14.8617 + 0.2378 \tilde{k}^{NRC}_t + 0.3121 \tilde{\tau}_t - 5.1605 \tilde{\omega}_t - 1.0294 (\tilde{\tau}_t \cdot \tilde{\omega}_t)_{orth}$$
+  \end{block}
+  \begin{itemize}
+    \item \textbf{State-Dependent Capacity Payoff of Composition ($\theta^{\tau}_t$):}
+      $$\theta^{\tau}_t \equiv \frac{\partial y_t}{\partial \tilde{\tau}_t} = 0.3121 - 1.0294 \tilde{\omega}_t$$
+    \item \textbf{Numerical Sensitivities of Wage Share Variations:}
+      \begin{itemize}
+        \item \textbf{Baseline (Average $\omega_t$):} $\tilde{\omega}_t = 0 \implies \theta^{\tau}_t = \mathbf{0.3121}$.
+        \item \textbf{High Wage Share ($\tilde{\omega}_t = +0.02$):} $\theta^{\tau}_t = 0.3121 - 1.0294(0.02) = \mathbf{0.2915}$ (payoff falls by $\approx 6.6\%$).
+        \item \textbf{Low Wage Share ($\tilde{\omega}_t = -0.02$):} $\theta^{\tau}_t = 0.3121 - 1.0294(-0.02) = \mathbf{0.3327}$ (payoff rises by $\approx 6.6\%$).
+      \end{itemize}
+    \item \textbf{Economic Intuition:} Higher distributive wage pressure forces capitalists to accelerate mechanization, but drives the system into a concave region of the frontier, lowering the marginal capacity payoff of machinery.
+  \end{itemize}
+\end{frame}
+
+% Slide 12: Capacity Utilization & Elasticity Reconstruction
+\begin{frame}{Capacity Utilization \& Elasticity Reconstruction (1945--1973)}
+  \begin{itemize}
+    \item \textbf{Sectoral Division:} Long-run elasticities estimated on productive-origin NFC data, but utilization ($\mu_t$) is reconstructed relative to \textbf{Total Real GDP} (observed aggregate demand).
+    \item \textbf{Historical Path Comparison:}
+      \begin{itemize}
+        \item \textbf{Specification B (Composition-Mediated):} Stable operating corridor ($\sigma_{\mu} = 12.98\%$). Anchored at 1973 peak ($\mu_{1973}=1.0$).
+        \item \textbf{Shaikh-Style:} Artificially volatile cycle ($\sigma_{\mu} = 15.06\%$) due to the constant scale assumption.
+        \item \textbf{HP Filter:} Severely dampens real capacity squeezes ($\sigma_{\mu} = 3.79\%$) by treating demand booms (e.g., WWII/Korean War) as shifts in trend capacity.
+      \end{itemize}
+    \item \textbf{Methodological Agreement:} Spec B utilization has high positive correlation with Shaikh-style ($\rho = 0.6974$) and the HP filter cycle ($\rho = 0.4024$).
+    \item \textbf{Mechanization Bias \& Cushioning:}
+      \begin{itemize}
+        \item Structures elasticity is negative ($\theta^{NRC}_t \approx -0.07$), indicating that building empty plants without machinery has a negative direct capacity payoff.
+        \item Growth-weighted aggregate transformation elasticity ($\theta^{total}_t = g_{Y^p} / g_K^N$) is positive and dynamic (\textbf{0.84} to \textbf{2.30}).
+        \item In the 1960 slowdown, Spec B remains high ($\mu_{1960} = 1.19$), cushioning the collapse seen in Shaikh ($\mu_{1960} = 0.86$) through slow capacity envelope expansion.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Slide 13: Conclusion & Next Steps
+\begin{frame}{Conclusion \& Next Steps}
+  \begin{itemize}
+    \item We have established a robust, cointegrated long-run relationship using Cointegrating Polynomial Regression (CPR) and residual centering.
+    \item The results confirm that capital composition ($\tau_t$) mediates capacity conversion, and that this mediation is conditioned by distribution ($\omega_t$) in the Fordist core.
+    \item \textbf{Reconstructing Capacity \& Utilization:}
+      \begin{itemize}
+        \item Reconstruct the potential capacity output series:
+          $$\hat{y}_t^p = \hat{\alpha} + \hat{\theta} \tilde{k}^{NRC}_t + \hat{\psi} \tilde{\tau}_t + \hat{\phi} \tilde{\omega}_t + \hat{\lambda} (\tilde{\tau}_t \tilde{\omega}_t)_{orth}$$
+        \item Recover the latent capacity utilization series as the stationary cointegrating residual:
+          $$\widehat{\ln \mu_t} = y_t - \hat{y}_t^p$$
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\end{document}
