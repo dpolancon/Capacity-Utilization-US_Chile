@@ -43,19 +43,19 @@
 
 % Slide 3: The Extensive Margin ($K^{NRC}_t$)
 \begin{frame}{The Extensive Margin ($K^{NRC}_t$)}
-  \begin{block}{Ontological Definition}
+  \begin{block}{Conceptual Definition}
     Nonresidential structures and infrastructure ($K^{NRC}_t$) represent the physical plant capacity, logistical networks, and spatial layout of production.
   \end{block}
   \begin{itemize}
     \item \textbf{Temporal Properties:} High lumpiness, long gestation periods, and high irreversibility.
-    \item \textbf{Asset Role:} Under the locked theory, structures act as the direct physical scale parameter for capacity ($K_t^{scale} \equiv K_t^{NRC}$).
+    \item \textbf{Asset Role:} In this framework, structures act as the direct physical scale parameter for capacity ($K_t^{scale} \equiv K_t^{NRC}$).
     \item \textbf{Hypothesized Sign:} $\theta > 0$. Expanding physical plants directly increases the maximum potential capacity of the system.
   \end{itemize}
 \end{frame}
 
 % Slide 4: The Intensive Margin ($\tau_t \equiv K^{ME}_t / K^{NRC}_t$)
 \begin{frame}{The Intensive Margin ($\tau_t \equiv K^{ME}_t / K^{NRC}_t$)}
-  \begin{block}{Ontological Definition}
+  \begin{block}{Conceptual Definition}
     The capital composition ratio ($\tau_t$) represents the choice of technique—the machinery and equipment ($K^{ME}_t$) installed per unit of physical structure ($K^{NRC}_t$).
   \end{block}
   \begin{itemize}
@@ -65,10 +65,10 @@
   \end{itemize}
 \end{frame}
 
-% Slide 5: The Cost-Minimization FOC under Unbalanced Growth
-\begin{frame}{The Cost-Minimization FOC under Unbalanced Growth}
-  \begin{block}{The Transformation Frontier}
-    Productive capacity $Y^p_t$ is generated on a concave transformation frontier:
+% Slide 5: Technical Choice under Unbalanced Growth
+\begin{frame}{Technical Choice under Unbalanced Growth}
+  \begin{block}{The Technology Frontier}
+    Productive capacity $Y^p_t$ is generated on a concave technology frontier---not a neoclassical production function determining factor shares, but a physical capacity schedule mapping capital investment into maximum achievable output under distribution conflict:
     $$Y^p_t = F(K^{NRC}_t, K^{ME}_t; \omega_t) = A_t (K^{NRC}_t)^{\theta} (K^{ME}_t)^{\psi + \lambda \omega_t}$$
   \end{block}
   \begin{itemize}
@@ -80,8 +80,8 @@
   \end{itemize}
 \end{frame}
 
-% Slide 6: The Estimator Design Matrix
-\begin{frame}{The Estimator Design Matrix}
+% Slide 6: Econometric Specifications
+\begin{frame}{Econometric Specifications}
   \begin{block}{Specification A: Single-Capital Aggregate (Shaikh-style)}
     $$\ln Y_t = \alpha + \beta_k \ln K^{cap}_t + \beta_{\omega} \omega_t + u_t$$
     where $K^{cap}_t \equiv K^{ME}_t + K^{NRC}_t$ is the single capital aggregate.
@@ -212,7 +212,7 @@
     \item \textbf{Sectoral Division:} Long-run elasticities estimated on productive-origin NFC data, but utilization ($\mu_t$) is reconstructed relative to \textbf{Total Real GDP} (observed aggregate demand).
     \item \textbf{Historical Path Comparison:}
       \begin{itemize}
-        \item \textbf{Specification B (Composition-Mediated):} Stable operating corridor ($\sigma_{\mu} = 12.98\%$). Anchored at 1973 peak ($\mu_{1973}=1.0$).
+        \item \textbf{Specification B (Composition-Mediated):} Captures utilization fluctuations ($\sigma_{\mu} = 12.98\%$), anchored at the 1973 peak ($\mu_{1973}=1.0$).
         \item \textbf{Shaikh-Style:} Artificially volatile cycle ($\sigma_{\mu} = 15.06\%$) due to the constant scale assumption.
         \item \textbf{HP Filter:} Severely dampens real capacity squeezes ($\sigma_{\mu} = 3.79\%$) by treating demand booms (e.g., WWII/Korean War) as shifts in trend capacity.
       \end{itemize}
