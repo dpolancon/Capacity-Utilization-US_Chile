@@ -1,0 +1,8 @@
+design_id,regressors,n_obs,condition_number,pairwise_correlation_max,rank_status,allowed_status,notes
+DES0_kcap,k_Kcap,94,1.0,,full_rank,PASS_DESIGN_DIAGNOSTICS,Condition number below 30 and no near-perfect pairwise correlation.
+DES1_kcap_Qomega,k_Kcap + Q_omega,93,442.5862523351377,0.9999897898543095,full_rank,SEVERE_FRAGILITY,Condition number exceeds 100; blocks main-menu authorization.
+DES2_kcap_QMEshare,k_Kcap + Q_MEshare,93,2.578563759647419,0.7385276066293651,full_rank,PASS_DESIGN_DIAGNOSTICS,Condition number below 30 and no near-perfect pairwise correlation.
+DES3_kcap_QMEshare_omega,k_Kcap + Q_MEshare + omega_NFC,93,2.751672586369035,0.7385276066293651,full_rank,PASS_DESIGN_DIAGNOSTICS,Condition number below 30 and no near-perfect pairwise correlation.
+DES4_kcap_Qomega_omega,k_Kcap + Q_omega + omega_NFC,93,540.4731354971811,0.9999897898543095,full_rank,SEVERE_FRAGILITY,Condition number exceeds 100; blocks main-menu authorization.
+DES5_kME_kNRC,k_ME + k_NRC,94,4.869572433683987,0.919070068755659,full_rank,PASS_DESIGN_DIAGNOSTICS,Condition number below 30 and no near-perfect pairwise correlation.
+DES6_kcap_Qomega_QMEshare,k_Kcap + Q_omega + Q_MEshare,93,542.9745314743277,0.9999897898543095,full_rank,SEVERE_FRAGILITY,Condition number exceeds 100; blocks main-menu authorization.

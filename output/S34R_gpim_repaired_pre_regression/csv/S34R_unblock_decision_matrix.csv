@@ -1,0 +1,11 @@
+criterion,passed,notes
+repaired_gpim_provenance_passed,True,Capital/growth/composition/Q objects match or are rebuilt from D06/D07.
+repaired_panel_created,True,S34R repaired candidate panel exists.
+repaired_i_order_ledger_created,True,Repaired integration ledger exists.
+no_stale_gpim_object_enters_candidate_specs,True,Candidate specs use rebuilt repaired objects.
+raw_interactions_remain_blocked,True,Raw k*omega and k*q remain blocked.
+q_q_remains_blocked_if_not_clean,True,Observed-q recovery remains blocked/stale unless reviewed.
+at_least_one_core_eg_pass,True,At least one pure-I1 core EG screen passes type1 at weak/strong threshold.
+main_candidate_not_fatal_collinearity,True,"DES2 k_Kcap + Q_MEshare is not severe >100, but may warn."
+small_interpretable_menu_possible,True,Menu can be limited to Q_MEshare core/OVB plus diagnostics after design review.
+final_decision,True,HOLD_FOR_DESIGN_REVIEW

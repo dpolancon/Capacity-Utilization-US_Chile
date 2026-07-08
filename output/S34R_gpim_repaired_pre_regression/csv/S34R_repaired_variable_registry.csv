@@ -1,0 +1,19 @@
+variable_name,source_file,construction_rule,theoretical_role,repair_status,notes
+y_t,D07:Y_REAL_NFC_GVA_BASELINE,log real NFC GVA baseline,effective_output_proxy,REBUILT_FROM_D07,
+K_ME_repaired,D07:K_real_ME_refrozen,repaired ME capacity stock,capacity_capital_component,REBUILT_FROM_D06_D07,
+K_NRC_repaired,D07:K_real_NRC_refrozen,repaired NRC capacity stock,capacity_capital_component,REBUILT_FROM_D06_D07,
+K_cap_repaired,D07:K_real_capacity_refrozen,ME + NRC repaired capacity stock,capacity_capital_scale,REBUILT_FROM_D06_D07,
+k_ME,S34R,log K_ME_repaired,log_capacity_component,REBUILT_FROM_D06_D07,
+k_NRC,S34R,log K_NRC_repaired,log_capacity_component,REBUILT_FROM_D06_D07,
+k_Kcap,S34R,log K_cap_repaired,log_capacity_capital,REBUILT_FROM_D06_D07,
+g_K_ME,S34R,annual first difference of k_ME,capital_growth,REBUILT_FROM_D06_D07,
+g_K_NRC,S34R,annual first difference of k_NRC,capital_growth,REBUILT_FROM_D06_D07,
+g_Kcap,S34R,annual first difference of k_Kcap,capital_growth,REBUILT_FROM_D06_D07,
+ME_share,S34R,K_ME_repaired/(K_ME_repaired+K_NRC_repaired),bounded_composition_state,REBUILT_FROM_D06_D07,
+NRC_share,S34R,K_NRC_repaired/(K_ME_repaired+K_NRC_repaired),bounded_composition_state,REBUILT_FROM_D06_D07,
+omega_NFC,D07:NFC_COMPENSATION_SHARE_GVA,NFC wage share,bounded_distribution_state,REBUILT_FROM_D07,"Bounded-persistent OVB-control candidate, not direct theta recovery."
+omega_CORP,D07:CORP_COMPENSATION_SHARE_GVA,corporate wage share robustness,bounded_distribution_state,REBUILT_FROM_D07,
+Q_omega,S34R,"cumsum(lag(omega_NFC,1) * g_Kcap)",distribution_weighted_accumulation_path,REBUILT_FROM_D06_D07,Reduced-form distribution-conditioned path; not direct mechanization composition.
+Q_MEshare,S34R,"cumsum(lag(ME_share,1) * g_Kcap)",composition_weighted_accumulation_path,REBUILT_FROM_D06_D07,Mechanization-composition accumulated path; preferred theta-recovery candidate if design gates pass.
+q_proxy_if_retained,S34R,annual first difference of ME_share,diagnostic_observed_q_proxy,DIAGNOSTIC_ONLY,
+Q_q_if_retained,S34R,"cumsum(lag(q_proxy_if_retained,1) * g_Kcap)",observed_q_weighted_path,STALE_BLOCKED_UNLESS_REVIEWED,Preserved for blocked diagnostic review only; not standard-grid authorized.

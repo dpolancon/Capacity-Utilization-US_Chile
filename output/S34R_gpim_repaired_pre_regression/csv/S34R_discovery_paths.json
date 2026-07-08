@@ -1,0 +1,20 @@
+{
+  "d06_asset": "output/US/D06_GPIM_REFREEZE_WITH_GPIM_GUARDED_pKN/csv/D06_asset_refrozen_gpim_panel.csv",
+  "d06_capacity": "output/US/D06_GPIM_REFREEZE_WITH_GPIM_GUARDED_pKN/csv/D06_capacity_refrozen_panel.csv",
+  "d06_checks": "output/US/D06_GPIM_REFREEZE_WITH_GPIM_GUARDED_pKN/csv/D06_validation_checks.csv",
+  "d06_investment": "output/US/D06_GPIM_REFREEZE_WITH_GPIM_GUARDED_pKN/csv/D06_real_investment_guardian_panel.csv",
+  "d06_report": "output/US/D06_GPIM_REFREEZE_WITH_GPIM_GUARDED_pKN/reports/D06_decision_report.md",
+  "d07_checks": "output/US/D07_LEVEL_ACCOUNTING_PANEL_CONSUMPTION/csv/D07_validation_checks.csv",
+  "d07_dictionary": "output/US/D07_LEVEL_ACCOUNTING_PANEL_CONSUMPTION/csv/D07_variable_dictionary.csv",
+  "d07_long": "output/US/D07_LEVEL_ACCOUNTING_PANEL_CONSUMPTION/csv/D07_level_accounting_panel_long.csv",
+  "d07_report": "output/US/D07_LEVEL_ACCOUNTING_PANEL_CONSUMPTION/reports/D07_decision_report.md",
+  "d07_wide": "output/US/D07_LEVEL_ACCOUNTING_PANEL_CONSUMPTION/csv/D07_level_accounting_panel_wide.csv",
+  "s31i_panel": "data/processed/us_s31i/us_s31i_candidate_audit_panel.csv",
+  "s34_design": "output/S34_pre_regression/us_s34_collinearity_design_ledger.csv",
+  "s34_integration": "output/S34_pre_regression/us_s34_variable_menu_integration_ledger.csv",
+  "s34_interaction": "output/S34_pre_regression/us_s34_interaction_i2_risk_ledger.csv",
+  "s34_memo": "output/S34_pre_regression/us_s34_pre_regression_admissibility_memo.md",
+  "s34_relation": "output/S34_pre_regression/us_s34_candidate_level_relation_ledger.csv",
+  "s35_design": "output/S35_specification_review/us_s35_design_diagnostics_ledger.csv",
+  "s35_review": "output/S35_specification_review/us_s35_specification_review_ledger.csv"
+}

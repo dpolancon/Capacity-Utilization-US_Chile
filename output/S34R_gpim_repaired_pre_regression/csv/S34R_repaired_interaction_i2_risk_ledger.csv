@@ -1,0 +1,9 @@
+object_id,object_type,variables_used,classification,notes
+k_Kcap_times_omega_NFC,raw_level_interaction,k_Kcap + omega_NFC,BLOCK_STANDARD_I2_RISK,Raw level interaction involving I(1) capital and bounded-persistent state remains blocked.
+k_Kcap_times_q_proxy,raw_level_interaction,k_Kcap + q_proxy_if_retained,BLOCK_STANDARD_I2_RISK,Raw k*q proxy interaction remains outside standard grid.
+q_proxy_squared,power,q_proxy_if_retained,CPR_EXPERIMENT_ONLY,Polynomial mechanization proxy routes to CPR/polynomial layer.
+omega_NFC_squared,power,omega_NFC,CPR_EXPERIMENT_ONLY,Bounded persistent wage-share polynomial is not standard grid.
+q_proxy_times_omega_NFC,raw_level_interaction,q_proxy_if_retained + omega_NFC,CPR_EXPERIMENT_ONLY,Raw q*omega is overloaded and not theta recovery.
+Q_omega,accumulated_weighted_path,Q_omega,BLOCK_STANDARD_I2_RISK,Repaired integration classification: I2_RISK.
+Q_MEshare,accumulated_weighted_path,Q_MEshare,NOT_CONSTRUCTED,Repaired integration classification: BOUNDED_PERSISTENT.
+Q_q_if_retained,accumulated_weighted_path,Q_q_if_retained,STALE_BLOCKED,Repaired integration classification: STALE_BLOCKED.

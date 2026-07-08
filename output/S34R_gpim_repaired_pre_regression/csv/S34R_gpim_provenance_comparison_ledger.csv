@@ -1,0 +1,16 @@
+object_id,s34_source_object,repaired_source_object,sample_start,sample_end,n_common,max_abs_diff,max_rel_diff,tolerance,status,notes
+K_cap,K_cap,K_cap_repaired,1931,2024,94,17352612.23549869,5.80149104339304,1e-08,REBUILT_FROM_D06_D07,S31I K_cap versus repaired D07 capacity capital. Inherited S31I/S34 object differs; S34R downstream uses the D06/D07 rebuilt value.
+K_ME,K_ME,K_ME_repaired,1931,2024,94,5391451.0483265,1364.1073239695822,1e-08,REBUILT_FROM_D06_D07,S31I K_ME versus repaired D07 ME stock. Inherited S31I/S34 object differs; S34R downstream uses the D06/D07 rebuilt value.
+K_NRC,K_NRC,K_NRC_repaired,1931,2024,94,11961161.18717219,7.428347680917829,1e-08,REBUILT_FROM_D06_D07,S31I K_NRC versus repaired D07 NRC stock. Inherited S31I/S34 object differs; S34R downstream uses the D06/D07 rebuilt value.
+k_Kcap,k_Kcap,k_Kcap,,,0,,,1e-08,REBUILT_FROM_D06_D07,S31I log capital versus log repaired capacity capital.
+k_ME,k_ME,k_ME,,,0,,,1e-08,REBUILT_FROM_D06_D07,S31I log ME versus log repaired ME.
+k_NRC,k_NRC,k_NRC,,,0,,,1e-08,REBUILT_FROM_D06_D07,S31I log NRC versus log repaired NRC.
+g_Kcap,g_Kcap,g_Kcap,,,0,,,1e-08,REBUILT_FROM_D06_D07,S31I growth versus repaired first difference of log K_cap.
+g_K_ME,g_K_ME,g_K_ME,,,0,,,1e-08,REBUILT_FROM_D06_D07,S31I growth versus repaired first difference of log K_ME.
+g_K_NRC,g_K_NRC,g_K_NRC,,,0,,,1e-08,REBUILT_FROM_D06_D07,S31I growth versus repaired first difference of log K_NRC.
+ME_share,ME_share,ME_share,,,0,,,1e-08,REBUILT_FROM_D06_D07,S31I ME share versus repaired ME/(ME+NRC).
+NRC_share,NRC_share,NRC_share,,,0,,,1e-08,REBUILT_FROM_D06_D07,S31I NRC share versus repaired NRC/(ME+NRC).
+q_omega_h1_Kcap,q_omega_h1_Kcap,q_omega_h1_Kcap_repaired,1932,2024,93,1.0091950423789222,1.5416098216912644,1e-08,REBUILT_FROM_D06_D07,Recomputed from repaired g_Kcap and lagged omega_NFC. Inherited S31I/S34 object differs; S34R downstream uses the D06/D07 rebuilt value.
+Q_omega,q_omega_h1_Kcap,Q_omega,1932,2024,93,1.0091950423789222,1.5416098216912644,1e-08,REBUILT_FROM_D06_D07,Q_omega is alias of repaired q_omega path. Inherited S31I/S34 object differs; S34R downstream uses the D06/D07 rebuilt value.
+Q_MEshare,,Q_MEshare,,,0,,,1e-08,REBUILT_FROM_D06_D07,Not in S31I; rebuilt from repaired ME_share and repaired g_Kcap.
+Q_q,,Q_q_if_retained,,,0,,,1e-08,REBUILT_FROM_D06_D07,Observed-q path is rebuilt only for blocked diagnostic review.
