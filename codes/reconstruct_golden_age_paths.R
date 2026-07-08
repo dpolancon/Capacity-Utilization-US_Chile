@@ -2,8 +2,8 @@
 
 # Chapter 2 - Golden Age Capacity Path Reconstruction & Comparison
 # Reconstructs potential capacity output (yp) and latent utilization (mu)
-# for Specification B (composition-mediated) and Specification A (Shaikh-style)
-# and compares their paths.
+# for Specification B (composition-mediated) and a true Shaikh-style model
+# (y_t regressed on k_Kcap ONLY, with no distributional or interaction terms).
 
 repo_root <- "C:/ReposGitHub/Capacity-Utilization-US_Chile"
 panel_path <- file.path(repo_root, "output", "S34R_B_cpr_realigned_design_gate", "csv", "S34R_B_repaired_augmented_panel.csv")
@@ -32,17 +32,18 @@ ga_data$yp_spec_B <- alpha_B +
   beta_w_B * ga_data$omega_NFC_centered + 
   beta_inter_B * ga_data$inter_tau_omega_orth
 
-# Model 2: Specification A (Shaikh's style with K_Kcap = ME + NRC)
-# FM-OLS coefficients for Golden Age (1945-1973):
-alpha_A <- 14.37609
-beta_k_A <- 0.87234
-beta_w_A <- 5.03512
-beta_inter_A <- 3.84668
+# Model 2: True Shaikh-Style (y_t regressed on k_Kcap_centered ONLY, no distribution terms)
+# We estimate this FM-OLS model dynamically
+library(cointReg)
+y <- ga_data$y_t
+x <- as.matrix(ga_data$k_Kcap_centered)
+deter <- rep(1, length(y))
+fit_shaikh <- cointReg::cointRegFM(x = x, y = y, deter = deter, bandwidth = "nw")
 
-ga_data$yp_spec_A <- alpha_A + 
-  beta_k_A * ga_data$k_Kcap_centered + 
-  beta_w_A * ga_data$omega_NFC_centered + 
-  beta_inter_A * ga_data$inter_kKcap_omega_orth
+alpha_A <- fit_shaikh$theta[1]
+beta_k_A <- fit_shaikh$theta[2]
+
+ga_data$yp_spec_A <- alpha_A + beta_k_A * ga_data$k_Kcap_centered
 
 # Compute latent capacity utilization: ln_mu = y - yp
 ga_data$ln_mu_spec_B <- ga_data$y_t - ga_data$yp_spec_B
@@ -73,11 +74,12 @@ mean_B <- mean(ga_data$mu_spec_B)
 mean_A <- mean(ga_data$mu_spec_A)
 
 cat("Reconstruction Comparison (1945-1973):\n")
-cat("Correlation between Spec B and Spec A utilization: ", correlation, "\n")
+cat("FM-OLS Shaikh-style model fitted: Intercept =", alpha_A, ", beta_k =", beta_k_A, "\n")
+cat("Correlation between Spec B and Spec A (Shaikh) utilization: ", correlation, "\n")
 cat("Mean of Spec B utilization: ", mean_B, "\n")
-cat("Mean of Spec A utilization: ", mean_A, "\n")
+cat("Mean of Spec A (Shaikh) utilization: ", mean_A, "\n")
 cat("Standard Deviation of Spec B utilization: ", sd_B, "\n")
-cat("Standard Deviation of Spec A utilization: ", sd_A, "\n")
+cat("Standard Deviation of Spec A (Shaikh) utilization: ", sd_A, "\n")
 
 # Print values for key years
 cat("\nKey Years Comparison:\n")
