@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 
 # Chapter 2 - Golden Age Capacity Path Reconstruction & Comparison
-# Reconstructs potential capacity output (yp) and latent utilization (mu)
+# Reconstructs potential capacity output (yp) and latent capacity utilization (mu)
 # for Specification B (composition-mediated using A03 growth-law integration),
 # Specification A (Shaikh-style), and HP Filter decomposition using total output (real GDP).
 # Plots time paths of utilization, elasticities (theta_total, theta_ME, theta_NRC), and wage share.
@@ -16,17 +16,28 @@ if (!file.exists(panel_path)) {
 panel <- read.csv(panel_path, stringsAsFactors = FALSE, check.names = FALSE)
 panel <- panel[order(panel$year), ]
 
-# Load total output (real GDP proxy using implicit deflator)
-gdp_path <- file.path(repo_root, "output", "US", "S12B_OUTPUT_PRICE_REAL_OUTPUT", "csv", "S12B_real_output_objects_long.csv")
-if (!file.exists(gdp_path)) {
-  stop("S12B real output objects CSV not found.", call. = FALSE)
+# Load nominal GDP and deflator from FRED to construct true Real GDP (total output of the whole economy)
+gdpa_path <- file.path(repo_root, "data", "raw", "US", "fred", "GDPA.csv")
+defl_path <- file.path(repo_root, "data", "raw", "US", "fred", "A191RD3A086NBEA.csv")
+
+if (!file.exists(gdpa_path) || !file.exists(defl_path)) {
+  stop("Raw FRED GDP or deflator files not found.", call. = FALSE)
 }
-gdp_df <- read.csv(gdp_path, stringsAsFactors = FALSE)
-gdp_df <- subset(gdp_df, variable_name == "Y_REAL_NFC_GVA_PROXY_GDP_IMPLICIT")
-gdp_df$y_total <- log(gdp_df$real_output_value)
+
+gdpa <- read.csv(gdpa_path, stringsAsFactors = FALSE)
+defl <- read.csv(defl_path, stringsAsFactors = FALSE)
+
+# Merge by year
+gdp_merged <- merge(gdpa[, c("year", "value")], defl[, c("year", "value")], by = "year", suffixes = c("_nominal", "_deflator"))
+
+# Real GDP in millions of 2017 chained dollars
+# Nominal GDP (value_nominal) is in billions. Deflator is index 2017=100.
+# Real GDP = Nominal GDP / (Deflator / 100) * 1000
+gdp_merged$real_gdp_val <- (gdp_merged$value_nominal / (gdp_merged$value_deflator / 100)) * 1000
+gdp_merged$y_total <- log(gdp_merged$real_gdp_val)
 
 # Merge total output into panel
-panel <- merge(panel, gdp_df[, c("year", "y_total")], by = "year", all.x = TRUE)
+panel <- merge(panel, gdp_merged[, c("year", "y_total")], by = "year", all.x = TRUE)
 
 # Calculate capital stock growth rates on the full panel
 panel$g_NRC <- c(NA, diff(panel$k_NRC))
