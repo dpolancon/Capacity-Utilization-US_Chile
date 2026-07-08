@@ -14,6 +14,11 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 
+% Tighten vertical spacing globally for Beamer frames
+\setlength{\parskip}{0pt}
+\setbeamertemplate{itemize/enumerate body begin}{\vspace{-0.2em}}
+\setbeamertemplate{itemize/enumerate subbody begin}{\vspace{-0.2em}}
+
 \title[Extensive vs. Intensive Accumulation]{Extensive vs. Intensive Accumulation: Choice of Technique and Capacity Utilization}
 \subtitle{Preliminary CPR Estimation Results for the US Corporate Sector}
 \author{Dissertation Chapter 2}
@@ -67,15 +72,15 @@
 
 % Slide 5: Technical Choice under Unbalanced Growth
 \begin{frame}{Technical Choice under Unbalanced Growth}
-  \begin{block}{The Technology Frontier}
-    Productive capacity $Y^p_t$ is generated on a concave technology frontier---not a neoclassical production function determining factor shares, but a physical capacity schedule mapping capital investment into maximum achievable output under distribution conflict:
+  \begin{block}{The Technology Frontier}\small
+    Productive capacity $Y^p_t$ is generated on a concave technology frontier---not a neoclassical production function determining factor shares, but a physical capacity schedule mapping capital investment into maximum achievable output under distribution conflict:\vspace{-0.3em}
     $$Y^p_t = F(K^{NRC}_t, K^{ME}_t; \omega_t) = A_t (K^{NRC}_t)^{\theta} (K^{ME}_t)^{\psi + \lambda \omega_t}$$
-  \end{block}
-  \begin{itemize}
+  \end{block}\vspace{-0.3em}
+  \begin{itemize}\itemsep0.3em
     \item \textbf{Induced Innovation:} Wage pressure ($\omega_t$) forces capitalists to increase machinery density ($\tau_t \equiv K^{ME}_t / K^{NRC}_t$) to save on labor costs.
-    \item \textbf{Unbalanced Gestation:} Machinery and structures cannot be substituted frictionlessly. The cost-minimization FOC yields:
-      $$\theta^{\tau}_t \equiv \frac{\partial \ln Y^p_t}{\partial \ln \tau_t} = \psi + \lambda \omega_t$$
-    \item \textbf{Frontier Concavity:} Due to diminishing returns to mechanization on a concave frontier, the composition payoff must fall as the wage share rises:
+    \item \textbf{Unbalanced Gestation:} The cost-minimization FOC yields:\vspace{-0.3em}
+      $$\theta^{\tau}_t \equiv \frac{\partial \ln Y^p_t}{\partial \ln \tau_t} = \psi + \lambda \omega_t$$\vspace{-0.6em}
+    \item \textbf{Frontier Concavity:} Diminishing returns to mechanization imply:\vspace{-0.3em}
       $$\lambda \equiv \frac{\partial^2 \ln Y^p_t}{\partial \ln \tau_t \partial \omega_t} < 0$$
   \end{itemize}
 \end{frame}
@@ -144,8 +149,7 @@
 \begin{frame}{Results: Specification B (Composition-Mediated)}
   \begin{table}[htbp]
     \centering
-    \caption{Specification B: Composition-Mediated (FM-OLS, Orthogonalized)}
-    \footnotesize
+    \scriptsize
     \begin{tabular}{lcccc}
       \toprule
       \textbf{Window} & \textbf{Regressor} & \textbf{Coeff} & \textbf{t-stat} & \textbf{p-value} \\
@@ -208,20 +212,21 @@
 
 % Slide 12: Capacity Utilization & Elasticity Reconstruction
 \begin{frame}{Capacity Utilization \& Elasticity Reconstruction (1945--1973)}
-  \begin{itemize}
-    \item \textbf{Sectoral Division:} Long-run elasticities estimated on productive-origin NFC data, but utilization ($\mu_t$) is reconstructed relative to \textbf{Total Real GDP} (observed aggregate demand).
+  \small
+  \begin{itemize}\itemsep0.2em
+    \item \textbf{Sectoral Division:} Elasticities estimated on NFC data; utilization ($\mu_t$) reconstructed relative to \textbf{Total Real GDP}.
     \item \textbf{Historical Path Comparison:}
-      \begin{itemize}
-        \item \textbf{Specification B (Composition-Mediated):} Captures utilization fluctuations ($\sigma_{\mu} = 12.98\%$), anchored at the 1973 peak ($\mu_{1973}=1.0$).
-        \item \textbf{Shaikh-Style:} Artificially volatile cycle ($\sigma_{\mu} = 15.06\%$) due to the constant scale assumption.
-        \item \textbf{HP Filter:} Severely dampens real capacity squeezes ($\sigma_{\mu} = 3.79\%$) by treating demand booms (e.g., WWII/Korean War) as shifts in trend capacity.
+      \begin{itemize}\itemsep0.1em
+        \item \textbf{Spec B:} Captures utilization fluctuations ($\sigma_{\mu} = 12.98\%$), anchored at 1973 peak ($\mu_{1973}=1.0$).
+        \item \textbf{Shaikh-Style:} Higher volatility ($\sigma_{\mu} = 15.06\%$) due to the constant scale assumption.
+        \item \textbf{HP Filter:} Dampens real capacity squeezes ($\sigma_{\mu} = 3.79\%$) by absorbing demand booms into trend.
       \end{itemize}
-    \item \textbf{Methodological Agreement:} Spec B utilization has high positive correlation with Shaikh-style ($\rho = 0.6974$) and the HP filter cycle ($\rho = 0.4024$).
+    \item \textbf{Cross-Method Correlation:} Spec B correlates with Shaikh ($\rho = 0.70$) and HP cycle ($\rho = 0.40$).
     \item \textbf{Mechanization Bias \& Cushioning:}
-      \begin{itemize}
-        \item Structures elasticity is negative ($\theta^{NRC}_t \approx -0.07$), indicating that building empty plants without machinery has a negative direct capacity payoff.
-        \item Growth-weighted aggregate transformation elasticity ($\theta^{total}_t = g_{Y^p} / g_K^N$) is positive and dynamic (\textbf{0.84} to \textbf{2.30}).
-        \item In the 1960 slowdown, Spec B remains high ($\mu_{1960} = 1.19$), cushioning the collapse seen in Shaikh ($\mu_{1960} = 0.86$) through slow capacity envelope expansion.
+      \begin{itemize}\itemsep0.1em
+        \item Structures elasticity is negative ($\theta^{NRC}_t \approx -0.07$): empty plants without machinery yield negative capacity payoff.
+        \item Aggregate elasticity ($\theta^{total}_t$) is positive and dynamic (\textbf{0.84}--\textbf{2.30}).
+        \item In the 1960 slowdown, Spec B ($\mu_{1960} = 1.19$) cushions the Shaikh collapse ($\mu_{1960} = 0.86$) via slow capacity envelope expansion.
       \end{itemize}
   \end{itemize}
 \end{frame}
