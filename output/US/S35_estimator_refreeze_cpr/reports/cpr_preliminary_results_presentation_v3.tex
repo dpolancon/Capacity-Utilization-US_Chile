@@ -183,12 +183,30 @@
   \end{block}
 \end{frame}
 
+% Slide 9: Unpacking Specification B: Golden Age Case Study
+\begin{frame}{Unpacking Specification B: Golden Age Case Study (1945--1973)}
+  \begin{block}{Estimated Cointegrating Equation (FM-OLS)}
+    $$y_t = 14.8617 + 0.2378 \tilde{k}^{scale}_t + 0.3121 \tilde{\tau}_t - 5.1605 \tilde{\omega}_t - 1.0294 (\tilde{\tau}_t \cdot \tilde{\omega}_t)_{orth}$$
+  \end{block}
+  \begin{itemize}
+    \item \textbf{State-Dependent Capacity Payoff of Composition ($\theta^{\tau}_t$):}
+      $$\theta^{\tau}_t \equiv \frac{\partial y_t}{\partial \tilde{\tau}_t} = 0.3121 - 1.0294 \tilde{\omega}_t$$
+    \item \textbf{Numerical Sensitivities of Wage Share Variations:}
+      \begin{itemize}
+        \item \textbf{Baseline (Average $\omega_t$):} $\tilde{\omega}_t = 0 \implies \theta^{\tau}_t = \mathbf{0.3121}$.
+        \item \textbf{High Wage Share ($\tilde{\omega}_t = +0.02$):} $\theta^{\tau}_t = 0.3121 - 1.0294(0.02) = \mathbf{0.2915}$ (payoff falls by $\approx 6.6\%$).
+        \item \textbf{Low Wage Share ($\tilde{\omega}_t = -0.02$):} $\theta^{\tau}_t = 0.3121 - 1.0294(-0.02) = \mathbf{0.3327}$ (payoff rises by $\approx 6.6\%$).
+      \end{itemize}
+    \item \textbf{Economic Intuition:} Higher distributive wage pressure forces capitalists to accelerate mechanization, but drives the system into a concave region of the frontier, lowering the marginal capacity payoff of machinery.
+  \end{itemize}
+\end{frame}
+
 % Slide 10: Conclusion \& Next Steps
 \begin{frame}{Conclusion \& Next Steps}
   \begin{itemize}
     \item We have established a robust, cointegrated long-run relationship using Cointegrating Polynomial Regression (CPR) and residual centering.
     \item The results confirm that capital composition ($\tau$) mediates capacity conversion, and that this mediation is conditioned by distribution ($\omega$) in the Fordist core.
-    \item \textbf{Next Steps (Stage S40):}
+    \item \textbf{Reconstructing Capacity \& Utilization:}
       \begin{itemize}
         \item Reconstruct the potential capacity output series:
           $$\hat{y}_t^p = \hat{\alpha} + \hat{\theta} \tilde{k}^{scale}_t + \hat{\psi} \tilde{\tau}_t + \hat{\phi} \tilde{\omega}_t + \hat{\lambda} (\tilde{\tau}_t \tilde{\omega}_t)_{orth}$$
