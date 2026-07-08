@@ -1,0 +1,23 @@
+design_id,lhs,regressors,model_order_status,run_eg,skip_classification,skip_reason
+D0_y_kKcap,y_t,k_Kcap,PURE_I1_CORE,TRUE,EG_NOT_RUN_ORDER_INCOMPATIBLE,EG run authorized.
+D1_y_kNRC,y_t,k_NRC,PURE_I1_CORE,TRUE,EG_NOT_RUN_ORDER_INCOMPATIBLE,EG run authorized.
+D2_y_kME,y_t,k_ME,PURE_I1_CORE,TRUE,EG_NOT_RUN_ORDER_INCOMPATIBLE,EG run authorized.
+D3_y_kME_kNRC,y_t,k_ME + k_NRC,PURE_I1_CORE,TRUE,EG_NOT_RUN_ORDER_INCOMPATIBLE,EG run authorized.
+D4_y_kKcap_QMEshare,y_t,k_Kcap + Q_MEshare_Kcap,PURE_I1_CORE,TRUE,EG_NOT_RUN_ORDER_INCOMPATIBLE,EG run authorized.
+D5_y_kKcap_QMEshare_omega,y_t,k_Kcap + Q_omega_MEshare_Kcap,PURE_I1_CORE,TRUE,EG_NOT_RUN_ORDER_INCOMPATIBLE,EG run authorized.
+D6_y_kNRC_QMEshare_Kcap,y_t,k_NRC + Q_MEshare_Kcap,PURE_I1_CORE,TRUE,EG_NOT_RUN_ORDER_INCOMPATIBLE,EG run authorized.
+D7_y_kNRC_QMEshare_NRC,y_t,k_NRC + Q_MEshare_NRC,PURE_I1_CORE,TRUE,EG_NOT_RUN_ORDER_INCOMPATIBLE,EG run authorized.
+D8_y_kNRC_Q_ME_NRC_ratio_Kcap,y_t,k_NRC + Q_ME_NRC_ratio_Kcap,PURE_I1_CORE,TRUE,EG_NOT_RUN_ORDER_INCOMPATIBLE,EG run authorized.
+D9_y_kNRC_Q_ME_NRC_ratio_NRC,y_t,k_NRC + Q_ME_NRC_ratio_NRC,PURE_I1_CORE,FALSE,EG_NOT_RUN_ORDER_INCOMPATIBLE,Design or path order gate blocked EG standard run.
+D10_y_kNRC_Q_log_ME_NRC_ratio_Kcap,y_t,k_NRC + Q_log_ME_NRC_ratio_Kcap,PURE_I1_CORE,FALSE,EG_NOT_RUN_ORDER_INCOMPATIBLE,Design or path order gate blocked EG standard run.
+D11_y_kNRC_Q_log_ME_NRC_ratio_NRC,y_t,k_NRC + Q_log_ME_NRC_ratio_NRC,PURE_I1_CORE,FALSE,EG_NOT_RUN_ORDER_INCOMPATIBLE,Design or path order gate blocked EG standard run.
+D12_y_kNRC_Qomega_MEshare_Kcap,y_t,k_NRC + Q_omega_MEshare_Kcap,PURE_I1_CORE,TRUE,EG_NOT_RUN_ORDER_INCOMPATIBLE,EG run authorized.
+D13_y_kNRC_Qomega_MEshare_NRC,y_t,k_NRC + Q_omega_MEshare_NRC,PURE_I1_CORE,TRUE,EG_NOT_RUN_ORDER_INCOMPATIBLE,EG run authorized.
+D14_y_kNRC_Qomega_ME_NRC_ratio_Kcap,y_t,k_NRC + Q_omega_ME_NRC_ratio_Kcap,PURE_I1_CORE,FALSE,EG_NOT_RUN_ORDER_INCOMPATIBLE,Design or path order gate blocked EG standard run.
+D15_y_kNRC_Qomega_ME_NRC_ratio_NRC,y_t,k_NRC + Q_omega_ME_NRC_ratio_NRC,PURE_I1_CORE,FALSE,EG_NOT_RUN_ORDER_INCOMPATIBLE,Design or path order gate blocked EG standard run.
+D16_y_kNRC_Qomega_log_ME_NRC_ratio_Kcap,y_t,k_NRC + Q_omega_log_ME_NRC_ratio_Kcap,PURE_I1_CORE,FALSE,EG_NOT_RUN_ORDER_INCOMPATIBLE,Design or path order gate blocked EG standard run.
+D17_y_kNRC_Qomega_log_ME_NRC_ratio_NRC,y_t,k_NRC + Q_omega_log_ME_NRC_ratio_NRC,PURE_I1_CORE,FALSE,EG_NOT_RUN_ORDER_INCOMPATIBLE,Design or path order gate blocked EG standard run.
+D18_y_kNRC_Qomega_MEshare_Kcap_omega,y_t,k_NRC + Q_omega_MEshare_Kcap + omega_NFC,EG_MIXED_ORDER_CONTROL_DIAGNOSTIC,TRUE,EG_MIXED_ORDER_CONTROL_DIAGNOSTIC,EG run authorized.
+D19_y_kNRC_Qomega_MEshare_NRC_omega,y_t,k_NRC + Q_omega_MEshare_NRC + omega_NFC,EG_MIXED_ORDER_CONTROL_DIAGNOSTIC,TRUE,EG_MIXED_ORDER_CONTROL_DIAGNOSTIC,EG run authorized.
+D20_y_kNRC_QMEshare_Kcap_omega,y_t,k_NRC + Q_MEshare_Kcap + omega_NFC,EG_MIXED_ORDER_CONTROL_DIAGNOSTIC,TRUE,EG_MIXED_ORDER_CONTROL_DIAGNOSTIC,EG run authorized.
+D21_y_kNRC_QMEshare_NRC_omega,y_t,k_NRC + Q_MEshare_NRC + omega_NFC,EG_MIXED_ORDER_CONTROL_DIAGNOSTIC,TRUE,EG_MIXED_ORDER_CONTROL_DIAGNOSTIC,EG run authorized.

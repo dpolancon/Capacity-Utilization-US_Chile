@@ -1,0 +1,16 @@
+variable_name,definition,mechanization_state,distribution_state,accumulation_increment,bounded_expected,constructed,sample_start,sample_end,n_obs,notes
+ME_share_repaired,ME share in repaired capacity stock,ME_share_repaired,,,True,True,1931,2024,94,State tested directly; bounded shares are not mechanically promoted to I(1).
+Q_MEshare_Kcap,"cumsum(lag(ME_share_repaired, 1) * d_k_Kcap)",ME_share_repaired,,d_k_Kcap,False,True,1932,2024,93,Mechanization-only accumulated path.
+Q_omega_MEshare_Kcap,"cumsum(lag(omega_NFC * ME_share_repaired, 1) * d_k_Kcap)",ME_share_repaired,omega_NFC,d_k_Kcap,False,True,1932,2024,93,Distributionally conditioned accumulated path.
+Q_MEshare_NRC,"cumsum(lag(ME_share_repaired, 1) * d_k_NRC)",ME_share_repaired,,d_k_NRC,False,True,1932,2024,93,Mechanization-only accumulated path.
+Q_omega_MEshare_NRC,"cumsum(lag(omega_NFC * ME_share_repaired, 1) * d_k_NRC)",ME_share_repaired,omega_NFC,d_k_NRC,False,True,1932,2024,93,Distributionally conditioned accumulated path.
+ME_NRC_ratio_repaired,ME/NRC repaired stock ratio,ME_NRC_ratio_repaired,,,False,True,1931,2024,94,State tested directly; bounded shares are not mechanically promoted to I(1).
+Q_ME_NRC_ratio_Kcap,"cumsum(lag(ME_NRC_ratio_repaired, 1) * d_k_Kcap)",ME_NRC_ratio_repaired,,d_k_Kcap,False,True,1932,2024,93,Mechanization-only accumulated path.
+Q_omega_ME_NRC_ratio_Kcap,"cumsum(lag(omega_NFC * ME_NRC_ratio_repaired, 1) * d_k_Kcap)",ME_NRC_ratio_repaired,omega_NFC,d_k_Kcap,False,True,1932,2024,93,Distributionally conditioned accumulated path.
+Q_ME_NRC_ratio_NRC,"cumsum(lag(ME_NRC_ratio_repaired, 1) * d_k_NRC)",ME_NRC_ratio_repaired,,d_k_NRC,False,True,1932,2024,93,Mechanization-only accumulated path.
+Q_omega_ME_NRC_ratio_NRC,"cumsum(lag(omega_NFC * ME_NRC_ratio_repaired, 1) * d_k_NRC)",ME_NRC_ratio_repaired,omega_NFC,d_k_NRC,False,True,1932,2024,93,Distributionally conditioned accumulated path.
+log_ME_NRC_ratio_repaired,log ME/NRC repaired stock ratio,log_ME_NRC_ratio_repaired,,,False,True,1931,2024,94,State tested directly; bounded shares are not mechanically promoted to I(1).
+Q_log_ME_NRC_ratio_Kcap,"cumsum(lag(log_ME_NRC_ratio_repaired, 1) * d_k_Kcap)",log_ME_NRC_ratio_repaired,,d_k_Kcap,False,True,1932,2024,93,Mechanization-only accumulated path.
+Q_omega_log_ME_NRC_ratio_Kcap,"cumsum(lag(omega_NFC * log_ME_NRC_ratio_repaired, 1) * d_k_Kcap)",log_ME_NRC_ratio_repaired,omega_NFC,d_k_Kcap,False,True,1932,2024,93,Distributionally conditioned accumulated path.
+Q_log_ME_NRC_ratio_NRC,"cumsum(lag(log_ME_NRC_ratio_repaired, 1) * d_k_NRC)",log_ME_NRC_ratio_repaired,,d_k_NRC,False,True,1932,2024,93,Mechanization-only accumulated path.
+Q_omega_log_ME_NRC_ratio_NRC,"cumsum(lag(omega_NFC * log_ME_NRC_ratio_repaired, 1) * d_k_NRC)",log_ME_NRC_ratio_repaired,omega_NFC,d_k_NRC,False,True,1932,2024,93,Distributionally conditioned accumulated path.

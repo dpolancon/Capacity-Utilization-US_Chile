@@ -1,0 +1,10 @@
+criterion,passed,notes
+input_discovery_passed,True,"Required S34R, D06, and D07 objects found."
+new_states_constructed,True,Mechanization and distribution-conditioned paths written.
+state_i_order_ledger_created,True,ADF/KPSS/PP-if-available and second-difference checks recorded.
+raw_interactions_blocked,True,Raw k*state interactions are not in the standard grid.
+nrc_envelope_design_available,True,NRC-envelope designs were screened.
+core_eg_pass_exists,True,Type1 residual cointegration screen has at least one weak/strong pass.
+distributional_state_dependence_identified,False,A distribution-conditioned mechanization path must survive as a standard S35 candidate.
+no_final_estimators_run,True,Only design diagnostics and EG residual screens were run.
+final_decision,True,BLOCK_DISTRIBUTIONAL_STATE_DEPENDENCE_NOT_IDENTIFIED
