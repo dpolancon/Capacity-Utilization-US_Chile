@@ -1,3 +1,14 @@
+---
+type: agent_system_rules
+status: active
+layer: governance_constraint
+scope: all_agent_sessions
+authority_files:
+  - chapter2/outline/Ch2_Outline_DEFINITIVE.md
+  - chapter2/voice/ch2_voice_guide.md
+  - chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md
+---
+
 # AGENTS.md — Capacity-Utilization-US_Chile
 ## Standing instructions for all Codex and agent sessions in this repo
 

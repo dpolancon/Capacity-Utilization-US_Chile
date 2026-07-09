@@ -1,3 +1,14 @@
+---
+type: theoretical_framework_reference
+status: active
+layer: conceptual_reference
+scope: behavioral_accumulation_reduced_rank
+topics:
+  - Behavioral Accumulation Law
+  - Reduced-Rank Identification Strategy
+  - Capacity Utilization Estimation
+---
+
 # Integrated Framework: Behavioral Accumulation Law Nested in a Reduced-Rank Identification Strategy for Capacity Utilization
 
 ## 0. Purpose

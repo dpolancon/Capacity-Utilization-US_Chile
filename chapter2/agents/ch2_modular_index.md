@@ -1,3 +1,11 @@
+---
+type: writing_status_index
+status: active
+layer: project_tracking
+scope: chapter2_writing
+last_updated: 2026-07-09
+---
+
 # Ch2 Modular Components Index
 ## Demand-Led Profitability and Structural Crisis of Capitalism in Chile and the United States during the Fordist Era
 

@@ -1,3 +1,11 @@
+---
+type: repository_structure_spec
+status: superseded
+layer: historical_design
+scope: dissertation_ch2
+date: 2026-04-02
+---
+
 # Repo Structure v2 — Capacity-Utilization-US_Chile
 ## Chapter 2: Writing + Empirical Pipeline
 

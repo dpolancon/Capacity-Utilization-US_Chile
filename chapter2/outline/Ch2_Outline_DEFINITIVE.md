@@ -1,3 +1,11 @@
+---
+type: writing_outline
+status: locked_definitive
+layer: conceptual_authority
+scope: chapter2_writing
+date: 2026-04-02
+---
+
 # Chapter 2 — Definitive Outline
 ## Demand-Led Profitability and Structural Crisis of Capitalism
 ## in Chile and the United States during the Fordist Era

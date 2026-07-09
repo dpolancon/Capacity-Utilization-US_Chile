@@ -1,3 +1,13 @@
+---
+type: repository_manifest
+status: active
+layer: project_root
+scope: dissertation_ch2
+current_stage: S35 (US refreeze) / CL_S10 (Chile rebuild)
+active_methodology: Interactive Cointegration (Polynomial Cointegration - CPR)
+token_optimization: true
+---
+
 # Ch2 Workflow Bundle — 2026-04-02
 ## Capacity-Utilization-US_Chile
 

@@ -1,3 +1,12 @@
+---
+type: voice_constraints_memo
+status: active
+layer: presentation_standards
+scope: chapter2_writing
+section: §2.2
+date: 2026-04-04
+---
+
 # Voice & Semantic Constraints — §2.2 Final Draft
 ## Ch2 Literature Review: Marxist Crisis Theory and the Role of Capacity Utilization
 ## Date: 2026-04-04

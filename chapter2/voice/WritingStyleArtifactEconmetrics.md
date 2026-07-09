@@ -1,3 +1,12 @@
+---
+type: writing_style_rules
+status: active
+layer: presentation_standards
+scope: econometric_writings
+author: Diego Polanco
+version: WLM 3.1
+---
+
 # Writing Style Artifact
 
 **Name:** WrittingLikeMe Academic Style Vector  

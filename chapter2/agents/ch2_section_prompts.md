@@ -1,3 +1,11 @@
+---
+type: section_writing_prompts
+status: active
+layer: project_tooling
+scope: chapter2_writing
+last_updated: 2026-04-02
+---
+
 # Ch2 Section Prompts — Self-Contained Firing Prompts
 ## Demand-Led Profitability and Structural Crisis of Capitalism in Chile and the United States during the Fordist Era
 ### Rebuilt 2026-04-02 from Ch2_Outline_DEFINITIVE.md

@@ -1,3 +1,11 @@
+---
+type: data_visualization_guidelines
+status: active
+layer: presentation_standards
+scope: us_stage_b_plots
+date: 2026-04-06
+---
+
 # Data Viz Best Practices — Applied to Stage B US Figures
 ## Date: 2026-04-06 | Source: data-viz-best-practices.md (Spanish)
 

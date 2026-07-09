@@ -1,3 +1,14 @@
+---
+type: econometric_handoff_memo
+status: active
+layer: results_handoff
+scope: us_investment_function
+stage_scope: Stage C (Investment Function)
+country: US
+sector: Non-Financial Corporate
+date: 2026-04-06
+---
+
 # Stage C Handoff — US Investment Function Estimation
 ## Claude Code Session Artifact
 **Date:** 2026-04-06 | **Country:** United States | **Sector:** Non-Financial Corporate

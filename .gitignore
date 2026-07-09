@@ -1,4 +1,4 @@
-﻿# ── R artifacts ──────────────────────────────────────
+# ── R artifacts ──────────────────────────────────────
 .Rhistory
 .RData
 .Rproj.user/
@@ -36,3 +36,33 @@ docs/essay_tex/*.pdf
 *.png
 chapter2_vault/.obsidian/workspace.json
 chapter2_vault/.obsidian/graph.json
+
+# ── chapter2 LaTeX ignores ───────────────────────────
+chapter2/draft/*.aux
+chapter2/draft/*.log
+chapter2/draft/*.toc
+chapter2/draft/*.out
+chapter2/draft/*.bbl
+chapter2/draft/*.blg
+chapter2/draft/*.pdf
+chapter2/draft/*.synctex.gz
+chapter2/draft/*.fdb_latexmk
+chapter2/draft/*.fls
+chapter2/draft/*.nav
+chapter2/draft/*.snm
+chapter2/draft/reports/*.aux
+chapter2/draft/reports/*.log
+chapter2/draft/reports/*.toc
+chapter2/draft/reports/*.out
+chapter2/draft/reports/*.pdf
+chapter2/draft/reports/*.nav
+chapter2/draft/reports/*.snm
+output/**/*.nav
+output/**/*.snm
+output/**/*.vrb
+output/**/*.toc
+output/**/*.log
+output/**/*.aux
+output/**/*.out
+
+

@@ -1,3 +1,11 @@
+---
+type: econometric_library_reference
+status: active
+layer: methodology_reference
+scope: cointegration_regression_r_package
+packageName: cointReg
+---
+
 # cointReg
 
 Parameter Estimation and Inference in a Cointegrating Regression

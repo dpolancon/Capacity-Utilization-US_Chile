@@ -1,3 +1,15 @@
+---
+type: dissertation_draft_prose
+status: active_draft
+layer: manuscript_prose
+scope: chapter2_writing
+section: §2.2
+topics:
+  - Literature Review
+  - Marxist Crisis Theory
+  - Capacity Utilization
+---
+
 # §2.2 Literature Review: Marxist Crisis Theory and the Role of Capacity Utilization
 
 ## Final Draft

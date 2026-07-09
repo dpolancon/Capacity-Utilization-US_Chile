@@ -1,3 +1,11 @@
+---
+type: writing_voice_rules
+status: locked_definitive
+layer: presentation_authority
+version: WLM v4.0
+scope: chapter2_writing
+---
+
 # Ch2 Voice Guide — WLM v4 Calibration
 ## Paste this block BEFORE any section prompt in a claude.ai session
 
