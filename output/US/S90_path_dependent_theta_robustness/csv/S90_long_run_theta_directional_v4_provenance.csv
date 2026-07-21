@@ -1,0 +1,7 @@
+"source_id","source_file","md5","line_count","git_commit"
+"S33","docs/ch2/S33_theta_recovery_specification_ledger.md","8c903fef315d900341e594ee45a11d83",302,"d726353c96eecdb0c92470d54b1a88d97f8e83a8"
+"RULE","chapter2_vault/00_constitutive_core/R_distribution_conditioned_theta_identification.md","b5b73e3e030999ebb933cc39ba3c9bc2",241,"d726353c96eecdb0c92470d54b1a88d97f8e83a8"
+"A03","chapter2_vault/02_analyitical_foundation/A03_TransformationElasticity_Two-CapitalCapacityComposition.md","44712287e5704967f1b60cc83d1270b9",155,"d726353c96eecdb0c92470d54b1a88d97f8e83a8"
+"A05","chapter2_vault/02_analyitical_foundation/A05_NRCEnvelope_MechanizationBias.md","9973e4a8c15d1b9e509fe7181862a880",126,"d726353c96eecdb0c92470d54b1a88d97f8e83a8"
+"PLAYBOOK","chapter2_vault/00_constitutive_core/03B_Process_Tracing_Playbook.md","1be080d903e1b5a9df7ab151aaebeb9a",103,"d726353c96eecdb0c92470d54b1a88d97f8e83a8"
+"CAPITAL","codes/US_D10_clean_build_source_of_truth_dataset.R","1677b72496c7def13cbd493b429c6857",636,"d726353c96eecdb0c92470d54b1a88d97f8e83a8"
