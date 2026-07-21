@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {1}Purpose and Scope}{2}{section.1}%
+\contentsline {section}{\numberline {2}Locked Baseline and Report-Only Boundary}{2}{section.2}%
+\contentsline {section}{\numberline {3}Nomura Literature Review: Discard, Survival, and Service Lives}{2}{section.3}%
+\contentsline {section}{\numberline {4}Capital Concepts: Gross, Productive, Net, Discard, Decay, and Disposal}{3}{section.4}%
+\contentsline {section}{\numberline {5}Baseline GPIM Architecture and Equations}{3}{section.5}%
+\contentsline {section}{\numberline {6}Service-Life Sensitivity Design}{3}{section.6}%
+\contentsline {section}{\numberline {7}Survival Profiles for ME and NRC}{4}{section.7}%
+\contentsline {section}{\numberline {8}Warmup, Initialization, and Inherited-Vintage Risk}{5}{section.8}%
+\contentsline {section}{\numberline {9}ME Gross GPIM Sensitivity Results}{5}{section.9}%
+\contentsline {section}{\numberline {10}NRC Gross GPIM Sensitivity Results}{8}{section.10}%
+\contentsline {section}{\numberline {11}Capacity-Capital Sensitivity: ME+NRC}{10}{section.11}%
+\contentsline {section}{\numberline {12}ME/NRC Composition and Mechanization Sensitivity}{12}{section.12}%
+\contentsline {section}{\numberline {13}Output-Capital Visual Sensitivity}{13}{section.13}%
+\contentsline {section}{\numberline {14}Stock-Flow and Current-Cost Identity Audits}{14}{section.14}%
+\contentsline {section}{\numberline {15}Interpretation of NRC Decline Across Sensitivity Cases}{16}{section.15}%
+\contentsline {section}{\numberline {16}What the Sensitivity Does and Does Not Authorize}{18}{section.16}%
+\contentsline {section}{\numberline {17}Human Review Checklist}{18}{section.17}%
+\contentsline {section}{\numberline {18}Decision Gate}{19}{section.18}%
+\contentsline {section}{\numberline {A}Figure Manifest}{19}{appendix.A}%
+\contentsline {section}{\numberline {B}Audit Tables}{19}{appendix.B}%
+\contentsline {section}{\numberline {C}Literature Extraction Notes}{19}{appendix.C}%

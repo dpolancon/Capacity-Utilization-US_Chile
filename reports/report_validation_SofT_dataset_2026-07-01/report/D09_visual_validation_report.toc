@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}Purpose and Status of D09}{3}{section.1}%
+\contentsline {section}{\numberline {2}Locked Source-of-Truth and GPIM Repair Lineage}{3}{section.2}%
+\contentsline {section}{\numberline {3}GPIM Equations and Capital-Stock Architecture}{4}{section.3}%
+\contentsline {section}{\numberline {4}Real and Current-Cost GPIM Stock Levels}{4}{section.4}%
+\contentsline {section}{\numberline {5}Visual Inspection Indices and Growth-Tendency Checks}{4}{section.5}%
+\contentsline {section}{\numberline {6}Warmup, Survival Profiles, and NRC Review Flag}{6}{section.6}%
+\contentsline {section}{\numberline {7}Stock-Flow and Valuation Consistency Audits}{8}{section.7}%
+\contentsline {section}{\numberline {8}ME/NRC Composition and Mechanization Diagnostics}{10}{section.8}%
+\contentsline {section}{\numberline {9}Net-over-Gross Capital-Stock Comparisons}{10}{section.9}%
+\contentsline {section}{\numberline {10}Alternative Capital Measures: Baseline, Comparison, Review-Only, Parked, and Excluded}{10}{section.10}%
+\contentsline {section}{\numberline {11}Price and Valuation Diagnostics}{12}{section.11}%
+\contentsline {section}{\numberline {12}Output-Capital Level Relations}{12}{section.12}%
+\contentsline {section}{\numberline {13}Scatterplots of Locked Level Relations}{12}{section.13}%
+\contentsline {section}{\numberline {14}Distribution and Surplus-Share Inspection}{12}{section.14}%
+\contentsline {section}{\numberline {15}Financial-Sector Transfer and Double-Counting Safeguards}{14}{section.15}%
+\contentsline {section}{\numberline {16}Capital-Output-Distribution Relational Inspection}{18}{section.16}%
+\contentsline {section}{\numberline {17}Historical Visual Annotations}{18}{section.17}%
+\contentsline {section}{\numberline {18}Human Review Checklist and Decision Gate}{20}{section.18}%
+\contentsline {section}{\numberline {A}Secondary Figures}{22}{appendix.A}%
+\contentsline {section}{\numberline {B}Audit Tables}{22}{appendix.B}%

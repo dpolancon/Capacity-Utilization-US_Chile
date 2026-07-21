@@ -1,0 +1,1116 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  1 JUL 2026 12:41
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**D09_R_visual_validation_report_revised.tex
+(./D09_R_visual_validation_report_revised.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+(c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2026/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen150
+)
+(c:/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(c:/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+   defining Unicode char U+03BC (decimal 956)
+
+(c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks20
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
+)
+(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen161
+\lightrulewidth=\dimen162
+\cmidrulewidth=\dimen163
+\belowrulesep=\dimen164
+\belowbottomsep=\dimen165
+\aboverulesep=\dimen166
+\abovetopsep=\dimen167
+\cmidrulesep=\dimen168
+\cmidrulekern=\dimen169
+\defaultaddspace=\dimen170
+\@cmidla=\count286
+\@cmidlb=\count287
+\@aboverulesep=\dimen171
+\@belowrulesep=\dimen172
+\@thisruleclass=\count288
+\@lastruleclass=\count289
+\@thisrulewidth=\dimen173
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip51
+\LTright=\skip52
+\LTpre=\skip53
+\LTpost=\skip54
+\LTchunksize=\count290
+\LTcapwidth=\dimen174
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
+\LT@gbox=\box57
+\LT@cols=\count291
+\LT@rows=\count292
+\c@LT@tables=\count293
+\c@LT@chunks=\count294
+\LT@p@ftn=\toks21
+)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen175
+\ar@mcellbox=\box58
+\extrarowheight=\dimen176
+\NC@list=\toks22
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box59
+)
+(c:/texlive/2026/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count295
+\float@exts=\toks23
+\float@box=\box60
+\@float@everytoks=\toks24
+\@floatcapt=\box61
+)
+(c:/texlive/2026/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip57
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks25
+\ex@=\dimen177
+))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen178
+)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count296
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count297
+\leftroot@=\count298
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count299
+\DOTSCASE@=\count300
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box62
+\strutbox@=\box63
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen179
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count301
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count302
+\dotsspace@=\muskip17
+\c@parentequation=\count303
+\dspbrk@lvl=\count304
+\tag@help=\toks26
+\row@=\count305
+\column@=\count306
+\maxfields@=\count307
+\andhelp@=\toks27
+\eqnshift@=\dimen180
+\alignsep@=\dimen181
+\tagshift@=\dimen182
+\tagwidth@=\dimen183
+\totwidth@=\dimen184
+\lineht@=\dimen185
+\@envbody=\toks28
+\multlinegap=\skip58
+\multlinetaggap=\skip59
+\mathdisplay@stack=\toks29
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
+
+(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+
+(c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count308
+)
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count309
+)
+(c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen186
+\Hy@linkcounter=\count310
+\Hy@pagecounter=\count311
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count312
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4468.
+\c@Hy@tempcnt=\count313
+
+(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4807.
+\XeTeXLinkMargin=\dimen187
+
+(c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count314
+\Field@Width=\dimen188
+\Fld@charsize=\dimen189
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
+\Hy@abspage=\count315
+\c@Item=\count316
+\c@Hfootnote=\count317
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
+\Fld@listcount=\count318
+\c@bookmark@seq@number=\count319
+
+(c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip60
+)
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count320
+)
+(./D09_R_visual_validation_report_revised.aux)
+\openout1 = `D09_R_visual_validation_report_revised.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(65.04256pt, 484.20988pt, 65.04256pt)
+* v-part:(T,H,B)=(65.04256pt, 664.88487pt, 65.04256pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=484.20988pt
+* \textheight=664.88487pt
+* \oddsidemargin=-7.22743pt
+* \evensidemargin=-7.22743pt
+* \topmargin=-44.22743pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count321
+\scratchdimen=\dimen190
+\scratchbox=\box64
+\nofMPsegments=\count322
+\nofMParguments=\count323
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count324
+\MPscratchDim=\dimen191
+\MPnumerator=\count325
+\makeMPintoPDFobject=\count326
+\everyMPtoPDFconversion=\toks31
+) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 17.
+
+(./D09_R_visual_validation_report_revised.out)
+(./D09_R_visual_validation_report_revised.out)
+\@outlinefile=\write3
+\openout3 = `D09_R_visual_validation_report_revised.out'.
+
+
+(./D09_R_visual_validation_report_revised.toc [1
+
+{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/
+texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}])
+\tf@toc=\write4
+\openout4 = `D09_R_visual_validation_report_revised.toc'.
+
+ [2]
+Overfull \hbox (9.33476pt too wide) in paragraph at lines 31--32
+[]\T1/cmr/m/n/10.95 The re-vised re-port pre-serves the same bound-ary lan-guag
+e: RE-PORT_ONLY, IN-SPEC-TION_ONLY,
+ []
+
+
+Overfull \hbox (188.49696pt too wide) in paragraph at lines 31--32
+\T1/cmr/m/n/10.95 NOT_SOURCE_OF_TRUTH, NOT_MODEL_READY, and RE-QUIRES_D10_AUTHO
+RIZATION_FOR_TRANSFORMATION_USE.
+ []
+
+
+Overfull \hbox (56.44827pt too wide) in paragraph at lines 50--51
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig03_real_gpim_stock_levels_logscale}, \{}ref
+{fig:D09_fig05_real_gpim_indices_1947_100},
+ []
+
+[3
+
+]
+<../figures/D09_fig01_real_gpim_stock_levels.pdf, id=140, 519.9425pt x 317.185p
+t>
+File: ../figures/D09_fig01_real_gpim_stock_levels.pdf Graphic file (type pdf)
+<use ../figures/D09_fig01_real_gpim_stock_levels.pdf>
+Package pdftex.def Info: ../figures/D09_fig01_real_gpim_stock_levels.pdf  used 
+on input line 57.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+<../figures/D09_fig03_real_gpim_stock_levels_logscale.pdf, id=141, 519.9425pt x
+ 317.185pt>
+File: ../figures/D09_fig03_real_gpim_stock_levels_logscale.pdf Graphic file (ty
+pe pdf)
+<use ../figures/D09_fig03_real_gpim_stock_levels_logscale.pdf>
+Package pdftex.def Info: ../figures/D09_fig03_real_gpim_stock_levels_logscale.p
+df  used on input line 64.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [4 <../figures/D09_fig01_real_gpim_stock_levels.pdf>]
+<../figures/D09_fig05_real_gpim_indices_1947_100.pdf, id=161, 519.9425pt x 317.
+185pt>
+File: ../figures/D09_fig05_real_gpim_indices_1947_100.pdf Graphic file (type pd
+f)
+<use ../figures/D09_fig05_real_gpim_indices_1947_100.pdf>
+Package pdftex.def Info: ../figures/D09_fig05_real_gpim_indices_1947_100.pdf  u
+sed on input line 71.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [5 <../figures/D09_fig03_real_gpim_stock_levels_logscale.pdf>]
+<../figures/D09_fig06_real_gpim_indices_2017_100.pdf, id=182, 519.9425pt x 317.
+185pt>
+File: ../figures/D09_fig06_real_gpim_indices_2017_100.pdf Graphic file (type pd
+f)
+<use ../figures/D09_fig06_real_gpim_indices_2017_100.pdf>
+Package pdftex.def Info: ../figures/D09_fig06_real_gpim_indices_2017_100.pdf  u
+sed on input line 78.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [6 <../figures/D09_fig05_real_gpim_indices_1947_100.pdf>]
+Overfull \hbox (105.37672pt too wide) in paragraph at lines 85--86
+\T1/cmr/m/n/10.95 This sec-tion sep-a-rates current-cost stocks from real stock
+s. Fig-ures \{}ref{fig:D09_fig02_current_cost_gpim_stock_levels},
+ []
+
+
+Overfull \hbox (144.27646pt too wide) in paragraph at lines 85--86
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig04_current_cost_gpim_stock_levels_logscale}
+, \{}ref{fig:D09_fig07_current_cost_gpim_indices_1947_100},
+ []
+
+<../figures/D09_fig02_current_cost_gpim_stock_levels.pdf, id=202, 519.9425pt x 
+317.185pt>
+File: ../figures/D09_fig02_current_cost_gpim_stock_levels.pdf Graphic file (typ
+e pdf)
+<use ../figures/D09_fig02_current_cost_gpim_stock_levels.pdf>
+Package pdftex.def Info: ../figures/D09_fig02_current_cost_gpim_stock_levels.pd
+f  used on input line 92.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+[7 <../figures/D09_fig06_real_gpim_indices_2017_100.pdf>]
+<../figures/D09_fig04_current_cost_gpim_stock_levels_logscale.pdf, id=223, 519.
+9425pt x 317.185pt>
+File: ../figures/D09_fig04_current_cost_gpim_stock_levels_logscale.pdf Graphic 
+file (type pdf)
+<use ../figures/D09_fig04_current_cost_gpim_stock_levels_logscale.pdf>
+Package pdftex.def Info: ../figures/D09_fig04_current_cost_gpim_stock_levels_lo
+gscale.pdf  used on input line 99.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [8 <../figures/D09_fig02_current_cost_gpim_stock_levels.pdf>]
+<../figures/D09_fig07_current_cost_gpim_indices_1947_100.pdf, id=243, 519.9425p
+t x 317.185pt>
+File: ../figures/D09_fig07_current_cost_gpim_indices_1947_100.pdf Graphic file 
+(type pdf)
+<use ../figures/D09_fig07_current_cost_gpim_indices_1947_100.pdf>
+Package pdftex.def Info: ../figures/D09_fig07_current_cost_gpim_indices_1947_10
+0.pdf  used on input line 106.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [9 <../figures/D09_fig04_current_cost_gpim_stock_levels_logscale.pdf>]
+<../figures/D09_fig08_current_cost_gpim_indices_2017_100.pdf, id=263, 519.9425p
+t x 317.185pt>
+File: ../figures/D09_fig08_current_cost_gpim_indices_2017_100.pdf Graphic file 
+(type pdf)
+<use ../figures/D09_fig08_current_cost_gpim_indices_2017_100.pdf>
+Package pdftex.def Info: ../figures/D09_fig08_current_cost_gpim_indices_2017_10
+0.pdf  used on input line 113.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [10 <../figures/D09_fig07_current_cost_gpim_indices_1947_100.pdf>]
+<../figures/D09_fig09_gpim_warmup_timeline.pdf, id=283, 519.9425pt x 317.185pt>
+
+File: ../figures/D09_fig09_gpim_warmup_timeline.pdf Graphic file (type pdf)
+<use ../figures/D09_fig09_gpim_warmup_timeline.pdf>
+Package pdftex.def Info: ../figures/D09_fig09_gpim_warmup_timeline.pdf  used on
+ input line 127.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [11 <../figures/D09_fig08_current_cost_gpim_indices_2017_100.pdf>]
+<../figures/D09_fig10_locked_survival_profiles_ME_NRC.pdf, id=303, 519.9425pt x
+ 317.185pt>
+File: ../figures/D09_fig10_locked_survival_profiles_ME_NRC.pdf Graphic file (ty
+pe pdf)
+<use ../figures/D09_fig10_locked_survival_profiles_ME_NRC.pdf>
+Package pdftex.def Info: ../figures/D09_fig10_locked_survival_profiles_ME_NRC.p
+df  used on input line 134.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [12 <../figures/D09_fig09_gpim_warmup_timeline.pdf>]
+(../tables/D09_R_table_warmup_sufficiency.tex)
+(../tables/D09_R_table_NRC_service_life_concern.tex
+Overfull \hbox (892.21431pt too wide) in paragraph at lines 2--1
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--1
+
+ []
+
+)
+Overfull \hbox (1045.04378pt too wide) in paragraph at lines 2--141
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--141
+
+ []
+
+
+Overfull \hbox (218.39844pt too wide) in paragraph at lines 143--144
+\T1/cmr/m/n/10.95 fore de-rived di-ag-nos-tics. Fig-ures \{}ref{fig:D09_fig11_r
+eal_investment_scale_residuals}, \{}ref{fig:D09_fig12_current_cost_identity_res
+iduals},
+ []
+
+[13 <../figures/D09_fig10_locked_survival_profiles_ME_NRC.pdf>]
+<../figures/D09_fig11_real_investment_scale_residuals.pdf, id=344, 519.9425pt x
+ 317.185pt>
+File: ../figures/D09_fig11_real_investment_scale_residuals.pdf Graphic file (ty
+pe pdf)
+<use ../figures/D09_fig11_real_investment_scale_residuals.pdf>
+Package pdftex.def Info: ../figures/D09_fig11_real_investment_scale_residuals.p
+df  used on input line 150.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+<../figures/D09_fig12_current_cost_identity_residuals.pdf, id=345, 519.9425pt x
+ 317.185pt>
+File: ../figures/D09_fig12_current_cost_identity_residuals.pdf Graphic file (ty
+pe pdf)
+<use ../figures/D09_fig12_current_cost_identity_residuals.pdf>
+Package pdftex.def Info: ../figures/D09_fig12_current_cost_identity_residuals.p
+df  used on input line 157.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [14 <../figures/D09_fig11_real_investment_scale_residuals.pdf>]
+<../figures/D09_fig13_capacity_identity_residuals.pdf, id=365, 519.9425pt x 317
+.185pt>
+File: ../figures/D09_fig13_capacity_identity_residuals.pdf Graphic file (type p
+df)
+<use ../figures/D09_fig13_capacity_identity_residuals.pdf>
+Package pdftex.def Info: ../figures/D09_fig13_capacity_identity_residuals.pdf  
+used on input line 164.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [15 <../figures/D09_fig12_current_cost_identity_residuals.pdf>]
+(../tables/D09_R_table_gpim_identity_residuals.tex)
+Overfull \hbox (98.37497pt too wide) in paragraph at lines 2--170
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--170
+
+ []
+
+
+Overfull \hbox (225.77756pt too wide) in paragraph at lines 172--173
+\T1/cmr/m/n/10.95 iden-tity ev-i-dence. Fig-ures \{}ref{fig:D09_fig14_ME_over_N
+RC_real_stock_ratio}, \{}ref{fig:D09_fig15_ME_over_NRC_current_stock_ratio},
+ []
+
+
+Overfull \hbox (88.46672pt too wide) in paragraph at lines 172--173
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig16_ME_NRC_real_capacity_shares}, \{}ref{fig
+:D09_fig17_ME_NRC_current_capacity_shares},
+ []
+
+
+Overfull \hbox (152.46034pt too wide) in paragraph at lines 172--173
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig18_ME_over_NRC_real_investment_ratio}, \{}r
+ef{fig:D09_fig19_ME_over_NRC_current_investment_ratio}
+ []
+
+<../figures/D09_fig14_ME_over_NRC_real_stock_ratio.pdf, id=385, 519.9425pt x 31
+7.185pt>
+File: ../figures/D09_fig14_ME_over_NRC_real_stock_ratio.pdf Graphic file (type 
+pdf)
+<use ../figures/D09_fig14_ME_over_NRC_real_stock_ratio.pdf>
+Package pdftex.def Info: ../figures/D09_fig14_ME_over_NRC_real_stock_ratio.pdf 
+ used on input line 179.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+[16 <../figures/D09_fig13_capacity_identity_residuals.pdf>]
+<../figures/D09_fig15_ME_over_NRC_current_stock_ratio.pdf, id=405, 519.9425pt x
+ 317.185pt>
+File: ../figures/D09_fig15_ME_over_NRC_current_stock_ratio.pdf Graphic file (ty
+pe pdf)
+<use ../figures/D09_fig15_ME_over_NRC_current_stock_ratio.pdf>
+Package pdftex.def Info: ../figures/D09_fig15_ME_over_NRC_current_stock_ratio.p
+df  used on input line 186.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [17 <../figures/D09_fig14_ME_over_NRC_real_stock_ratio.pdf>]
+<../figures/D09_fig16_ME_NRC_real_capacity_shares.pdf, id=425, 519.9425pt x 317
+.185pt>
+File: ../figures/D09_fig16_ME_NRC_real_capacity_shares.pdf Graphic file (type p
+df)
+<use ../figures/D09_fig16_ME_NRC_real_capacity_shares.pdf>
+Package pdftex.def Info: ../figures/D09_fig16_ME_NRC_real_capacity_shares.pdf  
+used on input line 193.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [18 <../figures/D09_fig15_ME_over_NRC_current_stock_ratio.pdf>]
+<../figures/D09_fig17_ME_NRC_current_capacity_shares.pdf, id=445, 519.9425pt x 
+317.185pt>
+File: ../figures/D09_fig17_ME_NRC_current_capacity_shares.pdf Graphic file (typ
+e pdf)
+<use ../figures/D09_fig17_ME_NRC_current_capacity_shares.pdf>
+Package pdftex.def Info: ../figures/D09_fig17_ME_NRC_current_capacity_shares.pd
+f  used on input line 200.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [19 <../figures/D09_fig16_ME_NRC_real_capacity_shares.pdf>]
+<../figures/D09_fig18_ME_over_NRC_real_investment_ratio.pdf, id=467, 519.9425pt
+ x 317.185pt>
+File: ../figures/D09_fig18_ME_over_NRC_real_investment_ratio.pdf Graphic file (
+type pdf)
+<use ../figures/D09_fig18_ME_over_NRC_real_investment_ratio.pdf>
+Package pdftex.def Info: ../figures/D09_fig18_ME_over_NRC_real_investment_ratio
+.pdf  used on input line 207.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [20 <../figures/D09_fig17_ME_NRC_current_capacity_shares.pdf>]
+<../figures/D09_fig19_ME_over_NRC_current_investment_ratio.pdf, id=487, 519.942
+5pt x 317.185pt>
+File: ../figures/D09_fig19_ME_over_NRC_current_investment_ratio.pdf Graphic fil
+e (type pdf)
+<use ../figures/D09_fig19_ME_over_NRC_current_investment_ratio.pdf>
+Package pdftex.def Info: ../figures/D09_fig19_ME_over_NRC_current_investment_ra
+tio.pdf  used on input line 214.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [21 <../figures/D09_fig18_ME_over_NRC_real_investment_ratio.pdf>]
+Overfull \hbox (208.17622pt too wide) in paragraph at lines 221--222
+\T1/cmr/m/n/10.95 This sec-tion iso-lates net-over-gross di-ag-nos-tics from ba
+se-line cap-i-tal mea-sures. Fig-ures \{}ref{fig:D09_fig20_net_over_gross_curre
+nt_cost_ME},
+ []
+
+
+Overfull \hbox (117.49802pt too wide) in paragraph at lines 221--222
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig21_net_over_gross_current_cost_NRC}, \{}ref
+{fig:D09_fig22_net_over_gross_current_cost_capacity}
+ []
+
+<../figures/D09_fig20_net_over_gross_current_cost_ME.pdf, id=507, 519.9425pt x 
+317.185pt>
+File: ../figures/D09_fig20_net_over_gross_current_cost_ME.pdf Graphic file (typ
+e pdf)
+<use ../figures/D09_fig20_net_over_gross_current_cost_ME.pdf>
+Package pdftex.def Info: ../figures/D09_fig20_net_over_gross_current_cost_ME.pd
+f  used on input line 228.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+[22 <../figures/D09_fig19_ME_over_NRC_current_investment_ratio.pdf>]
+<../figures/D09_fig21_net_over_gross_current_cost_NRC.pdf, id=527, 519.9425pt x
+ 317.185pt>
+File: ../figures/D09_fig21_net_over_gross_current_cost_NRC.pdf Graphic file (ty
+pe pdf)
+<use ../figures/D09_fig21_net_over_gross_current_cost_NRC.pdf>
+Package pdftex.def Info: ../figures/D09_fig21_net_over_gross_current_cost_NRC.p
+df  used on input line 235.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [23 <../figures/D09_fig20_net_over_gross_current_cost_ME.pdf>]
+<../figures/D09_fig22_net_over_gross_current_cost_capacity.pdf, id=547, 519.942
+5pt x 317.185pt>
+File: ../figures/D09_fig22_net_over_gross_current_cost_capacity.pdf Graphic fil
+e (type pdf)
+<use ../figures/D09_fig22_net_over_gross_current_cost_capacity.pdf>
+Package pdftex.def Info: ../figures/D09_fig22_net_over_gross_current_cost_capac
+ity.pdf  used on input line 242.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [24 <../figures/D09_fig21_net_over_gross_current_cost_NRC.pdf>]
+Overfull \hbox (5.17232pt too wide) in paragraph at lines 248--248
+[]\T1/cmr/bx/n/14.4 Capital-Measure Sta-tus Map: Base-line, Com-par-i-son, Revi
+ew-Only,
+ []
+
+
+Overfull \hbox (26.78694pt too wide) in paragraph at lines 249--250
+\T1/cmr/m/n/10.95 This sec-tion re-pairs the status-map flow by plac-ing the st
+a-tus map, base-line com-par-i-son, and parked/excluded
+ []
+
+
+Overfull \hbox (221.82123pt too wide) in paragraph at lines 249--250
+\T1/cmr/m/n/10.95 view to-gether. Fig-ures \{}ref{fig:D09_fig23_capital_measure
+_status_map}, \{}ref{fig:D09_fig24_baseline_vs_accounting_comparison_capital},
+ []
+
+<../figures/D09_fig23_capital_measure_status_map.pdf, id=567, 519.9425pt x 317.
+185pt>
+File: ../figures/D09_fig23_capital_measure_status_map.pdf Graphic file (type pd
+f)
+<use ../figures/D09_fig23_capital_measure_status_map.pdf>
+Package pdftex.def Info: ../figures/D09_fig23_capital_measure_status_map.pdf  u
+sed on input line 256.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+[25 <../figures/D09_fig22_net_over_gross_current_cost_capacity.pdf>]
+<../figures/D09_fig24_baseline_vs_accounting_comparison_capital.pdf, id=588, 51
+9.9425pt x 317.185pt>
+File: ../figures/D09_fig24_baseline_vs_accounting_comparison_capital.pdf Graphi
+c file (type pdf)
+<use ../figures/D09_fig24_baseline_vs_accounting_comparison_capital.pdf>
+Package pdftex.def Info: ../figures/D09_fig24_baseline_vs_accounting_comparison
+_capital.pdf  used on input line 263.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [26 <../figures/D09_fig23_capital_measure_status_map.pdf>]
+<../figures/D09_fig25_parked_excluded_capital_objects_appendix.pdf, id=609, 519
+.9425pt x 317.185pt>
+File: ../figures/D09_fig25_parked_excluded_capital_objects_appendix.pdf Graphic
+ file (type pdf)
+<use ../figures/D09_fig25_parked_excluded_capital_objects_appendix.pdf>
+Package pdftex.def Info: ../figures/D09_fig25_parked_excluded_capital_objects_a
+ppendix.pdf  used on input line 270.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [27 <../figures/D09_fig24_baseline_vs_accounting_comparison_capital.pdf>]
+Overfull \hbox (95.01648pt too wide) in paragraph at lines 277--278
+\T1/cmr/m/n/10.95 pKN is the bridge be-tween real and current-cost GPIM ob-ject
+s. Fig-ures \{}ref{fig:D09_fig26_pKN_ME_NRC_capacity},
+ []
+
+
+Overfull \hbox (23.16447pt too wide) in paragraph at lines 277--278
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig27_pKN_ME_over_NRC}, \{}ref{fig:D09_fig28_c
+urrent_vs_real_investment_ME},
+ []
+
+<../figures/D09_fig26_pKN_ME_NRC_capacity.pdf, id=629, 519.9425pt x 317.185pt>
+File: ../figures/D09_fig26_pKN_ME_NRC_capacity.pdf Graphic file (type pdf)
+<use ../figures/D09_fig26_pKN_ME_NRC_capacity.pdf>
+Package pdftex.def Info: ../figures/D09_fig26_pKN_ME_NRC_capacity.pdf  used on 
+input line 284.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+[28 <../figures/D09_fig25_parked_excluded_capital_objects_appendix.pdf>]
+<../figures/D09_fig27_pKN_ME_over_NRC.pdf, id=649, 519.9425pt x 317.185pt>
+File: ../figures/D09_fig27_pKN_ME_over_NRC.pdf Graphic file (type pdf)
+<use ../figures/D09_fig27_pKN_ME_over_NRC.pdf>
+Package pdftex.def Info: ../figures/D09_fig27_pKN_ME_over_NRC.pdf  used on inpu
+t line 291.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+
+[29 <../figures/D09_fig26_pKN_ME_NRC_capacity.pdf>]
+<../figures/D09_fig28_current_vs_real_investment_ME.pdf, id=669, 519.9425pt x 3
+17.185pt>
+File: ../figures/D09_fig28_current_vs_real_investment_ME.pdf Graphic file (type
+ pdf)
+<use ../figures/D09_fig28_current_vs_real_investment_ME.pdf>
+Package pdftex.def Info: ../figures/D09_fig28_current_vs_real_investment_ME.pdf
+  used on input line 298.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [30 <../figures/D09_fig27_pKN_ME_over_NRC.pdf>]
+<../figures/D09_fig29_current_vs_real_investment_NRC.pdf, id=689, 519.9425pt x 
+317.185pt>
+File: ../figures/D09_fig29_current_vs_real_investment_NRC.pdf Graphic file (typ
+e pdf)
+<use ../figures/D09_fig29_current_vs_real_investment_NRC.pdf>
+Package pdftex.def Info: ../figures/D09_fig29_current_vs_real_investment_NRC.pd
+f  used on input line 305.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [31 <../figures/D09_fig28_current_vs_real_investment_ME.pdf>]
+Overfull \hbox (100.18854pt too wide) in paragraph at lines 312--313
+\T1/cmr/m/n/10.95 ures \{}ref{fig:D09_fig30_real_output_and_real_capacity_level
+s}, \{}ref{fig:D09_fig31_real_output_capacity_ratio},
+ []
+
+
+Overfull \hbox (138.43216pt too wide) in paragraph at lines 312--313
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig32_real_capacity_output_ratio}, \{}ref{fig:
+D09_fig33_nominal_NFC_GVA_and_current_capacity_levels},
+ []
+
+
+Overfull \hbox (202.2009pt too wide) in paragraph at lines 312--313
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig34_nominal_NFC_GVA_current_capacity_ratio},
+ \{}ref{fig:D09_fig35_scatter_Yreal_NFC_GVA_vs_Kreal_capacity},
+ []
+
+
+Overfull \hbox (168.4156pt too wide) in paragraph at lines 312--313
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig36_scatter_Yreal_NFC_GVA_vs_Kreal_ME}, \{}r
+ef{fig:D09_fig37_scatter_Yreal_NFC_GVA_vs_Kreal_NRC}
+ []
+
+<../figures/D09_fig30_real_output_and_real_capacity_levels.pdf, id=710, 519.942
+5pt x 317.185pt>
+File: ../figures/D09_fig30_real_output_and_real_capacity_levels.pdf Graphic fil
+e (type pdf)
+<use ../figures/D09_fig30_real_output_and_real_capacity_levels.pdf>
+Package pdftex.def Info: ../figures/D09_fig30_real_output_and_real_capacity_lev
+els.pdf  used on input line 319.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+[32 <../figures/D09_fig29_current_vs_real_investment_NRC.pdf>]
+<../figures/D09_fig31_real_output_capacity_ratio.pdf, id=730, 519.9425pt x 317.
+185pt>
+File: ../figures/D09_fig31_real_output_capacity_ratio.pdf Graphic file (type pd
+f)
+<use ../figures/D09_fig31_real_output_capacity_ratio.pdf>
+Package pdftex.def Info: ../figures/D09_fig31_real_output_capacity_ratio.pdf  u
+sed on input line 326.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [33 <../figures/D09_fig30_real_output_and_real_capacity_levels.pdf>]
+<../figures/D09_fig32_real_capacity_output_ratio.pdf, id=751, 519.9425pt x 317.
+185pt>
+File: ../figures/D09_fig32_real_capacity_output_ratio.pdf Graphic file (type pd
+f)
+<use ../figures/D09_fig32_real_capacity_output_ratio.pdf>
+Package pdftex.def Info: ../figures/D09_fig32_real_capacity_output_ratio.pdf  u
+sed on input line 333.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [34 <../figures/D09_fig31_real_output_capacity_ratio.pdf>]
+<../figures/D09_fig33_nominal_NFC_GVA_and_current_capacity_levels.pdf, id=771, 
+519.9425pt x 317.185pt>
+File: ../figures/D09_fig33_nominal_NFC_GVA_and_current_capacity_levels.pdf Grap
+hic file (type pdf)
+<use ../figures/D09_fig33_nominal_NFC_GVA_and_current_capacity_levels.pdf>
+Package pdftex.def Info: ../figures/D09_fig33_nominal_NFC_GVA_and_current_capac
+ity_levels.pdf  used on input line 340.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [35 <../figures/D09_fig32_real_capacity_output_ratio.pdf>]
+<../figures/D09_fig34_nominal_NFC_GVA_current_capacity_ratio.pdf, id=791, 519.9
+425pt x 317.185pt>
+File: ../figures/D09_fig34_nominal_NFC_GVA_current_capacity_ratio.pdf Graphic f
+ile (type pdf)
+<use ../figures/D09_fig34_nominal_NFC_GVA_current_capacity_ratio.pdf>
+Package pdftex.def Info: ../figures/D09_fig34_nominal_NFC_GVA_current_capacity_
+ratio.pdf  used on input line 347.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [36 <../figures/D09_fig33_nominal_NFC_GVA_and_current_capacity_levels.pdf>]
+<../figures/D09_fig35_scatter_Yreal_NFC_GVA_vs_Kreal_capacity.pdf, id=811, 519.
+9425pt x 317.185pt>
+File: ../figures/D09_fig35_scatter_Yreal_NFC_GVA_vs_Kreal_capacity.pdf Graphic 
+file (type pdf)
+<use ../figures/D09_fig35_scatter_Yreal_NFC_GVA_vs_Kreal_capacity.pdf>
+Package pdftex.def Info: ../figures/D09_fig35_scatter_Yreal_NFC_GVA_vs_Kreal_ca
+pacity.pdf  used on input line 354.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [37 <../figures/D09_fig34_nominal_NFC_GVA_current_capacity_ratio.pdf>]
+<../figures/D09_fig36_scatter_Yreal_NFC_GVA_vs_Kreal_ME.pdf, id=832, 519.9425pt
+ x 317.185pt>
+File: ../figures/D09_fig36_scatter_Yreal_NFC_GVA_vs_Kreal_ME.pdf Graphic file (
+type pdf)
+<use ../figures/D09_fig36_scatter_Yreal_NFC_GVA_vs_Kreal_ME.pdf>
+Package pdftex.def Info: ../figures/D09_fig36_scatter_Yreal_NFC_GVA_vs_Kreal_ME
+.pdf  used on input line 361.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [38 <../figures/D09_fig35_scatter_Yreal_NFC_GVA_vs_Kreal_capacity.pdf>]
+<../figures/D09_fig37_scatter_Yreal_NFC_GVA_vs_Kreal_NRC.pdf, id=854, 519.9425p
+t x 317.185pt>
+File: ../figures/D09_fig37_scatter_Yreal_NFC_GVA_vs_Kreal_NRC.pdf Graphic file 
+(type pdf)
+<use ../figures/D09_fig37_scatter_Yreal_NFC_GVA_vs_Kreal_NRC.pdf>
+Package pdftex.def Info: ../figures/D09_fig37_scatter_Yreal_NFC_GVA_vs_Kreal_NR
+C.pdf  used on input line 368.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+
+[39 <../figures/D09_fig36_scatter_Yreal_NFC_GVA_vs_Kreal_ME.pdf>]
+Overfull \hbox (172.62035pt too wide) in paragraph at lines 375--376
+\T1/cmr/m/n/10.95 ap-pendix. Fig-ures \{}ref{fig:D09_fig38_NFC_wage_share_varia
+nts}, \{}ref{fig:D09_fig39_NFC_gross_net_surplus_share_variants},
+ []
+
+
+Overfull \hbox (51.82648pt too wide) in paragraph at lines 375--376
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig40_NFC_CFC_share}, \{}ref{fig:D09_fig41_COR
+P_wage_share_reconciliation_variants},
+ []
+
+<../figures/D09_fig38_NFC_wage_share_variants.pdf, id=876, 519.9425pt x 317.185
+pt>
+File: ../figures/D09_fig38_NFC_wage_share_variants.pdf Graphic file (type pdf)
+<use ../figures/D09_fig38_NFC_wage_share_variants.pdf>
+Package pdftex.def Info: ../figures/D09_fig38_NFC_wage_share_variants.pdf  used
+ on input line 382.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+[40 <../figures/D09_fig37_scatter_Yreal_NFC_GVA_vs_Kreal_NRC.pdf>]
+<../figures/D09_fig39_NFC_gross_net_surplus_share_variants.pdf, id=899, 519.942
+5pt x 317.185pt>
+File: ../figures/D09_fig39_NFC_gross_net_surplus_share_variants.pdf Graphic fil
+e (type pdf)
+<use ../figures/D09_fig39_NFC_gross_net_surplus_share_variants.pdf>
+Package pdftex.def Info: ../figures/D09_fig39_NFC_gross_net_surplus_share_varia
+nts.pdf  used on input line 389.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [41 <../figures/D09_fig38_NFC_wage_share_variants.pdf>]
+<../figures/D09_fig40_NFC_CFC_share.pdf, id=919, 519.9425pt x 317.185pt>
+File: ../figures/D09_fig40_NFC_CFC_share.pdf Graphic file (type pdf)
+<use ../figures/D09_fig40_NFC_CFC_share.pdf>
+Package pdftex.def Info: ../figures/D09_fig40_NFC_CFC_share.pdf  used on input 
+line 396.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [42 <../figures/D09_fig39_NFC_gross_net_surplus_share_variants.pdf>]
+<../figures/D09_fig41_CORP_wage_share_reconciliation_variants.pdf, id=939, 519.
+9425pt x 317.185pt>
+File: ../figures/D09_fig41_CORP_wage_share_reconciliation_variants.pdf Graphic 
+file (type pdf)
+<use ../figures/D09_fig41_CORP_wage_share_reconciliation_variants.pdf>
+Package pdftex.def Info: ../figures/D09_fig41_CORP_wage_share_reconciliation_va
+riants.pdf  used on input line 403.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [43 <../figures/D09_fig40_NFC_CFC_share.pdf>]
+<../figures/D09_fig42_CORP_surplus_share_reconciliation_variants.pdf, id=960, 5
+19.9425pt x 317.185pt>
+File: ../figures/D09_fig42_CORP_surplus_share_reconciliation_variants.pdf Graph
+ic file (type pdf)
+<use ../figures/D09_fig42_CORP_surplus_share_reconciliation_variants.pdf>
+Package pdftex.def Info: ../figures/D09_fig42_CORP_surplus_share_reconciliation
+_variants.pdf  used on input line 410.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+[44 <../figures/D09_fig41_CORP_wage_share_reconciliation_variants.pdf>]
+Overfull \hbox (178.2787pt too wide) in paragraph at lines 417--418
+\T1/cmr/m/n/10.95 This sec-tion places the financial-transfer safe-guard where 
+it is in-ter-preted. Fig-ure \{}ref{fig:D09_fig43_surplus_accounting_ladder_bri
+dge}
+ []
+
+(../tables/D09_R_table_financial_transfer_double_counting_safeguard.tex)
+<../figures/D09_fig43_surplus_accounting_ladder_bridge.pdf, id=980, 519.9425pt 
+x 317.185pt>
+File: ../figures/D09_fig43_surplus_accounting_ladder_bridge.pdf Graphic file (t
+ype pdf)
+<use ../figures/D09_fig43_surplus_accounting_ladder_bridge.pdf>
+Package pdftex.def Info: ../figures/D09_fig43_surplus_accounting_ladder_bridge.
+pdf  used on input line 425.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+
+Overfull \hbox (83.50299pt too wide) in paragraph at lines 2--428
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--428
+
+ []
+
+[45 <../figures/D09_fig42_CORP_surplus_share_reconciliation_variants.pdf>]
+Overfull \hbox (110.45096pt too wide) in paragraph at lines 432--433
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig44_wage_share_vs_ME_over_NRC}, \{}ref{fig:D
+09_fig45_wage_share_vs_ME_share_of_capacity},
+ []
+
+
+Overfull \hbox (116.1222pt too wide) in paragraph at lines 432--433
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig46_wage_share_vs_capacity_output_ratio}, \{
+}ref{fig:D09_fig47_surplus_share_vs_ME_over_NRC},
+ []
+
+
+Overfull \hbox (13.28581pt too wide) in paragraph at lines 432--433
+\T1/cmr/m/n/10.95 \{}ref{fig:D09_fig48_surplus_share_vs_capacity_output_ratio} 
+re-late dis-tri-bu-tion shares to ME/NRC
+ []
+
+<../figures/D09_fig44_wage_share_vs_ME_over_NRC.pdf, id=1000, 519.9425pt x 317.
+185pt>
+File: ../figures/D09_fig44_wage_share_vs_ME_over_NRC.pdf Graphic file (type pdf
+)
+<use ../figures/D09_fig44_wage_share_vs_ME_over_NRC.pdf>
+Package pdftex.def Info: ../figures/D09_fig44_wage_share_vs_ME_over_NRC.pdf  us
+ed on input line 439.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+[46 <../figures/D09_fig43_surplus_accounting_ladder_bridge.pdf>]
+<../figures/D09_fig45_wage_share_vs_ME_share_of_capacity.pdf, id=1021, 519.9425
+pt x 317.185pt>
+File: ../figures/D09_fig45_wage_share_vs_ME_share_of_capacity.pdf Graphic file 
+(type pdf)
+<use ../figures/D09_fig45_wage_share_vs_ME_share_of_capacity.pdf>
+Package pdftex.def Info: ../figures/D09_fig45_wage_share_vs_ME_share_of_capacit
+y.pdf  used on input line 446.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+<../figures/D09_fig46_wage_share_vs_capacity_output_ratio.pdf, id=1022, 519.942
+5pt x 317.185pt>
+File: ../figures/D09_fig46_wage_share_vs_capacity_output_ratio.pdf Graphic file
+ (type pdf)
+<use ../figures/D09_fig46_wage_share_vs_capacity_output_ratio.pdf>
+Package pdftex.def Info: ../figures/D09_fig46_wage_share_vs_capacity_output_rat
+io.pdf  used on input line 453.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [47 <../figures/D09_fig44_wage_share_vs_ME_over_NRC.pdf> <../figures/D09_fig45
+_wage_share_vs_ME_share_of_capacity.pdf
+
+pdfTeX warning: pdflatex.exe (file ../figures/D09_fig45_wage_share_vs_ME_share_
+of_capacity.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>]
+<../figures/D09_fig47_surplus_share_vs_ME_over_NRC.pdf, id=1060, 519.9425pt x 3
+17.185pt>
+File: ../figures/D09_fig47_surplus_share_vs_ME_over_NRC.pdf Graphic file (type 
+pdf)
+<use ../figures/D09_fig47_surplus_share_vs_ME_over_NRC.pdf>
+Package pdftex.def Info: ../figures/D09_fig47_surplus_share_vs_ME_over_NRC.pdf 
+ used on input line 460.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+<../figures/D09_fig48_surplus_share_vs_capacity_output_ratio.pdf, id=1061, 519.
+9425pt x 317.185pt>
+File: ../figures/D09_fig48_surplus_share_vs_capacity_output_ratio.pdf Graphic f
+ile (type pdf)
+<use ../figures/D09_fig48_surplus_share_vs_capacity_output_ratio.pdf>
+Package pdftex.def Info: ../figures/D09_fig48_surplus_share_vs_capacity_output_
+ratio.pdf  used on input line 467.
+(pdftex.def)             Requested size: 445.4722pt x 271.75255pt.
+ [48 <../figures/D09_fig46_wage_share_vs_capacity_output_ratio.pdf> <../figures
+/D09_fig47_surplus_share_vs_ME_over_NRC.pdf
+
+pdfTeX warning: pdflatex.exe (file ../figures/D09_fig47_surplus_share_vs_ME_ove
+r_NRC.pdf): PDF inclusion: multiple pdfs with page group included in a single p
+age
+>] (../tables/D09_R_table_service_life_literature_placeholders.tex)
+Overfull \hbox (2282.93408pt too wide) in paragraph at lines 2--487
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--487
+
+ []
+
+[49 <../figures/D09_fig48_surplus_share_vs_capacity_output_ratio.pdf>]
+(../tables/D09_R_table_human_decision_checklist.tex)
+Overfull \hbox (1182.06929pt too wide) in paragraph at lines 2--495
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--495
+
+ []
+
+[50] (./D09_R_visual_validation_report_revised.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+ ***********
+Package rerunfilecheck Info: File `D09_R_visual_validation_report_revised.out' 
+has not changed.
+(rerunfilecheck)             Checksum: 8730638E0FB106A36DAF670126507013;5675.
+ ) 
+Here is how much of TeX's memory you used:
+ 10724 strings out of 467349
+ 181853 string characters out of 5419862
+ 601957 words of memory out of 5000000
+ 39549 multiletter control sequences out of 15000+600000
+ 636898 words of font info for 62 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,8n,79p,901b,466s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
+live/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/s
+fbx1095.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pf
+b><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texl
+ive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2026/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
+Output written on D09_R_visual_validation_report_revised.pdf (50 pages, 1686614
+ bytes).
+PDF statistics:
+ 1204 PDF objects out of 1440 (max. 8388607)
+ 873 compressed objects within 9 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 409 words of extra memory for PDF output out of 10000 (max. 10000000)
+

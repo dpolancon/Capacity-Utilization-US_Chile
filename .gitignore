@@ -65,4 +65,20 @@ output/**/*.log
 output/**/*.aux
 output/**/*.out
 
+# ── Versioned research artifacts ─────────────────────
+# These artifacts are part of the cross-machine research record.
+!docs/**/*.pdf
+!chapter2_paper/**/*.pdf
+!chapter2_vault/**/*.pdf
+!chapter2_vault/**/*.png
+!output/**
+!reports/**
+
+# Machine-local state remains excluded.
+.Rhistory
+**/.Rhistory
+.Rproj.user/
+chapter2_vault/.obsidian/workspace.json
+chapter2_vault/.obsidian/graph.json
+
 

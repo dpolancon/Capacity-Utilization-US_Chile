@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {1}Purpose and How to Read This Report}{3}{section.1}%
+\contentsline {section}{\numberline {2}Locked Lineage and Report-Only Boundary}{3}{section.2}%
+\contentsline {section}{\numberline {3}GPIM Equations and Baseline Capital-Stock Architecture}{3}{section.3}%
+\contentsline {section}{\numberline {4}GPIM Real Stock Levels: Accumulation Tendency and NRC Decline}{3}{section.4}%
+\contentsline {section}{\numberline {5}GPIM Current-Cost Stock Levels and Valuation Interpretation}{7}{section.5}%
+\contentsline {section}{\numberline {6}Warmup, Survival Profiles, and the NRC Service-Life Concern}{11}{section.6}%
+\contentsline {section}{\numberline {7}Stock-Flow and Current-Cost Identity Audits}{13}{section.7}%
+\contentsline {section}{\numberline {8}ME/NRC Composition and Mechanization Diagnostics}{16}{section.8}%
+\contentsline {section}{\numberline {9}Net-over-Gross Comparisons and Concept Boundaries}{22}{section.9}%
+\contentsline {section}{\numberline {10}Capital-Measure Status Map: Baseline, Comparison, Review-Only, Parked, Excluded}{25}{section.10}%
+\contentsline {section}{\numberline {11}pKN and Investment-Flow Diagnostics}{28}{section.11}%
+\contentsline {section}{\numberline {12}Output-Capital Level Relations}{32}{section.12}%
+\contentsline {section}{\numberline {13}Distribution and Surplus-Share Inspection}{40}{section.13}%
+\contentsline {section}{\numberline {14}Financial-Sector Transfer and Double-Counting Safeguards}{45}{section.14}%
+\contentsline {section}{\numberline {15}Capital-Output-Distribution Relational Inspection}{46}{section.15}%
+\contentsline {section}{\numberline {16}Human Interpretation of the NRC Decline}{49}{section.16}%
+\contentsline {section}{\numberline {17}Future Sensitivity Design: NRC Service Life and Warmup}{49}{section.17}%
+\contentsline {section}{\numberline {18}Human Decision Checklist}{50}{section.18}%
+\contentsline {section}{\numberline {A}Secondary Figures}{50}{appendix.A}%
+\contentsline {section}{\numberline {B}Audit Tables}{50}{appendix.B}%
+\contentsline {section}{\numberline {C}Figure Manifest}{50}{appendix.C}%

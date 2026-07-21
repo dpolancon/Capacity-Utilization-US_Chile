@@ -1,0 +1,698 @@
+Initial Win CP for (console input, console output, system): (CP65001, CP65001, CP65001)
+I changed them all to CP65001
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  figures/D09_fig01_real_gpim_stock_levels.pdf
+  figures/D09_fig02_current_cost_gpim_stock_levels.pdf
+  figures/D09_fig03_real_gpim_stock_levels_logscale.pdf
+  figures/D09_fig04_current_cost_gpim_stock_levels_logscale.pdf
+  figures/D09_fig05_real_gpim_indices_1947_100.pdf
+  figures/D09_fig06_real_gpim_indices_2017_100.pdf
+  figures/D09_fig07_current_cost_gpim_indices_1947_100.pdf
+  figures/D09_fig08_current_cost_gpim_indices_2017_100.pdf
+  figures/D09_fig09_gpim_warmup_timeline.pdf
+  figures/D09_fig10_locked_survival_profiles_ME_NRC.pdf
+  figures/D09_fig11_real_investment_scale_residuals.pdf
+  figures/D09_fig12_current_cost_identity_residuals.pdf
+  figures/D09_fig13_capacity_identity_residuals.pdf
+  figures/D09_fig14_ME_over_NRC_real_stock_ratio.pdf
+  figures/D09_fig15_ME_over_NRC_current_stock_ratio.pdf
+  figures/D09_fig16_ME_NRC_real_capacity_shares.pdf
+  figures/D09_fig17_ME_NRC_current_capacity_shares.pdf
+  figures/D09_fig18_ME_over_NRC_real_investment_ratio.pdf
+  figures/D09_fig19_ME_over_NRC_current_investment_ratio.pdf
+  figures/D09_fig20_net_over_gross_current_cost_ME.pdf
+  figures/D09_fig21_net_over_gross_current_cost_NRC.pdf
+  figures/D09_fig22_net_over_gross_current_cost_capacity.pdf
+  figures/D09_fig23_capital_measure_status_map.pdf
+  figures/D09_fig24_baseline_vs_accounting_comparison_capital.pdf
+  figures/D09_fig25_parked_excluded_capital_objects_appendix.pdf
+  figures/D09_fig26_pKN_ME_NRC_capacity.pdf
+  figures/D09_fig27_pKN_ME_over_NRC.pdf
+  figures/D09_fig28_current_vs_real_investment_ME.pdf
+  figures/D09_fig29_current_vs_real_investment_NRC.pdf
+  figures/D09_fig30_real_output_and_real_capacity_levels.pdf
+  figures/D09_fig31_real_output_capacity_ratio.pdf
+  figures/D09_fig32_real_capacity_output_ratio.pdf
+  figures/D09_fig33_nominal_NFC_GVA_and_current_capacity_levels.pdf
+  figures/D09_fig34_nominal_NFC_GVA_current_capacity_ratio.pdf
+  figures/D09_fig35_scatter_Yreal_NFC_GVA_vs_Kreal_capacity.pdf
+  figures/D09_fig36_scatter_Yreal_NFC_GVA_vs_Kreal_ME.pdf
+  figures/D09_fig37_scatter_Yreal_NFC_GVA_vs_Kreal_NRC.pdf
+  figures/D09_fig38_NFC_wage_share_variants.pdf
+  figures/D09_fig39_NFC_gross_net_surplus_share_variants.pdf
+  figures/D09_fig40_NFC_CFC_share.pdf
+  figures/D09_fig41_CORP_wage_share_reconciliation_variants.pdf
+  figures/D09_fig42_CORP_surplus_share_reconciliation_variants.pdf
+  figures/D09_fig43_surplus_accounting_ladder_bridge.pdf
+  figures/D09_fig44_wage_share_vs_ME_over_NRC.pdf
+  figures/D09_fig45_wage_share_vs_ME_share_of_capacity.pdf
+  figures/D09_fig46_wage_share_vs_capacity_output_ratio.pdf
+  figures/D09_fig47_surplus_share_vs_ME_over_NRC.pdf
+  figures/D09_fig48_surplus_share_vs_capacity_output_ratio.pdf
+Category 'changed_user':
+  figures/D09_fig01_real_gpim_stock_levels.pdf
+  figures/D09_fig02_current_cost_gpim_stock_levels.pdf
+  figures/D09_fig03_real_gpim_stock_levels_logscale.pdf
+  figures/D09_fig04_current_cost_gpim_stock_levels_logscale.pdf
+  figures/D09_fig05_real_gpim_indices_1947_100.pdf
+  figures/D09_fig06_real_gpim_indices_2017_100.pdf
+  figures/D09_fig07_current_cost_gpim_indices_1947_100.pdf
+  figures/D09_fig08_current_cost_gpim_indices_2017_100.pdf
+  figures/D09_fig09_gpim_warmup_timeline.pdf
+  figures/D09_fig10_locked_survival_profiles_ME_NRC.pdf
+  figures/D09_fig11_real_investment_scale_residuals.pdf
+  figures/D09_fig12_current_cost_identity_residuals.pdf
+  figures/D09_fig13_capacity_identity_residuals.pdf
+  figures/D09_fig14_ME_over_NRC_real_stock_ratio.pdf
+  figures/D09_fig15_ME_over_NRC_current_stock_ratio.pdf
+  figures/D09_fig16_ME_NRC_real_capacity_shares.pdf
+  figures/D09_fig17_ME_NRC_current_capacity_shares.pdf
+  figures/D09_fig18_ME_over_NRC_real_investment_ratio.pdf
+  figures/D09_fig19_ME_over_NRC_current_investment_ratio.pdf
+  figures/D09_fig20_net_over_gross_current_cost_ME.pdf
+  figures/D09_fig21_net_over_gross_current_cost_NRC.pdf
+  figures/D09_fig22_net_over_gross_current_cost_capacity.pdf
+  figures/D09_fig23_capital_measure_status_map.pdf
+  figures/D09_fig24_baseline_vs_accounting_comparison_capital.pdf
+  figures/D09_fig25_parked_excluded_capital_objects_appendix.pdf
+  figures/D09_fig26_pKN_ME_NRC_capacity.pdf
+  figures/D09_fig27_pKN_ME_over_NRC.pdf
+  figures/D09_fig28_current_vs_real_investment_ME.pdf
+  figures/D09_fig29_current_vs_real_investment_NRC.pdf
+  figures/D09_fig30_real_output_and_real_capacity_levels.pdf
+  figures/D09_fig31_real_output_capacity_ratio.pdf
+  figures/D09_fig32_real_capacity_output_ratio.pdf
+  figures/D09_fig33_nominal_NFC_GVA_and_current_capacity_levels.pdf
+  figures/D09_fig34_nominal_NFC_GVA_current_capacity_ratio.pdf
+  figures/D09_fig35_scatter_Yreal_NFC_GVA_vs_Kreal_capacity.pdf
+  figures/D09_fig36_scatter_Yreal_NFC_GVA_vs_Kreal_ME.pdf
+  figures/D09_fig37_scatter_Yreal_NFC_GVA_vs_Kreal_NRC.pdf
+  figures/D09_fig38_NFC_wage_share_variants.pdf
+  figures/D09_fig39_NFC_gross_net_surplus_share_variants.pdf
+  figures/D09_fig40_NFC_CFC_share.pdf
+  figures/D09_fig41_CORP_wage_share_reconciliation_variants.pdf
+  figures/D09_fig42_CORP_surplus_share_reconciliation_variants.pdf
+  figures/D09_fig43_surplus_accounting_ladder_bridge.pdf
+  figures/D09_fig44_wage_share_vs_ME_over_NRC.pdf
+  figures/D09_fig45_wage_share_vs_ME_share_of_capacity.pdf
+  figures/D09_fig46_wage_share_vs_capacity_output_ratio.pdf
+  figures/D09_fig47_surplus_share_vs_ME_over_NRC.pdf
+  figures/D09_fig48_surplus_share_vs_capacity_output_ratio.pdf
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -halt-on-error -recorder  "D09_visual_validation_report.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./D09_visual_validation_report.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+(c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2026/texmf-dist/tex/latex/base/size11.clo))
+(c:/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(c:/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+(c:/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(c:/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(c:/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(c:/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(c:/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(c:/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(c:/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(c:/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(c:/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(c:/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(c:/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+(c:/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(c:/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(c:/texlive/2026/texmf-dist/tex/latex/float/float.sty)
+(c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./D09_visual_validation_report.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./D09_visual_validation_report.out) (./D09_visual_validation_report.out)
+(./D09_visual_validation_report.toc [1{c:/texlive/2026/texmf-var/fonts/map/pdft
+ex/updmap/pdftex.map}]) [2] (./tables/D09_table_source_lineage.tex)
+Overfull \hbox (102.75607pt too wide) in paragraph at lines 2--18
+[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--18
+
+(./tables/D09_table_locked_equations.tex
+(c:/texlive/2026/texmf-dist/tex/latex/base/omscmr.fd))
+Overfull \hbox (69.50021pt too wide) in paragraph at lines 2--20
+[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--20
+
+[3] (./tables/D09_table_warmup_sufficiency.tex)
+Overfull \hbox (837.84256pt too wide) in paragraph at lines 2--36
+[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--36
+
+[4{c:/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[5
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.36 \section
+             {Stock-Flow and Valuation Consistency Audits}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.36 \section
+             {Stock-Flow and Valuation Consistency Audits} <./figures/D09_fig01
+_real_gpim_stock_levels.pdf> <./figures/D09_fig02_current_cost_gpim_stock_level
+s.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig02_current_cost_gpim_stock_
+levels.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>]
+Overfull \vbox (33.95377pt too high) has occurred while \output is active
+[6
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.36 \section
+             {Stock-Flow and Valuation Consistency Audits}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.36 \section
+             {Stock-Flow and Valuation Consistency Audits} <./figures/D09_fig03
+_real_gpim_stock_levels_logscale.pdf> <./figures/D09_fig04_current_cost_gpim_st
+ock_levels_logscale.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig04_current_cost_gpim_stock_
+levels_logscale.pdf): PDF inclusion: multiple pdfs with page group included in 
+a single page
+>] (./tables/D09_table_gpim_identity_residuals.tex)
+Overfull \hbox (53.26266pt too wide) in paragraph at lines 2--41
+[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--41
+
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.41 \section
+             {ME/NRC Composition and Mechanization Diagnostics}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.41 \section
+             {ME/NRC Composition and Mechanization Diagnostics} <./figures/D09_
+fig05_real_gpim_indices_1947_100.pdf> <./figures/D09_fig06_real_gpim_indices_20
+17_100.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig06_real_gpim_indices_2017_1
+00.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+
+>]
+Overfull \vbox (107.42873pt too high) has occurred while \output is active
+[8
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.41 \section
+             {ME/NRC Composition and Mechanization Diagnostics}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.41 \section
+             {ME/NRC Composition and Mechanization Diagnostics} <./figures/D09_
+fig07_current_cost_gpim_indices_1947_100.pdf> <./figures/D09_fig08_current_cost
+_gpim_indices_2017_100.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig08_current_cost_gpim_indice
+s_2017_100.pdf): PDF inclusion: multiple pdfs with page group included in a sin
+gle page
+>] [9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.49 ...s current-cost ME comparison.}\end{figure}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.49 ...s current-cost ME comparison.}\end{figure}
+                                                   <./figures/D09_fig09_gpim_wa
+rmup_timeline.pdf> <./figures/D09_fig10_locked_survival_profiles_ME_NRC.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig10_locked_survival_profiles
+_ME_NRC.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>] (./tables/D09_table_capital_measure_status_classes.tex)
+Overfull \vbox (250.09073pt too high) has occurred while \output is active
+[10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.56 \section
+             {Price and Valuation Diagnostics}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.56 \section
+             {Price and Valuation Diagnostics} <./figures/D09_fig11_real_invest
+ment_scale_residuals.pdf> <./figures/D09_fig12_current_cost_identity_residuals.
+pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig12_current_cost_identity_re
+siduals.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+>] [11
+pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.62 ...e 30 output-capital relation.}\end{figure}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.62 ...e 30 output-capital relation.}\end{figure}
+                                                   <./figures/D09_fig13_capacit
+y_identity_residuals.pdf> <./figures/D09_fig14_ME_over_NRC_real_stock_ratio.pdf
+
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig14_ME_over_NRC_real_stock_r
+atio.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
+ge
+>] (./tables/D09_table_distribution_measure_status_classes.tex)
+Overfull \hbox (97.63393pt too wide) in paragraph at lines 2--78
+[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--78
+
+
+Overfull \vbox (180.3593pt too high) has occurred while \output is active
+[12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.78 \section
+             {Financial-Sector Transfer and Double-Counting Safeguards}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.78 \section
+             {Financial-Sector Transfer and Double-Counting Safeguards} <./figu
+res/D09_fig15_ME_over_NRC_current_stock_ratio.pdf> <./figures/D09_fig16_ME_NRC_
+real_capacity_shares.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig16_ME_NRC_real_capacity_sha
+res.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
+e
+>] (./tables/D09_table_financial_transfer_double_counting_safeguard.tex
+[13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 
+    
+pdfTeX warning (ext4): destination with the same identifier (name{figure.18}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 
+     <./figures/D09_fig17_ME_NRC_current_capacity_shares.pdf> <./figures/D09_fi
+g18_ME_over_NRC_real_investment_ratio.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig18_ME_over_NRC_real_investm
+ent_ratio.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>]
+Overfull \vbox (3.35382pt too high) has occurred while \output is active
+[14
+pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 
+    
+pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 
+     <./figures/D09_fig19_ME_over_NRC_current_investment_ratio.pdf> <./figures/
+D09_fig20_net_over_gross_current_cost_ME.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig20_net_over_gross_current_c
+ost_ME.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>])
+Overfull \hbox (101.0894pt too wide) in paragraph at lines 2--82
+[][]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--82
+
+[15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.82 \section
+             {Capital-Output-Distribution Relational Inspection}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.82 \section
+             {Capital-Output-Distribution Relational Inspection} <./figures/D09
+_fig21_net_over_gross_current_cost_NRC.pdf> <./figures/D09_fig22_net_over_gross
+_current_cost_capacity.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig22_net_over_gross_current_c
+ost_capacity.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>]
+Overfull \vbox (35.51024pt too high) has occurred while \output is active
+[16
+pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.82 \section
+             {Capital-Output-Distribution Relational Inspection}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.24}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.82 \section
+             {Capital-Output-Distribution Relational Inspection} <./figures/D09
+_fig23_capital_measure_status_map.pdf> <./figures/D09_fig24_baseline_vs_account
+ing_comparison_capital.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig24_baseline_vs_accounting_c
+omparison_capital.pdf): PDF inclusion: multiple pdfs with page group included i
+n a single page
+>] [17
+pdfTeX warning (ext4): destination with the same identifier (name{figure.25}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.90 \section
+             {Human Review Checklist and Decision Gate}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.26}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.90 \section
+             {Human Review Checklist and Decision Gate} <./figures/D09_fig26_pK
+N_ME_NRC_capacity.pdf> <./figures/D09_fig27_pKN_ME_over_NRC.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig27_pKN_ME_over_NRC.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+>]
+Overfull \vbox (32.19734pt too high) has occurred while \output is active
+[18
+pdfTeX warning (ext4): destination with the same identifier (name{figure.27}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.90 \section
+             {Human Review Checklist and Decision Gate}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.28}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.90 \section
+             {Human Review Checklist and Decision Gate} <./figures/D09_fig28_cu
+rrent_vs_real_investment_ME.pdf> <./figures/D09_fig29_current_vs_real_investmen
+t_NRC.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig29_current_vs_real_investme
+nt_NRC.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>] (./tables/D09_table_human_review_checklist.tex)
+Overfull \hbox (780.01859pt too wide) in paragraph at lines 2--92
+[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--92
+
+[19
+pdfTeX warning (ext4): destination with the same identifier (name{figure.29}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.92 \appendix\section
+                      {Secondary Figures}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.30}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.92 \appendix\section
+                      {Secondary Figures} <./figures/D09_fig30_real_output_and_
+real_capacity_levels.pdf> <./figures/D09_fig31_real_output_capacity_ratio.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig31_real_output_capacity_rat
+io.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+
+>]
+Overfull \vbox (178.1037pt too high) has occurred while \output is active
+[20
+pdfTeX warning (ext4): destination with the same identifier (name{figure.31}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.92 \appendix\section
+                      {Secondary Figures}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.32}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.92 \appendix\section
+                      {Secondary Figures} <./figures/D09_fig32_real_capacity_ou
+tput_ratio.pdf> <./figures/D09_fig33_nominal_NFC_GVA_and_current_capacity_level
+s.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig33_nominal_NFC_GVA_and_curr
+ent_capacity_levels.pdf): PDF inclusion: multiple pdfs with page group included
+ in a single page
+>] [21
+pdfTeX warning (ext4): destination with the same identifier (name{figure.33}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{figure.34}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                    <./figures/D09_fig34_nominal_NFC_GVA_current_capacity_ratio
+.pdf> <./figures/D09_fig35_scatter_Yreal_NFC_GVA_vs_Kreal_capacity.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig35_scatter_Yreal_NFC_GVA_vs
+_Kreal_capacity.pdf): PDF inclusion: multiple pdfs with page group included in 
+a single page
+>]
+Overfull \vbox (18.59734pt too high) has occurred while \output is active
+[22
+pdfTeX warning (ext4): destination with the same identifier (name{figure.35}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{figure.36}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                    <./figures/D09_fig36_scatter_Yreal_NFC_GVA_vs_Kreal_ME.pdf>
+ <./figures/D09_fig37_scatter_Yreal_NFC_GVA_vs_Kreal_NRC.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig37_scatter_Yreal_NFC_GVA_vs
+_Kreal_NRC.pdf): PDF inclusion: multiple pdfs with page group included in a sin
+gle page
+>] [23
+pdfTeX warning (ext4): destination with the same identifier (name{figure.37}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{figure.38}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                    <./figures/D09_fig38_NFC_wage_share_variants.pdf> <./figure
+s/D09_fig39_NFC_gross_net_surplus_share_variants.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig39_NFC_gross_net_surplus_sh
+are_variants.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>] [24
+pdfTeX warning (ext4): destination with the same identifier (name{figure.39}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{figure.40}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                    <./figures/D09_fig40_NFC_CFC_share.pdf> <./figures/D09_fig4
+1_CORP_wage_share_reconciliation_variants.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig41_CORP_wage_share_reconcil
+iation_variants.pdf): PDF inclusion: multiple pdfs with page group included in 
+a single page
+>] [25
+pdfTeX warning (ext4): destination with the same identifier (name{figure.41}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{figure.42}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                    <./figures/D09_fig42_CORP_surplus_share_reconciliation_vari
+ants.pdf> <./figures/D09_fig43_surplus_accounting_ladder_bridge.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig43_surplus_accounting_ladde
+r_bridge.pdf): PDF inclusion: multiple pdfs with page group included in a singl
+e page
+>] [26
+pdfTeX warning (ext4): destination with the same identifier (name{figure.43}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{figure.44}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                    <./figures/D09_fig44_wage_share_vs_ME_over_NRC.pdf> <./figu
+res/D09_fig45_wage_share_vs_ME_share_of_capacity.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig45_wage_share_vs_ME_share_o
+f_capacity.pdf): PDF inclusion: multiple pdfs with page group included in a sin
+gle page
+>] [27
+pdfTeX warning (ext4): destination with the same identifier (name{figure.45}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{figure.46}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                    <./figures/D09_fig46_wage_share_vs_capacity_output_ratio.pd
+f> <./figures/D09_fig47_surplus_share_vs_ME_over_NRC.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig47_surplus_share_vs_ME_over
+_NRC.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
+ge
+>] [28
+pdfTeX warning (ext4): destination with the same identifier (name{figure.47}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                   
+pdfTeX warning (ext4): destination with the same identifier (name{figure.48}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.96 \end{document}
+                    <./figures/D09_fig48_surplus_share_vs_capacity_output_ratio
+.pdf> <./figures/D09_fig25_parked_excluded_capital_objects_appendix.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/D09_fig25_parked_excluded_capital_
+objects_appendix.pdf): PDF inclusion: multiple pdfs with page group included in
+ a single page
+>] (./D09_visual_validation_report.aux) )
+(see the transcript file for additional information)<c:/texlive/2026/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/
+texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/20
+26/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2026/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/cm-supe
+r/sfrm1095.pfb>
+Output written on D09_visual_validation_report.pdf (28 pages, 1646107 bytes).
+Transcript written on D09_visual_validation_report.log.
+Latexmk: Getting log file 'D09_visual_validation_report.log'
+Latexmk: Examining 'D09_visual_validation_report.fls'
+Latexmk: Examining 'D09_visual_validation_report.log'
+Latexmk: Log file says output to 'D09_visual_validation_report.pdf'
+Latexmk: All targets (D09_visual_validation_report.pdf) are up-to-date
+

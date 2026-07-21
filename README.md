@@ -41,9 +41,10 @@ restore its old outline, draft, voice, or prompt paths. The vault is the authori
 ## Synchronizing between computers
 
 Commit and push completed work before changing machines. On the other computer, fetch and
-fast-forward the same branch before editing. Generated PDFs, PNGs, LaTeX build artifacts,
-R session state, and local Obsidian workspace state are ignored and must be regenerated
-locally when needed.
+fast-forward the same branch before editing. Research PDFs, figures, serialized model
+objects, and report build products are version-controlled so the research record travels
+with the repository. R session state, IDE state, and local Obsidian workspace state remain
+machine-local and are ignored.
 
 ## Governing files
 

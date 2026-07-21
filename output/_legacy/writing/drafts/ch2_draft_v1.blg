@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: ch2_draft_v1.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: plainnat.bst
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+Database file #1: ch2_refs.bib
+Warning--I didn't find a database entry for "tavares1985"
+Warning--I didn't find a database entry for "vidal2014"
+Warning--I didn't find a database entry for "vidal2019"
+Warning--I didn't find a database entry for "basu2019"
+Warning--I didn't find a database entry for "okishio1961"
+Warning--I didn't find a database entry for "weisskopf1979"
+Warning--I didn't find a database entry for "basu2012"
+Warning--I didn't find a database entry for "basu2013"
+Warning--I didn't find a database entry for "basu2017"
+Warning--I didn't find a database entry for "ibarra2023"
+Warning--I didn't find a database entry for "ibarra2024"
+Warning--I didn't find a database entry for "hofman2000"
+Warning--I didn't find a database entry for "luders2016"
+Warning--I didn't find a database entry for "perez2019"
+Warning--I didn't find a database entry for "alarco2014"
+Warning--I didn't find a database entry for "astorga2023"
+Warning--I didn't find a database entry for "fuentes2008"
+Warning--I didn't find a database entry for "figueroa2019"
+Warning--I didn't find a database entry for "durand2024"
+Warning--I didn't find a database entry for "magud2011"
+Warning--I didn't find a database entry for "johansen1988"
+Warning--I didn't find a database entry for "gregoryhansen1996"
+Warning--I didn't find a database entry for "johansenjuselius1990"
+Warning--I didn't find a database entry for "reimers1992"
+Warning--I didn't find a database entry for "tavares2000"
+Warning--I didn't find a database entry for "fajnzylber1983"
+Warning--I didn't find a database entry for "vernengo2006"
+Warning--I didn't find a database entry for "thirlwall1979"
+Warning--I didn't find a database entry for "kaldor1959"
+Warning--I didn't find a database entry for "hansenseo2002"
+You've used 0 entries,
+            2773 wiz_defined-function locations,
+            622 strings with 5174 characters,
+and the built_in function-call counts, 33 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 10
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 8
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 7
+(There were 30 warnings)
