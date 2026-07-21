@@ -4,8 +4,9 @@ status: active
 layer: governance_constraint
 scope: all_agent_sessions
 authority_files:
-  - chapter2/outline/Ch2_Outline_DEFINITIVE.md
-  - chapter2/voice/ch2_voice_guide.md
+  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
+  - chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
+  - chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md
   - chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md
 ---
 
@@ -22,27 +23,24 @@ Chapter 2 dissertation pipeline: "Demand-Led Profitability and Structural Crisis
 in Chile and the United States during the Fordist Era."
 
 Authority files:
-- `chapter2/outline/Ch2_Outline_DEFINITIVE.md` — locked outline, all content decisions
-- `chapter2/agents/ch2_voice_guide.md` — writing voice calibration (WLM v4.0)
-- `chapter2/agents/ch2_section_prompts.md` — section firing prompts
-- `docs/ch2/repo_structure_Ch2_v2.md` — full directory specification
+- `chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md` — locked outline and content decisions
+- `chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md` — constitutional paper-facing claim
+- `chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md` — locked paper-facing section map
+- `chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md` — implementation and stage governance
 
 ---
 
 ## Directory map
 
 ```
-chapter2/agents/drafts/   ← Opus session outputs (prose drafts)
-chapter2/draft/           ← Assembled LaTeX chapter
-chapter2/outline/         ← Locked outline
-codes/stage_a/us/         ← Stage A.1 US estimation (R)
-codes/stage_a/chile/      ← Stage A.2 Chile estimation (Python + R)
-codes/stage_b/            ← Weisskopf profitability decomposition (R)
-codes/stage_c/            ← Investment function estimation (R)
-data/raw/us/              ← US-BEA-Income-FixedAssets-Dataset outputs
-data/raw/chile/           ← K-Stock-Harmonization + CEPAL income data
-data/processed/           ← Constructed estimation panels
-output/stage_a|b|c/       ← Estimation results (csv, figs, logs)
+chapter2_paper/01_Versions/        ← Paper source versions and chapter Markdown builds
+chapter2_vault/06_paper_facing/    ← Locked outline, constitution, map, and references
+chapter2_vault/07_WrittingSkills_and_Rules/ ← Writing and exposition rules
+chapter2_vault/80_Prompts/         ← Active execution prompts and plans
+codes/                             ← Flat, country/stage-prefixed implementation scripts
+data/raw|interim|processed|final/  ← Data pipeline layers
+data/releases/                     ← Frozen data releases
+output/US|CL/                      ← Country- and stage-bounded results
 ```
 
 ---
@@ -84,17 +82,20 @@ external source?" If the latter, cut it.
   by construction, conflating μ and b. This argument derives from the chapter's own
   accounting framework and requires no external authority.
 
-**Voice:** All prose must conform to WLM v4.0 (see `chapter2/agents/ch2_voice_guide.md`).
-Evidence and verdict in the same paragraph. No hedging. No neutral summaries.
+**Voice:** All prose must conform to WLM v4.0. Evidence and verdict in the same
+paragraph. No hedging. No neutral summaries. For advisor-facing exposition, also use
+`chapter2_vault/07_WrittingSkills_and_Rules/C02_Advisor_Michael_Facing_Exposition_Prompt.md`.
 
 ---
 
 ## Stage gate
 
-`codes/stage_a/chile/20_integration_tests.R` must pass before VECM estimation runs.
-All state variables `(y^CL, k^NR, k^ME, π, πk)` must be I(1).
+No nonlinear, interacted, or generated specification may advance to estimator selection
+before passing `chapter2_vault/03_econometrics/Interaction_Term_Integration_Order_Gate.md`.
+Stage transitions must also respect the active contracts indexed by
+`chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md`.
 
 ---
 
-*AGENTS.md v1 — 2026-04-02*
+*AGENTS.md v2 — 2026-07-21*
 *Authority: Ch2_Outline_DEFINITIVE.md | Voice: WLM v4.0*
