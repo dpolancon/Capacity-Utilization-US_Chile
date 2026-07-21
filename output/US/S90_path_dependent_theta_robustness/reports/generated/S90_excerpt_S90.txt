@@ -1,0 +1,18 @@
+# source: codes/US_S90_path_dependent_theta_robustness.R lines 105-105, 449-456, 506-513
+panel$y <- log(panel$Y_REAL_NFC_GVA_BASELINE_D09)
+primitive_beta <- c(
+  intercept = orth_beta["intercept"] - orth_beta["lambda"] * delta["(Intercept)"],
+  theta = orth_beta["theta"] - orth_beta["lambda"] * delta["k_NRC_centered"],
+  psi = orth_beta["psi"] - orth_beta["lambda"] * delta["tau_centered"],
+  phi = orth_beta["phi"] - orth_beta["lambda"] * delta["omega_NFC_centered"],
+  lambda = orth_beta["lambda"]
+)
+names(primitive_beta) <- names(orth_beta)
+build_path <- function(df, beta, label) {
+  theta_tau <- beta["psi"] + beta["lambda"] * df$d_c
+  g_p <- beta["theta"] * df$g_nrc + theta_tau * (df$g_me - df$g_nrc)
+  data.frame(year = df$year, reconstruction = label,
+    theta_scale = unname(beta["theta"]), theta_tau = theta_tau,
+    theta_me = theta_tau, theta_nrc = beta["theta"] - theta_tau,
+    g_me = df$g_me, g_nrc = df$g_nrc, g_cap = df$g_cap,
+    g_p = g_p, vartheta_path = g_p / df$g_cap,

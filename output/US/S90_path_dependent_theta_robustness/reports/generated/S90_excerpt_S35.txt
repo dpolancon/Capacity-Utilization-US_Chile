@@ -1,0 +1,10 @@
+# source: codes/US_S35_estimator_refreeze_cpr.R lines 80-85, 126-128
+  SPEC_B_NRC_orth = list(
+    rhs = c("k_NRC_centered", "tau_centered", "omega_NFC_centered", "inter_tau_omega_orth"),
+    coef_names = c("beta_scale", "beta_comp", "beta_dist", "beta_inter"),
+    is_orth = TRUE
+  )
+)
+        if (estimator == "FM_OLS") {
+          cointReg::cointRegFM(x = x, y = y, deter = deter, bandwidth = "nw")
+        } else if (estimator == "IM_OLS") {

@@ -1,0 +1,4 @@
+"comparison","max_abs_fitted_difference","interpretation"
+"orthogonalized_vs_back_transformed_primitive",3.5527136788005e-15,"ALGEBRAIC_IDENTITY_CHECK"
+"separately_estimated_raw_vs_orthogonalized",1.21262495316188e-05,"ESTIMATOR_PARAMETERIZATION_COMPARISON"
+"manual_RDOLS_raw_vs_orthogonalized_same_design",5.32907051820075e-15,"EXACT_PARAMETERIZATION_IDENTITY"

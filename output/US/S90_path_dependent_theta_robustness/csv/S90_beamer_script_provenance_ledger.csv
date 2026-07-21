@@ -1,0 +1,5 @@
+"script_id","script_path","md5","line_count","git_commit","audit_role"
+"S34","codes/S34R_B_cpr_realigned_design_gate/run_s34r_b_cpr_realigned_design_gate.py","afce5b84b7bf19c2ea24e3653ad5f919",592,"d726353c96eecdb0c92470d54b1a88d97f8e83a8","construct centered and orthogonalized interaction"
+"S35","codes/US_S35_estimator_refreeze_cpr.R","727e736ceaa5da577a34f7298b02db45",318,"d726353c96eecdb0c92470d54b1a88d97f8e83a8","estimate Golden-Age raw and orthogonalized CPR coefficients"
+"RECONSTRUCTION","codes/reconstruct_golden_age_paths.R","a263c1caef0112503c0a095f4e147012",201,"d726353c96eecdb0c92470d54b1a88d97f8e83a8","construct capacity growth, utilization, and the red ratio"
+"S90","codes/US_S90_path_dependent_theta_robustness.R","2899921142f041b7bfb34b781e334a65",983,"d726353c96eecdb0c92470d54b1a88d97f8e83a8","back-transform, decompose, attribute roughness, and profile memory"

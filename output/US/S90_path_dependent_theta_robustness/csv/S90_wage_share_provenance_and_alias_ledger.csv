@@ -1,0 +1,6 @@
+"state_id","repo_variable","sector","basis","status","productive_capacity_output","productive_capacity_capital","alias_of","max_absolute_difference","estimation_action"
+"NFC_GVA","omega_NFC_productive_origin_GVA","Whole NFC","GVA","MAIN_STATE","Real NFC GVA (fixed)","NFC K_ME and K_NRC (fixed)",,,"ESTIMATE_SEPARATELY"
+"NFC_NVA","NFC_COMPENSATION_SHARE_NVA","Whole NFC","NVA","AUTHORIZED_ROBUSTNESS","Real NFC GVA (fixed)","NFC K_ME and K_NRC (fixed)",,,"ESTIMATE_SEPARATELY"
+"CORP_GVA","omega_CORP_raw_GVA","All corporations","GVA","COMPARISON_ONLY","Real NFC GVA (fixed)","NFC K_ME and K_NRC (fixed)",,,"ESTIMATE_SEPARATELY"
+"CORP_NVA","omega_CORP_raw_NVA","All corporations","NVA","COMPARISON_ONLY","Real NFC GVA (fixed)","NFC K_ME and K_NRC (fixed)",,,"ESTIMATE_SEPARATELY"
+"NFC_GVA_ALIAS","NFC_COMPENSATION_SHARE_GVA","Whole NFC","GVA","EXACT_ALIAS","Real NFC GVA (fixed)","NFC K_ME and K_NRC (fixed)","omega_NFC_productive_origin_GVA",0,"DO_NOT_ESTIMATE_DUPLICATE"

@@ -1,0 +1,5 @@
+"state_id","window_id","rho_hat","half_life_years","rho_ci_low","rho_ci_high","bootstrap_reps","block_length","boundary_solution","half_life_interpretation","persistence_evidence"
+"NFC_GVA","pre_1974_full",0.98,34.3096184915206,0.92,0.98,1000,4,TRUE,"LOWER_BOUND_GRID_CENSORED","WEAK_OR_BOUNDARY"
+"NFC_NVA","pre_1974_full",0.96,16.9797480183389,0.77,0.98,1000,4,FALSE,"POINT_ESTIMATE","PERSISTENCE_SUPPORTED"
+"CORP_GVA","pre_1974_full",0.95,13.5134073339649,0.86,0.98,1000,4,FALSE,"POINT_ESTIMATE","PERSISTENCE_SUPPORTED"
+"CORP_NVA","pre_1974_full",0.94,11.2023055836212,0.73975,0.98,1000,4,FALSE,"POINT_ESTIMATE","PERSISTENCE_SUPPORTED"

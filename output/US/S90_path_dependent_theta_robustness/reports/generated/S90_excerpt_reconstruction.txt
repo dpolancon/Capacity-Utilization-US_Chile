@@ -1,0 +1,12 @@
+# source: codes/reconstruct_golden_age_paths.R lines 48-50, 53-57, 62-62, 127-128
+beta_k_B <- 0.23784
+beta_tau_B <- 0.31207
+beta_inter_B <- -1.02937
+panel$theta_ME_t <- beta_tau_B + beta_inter_B * panel$omega_NFC_centered
+panel$theta_NRC_t <- beta_k_B - panel$theta_ME_t
+
+# Reconstruct potential output growth rate using the A03 composition identity
+panel$g_Yp_B <- panel$theta_NRC_t * panel$g_NRC + panel$theta_ME_t * panel$g_ME
+panel$yp_spec_B[idx_1973] <- panel$y_total[idx_1973]
+# Calculate aggregate transformation elasticity theta_total = g_Yp_B / g_Kcap (growth-weighted average)
+ga_data$theta_total_t <- ga_data$g_Yp_B / ga_data$g_Kcap

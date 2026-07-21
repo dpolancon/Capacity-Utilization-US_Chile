@@ -1,0 +1,4 @@
+"source_id","source_file","md5","line_count","git_commit","audit_role"
+"S33","docs/ch2/S33_theta_recovery_specification_ledger.md","8c903fef315d900341e594ee45a11d83",302,"d726353c96eecdb0c92470d54b1a88d97f8e83a8","theta recovery and accumulated-path definition"
+"RULE","chapter2_vault/00_constitutive_core/R_distribution_conditioned_theta_identification.md","b5b73e3e030999ebb933cc39ba3c9bc2",241,"d726353c96eecdb0c92470d54b1a88d97f8e83a8","latent-capacity identification and anchoring"
+"OUTLINE","chapter2/outline/Ch2_Outline_DEFINITIVE.md","0c8284542424548438e65d02700891a3",1141,"d726353c96eecdb0c92470d54b1a88d97f8e83a8","governing profit-share form and Harrodian benchmark"

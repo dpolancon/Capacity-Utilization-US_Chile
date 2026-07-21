@@ -1,0 +1,4 @@
+# source: codes/S34R_B_cpr_realigned_design_gate/run_s34r_b_cpr_realigned_design_gate.py lines 368-370
+    panel["inter_kKcap_omega_orth"] = residual_center(panel, "inter_kKcap_omega", ["k_Kcap_centered", "omega_NFC_centered"])
+    panel["inter_kNRC_omega_orth"] = residual_center(panel, "inter_kNRC_omega", ["k_NRC_centered", "omega_NFC_centered"])
+    panel["inter_tau_omega_orth"] = residual_center(panel, "inter_tau_omega", ["k_NRC_centered", "tau_centered", "omega_NFC_centered"])

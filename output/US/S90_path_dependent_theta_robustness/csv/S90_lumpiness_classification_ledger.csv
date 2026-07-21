@@ -1,0 +1,7 @@
+"classification","indicator","bootstrap_stable","quantitative_basis"
+"distribution_driven",FALSE,FALSE,0.0121819207340172
+"composition_driven",TRUE,FALSE,0.579706038397027
+"denominator_driven",FALSE,FALSE,0.262076518718768
+"implementation_driven",FALSE,,0.790004686140357
+"data_sensitive",TRUE,,0.546624170406956
+"jointly_generated",FALSE,,0.579706038397027

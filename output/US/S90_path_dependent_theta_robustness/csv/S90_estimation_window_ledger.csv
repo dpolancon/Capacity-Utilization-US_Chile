@@ -1,0 +1,8 @@
+"window_id","start","end","reconstruction_role"
+"full_long_sample",1929,2024,"diagnostic"
+"pre_1974_full",1929,1973,"PRIMARY_FORDIST_COEFFICIENT_SOURCE"
+"post_1973_full",1974,2024,"post_fordist"
+"fordist_core",1945,1973,"short_historical_target"
+"bridge_1940_1978",1940,1978,"bridge"
+"pre_1974_alt_1940_1973",1940,1973,"robustness"
+"pre_1974_alt_1947_1973",1947,1973,"robustness"
