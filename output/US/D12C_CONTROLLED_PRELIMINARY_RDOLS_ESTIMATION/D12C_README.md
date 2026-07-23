@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-07-07
+---
+
 # D12C Controlled Preliminary RDOLS Estimation
 
 D12C implemented the manual Restricted DOLS engine authorized by D12B.

@@ -1,25 +1,29 @@
 ---
-type: note
+type: econometric_protocol
 status: locked
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
 layer: method
 design_role: structural_object_definition
 scope: chapter2_core_support
 estimator_status: restricted-dols-required-for-nonlinear-baseline
 related_to:
-  - R_distribution_conditioned_theta_identification
-  - A00_Aggregate_Transformation_Benchmark
-  - M10_Empirical_Identification_Framework
-  - N02_SuperConsistency
-  - R01_residual_vs_structural_identification
+- R_distribution_conditioned_theta_identification
+- A00_Aggregate_Transformation_Benchmark
+- M10_Empirical_Identification_Framework
+- N02_SuperConsistency
+- R01_residual_vs_structural_identification
 priority: high
 role: methodological-rationale
 stage: pre-estimation-design
 aliases:
-  - Capacity utilization structural object
+- Capacity utilization structural object
 tags:
-  - chapter2/econometrics
-  - chapter2/methodological-rationale
-  - chapter2/qomega-parked
+- chapter2/econometrics
+- chapter2/methodological-rationale
+- chapter2/qomega-parked
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 

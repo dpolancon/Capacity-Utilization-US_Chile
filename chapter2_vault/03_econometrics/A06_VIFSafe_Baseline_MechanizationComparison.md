@@ -1,28 +1,32 @@
 ---
-type: note
-subtype: object
+type: econometric_protocol
 status: superseded
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
+subtype: object
 layer: analytical_foundation
 design_role: specification_lock
 scope: chapter2_core
 estimator_status: historical-or-diagnostic
 requires_review_before_use: true
 related_to:
-  - A00_Aggregate_Transformation_Benchmark
-  - A03_TransformationElasticity_Two-CapitalCapacityComposition
-  - A05_NRCEnvelope_MechanizationBias
-  - R10_Binding_Specification_Layering_Rule
-  - D04_ME_NRC_LogRatio_Construction_Protocol
-  - C04-US_S30_STABILITY_PROTOCOL
-  - US_S31_model_choice_vif_screen
+- A00_Aggregate_Transformation_Benchmark
+- A03_TransformationElasticity_Two-CapitalCapacityComposition
+- A05_NRCEnvelope_MechanizationBias
+- R10_Binding_Specification_Layering_Rule
+- D04_ME_NRC_LogRatio_Construction_Protocol
+- C04-US_S30_STABILITY_PROTOCOL
+- US_S31_model_choice_vif_screen
 lock_status:
   comparison_pair: locked
   final_model: not_selected
-  s40_status: parked
   human_adjudication_required: true
+  s40_status: parked
 locked_specs:
-  - SPEC_B1_WAGE_BASELINE
-  - SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED
+- SPEC_B1_WAGE_BASELINE
+- SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED
 vif_status:
   SPEC_B1_WAGE_BASELINE: vif_admissible_with_caution
   SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED: vif_safe
@@ -31,14 +35,12 @@ updated: 2026-06-08
 role: superseded-for-baseline
 stage: pre-estimation-design
 aliases:
-  - A06 VIF comparison
+- A06 VIF comparison
 tags:
-  - chapter2/econometrics
-  - chapter2/superseded
+- chapter2/econometrics
+- chapter2/superseded
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
-
-
 
 # A06: VIF-Safe Baseline and Mechanization-Bias Comparison Pair
 

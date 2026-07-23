@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: superseded
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-05-14
+---
+
 # Stage C Report — ARDL 4-Channel Investment Function
 ## US Non-Financial Corporate Sector, Fordist Era
 **Date:** 2026-04-07 | **Sample:** 1948-1973 (N=26, effective) | **Method:** PSS (2001)

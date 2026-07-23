@@ -1,3 +1,12 @@
+---
+type: draft_section
+status: draft
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-14
+---
+
 # §2.2.4 — Multi-Scalar Contradictions Rule Out a Stable Desired Capacity Utilization
 **Source authority:** Vidal (2014, 2019); Okishio (1961); Boyer (1990); Aglietta (1979)
 **Date drafted:** 2026-04-02

@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: S32
+country: US
+last_updated: 2026-06-03
+---
+
 # S32 B1 versus E2B Model-Choice Review
 
 ## 1. Lock statement

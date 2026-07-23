@@ -1,17 +1,21 @@
 ---
-type: note
+type: data_measurement
 status: active
+depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+stage_scope: S10
+country: US
+last_updated: 2026-06-10
 layer: empirical_design
 design_role: gpim_stock_flow_valuation_protocol
 scope: chapter2_core_support
 related_to:
-  - R_distribution_conditioned_theta_identification
-  - A00_Aggregate_Transformation_Benchmark
-  - A03_TransformationElasticity_Two-CapitalCapacityComposition
-  - N04_Composition_of_Accumulation_and_Transformation
-  - R04_What_is_Identified_vs_Reconstructed
-  - Price_Deflator_Protocol_ME_NRC_Composition
-  - TARGET_REPO_STRUCTURE_AND_CODE_STAGE_IMPLEMENTATION
+- R_distribution_conditioned_theta_identification
+- A00_Aggregate_Transformation_Benchmark
+- A03_TransformationElasticity_Two-CapitalCapacityComposition
+- N04_Composition_of_Accumulation_and_Transformation
+- R04_What_is_Identified_vs_Reconstructed
+- Price_Deflator_Protocol_ME_NRC_Composition
+- TARGET_REPO_STRUCTURE_AND_CODE_STAGE_IMPLEMENTATION
 created: 2026-05-06
 updated: 2026-06-08
 ---

@@ -1,3 +1,12 @@
+---
+type: audit_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: CL
+last_updated: 2026-05-14
+---
+
 # Chile Frontier Multicollinearity Audit
 
 Generated on 2026-04-12.

@@ -1,21 +1,25 @@
 ---
-type: implementation_memo
+type: code_implementation_memo
 status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-05-26
 layer: figure_protocol
 design_role: recession_shading_and_stage_figure_conventions
 scope: chapter2_results_repo
 repo: Capacity-Utilization-US_Chile
 applies_to:
-  - US
-  - CL
-  - CMP
+- US
+- CL
+- CMP
 figure_scope:
-  - S40
-  - S50
-  - S60
-  - S70
-  - S90
-  - S99
+- S40
+- S50
+- S60
+- S70
+- S90
+- S99
 us_recession_shading_source: FRED_NBER_monthly_business_cycle_turning_points
 us_recession_shading_source_url: fredhelp_stlouisfed_recession_bars
 annual_recession_rule: any_month_overlap
@@ -25,11 +29,11 @@ anchor_markers_required_when_applicable: true
 created: 2026-05-14
 updated: 2026-05-14
 related_to:
-  - C03-REPO_STRUCTURE
-  - US_S40_Review_and_Figures_Contract
-  - US_S40_Restricted_B1_Reconstruction_Contract
-  - D03_capacity_utilization_level_anchor_pinch_year_protocol
-  - M10_Empirical_Identification_Framework
+- C03-REPO_STRUCTURE
+- US_S40_Review_and_Figures_Contract
+- US_S40_Restricted_B1_Reconstruction_Contract
+- D03_capacity_utilization_level_anchor_pinch_year_protocol
+- M10_Empirical_Identification_Framework
 ---
 
 # C05 - Figure Protocol

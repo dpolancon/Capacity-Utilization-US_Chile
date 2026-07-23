@@ -1,12 +1,16 @@
 ---
-title: "Abstract — Contradictory Utilization Configurations"
-type: abstract
-project: "Normal utilization and the fractured firm"
-status: developed
+type: analytical_foundation
+status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-04-23
+title: "Abstract \u2014 Contradictory Utilization Configurations"
+project: Normal utilization and the fractured firm
 tags:
-  - utilization
-  - normal-degree
-  - contradictory-utilization-configurations
+- utilization
+- normal-degree
+- contradictory-utilization-configurations
 ---
 
 # Abstract

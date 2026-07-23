@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-06-21
+---
+
 # S29H Total Capital Downstream Input Selection Contract
 
 This contract locks the permitted downstream menu for total capital variables. It does not create new variables, transformations, model-input panels, samples, q, theta, productive capacity, utilization, modeling outputs, or econometric outputs.

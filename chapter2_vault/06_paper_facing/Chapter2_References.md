@@ -1,4 +1,11 @@
-
+---
+type: paper_facing_map
+status: locked
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-04-23
+---
 
 ## References
 

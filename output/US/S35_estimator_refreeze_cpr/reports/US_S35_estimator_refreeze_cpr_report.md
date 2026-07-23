@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: S35
+country: US
+last_updated: 2026-07-08
+---
+
 # Stage S35 CPR Estimator Refreeze Report
 
 Final decision: `AUTHORIZE_S40_CAPACITY_RECONSTRUCTION`

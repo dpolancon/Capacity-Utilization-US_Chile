@@ -1,6 +1,10 @@
 ---
-type: handoff_manifest
+type: paper_facing_map
 status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-23
 date: 2026-07-23
 conversation_id: 1087ad76-f9a3-4d89-9596-1b49f4925b11
 project: Capacity-Utilization-US_Chile

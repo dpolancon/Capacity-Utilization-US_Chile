@@ -1,28 +1,32 @@
 ---
-type: note
-status: superseded-for-baseline
+type: econometric_protocol
+status: superseded
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
 layer: method
 design_role: robustness_estimator_rule
 scope: chapter2_core_support
 estimator_status: historical-or-diagnostic
 requires_review_before_use: true
 related_to:
-  - R03_super_consistency_mechanics_hinge
-  - R04_FMOLS_structural_preservation
-  - R05_LRV_kernel_bandwidth_regime_misalignment
-  - N02_SuperConsistency
-  - M10_Empirical_Identification_Framework
-  - L00_Econometrics_References
+- R03_super_consistency_mechanics_hinge
+- R04_FMOLS_structural_preservation
+- R05_LRV_kernel_bandwidth_regime_misalignment
+- N02_SuperConsistency
+- M10_Empirical_Identification_Framework
+- L00_Econometrics_References
 priority: high
 role: superseded-for-baseline
 stage: pre-estimation-design
 aliases:
-  - IM-OLS integration ladder
+- IM-OLS integration ladder
 tags:
-  - chapter2/econometrics
-  - chapter2/superseded
-  - chapter2/imols
-  - chapter2/qomega-parked
+- chapter2/econometrics
+- chapter2/superseded
+- chapter2/imols
+- chapter2/qomega-parked
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 

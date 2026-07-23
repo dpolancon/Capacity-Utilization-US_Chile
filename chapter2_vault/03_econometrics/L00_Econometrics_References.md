@@ -1,30 +1,34 @@
 ---
-type: literature_list
+type: econometric_protocol
 status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
 layer: references
 design_role: econometrics_reference_ledger
 scope: chapter2_method_support
 estimator_status: reference-only
 related_to:
-  - N02_SuperConsistency
-  - R02_DOLS_reconstruction_dilemma
-  - R03_super_consistency_mechanics_hinge
-  - R04_FMOLS_structural_preservation
-  - R05_LRV_kernel_bandwidth_regime_misalignment
-  - R06_IMOLS_integration_ladder_reconstruction
-  - R07_FGLS_threshold_cointegration_admissibility
-  - R08_threshold_break_diagnostics_to_FGLS
-  - M10_Empirical_Identification_Framework
+- N02_SuperConsistency
+- R02_DOLS_reconstruction_dilemma
+- R03_super_consistency_mechanics_hinge
+- R04_FMOLS_structural_preservation
+- R05_LRV_kernel_bandwidth_regime_misalignment
+- R06_IMOLS_integration_ladder_reconstruction
+- R07_FGLS_threshold_cointegration_admissibility
+- R08_threshold_break_diagnostics_to_FGLS
+- M10_Empirical_Identification_Framework
 priority: high
 role: historical-reference
 stage: pre-estimation-design
 aliases:
-  - Econometrics references
+- Econometrics references
 tags:
-  - chapter2/econometrics
-  - chapter2/historical-reference
-  - chapter2/fmols
-  - chapter2/imols
+- chapter2/econometrics
+- chapter2/historical-reference
+- chapter2/fmols
+- chapter2/imols
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 

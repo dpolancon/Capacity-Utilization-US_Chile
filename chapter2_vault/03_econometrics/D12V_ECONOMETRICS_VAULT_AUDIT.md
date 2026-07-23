@@ -1,14 +1,19 @@
 ---
-status: vault-audit
+type: econometric_protocol
+status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
 scope: chapter2-econometrics
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 date: 2026-07-06
 role: audit
 aliases:
-  - D12V vault audit
+- D12V vault audit
 tags:
-  - chapter2/econometrics
-  - chapter2/audit
+- chapter2/econometrics
+- chapter2/audit
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 

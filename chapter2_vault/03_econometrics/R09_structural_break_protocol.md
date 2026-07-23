@@ -1,60 +1,64 @@
 ---
-type: "note"
-status: "active"
+type: econometric_protocol
+status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
 estimator_status: restricted-dols-required-for-nonlinear-baseline
-layer: "method"
-design_role: "parameter_stability_window_rule"
-scope: "chapter2_core_support"
+layer: method
+design_role: parameter_stability_window_rule
+scope: chapter2_core_support
 related_to:
-  - "M10_Empirical_Identification_Framework"
-  - "N02_SuperConsistency"
-  - "R03_super_consistency_mechanics_hinge"
-  - "R04_FMOLS_structural_preservation"
-  - "R05_LRV_kernel_bandwidth_regime_misalignment"
-  - "R06_IMOLS_integration_ladder_reconstruction"
-  - "R08_threshold_break_diagnostics_to_FGLS"
-  - "L00_Econometrics_References"
-priority: "high"
+- M10_Empirical_Identification_Framework
+- N02_SuperConsistency
+- R03_super_consistency_mechanics_hinge
+- R04_FMOLS_structural_preservation
+- R05_LRV_kernel_bandwidth_regime_misalignment
+- R06_IMOLS_integration_ladder_reconstruction
+- R08_threshold_break_diagnostics_to_FGLS
+- L00_Econometrics_References
+priority: high
 estimators:
-  - "FM-OLS"
-  - "IM-OLS"
-  - "DOLS"
+- FM-OLS
+- IM-OLS
+- DOLS
 empirical_inputs:
-  - "y_t"
-  - "k_t"
-  - "omega_t"
-  - "omega_k_t"
-  - "s_t_proxy"
-  - "phi_t_proxy"
-  - "s_t_proxy_cc"
-  - "phi_t_proxy_cc"
-  - "pK_relative_ME_NRC"
+- y_t
+- k_t
+- omega_t
+- omega_k_t
+- s_t_proxy
+- phi_t_proxy
+- s_t_proxy_cc
+- phi_t_proxy_cc
+- pK_relative_ME_NRC
 method_classification_core:
-  - "Hansen-type parameter instability tests for I(1) regressions"
+- Hansen-type parameter instability tests for I(1) regressions
 method_classification_supporting:
-  - "Gregory-Hansen one-break cointegration tests"
-  - "Andrews unknown-break logic"
+- Gregory-Hansen one-break cointegration tests
+- Andrews unknown-break logic
 method_classification_diagnostic:
-  - "rolling-window estimates"
-  - "recursive estimates"
-  - "Johansen recursive constancy diagnostics"
+- rolling-window estimates
+- recursive estimates
+- Johansen recursive constancy diagnostics
 method_classification_too_heavy_for_main_paper:
-  - "Bai-Perron multiple-break methods"
-  - "Kejriwal-Perron multiple breaks in cointegrated regressions"
+- Bai-Perron multiple-break methods
+- Kejriwal-Perron multiple breaks in cointegrated regressions
 method_classification_not_appropriate:
-  - "ordinary OLS break tests as primary evidence for I(1) cointegrating regressions"
-created: "2026-05-13"
-updated: "2026-05-14"
+- ordinary OLS break tests as primary evidence for I(1) cointegrating regressions
+created: '2026-05-13'
+updated: '2026-05-14'
 role: superseded-for-baseline
 stage: pre-estimation-design
 aliases:
-  - Structural break protocol
+- Structural break protocol
 tags:
-  - chapter2/econometrics
-  - chapter2/superseded
-  - chapter2/fmols
-  - chapter2/imols
-  - chapter2/qomega-parked
+- chapter2/econometrics
+- chapter2/superseded
+- chapter2/fmols
+- chapter2/imols
+- chapter2/qomega-parked
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 

@@ -1,6 +1,10 @@
 ---
-type: repository_manifest
+type: readme
 status: active
+depends_on: []
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-21
 layer: project_root
 scope: dissertation_ch2
 current_stage: S35 (US refreeze) / CL_S10 (Chile rebuild)

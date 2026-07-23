@@ -1,13 +1,17 @@
 ---
-type: agent_system_rules
+type: system_rules
 status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-21
 layer: governance_constraint
 scope: all_agent_sessions
 authority_files:
-  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
-  - chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
-  - chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md
-  - chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md
+- chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
+- chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
+- chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md
+- chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md
 ---
 
 # AGENTS.md — Capacity-Utilization-US_Chile

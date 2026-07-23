@@ -1,12 +1,16 @@
 ---
-title: "Figures and Tables Architecture"
-type: visual-architecture
-project: "Normal utilization and the fractured firm"
-status: developed
+type: analytical_foundation
+status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-04-28
+title: Figures and Tables Architecture
+project: Normal utilization and the fractured firm
 tags:
-  - figures
-  - tables
-  - utilization
+- figures
+- tables
+- utilization
 ---
 
 # Visual and table architecture

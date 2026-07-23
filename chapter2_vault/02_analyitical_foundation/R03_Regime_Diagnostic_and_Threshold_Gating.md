@@ -1,14 +1,18 @@
 ---
-type: note
-subtype: rule
+type: analytical_foundation
 status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-27
+subtype: rule
 layer: analytical_foundation
 design_role: diagnostic_protocol
 scope: chapter2_core
 related_to:
-  - A01_Extensive_Accumulation
-  - A02_Intensive_Accumulation
-  - A04_PeripheralTransformationElasticity
+- A01_Extensive_Accumulation
+- A02_Intensive_Accumulation
+- A04_PeripheralTransformationElasticity
 created: 2026-05-27
 ---
 

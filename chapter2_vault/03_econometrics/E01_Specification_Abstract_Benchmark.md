@@ -1,25 +1,29 @@
 ---
-type: note
-subtype: rule
+type: econometric_protocol
 status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
+subtype: rule
 layer: analytical_foundation
 design_role: ontological_guardrail
 scope: chapter2_core
 estimator_status: historical-or-diagnostic
 requires_review_before_use: true
 related_to:
-  - H02_Theta_to_Empirical_Coefficients
-  - R01_Marx_Okishio_Regime_Diagnostic_Guardrail
-  - Okishio_Vidal_Transformation_Elasticity
+- H02_Theta_to_Empirical_Coefficients
+- R01_Marx_Okishio_Regime_Diagnostic_Guardrail
+- Okishio_Vidal_Transformation_Elasticity
 created: 2026-05-27
 role: superseded-for-baseline
 stage: pre-estimation-design
 aliases:
-  - E01 abstract benchmark
+- E01 abstract benchmark
 tags:
-  - chapter2/econometrics
-  - chapter2/superseded
-  - chapter2/fmols
+- chapter2/econometrics
+- chapter2/superseded
+- chapter2/fmols
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 

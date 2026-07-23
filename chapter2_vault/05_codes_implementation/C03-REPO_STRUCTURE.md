@@ -1,20 +1,14 @@
 ---
-type: implementation_memo
+type: code_implementation_memo
 status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-06-10
 layer: code_stage_design
 design_role: repo_structure_and_stage_governance
 scope: chapter2_results_repo
 repo: Capacity-Utilization-US_Chile
-stage_scope:
-  - S10
-  - S20
-  - S30
-  - S40
-  - S50
-  - S60
-  - S70
-  - S90
-  - S99
 anchor_protocol_governed_by: D03_capacity_utilization_level_anchor_pinch_year_protocol
 figure_protocol_governed_by: C05-FIGURE_PROTOCOL
 s30_anchor_authority: false
@@ -30,14 +24,14 @@ window_average_anchor_allowed_as_baseline: false
 created: 2026-05-06
 updated: 2026-06-08
 related_to:
-  - C01-US_00_MEMO_RECYCLING
-  - C02-CL_00_MEMO_RECYCLING
-  - C04-US_S30_STABILITY_PROTOCOL
-  - C05-FIGURE_PROTOCOL
-  - US_S40_Restricted_B1_Reconstruction_Contract
-  - US_S40_Review_and_Figures_Contract
-  - D03_capacity_utilization_level_anchor_pinch_year_protocol
-  - M10_Empirical_Identification_Framework
+- C01-US_00_MEMO_RECYCLING
+- C02-CL_00_MEMO_RECYCLING
+- C04-US_S30_STABILITY_PROTOCOL
+- C05-FIGURE_PROTOCOL
+- US_S40_Restricted_B1_Reconstruction_Contract
+- US_S40_Review_and_Figures_Contract
+- D03_capacity_utilization_level_anchor_pinch_year_protocol
+- M10_Empirical_Identification_Framework
 ---
 
 # C03 - Results Repository Structure and Stage Governance

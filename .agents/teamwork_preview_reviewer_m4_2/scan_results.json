@@ -1,0 +1,65 @@
+{
+  "total": 478,
+  "compliant": 476,
+  "non_compliant": [],
+  "syntax_errors": [],
+  "missing_fields": [],
+  "null_fields": [],
+  "invalid_formats": [
+    [
+      "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md",
+      [
+        "country 'comparative' not in recognized set ['US', 'CL', 'US_CL', 'none', 'all']"
+      ]
+    ],
+    [
+      "data/metadata/data_provenance_manifest.md",
+      [
+        "country 'comparative' not in recognized set ['US', 'CL', 'US_CL', 'none', 'all']"
+      ]
+    ]
+  ],
+  "excluded_files_status": {
+    "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md": {
+      "has_yaml": true,
+      "missing": [],
+      "nulls": [],
+      "data": {
+        "type": "outline",
+        "status": "active",
+        "depends_on": [
+          "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md",
+          "chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md"
+        ],
+        "stage_scope": "S10-S90",
+        "country": "comparative",
+        "last_updated": "2026-07-23"
+      }
+    },
+    "data/metadata/data_provenance_manifest.md": {
+      "has_yaml": true,
+      "missing": [],
+      "nulls": [],
+      "data": {
+        "type": "provenance_manifest",
+        "status": "active",
+        "depends_on": [
+          "data/metadata/us_bea_variable_menu_locked.csv",
+          "codes/10_bea_api_helpers.R"
+        ],
+        "stage_scope": "S10-S90",
+        "country": "comparative",
+        "last_updated": "2026-07-23"
+      }
+    }
+  },
+  "dir_breakdown": {
+    "root": 4,
+    "chapter2_vault": 146,
+    "codes": 2,
+    "data": 14,
+    "docs": 22,
+    "output": 277,
+    "reports": 13
+  }
+}

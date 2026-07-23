@@ -1,20 +1,25 @@
 ---
-status: active-ledger
+type: econometric_protocol
+status: superseded
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-07-23
 scope: chapter2-econometrics
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
-role: active-ledger
+role: superseded-ledger
 stage: pre-estimation-design
-aliases:
-  - Estimator status ledger
-  - D12V estimator ledger
-  - Estimator admissibility ledger
 tags:
-  - chapter2/econometrics
-  - chapter2/pre-estimation-design
-updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
+- chapter2/econometrics
+- chapter2/superseded
+updated_by: E10V_I2_TRAP_RESOLUTION
 ---
 
-# Estimator Status Ledger D12V
+> [!WARNING]
+> **SUPERSEDED LEDGER**
+> This estimator status ledger has been superseded by [[Estimator_Status_Ledger_E10V]], which reflects the new baseline preference for **IM-OLS (CPR-adapted)** and **Orthogonalization**.
+
+# Estimator Status Ledger D12V (SUPERSEDED)
 
 | Estimator | Status for linear cointegration | Status for nonlinear/interacted objects | Status for generated/changing-coefficient objects | Allowed role | Blocked role | Required gate | Notes |
 |---|---|---|---|---|---|---|---|

@@ -1,3 +1,12 @@
+---
+type: draft_section
+status: draft
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-14
+---
+
 ## §2.3.3 Layer 2: The Behavioral Identification
 
 The accumulation identity established in §2.3.2 is exact. Taking logarithms of equation (2.y) preserves this exactness:

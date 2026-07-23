@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-06-20
+---
+
 # S29A Income Distribution Variables Construction Decision
 
 Decision: `AUTHORIZE_S29B_FIXED_ASSETS_AND_CAPITAL_STOCK_VARIABLES_CONSTRUCTION_SETUP`

@@ -1,13 +1,17 @@
 ---
-title: "Accumulation and Disequilibrium Reconstruction"
-type: mechanism-reconstruction
-project: "Chapter 2 — utilization, accumulation, and firm fracture"
+type: analytical_foundation
 status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-04-23
+title: Accumulation and Disequilibrium Reconstruction
+project: "Chapter 2 \u2014 utilization, accumulation, and firm fracture"
 tags:
-  - okishio
-  - accumulation
-  - disequilibrium
-  - idle-capacity
+- okishio
+- accumulation
+- disequilibrium
+- idle-capacity
 ---
 
 # Accumulation and Disequilibrium Reconstruction

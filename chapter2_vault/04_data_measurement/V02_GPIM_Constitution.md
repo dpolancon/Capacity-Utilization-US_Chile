@@ -1,3 +1,12 @@
+---
+type: data_measurement
+status: active
+depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+stage_scope: S10
+country: US_CL
+last_updated: 2026-06-26
+---
+
 # Chapter 2 — GPIM Measurement Constitution and Capital-Stock Governance
 
 ## Authority and purpose

@@ -1,3 +1,12 @@
+---
+type: documentation
+status: active
+depends_on: []
+stage_scope: none
+country: US
+last_updated: 2026-06-10
+---
+
 # U.S. S10 Source-of-Truth Construction Ledger
 
 ## Purpose

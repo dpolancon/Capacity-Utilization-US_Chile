@@ -1,3 +1,12 @@
+---
+type: documentation
+status: active
+depends_on: []
+stage_scope: none
+country: none
+last_updated: 2026-07-08
+---
+
 # Cointegrating Polynomial Regression (CPR): Econometric Exposition
 
 This note provides a self-contained exposition of **Cointegrating Polynomial Regression (CPR)**, explaining why it resolves the $I(2)$ unit root trap in nonlinear models and how FM-OLS/IM-OLS estimators ensure valid inference.

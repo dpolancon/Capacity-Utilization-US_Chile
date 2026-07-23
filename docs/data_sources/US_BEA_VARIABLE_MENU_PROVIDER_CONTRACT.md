@@ -1,3 +1,12 @@
+---
+type: documentation
+status: active
+depends_on: []
+stage_scope: none
+country: US
+last_updated: 2026-06-09
+---
+
 # U.S. BEA Variable Menu Provider Contract
 
 **Locked:** 2026-06-09

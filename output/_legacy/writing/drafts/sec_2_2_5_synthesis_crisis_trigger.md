@@ -1,3 +1,12 @@
+---
+type: draft_section
+status: draft
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-14
+---
+
 ### §2.2.5 Synthesis: A Multi-Level Theory of the Crisis Trigger
 
 The four preceding strands do not constitute separate theories of crisis. They constitute a single vertical architecture — four levels of the same contradiction, each specifying the mechanism through which the stagnation tendency operates at a distinct organizational scale.

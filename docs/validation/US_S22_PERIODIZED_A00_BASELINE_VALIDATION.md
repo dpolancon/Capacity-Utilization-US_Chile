@@ -1,3 +1,12 @@
+---
+type: documentation
+status: active
+depends_on: []
+stage_scope: none
+country: US
+last_updated: 2026-06-23
+---
+
 # U.S. S22 Periodized A00 Baseline Validation
 
 **Overall result: PASS.**

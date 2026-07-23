@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-06-23
+---
+
 ﻿# S30C Contextual Family Classification Lock
 
 Task: S30C_CONTEXTUAL_FAMILY_CLASSIFICATION_LOCK

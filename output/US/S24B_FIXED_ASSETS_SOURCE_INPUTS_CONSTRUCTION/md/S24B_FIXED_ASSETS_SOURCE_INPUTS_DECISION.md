@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-06-19
+---
+
 # S24B Fixed Assets Source Inputs Decision
 
 Decision: `AUTHORIZE_S24C_PROVIDER_SOURCE_INPUTS_OTHER_CONSTRUCTION`

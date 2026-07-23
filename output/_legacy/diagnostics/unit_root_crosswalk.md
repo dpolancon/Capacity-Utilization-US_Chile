@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: superseded
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-04-06
+---
+
 # Unit Root Crosswalk — Chile TVECM
 Generated: 2026-04-06 | Sample: 1940-1978 (N=39)
 

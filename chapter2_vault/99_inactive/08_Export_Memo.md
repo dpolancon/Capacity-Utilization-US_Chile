@@ -1,11 +1,15 @@
 ---
-title: "Export Memo"
-type: export-memo
-project: "Normal utilization and the fractured firm"
-status: ready
+type: inactive_archive
+status: inactive
+depends_on: []
+stage_scope: none
+country: US_CL
+last_updated: 2026-04-25
+title: Export Memo
+project: Normal utilization and the fractured firm
 tags:
-  - export
-  - obsidian-bundle
+- export
+- obsidian-bundle
 ---
 
 # Export memo

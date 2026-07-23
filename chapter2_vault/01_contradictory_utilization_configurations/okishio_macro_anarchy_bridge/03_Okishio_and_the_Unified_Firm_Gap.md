@@ -1,25 +1,27 @@
 ---
-title: "Okishio and the Unified-Firm Gap"
-type: bridge-note
-project: "Normal utilization and the fractured firm"
-status: active-core
-parent_bundle: "Contradictory Utilization Configurations"
-bundle_role: "linked satellite"
+type: analytical_foundation
+status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-04-23
+title: Okishio and the Unified-Firm Gap
+project: Normal utilization and the fractured firm
+parent_bundle: Contradictory Utilization Configurations
+bundle_role: linked satellite
 layer: macro-to-firm bridge
-
-core_author: "Okishio"
-core_object: "market anarchy"
-bridge_object: "unified firm abstraction"
-landing_object: "contradictory utilization configurations"
-
+core_author: Okishio
+core_object: market anarchy
+bridge_object: unified firm abstraction
+landing_object: contradictory utilization configurations
 tags:
-  - okishio
-  - market-anarchy
-  - macro-disequilibrium
-  - accumulation
-  - idle-capacity
-  - unified-firm-gap
-  - contradictory-utilization-configurations
+- okishio
+- market-anarchy
+- macro-disequilibrium
+- accumulation
+- idle-capacity
+- unified-firm-gap
+- contradictory-utilization-configurations
 ---
 
 # Okishio and the unified-firm gap

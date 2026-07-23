@@ -1,12 +1,16 @@
 ---
-type: note
+type: inactive_archive
 status: active
+depends_on: []
+stage_scope: none
+country: US_CL
+last_updated: 2026-05-05
 layer: analytical_foundation
 design_role: mechanism_definition
 scope: chapter2_core
 related_to:
-  - N04_Composition_of_Accumulation_and_Transformation
-  - N05_Normal_Reproduction_Closure
+- N04_Composition_of_Accumulation_and_Transformation
+- N05_Normal_Reproduction_Closure
 created: 2026-05-05
 ---
 

@@ -1,3 +1,12 @@
+---
+type: audit_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: S10
+country: none
+last_updated: 2026-06-28
+---
+
 # D04 GPIM S12D_B Source Price and Seed Audit
 
 ## Purpose

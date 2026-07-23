@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-06-21
+---
+
 # S29I Total Capital Downstream Interface Assembly
 
 S29I assembles S29H-contracted variables into separate downstream interface lanes. It copies S29F values exactly and creates no new economic variables, transformations, complete-case samples, q, theta, productive capacity, utilization, modeling outputs, or econometric outputs.

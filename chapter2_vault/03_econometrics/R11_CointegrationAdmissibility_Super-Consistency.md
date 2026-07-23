@@ -1,8 +1,12 @@
 ---
-type: R-note
+type: econometric_protocol
+status: draft
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
 id: R_Cointegration_Admissibility_Superconsistent_Estimators
 title: Cointegration Admissibility for Super-Consistent Estimators
-status: draft
 estimator_status: restricted-dols-required-for-nonlinear-baseline
 created: 2026-06-03
 updated: 2026-06-11
@@ -12,44 +16,44 @@ note_role: identification_guardrail
 object_domain: long_run_transformation_relation
 method_family: super_consistent_cointegrating_regression
 primary_estimators:
-  - FM-OLS
-  - IM-OLS
-  - DOLS
+- FM-OLS
+- IM-OLS
+- DOLS
 primary_gate: Phillips-Ouliaris residual-based cointegration test
 secondary_gate: residual ADF stationarity diagnostic
 scope:
-  - theoretical_admissibility
-  - residual_stationarity
-  - long_run_coefficient_interpretation
-  - super_consistency
+- theoretical_admissibility
+- residual_stationarity
+- long_run_coefficient_interpretation
+- super_consistency
 locked_terms:
-  - cointegration admissibility
-  - residual-based cointegration gate
-  - residual stationarity
-  - no-cointegration null
-  - super-consistent estimator
+- cointegration admissibility
+- residual-based cointegration gate
+- residual stationarity
+- no-cointegration null
+- super-consistent estimator
 forbidden_terms:
-  - FM-OLS cointegration test
-  - Phillips-Hansen cointegration test
-  - coefficient significance proves cointegration
-  - residual ADF proves cointegration
+- FM-OLS cointegration test
+- Phillips-Hansen cointegration test
+- coefficient significance proves cointegration
+- residual ADF proves cointegration
 related_specs:
-  - SPEC_A00_PRIMITIVE_INTERACTION
-  - SPEC_A05_COMPOSITION_INTERACTION
+- SPEC_A00_PRIMITIVE_INTERACTION
+- SPEC_A05_COMPOSITION_INTERACTION
 related_notes:
-  - A00_Benchmark_Identification
-  - A05_Distributive_Mechanization_Bias
-  - A06_B1_E2B_Model_Choice_Lock
+- A00_Benchmark_Identification
+- A05_Distributive_Mechanization_Bias
+- A06_B1_E2B_Model_Choice_Lock
 role: methodological-rationale
 stage: pre-estimation-design
 aliases:
-  - Cointegration admissibility guardrail
+- Cointegration admissibility guardrail
 tags:
-  - chapter2/econometrics
-  - chapter2/methodological-rationale
-  - chapter2/fmols
-  - chapter2/imols
-  - chapter2/qomega-parked
+- chapter2/econometrics
+- chapter2/methodological-rationale
+- chapter2/fmols
+- chapter2/imols
+- chapter2/qomega-parked
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 

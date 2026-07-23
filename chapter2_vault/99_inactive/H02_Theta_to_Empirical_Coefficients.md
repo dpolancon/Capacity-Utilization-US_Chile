@@ -1,13 +1,17 @@
 ---
-type: note
+type: inactive_archive
 status: active
+depends_on: []
+stage_scope: none
+country: US_CL
+last_updated: 2026-05-26
 layer: analytical_foundation
 design_role: synthesis_hinge
 scope: chapter2_core
 related_to:
-  - N04_Composition_of_Accumulation_and_Transformation
-  - R03_Interpretation_of_Theta_as_Contradictory_Object
-  - R04_What_is_Identified_vs_Reconstructed
+- N04_Composition_of_Accumulation_and_Transformation
+- R03_Interpretation_of_Theta_as_Contradictory_Object
+- R04_What_is_Identified_vs_Reconstructed
 created: 2026-05-05
 ---
 

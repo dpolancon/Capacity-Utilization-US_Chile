@@ -1,10 +1,13 @@
 ---
-type: implementation_memo
-status: superseded_pending_corrected_s30
+type: code_implementation_memo
+status: superseded
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: S30
+country: US
+last_updated: 2026-06-10
 layer: code_stage_design
 design_role: us_s30_formal_stability_protocol
 scope: chapter2_results_repo
-country: US
 stage: S30
 repo: Capacity-Utilization-US_Chile
 s30_anchor_authority: false
@@ -17,12 +20,12 @@ window_average_anchor_allowed_as_baseline: false
 created: 2026-05-14
 updated: 2026-06-08
 related_to:
-  - US_S30_SUBSTANTIVE_REVIEW_2026-05-14_PRELIMINARY
-  - R09_structural_break_protocol
-  - M10_Empirical_Identification_Framework
-  - N02_SuperConsistency
-  - D03_capacity_utilization_level_anchor_pinch_year_protocol
-  - D02_PriceDeflator_Protocol_K_Composition
+- US_S30_SUBSTANTIVE_REVIEW_2026-05-14_PRELIMINARY
+- R09_structural_break_protocol
+- M10_Empirical_Identification_Framework
+- N02_SuperConsistency
+- D03_capacity_utilization_level_anchor_pinch_year_protocol
+- D02_PriceDeflator_Protocol_K_Composition
 ---
 
 # C04 - US S30 Stability Protocol

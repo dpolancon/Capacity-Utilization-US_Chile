@@ -1,34 +1,38 @@
 ---
-type: master_note
+type: econometric_protocol
 status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
 layer: method
 design_role: empirical_strategy_scaffold
 scope: chapter2_core_support
 estimator_status: restricted-dols-required-for-nonlinear-baseline
 related_to:
-  - R_distribution_conditioned_theta_identification
-  - A00_Aggregate_Transformation_Benchmark
-  - A05_NRCEnvelope_MechanizationBias
-  - N01_CapacityUtilization_StructuralObject
-  - N02_SuperConsistency
-  - R01_residual_vs_structural_identification
-  - R02_DOLS_reconstruction_dilemma
-  - R04_FMOLS_structural_preservation
-  - R06_IMOLS_integration_ladder_reconstruction
-  - R07_FGLS_threshold_cointegration_admissibility
-  - R08_threshold_break_diagnostics_to_FGLS
-  - L00_Econometrics_References
+- R_distribution_conditioned_theta_identification
+- A00_Aggregate_Transformation_Benchmark
+- A05_NRCEnvelope_MechanizationBias
+- N01_CapacityUtilization_StructuralObject
+- N02_SuperConsistency
+- R01_residual_vs_structural_identification
+- R02_DOLS_reconstruction_dilemma
+- R04_FMOLS_structural_preservation
+- R06_IMOLS_integration_ladder_reconstruction
+- R07_FGLS_threshold_cointegration_admissibility
+- R08_threshold_break_diagnostics_to_FGLS
+- L00_Econometrics_References
 priority: high
 role: superseded-for-baseline
 stage: pre-estimation-design
 aliases:
-  - M10 empirical framework
+- M10 empirical framework
 tags:
-  - chapter2/econometrics
-  - chapter2/superseded
-  - chapter2/fmols
-  - chapter2/imols
-  - chapter2/qomega-parked
+- chapter2/econometrics
+- chapter2/superseded
+- chapter2/fmols
+- chapter2/imols
+- chapter2/qomega-parked
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 

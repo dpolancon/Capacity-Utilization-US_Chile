@@ -1,35 +1,28 @@
 ---
-status: methodological-warning
+type: econometric_protocol
+status: superseded
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-23
 scope: chapter2-econometrics
 estimator_status:
   fmols: blocked-for-nonlinear-baseline
-  imols: blocked-for-nonlinear-baseline
-  restricted_imols: blocked
-  restricted_dols: preferred-design-candidate
-proof_status: conditional-rationale
-requires:
-  - interaction-term-integration-gate
-  - base-variable-integration-gate
-  - lead-lag-sensitivity
+  imols: superseded-by-cpr-imols
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
-role: methodological-warning
+role: superseded-warning
 stage: pre-estimation-design
-aliases:
-  - FM-OLS failure
-  - FMOLS failure
-  - IM-OLS failure
-  - IMOLS failure
-  - Restricted IM-OLS blocked
 tags:
-  - chapter2/econometrics
-  - chapter2/methodological-warning
-  - chapter2/fmols
-  - chapter2/imols
-  - chapter2/pre-estimation-design
-updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
+- chapter2/econometrics
+- chapter2/superseded
+updated_by: E10V_I2_TRAP_RESOLUTION
 ---
 
-# FM-OLS and IM-OLS Failure for Interaction Objects
+> [!WARNING]
+> **SUPERSEDED METHODOLOGICAL WARNING**
+> The claims in this document regarding IM-OLS failures have been superseded by [[E11_IMOLS_CPR_Asymptotic_Rationale]], which demonstrates that **IM-OLS adapted for CPR** (using the Vogelsang-Wagner partial sum transformation) is the mathematically correct and preferred estimator for interactive specifications.
+
+# FM-OLS and IM-OLS Failure for Interaction Objects (SUPERSEDED)
 
 ## Problem object
 

@@ -1,13 +1,17 @@
 ---
-type: advisor_review
+type: paper_facing_map
 status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-23
 date: 2026-07-23
 reviewer: Michael Ash
 candidate: Diego Polanco
 subject: Chapter 2 Scoping Partition and Applied Econometrics Review
 authority_files:
-  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
-  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
+- chapter2_vault/00_constitutive_core/01_Governing_Memo.md
+- chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
 ---
 
 # Advisor Review: Chapter 2 Scoping Partition & Applied Econometrics Audit

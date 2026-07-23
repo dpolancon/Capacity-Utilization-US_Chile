@@ -1,12 +1,16 @@
 ---
-type: note
+type: legacy_note
 status: active
+depends_on: []
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-27
 layer: superseded
 design_role: object_definition
 scope: chapter2_core
 related_to:
-  - H01_Mechanization_Problem
-  - H02_Theta_to_Empirical_Coefficients
+- H01_Mechanization_Problem
+- H02_Theta_to_Empirical_Coefficients
 created: 2026-05-05
 ---
 

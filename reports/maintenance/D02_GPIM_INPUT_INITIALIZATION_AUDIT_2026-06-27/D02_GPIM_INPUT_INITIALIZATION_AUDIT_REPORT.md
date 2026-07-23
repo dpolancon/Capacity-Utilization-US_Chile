@@ -1,3 +1,12 @@
+---
+type: audit_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: S10
+country: none
+last_updated: 2026-06-27
+---
+
 # D02 GPIM Input-Path and Initialization-History Audit
 
 **Date:** 2026-06-27

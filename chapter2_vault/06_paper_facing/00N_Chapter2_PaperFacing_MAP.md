@@ -1,12 +1,15 @@
 ---
-type: note
+type: paper_facing_map
 status: locked
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-23
 layer: design
 design_role: chapter_map
 scope: chapter2
 priority: core
 ---
-
 
 # Paper-facing Chapter 2 — section map
 
@@ -127,12 +130,12 @@ Translate the theoretical object into an empirical logic of identification.
 
 Distinguish:
 
-- observed objects: YYY, KKK, ω\omegaω
-- recovered objects: θ\thetaθ, YpY^pYp, μ\muμ
+- observed objects: $Y$, $K$,$\omega$
+- recovered objects: $\theta$, $Y^p$, $\mu$
 
 Then show the empirical sequence:
 
-long-run relation→θ^→Y^p→μ^\text{long-run relation} \rightarrow \hat{\theta} \rightarrow \hat{Y}^p \rightarrow \hat{\mu}long-run relation→θ^→Y^p→μ^​
+$\text{long-run relation} \rightarrow \hat{\theta} \rightarrow \hat{Y}^p \rightarrow \hat{\mu}$
 
 Explain that pinch-year normalization is required for levels, but does not define the object.
 

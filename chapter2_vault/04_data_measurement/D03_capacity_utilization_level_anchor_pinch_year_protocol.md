@@ -1,16 +1,20 @@
 ---
-type: note
+type: data_measurement
 status: active
+depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+stage_scope: S10
+country: US_CL
+last_updated: 2026-06-01
 layer: empirical_design
 design_role: capacity_utilization_level_anchor_protocol
 scope: chapter2_core_support
 related_to:
-  - "A00_Aggregate_Transformation_Benchmark"
-  - "M10_Empirical_Identification_Framework"
-  - "N01_CapacityUtilization_StructuralObject"
-  - "R01_residual_vs_structural_identification"
-  - "GPIM, heterogeneous capital, stock-flow consistency, and valuation registers"
-  - "Price-deflator protocol for ME–NRC  Non Financial-capital composition"
+- A00_Aggregate_Transformation_Benchmark
+- M10_Empirical_Identification_Framework
+- N01_CapacityUtilization_StructuralObject
+- R01_residual_vs_structural_identification
+- GPIM, heterogeneous capital, stock-flow consistency, and valuation registers
+- "Price-deflator protocol for ME\u2013NRC  Non Financial-capital composition"
 created: 2026-05-14
 updated: 2026-05-14
 ---

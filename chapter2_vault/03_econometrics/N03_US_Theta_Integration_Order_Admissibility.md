@@ -1,27 +1,31 @@
 ---
-type: evidence_ledger
+type: econometric_protocol
 status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-07-20
 layer: econometrics
 design_role: integration_order_admissibility_map
 scope: US_first_layer_theta_recovery
 created: 2026-07-20
 sources:
-  - output/S34_pre_regression/us_s34_variable_menu_integration_ledger.csv
-  - output/S34_pre_regression/us_s34_interaction_i2_risk_ledger.csv
-  - output/S34_pre_regression/us_s34_candidate_level_relation_ledger.csv
-  - output/S35_specification_review/us_s35_specification_review_ledger.csv
-  - output/S35_specification_review/us_s35_estimator_menu_candidate_ledger.csv
-  - output/S34R_B_cpr_realigned_design_gate/csv/S34R_B_repaired_path_admissibility_ledger.csv
-  - output/S34R_B_cpr_realigned_design_gate/csv/S34R_B_specification_review_ledger.csv
+- output/S34_pre_regression/us_s34_variable_menu_integration_ledger.csv
+- output/S34_pre_regression/us_s34_interaction_i2_risk_ledger.csv
+- output/S34_pre_regression/us_s34_candidate_level_relation_ledger.csv
+- output/S35_specification_review/us_s35_specification_review_ledger.csv
+- output/S35_specification_review/us_s35_estimator_menu_candidate_ledger.csv
+- output/S34R_B_cpr_realigned_design_gate/csv/S34R_B_repaired_path_admissibility_ledger.csv
+- output/S34R_B_cpr_realigned_design_gate/csv/S34R_B_specification_review_ledger.csv
 related_to:
-  - R_distribution_conditioned_theta_identification
-  - D12V_Restricted_DOLS_Active_Estimator_Lock
-  - Interaction_Term_Integration_Order_Gate
+- R_distribution_conditioned_theta_identification
+- D12V_Restricted_DOLS_Active_Estimator_Lock
+- Interaction_Term_Integration_Order_Gate
 tags:
-  - chapter2/econometrics
-  - chapter2/us
-  - chapter2/theta
-  - chapter2/integration-order
+- chapter2/econometrics
+- chapter2/us
+- chapter2/theta
+- chapter2/integration-order
 ---
 
 # N03: U.S. \(\theta_t\) Integration-Order Admissibility Map

@@ -1,15 +1,19 @@
 ---
-type: note
-subtype: hinge
+type: legacy_note
 status: superseded
+depends_on: []
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-27
+subtype: hinge
 layer: analytical_foundation
 design_role: mechanism_definition
 scope: chapter2_core
 related_to:
-  - H01_Cajas_to_Transformation_Elasticity
-  - H02_Theta_to_Empirical_Coefficients
-  - N00_Mechanization_Analytical_References
-  - R05_Frontier_of_Not_Becoming
+- H01_Cajas_to_Transformation_Elasticity
+- H02_Theta_to_Empirical_Coefficients
+- N00_Mechanization_Analytical_References
+- R05_Frontier_of_Not_Becoming
 created: 2026-05-27
 updated: 2026-05-27
 ---

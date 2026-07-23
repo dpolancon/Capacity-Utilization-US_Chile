@@ -1,30 +1,25 @@
 ---
-status: working-rationale
+type: econometric_protocol
+status: superseded
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-23
 scope: chapter2-econometrics
-proof_status: conditional-not-final
-supports:
-  - restricted-dols
-  - exclusion-of-delta-interaction-leads-lags
-caveats:
-  - product-of-I1-processes-not-automatically-standard-I1
-  - projection-lemma-requires-formal-caution
-  - mixed-integration-case-requires-separate-treatment
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
-role: methodological-rationale
+role: superseded-rationale
 stage: pre-estimation-design
-aliases:
-  - RDOLS asymptotic rationale
-  - Restricted DOLS proof caveats
-  - DOLS interaction rationale
 tags:
-  - chapter2/econometrics
-  - chapter2/methodological-rationale
-  - chapter2/restricted-dols
-  - chapter2/pre-estimation-design
-updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
+- chapter2/econometrics
+- chapter2/superseded
+updated_by: E10V_I2_TRAP_RESOLUTION
 ---
 
-# Restricted DOLS Asymptotic Rationale and Caveats
+> [!WARNING]
+> **SUPERSEDED RATIONALE**
+> This DOLS asymptotic rationale has been superseded by [[E11_IMOLS_CPR_Asymptotic_Rationale]], which establishes **IM-OLS (CPR-adapted)** as the mathematically correct approach to resolving the I(2) trap. DOLS is demoted to a secondary diagnostic comparator due to regressor explosion and multicollinearity risks.
+
+# Restricted DOLS Asymptotic Rationale and Caveats (SUPERSEDED)
 
 ## Model object
 

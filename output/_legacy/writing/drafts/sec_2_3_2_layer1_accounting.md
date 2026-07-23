@@ -1,3 +1,12 @@
+---
+type: draft_section
+status: draft
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-14
+---
+
 ## §2.3.2 Layer 1: The Accounting Foundation
 
 Everything in this subsection is a pure accounting identity. No behavioral equation is imposed; no parameter requires estimation. The decomposition structures what *can* be tested in Stage C --- it does not pre-empt the result.

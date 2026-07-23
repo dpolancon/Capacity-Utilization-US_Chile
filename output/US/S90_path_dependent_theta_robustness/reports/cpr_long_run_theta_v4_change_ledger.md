@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: S90
+country: US
+last_updated: 2026-07-20
+---
+
 # Long-run theta v3 to v4 slide change ledger
 
 | v3 slide | v4 slide | Treatment | Governing change |

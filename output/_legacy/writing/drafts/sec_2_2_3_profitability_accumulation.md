@@ -1,3 +1,12 @@
+---
+type: draft_section
+status: draft
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-14
+---
+
 # §2.2.3 — From Profitability to Accumulation: The Missing Link
 **Source authority:** Basu & Das (2017); Ibarra (2023/24)
 **Date drafted:** 2026-03-29

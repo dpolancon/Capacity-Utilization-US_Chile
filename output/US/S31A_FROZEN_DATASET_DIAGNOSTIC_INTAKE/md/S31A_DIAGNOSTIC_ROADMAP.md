@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-06-24
+---
+
 # S31A Diagnostic Roadmap
 
 S31A registers the frozen S30 dataset as the immutable baseline for diagnostics. All later S31 work must read the frozen release without correcting, extending, reclassifying, or rebuilding it.

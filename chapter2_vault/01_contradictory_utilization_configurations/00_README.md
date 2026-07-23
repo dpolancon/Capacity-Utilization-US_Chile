@@ -1,15 +1,19 @@
 ---
-title: "Contradictory Utilization Configurations"
-type: bundle-readme
-project: "Chapter 2 — utilization, accumulation, and firm fracture"
-status: export-ready
-landing_object: "contradictory utilization configurations"
-higher_order_object: "utilization regimes"
+type: analytical_foundation
+status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-19
+title: Contradictory Utilization Configurations
+project: "Chapter 2 \u2014 utilization, accumulation, and firm fracture"
+landing_object: contradictory utilization configurations
+higher_order_object: utilization regimes
 tags:
-  - utilization
-  - normal-degree
-  - contradictory-utilization-configurations
-  - utilization-regimes
+- utilization
+- normal-degree
+- contradictory-utilization-configurations
+- utilization-regimes
 ---
 
 # Contradictory Utilization Configurations

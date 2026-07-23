@@ -1,11 +1,15 @@
 ---
-title: "NotebookLM Question Bank — Okishio"
-type: question-bank
-project: "Chapter 2 — utilization, accumulation, and firm fracture"
-status: support
+type: analytical_foundation
+status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-04-23
+title: "NotebookLM Question Bank \u2014 Okishio"
+project: "Chapter 2 \u2014 utilization, accumulation, and firm fracture"
 tags:
-  - okishio
-  - source-interrogation
+- okishio
+- source-interrogation
 ---
 
 # NotebookLM Question Bank

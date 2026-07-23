@@ -1,10 +1,13 @@
 ---
-type: note
+type: constitutional_core
 status: active
+depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-04-22
 layer: design
 design_role: research_question
 scope: constitutional
-depends_on: 02_Research_Problem
 ---
 
 # 02A_Research_Question

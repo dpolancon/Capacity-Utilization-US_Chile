@@ -1,33 +1,38 @@
 ---
-type: note
+type: data_measurement
+status: active
+depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+stage_scope: S10
+country: US_CL
+last_updated: 2026-06-10
 subtype: protocol
-status: active_bounded_robustness
 layer: data_measurement
 design_role: variable_construction_protocol
 scope: chapter2_core
 related_to:
-  - R_distribution_conditioned_theta_identification
-  - A03_TransformationElasticity_Two-CapitalCapacityComposition
-  - A05_NRCEnvelope_MechanizationBias
-  - D01_GPIM_heterogeneous_capital_SFC
-  - D02_PriceDeflator_Protocol_K_Composition
-  - R10_Binding_Specification_Layering_Rule
+- R_distribution_conditioned_theta_identification
+- A03_TransformationElasticity_Two-CapitalCapacityComposition
+- A05_NRCEnvelope_MechanizationBias
+- D01_GPIM_heterogeneous_capital_SFC
+- D02_PriceDeflator_Protocol_K_Composition
+- R10_Binding_Specification_Layering_Rule
 governs:
-  - K_ME_real
-  - K_NRC_real
-  - k_ME_t
-  - k_NRC_t
-  - m_ME_NRC_t
-  - c_NRC_ME_t
-  - omega_m_ME_NRC_t
+- K_ME_real
+- K_NRC_real
+- k_ME_t
+- k_NRC_t
+- m_ME_NRC_t
+- c_NRC_ME_t
+- omega_m_ME_NRC_t
 measurement_status:
   direct_sector_asset_split: required_for_direct_estimate
-  tier_b_component_proxy: admissible_as_proxy_only
-  nominal_ratio: inadmissible
   mixed_price_ratio: inadmissible
+  nominal_ratio: inadmissible
+  tier_b_component_proxy: admissible_as_proxy_only
 created: 2026-06-02
 updated: 2026-06-08
 ---
+
 # D04: ME/NRC Log-Ratio Construction Protocol
 
 > [!important] Current identification lock

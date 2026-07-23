@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-06-24
+---
+
 # S30H Accounting Protocol
 
 Corporate-minus-NFC differences reconstruct implied financial-corporate accounts. The construction uses annual current-dollar observations and no interpolation, splicing, backcasting, zero replacement, or external retrieval.

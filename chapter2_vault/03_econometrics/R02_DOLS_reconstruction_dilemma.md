@@ -1,25 +1,29 @@
 ---
-type: note
-status: active-support
+type: econometric_protocol
+status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
 layer: method
 design_role: estimator_admissibility_rule
 scope: chapter2_core_support
 estimator_status: restricted-dols-support
 related_to:
-  - R01_residual_vs_structural_identification
-  - N01_CapacityUtilization_StructuralObject
-  - N02_SuperConsistency
-  - M10_Empirical_Identification_Framework
-  - L00_Econometrics_References
+- R01_residual_vs_structural_identification
+- N01_CapacityUtilization_StructuralObject
+- N02_SuperConsistency
+- M10_Empirical_Identification_Framework
+- L00_Econometrics_References
 priority: high
 role: methodological-rationale
 stage: pre-estimation-design
 aliases:
-  - DOLS reconstruction boundary
+- DOLS reconstruction boundary
 tags:
-  - chapter2/econometrics
-  - chapter2/methodological-rationale
-  - chapter2/restricted-dols
+- chapter2/econometrics
+- chapter2/methodological-rationale
+- chapter2/restricted-dols
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 

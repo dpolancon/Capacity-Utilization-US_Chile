@@ -1,3 +1,12 @@
+---
+type: documentation
+status: active
+depends_on: []
+stage_scope: none
+country: none
+last_updated: 2026-07-07
+---
+
 # S33 — Theta Recovery Specification Ledger
 
 Date: 2026-07-07  

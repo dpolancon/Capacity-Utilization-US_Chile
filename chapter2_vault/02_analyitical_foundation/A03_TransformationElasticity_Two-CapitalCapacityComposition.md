@@ -1,20 +1,24 @@
 ---
-type: note
-subtype: object
+type: analytical_foundation
 status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-06-10
+subtype: object
 layer: analytical_foundation
 design_role: mechanism_definition
 scope: chapter2_core
 related_to:
-  - R_distribution_conditioned_theta_identification
-  - A00_Aggregate_Transformation_Benchmark
-  - A01_Extensive_Accumulation
-  - A02_Intensive_Accumulation
-  - A04_PeripheralTransformationElasticity
-  - N00_Mechanization_Analytical_References
-  - R05_Frontier_of_Not_Becoming
-  - R06_Regime_Gating_and_Diagnostic_Ladder
-  - H01_Cajas_to_Transformation_Elasticity
+- R_distribution_conditioned_theta_identification
+- A00_Aggregate_Transformation_Benchmark
+- A01_Extensive_Accumulation
+- A02_Intensive_Accumulation
+- A04_PeripheralTransformationElasticity
+- N00_Mechanization_Analytical_References
+- R05_Frontier_of_Not_Becoming
+- R06_Regime_Gating_and_Diagnostic_Ladder
+- H01_Cajas_to_Transformation_Elasticity
 created: 2026-05-27
 updated: 2026-06-11
 ---

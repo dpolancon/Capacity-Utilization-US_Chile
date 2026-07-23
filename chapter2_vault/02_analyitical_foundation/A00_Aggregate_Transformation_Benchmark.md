@@ -1,22 +1,26 @@
 ---
-title: "A00: Aggregate Transformation Benchmark"
-type: "note"
-subtype: "object"
-status: "active"
-layer: "analytical_foundation"
-design_role: "baseline_identification"
-scope: "chapter2_core"
+type: analytical_foundation
+status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-06-10
+title: 'A00: Aggregate Transformation Benchmark'
+subtype: object
+layer: analytical_foundation
+design_role: baseline_identification
+scope: chapter2_core
 created: 2026-06-01
 updated: 2026-06-11
 related_to:
-  - "R_distribution_conditioned_theta_identification"
-  - "A01_Extensive_Accumulation"
-  - "A02_Intensive_Accumulation"
-  - "A03_TransformationElasticity_Two-CapitalCapacityComposition"
-  - "A04_PeripheralTransformationElasticity"
-  - "N01_CapacityUtilization_StructuralObject"
-  - "M10_Empirical_Identification_Framework"
-  - "R04_FMOLS_structural_preservation"
+- R_distribution_conditioned_theta_identification
+- A01_Extensive_Accumulation
+- A02_Intensive_Accumulation
+- A03_TransformationElasticity_Two-CapitalCapacityComposition
+- A04_PeripheralTransformationElasticity
+- N01_CapacityUtilization_StructuralObject
+- M10_Empirical_Identification_Framework
+- R04_FMOLS_structural_preservation
 ---
 
 # A00: Aggregate Transformation Benchmark

@@ -1,16 +1,12 @@
 ---
 type: outline
-status: locked
-version: 2.0
-last_updated: 2026-07-21
+status: active
 depends_on:
-  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
-  - chapter2_vault/00_constitutive_core/02A_Research_Question.md
-  - chapter2_vault/00_constitutive_core/02B_Objectives_and_Contribution.md
-  - chapter2_vault/00_constitutive_core/02C_Hypotheses.md
-  - chapter2_vault/00_constitutive_core/02D_Mechanism_Map.md
-  - chapter2_vault/00_constitutive_core/03B_Process_Tracing_Playbook.md
-  - chapter2_vault/02_analyitical_foundation/H00_Okishio_Vidal_Decentralized_Accumulation.md
+  - chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
+  - chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md
+stage_scope: S10-S90
+country: comparative
+last_updated: 2026-07-23
 ---
 
 # Chapter 2 Definitive Outline & Paragraph Micro-Outline
@@ -67,15 +63,13 @@ depends_on:
 *   **Paragraph 2.2.4:** *Name: Contested Capacity Conventions*
     *   *Focus:* Explain how "capacity" is not a neutral physical index but a contested accounting convention, resulting in firm-level settlements of "mediocre sufficiency."
 
-#### Subsection 2.3: Synthesis and the Two-Corridor Process Tracing
+#### Subsection 2.3: Synthesis and Process Tracing: The Productive-Capacity Corridor
 *   **Paragraph 2.3.1:** *Name: Reinterpreting the Mechanization Frontier*
-    *   *Focus:* Synthesize Okishio and Vidal. Reframe the mechanization frontier from a firm-level optimization problem into a macro-structural envelope of historical class conflict.
+    *   *Focus:* Synthesize Okishio and Vidal. Reframe the mechanization frontier from a firm-level optimization problem into a macro-structural envelope of historical class conflict. Introduce stylized baseline parameters ($g_k = 3\%$, $g_{yp} = 2\%$, $\theta = 0.8$) and define the capital acceleration term ($d\hat{k}/dt$) to ground the capacity equations.
 *   **Paragraph 2.3.2:** *Name: The Productive-Capacity Corridor*
-    *   *Focus:* Define the first process-tracing corridor, linking the capacity elasticity ($\theta$), realized utilization ($\mu$), and the profit rate ($r$).
-*   **Paragraph 2.3.3:** *Name: The Recapitalization Corridor*
-    *   *Focus:* Define the second corridor, linking the recapitalization rate ($\chi$), capital accumulation ($k$), and macroeconomic growth ($g$).
-*   **Paragraph 2.3.4:** *Name: Bridging Micro Contradiction to Macro Disequilibrium*
-    *   *Focus:* Summarize how firm-level struggles over effort and capacity scale up to determine the macroeconomic transformation of accumulation into active capacity.
+    *   *Focus:* Define the productive-capacity corridor, linking distributional conditioning to the transformation elasticity ($\theta_t$), realized capacity utilization ($\mu_t$), and the profit rate ($r_t$) via the Weisskopf decomposition ($r_t = \mu_t b_t \pi_t$).
+*   **Paragraph 2.3.3:** *Name: Bridging Micro Contradiction to Macro Disequilibrium*
+    *   *Focus:* Summarize how shop-floor struggles over effort calibration and contested capacity conventions scale up to establish the aggregate capacity ceiling ($\hat{Y}_t^p$), explicitly noting that the feedback of this capacity ceiling onto long-run capital accumulation and dynamic investment functions ($\chi_t \rightarrow k_t \rightarrow g_t$) is deferred to Chapter 3.
 
 ---
 
@@ -135,11 +129,13 @@ depends_on:
 *   **Paragraph 4.3.2:** *Name: IM-OLS Robustness and DOLS Exclusion Rationale*
     *   *Focus:* Justify the use of IM-OLS as a check and explain why DOLS is excluded (its differencing dynamics insert non-structural terms that distort $\theta_t$).
 *   **Paragraph 4.3.3:** *Name: Normalization and Level Anchoring (Pinch Year)*
-    *   *Focus:* Explain the role of the pinch year ($u_{t_0} = 1$) to anchor the utilization level, and outline sensitivity tests across alternative years.
+    *   *Focus:* Explain the role of the pinch year ($\mu_{t_0} = 1$) to anchor the utilization level, and outline sensitivity tests across alternative peak-utilization years.
+*   **Paragraph 4.3.4:** *Name: Econometric Admissibility and Pedagogical Counterfactuals*
+    *   *Focus:* Explicitly define econometric admissibility as the survival of cointegration under structural distribution. Schedule two mandatory counterfactuals: (1) the Restriction Counterfactual ($\theta = 1.0$) to demonstrate the economic absurdity of imposing balanced growth, and (2) the No-Dummy Counterfactual to prove that omitting structural breaks generates spurious cointegration.
 
 #### Subsection 4.4: Data Construction and Harmonization
-*   **Paragraph 4.4.1:** *Name: US BEA Source Pathways*
-    *   *Focus:* Detail the construction of US corporate sector variables from BEA NIPA and Fixed Asset Tables, emphasizing the separation of structures and machinery.
+*   **Paragraph 4.4.1:** *Name: US BEA Source Pathways and Descriptive Grounding*
+    *   *Focus:* Detail the construction of US corporate sector variables from BEA NIPA and Fixed Asset Tables, emphasizing the separation of structures ($K^{NR}$) and machinery ($K^{ME}$). Emulate Stephen Marglin by integrating raw, non-econometric growth rates of GDP, employment, and capital (1947–2011) directly into the text to ground the econometrics.
 *   **Paragraph 4.4.2:** *Name: Chile Capital Stock Harmonization*
     *   *Focus:* Detail the integration of the Pérez FBKF series (1900–1994) with ClioLab and Central Bank (BCCh) data.
 *   **Paragraph 4.4.3:** *Name: Gross vs. Net Capital Stocks*
@@ -150,22 +146,22 @@ depends_on:
 ### Section 5: Empirical Results (US and Chile)
 
 #### Subsection 5.1: US Estimation and Capacity Reconstruction
-*   **Paragraph 5.1.1:** *Name: US Cointegration Performance*
-    *   *Focus:* Present the ADF, EG, and Johansen test statistics for US bivariate and trivariate specifications.
+*   **Paragraph 5.1.1:** *Name: US Cointegration Performance and Visual-First Grounding*
+    *   *Focus:* Provide a non-parametric "Visual-First" analysis plotting raw time-series trends and scatter plots of output, capital, and wage shares before presenting parametric ADF, EG, and Johansen test statistics for US specifications.
 *   **Paragraph 5.1.2:** *Name: US Transformation Elasticity ($\hat{\theta}_t$)*
     *   *Focus:* Report the recovered US elasticity coefficients, demonstrating how $\theta_t$ varies with the wage share.
 *   **Paragraph 5.1.3:** *Name: Reconstructed US Capacity Utilization*
-    *   *Focus:* Present the final US utilization series, highlighting cyclical behaviors and post-1973 structural shifts.
+    *   *Focus:* Present the final US utilization series ($\hat{\mu}_t$), highlighting cyclical behaviors and post-1973 structural shifts.
 *   **Paragraph 5.1.4:** *Name: US Specification-Space Map*
     *   *Focus:* Display the robust results across the combinatorial space of lag lengths and dummy configurations.
 
 #### Subsection 5.2: Chile Estimation and the External Wedge
 *   **Paragraph 5.2.1:** *Name: Chile Cointegration Performance*
-    *   *Focus:* Present cointegration tests for the Chilean baseline and the extended peripheral model.
+    *   *Focus:* Present non-parametric visual trends followed by formal cointegration tests for the Chilean baseline and the extended peripheral model.
 *   **Paragraph 5.2.2:** *Name: Chilean Transformation Elasticity ($\hat{\theta}_t$)*
     *   *Focus:* Report the recovered Chilean elasticity and show how it responds to both distribution and the external wedge ($z_t$).
 *   **Paragraph 5.2.3:** *Name: Reconstructed Chilean Capacity Utilization*
-    *   *Focus:* Present the Chilean utilization series (1900–2024), detailing its behavior during the ISI era and neoliberal transition.
+    *   *Focus:* Present the Chilean utilization series ($\hat{\mu}_t$, 1900–2024), detailing its behavior during the ISI era and neoliberal transition.
 *   **Paragraph 5.2.4:** *Name: Chile Sensitivity Diagnostics*
     *   *Focus:* Map the specification space for Chile, comparing different choices of the external conditioning variable $z_t$.
 
@@ -175,19 +171,19 @@ depends_on:
 *   **Paragraph 5.3.2:** *Name: Elasticity Regimes Contrast*
     *   *Focus:* Contrast the US overaccumulation regime ($\hat{\theta}_t < 1.0$) with the Chilean externally constrained regime.
 *   **Paragraph 5.3.3:** *Name: Residual and Cointegration Stability*
-    *   *Focus:* Demonstrate the stability of the estimated cointegrating residuals across both countries.
+    *   *Focus:* Demonstrate the stability and $I(0)$ stationarity of the estimated cointegrating residuals across both countries.
 
 ---
 
 ### Section 6: Discussion and Theoretical Implications
 
-#### Subsection 6.1: Tracing the Corridors
-*   **Paragraph 6.1.1:** *Name: US Corridor Analysis*
-    *   *Focus:* Use the process-tracing playbook to evaluate the US case: how $\theta_t$ and $\mu_t$ conditioned the profit rate, and how $\chi_t$ drove accumulation.
-*   **Paragraph 6.1.2:** *Name: Chile Corridor Analysis*
-    *   *Focus:* Trace the Chilean case, showing how external balance constraints choked the recapitalization corridor.
-*   **Paragraph 6.1.3:** *Name: Comparative Corridor Synthesis*
-    *   *Focus:* Synthesize the comparison: how the interaction between capacity and recapitalization corridors differed across center and periphery.
+#### Subsection 6.1: Tracing the Productive-Capacity Corridor
+*   **Paragraph 6.1.1:** *Name: US Productive-Capacity Transmission*
+    *   *Focus:* Use the process-tracing playbook to trace how distribution-conditioned transformation elasticity ($\hat{\theta}_t$) and recovered capacity utilization ($\hat{\mu}_t$) shape the upper ceiling of US corporate profitability via the Weisskopf decomposition ($r_t = \mu_t b_t \pi_t$).
+*   **Paragraph 6.1.2:** *Name: Chilean Productive-Capacity Transmission*
+    *   *Focus:* Trace how external balance-of-payments constraints ($z_t$) condition Chilean capacity formation ($\hat{\theta}_t$) and utilization ($\hat{\mu}_t$), establishing a foreign-exchange-bounded ceiling on domestic profitability.
+*   **Paragraph 6.1.3:** *Name: Comparative Profitability Transmission Synthesis*
+    *   *Focus:* Synthesize the comparative transmission mechanisms: contrast how internal class-distributional mediation in the core vs. external technological dependency in the periphery constrain long-run profitability dynamics, without estimating accumulation feedback loops.
 
 #### Subsection 6.2: Structural Overaccumulation vs. External Constraint
 *   **Paragraph 6.2.1:** *Name: Re-evaluating Overaccumulation*
@@ -216,7 +212,7 @@ depends_on:
     *   *Focus:* Recapitulate the relational comparative framework that integrates core and periphery within a unified value-theoretic model.
 
 #### Subsection 7.2: Programmatic Horizon
-*   **Paragraph 7.2.1:** *Name: Programmatic Horizon*
-    *   *Focus:* Outline future research avenues, including the integration of full profitability decompositions and expanded process-tracing datasets.
+*   **Paragraph 7.2.1:** *Name: Structural Bridge to Chapter 3 and Model Limitations*
+    *   *Focus:* Explicitly frame the deferral of the Recapitalization Corridor ($\chi_t \rightarrow k_t \rightarrow g_t$) and dynamic investment function estimations as the structural bridge to Chapter 3, where Chapter 2's recovered utilization series ($\hat{\mu}_t$) serves as an input regressor for VECM and Local Projections growth models. Note the single-sector macro bounding of the overaccumulation model as an analytical limitation of Chapter 2.
 *   **Paragraph 7.2.2:** *Name: Concluding Reflections*
-    *   *Focus:* Present final reflections on the status of capacity utilization in heterodox growth theory.
+    *   *Focus:* Present final reflections on the status of capacity utilization in heterodox growth theory, reinforcing that capacity is a socially contested, historically specific regime.

@@ -1,3 +1,12 @@
+---
+type: validation_report
+status: active
+depends_on: [data/provider_handoffs/US_BEA_FixedAssets/2026-06-11/HANDOFF.md]
+stage_scope: S10
+country: none
+last_updated: 2026-06-26
+---
+
 # Chapter 2 BEA/FRED Provider Variable Menu
 
 ## Purpose

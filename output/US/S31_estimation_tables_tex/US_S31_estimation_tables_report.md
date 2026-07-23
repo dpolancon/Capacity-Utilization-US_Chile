@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-06-02
+---
+
 # US S31 Estimation Tables Report
 
 Run timestamp: 2026-06-02 13:41:24 -04

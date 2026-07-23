@@ -1,3 +1,12 @@
+---
+type: stage_contract
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: none
+last_updated: 2026-06-03
+---
+
 # Legacy Code Notice — Not the Active Chapter 2 Architecture
 
 This folder contains legacy code retained for provenance, auditability, and historical reconstruction. It is **not** part of the active Chapter 2 code architecture.

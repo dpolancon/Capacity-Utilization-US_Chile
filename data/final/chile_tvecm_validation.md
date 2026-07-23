@@ -1,3 +1,12 @@
+---
+type: validation_report
+status: active
+depends_on: [data/provider_handoffs/US_BEA_FixedAssets/2026-06-11/HANDOFF.md]
+stage_scope: all_stages
+country: CL
+last_updated: 2026-04-08
+---
+
 # Chile TVECM Panel — Validation Report
 
 Generated: 2026-04-06 21:04

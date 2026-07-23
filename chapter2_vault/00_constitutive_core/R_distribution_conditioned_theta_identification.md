@@ -1,6 +1,10 @@
 ---
-type: rule_note
-status: binding
+type: constitutional_core
+status: active
+depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-06-10
 layer: analytical_foundation
 scope: chapter2_core
 topic: distribution_conditioned_transformation_elasticity

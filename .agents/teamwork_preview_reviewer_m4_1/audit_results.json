@@ -1,0 +1,4765 @@
+[
+  {
+    "file": "chapter2_vault\\00_constitutive_core\\01A_Design_vs_Presentation_Firewall.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "constitutional_core",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-28",
+      "layer": "constitution",
+      "priority": "highest",
+      "design_role": "enforcement"
+    }
+  },
+  {
+    "file": "chapter2_vault\\00_constitutive_core\\01_Governing_Memo.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "constitutional_core",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-22",
+      "layer": "constitution",
+      "priority": "highest",
+      "design_role": "constitutional_core"
+    }
+  },
+  {
+    "file": "chapter2_vault\\00_constitutive_core\\02A_Research_Question.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "constitutional_core",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-22",
+      "layer": "design",
+      "design_role": "research_question",
+      "scope": "constitutional"
+    }
+  },
+  {
+    "file": "chapter2_vault\\00_constitutive_core\\02B_Objectives_and_Contribution.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "constitutional_core",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23",
+      "layer": "design",
+      "design_role": "objectives_contribution",
+      "scope": "constitutional"
+    }
+  },
+  {
+    "file": "chapter2_vault\\00_constitutive_core\\02C_Hypotheses.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "constitutional_core",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-22",
+      "layer": "design",
+      "design_role": "hypotheses",
+      "scope": "constitutional"
+    }
+  },
+  {
+    "file": "chapter2_vault\\00_constitutive_core\\02D_Mechanism_Map.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "constitutional_core",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-19",
+      "layer": "design",
+      "design_role": "mechanism_map",
+      "scope": "constitutional"
+    }
+  },
+  {
+    "file": "chapter2_vault\\00_constitutive_core\\02_Research_Problem.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "constitutional_core",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-28",
+      "layer": "design",
+      "design_role": "core_problem",
+      "scope": "constitutional"
+    }
+  },
+  {
+    "file": "chapter2_vault\\00_constitutive_core\\03B_Process_Tracing_Playbook.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "constitutional_core",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-05",
+      "layer": "design",
+      "design_role": "process_tracing",
+      "scope": "constitutional"
+    }
+  },
+  {
+    "file": "chapter2_vault\\00_constitutive_core\\R_distribution_conditioned_theta_identification.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "constitutional_core",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-10",
+      "layer": "analytical_foundation",
+      "scope": "chapter2_core",
+      "topic": "distribution_conditioned_transformation_elasticity",
+      "created": "2026-06-08",
+      "updated": "2026-06-11",
+      "design_role": "specification_governance"
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\00_Okishio_Vidal_Bridge.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-19",
+      "note_class": "N",
+      "layer": "theoretical_object",
+      "anchors": [
+        "Okishio",
+        "Vidal",
+        "contradictory_utilization_configurations",
+        "market_anarchy",
+        "divided_management",
+        "capacity_utilization"
+      ],
+      "function": "connects market-level disproportionality to firm-level utilization configurations"
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\00_README.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-19",
+      "title": "Contradictory Utilization Configurations",
+      "project": "Chapter 2 \u2014 utilization, accumulation, and firm fracture",
+      "landing_object": "contradictory utilization configurations",
+      "higher_order_object": "utilization regimes",
+      "tags": [
+        "utilization",
+        "normal-degree",
+        "contradictory-utilization-configurations",
+        "utilization-regimes"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\01_Theoretical_Core_Notebook.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-19",
+      "title": "Theoretical Core - Vidal against One-Sided Bravermanian Deskilling",
+      "project": "Normal utilization and the fractured firm",
+      "pathway": "article",
+      "level": "theoretical-core",
+      "flat_notebook": true,
+      "core_object": "contradictory utilization configurations",
+      "higher_order_object": "utilization regimes",
+      "central_claim": "A firm-level normal degree of capacity utilization presupposes a unified organizational subject that capitalist labor management does not actually provide.",
+      "primary_function": [
+        "theoretical core",
+        "concept formation",
+        "micro-foundational critique"
+      ],
+      "ontological_target": [
+        "unified firm",
+        "unified normal benchmark"
+      ],
+      "mechanism_of_contradiction": [
+        "discipline-empowerment",
+        "labor-process/valorization split",
+        "managerial satisficing"
+      ],
+      "scale": [
+        "shop floor",
+        "plant",
+        "corporate"
+      ],
+      "capacity_convention": [
+        "practical",
+        "planned"
+      ],
+      "utilization_object": [
+        "theoretical normal",
+        "realized"
+      ],
+      "temporal_horizon": [
+        "medium-run tactical adjustment",
+        "historical regime"
+      ],
+      "critical_leverage": [
+        "agency",
+        "unity",
+        "temporality"
+      ],
+      "main_authors": [
+        "Braverman",
+        "Vidal",
+        "Adler",
+        "Thompson",
+        "Elger",
+        "Littler",
+        "Cressey and MacInnes"
+      ],
+      "tags": [
+        "utilization",
+        "normal-degree",
+        "contradictory-utilization-configurations",
+        "utilization-regimes",
+        "labor-process",
+        "valorization",
+        "divided-management",
+        "managerial-satisficing",
+        "post-fordism",
+        "firm-theory"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\02_Abstract.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23",
+      "title": "Abstract \u2014 Contradictory Utilization Configurations",
+      "project": "Normal utilization and the fractured firm",
+      "tags": [
+        "utilization",
+        "normal-degree",
+        "contradictory-utilization-configurations"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\03_Core_Claims_and_Punchlines.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "locked",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23",
+      "title": "Core Claims and Punchlines",
+      "project": "Normal utilization and the fractured firm",
+      "tags": [
+        "core-claim",
+        "punchline",
+        "utilization"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\04_Figures_and_Tables_Architecture.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-28",
+      "title": "Figures and Tables Architecture",
+      "project": "Normal utilization and the fractured firm",
+      "tags": [
+        "figures",
+        "tables",
+        "utilization"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\05_References_Note.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23",
+      "title": "References Note \u2014 Utilization, Firm Fracture, and Capacity Conventions",
+      "project": "Normal utilization and the fractured firm",
+      "tags": [
+        "references",
+        "utilization"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\06_Rival_Reading.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23",
+      "title": "Rival Reading",
+      "project": "Normal utilization and the fractured firm",
+      "tags": [
+        "rival-reading",
+        "normal-degree"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\00_README.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-19",
+      "title": "Okishio Macro-Anarchy Bridge Bundle",
+      "project": "Chapter 2 \u2014 utilization, accumulation, and firm fracture",
+      "parent_bundle": "Contradictory Utilization Configurations",
+      "bundle_role": "linked satellite",
+      "core_author": "Okishio",
+      "core_object": "market anarchy",
+      "bridge_object": "unified firm abstraction",
+      "landing_object": "contradictory utilization configurations",
+      "tags": [
+        "okishio",
+        "market-anarchy",
+        "macro-disequilibrium",
+        "unified-firm-gap",
+        "contradictory-utilization-configurations"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\01_Okishio_Master_Overview.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23",
+      "title": "Okishio Master Overview",
+      "project": "Chapter 2 \u2014 utilization, accumulation, and firm fracture",
+      "core_author": "Okishio",
+      "tags": [
+        "okishio",
+        "accumulation",
+        "market-anarchy",
+        "disequilibrium"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\02_Accumulation_and_Disequilibrium_Reconstruction.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23",
+      "title": "Accumulation and Disequilibrium Reconstruction",
+      "project": "Chapter 2 \u2014 utilization, accumulation, and firm fracture",
+      "tags": [
+        "okishio",
+        "accumulation",
+        "disequilibrium",
+        "idle-capacity"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\03_Okishio_and_the_Unified_Firm_Gap.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23",
+      "title": "Okishio and the Unified-Firm Gap",
+      "project": "Normal utilization and the fractured firm",
+      "parent_bundle": "Contradictory Utilization Configurations",
+      "bundle_role": "linked satellite",
+      "layer": "macro-to-firm bridge",
+      "core_author": "Okishio",
+      "core_object": "market anarchy",
+      "bridge_object": "unified firm abstraction",
+      "landing_object": "contradictory utilization configurations",
+      "tags": [
+        "okishio",
+        "market-anarchy",
+        "macro-disequilibrium",
+        "accumulation",
+        "idle-capacity",
+        "unified-firm-gap",
+        "contradictory-utilization-configurations"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\04_Key_Concept_Ledger.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23",
+      "title": "Okishio Key Concept Ledger",
+      "project": "Chapter 2 \u2014 utilization, accumulation, and firm fracture",
+      "tags": [
+        "okishio",
+        "concept-ledger",
+        "market-anarchy"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\05_NotebookLM_Question_Bank.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23",
+      "title": "NotebookLM Question Bank \u2014 Okishio",
+      "project": "Chapter 2 \u2014 utilization, accumulation, and firm fracture",
+      "tags": [
+        "okishio",
+        "source-interrogation"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\archive_raw_briefs\\S01_BriefOkishio.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-28"
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\archive_raw_briefs\\S01_Overview_Okishio2022.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-19"
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\archive_raw_briefs\\S01_P1_Brief_Okishio.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\archive_raw_briefs\\S01_P2_Brief_Okishio.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\archive_raw_briefs\\S01_P3_Brief_Okishio.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\archive_raw_briefs\\S01_P4_Brief_Okishio.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\archive_raw_briefs\\S01_P5_Brief_Okishio.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\archive_raw_briefs\\S01_P6_Brief_Okishio.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\archive_raw_briefs\\S01_P7_Okishio.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\archive_raw_briefs\\master_ledger.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\01_contradictory_utilization_configurations\\okishio_macro_anarchy_bridge\\archive_raw_briefs\\okishio_contribution_reconstruction.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-19"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\A00_Aggregate_Transformation_Benchmark.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-10",
+      "title": "A00: Aggregate Transformation Benchmark",
+      "subtype": "object",
+      "layer": "analytical_foundation",
+      "design_role": "baseline_identification",
+      "scope": "chapter2_core",
+      "created": "2026-06-01",
+      "updated": "2026-06-11",
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "A01_Extensive_Accumulation",
+        "A02_Intensive_Accumulation",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "A04_PeripheralTransformationElasticity",
+        "N01_CapacityUtilization_StructuralObject",
+        "M10_Empirical_Identification_Framework",
+        "R04_FMOLS_structural_preservation"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\A01_Extensive_Accumulation.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-01",
+      "subtype": "object",
+      "layer": "analytical_foundation",
+      "design_role": "mechanism_definition",
+      "scope": "chapter2_core",
+      "related_to": [
+        "A02_Intensive_Accumulation",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "H01_Cajas_to_Transformation_Elasticity",
+        "R05_Frontier_of_Not_Becoming",
+        "R06_Regime_Gating_and_Diagnostic_Ladder"
+      ],
+      "created": "2026-05-27",
+      "updated": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\A02_Intensive_Accumulation.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-01",
+      "subtype": "object",
+      "layer": "analytical_foundation",
+      "design_role": "mechanism_definition",
+      "scope": "chapter2_core",
+      "related_to": [
+        "N00_Mechanization_Analytical_References",
+        "A01_Extensive_Accumulation",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "A04_PeripheralTransformationElasticity",
+        "H03_Double_Choice_of_Technique",
+        "R05_Frontier_of_Not_Becoming",
+        "R06_Regime_Gating_and_Diagnostic_Ladder"
+      ],
+      "created": "2026-05-27",
+      "updated": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\A03_TransformationElasticity_Two-CapitalCapacityComposition.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-10",
+      "subtype": "object",
+      "layer": "analytical_foundation",
+      "design_role": "mechanism_definition",
+      "scope": "chapter2_core",
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "A00_Aggregate_Transformation_Benchmark",
+        "A01_Extensive_Accumulation",
+        "A02_Intensive_Accumulation",
+        "A04_PeripheralTransformationElasticity",
+        "N00_Mechanization_Analytical_References",
+        "R05_Frontier_of_Not_Becoming",
+        "R06_Regime_Gating_and_Diagnostic_Ladder",
+        "H01_Cajas_to_Transformation_Elasticity"
+      ],
+      "created": "2026-05-27",
+      "updated": "2026-06-11"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\A04_PeripheralTransformationElasticity.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-01",
+      "subtype": "object",
+      "layer": "analytical_foundation",
+      "design_role": "mechanism_definition",
+      "scope": "chapter2_core",
+      "related_to": [
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "N00_Mechanization_Analytical_References",
+        "N02_Peripheral_Mechanization_Constraint",
+        "R06_Regime_Gating_and_Diagnostic_Ladder",
+        "R05_Frontier_of_Not_Becoming"
+      ],
+      "created": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\A05_NRCEnvelope_MechanizationBias.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-10",
+      "subtype": "object",
+      "layer": "analytical_foundation",
+      "design_role": "empirical_bridge_definition",
+      "scope": "chapter2_core",
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "A00_Aggregate_Transformation_Benchmark",
+        "A01_Extensive_Accumulation",
+        "A02_Intensive_Accumulation",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "D01_GPIM_heterogeneous_capital_SFC",
+        "D02_PriceDeflator_Protocol_K_Composition",
+        "D04_ME_NRC_LogRatio_Construction_Protocol",
+        "R10_Binding_Specification_Layering_Rule"
+      ],
+      "pending_tasks": [
+        "Define the productive-capital scale boundary.",
+        "Construct and audit the centered ME-to-NR composition term.",
+        "Compare direct scale-conditioning with composition-mediated conditioning.",
+        "Keep reconstruction blocked until explicit human promotion."
+      ],
+      "created": "2026-06-02",
+      "updated": "2026-06-11"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\H00_Okishio_Vidal_Decentralized_Accumulation.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-26",
+      "subtype": "hinge",
+      "layer": "analytical_foundation",
+      "design_role": "ontological_hinge",
+      "scope": "chapter2_core",
+      "related_to": [
+        "H01_Cajas_to_Transformation_Elasticity",
+        "N01_Two_Corridor_Transformation_Elasticity",
+        "N02_Peripheral_Mechanization_Constraint",
+        "R01_Marx_Okishio_Regime_Diagnostic_Guardrail"
+      ],
+      "created": "2026-05-05"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\H01_Cajas_to_Transformation_Elasticity.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-01",
+      "layer": "analytical_foundation",
+      "design_role": "mechanism_hinge",
+      "scope": "chapter2_core",
+      "related_to": [
+        "A01_Extensive_Accumulation",
+        "A02_Intensive_Accumulation",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "A04_PeripheralTransformationElasticity",
+        "N00_Mechanization_Analytical_References",
+        "N05_Normal_Reproduction_Closure",
+        "R05_Frontier_of_Not_Becoming",
+        "R06_Regime_Gating_and_Diagnostic_Ladder"
+      ],
+      "created": "2026-05-05",
+      "updated": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\N00_Mechanization_Analytical_References.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-01",
+      "subtype": "reference_map",
+      "layer": "analytical_foundation",
+      "design_role": "intellectual_genealogy",
+      "scope": "chapter2_core_support",
+      "related_to": [
+        "A01_Extensive_Accumulation",
+        "A02_Intensive_Accumulation",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "A04_PeripheralTransformationElasticity",
+        "H00_Okishio_Vidal_Decentralized_Accumulation",
+        "H01_Cajas_to_Transformation_Elasticity",
+        "R05_Frontier_of_Not_Becoming",
+        "R06_Regime_Gating_and_Diagnostic_Ladder"
+      ],
+      "created": "2026-05-05",
+      "updated": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\R01_Ontological_Interpretation_Guardrails.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-01",
+      "subtype": "rule",
+      "layer": "analytical_foundation",
+      "design_role": "ontological_guardrail",
+      "scope": "chapter2_core",
+      "related_to": [
+        "H00_Okishio_Vidal_Decentralized_Accumulation",
+        "A01_Extensive_Accumulation",
+        "A02_Intensive_Accumulation",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "A04_PeripheralTransformationElasticity"
+      ],
+      "created": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\R02_Identification_and_Estimation_Protocol.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-01"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\R03_Regime_Diagnostic_and_Threshold_Gating.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-27",
+      "subtype": "rule",
+      "layer": "analytical_foundation",
+      "design_role": "diagnostic_protocol",
+      "scope": "chapter2_core",
+      "related_to": [
+        "A01_Extensive_Accumulation",
+        "A02_Intensive_Accumulation",
+        "A04_PeripheralTransformationElasticity"
+      ],
+      "created": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\R04_Measurement_and_Accounting_Consistency.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-01",
+      "subtype": "rule",
+      "layer": "analytical_toolkit",
+      "design_role": "measurement_guardrail",
+      "scope": "chapter2_implementation",
+      "related_to": [
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition"
+      ],
+      "created": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\02_analyitical_foundation\\README.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "analytical_foundation",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\A00_BASELINE_INTERACTION_PATCH_REPORT.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "title": "A00 Baseline Interaction Patch Report",
+      "layer": "method",
+      "design_role": "patch_validation",
+      "scope": "chapter2_core_support",
+      "estimator_status": "historical-or-diagnostic",
+      "requires_review_before_use": true,
+      "created": "2026-06-01",
+      "updated": "2026-06-08",
+      "related_to": [
+        "A00_Aggregate_Transformation_Benchmark",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "N01_CapacityUtilization_StructuralObject",
+        "M10_Empirical_Identification_Framework",
+        "R04_FMOLS_structural_preservation",
+        "N02_SuperConsistency",
+        "R05_LRV_kernel_bandwidth_regime_misalignment"
+      ],
+      "role": "historical-reference",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "A00 interaction patch report"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/historical-reference",
+        "chapter2/qomega-parked"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\A06_VIFSafe_Baseline_MechanizationComparison.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "subtype": "object",
+      "layer": "analytical_foundation",
+      "design_role": "specification_lock",
+      "scope": "chapter2_core",
+      "estimator_status": "historical-or-diagnostic",
+      "requires_review_before_use": true,
+      "related_to": [
+        "A00_Aggregate_Transformation_Benchmark",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "A05_NRCEnvelope_MechanizationBias",
+        "R10_Binding_Specification_Layering_Rule",
+        "D04_ME_NRC_LogRatio_Construction_Protocol",
+        "C04-US_S30_STABILITY_PROTOCOL",
+        "US_S31_model_choice_vif_screen"
+      ],
+      "lock_status": {
+        "comparison_pair": "locked",
+        "final_model": "not_selected",
+        "human_adjudication_required": true,
+        "s40_status": "parked"
+      },
+      "locked_specs": [
+        "SPEC_B1_WAGE_BASELINE",
+        "SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED"
+      ],
+      "vif_status": {
+        "SPEC_B1_WAGE_BASELINE": "vif_admissible_with_caution",
+        "SPEC_E2B_NRC_ENVELOPE_DISTRIBUTIVE_MECHANIZATION_RESTRICTED": "vif_safe"
+      },
+      "created": "2026-06-02",
+      "updated": "2026-06-08",
+      "role": "superseded-for-baseline",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "A06 VIF comparison"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\D12V2_OBSIDIAN_ORGANIZATION_AUDIT.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "scope": "chapter2-econometrics",
+      "stage": "pre-estimation-design",
+      "role": "audit",
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/audit"
+      ],
+      "created_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\D12V2_TERMINAL_DECISION.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "scope": "chapter2-econometrics",
+      "role": "terminal-decision",
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/terminal-decision"
+      ],
+      "created_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\D12V2_VALIDATION_CHECKS.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "scope": "chapter2-econometrics",
+      "role": "validation",
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/validation"
+      ],
+      "created_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\D12V_ECONOMETRICS_VAULT_AUDIT.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "scope": "chapter2-econometrics",
+      "created_by": "D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT",
+      "date": "2026-07-06",
+      "role": "audit",
+      "aliases": [
+        "D12V vault audit"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/audit"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\D12V_Restricted_DOLS_Active_Estimator_Lock.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-23",
+      "scope": "chapter2-econometrics",
+      "active_estimator": "restricted-dols (superseded)",
+      "fmols_status": "blocked-for-nonlinear-baseline",
+      "imols_status": "blocked-for-nonlinear-baseline",
+      "restricted_imols_status": "blocked",
+      "unrestricted_dols_status": "blocked-for-interactions",
+      "q_omega_status": "parked",
+      "created_by": "D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT",
+      "role": "superseded-lock",
+      "stage": "pre-estimation-design",
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded"
+      ],
+      "updated_by": "E10V_I2_TRAP_RESOLUTION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\D12V_TERMINAL_DECISION.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "role": "terminal-decision",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "D12V terminal decision"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/terminal-decision"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\D12V_VALIDATION_CHECKS.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "scope": "chapter2-econometrics",
+      "created_by": "D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT",
+      "date": "2026-07-06",
+      "role": "validation",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "D12V validation checks"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/validation"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\E01_Specification_Abstract_Benchmark.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "subtype": "rule",
+      "layer": "analytical_foundation",
+      "design_role": "ontological_guardrail",
+      "scope": "chapter2_core",
+      "estimator_status": "historical-or-diagnostic",
+      "requires_review_before_use": true,
+      "related_to": [
+        "H02_Theta_to_Empirical_Coefficients",
+        "R01_Marx_Okishio_Regime_Diagnostic_Guardrail",
+        "Okishio_Vidal_Transformation_Elasticity"
+      ],
+      "created": "2026-05-27",
+      "role": "superseded-for-baseline",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "E01 abstract benchmark"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded",
+        "chapter2/fmols"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\E10V_IMOLS_CPR_Active_Estimator_Lock.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-23",
+      "layer": "code_stage_design",
+      "active_estimator": "imols-cpr",
+      "orthogonalization": "mandatory",
+      "dols_status": "diagnostic-comparator",
+      "fmols_status": "diagnostic-comparator",
+      "created_by": "E10V_I2_TRAP_RESOLUTION",
+      "role": "active-lock",
+      "stage": "pre-estimation-design",
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/active-lock",
+        "chapter2/imols-cpr"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\E11_IMOLS_CPR_Asymptotic_Rationale.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-23",
+      "layer": "code_stage_design",
+      "created_by": "E10V_I2_TRAP_RESOLUTION",
+      "role": "methodological-rationale",
+      "stage": "pre-estimation-design",
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/methodological-rationale",
+        "chapter2/imols-cpr"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\E_00_I2_Trap.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\E_01_I2_Trap.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\Estimator_Status_Ledger_D12V.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US",
+      "last_updated": "2026-07-23",
+      "scope": "chapter2-econometrics",
+      "created_by": "D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT",
+      "role": "superseded-ledger",
+      "stage": "pre-estimation-design",
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded"
+      ],
+      "updated_by": "E10V_I2_TRAP_RESOLUTION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\Estimator_Status_Ledger_E10V.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US",
+      "last_updated": "2026-07-23",
+      "layer": "code_stage_design",
+      "created_by": "E10V_I2_TRAP_RESOLUTION",
+      "role": "active-ledger",
+      "stage": "pre-estimation-design",
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/active-ledger"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\FMOLS_IMOLS_Failure_For_Interaction_Objects.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-23",
+      "scope": "chapter2-econometrics",
+      "estimator_status": {
+        "fmols": "blocked-for-nonlinear-baseline",
+        "imols": "superseded-by-cpr-imols"
+      },
+      "created_by": "D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT",
+      "role": "superseded-warning",
+      "stage": "pre-estimation-design",
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded"
+      ],
+      "updated_by": "E10V_I2_TRAP_RESOLUTION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\Interaction_Term_Integration_Order_Gate.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-23",
+      "layer": "code_stage_design",
+      "gate_type": "integration-order-and-interaction-classification",
+      "blocks_estimation_until_passed": true,
+      "applies_to": [
+        "imols-cpr",
+        "nonlinear-cointegration",
+        "interaction-terms",
+        "generated-regressors"
+      ],
+      "created_by": "E10V_I2_TRAP_RESOLUTION",
+      "role": "active-gate",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "Interaction order gate",
+        "Integration order gate",
+        "IM-OLS CPR gate",
+        "Interaction term gate"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/active-gate",
+        "chapter2/imols-cpr",
+        "chapter2/pre-estimation-design"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\L00_Econometrics_References.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "references",
+      "design_role": "econometrics_reference_ledger",
+      "scope": "chapter2_method_support",
+      "estimator_status": "reference-only",
+      "related_to": [
+        "N02_SuperConsistency",
+        "R02_DOLS_reconstruction_dilemma",
+        "R03_super_consistency_mechanics_hinge",
+        "R04_FMOLS_structural_preservation",
+        "R05_LRV_kernel_bandwidth_regime_misalignment",
+        "R06_IMOLS_integration_ladder_reconstruction",
+        "R07_FGLS_threshold_cointegration_admissibility",
+        "R08_threshold_break_diagnostics_to_FGLS",
+        "M10_Empirical_Identification_Framework"
+      ],
+      "priority": "high",
+      "role": "historical-reference",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "Econometrics references"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/historical-reference",
+        "chapter2/fmols",
+        "chapter2/imols"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\M10_Empirical_Identification_Framework.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "method",
+      "design_role": "empirical_strategy_scaffold",
+      "scope": "chapter2_core_support",
+      "estimator_status": "restricted-dols-required-for-nonlinear-baseline",
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "A00_Aggregate_Transformation_Benchmark",
+        "A05_NRCEnvelope_MechanizationBias",
+        "N01_CapacityUtilization_StructuralObject",
+        "N02_SuperConsistency",
+        "R01_residual_vs_structural_identification",
+        "R02_DOLS_reconstruction_dilemma",
+        "R04_FMOLS_structural_preservation",
+        "R06_IMOLS_integration_ladder_reconstruction",
+        "R07_FGLS_threshold_cointegration_admissibility",
+        "R08_threshold_break_diagnostics_to_FGLS",
+        "L00_Econometrics_References"
+      ],
+      "priority": "high",
+      "role": "superseded-for-baseline",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "M10 empirical framework"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded",
+        "chapter2/fmols",
+        "chapter2/imols",
+        "chapter2/qomega-parked"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\N01_CapacityUtilization_StructuralObject.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "locked",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "method",
+      "design_role": "structural_object_definition",
+      "scope": "chapter2_core_support",
+      "estimator_status": "restricted-dols-required-for-nonlinear-baseline",
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "A00_Aggregate_Transformation_Benchmark",
+        "M10_Empirical_Identification_Framework",
+        "N02_SuperConsistency",
+        "R01_residual_vs_structural_identification"
+      ],
+      "priority": "high",
+      "role": "methodological-rationale",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "Capacity utilization structural object"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/methodological-rationale",
+        "chapter2/qomega-parked"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\N02_SuperConsistency.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "method",
+      "design_role": "estimation_clarification",
+      "scope": "chapter2_core_support",
+      "estimator_status": "restricted-dols-required-for-nonlinear-baseline",
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "A00_Aggregate_Transformation_Benchmark",
+        "N01_CapacityUtilization_StructuralObject",
+        "R01_residual_vs_structural_identification",
+        "R02_DOLS_reconstruction_dilemma",
+        "R04_FMOLS_structural_preservation",
+        "R06_IMOLS_integration_ladder_reconstruction",
+        "R07_FGLS_threshold_cointegration_admissibility",
+        "R08_threshold_break_diagnostics_to_FGLS",
+        "M10_Empirical_Identification_Framework"
+      ],
+      "priority": "high",
+      "role": "superseded-for-baseline",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "Super-consistency note"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded",
+        "chapter2/fmols",
+        "chapter2/imols",
+        "chapter2/qomega-parked"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\N03_US_Theta_Integration_Order_Admissibility.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US",
+      "last_updated": "2026-07-20",
+      "layer": "econometrics",
+      "design_role": "integration_order_admissibility_map",
+      "scope": "US_first_layer_theta_recovery",
+      "created": "2026-07-20",
+      "sources": [
+        "output/S34_pre_regression/us_s34_variable_menu_integration_ledger.csv",
+        "output/S34_pre_regression/us_s34_interaction_i2_risk_ledger.csv",
+        "output/S34_pre_regression/us_s34_candidate_level_relation_ledger.csv",
+        "output/S35_specification_review/us_s35_specification_review_ledger.csv",
+        "output/S35_specification_review/us_s35_estimator_menu_candidate_ledger.csv",
+        "output/S34R_B_cpr_realigned_design_gate/csv/S34R_B_repaired_path_admissibility_ledger.csv",
+        "output/S34R_B_cpr_realigned_design_gate/csv/S34R_B_specification_review_ledger.csv"
+      ],
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "D12V_Restricted_DOLS_Active_Estimator_Lock",
+        "Interaction_Term_Integration_Order_Gate"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/us",
+        "chapter2/theta",
+        "chapter2/integration-order"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\R01_residual_vs_structural_identification.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "locked",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "method",
+      "design_role": "identification_rule",
+      "scope": "chapter2_core_support",
+      "estimator_status": "structural-identification-guardrail",
+      "related_to": [
+        "M10_Empirical_Identification_Framework",
+        "N02_SuperConsistency",
+        "N01_CapacityUtilization_StructuralObject",
+        "L00_Econometrics_References"
+      ],
+      "priority": "high",
+      "role": "methodological-rationale",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "Residual identification guardrail"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/methodological-rationale"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\R02_DOLS_reconstruction_dilemma.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "method",
+      "design_role": "estimator_admissibility_rule",
+      "scope": "chapter2_core_support",
+      "estimator_status": "restricted-dols-support",
+      "related_to": [
+        "R01_residual_vs_structural_identification",
+        "N01_CapacityUtilization_StructuralObject",
+        "N02_SuperConsistency",
+        "M10_Empirical_Identification_Framework",
+        "L00_Econometrics_References"
+      ],
+      "priority": "high",
+      "role": "methodological-rationale",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "DOLS reconstruction boundary"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/methodological-rationale",
+        "chapter2/restricted-dols"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\R03_super_consistency_mechanics_hinge.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "method",
+      "design_role": "estimator_lineage_hinge",
+      "scope": "chapter2_core_support",
+      "estimator_status": "historical-or-diagnostic",
+      "requires_review_before_use": true,
+      "related_to": [
+        "R02_DOLS_reconstruction_dilemma",
+        "R04_FMOLS_structural_preservation",
+        "R05_LRV_kernel_bandwidth_regime_misalignment",
+        "R06_IMOLS_integration_ladder_reconstruction",
+        "N02_SuperConsistency",
+        "M10_Empirical_Identification_Framework",
+        "L00_Econometrics_References"
+      ],
+      "priority": "high",
+      "role": "superseded-for-baseline",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "Super-consistency mechanics hinge"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded",
+        "chapter2/fmols",
+        "chapter2/imols"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\R04_FMOLS_structural_preservation.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "method",
+      "design_role": "preferred_estimator_rule",
+      "scope": "chapter2_core_support",
+      "estimator_status": "historical-or-diagnostic",
+      "requires_review_before_use": true,
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "A00_Aggregate_Transformation_Benchmark",
+        "R03_super_consistency_mechanics_hinge",
+        "R05_LRV_kernel_bandwidth_regime_misalignment",
+        "R06_IMOLS_integration_ladder_reconstruction",
+        "N02_SuperConsistency",
+        "M10_Empirical_Identification_Framework",
+        "L00_Econometrics_References"
+      ],
+      "priority": "high",
+      "role": "superseded-for-baseline",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "FM-OLS structural preservation"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded",
+        "chapter2/fmols"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\R05_LRV_kernel_bandwidth_regime_misalignment.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "method",
+      "design_role": "estimator_warning_rule",
+      "scope": "chapter2_core_support",
+      "estimator_status": "historical-or-diagnostic",
+      "requires_review_before_use": true,
+      "related_to": [
+        "A00_Aggregate_Transformation_Benchmark",
+        "R03_super_consistency_mechanics_hinge",
+        "R04_FMOLS_structural_preservation",
+        "R06_IMOLS_integration_ladder_reconstruction",
+        "N02_SuperConsistency",
+        "M10_Empirical_Identification_Framework",
+        "L00_Econometrics_References"
+      ],
+      "priority": "high",
+      "role": "superseded-for-baseline",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "LRV regime misalignment"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded",
+        "chapter2/fmols",
+        "chapter2/qomega-parked"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\R06_IMOLS_integration_ladder_reconstruction.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "method",
+      "design_role": "robustness_estimator_rule",
+      "scope": "chapter2_core_support",
+      "estimator_status": "historical-or-diagnostic",
+      "requires_review_before_use": true,
+      "related_to": [
+        "R03_super_consistency_mechanics_hinge",
+        "R04_FMOLS_structural_preservation",
+        "R05_LRV_kernel_bandwidth_regime_misalignment",
+        "N02_SuperConsistency",
+        "M10_Empirical_Identification_Framework",
+        "L00_Econometrics_References"
+      ],
+      "priority": "high",
+      "role": "superseded-for-baseline",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "IM-OLS integration ladder"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded",
+        "chapter2/imols",
+        "chapter2/qomega-parked"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\R07_FGLS_threshold_cointegration_admissibility.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "method",
+      "design_role": "regime_architecture_rule",
+      "scope": "chapter2_core_support",
+      "estimator_status": "restricted-dols-required-for-nonlinear-baseline",
+      "related_to": [
+        "R03_super_consistency_mechanics_hinge",
+        "R04_FMOLS_structural_preservation",
+        "R05_LRV_kernel_bandwidth_regime_misalignment",
+        "R06_IMOLS_integration_ladder_reconstruction",
+        "R08_threshold_break_diagnostics_to_FGLS",
+        "M10_Empirical_Identification_Framework",
+        "L00_Econometrics_References"
+      ],
+      "priority": "high",
+      "role": "diagnostic-only",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "FGLS threshold admissibility"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/diagnostic-only"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\R08_threshold_break_diagnostics_to_FGLS.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "method",
+      "design_role": "diagnostic_to_regime_bridge",
+      "scope": "chapter2_core_support",
+      "estimator_status": "regime-diagnostic-only",
+      "related_to": [
+        "R07_FGLS_threshold_cointegration_admissibility",
+        "R03_super_consistency_mechanics_hinge",
+        "R05_LRV_kernel_bandwidth_regime_misalignment",
+        "N02_SuperConsistency",
+        "M10_Empirical_Identification_Framework",
+        "L00_Econometrics_References"
+      ],
+      "priority": "high",
+      "role": "diagnostic-only",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "Break diagnostics to FGLS"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/diagnostic-only"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\R09_structural_break_protocol.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "estimator_status": "restricted-dols-required-for-nonlinear-baseline",
+      "layer": "method",
+      "design_role": "parameter_stability_window_rule",
+      "scope": "chapter2_core_support",
+      "related_to": [
+        "M10_Empirical_Identification_Framework",
+        "N02_SuperConsistency",
+        "R03_super_consistency_mechanics_hinge",
+        "R04_FMOLS_structural_preservation",
+        "R05_LRV_kernel_bandwidth_regime_misalignment",
+        "R06_IMOLS_integration_ladder_reconstruction",
+        "R08_threshold_break_diagnostics_to_FGLS",
+        "L00_Econometrics_References"
+      ],
+      "priority": "high",
+      "estimators": [
+        "FM-OLS",
+        "IM-OLS",
+        "DOLS"
+      ],
+      "empirical_inputs": [
+        "y_t",
+        "k_t",
+        "omega_t",
+        "omega_k_t",
+        "s_t_proxy",
+        "phi_t_proxy",
+        "s_t_proxy_cc",
+        "phi_t_proxy_cc",
+        "pK_relative_ME_NRC"
+      ],
+      "method_classification_core": [
+        "Hansen-type parameter instability tests for I(1) regressions"
+      ],
+      "method_classification_supporting": [
+        "Gregory-Hansen one-break cointegration tests",
+        "Andrews unknown-break logic"
+      ],
+      "method_classification_diagnostic": [
+        "rolling-window estimates",
+        "recursive estimates",
+        "Johansen recursive constancy diagnostics"
+      ],
+      "method_classification_too_heavy_for_main_paper": [
+        "Bai-Perron multiple-break methods",
+        "Kejriwal-Perron multiple breaks in cointegrated regressions"
+      ],
+      "method_classification_not_appropriate": [
+        "ordinary OLS break tests as primary evidence for I(1) cointegrating regressions"
+      ],
+      "created": "2026-05-13",
+      "updated": "2026-05-14",
+      "role": "superseded-for-baseline",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "Structural break protocol"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded",
+        "chapter2/fmols",
+        "chapter2/imols",
+        "chapter2/qomega-parked"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\R10_Binding_Specification_Layering_Rule.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "layer": "method",
+      "scope": "chapter2_core",
+      "design_role": "specification_layering",
+      "estimator_status": "restricted-dols-required-for-nonlinear-baseline",
+      "created": "2026-06-02",
+      "updated": "2026-06-11",
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "A00_Aggregate_Transformation_Benchmark",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "A05_NRCEnvelope_MechanizationBias",
+        "M10_Empirical_Identification_Framework"
+      ],
+      "role": "superseded-for-baseline",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "Binding specification layering rule"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded",
+        "chapter2/fmols",
+        "chapter2/imols",
+        "chapter2/qomega-parked"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\R11_CointegrationAdmissibility_Super-Consistency.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "draft",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-06",
+      "id": "R_Cointegration_Admissibility_Superconsistent_Estimators",
+      "title": "Cointegration Admissibility for Super-Consistent Estimators",
+      "estimator_status": "restricted-dols-required-for-nonlinear-baseline",
+      "created": "2026-06-03",
+      "updated": "2026-06-11",
+      "project": "Chapter 2",
+      "repo_area": "02_econometrics",
+      "note_role": "identification_guardrail",
+      "object_domain": "long_run_transformation_relation",
+      "method_family": "super_consistent_cointegrating_regression",
+      "primary_estimators": [
+        "FM-OLS",
+        "IM-OLS",
+        "DOLS"
+      ],
+      "primary_gate": "Phillips-Ouliaris residual-based cointegration test",
+      "secondary_gate": "residual ADF stationarity diagnostic",
+      "scope": [
+        "theoretical_admissibility",
+        "residual_stationarity",
+        "long_run_coefficient_interpretation",
+        "super_consistency"
+      ],
+      "locked_terms": [
+        "cointegration admissibility",
+        "residual-based cointegration gate",
+        "residual stationarity",
+        "no-cointegration null",
+        "super-consistent estimator"
+      ],
+      "forbidden_terms": [
+        "FM-OLS cointegration test",
+        "Phillips-Hansen cointegration test",
+        "coefficient significance proves cointegration",
+        "residual ADF proves cointegration"
+      ],
+      "related_specs": [
+        "SPEC_A00_PRIMITIVE_INTERACTION",
+        "SPEC_A05_COMPOSITION_INTERACTION"
+      ],
+      "related_notes": [
+        "A00_Benchmark_Identification",
+        "A05_Distributive_Mechanization_Bias",
+        "A06_B1_E2B_Model_Choice_Lock"
+      ],
+      "role": "methodological-rationale",
+      "stage": "pre-estimation-design",
+      "aliases": [
+        "Cointegration admissibility guardrail"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/methodological-rationale",
+        "chapter2/fmols",
+        "chapter2/imols",
+        "chapter2/qomega-parked"
+      ],
+      "updated_by": "D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\Restricted_DOLS_Asymptotic_Rationale_and_Caveats.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-23",
+      "scope": "chapter2-econometrics",
+      "created_by": "D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT",
+      "role": "superseded-rationale",
+      "stage": "pre-estimation-design",
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/superseded"
+      ],
+      "updated_by": "E10V_I2_TRAP_RESOLUTION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\03_econometrics\\_03_Econometrics_MOC.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "econometric_protocol",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-23",
+      "scope": "chapter2-econometrics",
+      "stage": "pre-estimation-design",
+      "created_or_updated_by": "E10V_I2_TRAP_RESOLUTION",
+      "role": "moc",
+      "aliases": [
+        "Econometrics MOC",
+        "Chapter 2 Econometrics",
+        "E10V econometrics entry point"
+      ],
+      "tags": [
+        "chapter2/econometrics",
+        "chapter2/moc",
+        "chapter2/pre-estimation-design"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\04_data_measurement\\A00_DATA_MEASUREMENT_ALIGNMENT_REPORT.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "data_measurement",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S10",
+      "country": "US_CL",
+      "last_updated": "2026-06-09",
+      "title": "A00 Data Measurement Alignment Report",
+      "layer": "empirical_design",
+      "design_role": "data_measurement_alignment_review",
+      "scope": "chapter2_core_support",
+      "created": "2026-06-01",
+      "updated": "2026-06-08",
+      "related_to": [
+        "A00_Aggregate_Transformation_Benchmark",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "A04_PeripheralTransformationElasticity",
+        "M10_Empirical_Identification_Framework",
+        "N01_CapacityUtilization_StructuralObject"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\04_data_measurement\\Appendix-Retirement-Distribution.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "data_measurement",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S10",
+      "country": "US_CL",
+      "last_updated": "2026-06-05",
+      "source": "appendix_K_ret_distribution.tex",
+      "source_type": "latex",
+      "latex_label": "app:ret_distribution",
+      "bib": "references.bib"
+    }
+  },
+  {
+    "file": "chapter2_vault\\04_data_measurement\\D01_GPIM_heterogeneous_capital_SFC.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "data_measurement",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S10",
+      "country": "US",
+      "last_updated": "2026-06-10",
+      "layer": "empirical_design",
+      "design_role": "gpim_stock_flow_valuation_protocol",
+      "scope": "chapter2_core_support",
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "A00_Aggregate_Transformation_Benchmark",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "N04_Composition_of_Accumulation_and_Transformation",
+        "R04_What_is_Identified_vs_Reconstructed",
+        "Price_Deflator_Protocol_ME_NRC_Composition",
+        "TARGET_REPO_STRUCTURE_AND_CODE_STAGE_IMPLEMENTATION"
+      ],
+      "created": "2026-05-06",
+      "updated": "2026-06-08"
+    }
+  },
+  {
+    "file": "chapter2_vault\\04_data_measurement\\D02_PriceDeflator_Protocol_K_Composition.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "data_measurement",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S10",
+      "country": "US_CL",
+      "last_updated": "2026-06-10",
+      "layer": "empirical_design",
+      "design_role": "price_deflator_protocol",
+      "scope": "chapter2_core_support",
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "A00_Aggregate_Transformation_Benchmark",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "N04_Composition_of_Accumulation_and_Transformation",
+        "R04_What_is_Identified_vs_Reconstructed",
+        "TARGET_REPO_STRUCTURE_AND_CODE_STAGE_IMPLEMENTATION"
+      ],
+      "created": "2026-05-06",
+      "updated": "2026-06-08"
+    }
+  },
+  {
+    "file": "chapter2_vault\\04_data_measurement\\D03_capacity_utilization_level_anchor_pinch_year_protocol.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "data_measurement",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S10",
+      "country": "US_CL",
+      "last_updated": "2026-06-01",
+      "layer": "empirical_design",
+      "design_role": "capacity_utilization_level_anchor_protocol",
+      "scope": "chapter2_core_support",
+      "related_to": [
+        "A00_Aggregate_Transformation_Benchmark",
+        "M10_Empirical_Identification_Framework",
+        "N01_CapacityUtilization_StructuralObject",
+        "R01_residual_vs_structural_identification",
+        "GPIM, heterogeneous capital, stock-flow consistency, and valuation registers",
+        "Price-deflator protocol for ME\u2013NRC  Non Financial-capital composition"
+      ],
+      "created": "2026-05-14",
+      "updated": "2026-05-14"
+    }
+  },
+  {
+    "file": "chapter2_vault\\04_data_measurement\\D04_ME_NRC_LogRatio_Construction_Protocol.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "data_measurement",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S10",
+      "country": "US_CL",
+      "last_updated": "2026-06-10",
+      "subtype": "protocol",
+      "layer": "data_measurement",
+      "design_role": "variable_construction_protocol",
+      "scope": "chapter2_core",
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "A05_NRCEnvelope_MechanizationBias",
+        "D01_GPIM_heterogeneous_capital_SFC",
+        "D02_PriceDeflator_Protocol_K_Composition",
+        "R10_Binding_Specification_Layering_Rule"
+      ],
+      "governs": [
+        "K_ME_real",
+        "K_NRC_real",
+        "k_ME_t",
+        "k_NRC_t",
+        "m_ME_NRC_t",
+        "c_NRC_ME_t",
+        "omega_m_ME_NRC_t"
+      ],
+      "measurement_status": {
+        "direct_sector_asset_split": "required_for_direct_estimate",
+        "mixed_price_ratio": "inadmissible",
+        "nominal_ratio": "inadmissible",
+        "tier_b_component_proxy": "admissible_as_proxy_only"
+      },
+      "created": "2026-06-02",
+      "updated": "2026-06-08"
+    }
+  },
+  {
+    "file": "chapter2_vault\\04_data_measurement\\L05_Corporate_Surplus_and_Financial_Redistribution_Lock.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "data_measurement",
+      "status": "locked",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S10",
+      "country": "US",
+      "last_updated": "2026-06-24",
+      "title": "Corporate Surplus and Financial Redistribution Lock",
+      "aliases": [
+        "Corporate Surplus Theory Lock",
+        "Nonproductive Finance Dataset-Role Lock"
+      ],
+      "project": "Dissertation Chapter 2",
+      "chapter": 2,
+      "stage": "S30H",
+      "scope": "corporate surplus and financial redistribution",
+      "created": "2026-06-24",
+      "updated": "2026-06-24",
+      "tags": [
+        "chapter2",
+        "corporate-surplus",
+        "financial-redistribution",
+        "theory-lock",
+        "data-governance"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\04_data_measurement\\V00_VariableMenu_US_BEA_Repo.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "data_measurement",
+      "status": "locked",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S10",
+      "country": "US",
+      "last_updated": "2026-06-23",
+      "project": "Chapter2",
+      "repo_owner": "Capacity-Utilization-US_Chile",
+      "scope": "United States source-of-truth variable menu",
+      "stage": "S10_source_of_truth_design",
+      "updated": "2026-06-09",
+      "tags": [
+        "chapter2",
+        "united-states",
+        "source-of-truth",
+        "bea",
+        "fixed-assets",
+        "income-accounts",
+        "gpim",
+        "shaikh-correction",
+        "wage-share",
+        "distributive-conditions",
+        "exploitation-rate-alternative"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\04_data_measurement\\V01_DataProvenance_Managment.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "data_measurement",
+      "status": "locked",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S10",
+      "country": "US_CL",
+      "last_updated": "2026-06-12",
+      "project": "Chapter 2",
+      "repo": "Capacity-Utilization-US_Chile",
+      "topic": "US BEA upstream provider handoff",
+      "created": "2026-06-09",
+      "updated": "2026-06-12",
+      "upstream_repo": "US-BEA-Income-FixedAssets-Dataset",
+      "upstream_tag": "us-bea-provider-menu-shaikh-blocked-2026-06-09",
+      "downstream_repo": "Capacity-Utilization-US_Chile"
+    }
+  },
+  {
+    "file": "chapter2_vault\\04_data_measurement\\V02_GPIM_Constitution.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "data_measurement",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md"
+      ],
+      "stage_scope": "S10",
+      "country": "US_CL",
+      "last_updated": "2026-06-26"
+    }
+  },
+  {
+    "file": "chapter2_vault\\05_codes_implementation\\A00_CODE_IMPLEMENTATION_ALIGNMENT_REPORT.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "code_implementation_memo",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-06-10",
+      "title": "A00 Code Implementation Alignment Report",
+      "layer": "implementation_design",
+      "design_role": "code_implementation_alignment_audit",
+      "scope": "chapter2_results_repo",
+      "created": "2026-06-01",
+      "updated": "2026-06-08",
+      "related_to": [
+        "A00_Aggregate_Transformation_Benchmark",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "A04_PeripheralTransformationElasticity",
+        "M10_Empirical_Identification_Framework",
+        "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+        "A00_DATA_MEASUREMENT_ALIGNMENT_REPORT"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\05_codes_implementation\\C01-US_00_MEMO_RECYCLING.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "code_implementation_memo",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US",
+      "last_updated": "2026-06-10",
+      "layer": "implementation_design",
+      "design_role": "us_code_recycling_and_stage_mapping",
+      "scope": "chapter2_results_repo",
+      "repo": "Capacity-Utilization-US_Chile",
+      "related_to": [
+        "M10_Empirical_Identification_Framework",
+        "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+        "C03-REPO_STRUCTURE",
+        "R02_DOLS_reconstruction_dilemma",
+        "R04_FMOLS_structural_preservation",
+        "R06_IMOLS_integration_ladder_reconstruction"
+      ],
+      "anchor_protocol_governed_by": "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+      "anchor_protocol_country": "US",
+      "anchor_protocol_preferred_year": 1973,
+      "anchor_protocol_condition": "mu_US_1973_equals_1",
+      "anchor_protocol_type": "point_year_external_pinch",
+      "anchor_protocol_source": "FRB_maximum_utilization_series",
+      "anchor_protocol_role": "level_normalization",
+      "window_average_anchor_allowed_as_baseline": false,
+      "created": "2026-05-06",
+      "updated": "2026-06-02"
+    }
+  },
+  {
+    "file": "chapter2_vault\\05_codes_implementation\\C02-CL_00_MEMO_RECYCLING.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "code_implementation_memo",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "CL",
+      "last_updated": "2026-06-10",
+      "layer": "implementation_design",
+      "design_role": "chile_code_recycling_and_stage_mapping",
+      "scope": "chapter2_results_repo",
+      "repo": "Capacity-Utilization-US_Chile",
+      "related_to": [
+        "M10_Empirical_Identification_Framework",
+        "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+        "C03-REPO_STRUCTURE",
+        "R02_DOLS_reconstruction_dilemma",
+        "R04_FMOLS_structural_preservation",
+        "R06_IMOLS_integration_ladder_reconstruction",
+        "R07_FGLS_threshold_cointegration_admissibility",
+        "R08_threshold_break_diagnostics_to_FGLS"
+      ],
+      "anchor_protocol_governed_by": "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+      "anchor_protocol_country": "CL",
+      "anchor_protocol_preferred_year": 1980,
+      "anchor_protocol_condition": "mu_CL_1980_equals_1",
+      "anchor_protocol_type": "point_year_historical_pinch",
+      "anchor_protocol_source": "Ffrench_Davis_2018_full_capacity_reference",
+      "anchor_protocol_role": "level_normalization",
+      "ect_regime_classifier_allowed": false,
+      "window_average_anchor_allowed_as_baseline": false,
+      "created": "2026-05-06",
+      "updated": "2026-06-02"
+    }
+  },
+  {
+    "file": "chapter2_vault\\05_codes_implementation\\C03-REPO_STRUCTURE.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "code_implementation_memo",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-06-10",
+      "layer": "code_stage_design",
+      "design_role": "repo_structure_and_stage_governance",
+      "scope": "chapter2_results_repo",
+      "repo": "Capacity-Utilization-US_Chile",
+      "anchor_protocol_governed_by": "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+      "figure_protocol_governed_by": "C05-FIGURE_PROTOCOL",
+      "s30_anchor_authority": false,
+      "us_s40_preferred_anchor_year": 1973,
+      "us_s40_anchor_condition": "mu_US_1973_equals_1",
+      "us_s40_anchor_type": "point_year_external_pinch",
+      "us_s40_anchor_source": "FRB_maximum_utilization_series",
+      "cl_s40_preferred_anchor_year": 1980,
+      "cl_s40_anchor_condition": "mu_CL_1980_equals_1",
+      "cl_s40_anchor_type": "point_year_historical_pinch",
+      "cl_s40_anchor_source": "Ffrench_Davis_2018_full_capacity_reference",
+      "window_average_anchor_allowed_as_baseline": false,
+      "created": "2026-05-06",
+      "updated": "2026-06-08",
+      "related_to": [
+        "C01-US_00_MEMO_RECYCLING",
+        "C02-CL_00_MEMO_RECYCLING",
+        "C04-US_S30_STABILITY_PROTOCOL",
+        "C05-FIGURE_PROTOCOL",
+        "US_S40_Restricted_B1_Reconstruction_Contract",
+        "US_S40_Review_and_Figures_Contract",
+        "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+        "M10_Empirical_Identification_Framework"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\05_codes_implementation\\C04-US_S30_STABILITY_PROTOCOL.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "code_implementation_memo",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "S30",
+      "country": "US",
+      "last_updated": "2026-06-10",
+      "layer": "code_stage_design",
+      "design_role": "us_s30_formal_stability_protocol",
+      "scope": "chapter2_results_repo",
+      "stage": "S30",
+      "repo": "Capacity-Utilization-US_Chile",
+      "s30_anchor_authority": false,
+      "s40_anchor_governed_by": "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+      "us_s40_preferred_anchor_year": 1973,
+      "us_s40_anchor_condition": "mu_US_1973_equals_1",
+      "us_s40_anchor_type": "point_year_external_pinch",
+      "us_s40_anchor_source": "FRB_maximum_utilization_series",
+      "window_average_anchor_allowed_as_baseline": false,
+      "created": "2026-05-14",
+      "updated": "2026-06-08",
+      "related_to": [
+        "US_S30_SUBSTANTIVE_REVIEW_2026-05-14_PRELIMINARY",
+        "R09_structural_break_protocol",
+        "M10_Empirical_Identification_Framework",
+        "N02_SuperConsistency",
+        "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+        "D02_PriceDeflator_Protocol_K_Composition"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\05_codes_implementation\\C05-FIGURE_PROTOCOL.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "code_implementation_memo",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-05-26",
+      "layer": "figure_protocol",
+      "design_role": "recession_shading_and_stage_figure_conventions",
+      "scope": "chapter2_results_repo",
+      "repo": "Capacity-Utilization-US_Chile",
+      "applies_to": [
+        "US",
+        "CL",
+        "CMP"
+      ],
+      "figure_scope": [
+        "S40",
+        "S50",
+        "S60",
+        "S70",
+        "S90",
+        "S99"
+      ],
+      "us_recession_shading_source": "FRED_NBER_monthly_business_cycle_turning_points",
+      "us_recession_shading_source_url": "fredhelp_stlouisfed_recession_bars",
+      "annual_recession_rule": "any_month_overlap",
+      "recession_shading_role": "visual_context_only",
+      "recession_shading_regime_classifier": false,
+      "anchor_markers_required_when_applicable": true,
+      "created": "2026-05-14",
+      "updated": "2026-05-14",
+      "related_to": [
+        "C03-REPO_STRUCTURE",
+        "US_S40_Review_and_Figures_Contract",
+        "US_S40_Restricted_B1_Reconstruction_Contract",
+        "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+        "M10_Empirical_Identification_Framework"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\05_codes_implementation\\E02_CI_as_Rouboustness_P-O_protocol.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "code_implementation_memo",
+      "status": "draft",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-06-10",
+      "id": "R_Phillips_Ouliaris_Implementation_Protocol",
+      "title": "Phillips-Ouliaris Implementation Protocol for Cointegration Robustness",
+      "created": "2026-06-03",
+      "updated": "2026-06-08",
+      "project": "Chapter 2",
+      "repo_area": "02_econometrics",
+      "note_role": "implementation_guardrail",
+      "object_domain": "long_run_transformation_relation",
+      "method_family": "residual_based_cointegration_testing",
+      "primary_package": "urca",
+      "primary_function": "ca.po",
+      "primary_test": "Phillips-Ouliaris",
+      "baseline_statistic": "Pz",
+      "baseline_deterministic_case": "constant",
+      "baseline_lag_correction": "short",
+      "primary_estimators": [
+        "FM-OLS",
+        "IM-OLS",
+        "DOLS"
+      ],
+      "implementation_scope": [
+        "S33_cointegration_robustness",
+        "B1_E2B_model_choice_review",
+        "residual_based_admissibility",
+        "robustness_protocol"
+      ],
+      "locked_terms": [
+        "Phillips-Ouliaris gate",
+        "Pz normalization-invariant test",
+        "formal residual-based cointegration gate",
+        "residual ADF diagnostic",
+        "estimator triangulation"
+      ],
+      "forbidden_terms": [
+        "pass FM-OLS cointegration test",
+        "Phillips-Hansen cointegration test",
+        "feed FM residuals into ca.po",
+        "S40 reconstruction authorized"
+      ],
+      "related_specs": [
+        "SPEC_A00_PRIMITIVE_SCALE_INTERACTION",
+        "SPEC_A05_COMPOSITION_INTERACTION"
+      ],
+      "related_notes": [
+        "R_distribution_conditioned_theta_identification",
+        "R_Cointegration_Admissibility_Superconsistent_Estimators",
+        "A06_B1_E2B_Model_Choice_Lock",
+        "S32_B1_E2B_MODEL_CHOICE_REVIEW"
+      ],
+      "outputs_required": [
+        "S33_phillips_ouliaris_gate.csv",
+        "S33_cointegration_admissibility_ledger.csv",
+        "S33_phillips_ouliaris_robustness.md"
+      ],
+      "tags": [
+        "chapter2",
+        "econometrics",
+        "implementation",
+        "cointegration",
+        "phillips-ouliaris",
+        "urca",
+        "ca-po",
+        "fmols",
+        "imols",
+        "dols"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\05_codes_implementation\\S10_US_Source-of-Truth_GPIM_ConstructionProtocol 1.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "code_implementation_memo",
+      "status": "locked",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "S10",
+      "country": "US",
+      "last_updated": "2026-06-23",
+      "title": "S10: U.S. Source-of-Truth and GPIM Construction Protocol",
+      "subtype": "protocol",
+      "layer": "data_pipeline",
+      "design_role": "source_truth_construction",
+      "scope": "chapter2_us",
+      "stage": "S10",
+      "created": "2026-06-05",
+      "updated": "2026-06-08",
+      "upstream_provider": "US-BEA-Income-FixedAssets-Dataset",
+      "analytical_source_truth_repo": "Capacity-Utilization-US_Chile",
+      "upstream_role": "bea_nipa_fixed_assets_carrier_bundle",
+      "chapter2_role": "canonical_s10_source_truth_construction",
+      "canonical_gpim_method": "weibull_account_level_gross_stock_reconstruction",
+      "canonical_gpim_toggle": "option_b_weibull_account_level",
+      "sensitivity_gpim_toggle": "option_a_shaikh_bea1993_aggregate_finite_life",
+      "capital_stock_object": "gross_productive_capacity_stock",
+      "depreciation_retirement_distinction": true,
+      "shaikh_gpim_role": "validation_and_sensitivity_benchmark_not_canonical_method",
+      "sectoral_accounting_status": "locked",
+      "strict_nfc_layer_status": "baseline",
+      "corrected_corporate_layer_status": "parallel_baseline",
+      "mixed_layer_status": "alternative_baseline",
+      "raw_layer_status": "diagnostic_only",
+      "corporate_correction": "shaikh_style_imputed_interest_correction",
+      "financial_sector_interpretation": "broader_corporate_reproduction_capacity_not_strict_productive_capacity",
+      "distributive_boundary_rule": "distribution_conditioning_need_not_share_output_capital_sector_boundary",
+      "prohibited_baseline_mismatch": "Y_Corp_star_with_K_NFC_without_separate_theory",
+      "required_layers": [
+        "A_NFC_STRICT",
+        "B_CORP_SHAIKH_CORRECTED",
+        "C_NFC_WITH_CORP_DISTRIBUTION",
+        "D_RAW_DIAGNOSTIC"
+      ],
+      "capital_type_scope": [
+        "T",
+        "NRC",
+        "ME"
+      ],
+      "sector_scope": [
+        "NFC",
+        "CORP"
+      ],
+      "s10_canonical_panel": "data/processed/us/S10_SOURCE_TRUTH/S10_us_source_truth_wide.rds",
+      "s10_canonical_csv": "data/processed/us/S10_SOURCE_TRUTH/S10_us_source_truth_wide.csv",
+      "s10_long_panel": "data/processed/us/S10_SOURCE_TRUTH/S10_us_source_truth_long.csv",
+      "s10_provenance_ledger": "data/processed/us/S10_SOURCE_TRUTH/S10_us_variable_provenance.csv",
+      "s10_gpim_parameter_ledger": "data/processed/us/S10_SOURCE_TRUTH/S10_us_gpim_parameter_ledger.csv",
+      "s10_asset_mapping_ledger": "data/processed/us/S10_SOURCE_TRUTH/S10_us_asset_mapping_ledger.csv",
+      "s10_construction_ledger": "data/processed/us/S10_SOURCE_TRUTH/S10_us_construction_ledger.csv",
+      "s10_validation_report": "data/processed/us/S10_SOURCE_TRUTH/S10_us_validation_report.md",
+      "s10_build_manifest": "data/processed/us/S10_SOURCE_TRUTH/S10_us_build_manifest.txt",
+      "upstream_bundle_path": "output/ch2_s10_export",
+      "required_upstream_files": [
+        "us_bea_s10_carrier_wide.csv",
+        "us_bea_s10_carrier_long.csv",
+        "us_bea_s10_variable_ledger.csv",
+        "us_bea_s10_source_manifest.csv",
+        "us_bea_s10_gpim_inputs.csv",
+        "us_bea_s10_validation_report.md",
+        "us_bea_s10_export_commit.txt"
+      ],
+      "validation_gates": [
+        "upstream_provenance_complete",
+        "gpim_ingredient_completeness",
+        "bea_asset_mapping_complete",
+        "fraumeni_service_life_crosscheck",
+        "nomura_mapping_flagged_as_interpretive",
+        "government_transportation_hybrid_flag",
+        "shaikh_bea1993_toggle_retained",
+        "sectoral_layer_identifiers_exported",
+        "no_downstream_estimation_before_s10_freeze"
+      ],
+      "downstream_blocked_until_s10_passes": [
+        "S20",
+        "S30",
+        "S31I",
+        "S32",
+        "S40"
+      ],
+      "related_to": [
+        "US-BEA-Income-FixedAssets-Dataset",
+        "Capacity-Utilization-US_Chile",
+        "GPIM_Application",
+        "S20_US_SourceTruth_Panel",
+        "S31I_Integration_Order_Precheck",
+        "S32_B1_E2B_Model_Choice",
+        "S40_Restricted_B1_Reconstruction",
+        "A00_Aggregate_Transformation_Benchmark",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\05_codes_implementation\\S10_US_Source-of-Truth_GPIM_ConstructionProtocol.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "code_implementation_memo",
+      "status": "locked",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "S10",
+      "country": "US",
+      "last_updated": "2026-06-23",
+      "title": "S10: U.S. Source-of-Truth and GPIM Construction Protocol",
+      "subtype": "protocol",
+      "layer": "data_pipeline",
+      "design_role": "source_truth_construction",
+      "scope": "chapter2_us",
+      "stage": "S10",
+      "created": "2026-06-05",
+      "updated": "2026-06-08",
+      "upstream_provider": "US-BEA-Income-FixedAssets-Dataset",
+      "analytical_source_truth_repo": "Capacity-Utilization-US_Chile",
+      "upstream_role": "bea_nipa_fixed_assets_carrier_bundle",
+      "chapter2_role": "canonical_s10_source_truth_construction",
+      "canonical_gpim_method": "weibull_account_level_gross_stock_reconstruction",
+      "canonical_gpim_toggle": "option_b_weibull_account_level",
+      "sensitivity_gpim_toggle": "option_a_shaikh_bea1993_aggregate_finite_life",
+      "capital_stock_object": "gross_productive_capacity_stock",
+      "depreciation_retirement_distinction": true,
+      "shaikh_gpim_role": "validation_and_sensitivity_benchmark_not_canonical_method",
+      "sectoral_accounting_status": "locked",
+      "strict_nfc_layer_status": "baseline",
+      "corrected_corporate_layer_status": "parallel_baseline",
+      "mixed_layer_status": "alternative_baseline",
+      "raw_layer_status": "diagnostic_only",
+      "corporate_correction": "shaikh_style_imputed_interest_correction",
+      "financial_sector_interpretation": "broader_corporate_reproduction_capacity_not_strict_productive_capacity",
+      "distributive_boundary_rule": "distribution_conditioning_need_not_share_output_capital_sector_boundary",
+      "prohibited_baseline_mismatch": "Y_Corp_star_with_K_NFC_without_separate_theory",
+      "required_layers": [
+        "A_NFC_STRICT",
+        "B_CORP_SHAIKH_CORRECTED",
+        "C_NFC_WITH_CORP_DISTRIBUTION",
+        "D_RAW_DIAGNOSTIC"
+      ],
+      "s10_canonical_panel": "data/processed/us/S10_SOURCE_TRUTH/S10_us_source_truth_wide.rds",
+      "s10_canonical_csv": "data/processed/us/S10_SOURCE_TRUTH/S10_us_source_truth_wide.csv",
+      "s10_long_panel": "data/processed/us/S10_SOURCE_TRUTH/S10_us_source_truth_long.csv",
+      "s10_provenance_ledger": "data/processed/us/S10_SOURCE_TRUTH/S10_us_variable_provenance.csv",
+      "s10_gpim_parameter_ledger": "data/processed/us/S10_SOURCE_TRUTH/S10_us_gpim_parameter_ledger.csv",
+      "s10_asset_mapping_ledger": "data/processed/us/S10_SOURCE_TRUTH/S10_us_asset_mapping_ledger.csv",
+      "s10_construction_ledger": "data/processed/us/S10_SOURCE_TRUTH/S10_us_construction_ledger.csv",
+      "s10_validation_report": "data/processed/us/S10_SOURCE_TRUTH/S10_us_validation_report.md",
+      "s10_build_manifest": "data/processed/us/S10_SOURCE_TRUTH/S10_us_build_manifest.txt",
+      "upstream_bundle_path": "output/ch2_s10_export",
+      "required_upstream_files": [
+        "us_bea_s10_carrier_wide.csv",
+        "us_bea_s10_carrier_long.csv",
+        "us_bea_s10_variable_ledger.csv",
+        "us_bea_s10_source_manifest.csv",
+        "us_bea_s10_gpim_inputs.csv",
+        "us_bea_s10_validation_report.md",
+        "us_bea_s10_export_commit.txt"
+      ],
+      "validation_gates": [
+        "upstream_provenance_complete",
+        "gpim_ingredient_completeness",
+        "bea_asset_mapping_complete",
+        "fraumeni_service_life_crosscheck",
+        "nomura_mapping_flagged_as_interpretive",
+        "government_transportation_hybrid_flag",
+        "shaikh_bea1993_toggle_retained",
+        "sectoral_layer_identifiers_exported",
+        "no_downstream_estimation_before_s10_freeze"
+      ],
+      "downstream_blocked_until_s10_passes": [
+        "S20",
+        "S30",
+        "S31I",
+        "S32",
+        "S40"
+      ],
+      "related_to": [
+        "R_distribution_conditioned_theta_identification",
+        "US-BEA-Income-FixedAssets-Dataset",
+        "Capacity-Utilization-US_Chile",
+        "GPIM_Application",
+        "S20_US_SourceTruth_Panel",
+        "S31I_Integration_Order_Precheck",
+        "S32_B1_E2B_Model_Choice",
+        "S40_Restricted_B1_Reconstruction",
+        "A00_Aggregate_Transformation_Benchmark",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\05_codes_implementation\\US S40 Restricted B1 Reconstruction Contract.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "code_implementation_memo",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "S40",
+      "country": "US",
+      "last_updated": "2026-06-10",
+      "layer": "code_stage_design",
+      "design_role": "us_s40_restricted_b1_reconstruction_contract",
+      "scope": "chapter2_results_repo",
+      "repo": "Capacity-Utilization-US_Chile",
+      "stage": "S40_reconstruction",
+      "upstream_stage": "S30",
+      "candidate_spec_id": "SPEC_B1_WAGE_BASELINE",
+      "s30_gate_governed_by": "C04-US_S30_STABILITY_PROTOCOL",
+      "reconstruction_script": "US_S40_theta_tot_mu_reconstruction.R",
+      "review_script": "US_S40_review_and_figures.R",
+      "anchor_protocol_governed_by": "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+      "anchor_country": "US",
+      "anchor_year": 1973,
+      "anchor_condition": "mu_US_1973_equals_1",
+      "anchor_type": "point_year_external_pinch",
+      "anchor_source": "FRB_maximum_utilization_series",
+      "anchor_role": "level_normalization",
+      "anchor_status": "externally_declared",
+      "preferred_or_diagnostic": "preferred",
+      "point_year_or_window_average": "point_year",
+      "diagnostic_window_average_anchor": false,
+      "window_average_anchor_allowed_as_baseline": false,
+      "fordist_core_mean_anchor_status": "diagnostic_only",
+      "fragility_flag_required": true,
+      "profitability_allowed": false,
+      "chile_outputs_allowed": false,
+      "new_model_estimation_allowed": false,
+      "review_figures_allowed": false,
+      "s50_activation_allowed": false,
+      "created": "2026-05-14",
+      "updated": "2026-06-08",
+      "related_to": [
+        "C01-US_00_MEMO_RECYCLING",
+        "C03-REPO_STRUCTURE",
+        "C04-US_S30_STABILITY_PROTOCOL",
+        "C05-FIGURE_PROTOCOL",
+        "US_S40_Review_and_Figures_Contract",
+        "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+        "M10_Empirical_Identification_Framework",
+        "R01_residual_vs_structural_identification",
+        "R09_structural_break_protocol"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\05_codes_implementation\\US S40 Review and Figures Contract.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "code_implementation_memo",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "S40",
+      "country": "US",
+      "last_updated": "2026-06-10",
+      "layer": "code_stage_design",
+      "design_role": "us_s40_review_and_figures_contract",
+      "scope": "chapter2_results_repo",
+      "repo": "Capacity-Utilization-US_Chile",
+      "stage": "S40_review",
+      "upstream_stage": "S40",
+      "candidate_spec_id": "SPEC_B1_WAGE_BASELINE",
+      "upstream_reconstruction_contract": "US_S40_Restricted_B1_Reconstruction_Contract",
+      "figure_protocol_governed_by": "C05-FIGURE_PROTOCOL",
+      "review_script": "US_S40_review_and_figures.R",
+      "reconstruction_script": "US_S40_theta_tot_mu_reconstruction.R",
+      "anchor_protocol_governed_by": "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+      "anchor_country": "US",
+      "anchor_year": 1973,
+      "anchor_condition": "mu_US_1973_equals_1",
+      "anchor_type": "point_year_external_pinch",
+      "anchor_source": "FRB_maximum_utilization_series",
+      "anchor_role": "level_normalization",
+      "anchor_status": "externally_declared",
+      "recession_shading_source": "FRED_NBER_monthly_business_cycle_turning_points",
+      "recession_shading_annualization": "any_month_overlap",
+      "recession_shading_role": "visual_context_only",
+      "recession_shading_regime_classifier": false,
+      "window_average_anchor_allowed_as_baseline": false,
+      "fordist_core_mean_anchor_status": "diagnostic_only",
+      "figures_mark_anchor_year": true,
+      "figures_shade_recession_years": true,
+      "figures_shade_fordist_core_as_anchor_window": false,
+      "profitability_allowed": false,
+      "chile_outputs_allowed": false,
+      "new_model_estimation_allowed": false,
+      "s50_activation_allowed": false,
+      "created": "2026-05-14",
+      "updated": "2026-06-08",
+      "related_to": [
+        "C05-FIGURE_PROTOCOL",
+        "US_S40_Restricted_B1_Reconstruction_Contract",
+        "C01-US_00_MEMO_RECYCLING",
+        "C03-REPO_STRUCTURE",
+        "C04-US_S30_STABILITY_PROTOCOL",
+        "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+        "M10_Empirical_Identification_Framework",
+        "R01_residual_vs_structural_identification",
+        "R09_structural_break_protocol"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\05_codes_implementation\\US_S30_SUBSTANTIVE_REVIEW_2026-05-14_PRELIMINARY.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "code_implementation_memo",
+      "status": "superseded",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "S30",
+      "country": "US",
+      "last_updated": "2026-06-26",
+      "layer": "code_stage_design",
+      "design_role": "us_s30_preliminary_substantive_review",
+      "scope": "chapter2_results_repo",
+      "stage": "S30",
+      "repo": "Capacity-Utilization-US_Chile",
+      "review_date": "2026-05-14",
+      "superseded_by": [
+        "R_distribution_conditioned_theta_identification",
+        "C04-US_S30_STABILITY_PROTOCOL",
+        "US_S40_Restricted_B1_Reconstruction_Contract",
+        "US_S40_Review_and_Figures_Contract"
+      ],
+      "supersession_reason": "formal_s30_gate_opened_restricted_b1_under_fragility",
+      "active_contract": false,
+      "historical_trace": true,
+      "s40_blocked_conclusion_active": false,
+      "s40_current_status": "blocked_pending_corrected_s30_s32_review",
+      "dols_veto_active": false,
+      "dols_fragility_metadata_only": true,
+      "s30_anchor_authority": false,
+      "s40_anchor_governed_by": "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+      "us_s40_preferred_anchor_year": 1973,
+      "us_s40_anchor_condition": "mu_US_1973_equals_1",
+      "created": "2026-05-14",
+      "updated": "2026-06-08",
+      "related_to": [
+        "C04-US_S30_STABILITY_PROTOCOL",
+        "D03_capacity_utilization_level_anchor_pinch_year_protocol",
+        "R09_structural_break_protocol",
+        "M10_Empirical_Identification_Framework"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\06_paper_facing\\00E_Chapter2_PaperFacing_Constitution.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "paper_facing_map",
+      "status": "draft",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-04-23",
+      "layer": "design",
+      "design_role": "chapter_constitution",
+      "scope": "chapter2",
+      "priority": "core"
+    }
+  },
+  {
+    "file": "chapter2_vault\\06_paper_facing\\00N_Chapter2_PaperFacing_MAP.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "paper_facing_map",
+      "status": "locked",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-23",
+      "layer": "design",
+      "design_role": "chapter_map",
+      "scope": "chapter2",
+      "priority": "core"
+    }
+  },
+  {
+    "file": "chapter2_vault\\06_paper_facing\\00N_Chapter2_PaperFacing_Notes.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "paper_facing_map",
+      "status": "locked",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-04-28",
+      "layer": "design",
+      "design_role": "chapter_constitution",
+      "scope": "chapter2",
+      "priority": "core"
+    }
+  },
+  {
+    "file": "chapter2_vault\\06_paper_facing\\Advisor_Review_2026-07-23.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "paper_facing_map",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-23",
+      "date": "2026-07-23",
+      "reviewer": "Michael Ash",
+      "candidate": "Diego Polanco",
+      "subject": "Chapter 2 Scoping Partition and Applied Econometrics Review",
+      "authority_files": [
+        "chapter2_vault/00_constitutive_core/01_Governing_Memo.md",
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\06_paper_facing\\Ch2_Outline_DEFINITIVE.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "outline",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md",
+        "chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md"
+      ],
+      "stage_scope": "S10-S90",
+      "country": "comparative",
+      "last_updated": "2026-07-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\06_paper_facing\\Chapter2_Polanco.pdf.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "paper_facing_map",
+      "status": "locked",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-06-08"
+    }
+  },
+  {
+    "file": "chapter2_vault\\06_paper_facing\\Chapter2_References.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "paper_facing_map",
+      "status": "locked",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-04-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\06_paper_facing\\handoff_manifest.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "paper_facing_map",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-23",
+      "date": "2026-07-23",
+      "conversation_id": "1087ad76-f9a3-4d89-9596-1b49f4925b11",
+      "project": "Capacity-Utilization-US_Chile",
+      "chapter": "Chapter 2"
+    }
+  },
+  {
+    "file": "chapter2_vault\\07_WrittingSkills_and_Rules\\C02_Advisor_Michael_Facing_Exposition_Prompt.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "writing_rule",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "none",
+      "country": "US_CL",
+      "last_updated": "2026-06-02"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\00_Okishio_Vidal_Bridge.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "legacy",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-06-02"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\H02_plantcapacity-mechanization_choicetech.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "superseded",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-27",
+      "subtype": "hinge",
+      "layer": "analytical_foundation",
+      "design_role": "mechanism_definition",
+      "scope": "chapter2_core",
+      "related_to": [
+        "H01_Cajas_to_Transformation_Elasticity",
+        "H02_Theta_to_Empirical_Coefficients",
+        "N00_Mechanization_Analytical_References",
+        "R05_Frontier_of_Not_Becoming"
+      ],
+      "created": "2026-05-27",
+      "updated": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\H03_Theta_to_Empirical_Coefficients.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-27",
+      "layer": "superseded",
+      "design_role": "synthesis_hinge",
+      "scope": "chapter2_core",
+      "related_to": [
+        "N00_Mechanization_Analytical_References",
+        "N04_Composition_of_Accumulation_and_Transformation",
+        "R03_Interpretation_of_Theta_as_Contradictory_Object",
+        "R04_What_is_Identified_vs_Reconstructed"
+      ],
+      "created": "2026-05-05",
+      "updated": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\N01_Two_Corridor_Transformation_Elasticity.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-27",
+      "layer": "superseded",
+      "design_role": "theory_to_identification",
+      "scope": "chapter2_core",
+      "related_to": [
+        "N01_CapacityUtilization_StructuralObject",
+        "N02_SuperConsistency",
+        "M10_Empirical_Identification_Framework",
+        "Marx_Okishio_Closure_Logic"
+      ],
+      "created": "2026-05-05"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\N02_Peripheral_Mechanization_Constraint.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-27",
+      "layer": "superseded",
+      "design_role": "object_definition",
+      "scope": "chapter2_peripheral_extension",
+      "related_to": [
+        "N01_Two_Corridor_Transformation_Elasticity",
+        "R01_Marx_Okishio_Regime_Diagnostic_Guardrail"
+      ],
+      "created": "2026-05-05"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\N03_Two-CapitalMechanization_TransformationElasticity.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "superseded",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-27",
+      "subtype": "object",
+      "layer": "analytical_foundation",
+      "design_role": "mechanism_definition",
+      "scope": "chapter2_core",
+      "related_to": [
+        "N00_Mechanization_Analytical_References",
+        "H01_Cajas_to_Transformation_Elasticity",
+        "H03_Double_Choice_of_Technique",
+        "R05_Frontier_of_Not_Becoming",
+        "Okishio_Vidal_Transformation_Elasticity"
+      ],
+      "created": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\N04_Composition_of_Accumulation_and_Transformation.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-27",
+      "layer": "superseded",
+      "design_role": "object_definition",
+      "scope": "chapter2_core",
+      "related_to": [
+        "H01_Mechanization_Problem",
+        "H02_Theta_to_Empirical_Coefficients"
+      ],
+      "created": "2026-05-05"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\N05_Normal_Reproduction_Closure.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-27",
+      "layer": "superseded",
+      "design_role": "closure_definition",
+      "scope": "chapter2_core",
+      "created": "2026-05-05"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\R01_Marx_Okishio_Regime_Diagnostic_Guardrail.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-05",
+      "layer": "analytical_foundation",
+      "design_role": "interpretation_rule",
+      "scope": "chapter2_core",
+      "related_to": [
+        "N03_Two_Corridor_Transformation_Elasticity",
+        "M10_Empirical_Identification_Framework",
+        "N01_CapacityUtilization_StructuralObject"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\R02_Threshold_Model_Peripheral_Diagnostic.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-05",
+      "layer": "analytical_foundation",
+      "design_role": "identification_rule",
+      "scope": "chapter2_peripheral_extension",
+      "related_to": [
+        "N01_Two_Corridor_Transformation_Elasticity",
+        "R01_Marx_Okishio_Regime_Diagnostic_Guardrail",
+        "N02_Peripheral_Mechanization_Constraint"
+      ],
+      "created": "2026-05-05"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\R03_Interpretation_of_Theta_as_Contradictory_Object.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-05",
+      "layer": "analytical_foundation",
+      "design_role": "interpretation_rule",
+      "scope": "chapter2_core",
+      "related_to": [
+        "H00_Okishio_Vidal_Decentralized_Accumulation",
+        "H01_Cajas_to_Transformation_Elasticity",
+        "N01_Two_Corridor_Transformation_Elasticity",
+        "N02_Peripheral_Mechanization_Constraint",
+        "R01_Marx_Okishio_Regime_Diagnostic_Guardrail",
+        "R02_Threshold_Model_Peripheral_Diagnostic"
+      ],
+      "created": "2026-05-05"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\R04_What_is_Identified_vs_Reconstructed.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-05",
+      "layer": "analytical_foundation",
+      "design_role": "identification_rule",
+      "scope": "chapter2_core",
+      "related_to": [
+        "H02_Theta_to_Empirical_Coefficients",
+        "N04_Composition_of_Accumulation_and_Transformation",
+        "R03_Interpretation_of_Theta_as_Contradictory_Object"
+      ],
+      "created": "2026-05-05"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\R05_ME_NRC_Price_Wedge_Guardrail.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-06",
+      "layer": "analytical_toolkit",
+      "note_class": "R-note",
+      "design_role": "measurement_guardrail",
+      "scope": "chapter2_implementation",
+      "object_governed": [
+        "s_t",
+        "K_ME",
+        "K_NRC",
+        "phi_t"
+      ],
+      "core_rule": "stock_flow_consistency",
+      "related_to": [
+        "M10_Empirical_Identification_Framework",
+        "N_Capital_Composition_and_Productive_Capacity",
+        "R_StockFlowConsistency",
+        "R_No_Nominal_Share_Allocation"
+      ],
+      "tags": [
+        "chapter2",
+        "measurement",
+        "stock_flow_consistency",
+        "capital_stock",
+        "machinery_equipment",
+        "non_residential_construction",
+        "price_wedge",
+        "deflators"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\R06_Extensive-Margin DiagnosticLadder.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "legacy",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-27",
+      "subtype": "rule",
+      "layer": "analytical_foundation",
+      "design_role": "diagnostic_protocol",
+      "scope": "chapter2_core",
+      "related_to": [
+        "N04_Extensive_Margin_and_Structural_Envelope",
+        "N05_Tactical_Choice_of_Technique",
+        "M10_Empirical_Identification_Framework",
+        "R01_Marx_Okishio_Regime_Diagnostic_Guardrail",
+        "R05_Frontier_of_Not_Becoming",
+        "A01_Extensive_Accumulation"
+      ],
+      "created": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\09_legacy\\R07_Intensive-Margin DiagnosticLadder.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "legacy_note",
+      "status": "legacy",
+      "depends_on": [],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-05-27",
+      "subtype": "rule",
+      "layer": "analytical_foundation",
+      "design_role": "diagnostic_protocol",
+      "scope": "chapter2_core",
+      "related_to": [
+        "A02_Intensive_Accumulation_Choice_of_Technique",
+        "N04_Extensive_Margin_and_Structural_Envelope",
+        "R05_Frontier_of_Not_Becoming",
+        "R06_Regime_Gating_and_Diagnostic_Ladder",
+        "Okishio_Vidal_Transformation_Elasticity",
+        "M10_Empirical_Identification_Framework"
+      ],
+      "created": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\80_Prompts\\S30A_Real_Output_Family_Closure_Prompt.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "prompt_execution_contract",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md"
+      ],
+      "stage_scope": "S30",
+      "country": "US_CL",
+      "last_updated": "2026-06-22",
+      "project": "dissertation_chapter_2",
+      "phase": "data_construction_closure",
+      "stage": "S30A",
+      "task_id": "S30A_REAL_OUTPUT_FAMILY_CLOSURE",
+      "repository": "C:\\ReposGitHub\\Capacity-Utilization-US_Chile",
+      "assigned_branch": "feature/s30a-output-family-closure",
+      "exact_base_commit": "911885ce763fdf4b73903ebb552682cfb108d0b3",
+      "upstream_stage": "S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING",
+      "upstream_validation": "PASS_84",
+      "upstream_decision": "AUTHORIZE_S30A_S30B_S30C_S30D_PARALLEL_DATA_CLOSURE_EXECUTION",
+      "parallel_execution": true,
+      "merge_into_main": false
+    }
+  },
+  {
+    "file": "chapter2_vault\\80_Prompts\\S30B_Income_Distribution_Family_Closure_Prompt.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "prompt_execution_contract",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md"
+      ],
+      "stage_scope": "S30",
+      "country": "US_CL",
+      "last_updated": "2026-06-22",
+      "project": "dissertation_chapter_2",
+      "phase": "data_construction_closure",
+      "stage": "S30B",
+      "task_id": "S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE",
+      "repository": "C:\\ReposGitHub\\Capacity-Utilization-US_Chile",
+      "assigned_branch": "feature/s30b-distribution-family-closure",
+      "exact_base_commit": "911885ce763fdf4b73903ebb552682cfb108d0b3",
+      "upstream_stage": "S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING",
+      "upstream_validation": "PASS_84",
+      "upstream_decision": "AUTHORIZE_S30A_S30B_S30C_S30D_PARALLEL_DATA_CLOSURE_EXECUTION",
+      "parallel_execution": true,
+      "merge_into_main": false
+    }
+  },
+  {
+    "file": "chapter2_vault\\80_Prompts\\S30C_Contextual_Family_Classification_Lock_Prompt.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "prompt_execution_contract",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md"
+      ],
+      "stage_scope": "S30",
+      "country": "US_CL",
+      "last_updated": "2026-06-22",
+      "project": "dissertation_chapter_2",
+      "phase": "data_construction_closure",
+      "stage": "S30C",
+      "task_id": "S30C_CONTEXTUAL_FAMILY_CLASSIFICATION_LOCK",
+      "repository": "C:\\ReposGitHub\\Capacity-Utilization-US_Chile",
+      "assigned_branch": "feature/s30c-contextual-family-lock",
+      "exact_base_commit": "911885ce763fdf4b73903ebb552682cfb108d0b3",
+      "upstream_stage": "S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING",
+      "upstream_validation": "PASS_84",
+      "upstream_decision": "AUTHORIZE_S30A_S30B_S30C_S30D_PARALLEL_DATA_CLOSURE_EXECUTION",
+      "parallel_execution": true,
+      "merge_into_main": false
+    }
+  },
+  {
+    "file": "chapter2_vault\\80_Prompts\\S30D_Dataset_Release_Schema_Scaffold_Prompt.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "prompt_execution_contract",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md"
+      ],
+      "stage_scope": "S30",
+      "country": "US_CL",
+      "last_updated": "2026-06-23",
+      "project": "dissertation_chapter_2",
+      "phase": "data_construction_closure",
+      "stage": "S30D",
+      "task_id": "S30D_DATASET_RELEASE_SCHEMA_AND_VALIDATION_SCAFFOLD",
+      "repository": "C:\\ReposGitHub\\Capacity-Utilization-US_Chile",
+      "assigned_branch": "feature/s30d-dataset-release-scaffold",
+      "exact_base_commit": "911885ce763fdf4b73903ebb552682cfb108d0b3",
+      "upstream_stage": "S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING",
+      "upstream_validation": "PASS_84",
+      "upstream_decision": "AUTHORIZE_S30A_S30B_S30C_S30D_PARALLEL_DATA_CLOSURE_EXECUTION",
+      "parallel_execution": true,
+      "merge_into_main": false
+    }
+  },
+  {
+    "file": "chapter2_vault\\80_Prompts\\S30_Common_Execution_Contract.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "prompt_execution_contract",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md"
+      ],
+      "stage_scope": "S30",
+      "country": "US_CL",
+      "last_updated": "2026-06-23",
+      "project": "dissertation_chapter_2",
+      "phase": "data_construction_closure",
+      "stage": "S30_parallel_execution",
+      "repository": "C:\\ReposGitHub\\Capacity-Utilization-US_Chile",
+      "exact_base_commit": "911885ce763fdf4b73903ebb552682cfb108d0b3",
+      "parallel_task_count": 4,
+      "upstream_stage": "S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING",
+      "upstream_validation": "PASS_84",
+      "upstream_decision": "AUTHORIZE_S30A_S30B_S30C_S30D_PARALLEL_DATA_CLOSURE_EXECUTION"
+    }
+  },
+  {
+    "file": "chapter2_vault\\80_Prompts\\implementation_plan.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "prompt_execution_contract",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "US_CL",
+      "last_updated": "2026-07-21"
+    }
+  },
+  {
+    "file": "chapter2_vault\\99_inactive\\07_Pre_Export_Sanity_Check.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "inactive_archive",
+      "status": "inactive",
+      "depends_on": [],
+      "stage_scope": "none",
+      "country": "US_CL",
+      "last_updated": "2026-04-25",
+      "title": "Pre-Export Sanity Check",
+      "project": "Normal utilization and the fractured firm",
+      "tags": [
+        "sanity-check",
+        "export"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\99_inactive\\08_Export_Memo.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "inactive_archive",
+      "status": "inactive",
+      "depends_on": [],
+      "stage_scope": "none",
+      "country": "US_CL",
+      "last_updated": "2026-04-25",
+      "title": "Export Memo",
+      "project": "Normal utilization and the fractured firm",
+      "tags": [
+        "export",
+        "obsidian-bundle"
+      ]
+    }
+  },
+  {
+    "file": "chapter2_vault\\99_inactive\\H01_Cajas_to_Transformation_Elasticity 1.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "inactive_archive",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "none",
+      "country": "US_CL",
+      "last_updated": "2026-05-05",
+      "layer": "analytical_foundation",
+      "design_role": "mechanism_definition",
+      "scope": "chapter2_core",
+      "related_to": [
+        "N04_Composition_of_Accumulation_and_Transformation",
+        "N05_Normal_Reproduction_Closure"
+      ],
+      "created": "2026-05-05"
+    }
+  },
+  {
+    "file": "chapter2_vault\\99_inactive\\H02_Theta_to_Empirical_Coefficients.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "inactive_archive",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "none",
+      "country": "US_CL",
+      "last_updated": "2026-05-26",
+      "layer": "analytical_foundation",
+      "design_role": "synthesis_hinge",
+      "scope": "chapter2_core",
+      "related_to": [
+        "N04_Composition_of_Accumulation_and_Transformation",
+        "R03_Interpretation_of_Theta_as_Contradictory_Object",
+        "R04_What_is_Identified_vs_Reconstructed"
+      ],
+      "created": "2026-05-05"
+    }
+  },
+  {
+    "file": "chapter2_vault\\99_inactive\\Handoff_Next_Worksession.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "inactive_archive",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "none",
+      "country": "US_CL",
+      "last_updated": "2026-06-01",
+      "subtype": "prospecting",
+      "layer": "governance",
+      "design_role": "pipeline_planning",
+      "scope": "chapter2_transition",
+      "related_to": [
+        "A01_Extensive_Accumulation",
+        "A02_Intensive_Accumulation",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "A04_PeripheralTransformationElasticity",
+        "H00_Okishio_Vidal_Decentralized_Accumulation",
+        "H01_Cajas_to_Transformation_Elasticity",
+        "R01_Ontological_Interpretation_Guardrails",
+        "R02_Identification_and_Estimation_Protocol",
+        "R03_Regime_Diagnostic_and_Threshold_Gating",
+        "R04_Measurement_and_Accounting_Consistency"
+      ],
+      "created": "2026-05-27",
+      "updated": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\99_inactive\\PRE_COMMIT_CH2_CHECKLIST.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "inactive_archive",
+      "status": "inactive",
+      "depends_on": [],
+      "stage_scope": "none",
+      "country": "US_CL",
+      "last_updated": "2026-05-05"
+    }
+  },
+  {
+    "file": "chapter2_vault\\99_inactive\\Pending_Prospected_Tasks.md",
+    "valid_yaml_header": false,
+    "reason": "Missing: [], Empty: ['depends_on']",
+    "missing_fields": [],
+    "empty_fields": [
+      "depends_on"
+    ],
+    "parsed_data": {
+      "type": "inactive_archive",
+      "status": "active",
+      "depends_on": [],
+      "stage_scope": "none",
+      "country": "US_CL",
+      "last_updated": "2026-06-01",
+      "subtype": "prospecting",
+      "layer": "governance",
+      "design_role": "pipeline_planning",
+      "scope": "chapter2_transition",
+      "related_to": [
+        "A01_Extensive_Accumulation",
+        "A02_Intensive_Accumulation",
+        "A03_TransformationElasticity_Two-CapitalCapacityComposition",
+        "A04_PeripheralTransformationElasticity",
+        "H00_Okishio_Vidal_Decentralized_Accumulation",
+        "H01_Cajas_to_Transformation_Elasticity",
+        "R01_Ontological_Interpretation_Guardrails",
+        "R02_Identification_and_Estimation_Protocol",
+        "R03_Regime_Diagnostic_and_Threshold_Gating",
+        "R04_Measurement_and_Accounting_Consistency"
+      ],
+      "created": "2026-05-27",
+      "updated": "2026-05-27"
+    }
+  },
+  {
+    "file": "chapter2_vault\\CONSTRAINTS.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "constitutional_core",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-28"
+    }
+  },
+  {
+    "file": "chapter2_vault\\Chapter2_Obsidian\\01_contradictory_utilization_configurations\\00_Okishio_Vidal_Bridge.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "constitutional_core",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-07-23"
+    }
+  },
+  {
+    "file": "chapter2_vault\\README.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "constitutional_core",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md"
+      ],
+      "stage_scope": "S00",
+      "country": "US_CL",
+      "last_updated": "2026-04-28"
+    }
+  },
+  {
+    "file": "reports\\chile_frontier_multicollinearity_audit.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "CL",
+      "last_updated": "2026-05-14"
+    }
+  },
+  {
+    "file": "reports\\maintenance\\B1_GPIM_EVIDENCE_INTEGRATION_2026-06-26\\B1_GPIM_EVIDENCE_INTEGRATION_REPORT.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "S10",
+      "country": "none",
+      "last_updated": "2026-06-26"
+    }
+  },
+  {
+    "file": "reports\\maintenance\\D01_GPIM_GROSS_SURVIVAL_REMEDIATION_2026-06-26\\D01_GPIM_GROSS_SURVIVAL_REMEDIATION_REPORT.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "S10",
+      "country": "none",
+      "last_updated": "2026-06-27"
+    }
+  },
+  {
+    "file": "reports\\maintenance\\D02_GPIM_INPUT_INITIALIZATION_AUDIT_2026-06-27\\D02_GPIM_INPUT_INITIALIZATION_AUDIT_REPORT.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "S10",
+      "country": "none",
+      "last_updated": "2026-06-27"
+    }
+  },
+  {
+    "file": "reports\\maintenance\\D03_GPIM_S29C_PRICE_DEFLATOR_PROVENANCE_AUDIT_2026-06-27\\D03_GPIM_S29C_PRICE_DEFLATOR_PROVENANCE_AUDIT_REPORT.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "S10",
+      "country": "none",
+      "last_updated": "2026-06-27"
+    }
+  },
+  {
+    "file": "reports\\maintenance\\D04_GPIM_S12DB_SOURCE_PRICE_SEED_AUDIT_2026-06-27\\D04_GPIM_S12DB_SOURCE_PRICE_SEED_AUDIT_REPORT.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "S10",
+      "country": "none",
+      "last_updated": "2026-06-28"
+    }
+  },
+  {
+    "file": "reports\\report_gpim_shaikh_comparison_2026-06-25\\PRESERVATION_NOTE.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "none",
+      "last_updated": "2026-06-26"
+    }
+  },
+  {
+    "file": "reports\\report_gpim_shaikh_comparison_2026-06-25\\README.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "none",
+      "last_updated": "2026-06-26"
+    }
+  },
+  {
+    "file": "reports\\report_gpim_shaikh_comparison_2026-06-25\\report_gpim_shaikh_comparison_2026-06-25.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "S10",
+      "country": "none",
+      "last_updated": "2026-06-26"
+    }
+  },
+  {
+    "file": "reports\\report_gpim_shaikh_comparison_2026-06-25\\validation\\validation_summary.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "none",
+      "last_updated": "2026-06-26"
+    }
+  },
+  {
+    "file": "reports\\report_validation_Kgross_GPIM_SensitivityAnalysis_2026-07-01\\reports\\D09_S_decision_report.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "none",
+      "last_updated": "2026-07-01"
+    }
+  },
+  {
+    "file": "reports\\report_validation_SofT_dataset_2026-07-01\\D09_decision_report.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "none",
+      "last_updated": "2026-07-01"
+    }
+  },
+  {
+    "file": "reports\\report_validation_SofT_dataset_2026-07-01\\report\\D09_decision_report.md",
+    "valid_yaml_header": true,
+    "reason": "OK",
+    "missing_fields": [],
+    "empty_fields": [],
+    "parsed_data": {
+      "type": "audit_report",
+      "status": "active",
+      "depends_on": [
+        "chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md"
+      ],
+      "stage_scope": "all_stages",
+      "country": "none",
+      "last_updated": "2026-07-01"
+    }
+  }
+]

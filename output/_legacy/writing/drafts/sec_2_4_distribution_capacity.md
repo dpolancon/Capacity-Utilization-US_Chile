@@ -1,3 +1,12 @@
+---
+type: draft_section
+status: draft
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-14
+---
+
 # §2.4 — Distribution-Conditioned Capacity: The Interaction Term
 **Source authority:** `RRR_Accumulation_Framework.md` §1–2
 **Date drafted:** 2026-03-29

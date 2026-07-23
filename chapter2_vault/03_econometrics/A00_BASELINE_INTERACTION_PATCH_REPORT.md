@@ -1,30 +1,34 @@
 ---
-title: "A00 Baseline Interaction Patch Report"
-type: "report"
-status: "superseded_historical_report"
-layer: "method"
-design_role: "patch_validation"
-scope: "chapter2_core_support"
-estimator_status: "historical-or-diagnostic"
+type: econometric_protocol
+status: superseded
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
+title: A00 Baseline Interaction Patch Report
+layer: method
+design_role: patch_validation
+scope: chapter2_core_support
+estimator_status: historical-or-diagnostic
 requires_review_before_use: true
 created: 2026-06-01
 updated: 2026-06-08
 related_to:
-  - "A00_Aggregate_Transformation_Benchmark"
-  - "A03_TransformationElasticity_Two-CapitalCapacityComposition"
-  - "N01_CapacityUtilization_StructuralObject"
-  - "M10_Empirical_Identification_Framework"
-  - "R04_FMOLS_structural_preservation"
-  - "N02_SuperConsistency"
-  - "R05_LRV_kernel_bandwidth_regime_misalignment"
+- A00_Aggregate_Transformation_Benchmark
+- A03_TransformationElasticity_Two-CapitalCapacityComposition
+- N01_CapacityUtilization_StructuralObject
+- M10_Empirical_Identification_Framework
+- R04_FMOLS_structural_preservation
+- N02_SuperConsistency
+- R05_LRV_kernel_bandwidth_regime_misalignment
 role: historical-reference
 stage: pre-estimation-design
 aliases:
-  - A00 interaction patch report
+- A00 interaction patch report
 tags:
-  - chapter2/econometrics
-  - chapter2/historical-reference
-  - chapter2/qomega-parked
+- chapter2/econometrics
+- chapter2/historical-reference
+- chapter2/qomega-parked
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 

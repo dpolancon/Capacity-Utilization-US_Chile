@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-07-08
+---
+
 # Capacity Path Reconstruction & Comparison (Golden Age Case Study: 1945–1973)
 
 This report presents a comparative analysis of reconstructed potential output ($Y^p_t$) and latent capacity utilization ($\mu_t$) paths in the United States during the post-war Golden Age (1945–1973). We contrast three distinct econometric and statistical methodologies to demonstrate how incorporating the choice of technique (capital composition) reshapes our understanding of historical capacity utilization. 

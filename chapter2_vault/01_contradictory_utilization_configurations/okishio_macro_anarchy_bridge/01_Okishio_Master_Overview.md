@@ -1,14 +1,18 @@
 ---
-title: "Okishio Master Overview"
-type: master-overview
-project: "Chapter 2 — utilization, accumulation, and firm fracture"
+type: analytical_foundation
 status: active
-core_author: "Okishio"
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-04-23
+title: Okishio Master Overview
+project: "Chapter 2 \u2014 utilization, accumulation, and firm fracture"
+core_author: Okishio
 tags:
-  - okishio
-  - accumulation
-  - market-anarchy
-  - disequilibrium
+- okishio
+- accumulation
+- market-anarchy
+- disequilibrium
 ---
 
 # Okishio Master Overview

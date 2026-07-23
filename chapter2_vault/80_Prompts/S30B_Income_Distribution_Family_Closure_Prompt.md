@@ -1,11 +1,15 @@
 ---
-type: codex_cloud_task_prompt
+type: prompt_execution_contract
+status: active
+depends_on: [chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md]
+stage_scope: S30
+country: US_CL
+last_updated: 2026-06-22
 project: dissertation_chapter_2
 phase: data_construction_closure
 stage: S30B
 task_id: S30B_INCOME_DISTRIBUTION_FAMILY_CLOSURE
-status: ready_to_launch
-repository: "C:\\ReposGitHub\\Capacity-Utilization-US_Chile"
+repository: C:\ReposGitHub\Capacity-Utilization-US_Chile
 assigned_branch: feature/s30b-distribution-family-closure
 exact_base_commit: 911885ce763fdf4b73903ebb552682cfb108d0b3
 upstream_stage: S29L_CROSS_FAMILY_INTEGRATION_AND_DATA_CLOSURE_PLANNING

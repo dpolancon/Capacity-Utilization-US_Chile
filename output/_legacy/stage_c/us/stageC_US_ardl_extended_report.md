@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: superseded
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-05-14
+---
+
 # Stage C Report — ARDL Extended Sample Estimations
 ## US Non-Financial Corporate Sector
 **Date:** 2026-04-07 | **Script:** 22_ardl_extended_samples_us.R

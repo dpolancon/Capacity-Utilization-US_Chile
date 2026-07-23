@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: superseded
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-05-14
+---
+
 # Results Report — Stage A US Structural Identification (v2)
 
 **Specification:** Agnostic, absolute log-levels in 2024 constant prices  

@@ -1,14 +1,18 @@
 ---
-type: note
+type: legacy_note
 status: active
+depends_on: []
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-27
 layer: superseded
 design_role: theory_to_identification
 scope: chapter2_core
 related_to:
-  - N01_CapacityUtilization_StructuralObject
-  - N02_SuperConsistency
-  - M10_Empirical_Identification_Framework
-  - Marx_Okishio_Closure_Logic
+- N01_CapacityUtilization_StructuralObject
+- N02_SuperConsistency
+- M10_Empirical_Identification_Framework
+- Marx_Okishio_Closure_Logic
 created: 2026-05-05
 ---
 

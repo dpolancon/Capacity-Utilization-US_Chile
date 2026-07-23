@@ -1,16 +1,20 @@
 ---
-type: note
-subtype: object
+type: legacy_note
 status: superseded
+depends_on: []
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-27
+subtype: object
 layer: analytical_foundation
 design_role: mechanism_definition
 scope: chapter2_core
 related_to:
-  - N00_Mechanization_Analytical_References
-  - H01_Cajas_to_Transformation_Elasticity
-  - H03_Double_Choice_of_Technique
-  - R05_Frontier_of_Not_Becoming
-  - Okishio_Vidal_Transformation_Elasticity
+- N00_Mechanization_Analytical_References
+- H01_Cajas_to_Transformation_Elasticity
+- H03_Double_Choice_of_Technique
+- R05_Frontier_of_Not_Becoming
+- Okishio_Vidal_Transformation_Elasticity
 created: 2026-05-27
 ---
 

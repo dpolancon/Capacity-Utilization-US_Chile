@@ -1,3 +1,12 @@
+---
+type: draft_section
+status: draft
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-14
+---
+
 # §2.9.1 — The Tavares Channel
 **Source authority:** Tavares (1985, 2000); Vernengo (2006)
 **Date drafted:** 2026-03-29

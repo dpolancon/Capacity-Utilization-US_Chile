@@ -1,15 +1,20 @@
 ---
-status: validation-checks
+type: econometric_protocol
+status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
 scope: chapter2-econometrics
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
 date: 2026-07-06
 role: validation
 stage: pre-estimation-design
 aliases:
-  - D12V validation checks
+- D12V validation checks
 tags:
-  - chapter2/econometrics
-  - chapter2/validation
+- chapter2/econometrics
+- chapter2/validation
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 

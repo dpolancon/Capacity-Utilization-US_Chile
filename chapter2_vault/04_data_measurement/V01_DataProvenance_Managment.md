@@ -1,6 +1,10 @@
 ---
-type: note
+type: data_measurement
 status: locked
+depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+stage_scope: S10
+country: US_CL
+last_updated: 2026-06-12
 project: Chapter 2
 repo: Capacity-Utilization-US_Chile
 topic: US BEA upstream provider handoff
@@ -10,6 +14,7 @@ upstream_repo: US-BEA-Income-FixedAssets-Dataset
 upstream_tag: us-bea-provider-menu-shaikh-blocked-2026-06-09
 downstream_repo: Capacity-Utilization-US_Chile
 ---
+
 # US BEA Upstream Provider Handoff
 
 > [!important] Current identification lock

@@ -1,3 +1,12 @@
+---
+type: draft_section
+status: draft
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-14
+---
+
 # §2.5.4 — Stage A.2: Periphery Capital Composition and BoP Constraint
 **Source authority:** `Ch2_Outline_DEFINITIVE.md` §2.5.4; `ch2_section_prompts.md`
 **Date drafted:** 2026-04-02

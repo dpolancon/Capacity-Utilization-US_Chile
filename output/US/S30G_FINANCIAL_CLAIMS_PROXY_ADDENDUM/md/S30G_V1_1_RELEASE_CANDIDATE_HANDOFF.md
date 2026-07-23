@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-06-24
+---
+
 # S30G v1.1 Release-Candidate Handoff
 
 The v1.1 directory is a release candidate only. It is not frozen, tagged, or authorized for definitive downstream use.

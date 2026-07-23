@@ -1,3 +1,12 @@
+---
+type: documentation
+status: active
+depends_on: []
+stage_scope: none
+country: none
+last_updated: 2026-06-10
+---
+
 # Theta Identification Vault Audit
 
 Date: 2026-06-08

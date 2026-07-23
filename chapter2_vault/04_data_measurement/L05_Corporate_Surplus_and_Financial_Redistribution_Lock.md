@@ -1,23 +1,26 @@
 ---
-title: "Corporate Surplus and Financial Redistribution Lock"
+type: data_measurement
+status: locked
+depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+stage_scope: S10
+country: US
+last_updated: 2026-06-24
+title: Corporate Surplus and Financial Redistribution Lock
 aliases:
-  - "Corporate Surplus Theory Lock"
-  - "Nonproductive Finance Dataset-Role Lock"
-type: "theory-lock"
-status: "locked"
-project: "Dissertation Chapter 2"
+- Corporate Surplus Theory Lock
+- Nonproductive Finance Dataset-Role Lock
+project: Dissertation Chapter 2
 chapter: 2
-country: "United States"
-stage: "S30H"
-scope: "corporate surplus and financial redistribution"
+stage: S30H
+scope: corporate surplus and financial redistribution
 created: 2026-06-24
 updated: 2026-06-24
 tags:
-  - chapter2
-  - corporate-surplus
-  - financial-redistribution
-  - theory-lock
-  - data-governance
+- chapter2
+- corporate-surplus
+- financial-redistribution
+- theory-lock
+- data-governance
 ---
 
 # Lock - Corporate Surplus and Financial Redistribution

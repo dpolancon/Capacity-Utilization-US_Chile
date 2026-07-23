@@ -1,29 +1,33 @@
 ---
-type: note
-status: superseded-for-baseline
+type: econometric_protocol
+status: superseded
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
 layer: method
 design_role: preferred_estimator_rule
 scope: chapter2_core_support
 estimator_status: historical-or-diagnostic
 requires_review_before_use: true
 related_to:
-  - R_distribution_conditioned_theta_identification
-  - A00_Aggregate_Transformation_Benchmark
-  - R03_super_consistency_mechanics_hinge
-  - R05_LRV_kernel_bandwidth_regime_misalignment
-  - R06_IMOLS_integration_ladder_reconstruction
-  - N02_SuperConsistency
-  - M10_Empirical_Identification_Framework
-  - L00_Econometrics_References
+- R_distribution_conditioned_theta_identification
+- A00_Aggregate_Transformation_Benchmark
+- R03_super_consistency_mechanics_hinge
+- R05_LRV_kernel_bandwidth_regime_misalignment
+- R06_IMOLS_integration_ladder_reconstruction
+- N02_SuperConsistency
+- M10_Empirical_Identification_Framework
+- L00_Econometrics_References
 priority: high
 role: superseded-for-baseline
 stage: pre-estimation-design
 aliases:
-  - FM-OLS structural preservation
+- FM-OLS structural preservation
 tags:
-  - chapter2/econometrics
-  - chapter2/superseded
-  - chapter2/fmols
+- chapter2/econometrics
+- chapter2/superseded
+- chapter2/fmols
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 

@@ -1,13 +1,17 @@
 ---
-type: note
+type: legacy_note
 status: active
+depends_on: []
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-05
 layer: analytical_foundation
 design_role: identification_rule
 scope: chapter2_core
 related_to:
-  - H02_Theta_to_Empirical_Coefficients
-  - N04_Composition_of_Accumulation_and_Transformation
-  - R03_Interpretation_of_Theta_as_Contradictory_Object
+- H02_Theta_to_Empirical_Coefficients
+- N04_Composition_of_Accumulation_and_Transformation
+- R03_Interpretation_of_Theta_as_Contradictory_Object
 created: 2026-05-05
 ---
 

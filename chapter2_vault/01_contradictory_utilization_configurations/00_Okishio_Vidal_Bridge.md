@@ -1,15 +1,19 @@
 ---
-type: bridge_note
+type: analytical_foundation
 status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-19
 note_class: N
 layer: theoretical_object
 anchors:
-  - Okishio
-  - Vidal
-  - contradictory_utilization_configurations
-  - market_anarchy
-  - divided_management
-  - capacity_utilization
+- Okishio
+- Vidal
+- contradictory_utilization_configurations
+- market_anarchy
+- divided_management
+- capacity_utilization
 function: connects market-level disproportionality to firm-level utilization configurations
 ---
 

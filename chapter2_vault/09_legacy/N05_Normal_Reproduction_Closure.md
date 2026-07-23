@@ -1,6 +1,10 @@
 ---
-type: note
+type: legacy_note
 status: active
+depends_on: []
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-27
 layer: superseded
 design_role: closure_definition
 scope: chapter2_core

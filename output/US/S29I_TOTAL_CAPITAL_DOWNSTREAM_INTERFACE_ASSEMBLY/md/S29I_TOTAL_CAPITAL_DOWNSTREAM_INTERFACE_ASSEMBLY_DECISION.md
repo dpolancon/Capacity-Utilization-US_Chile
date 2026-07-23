@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-06-21
+---
+
 # S29I Total Capital Downstream Interface Assembly Decision
 
 Decision: `AUTHORIZE_S29J_TOTAL_CAPITAL_INTERFACE_VALIDATION_AND_HANDOFF`

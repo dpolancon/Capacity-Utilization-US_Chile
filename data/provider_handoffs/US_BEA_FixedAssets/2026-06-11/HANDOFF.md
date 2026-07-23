@@ -1,3 +1,12 @@
+---
+type: data_manifest
+status: active
+depends_on: [data/provider_handoffs/US_BEA_FixedAssets/2026-06-11/HANDOFF.md]
+stage_scope: S10
+country: none
+last_updated: 2026-06-26
+---
+
 # Chapter 2 Provider Handoff
 
 This bundle is the finalized provider-side source menu for Chapter 2. It is

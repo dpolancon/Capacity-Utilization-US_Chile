@@ -1,3 +1,12 @@
+---
+type: inactive_archive
+status: inactive
+depends_on: []
+stage_scope: none
+country: US_CL
+last_updated: 2026-05-05
+---
+
 # Chapter 2 pre-commit checklist
 
 Before committing, verify:

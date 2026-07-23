@@ -1,3 +1,12 @@
+---
+type: draft_section
+status: draft
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: S00
+country: CL
+last_updated: 2026-05-14
+---
+
 # §2.5.2 — Chile: Constructing the Parallel
 **Source authority:** `empirical_strategy_peripheral_Ch2_v3.md`
 **Date drafted:** 2026-03-29

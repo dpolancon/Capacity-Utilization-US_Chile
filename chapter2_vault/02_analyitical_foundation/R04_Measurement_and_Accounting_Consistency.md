@@ -1,12 +1,16 @@
 ---
-type: note
-subtype: rule
+type: analytical_foundation
 status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-06-01
+subtype: rule
 layer: analytical_toolkit
 design_role: measurement_guardrail
 scope: chapter2_implementation
 related_to:
-  - A03_TransformationElasticity_Two-CapitalCapacityComposition
+- A03_TransformationElasticity_Two-CapitalCapacityComposition
 created: 2026-05-27
 ---
 

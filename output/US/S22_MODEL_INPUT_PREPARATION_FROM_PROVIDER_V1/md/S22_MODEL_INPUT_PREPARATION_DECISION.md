@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: S22
+country: US
+last_updated: 2026-06-19
+---
+
 # S22 Model Input Preparation Decision
 
 Decision: `AUTHORIZE_VARIABLE_CONSTRUCTION_PLANNING`

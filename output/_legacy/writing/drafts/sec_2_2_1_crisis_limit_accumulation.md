@@ -1,3 +1,12 @@
+---
+type: draft_section
+status: draft
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-14
+---
+
 # §2.2.1 — Crisis as the Limit of Capitalist Accumulation
 **Source authority:** Shaikh (2016); Itoh (1980)
 **Date drafted:** 2026-04-02

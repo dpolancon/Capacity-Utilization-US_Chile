@@ -1,11 +1,15 @@
 ---
-title: "Pre-Export Sanity Check"
-type: checklist
-project: "Normal utilization and the fractured firm"
-status: ready
+type: inactive_archive
+status: inactive
+depends_on: []
+stage_scope: none
+country: US_CL
+last_updated: 2026-04-25
+title: Pre-Export Sanity Check
+project: Normal utilization and the fractured firm
 tags:
-  - sanity-check
-  - export
+- sanity-check
+- export
 ---
 
 # Pre-export sanity check

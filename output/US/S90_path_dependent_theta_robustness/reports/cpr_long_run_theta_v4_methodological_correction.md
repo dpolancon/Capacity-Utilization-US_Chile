@@ -1,13 +1,17 @@
 ---
-type: methodological_correction
-status: active_for_v4_deck
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: S90
+country: US
+last_updated: 2026-07-20
 scope: S90_long_run_theta_directional_identification
 supersedes_in_deck_only: cpr_long_run_theta_identification_addendum_v3
 does_not_modify:
-  - AGENTS.md
-  - chapter2_vault constitutional files
-  - locked chapter outline
-  - v3 TeX or PDF
+- AGENTS.md
+- chapter2_vault constitutional files
+- locked chapter outline
+- v3 TeX or PDF
 date: 2026-07-20
 ---
 

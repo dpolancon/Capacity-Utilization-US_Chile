@@ -1,3 +1,12 @@
+---
+type: analytical_foundation
+status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-06-01
+---
+
 **---
 type: note
 subtype: rule

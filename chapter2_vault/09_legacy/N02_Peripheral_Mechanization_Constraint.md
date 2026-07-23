@@ -1,12 +1,16 @@
 ---
-type: note
+type: legacy_note
 status: active
+depends_on: []
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-27
 layer: superseded
 design_role: object_definition
 scope: chapter2_peripheral_extension
 related_to:
-  - N01_Two_Corridor_Transformation_Elasticity
-  - R01_Marx_Okishio_Regime_Diagnostic_Guardrail
+- N01_Two_Corridor_Transformation_Elasticity
+- R01_Marx_Okishio_Regime_Diagnostic_Guardrail
 created: 2026-05-05
 ---
 

@@ -1,37 +1,27 @@
 ---
-
-type: note  
-status: draft_locked_for_review  
-project: Chapter2  
-repo_owner: Capacity-Utilization-US_Chile  
-scope: United States source-of-truth variable menu  
-stage: S10_source_of_truth_design  
-updated: 2026-06-09  
+type: data_measurement
+status: locked
+depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+stage_scope: S10
+country: US
+last_updated: 2026-06-23
+project: Chapter2
+repo_owner: Capacity-Utilization-US_Chile
+scope: United States source-of-truth variable menu
+stage: S10_source_of_truth_design
+updated: 2026-06-09
 tags:
-
 - chapter2
-    
 - united-states
-    
 - source-of-truth
-    
 - bea
-    
 - fixed-assets
-    
 - income-accounts
-    
 - gpim
-    
 - shaikh-correction
-    
 - wage-share
-    
 - distributive-conditions
-    
 - exploitation-rate-alternative
-    
-
 ---
 
 # United States Variable Menu for Source-of-Truth Construction

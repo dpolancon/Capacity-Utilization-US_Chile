@@ -1,3 +1,12 @@
+---
+type: validation_report
+status: active
+depends_on: [data/provider_handoffs/US_BEA_FixedAssets/2026-06-11/HANDOFF.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-04-04
+---
+
 # ~~US Structural Identification Notebook~~
 ## ~~CVAR Structural Identification — Stage A~~
 

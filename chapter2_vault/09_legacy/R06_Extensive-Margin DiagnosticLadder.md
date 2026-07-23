@@ -1,17 +1,21 @@
 ---
-type: note
+type: legacy_note
+status: legacy
+depends_on: []
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-27
 subtype: rule
-status: experimental
 layer: analytical_foundation
 design_role: diagnostic_protocol
 scope: chapter2_core
 related_to:
-  - N04_Extensive_Margin_and_Structural_Envelope
-  - N05_Tactical_Choice_of_Technique
-  - M10_Empirical_Identification_Framework
-  - R01_Marx_Okishio_Regime_Diagnostic_Guardrail
-  - R05_Frontier_of_Not_Becoming
-  - A01_Extensive_Accumulation
+- N04_Extensive_Margin_and_Structural_Envelope
+- N05_Tactical_Choice_of_Technique
+- M10_Empirical_Identification_Framework
+- R01_Marx_Okishio_Regime_Diagnostic_Guardrail
+- R05_Frontier_of_Not_Becoming
+- A01_Extensive_Accumulation
 created: 2026-05-27
 ---
 

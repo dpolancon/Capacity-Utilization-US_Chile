@@ -1,3 +1,12 @@
+---
+type: prompt_execution_contract
+status: active
+depends_on: [chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-21
+---
+
 # Implementation Plan: Chapter 2 Comparative Reconstruction & Micro-Outline
 
 This plan outlines the strategy to transition the current draft of Chapter 2 ([main.tex](file:///C:/ReposGitHub/Capacity-Utilization-US_Chile/chapter2_paper/01_Versions/ch2_v1/main.tex)) into a structured dissertation chapter. It assumes Chapter 2 is a direct continuation of Chapter 1's active version ([Chapter1_v3.0.pdf](file:///C:/ReposGitHub/Capacity-Utilization-US_Chile/chapter2_paper/01_Versions/chapter1_active_version/Chapter1_v3.0.pdf)), anchoring the comparative analysis of the US (center) and Chile (periphery) in the theoretical synthesis of decentralized accumulation (Okishio) and the internally divided firm (Vidal).

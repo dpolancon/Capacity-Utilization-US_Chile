@@ -1,25 +1,29 @@
 ---
-type: note
+type: analytical_foundation
+status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-06-10
 subtype: object
-status: active_pending_human_review
 layer: analytical_foundation
 design_role: empirical_bridge_definition
 scope: chapter2_core
 related_to:
-  - R_distribution_conditioned_theta_identification
-  - A00_Aggregate_Transformation_Benchmark
-  - A01_Extensive_Accumulation
-  - A02_Intensive_Accumulation
-  - A03_TransformationElasticity_Two-CapitalCapacityComposition
-  - D01_GPIM_heterogeneous_capital_SFC
-  - D02_PriceDeflator_Protocol_K_Composition
-  - D04_ME_NRC_LogRatio_Construction_Protocol
-  - R10_Binding_Specification_Layering_Rule
+- R_distribution_conditioned_theta_identification
+- A00_Aggregate_Transformation_Benchmark
+- A01_Extensive_Accumulation
+- A02_Intensive_Accumulation
+- A03_TransformationElasticity_Two-CapitalCapacityComposition
+- D01_GPIM_heterogeneous_capital_SFC
+- D02_PriceDeflator_Protocol_K_Composition
+- D04_ME_NRC_LogRatio_Construction_Protocol
+- R10_Binding_Specification_Layering_Rule
 pending_tasks:
-  - Define the productive-capital scale boundary.
-  - Construct and audit the centered ME-to-NR composition term.
-  - Compare direct scale-conditioning with composition-mediated conditioning.
-  - Keep reconstruction blocked until explicit human promotion.
+- Define the productive-capital scale boundary.
+- Construct and audit the centered ME-to-NR composition term.
+- Compare direct scale-conditioning with composition-mediated conditioning.
+- Keep reconstruction blocked until explicit human promotion.
 created: 2026-06-02
 updated: 2026-06-11
 ---

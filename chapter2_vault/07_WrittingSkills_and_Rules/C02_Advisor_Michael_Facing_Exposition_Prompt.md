@@ -1,3 +1,12 @@
+---
+type: writing_rule
+status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: none
+country: US_CL
+last_updated: 2026-06-02
+---
+
 # C02 — Advisor / Michael-Facing Exposition Prompt
 
 ## Deployment note

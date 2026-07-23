@@ -1,10 +1,16 @@
 ---
+type: data_measurement
+status: active
+depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+stage_scope: S10
+country: US_CL
+last_updated: 2026-06-05
 source: appendix_K_ret_distribution.tex
 source_type: latex
-status: shell_reconstruction
 latex_label: app:ret_distribution
 bib: references.bib
 ---
+
 ---
 source: appendix_K_ret_distribution.tex
 source_type: latex

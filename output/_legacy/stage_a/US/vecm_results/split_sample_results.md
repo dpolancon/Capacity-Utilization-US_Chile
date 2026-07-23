@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: superseded
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-05-14
+---
+
 # US Split-Sample Structural Identification — VECM, Trend, and DOLS
 
 **Scripts:** `27_vecm_split_wk_exog.R`, `28_vecm_trend_and_dols.R`

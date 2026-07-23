@@ -1,35 +1,31 @@
 ---
-status: active-lock
+type: econometric_protocol
+status: superseded
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-23
 scope: chapter2-econometrics
-active_estimator: restricted-dols
+active_estimator: restricted-dols (superseded)
 fmols_status: blocked-for-nonlinear-baseline
 imols_status: blocked-for-nonlinear-baseline
 restricted_imols_status: blocked
 unrestricted_dols_status: blocked-for-interactions
 q_omega_status: parked
-requires_gate:
-  - integration-order
-  - interaction-term-classification
-  - lead-lag-sensitivity
 created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
-role: active-lock
+role: superseded-lock
 stage: pre-estimation-design
-aliases:
-  - Restricted DOLS
-  - RDOLS
-  - Active estimator lock
-  - D12V estimator pivot
-  - Baseline estimator lock
 tags:
-  - chapter2/econometrics
-  - chapter2/active-lock
-  - chapter2/restricted-dols
-  - chapter2/pre-estimation-design
-  - chapter2/qomega-parked
-updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
+- chapter2/econometrics
+- chapter2/superseded
+updated_by: E10V_I2_TRAP_RESOLUTION
 ---
 
-# D12V — Restricted DOLS Active Estimator Lock
+> [!WARNING]
+> **SUPERSEDED DOCTRINE**
+> This lock has been superseded by [[E10V_IMOLS_CPR_Active_Estimator_Lock]], which establishes **IM-OLS (CPR-adapted)** and **Orthogonalization** as the active baseline doctrine. Do not use Restricted DOLS for new estimation designs.
+
+# D12V — Restricted DOLS Active Estimator Lock (SUPERSEDED)
 
 ## Active doctrine
 

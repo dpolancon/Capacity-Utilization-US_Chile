@@ -1,20 +1,24 @@
 ---
-title: "Okishio Macro-Anarchy Bridge Bundle"
-type: satellite-bundle-readme
-project: "Chapter 2 — utilization, accumulation, and firm fracture"
-status: export-ready
-parent_bundle: "Contradictory Utilization Configurations"
-bundle_role: "linked satellite"
-core_author: "Okishio"
-core_object: "market anarchy"
-bridge_object: "unified firm abstraction"
-landing_object: "contradictory utilization configurations"
+type: analytical_foundation
+status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-19
+title: Okishio Macro-Anarchy Bridge Bundle
+project: "Chapter 2 \u2014 utilization, accumulation, and firm fracture"
+parent_bundle: Contradictory Utilization Configurations
+bundle_role: linked satellite
+core_author: Okishio
+core_object: market anarchy
+bridge_object: unified firm abstraction
+landing_object: contradictory utilization configurations
 tags:
-  - okishio
-  - market-anarchy
-  - macro-disequilibrium
-  - unified-firm-gap
-  - contradictory-utilization-configurations
+- okishio
+- market-anarchy
+- macro-disequilibrium
+- unified-firm-gap
+- contradictory-utilization-configurations
 ---
 
 # Okishio Macro-Anarchy Bridge Bundle

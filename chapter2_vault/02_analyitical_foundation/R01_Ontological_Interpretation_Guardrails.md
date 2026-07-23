@@ -1,16 +1,20 @@
 ---
-type: note
-subtype: rule
+type: analytical_foundation
 status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-06-01
+subtype: rule
 layer: analytical_foundation
 design_role: ontological_guardrail
 scope: chapter2_core
 related_to:
-  - H00_Okishio_Vidal_Decentralized_Accumulation
-  - A01_Extensive_Accumulation
-  - A02_Intensive_Accumulation
-  - A03_TransformationElasticity_Two-CapitalCapacityComposition
-  - A04_PeripheralTransformationElasticity
+- H00_Okishio_Vidal_Decentralized_Accumulation
+- A01_Extensive_Accumulation
+- A02_Intensive_Accumulation
+- A03_TransformationElasticity_Two-CapitalCapacityComposition
+- A04_PeripheralTransformationElasticity
 created: 2026-05-27
 ---
 

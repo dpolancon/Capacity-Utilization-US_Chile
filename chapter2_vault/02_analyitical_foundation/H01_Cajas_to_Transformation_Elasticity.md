@@ -1,18 +1,22 @@
 ---
-type: note
+type: analytical_foundation
 status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-06-01
 layer: analytical_foundation
 design_role: mechanism_hinge
 scope: chapter2_core
 related_to:
-  - A01_Extensive_Accumulation
-  - A02_Intensive_Accumulation
-  - A03_TransformationElasticity_Two-CapitalCapacityComposition
-  - A04_PeripheralTransformationElasticity
-  - N00_Mechanization_Analytical_References
-  - N05_Normal_Reproduction_Closure
-  - R05_Frontier_of_Not_Becoming
-  - R06_Regime_Gating_and_Diagnostic_Ladder
+- A01_Extensive_Accumulation
+- A02_Intensive_Accumulation
+- A03_TransformationElasticity_Two-CapitalCapacityComposition
+- A04_PeripheralTransformationElasticity
+- N00_Mechanization_Analytical_References
+- N05_Normal_Reproduction_Closure
+- R05_Frontier_of_Not_Becoming
+- R06_Regime_Gating_and_Diagnostic_Ladder
 created: 2026-05-05
 updated: 2026-05-27
 ---

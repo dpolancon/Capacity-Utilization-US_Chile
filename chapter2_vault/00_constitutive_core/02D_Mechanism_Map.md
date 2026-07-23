@@ -1,12 +1,13 @@
-
 ---
-type: note
+type: constitutional_core
 status: active
+depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-05-19
 layer: design
 design_role: mechanism_map
 scope: constitutional
-depends_on: 02_Research_Problem
-depends_on: 02C_Hypotheses
 ---
 
 # 02D_Mechanism_Map

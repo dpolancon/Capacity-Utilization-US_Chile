@@ -1,3 +1,12 @@
+---
+type: stage_report
+status: active
+depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+stage_scope: all_stages
+country: US
+last_updated: 2026-07-06
+---
+
 ﻿# D10-R3 Decision Report
 
 D10-R3 closes the D10 reproducibility trail by rerunning D10 in a detached temporary worktree, preserving rerun file bodies, and comparing the eight prior hash-difference files.

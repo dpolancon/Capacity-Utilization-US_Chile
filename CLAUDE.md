@@ -1,3 +1,12 @@
+---
+type: system_rules
+status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-21
+---
+
 # CLAUDE.md — Capacity-Utilization-US_Chile
 ## Standing instructions for all Claude Code and agent sessions in this repo
 

@@ -1,3 +1,12 @@
+---
+type: documentation
+status: active
+depends_on: []
+stage_scope: none
+country: US
+last_updated: 2026-06-10
+---
+
 # U.S. S22 Preliminary A00 Periodized Results
 
 These are preliminary A00 baseline estimates using actual log output as an effective-output proxy, NFC productive-capacity capital, and an unadjusted NFC wage-share-conditioned accumulated capital-growth index. The estimates are not Shaikh-adjusted results, not mechanization-bias specifications, and not final productive-capacity estimates.

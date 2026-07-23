@@ -1,3 +1,12 @@
+---
+type: documentation
+status: active
+depends_on: []
+stage_scope: none
+country: US
+last_updated: 2026-06-09
+---
+
 # U.S. BEA Shaikh Semantic Propagation Patch
 
 **Patch date:** 2026-06-09

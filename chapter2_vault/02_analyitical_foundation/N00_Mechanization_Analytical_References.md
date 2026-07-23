@@ -1,22 +1,27 @@
 ---
-type: note
-subtype: reference_map
+type: analytical_foundation
 status: active
+depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+stage_scope: S00
+country: US_CL
+last_updated: 2026-06-01
+subtype: reference_map
 layer: analytical_foundation
 design_role: intellectual_genealogy
 scope: chapter2_core_support
 related_to:
-  - A01_Extensive_Accumulation
-  - A02_Intensive_Accumulation
-  - A03_TransformationElasticity_Two-CapitalCapacityComposition
-  - A04_PeripheralTransformationElasticity
-  - H00_Okishio_Vidal_Decentralized_Accumulation
-  - H01_Cajas_to_Transformation_Elasticity
-  - R05_Frontier_of_Not_Becoming
-  - R06_Regime_Gating_and_Diagnostic_Ladder
+- A01_Extensive_Accumulation
+- A02_Intensive_Accumulation
+- A03_TransformationElasticity_Two-CapitalCapacityComposition
+- A04_PeripheralTransformationElasticity
+- H00_Okishio_Vidal_Decentralized_Accumulation
+- H01_Cajas_to_Transformation_Elasticity
+- R05_Frontier_of_Not_Becoming
+- R06_Regime_Gating_and_Diagnostic_Ladder
 created: 2026-05-05
 updated: 2026-05-27
 ---
+
 > **Constitutional Note**: This note maps sources to equations. It does not derive, define, or transform. All analytical operations reside in A-notes and H-notes.
 
 # N00: Mechanization Analytical Foundations — Reference Map

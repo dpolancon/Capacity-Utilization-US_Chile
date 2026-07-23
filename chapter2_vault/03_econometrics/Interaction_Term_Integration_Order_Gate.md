@@ -1,96 +1,58 @@
 ---
-status: active-gate
-scope: chapter2-econometrics
+type: econometric_protocol
+status: active
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-23
+layer: code_stage_design
 gate_type: integration-order-and-interaction-classification
 blocks_estimation_until_passed: true
 applies_to:
-  - restricted-dols
-  - nonlinear-cointegration
-  - interaction-terms
-  - generated-regressors
-created_by: D12V_ECONOMETRICS_VAULT_ESTIMATOR_PIVOT
+- imols-cpr
+- nonlinear-cointegration
+- interaction-terms
+- generated-regressors
+created_by: E10V_I2_TRAP_RESOLUTION
 role: active-gate
 stage: pre-estimation-design
 aliases:
-  - Interaction order gate
-  - Integration order gate
-  - Restricted DOLS gate
-  - Interaction term gate
+- Interaction order gate
+- Integration order gate
+- IM-OLS CPR gate
+- Interaction term gate
 tags:
-  - chapter2/econometrics
-  - chapter2/active-gate
-  - chapter2/restricted-dols
-  - chapter2/pre-estimation-design
-updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
+- chapter2/econometrics
+- chapter2/active-gate
+- chapter2/imols-cpr
+- chapter2/pre-estimation-design
 ---
 
 # Interaction-Term Integration Order Gate
 
-## Gate purpose
+## Gate Purpose
+This gate blocks baseline estimation design until the stochastic status of the base variables and the interaction term is classified, and the orthogonalization filter is executed. IM-OLS CPR is the preferred design candidate only after the model survives this gate.
 
-This gate blocks baseline estimation design until the stochastic status of base variables and interaction/generated terms is classified. Restricted DOLS is the preferred design candidate only after the model object survives this gate.
+## Required Classifications
+Before any estimation design, the candidate model must verify:
+1.  **Base Variable Integration Order:** Verify that the base variables $\tilde{y}_t$ and $\tilde{k}_t$ are $I(1)$ using standard unit root tests (ADF, KPSS, PP) allowing for structural breaks.
+2.  **Interaction Term Classification:** Identify if the interaction term $(\tilde{k}_t \cdot \omega_{t-1})$ is integrated of order two, $I(2)$, which is the case when $\omega_t \sim I(1)$.
+3.  **Orthogonalization Filter:** Perform the auxiliary OLS regression:
+    $$ (\tilde{k}_t \cdot \omega_{t-1}) = \alpha_0 + \alpha_1 \tilde{k}_t + \alpha_2 \omega_t + \hat{u}_t $$
+    and extract the residuals $\hat{u}_t$.
+4.  **VIF Multicollinearity Check:** Recalculate VIF values on the model $Y_t = a + b K_t + f \omega_t + d \hat{u}_t$. Confirm that VIFs for all regressors are below 10 (confirming that orthogonalization has resolved contemporaneous collinearity).
 
-## Required classifications
-
-Before any Restricted DOLS baseline design, classify:
-
-1. base variables as I(0), I(1), possible I(2), or unknown;
-2. whether an interaction/generated term exists in the candidate equation;
-3. whether base variables are cointegrated with each other;
-4. whether the interaction term is I(1)-admissible, I(0)-control, mixed-order, generated, or blocked;
-5. whether the sample window survives the restricted DOLS lead/lag grid.
-
-## Base-variable checks
-
-Each base variable must have documented integration-order evidence before it enters a nonlinear/interacted baseline design.
-
-The gate must record whether the candidate base variable is:
-
-- I(0);
-- I(1);
-- possible I(2);
-- unknown;
-- structurally broken in a way that makes the order classification unresolved.
-
-## Interaction-term checks
-
-For each generated term, record the base variables, generation rule, centering or scaling rule, and stochastic classification.
-
-The interaction term must be classified as one of:
-
-- I(1)-admissible;
-- I(0)-control;
-- mixed-order;
-- generated but unresolved;
-- blocked.
-
-## Mixed-order cases
-
-Mixed-order cases do not automatically fail, but they do block baseline design until the model object is reconciled. The design must explain whether the interaction is a control, a level relation component, a generated regressor with special handling, or a blocked term.
-
-## Estimator implications
-
-Restricted DOLS remains the preferred baseline-design estimator for nonlinear/interacted/generated Chapter 2 objects after this gate passes.
-
-Standard FM-OLS, standard IM-OLS, and restricted IM-OLS are not substitutes for this gate.
-
-Unrestricted DOLS remains blocked for interaction objects unless a separate protocol authorizes leads/lags of interaction-term differences.
-
-## Pass / block outcomes
-
+## Pass / Block Outcomes
 ```text
-PASS_RESTRICTED_DOLS_DESIGN_GATE
+PASS_IMOLS_CPR_DESIGN_GATE
 REQUIRE_INTEGRATION_ORDER_RECONCILIATION
-REQUIRE_INTERACTION_TERM_CLASSIFICATION
-BLOCK_MIXED_ORDER_UNRESOLVED
+REQUIRE_AUXILIARY_ORTHOGONALIZATION
+BLOCK_DOLS_REGRESSOR_EXPLOSION
 BLOCK_QOMEGA_REINTRODUCTION
-BLOCK_BASELINE_BOUNDARY_LEAKAGE
 ```
 
 ## Links
-
-- [[Interaction_Term_Integration_Order_Gate]]
-- [[D12V_Restricted_DOLS_Active_Estimator_Lock]]
-- [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]]
-- [[FMOLS_IMOLS_Failure_For_Interaction_Objects]]
-- [[Estimator_Status_Ledger_D12V]]
+- [[E10V_IMOLS_CPR_Active_Estimator_Lock]]
+- [[Estimator_Status_Ledger_E10V]]
+- [[E11_IMOLS_CPR_Asymptotic_Rationale]]
+- [[_03_Econometrics_MOC]]

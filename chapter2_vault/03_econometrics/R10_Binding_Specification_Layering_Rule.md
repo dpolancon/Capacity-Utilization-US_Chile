@@ -1,6 +1,10 @@
 ---
-type: rule_note
-status: binding
+type: econometric_protocol
+status: superseded
+depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+stage_scope: all_stages
+country: US_CL
+last_updated: 2026-07-06
 layer: method
 scope: chapter2_core
 design_role: specification_layering
@@ -8,21 +12,21 @@ estimator_status: restricted-dols-required-for-nonlinear-baseline
 created: 2026-06-02
 updated: 2026-06-11
 related_to:
-  - R_distribution_conditioned_theta_identification
-  - A00_Aggregate_Transformation_Benchmark
-  - A03_TransformationElasticity_Two-CapitalCapacityComposition
-  - A05_NRCEnvelope_MechanizationBias
-  - M10_Empirical_Identification_Framework
+- R_distribution_conditioned_theta_identification
+- A00_Aggregate_Transformation_Benchmark
+- A03_TransformationElasticity_Two-CapitalCapacityComposition
+- A05_NRCEnvelope_MechanizationBias
+- M10_Empirical_Identification_Framework
 role: superseded-for-baseline
 stage: pre-estimation-design
 aliases:
-  - Binding specification layering rule
+- Binding specification layering rule
 tags:
-  - chapter2/econometrics
-  - chapter2/superseded
-  - chapter2/fmols
-  - chapter2/imols
-  - chapter2/qomega-parked
+- chapter2/econometrics
+- chapter2/superseded
+- chapter2/fmols
+- chapter2/imols
+- chapter2/qomega-parked
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
 ---
 
