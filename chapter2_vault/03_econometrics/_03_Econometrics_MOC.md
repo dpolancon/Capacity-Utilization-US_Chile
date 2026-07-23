@@ -43,35 +43,35 @@ tags:
 - [[R01_residual_vs_structural_identification]] (Residual vs. Structural Utilization)
 - [[R11_CointegrationAdmissibility_Super-Consistency]] (Super-consistency benefits)
 
-## Historical / Superseded Notes
+## Historical / Superseded Notes (Archived in `_legacy/`)
 
-- [[D12V_Restricted_DOLS_Active_Estimator_Lock]] (Superseded: Restricted DOLS Active Lock)
-- [[FMOLS_IMOLS_Failure_For_Interaction_Objects]] (Superseded: Standard FM-OLS/IM-OLS Warning)
-- [[Estimator_Status_Ledger_D12V]] (Superseded: D12V Estimator Ledger)
-- [[Restricted_DOLS_Asymptotic_Rationale_and_Caveats]] (Superseded: DOLS Asymptotic Rationale)
-- [[A00_BASELINE_INTERACTION_PATCH_REPORT]]
-- [[A06_VIFSafe_Baseline_MechanizationComparison]]
-- [[E01_Specification_Abstract_Benchmark]]
-- [[M10_Empirical_Identification_Framework]]
-- [[N02_SuperConsistency]]
-- [[R02_DOLS_reconstruction_dilemma]]
-- [[R03_super_consistency_mechanics_hinge]]
-- [[R04_FMOLS_structural_preservation]]
-- [[R05_LRV_kernel_bandwidth_regime_misalignment]]
-- [[R06_IMOLS_integration_ladder_reconstruction]]
-- [[R09_structural_break_protocol]]
-- [[R10_Binding_Specification_Layering_Rule]]
+- [[_legacy/D12V_Restricted_DOLS_Active_Estimator_Lock|D12V_Restricted_DOLS_Active_Estimator_Lock]] (Superseded: Restricted DOLS Active Lock)
+- [[_legacy/FMOLS_IMOLS_Failure_For_Interaction_Objects|FMOLS_IMOLS_Failure_For_Interaction_Objects]] (Superseded: Standard FM-OLS/IM-OLS Warning)
+- [[_legacy/Estimator_Status_Ledger_D12V|Estimator_Status_Ledger_D12V]] (Superseded: D12V Estimator Ledger)
+- [[_legacy/Restricted_DOLS_Asymptotic_Rationale_and_Caveats|Restricted_DOLS_Asymptotic_Rationale_and_Caveats]] (Superseded: DOLS Asymptotic Rationale)
+- [[_legacy/A00_BASELINE_INTERACTION_PATCH_REPORT|A00_BASELINE_INTERACTION_PATCH_REPORT]]
+- [[_legacy/A06_VIFSafe_Baseline_MechanizationComparison|A06_VIFSafe_Baseline_MechanizationComparison]]
+- [[_legacy/E01_Specification_Abstract_Benchmark|E01_Specification_Abstract_Benchmark]]
+- [[_legacy/M10_Empirical_Identification_Framework|M10_Empirical_Identification_Framework]]
+- [[_legacy/N02_SuperConsistency|N02_SuperConsistency]]
+- [[_legacy/R02_DOLS_reconstruction_dilemma|R02_DOLS_reconstruction_dilemma]]
+- [[_legacy/R03_super_consistency_mechanics_hinge|R03_super_consistency_mechanics_hinge]]
+- [[_legacy/R04_FMOLS_structural_preservation|R04_FMOLS_structural_preservation]]
+- [[_legacy/R05_LRV_kernel_bandwidth_regime_misalignment|R05_LRV_kernel_bandwidth_regime_misalignment]]
+- [[_legacy/R06_IMOLS_integration_ladder_reconstruction|R06_IMOLS_integration_ladder_reconstruction]]
+- [[_legacy/R09_structural_break_protocol|R09_structural_break_protocol]]
+- [[_legacy/R10_Binding_Specification_Layering_Rule|R10_Binding_Specification_Layering_Rule]]
 
 ## Diagnostic-Only Notes
 
 - [[R07_FGLS_threshold_cointegration_admissibility]]
 - [[R08_threshold_break_diagnostics_to_FGLS]]
 
-## Audit and Validation Notes
+## Historical Audit and Validation Notes (Archived in `_legacy/`)
 
-- [[D12V_ECONOMETRICS_VAULT_AUDIT]]
-- [[D12V_VALIDATION_CHECKS]]
-- [[D12V2_OBSIDIAN_ORGANIZATION_AUDIT]]
-- [[D12V2_VALIDATION_CHECKS]]
-- [[D12V_TERMINAL_DECISION]]
-- [[D12V2_TERMINAL_DECISION]]
+- [[_legacy/D12V_ECONOMETRICS_VAULT_AUDIT|D12V_ECONOMETRICS_VAULT_AUDIT]]
+- [[_legacy/D12V_VALIDATION_CHECKS|D12V_VALIDATION_CHECKS]]
+- [[_legacy/D12V2_OBSIDIAN_ORGANIZATION_AUDIT|D12V2_OBSIDIAN_ORGANIZATION_AUDIT]]
+- [[_legacy/D12V2_VALIDATION_CHECKS|D12V2_VALIDATION_CHECKS]]
+- [[_legacy/D12V_TERMINAL_DECISION|D12V_TERMINAL_DECISION]]
+- [[_legacy/D12V2_TERMINAL_DECISION|D12V2_TERMINAL_DECISION]]
