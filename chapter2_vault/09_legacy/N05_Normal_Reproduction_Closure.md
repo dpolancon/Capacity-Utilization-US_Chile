@@ -1,5 +1,5 @@
 ---
-type: legacy_note
+type: research_note
 status: active
 depends_on: []
 stage_scope: S00
@@ -9,6 +9,9 @@ layer: superseded
 design_role: closure_definition
 scope: chapter2_core
 created: 2026-05-05
+subtype: legacy_note
+blocks: []
+priority: legacy
 ---
 
 # Normal reproduction closure

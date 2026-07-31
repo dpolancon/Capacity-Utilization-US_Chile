@@ -1,0 +1,7 @@
+"diagnostic","statistic","p_value","pass","status"
+"machinery growth excluded from structures equation",NA,NA,NA,"not estimated: stationarity prerequisite fails"
+"structures growth excluded from machinery equation",NA,NA,NA,"not estimated: stationarity prerequisite fails"
+"structures-equation serial correlation",NA,NA,NA,"not estimated: stationarity prerequisite fails"
+"machinery-equation serial correlation",NA,NA,NA,"not estimated: stationarity prerequisite fails"
+"pre-break companion root",NA,NA,NA,"not estimated: stationarity prerequisite fails"
+"post-break companion root",NA,NA,NA,"not estimated: stationarity prerequisite fails"

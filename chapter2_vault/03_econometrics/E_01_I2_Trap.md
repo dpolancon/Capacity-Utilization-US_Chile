@@ -1,10 +1,16 @@
 ---
-type: econometric_protocol
+type: econometrics
 status: active
-depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
 stage_scope: all_stages
 country: US_CL
 last_updated: 2026-07-23
+subtype: econometric_protocol
+blocks: []
+layer: empirics
+scope: chapter2
+priority: reference
 ---
 
 # FRAMEWORK_I2_INTERACTIVE.md

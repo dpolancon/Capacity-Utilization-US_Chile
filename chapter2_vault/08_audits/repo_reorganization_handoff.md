@@ -1,7 +1,10 @@
 ---
-type: handoff_manifest
+type: research_note
 status: active
-depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md, data/metadata/data_provenance_manifest.md, chapter2_vault/03_econometrics/_03_Econometrics_MOC.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
+  - data/metadata/data_provenance_manifest.md
+  - chapter2_vault/03_econometrics/_03_Econometrics_MOC.md
 stage_scope: all_stages
 country: US_CL
 last_updated: 2026-07-23
@@ -11,6 +14,10 @@ tags:
   - chapter2/handoff
   - chapter2/architecture
   - chapter2/multi-repo
+subtype: handoff_manifest
+blocks: []
+layer: archive
+priority: context
 ---
 
 # Repository Reorganization & Multi-Repo Architecture Handoff

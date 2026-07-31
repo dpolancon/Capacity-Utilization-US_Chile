@@ -1,0 +1,7 @@
+"check","passed"
+"WBOP workbook provenance has SHA-256",TRUE
+"Every candidate has an integration verdict",TRUE
+"No model estimated after held capital gate",TRUE
+"Annual events exclude GDP from definition",TRUE
+"No artificial phi, F_avail, or peak-to-peak mu",TRUE
+"Small event sample receives 999-replication bootstrap",TRUE

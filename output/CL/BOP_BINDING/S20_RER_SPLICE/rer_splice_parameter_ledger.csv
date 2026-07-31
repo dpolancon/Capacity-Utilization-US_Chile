@@ -1,0 +1,7 @@
+"parameter","value"
+"annualization_rule","arithmetic mean of 12 monthly index observations"
+"overlap_years","1986-2010"
+"splice_rule","ClioLab <=2010; BCCh rebased >=2011"
+"cliolab_base_value_2003","100"
+"bcch_original_value_2003","104.304166666667"
+"bcch_to_cliolab_rebase_factor","0.958734470498941"

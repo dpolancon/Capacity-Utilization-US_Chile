@@ -1,0 +1,4 @@
+"sample","first_year","last_year","years_in_sample","years_classified","years_with_usable_misalignment","min_external_indicators_available","years_with_all_four_indicators","all_years_accounted"
+"full_1920_2024",1920,2024,105,105,105,2,104,TRUE
+"post_1974_2024",1974,2024,51,51,51,3,50,TRUE
+"pre_1920_1973",1920,1973,54,54,0,2,53,TRUE

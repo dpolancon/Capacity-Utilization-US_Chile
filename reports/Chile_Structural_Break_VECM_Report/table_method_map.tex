@@ -1,0 +1,22 @@
+\begin{table}[h!]
+\centering\scriptsize
+\caption{What the structural-break and cointegration procedures establish}
+\label{tab:method-map}
+\begin{tabular}{p{3.3cm}p{4.6cm}p{5.0cm}}
+\toprule
+\textbf{Procedure} & \textbf{Economic-statistical question} & \textbf{Permitted claim}\\
+\midrule
+Bai--Perron & Where do coefficients in a fitted regression change? & Candidate regression dates; not cointegration \\
+Zivot--Andrews & Does one series reject a unit root after an unknown break? & Integration-order evidence for one series \\
+Gregory--Hansen & Does cointegration appear after one unknown regime change? & One-break cointegration evidence \\
+Kejriwal--Perron & Are coefficients stable in an already cointegrated regression? & Coefficient stability conditional on cointegration \\
+Johansen--Mosconi--Nielsen & What is the rank with known deterministic breaks? & Conditional rank and vector restrictions \\
+L"utkepohl--Saikkonen--Trenkler & What is the rank after one unknown system shift? & Conditional rank with one unknown level shift \\
+Hansen--Johansen & Is an established cointegrating vector recursively constant? & Parameter constancy after rank is established \\
+Phillips--Ouliaris & Does a residual combination reject no cointegration? & Stable cointegration evidence \\
+Lee--Strazicich & Does one series reject a unit root with two admissible breaks? & Break-aware integration-order evidence \\
+\texttt{mbreaks} & How are Bai--Perron statistics and intervals computed? & Implementation, not a separate economic test \\
+\bottomrule
+\multicolumn{3}{p{13.1cm}}{\footnotesize \textbf{Note:} Each procedure concerns a different statistical object. Evidence about a single series, a fitted regression, a cointegrating residual, and system rank cannot be substituted for one another.}
+\end{tabular}
+\end{table}

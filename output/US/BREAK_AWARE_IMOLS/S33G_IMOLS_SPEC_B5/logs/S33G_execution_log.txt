@@ -1,0 +1,43 @@
+[2026-07-31 12:47:45] Step 2 gate (Full_Sample_1929_2024): formal_break_supported [k_NRC=I1_with_break; kappa=I1_with_break; p_kappa=I1_with_break]
+[2026-07-31 12:47:46] T_B* = 1969 (5 yr from theoretical 1974)
+[2026-07-31 12:47:46] Spec B panel: 94 rows, 1931-2024
+[2026-07-31 12:47:46] no-interaction: standardized CN: A=638.06 B=49.5 C=30.022; threshold 30; marked regime Regime_B_Initial_Centered; ALL THREE reported
+[2026-07-31 12:47:46] with-interaction: standardized CN: A=2531.7 B=82.723 C=39.938; threshold 30; marked regime Regime_B_Initial_Centered; ALL THREE reported
+[2026-07-31 12:47:47] 
+[2026-07-31 12:47:47] CENTERING-STABILITY GATE (interaction-class parameters only)
+[2026-07-31 12:47:47]   No   theta_NRC                interaction  [    0.321,     0.371] rel= 0.149 stable=TRUE  <-- GATED
+[2026-07-31 12:47:47]   No   theta_kappa              base         [   -3.130,     1.117] rel= 2.438 stable=FALSE 
+[2026-07-31 12:47:47]   No   beta_pkappa              base         [   -0.807,     0.313] rel= 2.425 stable=FALSE 
+[2026-07-31 12:47:47]   No   beta_omega               base         [   -4.191,     1.606] rel= 2.070 stable=FALSE 
+[2026-07-31 12:47:47]   No   theta_omega_kappa        interaction  [    4.010,     5.693] rel= 0.363 stable=TRUE  <-- GATED
+[2026-07-31 12:47:47]   No   theta_kappa_pkappa       interaction  [    0.655,     1.027] rel= 0.417 stable=TRUE  <-- GATED
+[2026-07-31 12:47:47]   Yes  theta_NRC                interaction  [    0.588,     0.599] rel= 0.018 stable=TRUE  <-- GATED
+[2026-07-31 12:47:47]   Yes  theta_kappa              base         [    0.944,     7.430] rel= 2.077 stable=TRUE  
+[2026-07-31 12:47:47]   Yes  beta_pkappa              base         [   -0.430,     0.221] rel= 2.775 stable=FALSE 
+[2026-07-31 12:47:47]   Yes  beta_omega               base         [  -12.205,    -1.573] rel= 1.487 stable=TRUE  
+[2026-07-31 12:47:47]   Yes  theta_omega_kappa        interaction  [  -13.822,    -9.613] rel= 0.381 stable=TRUE  <-- GATED
+[2026-07-31 12:47:47]   Yes  theta_kappa_pkappa       interaction  [   -0.689,    -0.558] rel= 0.210 stable=TRUE  <-- GATED
+[2026-07-31 12:47:47]   Yes  gamma_1                  base         [  -11.195,     0.677] rel= 2.996 stable=FALSE 
+[2026-07-31 12:47:47]   Yes  theta_kappa_brk          base         [  -10.417,    -1.235] rel= 2.113 stable=TRUE  
+[2026-07-31 12:47:47]   Yes  beta_omega_brk           base         [    0.817,    16.469] rel= 1.772 stable=TRUE  
+[2026-07-31 12:47:47]   Yes  theta_omega_kappa_brk    interaction  [   14.139,    18.427] rel= 0.274 stable=TRUE  <-- GATED
+[2026-07-31 12:47:47] GATE: PASS (7/7 interaction-class parameters sign-stable)
+[2026-07-31 12:47:47] 
+[2026-07-31 12:47:47] SIGN STABILITY ACROSS CENTERING -- B5 vs prior tracks
+[2026-07-31 12:47:47]   split_sample (US_S33D)                     Fordist_1929_1973       int=No  theta_omega_kappa   [   -3.205,    0.550] stable=FALSE
+[2026-07-31 12:47:47]   split_sample (US_S33D)                     Fordist_1929_1973       int=Yes theta_omega_kappa   [  -23.607,   47.794] stable=FALSE
+[2026-07-31 12:47:47]   split_sample (US_S33D)                     Post_Fordist_1974_2024  int=No  theta_omega_kappa   [  -13.090,  -10.266] stable=TRUE
+[2026-07-31 12:47:47]   split_sample (US_S33D)                     Post_Fordist_1974_2024  int=Yes theta_omega_kappa   [  -50.119,  -45.959] stable=TRUE
+[2026-07-31 12:47:47]   split_sample (US_S33D)                     Fordist_1929_1973       int=No  theta_kappa_pkappa  [   -1.788,    1.164] stable=FALSE
+[2026-07-31 12:47:47]   split_sample (US_S33D)                     Fordist_1929_1973       int=Yes theta_kappa_pkappa  [  -11.482,    0.012] stable=FALSE
+[2026-07-31 12:47:47]   split_sample (US_S33D)                     Post_Fordist_1974_2024  int=No  theta_kappa_pkappa  [    1.222,    1.765] stable=TRUE
+[2026-07-31 12:47:47]   split_sample (US_S33D)                     Post_Fordist_1974_2024  int=Yes theta_kappa_pkappa  [    0.463,    0.604] stable=TRUE
+[2026-07-31 12:47:47]   full_sample span-broken (US_S33E)          Full_Sample_1929_2024   int=No  theta_omega_kappa   [   -7.645,    1.249] stable=FALSE
+[2026-07-31 12:47:47]   full_sample span-broken (US_S33E)          Full_Sample_1929_2024   int=Yes theta_omega_kappa   [  -19.600,    5.053] stable=FALSE
+[2026-07-31 12:47:47]   full_sample span-broken (US_S33E)          Full_Sample_1929_2024   int=No  theta_kappa_pkappa  [    0.498,    3.487] stable=TRUE
+[2026-07-31 12:47:47]   full_sample span-broken (US_S33E)          Full_Sample_1929_2024   int=Yes theta_kappa_pkappa  [   -0.744,    2.083] stable=FALSE
+[2026-07-31 12:47:47]   full_sample span-COMPLETE (US_S33G, Spec B5) Full_Sample_1929_2024   int=No  theta_omega_kappa   [    4.010,    5.693] stable=TRUE
+[2026-07-31 12:47:47]   full_sample span-COMPLETE (US_S33G, Spec B5) Full_Sample_1929_2024   int=Yes theta_omega_kappa   [  -13.822,   -9.613] stable=TRUE
+[2026-07-31 12:47:47]   full_sample span-COMPLETE (US_S33G, Spec B5) Full_Sample_1929_2024   int=No  theta_kappa_pkappa  [    0.655,    1.027] stable=TRUE
+[2026-07-31 12:47:47]   full_sample span-COMPLETE (US_S33G, Spec B5) Full_Sample_1929_2024   int=Yes theta_kappa_pkappa  [   -0.689,   -0.558] stable=TRUE
+[2026-07-31 12:47:47] US_S33G complete. 48 coefficient rows; T_B* = 1969; gate PASS; decision: retain_additive_step_control

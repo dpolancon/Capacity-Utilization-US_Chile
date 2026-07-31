@@ -1,0 +1,44 @@
+\begin{landscape}
+\begin{table}[H]
+\centering
+\caption{Specification B Model Taxonomy Comparison Matrix (Spec B1 vs. Spec B2 vs. Spec B3, Initial-State Centering)}
+\label{tab:specB_spec_comparison}
+\small
+\begin{tabular}{p{5.0cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}}
+\toprule
+\multicolumn{7}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}} / S_{y^{\text{NFC}}}$}} \\
+\midrule
+Model & (1) & (2) & (3) & (4) & (5) & (6)  \\
+Specification & Spec B1 & Spec B1 & Spec B2 & Spec B2 & Spec B3 & Spec B3  \\
+Centering Treatment & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St  \\
+\midrule
+$\hat{\theta}_{\text{NRC}}$ & 0.57$^{***}$ & 0.45$^{***}$ & 0.36$^{***}$ & 0.43$^{***}$ & 0.33$^{***}$ & 0.43$^{***}$  \\
+ & {\scriptsize (10.18)} & {\scriptsize (9.35)} & {\scriptsize (4.14)} & {\scriptsize (8.58)} & {\scriptsize (4.62)} & {\scriptsize (11.16)}  \\
+$\hat{\theta}_{\kappa}$ & -3.77 & -6.42 & -10.20$^{***}$ & -5.58 & -7.14$^{***}$ & -1.99  \\
+ & {\scriptsize (-1.27)} & {\scriptsize (-1.26)} & {\scriptsize (-3.27)} & {\scriptsize (-1.15)} & {\scriptsize (-2.59)} & {\scriptsize (-0.43)}  \\
+$\hat{\beta}_{p^{\kappa}}$ & --- & --- & -0.41$^{*}$ & 0.04 & -1.17$^{***}$ & -0.48  \\
+ &  &  & {\scriptsize (-1.93)} & {\scriptsize (0.19)} & {\scriptsize (-3.00)} & {\scriptsize (-0.98)}  \\
+$\hat{\beta}_{\omega}$ & 0.14 & -1.05 & 9.53$^{**}$ & -0.42 & 8.11$^{**}$ & -3.09  \\
+ & {\scriptsize (0.04)} & {\scriptsize (-0.16)} & {\scriptsize (2.30)} & {\scriptsize (-0.06)} & {\scriptsize (2.32)} & {\scriptsize (-0.55)}  \\
+$\hat{\theta}_{\omega \kappa}$ & 7.36 & 11.74 & 18.49$^{***}$ & 10.27 & 15.40$^{***}$ & 5.74  \\
+ & {\scriptsize (1.55)} & {\scriptsize (1.48)} & {\scriptsize (3.62)} & {\scriptsize (1.32)} & {\scriptsize (3.63)} & {\scriptsize (0.84)}  \\
+$\hat{\theta}_{\kappa p^{\kappa}}$ & --- & --- & --- & --- & -1.14$^{**}$ & -0.78  \\
+ &  &  &  &  & {\scriptsize (-2.21)} & {\scriptsize (-1.13)}  \\
+$\boldsymbol{\gamma}' \mathbf{D}_t$ & Yes & No & Yes & No & Yes & No  \\
+\midrule
+\multicolumn{7}{l}{\underline{Cointegration Tests}} \\
+VW Type 2 ($\lambda_2 = 0$) [$H_0$: Coint] & 1.7756 & 0.3068 & 1.4789 & 1.0635 & 2.1825 & 0.2893  \\
+Resid. ADF ($t_{\text{ADF}}$) [$H_0$: No Coint] & -6.32$^{***}$ & -1.69 & -6.46$^{***}$ & -3.84 & -6.32$^{***}$ & -2.97  \\
+Shin LM ($C_{\text{Shin}}$) [$H_0$: Coint] & 0.089 & 4.931 & 0.032 & 0.244 & 0.042 & 0.261  \\
+\midrule
+\multicolumn{7}{l}{\underline{Goodness-of-Fit \& Controls}} \\
+$R_{\text{level}}^2$ & 0.979 & 0.805 & 0.989 & 0.967 & 0.991 & 0.969  \\
+$R_{\text{sum}}^2$ & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000  \\
+$\hat{\sigma}_u$ & 0.166 & 0.497 & 0.125 & 0.205 & 0.112 & 0.200  \\
+Sample Window & Full Sample & Full Sample & Full Sample & Full Sample & Full Sample & Full Sample  \\
+Sample Size ($T$) & 94 & 94 & 94 & 94 & 94 & 94  \\
+\bottomrule
+\multicolumn{7}{p{19.5cm}}{\footnotesize Note: Estimated via Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014). Fixed-$b$ HAR $t$-statistics reported in parentheses underneath point estimates. $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. **Star Reversal Warning:** For the Residual ADF test, significance stars indicate rejection of No Cointegration (supporting cointegration). For the VW Type 2 ($\lambda_2 = 0$) and Shin LM ($C_{\text{Shin}}$) tests, significance stars indicate rejection of Cointegration (indicating non-stationarity / spurious regression). Dependent variable $y_t^{\text{NFC}}$ denotes log real gross value added of the U.S. Non-Financial Corporate (NFC) sector (BEA NIPA Table 1.14). Structural step dummy controls $\boldsymbol{\gamma}' \mathbf{D}_t$ incorporate LOESS-diagnosed inflections on aggregate capital stock at 1933, 1947, 1968, 1982, and 2008.}
+\end{tabular}
+\end{table}
+\end{landscape}

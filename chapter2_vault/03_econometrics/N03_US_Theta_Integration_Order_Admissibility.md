@@ -1,7 +1,8 @@
 ---
-type: econometric_protocol
+type: econometrics
 status: active
-depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
 stage_scope: all_stages
 country: US
 last_updated: 2026-07-23
@@ -10,21 +11,24 @@ design_role: integration_order_admissibility_map
 scope: US_first_layer_theta_recovery
 created: 2026-07-20
 sources:
-- output/S34_pre_regression/us_s34_variable_menu_integration_ledger.csv
-- output/S34_pre_regression/us_s34_interaction_i2_risk_ledger.csv
-- output/S34_pre_regression/us_s34_candidate_level_relation_ledger.csv
-- output/S35_specification_review/us_s35_specification_review_ledger.csv
-- output/S35_specification_review/us_s35_estimator_menu_candidate_ledger.csv
-- output/S34R_B_cpr_realigned_design_gate/csv/S34R_B_repaired_path_admissibility_ledger.csv
-- output/S34R_B_cpr_realigned_design_gate/csv/S34R_B_specification_review_ledger.csv
+  - output/S34_pre_regression/us_s34_variable_menu_integration_ledger.csv
+  - output/S34_pre_regression/us_s34_interaction_i2_risk_ledger.csv
+  - output/S34_pre_regression/us_s34_candidate_level_relation_ledger.csv
+  - output/S35_specification_review/us_s35_specification_review_ledger.csv
+  - output/S35_specification_review/us_s35_estimator_menu_candidate_ledger.csv
+  - output/S34R_B_cpr_realigned_design_gate/csv/S34R_B_repaired_path_admissibility_ledger.csv
+  - output/S34R_B_cpr_realigned_design_gate/csv/S34R_B_specification_review_ledger.csv
 related_to:
-- R_distribution_conditioned_theta_identification
-- Interaction_Term_Integration_Order_Gate
+  - R_distribution_conditioned_theta_identification
+  - Interaction_Term_Integration_Order_Gate
 tags:
-- chapter2/econometrics
-- chapter2/us
-- chapter2/theta
-- chapter2/integration-order
+  - chapter2/econometrics
+  - chapter2/us
+  - chapter2/theta
+  - chapter2/integration-order
+subtype: econometric_protocol
+blocks: []
+priority: reference
 ---
 
 # N03 — U.S. $\theta_t$ Integration-Order Admissibility Map
@@ -81,22 +85,48 @@ Specification $D_5$ changes the coefficient basis and improves the geometry of t
 
 ## 2. Heterogeneous NFC-capital specifications
 
-The heterogeneous route does not place $k_t^{ME}$ and $k_t^{NR}$ side by side as unrestricted level regressors. S34 finds that pair full rank but highly correlated, with a correlation of 0.9944, while the earlier rolling audit records persistent $I(2)$ risk for the component levels. The repaired design therefore uses the nonresidential-capital envelope, $k_t^{NR}$, and, where required, the capital-composition state,
+The heterogeneous route does not place $k_t^{\mathrm{ME}}$ and $k_t^{\mathrm{NR}}$ side by side as unrestricted level regressors. S34 finds that pair full rank but highly correlated, with a correlation of 0.9944, while the earlier rolling audit records persistent $I(2)$ risk for the component levels. The repaired design therefore uses the nonresidential-capital envelope, $k_t^{\mathrm{NR}}$, and, where required, the capital-composition state,
 
 $$
-\tau_t=\log K_t^{ME}-\log K_t^{NR}
+\tau_t=\log K_t^{\mathrm{ME}}-\log K_t^{\mathrm{NR}}.
 $$
 
+The direct nonresidential-capital specification is
 
+$$
+y_t
+=\alpha
++\beta_{\mathrm{NR}}\tilde{k}_t^{\mathrm{NR}}
++\phi\tilde{\omega}_t
++\beta_{\mathrm{NR}\omega}
+\left(\tilde{k}_t^{\mathrm{NR}}\tilde{\omega}_t\right)
++\varepsilon_t.
+\tag{D_6}
+$$
 
-| Specification                                                  | Long-run relation                                                                                                          | Integration and design evidence                                                                                                                         | Status after pre-testing       |
-| -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| $D_6$ — nonresidential-capital interaction                   | $y_t=\alpha+\beta_{NR}\tilde k_t^{NR}+\phi\tilde\omega_t+\beta_{NR\omega}(\tilde k_t^{NR}\tilde\omega_t)+\varepsilon_t$ | The relation passes the repaired gate. The design is full rank, with condition number 1.67, and residual stationarity reaches the 10 percent threshold. | Secondary candidate for S35.   |
-| $D_7$ — residual-centered nonresidential-capital interaction | The same long-run relation as $D_6$, expressed after residual-centering the interaction.                               | The relation passes the repaired gate. The design is full rank, with condition number 1.32, and residual stationarity reaches the 10 percent threshold. | **Leading candidate for S35.** |
-| $D_8$ — composition-conditioned interaction                  | $y_t=\alpha+\theta\tilde k_t^{NR}+\psi\tilde\tau_t+\phi\tilde\omega_t+\lambda(\tilde\tau_t\tilde\omega_t)+\varepsilon_t$ | The relation passes the repaired gate. The design is full rank, with condition number 6.31, and residual stationarity reaches the 10 percent threshold. | Secondary candidate for S35.   |
-| $D_9$ — residual-centered composition interaction            | The same long-run relation as $D_8$, expressed after residual-centering the composition interaction.                   | The relation passes the repaired gate. The design is full rank, with condition number 4.81, and residual stationarity reaches the 10 percent threshold. | **Leading candidate for S35.** |
+The composition-conditioned specification is
 
-Specification $D_7$ estimates a direct nonresidential-capital elasticity conditioned by distribution. Specification $D_9$ tests the distinct claim that distribution conditions the productivity of capital composition, $\psi+\lambda\tilde\omega_t$, while $\theta$ remains the scale elasticity. The two specifications answer different questions and cannot be treated as interchangeable parameterizations.
+$$
+y_t
+=\alpha
++\theta\tilde{k}_t^{\mathrm{NR}}
++\psi\tilde{\tau}_t
++\phi\tilde{\omega}_t
++\lambda\left(\tilde{\tau}_t\tilde{\omega}_t\right)
++\varepsilon_t.
+\tag{D_8}
+$$
+
+Specifications $D_7$ and $D_9$ express $D_6$ and $D_8$, respectively, after residual-centering the relevant interaction.
+
+| Specification | Integration and design evidence | Status after pre-testing |
+|---|---|---|
+| $D_6$ — nonresidential-capital interaction | The relation passes the repaired gate. The design is full rank, with condition number 1.67, and residual stationarity reaches the 10 percent threshold. | Secondary candidate for S35. |
+| $D_7$ — residual-centered nonresidential-capital interaction | The relation passes the repaired gate. The design is full rank, with condition number 1.32, and residual stationarity reaches the 10 percent threshold. | **Leading candidate for S35.** |
+| $D_8$ — composition-conditioned interaction | The relation passes the repaired gate. The design is full rank, with condition number 6.31, and residual stationarity reaches the 10 percent threshold. | Secondary candidate for S35. |
+| $D_9$ — residual-centered composition interaction | The relation passes the repaired gate. The design is full rank, with condition number 4.81, and residual stationarity reaches the 10 percent threshold. | **Leading candidate for S35.** |
+
+Specification $D_7$ estimates a direct nonresidential-capital elasticity conditioned by distribution. Specification $D_9$ tests the distinct claim that distribution conditions the productivity of capital composition, $\psi+\lambda\tilde{\omega}_t$, while $\theta$ remains the scale elasticity. The two specifications answer different questions and cannot be treated as interchangeable parameterizations.
 
 ## 3. Optimal-mechanization proxy and accumulated-path specifications
 
@@ -108,15 +138,28 @@ $$
 
 does not itself constitute an admissible long-run regression. The empirical menu contains several proxies for that sequence:
 
-| Candidate | Relation or construction | Integration evidence | Disposition |
-|---|---|---|---|
-| Distribution-weighted accumulation, $Q_t^\omega$ | $Q_t^\omega=\sum_{s\leq t}\omega_{s-1}\Delta k_s^{cap}$, entering $y_t$ alongside $k_t^{cap}$. | The path is classified as $I(1)$ and passes the initial integration screen. | **Not retained as a leading specification.** Its correlation with $k_t^{cap}$ is 0.99997 and the condition number is 271.7. It measures reduced-form distributional conditioning, not mechanization directly. |
-| Machinery-share accumulation, $Q_t^{MEshare}$ | $Q_t^{MEshare}=\sum_{s\leq t}s_{s-1}^{ME}\Delta k_s^{cap}$, entering $y_t$ alongside $k_t^{cap}$. | The path is classified as $I(1)$ and passes the initial integration screen. | **Held before estimation.** It is an admissible stock-composition surrogate, but its correlation with $k_t^{cap}$ is 0.99796 and the condition number is 31.3. |
-| Observed-mechanization accumulation, $Q_t^q$ | $Q_t^q=\sum_{s\leq t}q_{s-1}\Delta k_s^{cap}$, entering $y_t$ alongside $k_t^{cap}$. | The path carries unresolved $I(2)$ risk. | **Blocked.** It would imply $\theta_t=\beta_K+\beta_Qq_{t-1}$, but the integration evidence does not admit it to the standard specification set. |
-| Upstream mechanization-growth relation | The technique-choice screen relates $q_t$ to $\omega_t$. | The mechanization proxy is $I(1)$, while the wage-share state is bounded and persistent; their level correlation is only 0.112. | **Diagnostic only.** This relation cannot identify $q_t^*$ or a capacity elasticity by itself. |
-| Raw products $k_t^{cap}q_t$, $q_t^2$, and $q_t\omega_t$ | Level interactions and polynomial technique-choice terms. | Each carries unresolved $I(2)$ risk in the standard grid. | **Blocked from the standard specification set.** They require a separately governed polynomial-cointegration design. |
+$$
+\begin{aligned}
+Q_t^\omega
+&=\sum_{s\leq t}\omega_{s-1}\Delta k_s^{\mathrm{cap}},\\[4pt]
+Q_t^{\mathrm{ME\,share}}
+&=\sum_{s\leq t}s_{s-1}^{\mathrm{ME}}\Delta k_s^{\mathrm{cap}},\\[4pt]
+Q_t^q
+&=\sum_{s\leq t}q_{s-1}\Delta k_s^{\mathrm{cap}}.
+\end{aligned}
+$$
 
-The evidence admits $Q_t^\omega$ and $Q_t^{MEshare}$ as $I(1)$ paths at the initial screen, but neither becomes an active specification for estimating $\theta_t$. No observed or optimal-mechanization proxy survives the complete integration and design sequence.
+Each path enters the candidate relation alongside $k_t^{\mathrm{cap}}$.
+
+| Candidate | Integration evidence | Disposition |
+|---|---|---|
+| Distribution-weighted accumulation, $Q_t^\omega$ | The path is classified as $I(1)$ and passes the initial integration screen. | **Not retained as a leading specification.** Its correlation with $k_t^{\mathrm{cap}}$ is 0.99997 and the condition number is 271.7. It measures reduced-form distributional conditioning, not mechanization directly. |
+| Machinery-share accumulation, $Q_t^{\mathrm{ME\,share}}$ | The path is classified as $I(1)$ and passes the initial integration screen. | **Held before estimation.** It is an admissible stock-composition surrogate, but its correlation with $k_t^{\mathrm{cap}}$ is 0.99796 and the condition number is 31.3. |
+| Observed-mechanization accumulation, $Q_t^q$ | The path carries unresolved $I(2)$ risk. | **Blocked.** It would imply $\theta_t=\beta_K+\beta_Qq_{t-1}$, but the integration evidence does not admit it to the standard specification set. |
+| Upstream mechanization-growth relation | The technique-choice screen relates $q_t$ to $\omega_t$. The mechanization proxy is $I(1)$, while the wage-share state is bounded and persistent; their level correlation is only 0.112. | **Diagnostic only.** This relation cannot identify $q_t^*$ or a capacity elasticity by itself. |
+| Raw products $k_t^{\mathrm{cap}}q_t$, $q_t^2$, and $q_t\omega_t$ | Each carries unresolved $I(2)$ risk in the standard grid. | **Blocked from the standard specification set.** They require a separately governed polynomial-cointegration design. |
+
+The evidence admits $Q_t^\omega$ and $Q_t^{\mathrm{ME\,share}}$ as $I(1)$ paths at the initial screen, but neither becomes an active specification for estimating $\theta_t$. No observed or optimal-mechanization proxy survives the complete integration and design sequence.
 
 ## 4. Complete promoted set for estimating $\theta_t$
 
@@ -134,8 +177,8 @@ Each specification passes the integration and design checks recorded by S34R-B, 
 ## 5. Guardrails for later use
 
 - Treat the raw and residual-centered variants as the same economic long-run space only after recording the coefficient back-transformation. The residual-centered interaction coefficient is not, by itself, the primitive marginal elasticity.
-- Do not claim that separate $K^{ME}$ and $K^{NR}$ level coefficients were admitted. The heterogeneous route uses a $K^{NR}$ envelope plus the $K^{ME}/K^{NR}$ composition state because the unrestricted component-level design is fragile.
-- Do not promote $Q_t^\omega$, $Q_t^{MEshare}$, or an upstream relation between $q_t$ and distribution as an active $\theta_t$ specification. The first two stop at the screen or design review, and the third remains diagnostic.
+- Do not claim that separate $K^{\mathrm{ME}}$ and $K^{\mathrm{NR}}$ level coefficients were admitted. The heterogeneous route uses a $K^{\mathrm{NR}}$ envelope plus the $K^{\mathrm{ME}}/K^{\mathrm{NR}}$ composition state because the unrestricted component-level design is fragile.
+- Do not promote $Q_t^\omega$, $Q_t^{\mathrm{ME\,share}}$, or an upstream relation between $q_t$ and distribution as an active $\theta_t$ specification. The first two stop at the screen or design review, and the third remains diagnostic.
 - Do not treat the 10 percent residual-stationarity result as conclusive evidence of cointegration. Coefficient robustness, generated-path checks, and reconstruction validation remain separate requirements.
 
 ## Source ledger

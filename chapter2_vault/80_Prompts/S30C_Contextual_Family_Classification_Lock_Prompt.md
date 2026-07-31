@@ -1,7 +1,8 @@
 ---
-type: prompt_execution_contract
+type: research_note
 status: active
-depends_on: [chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md
 stage_scope: S30
 country: US_CL
 last_updated: 2026-06-22
@@ -17,6 +18,11 @@ upstream_validation: PASS_84
 upstream_decision: AUTHORIZE_S30A_S30B_S30C_S30D_PARALLEL_DATA_CLOSURE_EXECUTION
 parallel_execution: true
 merge_into_main: false
+subtype: prompt_execution_contract
+blocks: []
+layer: implementation
+scope: chapter2
+priority: context
 ---
 
 # S30C Contextual Family Classification Lock Prompt

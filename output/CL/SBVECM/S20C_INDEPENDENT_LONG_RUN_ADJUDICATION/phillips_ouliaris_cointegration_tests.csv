@@ -1,0 +1,7 @@
+"test","statistic","critical_5","rejects_no_cointegration_5"
+"Phillips-Ouliaris Pu none",0.247564103971242,25.9711,FALSE
+"Phillips-Ouliaris Pu constant",0.591982924355556,33.713,FALSE
+"Phillips-Ouliaris Pu trend",4.88803850949133,48.8439,FALSE
+"Phillips-Ouliaris Pz none",4.49767695376402,40.8217,FALSE
+"Phillips-Ouliaris Pz constant",2.34209841658609,55.2202,FALSE
+"Phillips-Ouliaris Pz trend",1.86876934442125,81.3812,FALSE

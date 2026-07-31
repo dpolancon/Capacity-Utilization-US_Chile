@@ -1,0 +1,4 @@
+"inferential_object","bootstrap_required","replications","reason"
+"impact response",FALSE,0,"parameter is not identified, so resampling cannot create admissibility"
+"three-year cumulative response",FALSE,0,"parameter is not identified, so resampling cannot create admissibility"
+"system feedback",FALSE,0,"parameter is not identified, so resampling cannot create admissibility"

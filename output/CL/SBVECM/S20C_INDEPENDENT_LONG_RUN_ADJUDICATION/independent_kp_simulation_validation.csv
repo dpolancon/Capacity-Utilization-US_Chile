@@ -1,0 +1,5 @@
+"simulation","true_breaks","phillips_ouliaris_rejects_no_cointegration","kp_udmax","kp_rejects_stability","selected_dates","maximum_date_error","validation_pass"
+"stable_cointegrated","",TRUE,7.48921162100374,FALSE,"",NA,TRUE
+"one_break_cointegrated","1972",FALSE,20991.6923919898,TRUE,"1971;2009",1,TRUE
+"multiple_breaks_cointegrated","1950;1983",FALSE,37155.0143089064,TRUE,"1949;1984",1,TRUE
+"spurious","",FALSE,63.2445908436781,TRUE,"1946;1979",NA,TRUE

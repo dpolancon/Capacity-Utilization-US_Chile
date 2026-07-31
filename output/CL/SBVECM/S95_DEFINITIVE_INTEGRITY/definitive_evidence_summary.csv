@@ -1,0 +1,6 @@
+"empirical_quantity","identified","result","economic_interpretation","governing_evidence"
+"long-run beta_ME",FALSE,"not identified","the data do not identify a stable long-run structures elasticity with respect to machinery","raw order evidence inconclusive; Phillips-Ouliaris does not reject; no-break Johansen rank is two"
+"changes in long-run beta_ME",FALSE,"not identified","no structural period supports a period-specific cointegrating elasticity","Gregory-Hansen does not reject; independent KP is inapplicable without cointegration"
+"conditional accumulation eta",FALSE,"not identified","growth-rate persistence prevents an elasticity interpretation","d_k_NR held; d_k_ME held"
+"dynamic-relation break",FALSE,"2005 (95% interval 1997--2019)","the conditional growth relation visibly changes, but its coefficients are not admissible elasticities","UDmax 34.064; 5% critical 14.23"
+"LOESS curvature dates",FALSE,"descriptive inflection markers only","changes in the tendency of capital composition, not parametric breaks","LOESS second derivative only"

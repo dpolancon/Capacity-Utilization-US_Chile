@@ -1,67 +1,73 @@
 ---
-type: econometric_protocol
+type: econometrics
 status: active
-depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
 stage_scope: all_stages
 country: US_CL
-last_updated: 2026-07-23
+last_updated: 2026-07-25
 layer: code_stage_design
 created_by: E10V_I2_TRAP_RESOLUTION
+updated_by: CPR_IMOLS_ESTIMATION_PROTOCOL_LOCK
 role: methodological-rationale
 stage: pre-estimation-design
 tags:
-- chapter2/econometrics
-- chapter2/methodological-rationale
-- chapter2/imols-cpr
+  - chapter2/econometrics
+  - chapter2/methodological-rationale
+  - chapter2/imols-cpr
+subtype: econometric_protocol
+blocks: []
+scope: chapter2
+priority: reference
 ---
 
 # E11 — IM-OLS CPR Asymptotic Rationale
 
-This document provides the theoretical and mathematical rationale for using the **Integrated Modified OLS (IM-OLS)** estimator in the Cointegrating Polynomial Regression (CPR) framework to resolve the I(2) trap.
+This document provides the theoretical and mathematical rationale for using the **Integrated Modified OLS (IM-OLS)** estimator in the Cointegrating Polynomial Regression (CPR) framework.
 
 ---
 
-## 1. The I(2) Trap and CPR Convergence Rates
+## 1. Polynomial Cointegration and Convergence Rates
 
-When a cointegrating regression includes the interaction of two $I(1)$ variables, say $\tilde{k}_t$ and $\omega_t$, the product term $(\tilde{k}_t \cdot \omega_t)$ is generally integrated of order two, $I(2)$. Standard linear cointegration theory assumes all regressors are $I(1)$, meaning that standard OLS, FM-OLS, or DOLS formulas are not directly applicable.
+When a cointegrating regression includes the interaction of two $I(1)$ variables, say $\tau_t$ (capital composition) and $\omega_t$ (wage share), the cross-product term $(\tau_t \cdot \omega_{t-1})$ is an $O_p(T)$ degree-2 polynomial CPR regressor. 
 
-Under **Cointegrating Polynomial Regression (CPR)** theory (Wagner & Hong, 2016), the integration properties of the regressors are mixed:
-*   $\tilde{k}_t$ and $\omega_t$ are $I(1)$ processes, converging at rate $T$.
-*   $\hat{u}_t$ (the orthogonalized interaction residual) contains the $I(2)$ stochastic component, converging at rate $T^2$.
-
-The OLS estimator in a CPR is super-consistent. However, the convergence rates differ:
-*   The coefficients on $I(1)$ variables converge at rate $T^{-1}$.
-*   The coefficient on the $I(2)$ interaction term ($d$) converges at the faster rate of $T^{-3/2}$.
+Under **Cointegrating Polynomial Regression (CPR)** theory (Park & Phillips, 2001; Wagner & Hong, 2016):
+*   $\tau_t, \omega_t, k_t$ are linear $I(1)$ processes, whose partial sums scale at $O_p(T^{3/2})$ and whose estimated coefficients converge at rate $T^{-1}$.
+*   The raw cross-product $(\tau_t \cdot \omega_{t-1})$ scales at $O_p(T)$ along the sample, its partial sum scales at $O_p(T^2)$, and its estimated coefficient ($\hat{d}$) converges at the super-consistent rate of $T^{-3/2}$.
 
 ---
 
-## 2. Why DOLS and FM-OLS are Blocked for the CPR Baseline
+## 2. Why FWL Orthogonalization is Forbidden ($S M_X \neq M_{SX} S$)
 
-### 2.1 The DOLS Regressor Explosion
-Dynamic OLS (DOLS) eliminates endogeneity bias by adding leads and lags of first-differenced regressors. For an $I(2)$ interaction term, DOLS would require leads and lags of:
-$$ \Delta(\tilde{k}_t \cdot \omega_t) = \tilde{k}_t \Delta \omega_t + \omega_t \Delta \tilde{k}_t $$
-This introduces high-frequency difference products into the design matrix, causing:
-1.  **Severe Multicollinearity:** The differenced terms are highly correlated with the level terms and their lags, causing near-singularity in the $(X'X)$ matrix.
-2.  **Loss of Degrees of Freedom:** The parameter space expands rapidly, leading to poor finite-sample performance.
+Pre-estimation Frisch-Waugh-Lovell (FWL) orthogonalization of the interaction term against linear components is mathematically invalid. Let $M_X = I - X(X'X)^{-1}X'$ be the projection operator in levels, and $S$ be the partial sum (cumulation) operator.
 
-### 2.2 FM-OLS LRCV Estimation Complexity
-Fully Modified OLS (FM-OLS) corrects for endogeneity and serial correlation by estimating the Long-Run Covariance (LRCV) matrix. When an $I(2)$ regressor is present, the LRCV matrix must capture the spectral density of the $I(2)$ process. This makes the FM-OLS estimator highly sensitive to the choice of kernel function and bandwidth parameter in finite samples, leading to unstable standard errors.
+Because partial summation is not a unitary operator ($S'S \neq I$), **partial summation does not commute with projection**:
+$$ S M_X \neq M_{SX} S $$
+
+Residualizing the interaction in levels prior to taking partial sums alters the limiting Brownian functional:
+$$ B_{z, \text{projected}}(r) = B_z(r) - \left( \int_0^1 B_z D' dr \right) \left( \int_0^1 D D' dr \right)^{-1} D(r) $$
+This changes the distribution of the regressor under the continuous mapping theorem. Standard errors and t-statistics from FWL pre-filtered models are not asymptotically equivalent to native IM-OLS. The raw interaction must enter the full IM-OLS design directly.
 
 ---
 
-## 3. The IM-OLS Resolution
+## 3. Why DOLS and FM-OLS are Blocked
 
-IM-OLS (Vogelsang & Wagner, 2014) bypasses both limitations:
-1.  **No LRCV Estimation:** It corrects for serial correlation and endogeneity through a partial sum (integration) transformation of the entire model, eliminating the need to estimate long-run variance parameters.
-2.  **No Dynamic Augmentation:** It does not require leads or lags of first differences, maintaining a sparse and stable design matrix.
+### 3.1 DOLS Regressor Explosion
+Dynamic OLS (DOLS) eliminates endogeneity by adding leads and lags of first-differenced regressors. For a polynomial cross-product:
+$$ \Delta(\tau_t \cdot \omega_t) = \tau_{t-1} \Delta \omega_t + \omega_{t-1} \Delta \tau_t + \Delta \tau_t \Delta \omega_t $$
+This introduces high-frequency difference products into the design matrix, causing severe multicollinearity and parameter space expansion.
 
-### 3.1 Mathematical Transformation
-The orthogonalized long-run levels relation:
-$$ \tilde{y}_t = a + b \tilde{k}_t + f \omega_t + d \hat{u}_t + e_t $$
-is transformed by taking cumulative sums from $s=1$ to $t$:
-$$ \sum_{s=1}^t \tilde{y}_s = a \cdot t + b \sum_{s=1}^t \tilde{k}_s + f \sum_{s=1}^t \omega_s + d \sum_{s=1}^t \hat{u}_s + \sum_{s=1}^t e_s $$
-By estimating this integrated relation using OLS:
-*   The integrated regressors dominate the integrated noise $\sum e_s$ in the limit.
-*   The endogeneity bias is purged, and the estimated coefficient $\hat{d}$ has a standard normal asymptotic distribution:
-$$ t_{\hat{d}} \xrightarrow{d} \mathcal{N}(0, 1) $$
-This validates standard inference ($t$-tests and Wald tests) using standard normal critical values.
+### 3.2 FM-OLS Path-Dependent Limit Failure
+Fully Modified OLS (FM-OLS) assumes the endogeneity bias is a constant long-run covariance matrix. For the cross-product $\tau_t \omega_{t-1}$, the limiting functional is a product of Brownian motions ($B_\tau B_\omega$), which is not a martingale. Its path-dependent quadratic variation cannot be purged by a constant kernel estimator.
+
+---
+
+## 4. The IM-OLS Resolution
+
+IM-OLS (Vogelsang & Wagner, 2014) purges endogeneity by augmenting the partial sum regression with unaccumulated levels ($k_t, \omega_t$):
+$$ \sum_{s=1}^t y_s = a \cdot t + b \sum_{s=1}^t k_s + \psi \sum_{s=1}^t \tau_s + f \sum_{s=1}^t \omega_s + d \sum_{s=1}^t (\tau_s \omega_{s-1}) + \lambda_k k_t + \lambda_\omega \omega_t + \varepsilon_t $$
+
+*   The nuisance levels ($\lambda_k k_t, \lambda_\omega \omega_t$) absorb endogeneity without dynamic lead/lag augmentation.
+*   The rate normalization matrix $R_T = \operatorname{diag}(T^{1/2}, T, T, T, T^{3/2})$ separates exponents asymptotically.
+*   Invariance across centering choices (Uncentered Main vs. Initial-State Robustness) is governed by [[N11_Centering_Protocol_Three_Regime]].
+

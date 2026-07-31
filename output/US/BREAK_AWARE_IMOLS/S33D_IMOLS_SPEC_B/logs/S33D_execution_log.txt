@@ -1,0 +1,27 @@
+[2026-07-31 13:41:26] Step 2 gate read from C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/BREAK_AWARE_IMOLS/S33B_LEE_STRAZICICH/csv/integration_order_verdict.csv (18 rows)
+[2026-07-31 13:41:26] Spec B panel: 94 rows, 1931-2024
+[2026-07-31 13:41:27] Fordist Era (1929-1973): gate formal_break_supported [k_NRC=I1_with_break; kappa=I1_with_break; p_kappa=I1_with_break]
+[2026-07-31 13:41:27]   B1 no-interaction: standardized CN: A=309.91 B=23.88 C=15.149; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:27]   B1 with-interaction: standardized CN: A=344.08 B=26.53 C=19.579; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:27]   B2 no-interaction: standardized CN: A=882.45 B=28.604 C=15.483; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:27]   B2 with-interaction: standardized CN: A=15738 B=127.83 C=71.549; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:27]   B3 no-interaction: standardized CN: A=1289.9 B=82.234 C=19.468; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:28]   B3 with-interaction: standardized CN: A=17876 B=468.24 C=90.981; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:28]   B4 no-interaction: standardized CN: A=561.5 B=21.183 C=16.148; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:28]   B4 with-interaction: standardized CN: A=2709.5 B=383.27 C=60.353; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:28] Post-Fordist Era (1974-2024): gate exploratory_break_route [k_NRC=I1_with_break; kappa=persistent_I2_risk; p_kappa=I1_with_break]
+[2026-07-31 13:41:28]   B1 no-interaction: standardized CN: A=440.5 B=35.76 C=24.186; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:28]   B1 with-interaction: standardized CN: A=460.73 B=38.629 C=26.36; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:28]   B2 no-interaction: standardized CN: A=896.91 B=38.797 C=26.042; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:28]   B2 with-interaction: standardized CN: A=8738.6 B=275.09 C=150.39; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:28]   B3 no-interaction: standardized CN: A=1176.4 B=42.937 C=30.481; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:29]   B3 with-interaction: standardized CN: A=10087 B=463.23 C=306.58; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:29]   B4 no-interaction: standardized CN: A=460.57 B=33.603 C=26.769; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:29]   B4 with-interaction: standardized CN: A=9248 B=454.72 C=299.31; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:30]   B3->B4 Fordist_1929_1973       int=No  CN    82.23 ->    21.18 (clears CN<=30)  corr(kappa, kappa*omega)=-0.2392
+[2026-07-31 13:41:30]   B3->B4 Fordist_1929_1973       int=Yes CN   468.24 ->   383.27 (still above CN=30)  corr(kappa, kappa*omega)=-0.2392
+[2026-07-31 13:41:30]   B3->B4 Post_Fordist_1974_2024  int=No  CN    42.94 ->    33.60 (still above CN=30)  corr(kappa, kappa*omega)=-0.9335
+[2026-07-31 13:41:30]   B3->B4 Post_Fordist_1974_2024  int=Yes CN   463.23 ->   454.72 (still above CN=30)  corr(kappa, kappa*omega)=-0.9335
+[2026-07-31 13:41:30] Starting Specification B Combinatorics Grid (16 models per window x 3 regimes)...
+[2026-07-31 13:41:36] US_S33D complete. 342 coefficient rows; B3 decisions: Fordist_1929_1973 retain_additive_step_control; Post_Fordist_1974_2024 retain_additive_step_control
+[2026-07-31 13:41:36] All four S0* stages complete. Ledgers under C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/BREAK_AWARE_IMOLS

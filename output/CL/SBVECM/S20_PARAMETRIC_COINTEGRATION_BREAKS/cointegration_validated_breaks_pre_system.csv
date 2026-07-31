@@ -1,0 +1,4 @@
+"candidate_year","in_existing_parametric_set","in_kp_selected_set","kp_stability_rejects_5","gregory_hansen_cointegration_rejects_5","confidence_intervals_bounded","confidence_intervals_distinct","pre_system_validated","paper_status"
+1945,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,"candidate only: break-aware cointegration not established"
+1971,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,"candidate only: break-aware cointegration not established"
+1989,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,"candidate only: break-aware cointegration not established"

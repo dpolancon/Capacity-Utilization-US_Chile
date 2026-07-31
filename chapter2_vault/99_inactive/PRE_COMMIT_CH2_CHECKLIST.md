@@ -1,10 +1,16 @@
 ---
-type: inactive_archive
-status: inactive
+type: research_note
+status: archived
 depends_on: []
 stage_scope: none
 country: US_CL
 last_updated: 2026-05-05
+subtype: inactive_archive
+status_detail: inactive
+blocks: []
+layer: archive
+scope: chapter2
+priority: legacy
 ---
 
 # Chapter 2 pre-commit checklist

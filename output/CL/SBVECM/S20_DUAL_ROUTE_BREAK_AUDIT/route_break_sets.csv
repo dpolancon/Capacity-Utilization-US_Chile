@@ -1,0 +1,3 @@
+"break_route","break_years","n_breaks","selection_basis"
+"LOESS","1933;2017",2,"LOESS(kappa) second-derivative zero-crossings only"
+"PARAMETRIC","1945;1971;1989",3,"Bai-Perron, Zivot-Andrews, Gregory-Hansen, cajolst only"

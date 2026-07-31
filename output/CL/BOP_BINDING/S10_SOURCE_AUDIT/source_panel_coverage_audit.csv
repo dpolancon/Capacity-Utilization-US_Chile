@@ -1,0 +1,16 @@
+"variable","source","unit","base","role","first_year","last_year","observations","missing","passed"
+"GDP_real_2003_CLP","Perez-Eyzaguirre","million CLP","2003 prices","raw",1920,2024,105,0,TRUE
+"imports_CIF_real_2003_CLP","Perez-Eyzaguirre","million CLP","2003 prices","raw",1920,2024,105,0,TRUE
+"investment_total_real_2003_CLP","Perez-Eyzaguirre","million CLP","2003 prices","raw",1920,2024,105,0,TRUE
+"profit_share","distr_19202024","ratio","base-year-free","raw",1920,2024,105,0,TRUE
+"wage_share","distr_19202024","ratio","base-year-free","raw",1920,2024,105,0,TRUE
+"K_ME_gross_2003_CLP","K-Stock-Harmonization","million CLP","2003 prices","raw",1920,2024,105,0,TRUE
+"K_NR_gross_2003_CLP","K-Stock-Harmonization","million CLP","2003 prices","raw",1920,2024,105,0,TRUE
+"RER_cliolab_2003","ClioLab PUC 4.2.2","index","2003=100","raw",1920,2010,91,14,TRUE
+"RER_bcch_1986_annual_preliminary","BCCh F073.TCR.IND.199101.M","index","1986 average=100","raw annualized",1986,2024,39,66,TRUE
+"gross_operating_surplus_2003_CLP","constructed","million CLP","2003 prices","derived",1920,2024,105,0,TRUE
+"non_reinvested_surplus_2003_CLP","constructed","million CLP","2003 prices","derived",1920,2024,105,0,TRUE
+"log_imports","constructed","log level","2003 prices","derived",1920,2024,105,0,TRUE
+"log_K_ME_gross","constructed","log level","2003 prices","derived",1920,2024,105,0,TRUE
+"log_non_reinvested_surplus","constructed","log level","2003 prices","derived",1920,2024,105,0,TRUE
+"import_propensity","constructed","ratio","base-year-free","derived",1920,2024,105,0,TRUE

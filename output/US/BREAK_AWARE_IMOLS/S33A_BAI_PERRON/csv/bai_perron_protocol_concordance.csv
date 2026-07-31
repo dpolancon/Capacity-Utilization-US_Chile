@@ -1,0 +1,16 @@
+"spec","window","protocol_date","protocol_source","nearest_bp_estimate","nearest_route","nearest_series","year_distance","supported_within_2yr","n_bp_estimates_in_window"
+"Spec_A","Fordist_1929_1973",1933,"S01 Sec.2 Step 1: candidate slope breaks at 1933 and 1947; S02 Stage 2A agrees",1939,"univariate_mean","d_k_cap",6,FALSE,2
+"Spec_A","Fordist_1929_1973",1947,"S01 Sec.2 Step 1: candidate slope breaks at 1933 and 1947; S02 Stage 2A agrees",1942,"system_equation","d_y+d_k_cap+d_omega",5,FALSE,2
+"Spec_A","Post_Fordist_1974_2024",1982,"S01 Sec.2 Step 1: 1982, 2000, 2008 (S02 Stage 2A names 1982 and 2008 only)",1981,"univariate_mean","d_k_cap",1,TRUE,4
+"Spec_A","Post_Fordist_1974_2024",2000,"S01 Sec.2 Step 1: 1982, 2000, 2008 (S02 Stage 2A names 1982 and 2008 only)",2000,"system_equation","d_y+d_k_cap+d_omega",0,TRUE,4
+"Spec_A","Post_Fordist_1974_2024",2008,"S01 Sec.2 Step 1: 1982, 2000, 2008 (S02 Stage 2A names 1982 and 2008 only)",2010,"system_equation","d_y+d_k_cap+d_omega",2,TRUE,4
+"Spec_B","Full_Sample_1929_2024",1933,"S02 Stage 2A: global break points at 1933, 1947, 1968, 1982, 2008",1945,"univariate_mean","d_p_kappa",12,FALSE,3
+"Spec_B","Full_Sample_1929_2024",1947,"S02 Stage 2A: global break points at 1933, 1947, 1968, 1982, 2008",1945,"univariate_mean","d_p_kappa",2,TRUE,3
+"Spec_B","Full_Sample_1929_2024",1968,"S02 Stage 2A: global break points at 1933, 1947, 1968, 1982, 2008",1945,"univariate_mean","d_p_kappa",23,FALSE,3
+"Spec_B","Full_Sample_1929_2024",1982,"S02 Stage 2A: global break points at 1933, 1947, 1968, 1982, 2008",1995,"univariate_mean","d_p_kappa",13,FALSE,3
+"Spec_B","Full_Sample_1929_2024",2008,"S02 Stage 2A: global break points at 1933, 1947, 1968, 1982, 2008",2008,"univariate_mean","d_p_kappa",0,TRUE,3
+"Spec_B","Fordist_1929_1973",1933,"S01 Sec.2 Step 1: candidate slope breaks at 1933 and 1947; S02 Stage 2A agrees",1943,"system_equation","d_y+d_k_NRC+d_kappa+d_omega+d_p_kappa",10,FALSE,2
+"Spec_B","Fordist_1929_1973",1947,"S01 Sec.2 Step 1: candidate slope breaks at 1933 and 1947; S02 Stage 2A agrees",1945,"univariate_mean","d_p_kappa",2,TRUE,2
+"Spec_B","Post_Fordist_1974_2024",1982,"S01 Sec.2 Step 1: 1982, 2000, 2008 (S02 Stage 2A names 1982 and 2008 only)",1981,"univariate_mean","d_k_NRC",1,TRUE,5
+"Spec_B","Post_Fordist_1974_2024",2000,"S01 Sec.2 Step 1: 1982, 2000, 2008 (S02 Stage 2A names 1982 and 2008 only)",1998,"system_equation","d_y+d_k_NRC+d_kappa+d_omega+d_p_kappa",2,TRUE,5
+"Spec_B","Post_Fordist_1974_2024",2008,"S01 Sec.2 Step 1: 1982, 2000, 2008 (S02 Stage 2A names 1982 and 2008 only)",1998,"system_equation","d_y+d_k_NRC+d_kappa+d_omega+d_p_kappa",10,FALSE,5

@@ -1,0 +1,42 @@
+[2026-07-31 14:45:32] Step 2 gate (Full_Sample_1929_2024): formal_break_supported [k_NRC=I1_with_break; kappa=I1_with_break; p_kappa=I1_with_break]
+[2026-07-31 14:45:32] T_B* = 1969
+[2026-07-31 14:45:32] Spec B panel: 94 rows, 1931-2024
+[2026-07-31 14:45:32] A1/not_applicable/int=No: standardized CN: A=563.73 B=27.335 C=21.174; threshold 30; marked regime Regime_B_Initial_Centered; ALL THREE reported
+[2026-07-31 14:45:32] A1/not_applicable/int=Yes: standardized CN: A=2233.2 B=76.347 C=34.98; threshold 30; marked regime Regime_B_Initial_Centered; ALL THREE reported
+[2026-07-31 14:45:32] A2/not_applicable/int=No: standardized CN: A=603.4 B=41.757 C=29.134; threshold 30; marked regime Regime_B_Initial_Centered; ALL THREE reported
+[2026-07-31 14:45:32] A2/not_applicable/int=Yes: standardized CN: A=2316.7 B=78.783 C=39.127; threshold 30; marked regime Regime_B_Initial_Centered; ALL THREE reported
+[2026-07-31 14:45:32] A3/contemporaneous_sec32/int=No: standardized CN: A=638.06 B=49.5 C=30.022; threshold 30; marked regime Regime_B_Initial_Centered; ALL THREE reported
+[2026-07-31 14:45:33] A3/contemporaneous_sec32/int=Yes: standardized CN: A=2531.7 B=82.723 C=39.938; threshold 30; marked regime Regime_B_Initial_Centered; ALL THREE reported
+[2026-07-31 14:45:33] A3/lagged_a06/int=No: standardized CN: A=639.97 B=56.95 C=34.532; threshold 30; marked regime Regime_B_Initial_Centered; ALL THREE reported
+[2026-07-31 14:45:33] A3/lagged_a06/int=Yes: standardized CN: A=2560.8 B=140.21 C=44.219; threshold 30; marked regime Regime_B_Initial_Centered; ALL THREE reported
+[2026-07-31 14:45:33] 
+[2026-07-31 14:45:33] CENTERING GATE (interaction-class): 23/24 sign-stable -> FAIL
+[2026-07-31 14:45:33] 
+[2026-07-31 14:45:33] VERDICT LEDGER
+[2026-07-31 14:45:33]   Sign of theta_kappa_pkappa, timing=contemporaneous_sec32, break-interaction=No
+[2026-07-31 14:45:33]       favours: A06 line 72 as literally written (theta_kappa_pkappa > 0)
+[2026-07-31 14:45:33]   Sign of theta_kappa_pkappa, timing=contemporaneous_sec32, break-interaction=Yes
+[2026-07-31 14:45:33]       favours: Sec.3.2 (theta_kappa_pkappa < 0)
+[2026-07-31 14:45:33]   Sign of theta_kappa_pkappa, timing=lagged_a06, break-interaction=No
+[2026-07-31 14:45:33]       favours: A06 line 72 as literally written (theta_kappa_pkappa > 0)
+[2026-07-31 14:45:33]   Sign of theta_kappa_pkappa, timing=lagged_a06, break-interaction=Yes
+[2026-07-31 14:45:33]       favours: indeterminate (sign not stable across centering)
+[2026-07-31 14:45:33]   Which price timing fits better (break-interaction=No)
+[2026-07-31 14:45:33]       favours: A06 timing (lagged)
+[2026-07-31 14:45:33]   Which price timing fits better (break-interaction=Yes)
+[2026-07-31 14:45:33]       favours: Sec.3.2 timing (contemporaneous)
+[2026-07-31 14:45:33]   Marginal contribution of the ADDITIVE price control A1->A2 (break-interaction=No)
+[2026-07-31 14:45:33]       favours: neither (rung test, not a sign test)
+[2026-07-31 14:45:33]   Marginal contribution of the INTERACTION A2->A3 contemporaneous (break-interaction=No)
+[2026-07-31 14:45:33]       favours: neither (rung test, not a sign test)
+[2026-07-31 14:45:33]   Marginal contribution of the ADDITIVE price control A1->A2 (break-interaction=Yes)
+[2026-07-31 14:45:33]       favours: neither (rung test, not a sign test)
+[2026-07-31 14:45:33]   Marginal contribution of the INTERACTION A2->A3 contemporaneous (break-interaction=Yes)
+[2026-07-31 14:45:33]       favours: neither (rung test, not a sign test)
+[2026-07-31 14:45:33]   Are the two drafts comparing the same object?
+[2026-07-31 14:45:33]       favours: neither -- the objects differ
+[2026-07-31 14:45:33]   Is A06 internally consistent at the price channel?
+[2026-07-31 14:45:33]       favours: unresolved within A06 itself
+[2026-07-31 14:45:33]   Open route not taken here
+[2026-07-31 14:45:33]       favours: neither (not estimated)
+[2026-07-31 14:45:33] US_S33I complete. 174 coefficient rows, 24 model rows, 13 verdict rows.

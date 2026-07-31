@@ -1,0 +1,43 @@
+\begin{landscape}
+\begin{table}[H]
+\centering
+\caption{Specification B Macroeconomic Sub-Window Diagnostic Sensitivity Matrix (Initial-State Centering)}
+\label{tab:specB_diagnostics}
+\small
+\begin{tabular}{p{5.0cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}
+\toprule
+\multicolumn{9}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}} / S_{y^{\text{NFC}}}$}} \\
+\midrule
+Model & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)  \\
+Centering Treatment & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St  \\
+\midrule
+$\hat{\theta}_{\text{NRC}}$ & 4.84$^{**}$ & 3.48$^{**}$ & 0.31 & 0.35$^{**}$ & 0.54$^{***}$ & 0.56$^{***}$ & 0.27 & 0.27  \\
+ & {\scriptsize (2.02)} & {\scriptsize (1.96)} & {\scriptsize (1.54)} & {\scriptsize (2.10)} & {\scriptsize (6.80)} & {\scriptsize (3.56)} & {\scriptsize (0.57)} & {\scriptsize (0.57)}  \\
+$\hat{\theta}_{\kappa}$ & 121.14$^{***}$ & 139.03$^{***}$ & 20.59$^{***}$ & 20.01$^{***}$ & 14.53$^{***}$ & 21.35 & -11.43 & -11.43  \\
+ & {\scriptsize (3.55)} & {\scriptsize (4.72)} & {\scriptsize (3.25)} & {\scriptsize (3.12)} & {\scriptsize (38.73)} & {\scriptsize (1.09)} & {\scriptsize (-0.68)} & {\scriptsize (-0.68)}  \\
+$\hat{\beta}_{p^{\kappa}}$ & -63.44$^{*}$ & -42.96 & -3.13 & -2.81 & 0.47$^{*}$ & 1.39 & 1.37 & 1.37  \\
+ & {\scriptsize (-1.67)} & {\scriptsize (-1.50)} & {\scriptsize (-1.34)} & {\scriptsize (-1.28)} & {\scriptsize (1.73)} & {\scriptsize (0.96)} & {\scriptsize (0.61)} & {\scriptsize (0.61)}  \\
+$\hat{\beta}_{\omega}$ & -147.29$^{*}$ & -204.39$^{***}$ & -19.21$^{***}$ & -18.87$^{***}$ & -6.42$^{***}$ & -12.21 & 13.43 & 13.43  \\
+ & {\scriptsize (-1.74)} & {\scriptsize (-3.67)} & {\scriptsize (-4.54)} & {\scriptsize (-4.44)} & {\scriptsize (-9.70)} & {\scriptsize (-0.97)} & {\scriptsize (0.74)} & {\scriptsize (0.74)}  \\
+$\hat{\theta}_{\omega \kappa}$ & -138.11$^{**}$ & -184.15$^{***}$ & -23.14$^{***}$ & -22.69$^{***}$ & -24.43$^{***}$ & -38.41 & 20.70 & 20.70  \\
+ & {\scriptsize (-2.00)} & {\scriptsize (-3.91)} & {\scriptsize (-4.28)} & {\scriptsize (-4.12)} & {\scriptsize (-86.08)} & {\scriptsize (-1.11)} & {\scriptsize (0.71)} & {\scriptsize (0.71)}  \\
+$\hat{\theta}_{\kappa p^{\kappa}}$ & -56.77$^{*}$ & -38.36 & -4.99 & -4.75 & 1.55$^{**}$ & 3.03 & 2.99 & 2.99  \\
+ & {\scriptsize (-1.69)} & {\scriptsize (-1.53)} & {\scriptsize (-1.55)} & {\scriptsize (-1.44)} & {\scriptsize (2.44)} & {\scriptsize (0.65)} & {\scriptsize (0.72)} & {\scriptsize (0.72)}  \\
+$\boldsymbol{\gamma}' \mathbf{D}_t$ & Yes & No & Yes & No & Yes & No & Yes & No  \\
+\midrule
+\multicolumn{9}{l}{\underline{Cointegration Tests}} \\
+VW Type 2 ($\lambda_2 = 0$) [$H_0$: Coint] & 0.3003 & 0.4204 & 43.0872 & 12.2502 & 29.6294 & 7.7781 & 57.3369 & 57.3369  \\
+Resid. ADF ($t_{\text{ADF}}$) [$H_0$: No Coint] & -8.34$^{***}$ & -6.70$^{***}$ & -5.11$^{***}$ & -5.11$^{***}$ & -4.99$^{***}$ & -3.22 & -6.39$^{***}$ & -6.39$^{***}$  \\
+Shin LM ($C_{\text{Shin}}$) [$H_0$: Coint] & 0.000 & 0.001 & 0.024 & 0.021 & 0.031 & 0.061 & 0.004 & 0.004  \\
+\midrule
+\multicolumn{9}{l}{\underline{Goodness-of-Fit \& Controls}} \\
+$R_{\text{level}}^2$ & 1.000 & 0.999 & 0.996 & 0.996 & 0.992 & 0.984 & 1.000 & 1.000  \\
+$R_{\text{sum}}^2$ & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000  \\
+$\hat{\sigma}_u$ & 0.007 & 0.010 & 0.028 & 0.028 & 0.040 & 0.054 & 0.003 & 0.003  \\
+Sample Window & Interwar \& WWII & Interwar \& WWII & Golden Age & Golden Age & Neoliberal Restructuring & Neoliberal Restructuring & Post-GFC Stagnation & Post-GFC Stagnation  \\
+Sample Size ($T$) & 16 & 16 & 27 & 27 & 35 & 35 & 16 & 16  \\
+\bottomrule
+\multicolumn{9}{p{19.5cm}}{\footnotesize Note: Estimated via Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014). Fixed-$b$ HAR $t$-statistics reported in parentheses underneath point estimates. $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. **Star Reversal Warning:** For the Residual ADF test, significance stars indicate rejection of No Cointegration (supporting cointegration). For the VW Type 2 ($\lambda_2 = 0$) and Shin LM ($C_{\text{Shin}}$) tests, significance stars indicate rejection of Cointegration (indicating non-stationarity / spurious regression). Dependent variable $y_t^{\text{NFC}}$ denotes log real gross value added of the U.S. Non-Financial Corporate (NFC) sector (BEA NIPA Table 1.14). Structural step dummy controls $\boldsymbol{\gamma}' \mathbf{D}_t$ incorporate LOESS-diagnosed inflections on aggregate capital stock at 1933, 1947, 1968, 1982, and 2008.}
+\end{tabular}
+\end{table}
+\end{landscape}

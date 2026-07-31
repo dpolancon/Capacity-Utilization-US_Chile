@@ -1,0 +1,6 @@
+"check","maximum_absolute_residual","passed","note"
+"wage_plus_profit_share",0,TRUE,"accounting identity tolerance only"
+"NRS_identity",0,TRUE,"constructed in the same expression audited here"
+"NRS_positive_for_logs",473221.091063432,TRUE,"required for log NRS"
+"model_core_complete_1920_2024",0,TRUE,"required for both split samples"
+"gross_capital_not_net_capital",929141586.11342,TRUE,"legacy import VECM uses gross machinery capital"

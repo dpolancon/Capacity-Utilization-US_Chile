@@ -1,0 +1,4 @@
+"sample","model_id","specification","promotion_status","misalignment_interpretable","misalignment_verdict","import_alpha","import_alpha_p","imports_adjust_5","import_normalization_share","normalization_reliable"
+"full_1920_2024","full_1920_2024__M3_plus_rer__const__K3","M3_plus_rer","promoted",TRUE,"imports error-correct and the vector normalizes on imports",-0.314831721832362,4.65032119370319e-06,TRUE,0.746873274811691,TRUE
+"pre_1920_1973","pre_1920_1973__M3_plus_rer__const__K2","M3_plus_rer","promoted",FALSE,"imports neither error-correct nor carry the normalization: the relation is not an import requirement in this sample",-0.0051310974838339,0.479368523086102,FALSE,0.0416540041087588,FALSE
+"post_1974_2024","post_1974_2024__M3_plus_rer__const__K2","M3_plus_rer","promoted",TRUE,"imports error-correct and the vector normalizes on imports",-0.685499737303051,0.00173933249354315,TRUE,0.807619969356993,TRUE

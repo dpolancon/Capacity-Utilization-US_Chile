@@ -1,0 +1,8 @@
+"check","pass","detail"
+"canonical observations",TRUE,"105"
+"mbreaks version",TRUE,"1.0.1"
+"published KP critical values",TRUE,"Category (a), Case 1; 15 percent trim; one changing I(1) coefficient"
+"independent statistic recorded",TRUE,"50.118"
+"cointegration prerequisite enforced",TRUE,"cointegration prerequisite=FALSE"
+"no beta before prerequisites",TRUE,"not run: integration, cointegration, and rank prerequisites fail"
+"simulation validation",TRUE,""

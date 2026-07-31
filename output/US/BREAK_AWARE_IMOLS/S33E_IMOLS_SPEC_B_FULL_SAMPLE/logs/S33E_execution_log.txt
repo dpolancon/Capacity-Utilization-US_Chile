@@ -1,0 +1,20 @@
+[2026-07-31 13:42:10] Step 2 gate (Full_Sample_1929_2024): formal_break_supported [k_NRC=I1_with_break; kappa=I1_with_break; p_kappa=I1_with_break]
+[2026-07-31 13:42:10] T_B* = 1969 (5 yr from theoretical 1974), 95% CI [1945, 1994]
+[2026-07-31 13:42:10] Spec B panel: 94 rows, 1931-2024
+[2026-07-31 13:42:11] no-interaction: standardized CN: A=265.72 B=32.418 C=28.447; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:42:11] with-interaction: standardized CN: A=1137 B=76.811 C=36.5; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:42:12]   split_sample (US_S33D)   Fordist_1929_1973      int=No  T=43  CN=    28.60  theta=    1.84 (t=  0.39, SE=   4.71)
+[2026-07-31 13:42:12]   split_sample (US_S33D)   Fordist_1929_1973      int=Yes T=43  CN=   127.83  theta= -136.11 (t= -2.31, SE=  58.95)
+[2026-07-31 13:42:12]   split_sample (US_S33D)   Fordist_1929_1973      int=No  T=43  CN=    82.23  theta=   -2.12 (t= -0.50, SE=   4.24)
+[2026-07-31 13:42:12]   split_sample (US_S33D)   Fordist_1929_1973      int=Yes T=43  CN=   468.24  theta= -174.37 (t= -1.76, SE=  98.85)
+[2026-07-31 13:42:12]   split_sample (US_S33D)   Fordist_1929_1973      int=No  T=43  CN=    21.18  theta=    3.50 (t=  0.60, SE=   5.83)
+[2026-07-31 13:42:12]   split_sample (US_S33D)   Fordist_1929_1973      int=Yes T=43  CN=   383.27  theta= -143.53 (t= -2.31, SE=  62.05)
+[2026-07-31 13:42:12]   split_sample (US_S33D)   Post_Fordist_1974_2024 int=No  T=51  CN=    38.80  theta=   -3.71 (t= -0.70, SE=   5.29)
+[2026-07-31 13:42:12]   split_sample (US_S33D)   Post_Fordist_1974_2024 int=Yes T=51  CN=   275.09  theta=  -17.82 (t= -2.19, SE=   8.12)
+[2026-07-31 13:42:12]   split_sample (US_S33D)   Post_Fordist_1974_2024 int=No  T=51  CN=    42.94  theta=  -13.09 (t= -1.97, SE=   6.63)
+[2026-07-31 13:42:12]   split_sample (US_S33D)   Post_Fordist_1974_2024 int=Yes T=51  CN=   463.23  theta=  -45.21 (t= -2.40, SE=  18.87)
+[2026-07-31 13:42:12]   split_sample (US_S33D)   Post_Fordist_1974_2024 int=No  T=51  CN=    33.60  theta=  -12.30 (t= -1.80, SE=   6.83)
+[2026-07-31 13:42:12]   split_sample (US_S33D)   Post_Fordist_1974_2024 int=Yes T=51  CN=   454.72  theta=  -53.00 (t= -2.66, SE=  19.90)
+[2026-07-31 13:42:12]   full_sample (US_S33E)    Full_Sample_1929_2024  int=No  T=94  CN=    32.42  theta=   -5.25 (t= -0.97, SE=   5.43)
+[2026-07-31 13:42:12]   full_sample (US_S33E)    Full_Sample_1929_2024  int=Yes T=94  CN=    76.81  theta=  -15.06 (t= -2.18, SE=   6.92)
+[2026-07-31 13:42:12] US_S33E complete. 42 coefficient rows; T_B* = 1969; decision: retain_additive_step_control

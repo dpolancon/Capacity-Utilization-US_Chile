@@ -1,0 +1,23 @@
+\begin{table}[h!]
+\centering
+\small
+\caption{U.S. Baseline IM-OLS CPR Estimation Matrix Across Long Accumulation Eras \& Diagnostic Sub-Windows (Specification A, NFC GVA, Regime B)}
+\label{tab:baseline_imols_windows_matrix}
+\begin{tabular}{p{4.5cm} p{1.3cm} p{0.6cm} p{1.6cm} p{1.6cm} p{2.2cm} p{1.8cm}}
+\toprule
+\textbf{Accumulation Era / Window} & \textbf{Years} & \textbf{N} & \textbf{Scale $\hat{b}$} & \textbf{Dist $\hat{f}$} & \textbf{Inter $\hat{d}$} & \textbf{Fixed-$b$ HAR $t$-stat} \\
+\midrule
+\multicolumn{7}{l}{\textbf{\textit{Primary Long Accumulation Eras (with $\ln K^{\text{cap}}$ LOESS Step Dummies)}} } \\
+Long Fordist Era 1929 1973 & 1929-1973 & 43 & 12.67 & 1.04 & \textbf{-10.89}$^{**}$ & -3.75 \\
+Long Post Fordist Era 1974 2024 & 1974-2024 & 51 & 14.76 & 0.83 & \textbf{-2.02} & -0.84 \\
+Full Century 1929 2024 & 1929-2024 & 94 & 12.58 & 0.77 & \textbf{-8.40}$^{*}$ & -2.39 \\
+\midrule
+\multicolumn{7}{l}{\textbf{\textit{Diagnostic Sub-Window Comparisons}} } \\
+Diagnostic Interwar WWII 1929 1946 & 1929-1946 & 16 & 12.66 & 2.41 & \textbf{-10.26} & -- \\
+Diagnostic Fordist GoldenAge 1947 1973 & 1947-1973 & 27 & 13.44 & 0.55 & \textbf{-1.11} & -0.56 \\
+Diagnostic Neoliberal Restruct 1974 2008 & 1974-2008 & 35 & 14.81 & 0.88 & \textbf{-8.82}$^{**}$ & -5.98 \\
+Diagnostic Post GFC Stagnation 2009 2024 & 2009-2024 & 16 & 15.89 & 0.58 & \textbf{0.47} & 0.41 \\
+\bottomrule
+\multicolumn{7}{p{15.2cm}}{\footnotesize Note: Specification A: $y_t = \alpha + b k^{\text{cap}}_t + f \omega_t + d (k^{\text{cap}}_t \cdot \omega_{t-1}) + D_{\text{dummies}} + u_t$ estimated via IM-OLS under Initial-State Centering (Regime B). All coefficients rounded to max 2 decimal places. Step dummies ($D_{1933}, D_{1947}, D_{1968}, D_{1982}, D_{2008}$) derived from LOESS 2nd derivative inflections on $\ln K^{\text{cap}}$. Fixed-$b$ HAR standard errors applied. $^*p<0.05, ^{**}p<0.01$.}
+\end{tabular}
+\end{table}

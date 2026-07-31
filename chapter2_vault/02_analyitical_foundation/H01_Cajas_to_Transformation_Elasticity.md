@@ -1,7 +1,8 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-06-01
@@ -9,19 +10,26 @@ layer: analytical_foundation
 design_role: mechanism_hinge
 scope: chapter2_core
 related_to:
-- A01_Extensive_Accumulation
-- A02_Intensive_Accumulation
-- A03_TransformationElasticity_Two-CapitalCapacityComposition
-- A04_PeripheralTransformationElasticity
-- N00_Mechanization_Analytical_References
-- N05_Normal_Reproduction_Closure
-- R05_Frontier_of_Not_Becoming
-- R06_Regime_Gating_and_Diagnostic_Ladder
+  - A01_Extensive_Accumulation
+  - A02_Intensive_Accumulation
+  - A03_TransformationElasticity_Two-CapitalCapacityComposition
+  - A04_PeripheralTransformationElasticity
+  - N00_Mechanization_Analytical_References
+  - N05_Normal_Reproduction_Closure
+  - R05_Frontier_of_Not_Becoming
+  - R06_Regime_Gating_and_Diagnostic_Ladder
+  - E12_QStar_Demotion_Lock
 created: 2026-05-05
-updated: 2026-05-27
+updated: 2026-07-23
+subtype: analytical_foundation
+blocks: []
+priority: reference
 ---
 
 # H01: From Mechanization Choice to Transformation Elasticity
+
+> [!CAUTION]
+> **Empirical Proxy Demotion**: While $q^*$ provides the theoretical intensive-margin benchmark, empirical accumulated $Q^*$ paths are formally blocked from estimating $\theta_t$ per [[E12_QStar_Demotion_Lock]].
 
 ## Core Claim
 Mechanization determines how accumulation is transformed into productive capacity growth. Grounded in Cajas (2024) as an induced, cost-minimizing choice under distributive pressure ($\pi = 1-\omega$), this note bridges the tactical optimization to the composition-weighted transformation elasticity $\theta^N$. The traditional productivity-mechanization gap formulation is explicitly recovered as the intensive-margin limiting case when capital accumulation becomes machinery-dominated.

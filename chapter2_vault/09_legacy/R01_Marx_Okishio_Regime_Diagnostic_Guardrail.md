@@ -1,5 +1,5 @@
 ---
-type: legacy_note
+type: research_note
 status: active
 depends_on: []
 stage_scope: S00
@@ -9,9 +9,12 @@ layer: analytical_foundation
 design_role: interpretation_rule
 scope: chapter2_core
 related_to:
-- N03_Two_Corridor_Transformation_Elasticity
-- M10_Empirical_Identification_Framework
-- N01_CapacityUtilization_StructuralObject
+  - N03_Two_Corridor_Transformation_Elasticity
+  - M10_Empirical_Identification_Framework
+  - N01_CapacityUtilization_StructuralObject
+subtype: legacy_note
+blocks: []
+priority: legacy
 ---
 
 # Marx–Okishio closure logic

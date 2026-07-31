@@ -1,0 +1,132 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{placeins}
+\usepackage{pdflscape}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{longtable}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=blue!70!black,
+    urlcolor=blue!70!black
+}
+
+\captionsetup[figure]{position=top, labelfont=bf, font=small, skip=4pt}
+\captionsetup[table]{position=top, labelfont=bf, font=small, skip=4pt}
+
+\title{\textbf{DISSERTATION PROGRESS REPORT \& ONLINE APPENDIX} \\[0.5em] \Large \textbf{Chapter 2: Empirical Grounding, Capacity Reconstruction, and the Overaccumulation Regime (Specification A)}}
+\author{\textbf{Diego Polanco} \\ Department of Economics, UMass Amherst \\ \textit{Executive Progress Report for Michael Ash and Dissertation Committee}}
+\date{July 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent \textbf{EXECUTIVE SUMMARY:} This progress report provides the complete, paper-facing empirical appendix for **Specification A (Single Aggregate Capital Model)** of Chapter 2. I evaluate the full range of 168 estimated IM-OLS cointegrating regressions across four master comparative matrices comparing specifications **With Step Controls ($\boldsymbol{\Lambda}\mathbf{D}_t' = \text{Yes}$)** against **Without Step Controls ($\boldsymbol{\Lambda}\mathbf{D}_t' = \text{No}$)**: (1) **Full Sample Baseline Matrix (1929--2024)** across Centering Treatments; (2) **Accumulation Eras Comparative Matrix** comparing Fordism (1929--1973) vs. Post-Fordism (1974--2024); (3) **Multi-Wage Share Robustness Matrix** comparing Baseline NFC GVA, Corporate GVA, Shaikh-Tonak Tier 1, and Shaikh-Tonak Tier 2 wage measures; and (4) **Macroeconomic Sub-Window Diagnostic Matrix** evaluating Interwar \& WWII, Golden Age, Neoliberal Restructuring, and Post-GFC Stagnation subwindows. Core empirical findings: (1) The state-dependent profit squeeze parameter ($\hat{\theta}_1 \approx -10.4$) is stable across dummy configurations under Initial-State centering, while step controls eliminate residual variance ($\hat{\sigma}_u$ drops from 0.66 to 0.15) and resolve residual non-stationarity; (2) Reconstructed capacity utilization anchored at $\mu_{1973} = 1.00$ recovers the post-war expansion peak and Great Recession contraction; and (3) The total transformation elasticity ($\theta_t < 1.0$) confirms that the U.S. economy has operated within a persistent capital overaccumulation regime for nearly a century.
+\end{abstract}
+
+\FloatBarrier
+\section{Methodological Setup \& Data Boundaries}
+
+In Chapter 2's theoretical framework, productive capacity ($Y^p_t$) is not a neutral physical constant. It reflects historical capital accumulation conditioned by distributional conflict between labor and capital.
+
+\paragraph{Sectoral Boundaries and Sample Limits}
+National accounting consistency requires strict clarity regarding sectoral boundaries:
+\begin{itemize}
+    \item \textbf{Observed Aggregate Output ($Y_t$)}: We measure aggregate output using \textit{Total Corporate Gross Value Added} ($Y_{\text{CORP}}$) or aggregate real output ($Y_t$) from NIPA accounts, capturing aggregate demand realization across corporate capitalism.
+    \item \textbf{Productive Capital Stock ($K^{\text{cap}}$) and Capacity ($Y^p_t$)}: We construct productive capital strictly from \textit{Non-Financial Corporate} (NFC) fixed assets ($K_{\text{NFC}}^{\text{ME}} + K_{\text{NFC}}^{\text{NRC}}$). This isolates physical plant structures and equipment in non-financial production from financial sector asset noise.
+    \item \textbf{Estimation Sample (1929--2024)}: BEA Fixed Assets capital stock series ($K^{\text{ME}}, K^{\text{NRC}}, K^{\text{cap}}$) span 1925--2025 (101 years). However, BEA NIPA Table 1.14 corporate value added ($y_t^{\text{NFC}}$) and distribution ($\omega_{t-1}$) begin in 1929. Consequently, our estimation sample covers **1929--2024 ($T = 94$ years)**.
+\end{itemize}
+
+We construct capacity utilization ($\mu_t = Y_t / Y^p_t$) as observed corporate output relative to estimated non-financial productive capacity. Nonresidential structures ($K^{\text{NRC}}$) represent sunk, long-horizon plant capacity ($\frac{\partial K^{\text{NRC}}}{\partial \omega} = 0$), whereas tactical machinery investment ($K^{\text{ME}}$) responds to distributional conflict ($\omega_{t-1}$).
+
+Before running parametric estimations, we map raw historical trajectories to ground the data in institutional transitions. Figure~\ref{fig:aggregation_dimensionality} plots log aggregate capital ($k^{\text{cap}}$) alongside structures ($k^{\text{NRC}}$) and the composition residual ($\kappa_t = k^{\text{ME}}_t - k^{\text{NRC}}_t$).
+
+\begin{figure}[h!]
+\centering
+\caption{U.S. Capital Stock Components and Composition Drift (1925--2025). The upper panel displays log aggregate capital ($k^{\text{cap}}$, navy) vs. log structures ($k^{\text{NRC}}$, firebrick). The lower panel tracks the composition residual, capturing mechanization drift ($\kappa_t = k^{\text{ME}}_t - k^{\text{NRC}}_t$) across historical accumulation regimes.}
+\label{fig:aggregation_dimensionality}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_aggregation_dimensionality.png}
+\end{figure}
+
+A non-parametric LOESS trend of $\ln K^{\text{cap}}$ reveals four structural inflections (zero-crossings of the second derivative, $\frac{d^2 \hat{k}^{\text{cap}}_t}{dt^2} = 0$). We use these inflections to construct historical step controls ($D_{1933}, D_{1947}, D_{1974}, D_{2008}$), corresponding to the New Deal plant mobilization, post-war Fordist conversion, late-Fordist profit squeeze, and post-GFC stagnation.
+
+\FloatBarrier
+\section{Empirical Results Matrix \& Robustness}
+
+We estimate the baseline single-aggregate capital specification:
+\begin{equation}
+y_t^{\text{NFC}} = \alpha + \beta_{\text{Kcap}} k_t^{\text{cap}} + \phi_{\omega} \omega_{t-1} + \theta_1 (k_t^{\text{cap}} \cdot \omega_{t-1}) + \boldsymbol{\Lambda} \mathbf{D}_t' + u_t,
+\end{equation}
+using Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014) with Fixed-$b$ HAR inference. To provide a complete paper-facing appendix, we present all estimated regressions across four master comparative matrices evaluating specifications with step controls ($\boldsymbol{\Lambda}\mathbf{D}_t' = \text{Yes}$) against specifications without step controls ($\boldsymbol{\Lambda}\mathbf{D}_t' = \text{No}$).
+
+Figure~\ref{fig:imols_forest} displays point estimates and 95\% Fixed-$b$ HAR confidence intervals across all 168 model combinations. Figure~\ref{fig:imols_eras} compares the interaction parameter $\hat{\theta}_1$ across primary accumulation eras.
+
+\begin{figure}[h!]
+\centering
+\caption{Specification A Interaction Parameter ($\hat{\theta}_1$) Forest Plot across Wage Share Measures, Centering Treatments, and Dummy Control Configurations (1929--2024).}
+\label{fig:imols_forest}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_imols_interaction_sensitivity.png}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\caption{Accumulation Era Parameter Comparison: Long Fordist vs. Long Post-Fordist Eras. Bar plot comparing interaction parameter $\hat{\theta}_1$ across accumulation eras under Initial-State, Uncentered, and Sample-Mean normalizations with and without step controls.}
+\label{fig:imols_eras}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_imols_era_comparison.png}
+\end{figure}
+
+\input{table_baseline_imols_specA_fullsample.tex}
+
+\input{table_baseline_imols_specA_eras.tex}
+
+\input{table_baseline_imols_specA_wageshares.tex}
+
+\input{table_baseline_imols_specA_diagnostics.tex}
+
+\FloatBarrier
+\section{Summary of Key Empirical Findings \& Takeaways}
+
+The empirical estimations establish four key findings for the dissertation committee:
+
+\begin{enumerate}
+    \item \textbf{State-Dependent Profit Squeeze Stability}: Under Initial-State centering, the interaction parameter $\hat{\theta}_1$ remains negative and statistically significant ($\hat{\theta}_1 = -10.64^{***}$ with step controls vs. $-10.16^{**}$ without step controls). Higher wage shares suppress the capacity-generating effect of capital accumulation.
+    \item \textbf{Variance Reduction and Cointegration Hygiene}: Step controls ($\mathbf{D}_{1933}, \mathbf{D}_{1947}, \mathbf{D}_{1974}, \mathbf{D}_{2008}$) leave point estimates stable while reducing residual variance ($\hat{\sigma}_u$ drops from 0.662 to 0.155) and eliminating non-stationary residual drift ($C_{\text{Shin}}$ drops from 4.657 to 0.082).
+    \item \textbf{Capacity Utilization Level Reconstruction}: Anchoring level scale at $t^* = 1973$ ($\mu_{1973} = 1.00$) recovers an empirically consistent utilization path ($\hat{\mu}_t$). Utilization peaks during WWII mobilization ($\hat{\mu}_{1944} \approx 1.15$), remains stable during post-war Fordism ($\hat{\mu} \in [0.90, 1.00]$), and experiences a secular decline under neoliberalism, reaching a trough during the Great Recession ($\hat{\mu}_{2009} \approx 0.70$).
+    \item \textbf{Persistent Capital Overaccumulation Regime}: The total transformation elasticity $\theta_t = \hat{\beta}_{\text{Kcap}} + \hat{\theta}_1 \omega_{t-1}$ remains bounded strictly below 1.00 throughout 1929--2024 ($\theta_t \in [0.65, 0.95]$). The U.S. capitalist economy has operated within a structural overaccumulation regime ($\theta_t < 1.0$) for nearly a century.
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\caption{Reconstructed U.S. Capacity Utilization ($\hat{\mu}_t$, 1929--2024). Level-anchored at 1973 FRB Survey Peak Benchmark ($\mu_{1973} = 1.00$) under Specification A IM-OLS.}
+\label{fig:reconstructed_utilization}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_reconstructed_capacity_utilization_1973.png}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\caption{Comparative Reconstructed U.S. Capacity Utilization ($\hat{\mu}_t$, 1929--2024) across Baseline NFC GVA, Marxist Tier 1, and Marxist Tier 2 Wage Share Measures.}
+\label{fig:reconstructed_utilization_comp}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_reconstructed_capacity_utilization_1973_comparative.png}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\caption{State-Dependent Transformation Elasticity Trajectory ($\theta_t$, 1929--2024). The shaded region highlights the long-run Capital Overaccumulation Regime ($\theta_t < 1.0$).}
+\label{fig:theta_timeseries}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_transformation_elasticity_theta_timeseries.png}
+\end{figure}
+
+\FloatBarrier
+\end{document}

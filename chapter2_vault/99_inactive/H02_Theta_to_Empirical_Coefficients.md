@@ -1,5 +1,5 @@
 ---
-type: inactive_archive
+type: research_note
 status: active
 depends_on: []
 stage_scope: none
@@ -9,10 +9,13 @@ layer: analytical_foundation
 design_role: synthesis_hinge
 scope: chapter2_core
 related_to:
-- N04_Composition_of_Accumulation_and_Transformation
-- R03_Interpretation_of_Theta_as_Contradictory_Object
-- R04_What_is_Identified_vs_Reconstructed
+  - N04_Composition_of_Accumulation_and_Transformation
+  - R03_Interpretation_of_Theta_as_Contradictory_Object
+  - R04_What_is_Identified_vs_Reconstructed
 created: 2026-05-05
+subtype: inactive_archive
+blocks: []
+priority: legacy
 ---
 
 # From machinery transformation to aggregate θ

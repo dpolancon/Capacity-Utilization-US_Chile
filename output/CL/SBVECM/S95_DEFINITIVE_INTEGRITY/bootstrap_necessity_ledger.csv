@@ -1,0 +1,11 @@
+"inferential_object","strictly_necessary_now","reason","replications"
+"independent KP stability",FALSE,"published integrated-regressor critical values are available",0
+"stable full-sample cointegration",FALSE,"analytic Phillips-Ouliaris and Johansen evidence is decisive",0
+"estimated-break VECM rank",FALSE,"not eligible because no cointegration-validated break exists",0
+"long-run beta_ME",FALSE,"coefficient is not identified and is not estimated",0
+"accumulation break tests",FALSE,"Bai-Perron analytic critical values apply to the stationary dynamic regression",0
+"break-date confidence interval",FALSE,"mbreaks supplies analytic break-date intervals",0
+"growth-rate stationarity",FALSE,"urca and Lee-Strazicich analytic reference values are used",0
+"impact response",FALSE,"parameter is not identified, so resampling cannot create admissibility",0
+"three-year cumulative response",FALSE,"parameter is not identified, so resampling cannot create admissibility",0
+"system feedback",FALSE,"parameter is not identified, so resampling cannot create admissibility",0

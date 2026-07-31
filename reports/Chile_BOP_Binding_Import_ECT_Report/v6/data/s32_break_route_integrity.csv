@@ -1,0 +1,6 @@
+"check","passed","detail"
+"za_ledger",TRUE,"Zivot-Andrews intercept and break-in-trend results recorded"
+"bai_perron_ledger",TRUE,"Bai-Perron candidate dates recorded"
+"gh_route_ledger",TRUE,"full and both split samples have selected break-aware routes"
+"ardl_fallback_attempted",TRUE,"ARDL fallback attempted for each sample"
+"machinery_route_always_estimated",TRUE,"formal and exploratory statuses are both retained"

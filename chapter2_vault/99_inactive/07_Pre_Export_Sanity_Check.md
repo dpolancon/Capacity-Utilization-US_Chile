@@ -1,6 +1,6 @@
 ---
-type: inactive_archive
-status: inactive
+type: research_note
+status: archived
 depends_on: []
 stage_scope: none
 country: US_CL
@@ -8,8 +8,14 @@ last_updated: 2026-04-25
 title: Pre-Export Sanity Check
 project: Normal utilization and the fractured firm
 tags:
-- sanity-check
-- export
+  - sanity-check
+  - export
+subtype: inactive_archive
+status_detail: inactive
+blocks: []
+layer: archive
+scope: chapter2
+priority: legacy
 ---
 
 # Pre-export sanity check

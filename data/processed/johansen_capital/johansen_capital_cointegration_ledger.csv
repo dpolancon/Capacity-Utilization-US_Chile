@@ -1,0 +1,7 @@
+"Country","Window","Start_Year","End_Year","N","Trace_r0_stat","Trace_r0_cv5","MaxEig_r0_stat","MaxEig_r0_cv5","Gamma_Hat","Rank_Decision"
+"US","Fordist Golden Age",1947,1973,27,17.43,25.32,12.97,18.96,-1.3276,"r = 0 (No Cointegration)"
+"US","Neoliberal Restructuring",1974,2007,34,17.26,25.32,11.16,18.96,-1.4472,"r = 0 (No Cointegration)"
+"US","Full Sample (1947-2021)",1947,2021,75,21.3,25.32,15.71,18.96,17.8891,"r = 0 (No Cointegration)"
+"Chile","ISI Developmentalist Era",1920,1973,54,28.29,25.32,16.88,18.96,4.3258,"r = 1 (Cointegrated)"
+"Chile","Neoliberal Transition & Export Model",1974,2024,37,32.4,25.32,23.25,18.96,1.4084,"r = 1 (Cointegrated)"
+"Chile","Full Sample (1920-2024)",1920,2024,91,21.11,25.32,16.11,18.96,1.4383,"r = 0 (No Cointegration)"

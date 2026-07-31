@@ -1,0 +1,53 @@
+% reports/US_SpecificationB_IMOLS_Capital_Disaggregation_Report/tables/table_specB_combinatorics.tex
+\begin{table}[h!]
+\centering
+\caption{Specification B Structural Break Shift Combinatorics Grid (Regime B)}
+\label{tab:specB_combinatorics}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccccl}
+\toprule
+Model & $\theta_{\text{NRC},\text{brk}}$ & $\theta_{\kappa,\text{brk}}$ & $\theta_{\omega\kappa,\text{brk}}$ & $\theta_{\kappa p^\kappa,\text{brk}}$ & CN & $\hat{\sigma}_u$ & Wald $F$ ($p$) & Adjudication \\
+\midrule
+\multicolumn{9}{l}{\textbf{Panel A: Fordist Era (1929--1973; $T_B^* = 1947$)}} \\
+SpecB-0 & No & No & No & No & 90.40 & 0.0446 & 0.52 (0.478) & Baseline (Level Only) \\
+SpecB-1 & Yes & No & No & No & 98.04 & 0.0444 & 0.34 (0.568) & Convert to Level \\
+SpecB-2 & No & Yes & No & No & 121.84 & 0.0434 & 2.34 (0.141) & Collinear \\
+SpecB-3 & Yes & Yes & No & No & 170.07 & 0.0435 & 2.23 (0.151) & Collinear \\
+SpecB-4 & No & No & Yes & No & 99.48 & 0.0430 & 2.83 (0.081) & Convert to Level \\
+SpecB-5 & Yes & No & Yes & No & 105.86 & 0.0428 & 2.23 (0.134) & Collinear \\
+SpecB-6 & No & Yes & Yes & No & 133.98 & 0.0433 & 1.54 (0.239) & Collinear \\
+SpecB-7 & Yes & Yes & Yes & No & 193.46 & 0.0431 & 2.10 (0.151) & Collinear \\
+SpecB-8 & No & No & No & Yes & 153.13 & 0.0418 & 2.62 (0.120) & Collinear \\
+SpecB-9 & Yes & No & No & Yes & 233.86 & 0.0387 & 9.56 (0.006) & Collinear \\
+SpecB-10 & No & Yes & No & Yes & 357.11 & 0.0410 & 7.29 (0.014) & Collinear \\
+SpecB-11 & Yes & Yes & No & Yes & 386.44 & 0.0367 & 18.39 (0.000) & Collinear \\
+SpecB-12 & No & No & Yes & Yes & 156.63 & 0.0420 & 2.15 (0.142) & Collinear \\
+SpecB-13 & Yes & No & Yes & Yes & 258.29 & 0.0383 & 7.73 (0.004) & Collinear \\
+SpecB-14 & No & Yes & Yes & Yes & 361.44 & 0.0409 & 5.21 (0.016) & Collinear \\
+SpecB-15 & Yes & Yes & Yes & Yes & 394.66 & 0.0372 & 9.84 (0.002) & Collinear \\
+\midrule
+\multicolumn{9}{l}{\textbf{Panel B: Post-Fordist Era (1974--2024; $T_B^* = 2008$)}} \\
+SpecB-0 & No & No & No & No & 45.87 & 0.0341 & 3.82 (0.060) & Baseline (Level Only) \\
+SpecB-1 & Yes & No & No & No & 180.35 & 0.0327 & 8.62 (0.006) & Collinear \\
+SpecB-2 & No & Yes & No & No & 48.46 & 0.0344 & 3.50 (0.071) & Convert to Level \\
+SpecB-3 & Yes & Yes & No & No & 200.64 & 0.0312 & 9.68 (0.004) & Collinear \\
+SpecB-4 & No & No & Yes & No & 49.60 & 0.0334 & 2.43 (0.105) & Convert to Level \\
+SpecB-5 & Yes & No & Yes & No & 262.02 & 0.0310 & 4.65 (0.018) & Collinear \\
+SpecB-6 & No & Yes & Yes & No & 82.48 & 0.0277 & 7.01 (0.003) & \textbf{Retain} \\
+SpecB-7 & Yes & Yes & Yes & No & 341.44 & 0.0278 & 6.39 (0.006) & Collinear \\
+SpecB-8 & No & No & No & Yes & 55.40 & 0.0345 & 4.04 (0.053) & Convert to Level \\
+SpecB-9 & Yes & No & No & Yes & 234.64 & 0.0313 & 8.78 (0.006) & Collinear \\
+SpecB-10 & No & Yes & No & Yes & 151.06 & 0.0290 & 11.93 (0.002) & Collinear \\
+SpecB-11 & Yes & Yes & No & Yes & 498.81 & 0.0293 & 13.31 (0.001) & Collinear \\
+SpecB-12 & No & No & Yes & Yes & 127.07 & 0.0287 & 4.89 (0.015) & Collinear \\
+SpecB-13 & Yes & No & Yes & Yes & 283.71 & 0.0271 & 5.70 (0.009) & Collinear \\
+SpecB-14 & No & Yes & Yes & Yes & 230.69 & 0.0251 & 6.26 (0.006) & Collinear \\
+SpecB-15 & Yes & Yes & Yes & Yes & 520.27 & 0.0254 & 6.63 (0.005) & Collinear \\
+\bottomrule
+\end{tabular}%
+}
+\vspace{4pt}
+\begin{minipage}{\textwidth}
+\footnotesize Note: Estimations run under Regime B (Initial-State Centering). Shin LM and residual ADF tests clear the cointegration gates for all reported models (all $C_{\text{Shin}} < 0.095$). Wald test $F$-statistic and $p$-value evaluate $H_0: \theta_{\text{main}} = 0 \text{ AND } \theta_{\text{brk}} = 0$ for the primary mechanization choice wage squeeze interaction hypothesis ($\theta_{\omega\kappa}$ and $\theta_{\omega\kappa,\text{brk}}$).
+\end{minipage}
+\end{table}

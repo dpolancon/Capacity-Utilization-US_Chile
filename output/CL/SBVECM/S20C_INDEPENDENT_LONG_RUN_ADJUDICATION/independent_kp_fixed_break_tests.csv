@@ -1,0 +1,4 @@
+"breaks_tested","statistic","critical_5","rejects_stability_5","implementation"
+1,50.1178274260105,12.11,TRUE,"mbreaks 1.0.1 statistic; Kejriwal-Perron critical value"
+2,27.6534106342913,9.96,TRUE,"mbreaks 1.0.1 statistic; Kejriwal-Perron critical value"
+3,31.9569090109447,8.6,TRUE,"mbreaks 1.0.1 statistic; Kejriwal-Perron critical value"

@@ -1,7 +1,8 @@
 ---
-type: code_implementation_memo
-status: superseded
-depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+type: code_governance
+status: deprecated
+depends_on:
+  - chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md
 stage_scope: S40
 country: US
 last_updated: 2026-06-10
@@ -40,15 +41,19 @@ s50_activation_allowed: false
 created: 2026-05-14
 updated: 2026-06-08
 related_to:
-- C05-FIGURE_PROTOCOL
-- US_S40_Restricted_B1_Reconstruction_Contract
-- C01-US_00_MEMO_RECYCLING
-- C03-REPO_STRUCTURE
-- C04-US_S30_STABILITY_PROTOCOL
-- D03_capacity_utilization_level_anchor_pinch_year_protocol
-- M10_Empirical_Identification_Framework
-- R01_residual_vs_structural_identification
-- R09_structural_break_protocol
+  - C05-FIGURE_PROTOCOL
+  - US_S40_Restricted_B1_Reconstruction_Contract
+  - C01-US_00_MEMO_RECYCLING
+  - C03-REPO_STRUCTURE
+  - C04-US_S30_STABILITY_PROTOCOL
+  - D03_capacity_utilization_level_anchor_pinch_year_protocol
+  - M10_Empirical_Identification_Framework
+  - R01_residual_vs_structural_identification
+  - R09_structural_break_protocol
+subtype: code_implementation_memo
+status_detail: superseded
+blocks: []
+priority: reference
 ---
 
 # US S40 Review and Figures Contract

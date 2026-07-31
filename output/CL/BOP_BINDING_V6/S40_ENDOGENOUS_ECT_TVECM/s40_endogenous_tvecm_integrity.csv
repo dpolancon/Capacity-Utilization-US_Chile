@@ -1,0 +1,6 @@
+"check","passed","detail"
+"three_samples",TRUE,"full, pre-1974, and post-1974 models attempted"
+"negative_ect_signal_defined",TRUE,"negative ECT and lower-ECT regime are kept as separate fields"
+"bootstrap_count_recorded",TRUE,"the configured bootstrap count is recorded"
+"primary_joint_estimator",TRUE,"the bivariate joint beta/threshold estimator is the headline route"
+"three_regime_gate_recorded",TRUE,"three-regime robustness is conditional on regime-size diagnostics"

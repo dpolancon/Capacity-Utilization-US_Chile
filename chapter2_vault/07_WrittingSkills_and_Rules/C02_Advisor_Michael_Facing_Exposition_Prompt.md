@@ -1,10 +1,16 @@
 ---
-type: writing_rule
+type: research_note
 status: active
-depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
 stage_scope: none
 country: US_CL
 last_updated: 2026-06-02
+subtype: writing_rule
+blocks: []
+layer: design
+scope: chapter2
+priority: reference
 ---
 
 # C02 — Advisor / Michael-Facing Exposition Prompt

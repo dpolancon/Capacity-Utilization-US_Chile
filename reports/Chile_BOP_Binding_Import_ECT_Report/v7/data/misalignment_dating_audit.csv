@@ -1,0 +1,4 @@
+"sample","offset","matched_years","max_abs_deviation","exact_match","dating_status"
+"full_1920_2024",0,105,1.15428500091497e-14,TRUE,"dated_by_deviation_year_no_correction"
+"pre_1920_1973",0,54,3.5171865420125e-13,TRUE,"dated_by_deviation_year_no_correction"
+"post_1974_2024",0,51,6.38378239159465e-15,TRUE,"dated_by_deviation_year_no_correction"

@@ -1,7 +1,8 @@
 ---
-type: code_implementation_memo
-status: superseded
-depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+type: code_governance
+status: deprecated
+depends_on:
+  - chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md
 stage_scope: all_stages
 country: US_CL
 last_updated: 2026-06-10
@@ -12,12 +13,16 @@ scope: chapter2_results_repo
 created: 2026-06-01
 updated: 2026-06-08
 related_to:
-- A00_Aggregate_Transformation_Benchmark
-- A03_TransformationElasticity_Two-CapitalCapacityComposition
-- A04_PeripheralTransformationElasticity
-- M10_Empirical_Identification_Framework
-- D03_capacity_utilization_level_anchor_pinch_year_protocol
-- A00_DATA_MEASUREMENT_ALIGNMENT_REPORT
+  - A00_Aggregate_Transformation_Benchmark
+  - A03_TransformationElasticity_Two-CapitalCapacityComposition
+  - A04_PeripheralTransformationElasticity
+  - M10_Empirical_Identification_Framework
+  - D03_capacity_utilization_level_anchor_pinch_year_protocol
+  - A00_DATA_MEASUREMENT_ALIGNMENT_REPORT
+subtype: code_implementation_memo
+status_detail: superseded
+blocks: []
+priority: reference
 ---
 
 # A00 Code Implementation Alignment Report

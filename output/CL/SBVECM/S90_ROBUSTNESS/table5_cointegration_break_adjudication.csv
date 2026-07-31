@@ -1,0 +1,7 @@
+"test","candidate_dates","statistic","critical_5","rejects_5","permitted_claim"
+"KP sup-Wald, 1 break(s)","1934",6.82284544275758,12.11,FALSE,"coefficient instability conditional on a cointegrated regression"
+"KP sup-Wald, 2 break(s)","1934;1983",4.16933979746956,9.96,FALSE,"coefficient instability conditional on a cointegrated regression"
+"KP sup-Wald, 3 break(s)","1934;1949;1983",2.68687569239101,8.6,FALSE,"coefficient instability conditional on a cointegrated regression"
+"Gregory-Hansen level","1979",-3.64713018290112,-4.61,FALSE,"one-break cointegration against the null of no cointegration"
+"Gregory-Hansen trend","1940",-3.69988450495124,-4.99,FALSE,"one-break cointegration against the null of no cointegration"
+"Gregory-Hansen regime","1950",-4.77789278726166,-4.95,FALSE,"one-break cointegration against the null of no cointegration"

@@ -1,7 +1,8 @@
 ---
-type: econometric_protocol
+type: econometrics
 status: active
-depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
 stage_scope: all_stages
 country: US_CL
 last_updated: 2026-07-06
@@ -10,21 +11,23 @@ design_role: diagnostic_to_regime_bridge
 scope: chapter2_core_support
 estimator_status: regime-diagnostic-only
 related_to:
-- R07_FGLS_threshold_cointegration_admissibility
-- R03_super_consistency_mechanics_hinge
-- R05_LRV_kernel_bandwidth_regime_misalignment
-- N02_SuperConsistency
-- M10_Empirical_Identification_Framework
-- L00_Econometrics_References
+  - R07_FGLS_threshold_cointegration_admissibility
+  - R03_super_consistency_mechanics_hinge
+  - R05_LRV_kernel_bandwidth_regime_misalignment
+  - N02_SuperConsistency
+  - M10_Empirical_Identification_Framework
+  - L00_Econometrics_References
 priority: high
 role: diagnostic-only
 stage: pre-estimation-design
 aliases:
-- Break diagnostics to FGLS
+  - Break diagnostics to FGLS
 tags:
-- chapter2/econometrics
-- chapter2/diagnostic-only
+  - chapter2/econometrics
+  - chapter2/diagnostic-only
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
+subtype: econometric_protocol
+blocks: []
 ---
 
 # From Break Diagnostics to Threshold-FGLS

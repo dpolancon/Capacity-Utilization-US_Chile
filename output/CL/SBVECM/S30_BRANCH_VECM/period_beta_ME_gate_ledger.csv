@@ -1,0 +1,7 @@
+"gate","pass","evidence"
+"Kejriwal-Perron coefficient stability",FALSE,"UDmax 6.823 against 12.25"
+"Gregory-Hansen break cointegration",FALSE,"Gregory-Hansen minimum statistic reported in S20B gate ledger"
+"validated breakpoint intervals",FALSE,"none"
+"break-adjusted system rank and residual stability",FALSE,"no promoted break-adjusted rank-one system"
+"period coefficient estimation",FALSE,"no estimator may run before all previous gates pass"
+"short-period bootstrap",NA,"used only after a coefficient is identified in a period with N <= 30"

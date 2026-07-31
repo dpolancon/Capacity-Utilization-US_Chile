@@ -1,21 +1,24 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-06-01
-subtype: rule
+subtype: analytical_foundation
 layer: analytical_foundation
 design_role: ontological_guardrail
 scope: chapter2_core
 related_to:
-- H00_Okishio_Vidal_Decentralized_Accumulation
-- A01_Extensive_Accumulation
-- A02_Intensive_Accumulation
-- A03_TransformationElasticity_Two-CapitalCapacityComposition
-- A04_PeripheralTransformationElasticity
+  - H00_Okishio_Vidal_Decentralized_Accumulation
+  - A01_Extensive_Accumulation
+  - A02_Intensive_Accumulation
+  - A03_TransformationElasticity_Two-CapitalCapacityComposition
+  - A04_PeripheralTransformationElasticity
 created: 2026-05-27
+blocks: []
+priority: reference
 ---
 
 # R01: Ontological Interpretation Guardrails
@@ -42,7 +45,7 @@ Historical deviations $\theta_t \neq \theta^N$ are not estimation errors. They a
 Estimated coefficients ($\beta_1, \beta_2, \beta_3$) do not recover structural elasticities directly. They identify reduced-form traces of distributive conditioning across shifting corridors. 
 - $\beta_2 < 0$: Marx-side distributive closure (strong-labor, capital-using mechanization)
 - $\beta_2 > 0$: Okishio-side closure (weak-labor, productivity-enhancing mechanization)
-- $\beta_2$ sign instability: Signals regime transition or peripheral FX-realization gate activation (per [[A04_PeripheralTransformationElasticity]])
+- $\beta_2$ sign instability: Signals regime transition or peripheral FX-realization gate activation (per [[02_analyitical_foundation/_legacy/A04_PeripheralTransformationElasticity]])
 
 ## 4. Guardrail Language
 **Do not write:** "$\theta$ measures technological efficiency" or "This tests Marx–Okishio directly."

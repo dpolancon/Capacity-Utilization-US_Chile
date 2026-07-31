@@ -1,0 +1,4 @@
+"sample","status","error","selected_order","aic","bic","bounds_test_status"
+"full_1920_2024","estimated",NA,"1;2;0;2;1;1",-116.927253413559,-82.6757765665738,"run_in_stage_review"
+"pre_1920_1973","estimated",NA,"1;2;0;2;1;1",-35.7021501577986,-10.3359818162401,"run_in_stage_review"
+"post_1974_2024","estimated",NA,"1;2;0;0;1;1",-113.258407434927,-92.4483841557103,"run_in_stage_review"

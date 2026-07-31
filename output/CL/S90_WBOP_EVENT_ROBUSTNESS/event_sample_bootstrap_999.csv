@@ -1,0 +1,2 @@
+"statistic","estimate","replications","ci_low","ci_high","inference"
+"Post-event mean d_k_me minus d_k_nr",-0.00568351104956587,999,-0.0236112138019371,0.00551966036192832,"interval_includes_zero"

@@ -1,0 +1,3 @@
+"period","N","eta_impact","eta_impact_ci_low","eta_impact_ci_high","eta_3year","eta_3year_ci_low","eta_3year_ci_high","adjacent_impact_p","adjacent_3year_p","inference","empirical_verdict"
+"1922-2005",84,NA,NA,NA,NA,NA,NA,NA,NA,"not estimated","conditional accumulation elasticity not identified: growth-rate stationarity is inconclusive"
+"2006-2024",19,NA,NA,NA,NA,NA,NA,NA,NA,"not estimated","conditional accumulation elasticity not identified: growth-rate stationarity is inconclusive"

@@ -1,0 +1,8 @@
+"inferential_object","strictly_necessary_now","replications","decision"
+"LOESS curvature-break stability",TRUE,999,"run: nonparametric crossings need a stability frequency and date band"
+"Kejriwal-Perron coefficient stability",FALSE,0,"omit: published integrated-regressor critical values apply and the null is not rejected"
+"Full-sample no-break Johansen rank",FALSE,0,"omit: N=105 and standard asymptotic benchmark is descriptive"
+"LOESS estimated-break VECM rank",FALSE,0,"omit: held after estimated-break inference gate; run only before promotion"
+"Parametric multiple-break VECM rank",FALSE,0,"omit: held until exact JMN/LST-compatible multi-break inference is implemented"
+"Short-regime rank or restriction",FALSE,0,"omit: short candidate spans have no identified coefficient"
+"Exact beta_ME=1 restriction",FALSE,0,"omit: no cointegrating vector is promoted"

@@ -1,0 +1,421 @@
+"variable","label","test","deterministic","transformation","n","lag","statistic","critical_5pct","reject_null","null","stationary_vote"
+"k_me","Log machinery and equipment capital","ADF","constant","level",105,4,0.640603767081259,-2.88,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","ADF","constant","level",105,4,0.832830544643134,-2.88,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","ADF","constant","level",105,4,-1.45320456437479,-2.88,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","ADF","constant","level",105,4,-3.14270849058252,-2.88,TRUE,"unit root",TRUE
+"goods_exports_gdp","Goods exports / GDP","ADF","constant","level",105,4,-1.73107261195437,-2.88,FALSE,"unit root",FALSE
+"goods_imports_gdp","Goods imports / GDP","ADF","constant","level",105,4,-0.359049815218773,-2.88,FALSE,"unit root",FALSE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","ADF","constant","level",105,4,-2.86897051281374,-2.88,FALSE,"unit root",FALSE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","ADF","constant","level",105,4,-2.26638772863672,-2.88,FALSE,"unit root",FALSE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","ADF","constant","level",105,4,-0.91193846470608,-2.88,FALSE,"unit root",FALSE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","ADF","constant","level",105,4,-1.86240091700334,-2.88,FALSE,"unit root",FALSE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","ADF","constant","level",105,4,0.0450815591825727,-2.88,FALSE,"unit root",FALSE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","ADF","constant","level",105,4,-0.92699446242373,-2.88,FALSE,"unit root",FALSE
+"goods_services_balance_gdp","Goods and services balance / GDP","ADF","constant","level",105,4,-2.92193476050103,-2.88,TRUE,"unit root",TRUE
+"net_foreign_income_gdp","Net foreign income / GDP","ADF","constant","level",105,4,-3.10174360924037,-2.88,TRUE,"unit root",TRUE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","ADF","constant","level",105,4,1.5307323322357,-2.88,FALSE,"unit root",FALSE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","ADF","constant","level",105,4,-2.85257148016059,-2.88,FALSE,"unit root",FALSE
+"net_transfers_gdp","Net transfers / GDP","ADF","constant","level",105,4,-0.956786591944018,-2.88,FALSE,"unit root",FALSE
+"current_account_gdp","Current account / GDP","ADF","constant","level",105,4,-2.55637123380398,-2.88,FALSE,"unit root",FALSE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","ADF","constant","level",105,4,-1.04278103418796,-2.88,FALSE,"unit root",FALSE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","ADF","constant","level",105,4,-4.07132587034478,-2.88,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","ADF","constant","level",105,4,-3.68686335655575,-2.88,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","PP","constant","level",105,12,2.03076032816723,-2.88919985207101,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","PP","constant","level",105,12,2.53327076359863,-2.88919985207101,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","PP","constant","level",105,12,-0.798687360859556,-2.88919985207101,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","PP","constant","level",105,12,-5.20613987114182,-2.88919985207101,TRUE,"unit root",TRUE
+"goods_exports_gdp","Goods exports / GDP","PP","constant","level",105,12,-2.70386905497938,-2.88919985207101,FALSE,"unit root",FALSE
+"goods_imports_gdp","Goods imports / GDP","PP","constant","level",105,12,-1.82875649353758,-2.88919985207101,FALSE,"unit root",FALSE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","PP","constant","level",105,12,-3.57052427047658,-2.88919985207101,TRUE,"unit root",TRUE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","PP","constant","level",105,12,-3.21158809872559,-2.88919985207101,TRUE,"unit root",TRUE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","PP","constant","level",105,12,-1.98652073953256,-2.88919985207101,FALSE,"unit root",FALSE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","PP","constant","level",105,12,-2.84304203556612,-2.88919985207101,FALSE,"unit root",FALSE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","PP","constant","level",105,12,-0.359094936480866,-2.88919985207101,FALSE,"unit root",FALSE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","PP","constant","level",105,12,-2.03067161005346,-2.88919985207101,FALSE,"unit root",FALSE
+"goods_services_balance_gdp","Goods and services balance / GDP","PP","constant","level",105,12,-5.42237680814099,-2.88919985207101,TRUE,"unit root",TRUE
+"net_foreign_income_gdp","Net foreign income / GDP","PP","constant","level",105,12,-2.55693228909057,-2.88919985207101,FALSE,"unit root",FALSE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","PP","constant","level",105,12,0.762508725662201,-2.88919985207101,FALSE,"unit root",FALSE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","PP","constant","level",105,12,-2.05730288118858,-2.88919985207101,FALSE,"unit root",FALSE
+"net_transfers_gdp","Net transfers / GDP","PP","constant","level",105,12,-0.939247410818099,-2.88919985207101,FALSE,"unit root",FALSE
+"current_account_gdp","Current account / GDP","PP","constant","level",105,12,-6.12030917492143,-2.88919985207101,TRUE,"unit root",TRUE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","PP","constant","level",105,12,-1.60830939347988,-2.88919985207101,FALSE,"unit root",FALSE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","PP","constant","level",105,12,-4.0950772775007,-2.88919985207101,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","PP","constant","level",105,12,-3.83042910890173,-2.88919985207101,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","KPSS","constant","level",105,12,0.834438745728874,0.463,TRUE,"stationarity",FALSE
+"k_nr","Log nonresidential structures capital","KPSS","constant","level",105,12,0.883858265303126,0.463,TRUE,"stationarity",FALSE
+"kappa","Capital composition ratio","KPSS","constant","level",105,12,0.430405310335861,0.463,FALSE,"stationarity",TRUE
+"goods_balance_gdp","Goods balance / GDP","KPSS","constant","level",105,12,0.454351758417658,0.463,FALSE,"stationarity",TRUE
+"goods_exports_gdp","Goods exports / GDP","KPSS","constant","level",105,12,0.313035774848987,0.463,FALSE,"stationarity",TRUE
+"goods_imports_gdp","Goods imports / GDP","KPSS","constant","level",105,12,0.587148438303451,0.463,TRUE,"stationarity",FALSE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","KPSS","constant","level",105,12,0.216915935915899,0.463,FALSE,"stationarity",TRUE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","KPSS","constant","level",105,12,0.247560134646199,0.463,FALSE,"stationarity",TRUE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","KPSS","constant","level",105,12,0.701330769229505,0.463,TRUE,"stationarity",FALSE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","KPSS","constant","level",105,12,0.313228482018718,0.463,FALSE,"stationarity",TRUE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","KPSS","constant","level",105,12,0.70683367667286,0.463,TRUE,"stationarity",FALSE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","KPSS","constant","level",105,12,0.440862567700284,0.463,FALSE,"stationarity",TRUE
+"goods_services_balance_gdp","Goods and services balance / GDP","KPSS","constant","level",105,12,0.326318800237392,0.463,FALSE,"stationarity",TRUE
+"net_foreign_income_gdp","Net foreign income / GDP","KPSS","constant","level",105,12,0.29315020546627,0.463,FALSE,"stationarity",TRUE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","KPSS","constant","level",105,12,0.725244518692539,0.463,TRUE,"stationarity",FALSE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","KPSS","constant","level",105,12,0.203882769737548,0.463,FALSE,"stationarity",TRUE
+"net_transfers_gdp","Net transfers / GDP","KPSS","constant","level",105,12,0.723934405976629,0.463,TRUE,"stationarity",FALSE
+"current_account_gdp","Current account / GDP","KPSS","constant","level",105,12,0.129859194435952,0.463,FALSE,"stationarity",TRUE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","KPSS","constant","level",105,12,0.49531003400764,0.463,TRUE,"stationarity",FALSE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","KPSS","constant","level",105,12,0.114421452504211,0.463,FALSE,"stationarity",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","KPSS","constant","level",105,12,0.469813785744361,0.463,TRUE,"stationarity",FALSE
+"k_me","Log machinery and equipment capital","ERS-GLS","constant","level",105,4,0.894375922010735,-1.94,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","ERS-GLS","constant","level",105,4,0.680252681738792,-1.94,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","ERS-GLS","constant","level",105,4,-1.04252505991656,-1.94,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","ERS-GLS","constant","level",105,4,-0.613792102998539,-1.94,FALSE,"unit root",FALSE
+"goods_exports_gdp","Goods exports / GDP","ERS-GLS","constant","level",105,4,-0.925973503987988,-1.94,FALSE,"unit root",FALSE
+"goods_imports_gdp","Goods imports / GDP","ERS-GLS","constant","level",105,4,-0.589631701844076,-1.94,FALSE,"unit root",FALSE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","ERS-GLS","constant","level",105,4,-0.499473528529632,-1.94,FALSE,"unit root",FALSE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","ERS-GLS","constant","level",105,4,-0.807365648873477,-1.94,FALSE,"unit root",FALSE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","ERS-GLS","constant","level",105,4,-0.719864425087155,-1.94,FALSE,"unit root",FALSE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","ERS-GLS","constant","level",105,4,-1.10082075094585,-1.94,FALSE,"unit root",FALSE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","ERS-GLS","constant","level",105,4,-0.0732642451061182,-1.94,FALSE,"unit root",FALSE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","ERS-GLS","constant","level",105,4,-0.846943654495171,-1.94,FALSE,"unit root",FALSE
+"goods_services_balance_gdp","Goods and services balance / GDP","ERS-GLS","constant","level",105,4,-0.546762329792672,-1.94,FALSE,"unit root",FALSE
+"net_foreign_income_gdp","Net foreign income / GDP","ERS-GLS","constant","level",105,4,-1.24685954576353,-1.94,FALSE,"unit root",FALSE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","ERS-GLS","constant","level",105,4,1.61832596914065,-1.94,FALSE,"unit root",FALSE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","ERS-GLS","constant","level",105,4,-1.66768602240577,-1.94,FALSE,"unit root",FALSE
+"net_transfers_gdp","Net transfers / GDP","ERS-GLS","constant","level",105,4,-0.426912156605519,-1.94,FALSE,"unit root",FALSE
+"current_account_gdp","Current account / GDP","ERS-GLS","constant","level",105,4,-1.44097222424323,-1.94,FALSE,"unit root",FALSE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","ERS-GLS","constant","level",105,4,-0.267164259105784,-1.94,FALSE,"unit root",FALSE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","ERS-GLS","constant","level",105,4,-2.46992290462563,-1.94,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","ERS-GLS","constant","level",105,4,-2.53528263521666,-1.94,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","ZA-break","constant","level",105,2,-3.78957587477082,-4.8,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","ZA-break","constant","level",105,2,-3.05609822510561,-4.8,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","ZA-break","constant","level",105,2,-4.40149626108067,-4.8,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","ZA-break","constant","level",105,2,-4.05226438591071,-4.8,FALSE,"unit root",FALSE
+"goods_exports_gdp","Goods exports / GDP","ZA-break","constant","level",105,2,-3.4106822307631,-4.8,FALSE,"unit root",FALSE
+"goods_imports_gdp","Goods imports / GDP","ZA-break","constant","level",105,2,-3.37547084940908,-4.8,FALSE,"unit root",FALSE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","ZA-break","constant","level",105,2,-3.76225845803341,-4.8,FALSE,"unit root",FALSE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","ZA-break","constant","level",105,2,-3.49421786202616,-4.8,FALSE,"unit root",FALSE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","ZA-break","constant","level",105,2,-3.32902794873285,-4.8,FALSE,"unit root",FALSE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","ZA-break","constant","level",105,2,-3.39226151203765,-4.8,FALSE,"unit root",FALSE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","ZA-break","constant","level",105,2,-3.18840466418544,-4.8,FALSE,"unit root",FALSE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","ZA-break","constant","level",105,2,-3.47947396583135,-4.8,FALSE,"unit root",FALSE
+"goods_services_balance_gdp","Goods and services balance / GDP","ZA-break","constant","level",105,2,-3.99139683413668,-4.8,FALSE,"unit root",FALSE
+"net_foreign_income_gdp","Net foreign income / GDP","ZA-break","constant","level",105,2,-4.1851928312273,-4.8,FALSE,"unit root",FALSE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","ZA-break","constant","level",105,2,-2.77341317157384,-4.8,FALSE,"unit root",FALSE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","ZA-break","constant","level",105,2,-3.73500607437927,-4.8,FALSE,"unit root",FALSE
+"net_transfers_gdp","Net transfers / GDP","ZA-break","constant","level",105,2,-4.30809931554052,-4.8,FALSE,"unit root",FALSE
+"current_account_gdp","Current account / GDP","ZA-break","constant","level",105,2,-3.19974694689634,-4.8,FALSE,"unit root",FALSE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","ZA-break","constant","level",105,2,-3.29888169442405,-4.8,FALSE,"unit root",FALSE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","ZA-break","constant","level",105,2,-4.56285765174056,-4.8,FALSE,"unit root",FALSE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","ZA-break","constant","level",105,2,-4.38267467336812,-4.8,FALSE,"unit root",FALSE
+"k_me","Log machinery and equipment capital","ADF","trend","level",105,4,-2.37961177354932,-3.43,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","ADF","trend","level",105,4,-1.78827347934029,-3.43,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","ADF","trend","level",105,4,-3.4265282985883,-3.43,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","ADF","trend","level",105,4,-3.13500850307131,-3.43,FALSE,"unit root",FALSE
+"goods_exports_gdp","Goods exports / GDP","ADF","trend","level",105,4,-2.68800667138942,-3.43,FALSE,"unit root",FALSE
+"goods_imports_gdp","Goods imports / GDP","ADF","trend","level",105,4,-2.40858059869033,-3.43,FALSE,"unit root",FALSE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","ADF","trend","level",105,4,-2.88773763807151,-3.43,FALSE,"unit root",FALSE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","ADF","trend","level",105,4,-2.83473437950143,-3.43,FALSE,"unit root",FALSE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","ADF","trend","level",105,4,-2.34668653530585,-3.43,FALSE,"unit root",FALSE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","ADF","trend","level",105,4,-2.72604594727635,-3.43,FALSE,"unit root",FALSE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","ADF","trend","level",105,4,-1.94653083570025,-3.43,FALSE,"unit root",FALSE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","ADF","trend","level",105,4,-2.50061351382864,-3.43,FALSE,"unit root",FALSE
+"goods_services_balance_gdp","Goods and services balance / GDP","ADF","trend","level",105,4,-2.940687025357,-3.43,FALSE,"unit root",FALSE
+"net_foreign_income_gdp","Net foreign income / GDP","ADF","trend","level",105,4,-2.95681373205844,-3.43,FALSE,"unit root",FALSE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","ADF","trend","level",105,4,-0.740813835315667,-3.43,FALSE,"unit root",FALSE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","ADF","trend","level",105,4,-3.05988463832892,-3.43,FALSE,"unit root",FALSE
+"net_transfers_gdp","Net transfers / GDP","ADF","trend","level",105,4,-2.35298700100416,-3.43,FALSE,"unit root",FALSE
+"current_account_gdp","Current account / GDP","ADF","trend","level",105,4,-2.55811064963999,-3.43,FALSE,"unit root",FALSE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","ADF","trend","level",105,4,-1.78941122332604,-3.43,FALSE,"unit root",FALSE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","ADF","trend","level",105,4,-4.05022734597487,-3.43,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","ADF","trend","level",105,4,-4.68284888168328,-3.43,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","PP","trend","level",105,12,-1.35150168944136,-3.45308502218935,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","PP","trend","level",105,12,-0.768429205039274,-3.45308502218935,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","PP","trend","level",105,12,-2.05875682988825,-3.45308502218935,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","PP","trend","level",105,12,-5.46536135900641,-3.45308502218935,TRUE,"unit root",TRUE
+"goods_exports_gdp","Goods exports / GDP","PP","trend","level",105,12,-3.14055472313976,-3.45308502218935,FALSE,"unit root",FALSE
+"goods_imports_gdp","Goods imports / GDP","PP","trend","level",105,12,-3.41511390891322,-3.45308502218935,FALSE,"unit root",FALSE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","PP","trend","level",105,12,-3.36853633636955,-3.45308502218935,FALSE,"unit root",FALSE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","PP","trend","level",105,12,-3.31670532674977,-3.45308502218935,FALSE,"unit root",FALSE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","PP","trend","level",105,12,-4.1111779384414,-3.45308502218935,TRUE,"unit root",TRUE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","PP","trend","level",105,12,-3.02243574028157,-3.45308502218935,FALSE,"unit root",FALSE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","PP","trend","level",105,12,-2.84408142557086,-3.45308502218935,FALSE,"unit root",FALSE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","PP","trend","level",105,12,-2.77447114390579,-3.45308502218935,FALSE,"unit root",FALSE
+"goods_services_balance_gdp","Goods and services balance / GDP","PP","trend","level",105,12,-5.64515249590318,-3.45308502218935,TRUE,"unit root",TRUE
+"net_foreign_income_gdp","Net foreign income / GDP","PP","trend","level",105,12,-2.42116971374559,-3.45308502218935,FALSE,"unit root",FALSE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","PP","trend","level",105,12,-1.94629047354506,-3.45308502218935,FALSE,"unit root",FALSE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","PP","trend","level",105,12,-1.96768050170357,-3.45308502218935,FALSE,"unit root",FALSE
+"net_transfers_gdp","Net transfers / GDP","PP","trend","level",105,12,-2.1536889665728,-3.45308502218935,FALSE,"unit root",FALSE
+"current_account_gdp","Current account / GDP","PP","trend","level",105,12,-6.15866132694566,-3.45308502218935,TRUE,"unit root",TRUE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","PP","trend","level",105,12,-2.4816870346732,-3.45308502218935,FALSE,"unit root",FALSE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","PP","trend","level",105,12,-4.08062815620654,-3.45308502218935,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","PP","trend","level",105,12,-4.11468112396576,-3.45308502218935,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","KPSS","trend","level",105,12,0.212098519634917,0.146,TRUE,"stationarity",FALSE
+"k_nr","Log nonresidential structures capital","KPSS","trend","level",105,12,0.21352149818062,0.146,TRUE,"stationarity",FALSE
+"kappa","Capital composition ratio","KPSS","trend","level",105,12,0.198923522583733,0.146,TRUE,"stationarity",FALSE
+"goods_balance_gdp","Goods balance / GDP","KPSS","trend","level",105,12,0.19100718360262,0.146,TRUE,"stationarity",FALSE
+"goods_exports_gdp","Goods exports / GDP","KPSS","trend","level",105,12,0.216266657236288,0.146,TRUE,"stationarity",FALSE
+"goods_imports_gdp","Goods imports / GDP","KPSS","trend","level",105,12,0.218242679368987,0.146,TRUE,"stationarity",FALSE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","KPSS","trend","level",105,12,0.211646849266972,0.146,TRUE,"stationarity",FALSE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","KPSS","trend","level",105,12,0.216065797742764,0.146,TRUE,"stationarity",FALSE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","KPSS","trend","level",105,12,0.0925439966805657,0.146,FALSE,"stationarity",TRUE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","KPSS","trend","level",105,12,0.199264884941003,0.146,TRUE,"stationarity",FALSE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","KPSS","trend","level",105,12,0.201336733971668,0.146,TRUE,"stationarity",FALSE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","KPSS","trend","level",105,12,0.207023644254014,0.146,TRUE,"stationarity",FALSE
+"goods_services_balance_gdp","Goods and services balance / GDP","KPSS","trend","level",105,12,0.154677050944263,0.146,TRUE,"stationarity",FALSE
+"net_foreign_income_gdp","Net foreign income / GDP","KPSS","trend","level",105,12,0.155519933158829,0.146,TRUE,"stationarity",FALSE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","KPSS","trend","level",105,12,0.235304050481041,0.146,TRUE,"stationarity",FALSE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","KPSS","trend","level",105,12,0.189012670259597,0.146,TRUE,"stationarity",FALSE
+"net_transfers_gdp","Net transfers / GDP","KPSS","trend","level",105,12,0.170433452209601,0.146,TRUE,"stationarity",FALSE
+"current_account_gdp","Current account / GDP","KPSS","trend","level",105,12,0.0816313367103456,0.146,FALSE,"stationarity",TRUE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","KPSS","trend","level",105,12,0.203292477224081,0.146,TRUE,"stationarity",FALSE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","KPSS","trend","level",105,12,0.112568961485752,0.146,FALSE,"stationarity",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","KPSS","trend","level",105,12,0.0520999527766655,0.146,FALSE,"stationarity",TRUE
+"k_me","Log machinery and equipment capital","ERS-GLS","trend","level",105,4,-1.19286305768812,-2.93,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","ERS-GLS","trend","level",105,4,-1.33201187468339,-2.93,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","ERS-GLS","trend","level",105,4,-1.24312512488034,-2.93,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","ERS-GLS","trend","level",105,4,-1.82614873522149,-2.93,FALSE,"unit root",FALSE
+"goods_exports_gdp","Goods exports / GDP","ERS-GLS","trend","level",105,4,-1.11144925941663,-2.93,FALSE,"unit root",FALSE
+"goods_imports_gdp","Goods imports / GDP","ERS-GLS","trend","level",105,4,-1.01532114024055,-2.93,FALSE,"unit root",FALSE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","ERS-GLS","trend","level",105,4,-1.15780335991114,-2.93,FALSE,"unit root",FALSE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","ERS-GLS","trend","level",105,4,-1.15684173613082,-2.93,FALSE,"unit root",FALSE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","ERS-GLS","trend","level",105,4,-2.48371413684008,-2.93,FALSE,"unit root",FALSE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","ERS-GLS","trend","level",105,4,-1.30093860532314,-2.93,FALSE,"unit root",FALSE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","ERS-GLS","trend","level",105,4,-1.23278196560984,-2.93,FALSE,"unit root",FALSE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","ERS-GLS","trend","level",105,4,-0.99196985789272,-2.93,FALSE,"unit root",FALSE
+"goods_services_balance_gdp","Goods and services balance / GDP","ERS-GLS","trend","level",105,4,-1.87574013962849,-2.93,FALSE,"unit root",FALSE
+"net_foreign_income_gdp","Net foreign income / GDP","ERS-GLS","trend","level",105,4,-2.25339204593855,-2.93,FALSE,"unit root",FALSE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","ERS-GLS","trend","level",105,4,-0.594102441929549,-2.93,FALSE,"unit root",FALSE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","ERS-GLS","trend","level",105,4,-2.04269730534992,-2.93,FALSE,"unit root",FALSE
+"net_transfers_gdp","Net transfers / GDP","ERS-GLS","trend","level",105,4,-2.36387820737582,-2.93,FALSE,"unit root",FALSE
+"current_account_gdp","Current account / GDP","ERS-GLS","trend","level",105,4,-2.32092042943156,-2.93,FALSE,"unit root",FALSE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","ERS-GLS","trend","level",105,4,-1.48268658487,-2.93,FALSE,"unit root",FALSE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","ERS-GLS","trend","level",105,4,-2.86744587369981,-2.93,FALSE,"unit root",FALSE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","ERS-GLS","trend","level",105,4,-2.87661002767835,-2.93,FALSE,"unit root",FALSE
+"k_me","Log machinery and equipment capital","ZA-break","trend","level",105,2,-2.86864473876931,-5.08,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","ZA-break","trend","level",105,2,-3.15597147422123,-5.08,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","ZA-break","trend","level",105,2,-3.32421985216582,-5.08,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","ZA-break","trend","level",105,2,-3.9629880555508,-5.08,FALSE,"unit root",FALSE
+"goods_exports_gdp","Goods exports / GDP","ZA-break","trend","level",105,2,-3.29681763574429,-5.08,FALSE,"unit root",FALSE
+"goods_imports_gdp","Goods imports / GDP","ZA-break","trend","level",105,2,-4.72657232655779,-5.08,FALSE,"unit root",FALSE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","ZA-break","trend","level",105,2,-3.49666379401133,-5.08,FALSE,"unit root",FALSE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","ZA-break","trend","level",105,2,-3.30850635368764,-5.08,FALSE,"unit root",FALSE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","ZA-break","trend","level",105,2,-3.2959572092305,-5.08,FALSE,"unit root",FALSE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","ZA-break","trend","level",105,2,-3.70406488099804,-5.08,FALSE,"unit root",FALSE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","ZA-break","trend","level",105,2,-3.41652142056208,-5.08,FALSE,"unit root",FALSE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","ZA-break","trend","level",105,2,-3.6136650738631,-5.08,FALSE,"unit root",FALSE
+"goods_services_balance_gdp","Goods and services balance / GDP","ZA-break","trend","level",105,2,-3.78027502965908,-5.08,FALSE,"unit root",FALSE
+"net_foreign_income_gdp","Net foreign income / GDP","ZA-break","trend","level",105,2,-4.16383241711486,-5.08,FALSE,"unit root",FALSE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","ZA-break","trend","level",105,2,-4.23029761164664,-5.08,FALSE,"unit root",FALSE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","ZA-break","trend","level",105,2,-3.88579611834711,-5.08,FALSE,"unit root",FALSE
+"net_transfers_gdp","Net transfers / GDP","ZA-break","trend","level",105,2,-4.18638770247866,-5.08,FALSE,"unit root",FALSE
+"current_account_gdp","Current account / GDP","ZA-break","trend","level",105,2,-3.67052885936983,-5.08,FALSE,"unit root",FALSE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","ZA-break","trend","level",105,2,-4.16356715998501,-5.08,FALSE,"unit root",FALSE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","ZA-break","trend","level",105,2,-5.78846688099044,-5.08,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","ZA-break","trend","level",105,2,-5.67645024148777,-5.08,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","ADF","constant","first_difference",104,4,-2.21534744523386,-2.88,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","ADF","constant","first_difference",104,4,-2.2488764804529,-2.88,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","ADF","constant","first_difference",104,4,-2.97106351846027,-2.88,TRUE,"unit root",TRUE
+"goods_balance_gdp","Goods balance / GDP","ADF","constant","first_difference",104,4,-10.7123680173049,-2.88,TRUE,"unit root",TRUE
+"goods_exports_gdp","Goods exports / GDP","ADF","constant","first_difference",104,4,-8.23571151328823,-2.88,TRUE,"unit root",TRUE
+"goods_imports_gdp","Goods imports / GDP","ADF","constant","first_difference",104,4,-11.0879201757802,-2.88,TRUE,"unit root",TRUE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","ADF","constant","first_difference",104,4,-8.73923811365226,-2.88,TRUE,"unit root",TRUE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","ADF","constant","first_difference",104,4,-8.46283865970427,-2.88,TRUE,"unit root",TRUE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","ADF","constant","first_difference",104,4,-10.363001253554,-2.88,TRUE,"unit root",TRUE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","ADF","constant","first_difference",104,4,-9.78740105136954,-2.88,TRUE,"unit root",TRUE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","ADF","constant","first_difference",104,4,-8.0286770111614,-2.88,TRUE,"unit root",TRUE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","ADF","constant","first_difference",104,4,-10.0682692499718,-2.88,TRUE,"unit root",TRUE
+"goods_services_balance_gdp","Goods and services balance / GDP","ADF","constant","first_difference",104,4,-11.3251964118899,-2.88,TRUE,"unit root",TRUE
+"net_foreign_income_gdp","Net foreign income / GDP","ADF","constant","first_difference",104,4,-6.59460616510317,-2.88,TRUE,"unit root",TRUE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","ADF","constant","first_difference",104,4,-6.4035310314235,-2.88,TRUE,"unit root",TRUE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","ADF","constant","first_difference",104,4,-4.44311592782445,-2.88,TRUE,"unit root",TRUE
+"net_transfers_gdp","Net transfers / GDP","ADF","constant","first_difference",104,4,-7.48955969476469,-2.88,TRUE,"unit root",TRUE
+"current_account_gdp","Current account / GDP","ADF","constant","first_difference",104,4,-12.1009427805682,-2.88,TRUE,"unit root",TRUE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","ADF","constant","first_difference",104,4,-9.0538970967074,-2.88,TRUE,"unit root",TRUE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","ADF","constant","first_difference",104,4,-9.1393321990535,-2.88,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","ADF","constant","first_difference",104,4,-9.1037549232562,-2.88,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","PP","constant","first_difference",104,12,-2.78418312479437,-2.88947053445188,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","PP","constant","first_difference",104,12,-3.06075888662478,-2.88947053445188,TRUE,"unit root",TRUE
+"kappa","Capital composition ratio","PP","constant","first_difference",104,12,-2.8006863315192,-2.88947053445188,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","PP","constant","first_difference",104,12,-18.1385293877974,-2.88947053445188,TRUE,"unit root",TRUE
+"goods_exports_gdp","Goods exports / GDP","PP","constant","first_difference",104,12,-11.2502654129285,-2.88947053445188,TRUE,"unit root",TRUE
+"goods_imports_gdp","Goods imports / GDP","PP","constant","first_difference",104,12,-16.3665462555829,-2.88947053445188,TRUE,"unit root",TRUE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","PP","constant","first_difference",104,12,-12.0407563331918,-2.88947053445188,TRUE,"unit root",TRUE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","PP","constant","first_difference",104,12,-11.1415298870794,-2.88947053445188,TRUE,"unit root",TRUE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","PP","constant","first_difference",104,12,-13.5552530222019,-2.88947053445188,TRUE,"unit root",TRUE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","PP","constant","first_difference",104,12,-14.9656658583526,-2.88947053445188,TRUE,"unit root",TRUE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","PP","constant","first_difference",104,12,-15.6536819225085,-2.88947053445188,TRUE,"unit root",TRUE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","PP","constant","first_difference",104,12,-15.4123405389649,-2.88947053445188,TRUE,"unit root",TRUE
+"goods_services_balance_gdp","Goods and services balance / GDP","PP","constant","first_difference",104,12,-18.2730324895851,-2.88947053445188,TRUE,"unit root",TRUE
+"net_foreign_income_gdp","Net foreign income / GDP","PP","constant","first_difference",104,12,-9.78589428817977,-2.88947053445188,TRUE,"unit root",TRUE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","PP","constant","first_difference",104,12,-14.0647885738437,-2.88947053445188,TRUE,"unit root",TRUE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","PP","constant","first_difference",104,12,-8.57036326870433,-2.88947053445188,TRUE,"unit root",TRUE
+"net_transfers_gdp","Net transfers / GDP","PP","constant","first_difference",104,12,-9.60664621981889,-2.88947053445188,TRUE,"unit root",TRUE
+"current_account_gdp","Current account / GDP","PP","constant","first_difference",104,12,-18.0758992059227,-2.88947053445188,TRUE,"unit root",TRUE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","PP","constant","first_difference",104,12,-12.369395158373,-2.88947053445188,TRUE,"unit root",TRUE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","PP","constant","first_difference",104,12,-12.7914001329513,-2.88947053445188,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","PP","constant","first_difference",104,12,-12.7143645853217,-2.88947053445188,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","KPSS","constant","first_difference",104,12,0.481181153398238,0.463,TRUE,"stationarity",FALSE
+"k_nr","Log nonresidential structures capital","KPSS","constant","first_difference",104,12,0.466180414621401,0.463,TRUE,"stationarity",FALSE
+"kappa","Capital composition ratio","KPSS","constant","first_difference",104,12,0.430122430973899,0.463,FALSE,"stationarity",TRUE
+"goods_balance_gdp","Goods balance / GDP","KPSS","constant","first_difference",104,12,0.215660263592765,0.463,FALSE,"stationarity",TRUE
+"goods_exports_gdp","Goods exports / GDP","KPSS","constant","first_difference",104,12,0.396049766806324,0.463,FALSE,"stationarity",TRUE
+"goods_imports_gdp","Goods imports / GDP","KPSS","constant","first_difference",104,12,0.334121972188138,0.463,FALSE,"stationarity",TRUE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","KPSS","constant","first_difference",104,12,0.357022044477066,0.463,FALSE,"stationarity",TRUE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","KPSS","constant","first_difference",104,12,0.367939462740097,0.463,FALSE,"stationarity",TRUE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","KPSS","constant","first_difference",104,12,0.101147801618265,0.463,FALSE,"stationarity",TRUE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","KPSS","constant","first_difference",104,12,0.212843041138633,0.463,FALSE,"stationarity",TRUE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","KPSS","constant","first_difference",104,12,0.329914945510998,0.463,FALSE,"stationarity",TRUE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","KPSS","constant","first_difference",104,12,0.312207387946944,0.463,FALSE,"stationarity",TRUE
+"goods_services_balance_gdp","Goods and services balance / GDP","KPSS","constant","first_difference",104,12,0.161976237492483,0.463,FALSE,"stationarity",TRUE
+"net_foreign_income_gdp","Net foreign income / GDP","KPSS","constant","first_difference",104,12,0.131227686190679,0.463,FALSE,"stationarity",TRUE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","KPSS","constant","first_difference",104,12,0.482418799273645,0.463,TRUE,"stationarity",FALSE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","KPSS","constant","first_difference",104,12,0.219189985811743,0.463,FALSE,"stationarity",TRUE
+"net_transfers_gdp","Net transfers / GDP","KPSS","constant","first_difference",104,12,0.085285568725658,0.463,FALSE,"stationarity",TRUE
+"current_account_gdp","Current account / GDP","KPSS","constant","first_difference",104,12,0.0936043080811222,0.463,FALSE,"stationarity",TRUE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","KPSS","constant","first_difference",104,12,0.142418267286982,0.463,FALSE,"stationarity",TRUE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","KPSS","constant","first_difference",104,12,0.0613415815765748,0.463,FALSE,"stationarity",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","KPSS","constant","first_difference",104,12,0.0769347328181448,0.463,FALSE,"stationarity",TRUE
+"k_me","Log machinery and equipment capital","ERS-GLS","constant","first_difference",104,4,-2.22821211386385,-1.94,TRUE,"unit root",TRUE
+"k_nr","Log nonresidential structures capital","ERS-GLS","constant","first_difference",104,4,-2.08200666750619,-1.94,TRUE,"unit root",TRUE
+"kappa","Capital composition ratio","ERS-GLS","constant","first_difference",104,4,-2.43881404539044,-1.94,TRUE,"unit root",TRUE
+"goods_balance_gdp","Goods balance / GDP","ERS-GLS","constant","first_difference",104,4,-0.744817342581129,-1.94,FALSE,"unit root",FALSE
+"goods_exports_gdp","Goods exports / GDP","ERS-GLS","constant","first_difference",104,4,-4.07101221526267,-1.94,TRUE,"unit root",TRUE
+"goods_imports_gdp","Goods imports / GDP","ERS-GLS","constant","first_difference",104,4,-0.817754821302187,-1.94,FALSE,"unit root",FALSE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","ERS-GLS","constant","first_difference",104,4,-2.23530581679029,-1.94,TRUE,"unit root",TRUE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","ERS-GLS","constant","first_difference",104,4,-2.88070574972149,-1.94,TRUE,"unit root",TRUE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","ERS-GLS","constant","first_difference",104,4,-2.45394882543469,-1.94,TRUE,"unit root",TRUE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","ERS-GLS","constant","first_difference",104,4,-0.5648968713535,-1.94,FALSE,"unit root",FALSE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","ERS-GLS","constant","first_difference",104,4,-1.2493287179939,-1.94,FALSE,"unit root",FALSE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","ERS-GLS","constant","first_difference",104,4,-0.627759972058196,-1.94,FALSE,"unit root",FALSE
+"goods_services_balance_gdp","Goods and services balance / GDP","ERS-GLS","constant","first_difference",104,4,-0.778355375733306,-1.94,FALSE,"unit root",FALSE
+"net_foreign_income_gdp","Net foreign income / GDP","ERS-GLS","constant","first_difference",104,4,-4.76443659189015,-1.94,TRUE,"unit root",TRUE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","ERS-GLS","constant","first_difference",104,4,-4.97841668011299,-1.94,TRUE,"unit root",TRUE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","ERS-GLS","constant","first_difference",104,4,-4.51492218139153,-1.94,TRUE,"unit root",TRUE
+"net_transfers_gdp","Net transfers / GDP","ERS-GLS","constant","first_difference",104,4,-2.63006298439375,-1.94,TRUE,"unit root",TRUE
+"current_account_gdp","Current account / GDP","ERS-GLS","constant","first_difference",104,4,-0.684543533300408,-1.94,FALSE,"unit root",FALSE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","ERS-GLS","constant","first_difference",104,4,-4.25346748101002,-1.94,TRUE,"unit root",TRUE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","ERS-GLS","constant","first_difference",104,4,-4.03581892250847,-1.94,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","ERS-GLS","constant","first_difference",104,4,-3.92455897541326,-1.94,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","ZA-break","constant","first_difference",104,2,-3.89603636322472,-4.8,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","ZA-break","constant","first_difference",104,2,-3.57218515529183,-4.8,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","ZA-break","constant","first_difference",104,2,-4.31628893814063,-4.8,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","ZA-break","constant","first_difference",104,2,-7.81907952641019,-4.8,TRUE,"unit root",TRUE
+"goods_exports_gdp","Goods exports / GDP","ZA-break","constant","first_difference",104,2,-7.42025907167567,-4.8,TRUE,"unit root",TRUE
+"goods_imports_gdp","Goods imports / GDP","ZA-break","constant","first_difference",104,2,-7.95582030769781,-4.8,TRUE,"unit root",TRUE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","ZA-break","constant","first_difference",104,2,-7.25838042070861,-4.8,TRUE,"unit root",TRUE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","ZA-break","constant","first_difference",104,2,-7.44047358555884,-4.8,TRUE,"unit root",TRUE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","ZA-break","constant","first_difference",104,2,-7.18034689876266,-4.8,TRUE,"unit root",TRUE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","ZA-break","constant","first_difference",104,2,-6.93632076677201,-4.8,TRUE,"unit root",TRUE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","ZA-break","constant","first_difference",104,2,-7.99637750753844,-4.8,TRUE,"unit root",TRUE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","ZA-break","constant","first_difference",104,2,-7.37774409073286,-4.8,TRUE,"unit root",TRUE
+"goods_services_balance_gdp","Goods and services balance / GDP","ZA-break","constant","first_difference",104,2,-8.1983986645345,-4.8,TRUE,"unit root",TRUE
+"net_foreign_income_gdp","Net foreign income / GDP","ZA-break","constant","first_difference",104,2,-5.58679468284597,-4.8,TRUE,"unit root",TRUE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","ZA-break","constant","first_difference",104,2,-8.52727764987761,-4.8,TRUE,"unit root",TRUE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","ZA-break","constant","first_difference",104,2,-5.10892027302915,-4.8,TRUE,"unit root",TRUE
+"net_transfers_gdp","Net transfers / GDP","ZA-break","constant","first_difference",104,2,-7.47211629839541,-4.8,TRUE,"unit root",TRUE
+"current_account_gdp","Current account / GDP","ZA-break","constant","first_difference",104,2,-8.47757980717265,-4.8,TRUE,"unit root",TRUE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","ZA-break","constant","first_difference",104,2,-8.42830695035687,-4.8,TRUE,"unit root",TRUE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","ZA-break","constant","first_difference",104,2,-8.24089168712477,-4.8,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","ZA-break","constant","first_difference",104,2,-8.06930538199376,-4.8,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","ADF","trend","first_difference",104,4,-3.26788787543179,-3.43,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","ADF","trend","first_difference",104,4,-2.67963475278658,-3.43,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","ADF","trend","first_difference",104,4,-3.25995290105509,-3.43,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","ADF","trend","first_difference",104,4,-10.6921509005951,-3.43,TRUE,"unit root",TRUE
+"goods_exports_gdp","Goods exports / GDP","ADF","trend","first_difference",104,4,-8.35730228817284,-3.43,TRUE,"unit root",TRUE
+"goods_imports_gdp","Goods imports / GDP","ADF","trend","first_difference",104,4,-11.2822164833831,-3.43,TRUE,"unit root",TRUE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","ADF","trend","first_difference",104,4,-8.8070951318867,-3.43,TRUE,"unit root",TRUE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","ADF","trend","first_difference",104,4,-8.54634693941927,-3.43,TRUE,"unit root",TRUE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","ADF","trend","first_difference",104,4,-10.3476850413528,-3.43,TRUE,"unit root",TRUE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","ADF","trend","first_difference",104,4,-6.49256263201809,-3.43,TRUE,"unit root",TRUE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","ADF","trend","first_difference",104,4,-8.17827304210626,-3.43,TRUE,"unit root",TRUE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","ADF","trend","first_difference",104,4,-10.2610685074224,-3.43,TRUE,"unit root",TRUE
+"goods_services_balance_gdp","Goods and services balance / GDP","ADF","trend","first_difference",104,4,-11.2746497962878,-3.43,TRUE,"unit root",TRUE
+"net_foreign_income_gdp","Net foreign income / GDP","ADF","trend","first_difference",104,4,-6.65140938425522,-3.43,TRUE,"unit root",TRUE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","ADF","trend","first_difference",104,4,-7.00146668036302,-3.43,TRUE,"unit root",TRUE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","ADF","trend","first_difference",104,4,-6.30006062360153,-3.43,TRUE,"unit root",TRUE
+"net_transfers_gdp","Net transfers / GDP","ADF","trend","first_difference",104,4,-7.46551667822867,-3.43,TRUE,"unit root",TRUE
+"current_account_gdp","Current account / GDP","ADF","trend","first_difference",104,4,-12.0454274866275,-3.43,TRUE,"unit root",TRUE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","ADF","trend","first_difference",104,4,-9.05081146831759,-3.43,TRUE,"unit root",TRUE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","ADF","trend","first_difference",104,4,-9.09135291103347,-3.43,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","ADF","trend","first_difference",104,4,-9.06850184217918,-3.43,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","PP","trend","first_difference",104,12,-3.33369826255543,-3.453494240739,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","PP","trend","first_difference",104,12,-3.52408847167,-3.453494240739,TRUE,"unit root",TRUE
+"kappa","Capital composition ratio","PP","trend","first_difference",104,12,-3.33369004331979,-3.453494240739,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","PP","trend","first_difference",104,12,-18.3814952743659,-3.453494240739,TRUE,"unit root",TRUE
+"goods_exports_gdp","Goods exports / GDP","PP","trend","first_difference",104,12,-11.9378773187229,-3.453494240739,TRUE,"unit root",TRUE
+"goods_imports_gdp","Goods imports / GDP","PP","trend","first_difference",104,12,-18.3794040779515,-3.453494240739,TRUE,"unit root",TRUE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","PP","trend","first_difference",104,12,-12.7464741192628,-3.453494240739,TRUE,"unit root",TRUE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","PP","trend","first_difference",104,12,-11.7595073899984,-3.453494240739,TRUE,"unit root",TRUE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","PP","trend","first_difference",104,12,-13.5871938580141,-3.453494240739,TRUE,"unit root",TRUE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","PP","trend","first_difference",104,12,-16.0639292202397,-3.453494240739,TRUE,"unit root",TRUE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","PP","trend","first_difference",104,12,-16.8132140402872,-3.453494240739,TRUE,"unit root",TRUE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","PP","trend","first_difference",104,12,-17.1137824560379,-3.453494240739,TRUE,"unit root",TRUE
+"goods_services_balance_gdp","Goods and services balance / GDP","PP","trend","first_difference",104,12,-18.2030539122422,-3.453494240739,TRUE,"unit root",TRUE
+"net_foreign_income_gdp","Net foreign income / GDP","PP","trend","first_difference",104,12,-9.85186853991683,-3.453494240739,TRUE,"unit root",TRUE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","PP","trend","first_difference",104,12,-16.9632287025275,-3.453494240739,TRUE,"unit root",TRUE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","PP","trend","first_difference",104,12,-8.66571454960332,-3.453494240739,TRUE,"unit root",TRUE
+"net_transfers_gdp","Net transfers / GDP","PP","trend","first_difference",104,12,-9.57824929907083,-3.453494240739,TRUE,"unit root",TRUE
+"current_account_gdp","Current account / GDP","PP","trend","first_difference",104,12,-17.9719321161728,-3.453494240739,TRUE,"unit root",TRUE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","PP","trend","first_difference",104,12,-12.7024434450644,-3.453494240739,TRUE,"unit root",TRUE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","PP","trend","first_difference",104,12,-12.7068819890987,-3.453494240739,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","PP","trend","first_difference",104,12,-12.6873440796251,-3.453494240739,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","KPSS","trend","first_difference",104,12,0.0608827129951333,0.146,FALSE,"stationarity",TRUE
+"k_nr","Log nonresidential structures capital","KPSS","trend","first_difference",104,12,0.0673849303644827,0.146,FALSE,"stationarity",TRUE
+"kappa","Capital composition ratio","KPSS","trend","first_difference",104,12,0.0815618855323948,0.146,FALSE,"stationarity",TRUE
+"goods_balance_gdp","Goods balance / GDP","KPSS","trend","first_difference",104,12,0.0784477626751309,0.146,FALSE,"stationarity",TRUE
+"goods_exports_gdp","Goods exports / GDP","KPSS","trend","first_difference",104,12,0.0996277537520814,0.146,FALSE,"stationarity",TRUE
+"goods_imports_gdp","Goods imports / GDP","KPSS","trend","first_difference",104,12,0.0852452008778696,0.146,FALSE,"stationarity",TRUE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","KPSS","trend","first_difference",104,12,0.124240550069716,0.146,FALSE,"stationarity",TRUE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","KPSS","trend","first_difference",104,12,0.104655717694005,0.146,FALSE,"stationarity",TRUE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","KPSS","trend","first_difference",104,12,0.0449027001401304,0.146,FALSE,"stationarity",TRUE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","KPSS","trend","first_difference",104,12,0.106218386803415,0.146,FALSE,"stationarity",TRUE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","KPSS","trend","first_difference",104,12,0.0521227414134435,0.146,FALSE,"stationarity",TRUE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","KPSS","trend","first_difference",104,12,0.110369221117553,0.146,FALSE,"stationarity",TRUE
+"goods_services_balance_gdp","Goods and services balance / GDP","KPSS","trend","first_difference",104,12,0.0916100073449953,0.146,FALSE,"stationarity",TRUE
+"net_foreign_income_gdp","Net foreign income / GDP","KPSS","trend","first_difference",104,12,0.0550558832249092,0.146,FALSE,"stationarity",TRUE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","KPSS","trend","first_difference",104,12,0.0612563087429943,0.146,FALSE,"stationarity",TRUE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","KPSS","trend","first_difference",104,12,0.0476472278447112,0.146,FALSE,"stationarity",TRUE
+"net_transfers_gdp","Net transfers / GDP","KPSS","trend","first_difference",104,12,0.0738685533332166,0.146,FALSE,"stationarity",TRUE
+"current_account_gdp","Current account / GDP","KPSS","trend","first_difference",104,12,0.0753690905407582,0.146,FALSE,"stationarity",TRUE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","KPSS","trend","first_difference",104,12,0.0713820124876163,0.146,FALSE,"stationarity",TRUE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","KPSS","trend","first_difference",104,12,0.0620212463448789,0.146,FALSE,"stationarity",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","KPSS","trend","first_difference",104,12,0.0598453881228094,0.146,FALSE,"stationarity",TRUE
+"k_me","Log machinery and equipment capital","ERS-GLS","trend","first_difference",104,4,-2.43176238303257,-2.93,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","ERS-GLS","trend","first_difference",104,4,-2.4262138626226,-2.93,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","ERS-GLS","trend","first_difference",104,4,-2.56174374588944,-2.93,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","ERS-GLS","trend","first_difference",104,4,-1.97031698746134,-2.93,FALSE,"unit root",FALSE
+"goods_exports_gdp","Goods exports / GDP","ERS-GLS","trend","first_difference",104,4,-4.28836637614701,-2.93,TRUE,"unit root",TRUE
+"goods_imports_gdp","Goods imports / GDP","ERS-GLS","trend","first_difference",104,4,-1.93589307246102,-2.93,FALSE,"unit root",FALSE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","ERS-GLS","trend","first_difference",104,4,-3.64741309203814,-2.93,TRUE,"unit root",TRUE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","ERS-GLS","trend","first_difference",104,4,-3.98330533685841,-2.93,TRUE,"unit root",TRUE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","ERS-GLS","trend","first_difference",104,4,-3.24387920721876,-2.93,TRUE,"unit root",TRUE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","ERS-GLS","trend","first_difference",104,4,-1.92181882363044,-2.93,FALSE,"unit root",FALSE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","ERS-GLS","trend","first_difference",104,4,-1.97579339142586,-2.93,FALSE,"unit root",FALSE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","ERS-GLS","trend","first_difference",104,4,-1.86315565149396,-2.93,FALSE,"unit root",FALSE
+"goods_services_balance_gdp","Goods and services balance / GDP","ERS-GLS","trend","first_difference",104,4,-1.96023326031734,-2.93,FALSE,"unit root",FALSE
+"net_foreign_income_gdp","Net foreign income / GDP","ERS-GLS","trend","first_difference",104,4,-4.81578976211227,-2.93,TRUE,"unit root",TRUE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","ERS-GLS","trend","first_difference",104,4,-5.71153805656213,-2.93,TRUE,"unit root",TRUE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","ERS-GLS","trend","first_difference",104,4,-4.65645367402823,-2.93,TRUE,"unit root",TRUE
+"net_transfers_gdp","Net transfers / GDP","ERS-GLS","trend","first_difference",104,4,-3.76181709148347,-2.93,TRUE,"unit root",TRUE
+"current_account_gdp","Current account / GDP","ERS-GLS","trend","first_difference",104,4,-1.73766250929294,-2.93,FALSE,"unit root",FALSE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","ERS-GLS","trend","first_difference",104,4,-4.8263947928486,-2.93,TRUE,"unit root",TRUE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","ERS-GLS","trend","first_difference",104,4,-5.1177474959586,-2.93,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","ERS-GLS","trend","first_difference",104,4,-5.21915914361598,-2.93,TRUE,"unit root",TRUE
+"k_me","Log machinery and equipment capital","ZA-break","trend","first_difference",104,2,-4.09063563713266,-5.08,FALSE,"unit root",FALSE
+"k_nr","Log nonresidential structures capital","ZA-break","trend","first_difference",104,2,-3.97671072658207,-5.08,FALSE,"unit root",FALSE
+"kappa","Capital composition ratio","ZA-break","trend","first_difference",104,2,-4.22693145795373,-5.08,FALSE,"unit root",FALSE
+"goods_balance_gdp","Goods balance / GDP","ZA-break","trend","first_difference",104,2,-8.13529815906602,-5.08,TRUE,"unit root",TRUE
+"goods_exports_gdp","Goods exports / GDP","ZA-break","trend","first_difference",104,2,-7.66899103600466,-5.08,TRUE,"unit root",TRUE
+"goods_imports_gdp","Goods imports / GDP","ZA-break","trend","first_difference",104,2,-8.04902263647587,-5.08,TRUE,"unit root",TRUE
+"primary_goods_balance_gdp","Primary-goods balance / GDP","ZA-break","trend","first_difference",104,2,-7.2987284012187,-5.08,TRUE,"unit root",TRUE
+"primary_goods_exports_gdp","Primary-goods exports / GDP","ZA-break","trend","first_difference",104,2,-7.56214919425546,-5.08,TRUE,"unit root",TRUE
+"primary_goods_imports_gdp","Primary-goods imports / GDP","ZA-break","trend","first_difference",104,2,-7.77171727462624,-5.08,TRUE,"unit root",TRUE
+"manufactures_balance_gdp","Manufactured-goods balance / GDP","ZA-break","trend","first_difference",104,2,-6.99216623750214,-5.08,TRUE,"unit root",TRUE
+"manufactures_exports_gdp","Manufactured-goods exports / GDP","ZA-break","trend","first_difference",104,2,-8.16800839453875,-5.08,TRUE,"unit root",TRUE
+"manufactures_imports_gdp","Manufactured-goods imports / GDP","ZA-break","trend","first_difference",104,2,-7.45945600005039,-5.08,TRUE,"unit root",TRUE
+"goods_services_balance_gdp","Goods and services balance / GDP","ZA-break","trend","first_difference",104,2,-8.48225651596029,-5.08,TRUE,"unit root",TRUE
+"net_foreign_income_gdp","Net foreign income / GDP","ZA-break","trend","first_difference",104,2,-5.67129999266764,-5.08,TRUE,"unit root",TRUE
+"foreign_income_inflows_gdp","Foreign income inflows / GDP","ZA-break","trend","first_difference",104,2,-8.87566560600194,-5.08,TRUE,"unit root",TRUE
+"foreign_income_outflows_gdp","Foreign income outflows / GDP","ZA-break","trend","first_difference",104,2,-5.42483069627064,-5.08,TRUE,"unit root",TRUE
+"net_transfers_gdp","Net transfers / GDP","ZA-break","trend","first_difference",104,2,-7.76172257777801,-5.08,TRUE,"unit root",TRUE
+"current_account_gdp","Current account / GDP","ZA-break","trend","first_difference",104,2,-8.54630575946395,-5.08,TRUE,"unit root",TRUE
+"gross_foreign_assets_gdp","Gross foreign assets / GDP","ZA-break","trend","first_difference",104,2,-10.2795460171553,-5.08,TRUE,"unit root",TRUE
+"gross_foreign_liabilities_gdp","Gross foreign liabilities / GDP","ZA-break","trend","first_difference",104,2,-10.1227087531766,-5.08,TRUE,"unit root",TRUE
+"net_foreign_wealth_gdp","Net foreign wealth / GDP","ZA-break","trend","first_difference",104,2,-9.75393427641059,-5.08,TRUE,"unit root",TRUE

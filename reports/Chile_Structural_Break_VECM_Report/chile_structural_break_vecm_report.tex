@@ -1,0 +1,524 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,graphicx}
+\usepackage{microtype,xcolor,placeins,float}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\captionsetup[figure]{position=top,labelfont=bf,font=small,skip=4pt}
+\captionsetup[table]{position=top,labelfont=bf,font=small,skip=4pt}
+\setlength{\parindent}{1.15em}
+\setlength{\parskip}{0.10em}
+\setlength{\textfloatsep}{7pt plus 2pt minus 2pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\belowdisplayskip}{6pt}
+\setlength{\emergencystretch}{2em}
+\input{report_values.tex}
+
+\title{\textbf{Structural Change without an Identified
+Capital-Composition Elasticity: Chile, 1920--2024}}
+\author{Chapter 2 Empirical Report}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper asks whether Chile's capital stocks identify changes in the
+long-run elasticity of nonresidential structures with respect to machinery
+and equipment. The canonical annual panel contains 105 observations from
+1920 through 2024. The answer is definitive but negative. Neither stable nor
+break-adjusted cointegration is established, so the data identify no
+\(\beta_{\mathrm{ME}}\) and no period-specific
+\(\beta_{\mathrm{ME},j}\). A separate model of annual accumulation detects a
+change in 2005, with an analytic 95-percent interval of 1997--2019, but the
+growth rates do not meet the declared piecewise-stationarity condition.
+Consequently, the impact and three-year accumulation responses
+\(\eta_{j,0}\) and \(\eta_{j,3}\) are also not identified. The capital data
+therefore reveal historical changes in composition and in the conditional
+growth relation, but they do not isolate a long-run or short-run elasticity.
+This distinction prevents persistent stock trends, fitted regression breaks,
+and descriptive curvature from being mistaken for changes in technique.
+\end{abstract}
+
+\FloatBarrier
+\section{The answer and its economic meaning}
+
+Chile's machinery and equipment stock \(K^{\mathrm{ME}}\) and its
+nonresidential structures stock \(K^{\mathrm{NR}}\) represent different
+dimensions of accumulation. Machinery is treated here as the intensive
+margin through which production is reorganized, while structures form the
+plant envelope within which those techniques operate. This is a maintained
+analytical restriction, not a claim that the capital-stock data directly
+measure technology. The empirical question is whether the two observed
+stocks contain enough independent variation to measure their relationship.
+
+Their log difference defines capital composition:
+\begin{equation}
+  \kappa_t=k_t^{\mathrm{ME}}-k_t^{\mathrm{NR}}.
+  \label{eq:kappa}
+\end{equation}
+Because this is an identity, the vector
+\((k_t^{\mathrm{NR}},k_t^{\mathrm{ME}},\kappa_t)'\) is exactly singular.
+The system must therefore be bivariate,
+\(X_t=(k_t^{\mathrm{NR}},k_t^{\mathrm{ME}})'\), with \(\kappa_t\) used as
+a derived contrast rather than as a third endogenous variable.
+
+The long-run relation is normalized as
+\begin{equation}
+ k_t^{\mathrm{NR}}
+ =\alpha_j+\beta_{\mathrm{ME},j}k_t^{\mathrm{ME}}+u_t,
+ \qquad t\in(T_{j-1},T_j].
+ \label{eq:long-run}
+\end{equation}
+Within a statistically admissible period \(j\), a 10-percent permanent
+increase in machinery would correspond to approximately
+\(10\beta_{\mathrm{ME},j}\) percent more structures. A coefficient below one
+would mean that machinery outpaces structures; a coefficient above one would
+mean that structures increase more than proportionally. That interpretation
+requires a stationary long-run error \(u_t\). Without cointegration, a fitted
+slope between two persistent stocks is not a long-run elasticity.
+
+\input{table_definitive_answer.tex}
+
+Table~\ref{tab:definitive-answer} separates three findings that would
+otherwise be easy to conflate. First, the capital stocks do not establish a
+stable or period-specific long-run elasticity. Second, the annual growth
+relation changes around 2005, but its coefficients do not pass the
+stationarity condition required for an accumulation elasticity. Third, the
+curvature of \(\kappa_t\) supplies descriptive historical markers only. The
+paper therefore dates changes in observed capital behavior without assigning
+an elasticity magnitude that the data cannot sustain.
+
+\FloatBarrier
+\section{Capital stocks and capital composition}
+
+The source is the canonical Chile capital panel in constant 2003 CLP. All 105
+annual observations from 1920 through 2024 reproduce, and the frozen source
+hash begins \CapitalSourceHash. Older results based on 91 observations or on
+a 1920--2010 endpoint are not evidence for this sample. Earlier files that
+labeled ordinary least squares with Newey--West errors or cumulative
+regressions as FM--OLS or IM--OLS are also excluded. No central result below
+uses those coefficients.
+
+\begin{figure}[h!]
+\centering
+\caption{Chile's machinery and nonresidential structures stocks, 1920--2024}
+\label{fig:stocks}
+\includegraphics[width=0.86\textwidth]{../../output/CL/SBVECM/S20_DUAL_ROUTE_BREAK_AUDIT/figures/fig1_capital_log_stocks.pdf}
+\vspace{1pt}\par{\footnotesize \textbf{Note:} The figure plots the observed log
+capital stocks before deterministic adjustment. Their common upward movement
+motivates a long-run test but does not establish cointegration. Both stocks
+cumulate investment and retirements, so persistence is partly built into their
+measurement.}
+\end{figure}
+
+The common rise in Figure~\ref{fig:stocks} is economically important but
+statistically insufficient. Capital stocks are accumulated magnitudes; each
+observation embeds the preceding investment history. A high correlation can
+therefore emerge even when the residual combination in
+equation~\eqref{eq:long-run} remains nonstationary. This is why the empirical
+burden lies first on integration order and cointegration, not on the size of a
+levels-regression slope.
+
+\begin{figure}[h!]
+\centering
+\caption{Observed capital composition and its LOESS tendency}
+\label{fig:loess}
+\includegraphics[width=0.86\textwidth]{../../output/CL/SBVECM/S20_DUAL_ROUTE_BREAK_AUDIT/figures/fig2_kappa_loess_route.pdf}
+\vspace{1pt}\par{\footnotesize \textbf{Note:} Points are the observed
+\(\kappa_t\); the continuous line is a LOESS fit. Zero-crossings of the
+fit's second derivative occur near \LoessDates. These dates describe changes
+in curvature. The fitted line and its derivatives are neither economic time
+series nor inputs to the parametric break tests.}
+\end{figure}
+
+Figure~\ref{fig:loess} brings the historical movement down to the observed
+composition ratio. The scatter shows the data; the line summarizes its local
+tendency. The second derivative is used only to mark changes in curvature.
+It is never unit-root tested, never treated as a stochastic series, and never
+used to choose the formal coefficient periods. Agreement or disagreement
+between a curvature date and a parametric date is descriptive comparison,
+not mutual validation.
+
+\FloatBarrier
+\section{What the structural-break tests establish}
+
+A structural break can concern the path of one stock, the deterministic
+component of a relation, the slope of a fitted regression, or the
+cointegrating vector itself. These are different empirical objects.
+Table~\ref{tab:method-map} states what each procedure can and cannot support.
+
+\input{table_method_map.tex}
+
+\subsection{From an individual series to a long-run relation}
+
+Zivot--Andrews asks whether a single series rejects a unit root once one
+unknown break is admitted under the alternative. In a stylized intercept-and-
+trend specification,
+\begin{equation}
+ y_t=\mu+\theta DU_t(\lambda)+\beta t+\gamma DT_t(\lambda)
+      +\rho y_{t-1}+\sum_{i=1}^{p}c_i\Delta y_{t-i}+e_t ,
+ \label{eq:za}
+\end{equation}
+the break fraction \(\lambda\) is selected where the unit-root statistic is
+most adverse to the null. Rejection informs the integration classification
+of \(y_t\); it does not show that the slope linking
+\(k_t^{\mathrm{NR}}\) to \(k_t^{\mathrm{ME}}\) changed.
+Lee--Strazicich provides a complementary two-break LM test that permits
+breaks under both null and alternative. Neither test, by itself, identifies
+\(\beta_{\mathrm{ME},j}\).
+
+Bai--Perron asks whether coefficients in a stable regression are constant
+across unknown segments. For \(m\) breaks,
+\begin{equation}
+ y_t=x_t'\vartheta+z_t'\delta_j+e_t,
+ \qquad t=T_{j-1}+1,\ldots,T_j ,
+ \label{eq:bp}
+\end{equation}
+it minimizes the global residual sum of squares subject to a minimum segment
+length and tests zero against one or more breaks. The procedure is highly
+useful for locating candidate changes and constructing confidence intervals.
+In a levels regression with integrated variables, however, ordinary
+Bai--Perron inference does not establish that the residual is stationary.
+Its dates cannot, on their own, divide the long-run elasticity.
+
+\begin{figure}[h!]
+\centering
+\caption{Bai--Perron segmented fits: candidate changes in the capital relation}
+\label{fig:bp}
+\includegraphics[width=0.92\textwidth]{../../output/CL/SBVECM/S20_DUAL_ROUTE_BREAK_AUDIT/figures/fig3_bai_perron_segmented_fits.pdf}
+\vspace{1pt}\par{\footnotesize \textbf{Note:} Segmented fits and confidence
+intervals reproduce the candidate evidence for the stock equations,
+\(\kappa_t\), and the normalized capital relation. The principal parametric
+candidate dates are \ParametricCandidateDates. They locate instability in
+fitted relations; they do not establish cointegration or a change in
+\(\beta_{\mathrm{ME}}\).}
+\end{figure}
+
+Figure~\ref{fig:bp} restores the break graph omitted from the earlier report.
+Its economic value is to show that a constant descriptive relation is
+implausible over the century. Its inferential limit is equally important:
+smooth persistent stocks can generate sharply segmented fits even when no
+stationary long-run error exists.
+
+\subsection{From candidate instability to cointegration}
+
+Gregory--Hansen tests the null of no cointegration against cointegration with
+one unknown level, trend, or regime change. A regime-shift version can be
+written
+\begin{equation}
+ k_t^{\mathrm{NR}}=\alpha_1+\alpha_2DU_t(\lambda)
+ +\beta_1 k_t^{\mathrm{ME}}
+ +\beta_2DU_t(\lambda)k_t^{\mathrm{ME}}+u_t .
+ \label{eq:gh}
+\end{equation}
+The statistic takes the most favorable residual-based unit-root value over
+the trimmed set of possible dates. Rejection would establish one-break
+cointegration under the chosen deterministic form; the estimated date would
+then be eligible for system analysis.
+
+Kejriwal--Perron addresses multiple coefficient changes in an already
+cointegrated regression with integrated regressors. It therefore asks the
+right stability question only after cointegration is established. The
+UDmax statistic tests stability against an unknown number of breaks, and
+sequential supF tests select their count subject to the trimming rule. A
+large statistic can reject coefficient stability conditional on
+cointegration; it cannot supply the missing cointegration prerequisite.
+
+Johansen--Mosconi--Nielsen then provides rank inference with known
+deterministic breaks, while L\"utkepohl--Saikkonen--Trenkler treats one
+unknown system-level shift. Hansen--Johansen recursive statistics concern
+the constancy of a cointegrating vector after its rank is established.
+These system procedures answer whether equation~\eqref{eq:long-run} belongs
+to a coherent adjustment system; they are not substitutes for the
+single-series or residual-cointegration evidence.
+
+\FloatBarrier
+\section{Long-run cointegration and
+\texorpdfstring{\(\beta_{\mathrm{ME}}\)}{beta ME}}
+
+The full integration audit applies ADF, Phillips--Perron, KPSS, ERS--GLS,
+Schmidt--Phillips, and Zivot--Andrews tests to
+\(k_t^{\mathrm{NR}}\), \(k_t^{\mathrm{ME}}\), and \(\kappa_t\) in levels,
+first differences, and second differences, supplemented by break-aware
+tests. The primary deterministic cases do not produce a common, unambiguous
+\(I(1)\) classification for the two stocks. Conflicting evidence is retained
+as inconclusive rather than forced into an \(I(1)\) designation.
+
+\input{table_long_run.tex}
+
+The residual and system evidence in Table~\ref{tab:long-run} resolves the
+question. The best Gregory--Hansen statistic is \(-4.778\), which does not
+cross its relevant 5-percent critical value of \(-4.95\). None of the six
+Phillips--Ouliaris variants rejects no cointegration. The no-break Johansen
+system selects rank two rather than the single cointegrating vector required
+to identify equation~\eqref{eq:long-run}.
+
+The independent \texttt{mbreaks} implementation produces
+\(\mathrm{UDmax}=\IndependentKPUdmax\), above the 5-percent critical value
+\(\IndependentKPCritical\). This corrects the earlier custom computation,
+which understated the instability evidence. Yet the correction does not
+create coefficient periods: the Kejriwal--Perron distribution presumes a
+cointegrated regression, while the preceding tests do not establish one.
+The statistic therefore says that a stable cointegrating regression would
+be rejected if such a regression were admissible; it cannot prove that the
+capital stocks cointegrate.
+
+No date consequently passes the full sequence of integration, break-aware
+cointegration, rank-one, and residual-dynamics conditions. The actual
+\texttt{cointRegIM} estimator is intentionally not run, because a
+super-consistent coefficient is not meaningful after those prerequisites
+fail. FM--OLS and DOLS cannot repair the failure and remain excluded from the
+central evidence. There is therefore no admissible
+\(\beta_{\mathrm{ME}}\), no \(\beta_{\mathrm{ME},j}\), and no statistical
+basis for testing whether a reported period coefficient equals one.
+
+The same logic governs \(\kappa_t\). Global stationarity would require the
+unit-vector restriction \(\beta_{\mathrm{ME}}=1\), no slope changes, and no
+permanent deterministic shift in \(\kappa_t\). Piecewise stationarity would
+permit level shifts but still require every regime-specific machinery
+coefficient to equal one. Since no cointegrating vector is identified, these
+restrictions cannot be evaluated as long-run restrictions. Visual proximity
+of a fitted coefficient to one would not establish stationarity.
+
+\FloatBarrier
+\section{Stationary accumulation and
+\texorpdfstring{\(\eta_j\)}{eta j}}
+
+Long-run non-identification does not rule out a separate relation between
+annual accumulation rates. The relevant stationary model is
+\begin{equation}
+\Delta k_t^{\mathrm{NR}}
+=c_j+\sum_{\ell=1}^{p}a_\ell\Delta k_{t-\ell}^{\mathrm{NR}}
+ +\sum_{\ell=0}^{p}b_{j\ell}\Delta k_{t-\ell}^{\mathrm{ME}}+e_t .
+\label{eq:dynamic}
+\end{equation}
+Here \(\eta_{j,0}=b_{j0}\) would measure the conditional impact response of
+structures growth to machinery growth, while
+\(\eta_{j,3}\) would cumulate the dynamic response through three years.
+These are conditional accumulation elasticities, not the long-run
+cointegrating coefficient in equation~\eqref{eq:long-run}.
+
+The lag order is chosen on a common sample. BIC selects \(p=\DynamicLag\);
+the resulting equation passes the four-lag residual serial-correlation test
+with \(p=0.504\). Allowing the intercept and machinery-response coefficients
+to change, the break test gives
+\(\mathrm{UDmax}=\DynamicUDmax\), above its 5-percent critical value
+\(\DynamicUDmaxCV\). The sequential procedure rejects zero against one break
+but not one against two, locating the change in \DynamicBreakDate\ with a
+95-percent interval of \DynamicBreakCI.
+
+\input{table_dynamic_break.tex}
+
+This is strong evidence that the conditional growth relation is not constant.
+It is not yet an elasticity result. The statistical meaning of the
+coefficients in equation~\eqref{eq:dynamic} depends on stationary growth
+rates within the deterministic specification used to define the break.
+The complete battery is therefore repeated after allowing a 2005 mean shift.
+
+\input{table_growth_stationarity.tex}
+
+For \(\Delta k_t^{\mathrm{NR}}\), three of the six primary test families
+support stationarity; ERS is conflicting, while Schmidt--Phillips and
+Zivot--Andrews retain a unit root. For
+\(\Delta k_t^{\mathrm{ME}}\), only ADF and KPSS support stationarity;
+Phillips--Perron conflicts and the remaining families retain a unit root.
+The declared requirement of four concordant families is not met for either
+series, and the two-break Lee--Strazicich tests do not reverse that verdict.
+The evidence remains inconclusive instead of being resolved by counting the
+many specifications inside one test family.
+
+\begin{figure}[h!]
+\centering
+\caption{Annual capital accumulation and the 2005 diagnostic break}
+\label{fig:accumulation}
+\includegraphics[width=0.90\textwidth]{../../output/CL/SBVECM/S35_DYNAMIC_ACCUMULATION_RESPONSE/figures/fig8_accumulation_evidence.pdf}
+\vspace{1pt}\par{\footnotesize \textbf{Note:} The left panel plots observed
+annual log changes; the right panel displays their contemporaneous
+association. The vertical line marks the diagnostic 2005 change. No fitted
+response line is shown because the stationarity condition needed to interpret
+its slope as \(\eta_j\) is not satisfied.}
+\end{figure}
+
+\input{table_eta.tex}
+
+The blank coefficient cells in Table~\ref{tab:eta} are empirical results,
+not missing calculations. Estimating separate period regressions would
+manufacture magnitudes after the governing condition failed, especially in
+the 19-observation post-2005 period. The conditional bivariate VAR and
+Granger-exclusion tests are also not reported because they require the same
+stationary system. Resampling cannot remedy this problem: bootstrap inference
+can approximate the distribution of an admissible statistic, but it cannot
+turn persistent growth rates into stationary variables. No bootstrap is
+therefore necessary or appropriate for the reported verdict.
+
+\FloatBarrier
+\section{Historical interpretation}
+
+The evidence establishes structural change in Chilean capital accumulation
+without identifying its elasticity. The capital stocks visibly change their
+relative tendency over the century, ordinary segmented regressions reject
+constancy, and the dynamic growth relation changes around 2005. These
+findings reject a timeless descriptive mapping from machinery into
+structures. They do not reveal by how much a permanent machinery expansion
+changes structures in the long run, nor do they supply a stationary
+short-run response.
+
+This boundary matters for the choice-of-technique interpretation. A rising
+\(\kappa_t\) is consistent with machinery deepening relative to the plant
+envelope, but it does not by itself identify the behavioral mechanism.
+Capital-stock construction combines investment, retirement, relative
+prices, and inherited stocks. With only the two stock series, secular
+measurement persistence and economic adjustment cannot be separated tightly
+enough to assign a coefficient magnitude. The maintained intensive/extensive
+distinction supplies the economic question; it cannot supply the missing
+statistical variation.
+
+The 2005 change has a similarly bounded interpretation. It indicates that
+the observed conditional association between the two accumulation rates
+changes within a broad 1997--2019 interval. The interval is too wide for a
+single institutional date to be inferred from the capital data alone, and
+the nonstationary evidence blocks a parameter interpretation. The result is
+historically suggestive but neither causal nor an estimate of technique.
+
+\FloatBarrier
+\section{Conclusion}
+
+The canonical 1920--2024 Chile capital panel does not identify the order of
+magnitude of \(\beta_{\mathrm{ME}}\), either as one stable coefficient or as
+period-specific coefficients across structural breaks. The decisive reason
+is not the absence of visible breaks. On the contrary, instability is strong:
+the independent Kejriwal--Perron statistic and the segmented fits reject
+constancy. The reason is that stable and one-break cointegration are not
+established and the system does not supply an admissible rank-one vector.
+Candidate dates therefore cannot become long-run coefficient periods.
+
+The separate accumulation analysis reaches the other predetermined outcome.
+A single dynamic change is detected in 2005, but neither capital-growth rate
+passes the declared piecewise-stationarity condition. The evidence therefore
+does not identify \(\eta_{j,0}\) or \(\eta_{j,3}\). Chile's capital data
+establish historical change in composition and accumulation, but they
+identify neither a long-run elasticity nor a conditional accumulation
+elasticity. That non-identification is the definitive answer supplied by the
+available capital stocks.
+
+\FloatBarrier
+\appendix
+\section{Compact methodological record}
+
+\subsection{Integration and break adjudication}
+
+The unit-root audit records deterministic case, lag, statistic, and critical
+value for ADF, Phillips--Perron, KPSS, ERS--GLS,
+Schmidt--Phillips, and Zivot--Andrews tests in levels, first differences, and
+second differences. Test families receive one primary verdict per
+deterministic case so that families with more tuning choices do not dominate.
+Break-aware Lee--Strazicich results supplement, rather than replace, this
+evidence. A deterministic step may absorb a level shift; it is not presumed
+to convert a genuine \(I(2)\) process into \(I(1)\).
+
+The parametric evidence uses a 15-percent minimum segment and no more than
+three breaks. Ordinary Bai--Perron dates are candidate changes.
+Gregory--Hansen supplies one-break residual cointegration evidence.
+Kejriwal--Perron supplies multiple-break stability evidence conditional on
+cointegration. Known deterministic shifts belong in the
+Johansen--Mosconi--Nielsen system, while an unknown system shift belongs in
+the L\"utkepohl--Saikkonen--Trenkler procedure. No LOESS curvature date enters
+these computations.
+
+\subsection{Coefficient construction and inference}
+
+Had validated long-run breaks existed, period coefficients would have been
+estimated jointly with initial-break-state-centered interactions:
+\begin{equation}
+k_t^{\mathrm{NR}}=\alpha_1+\beta_1 k_t^{\mathrm{ME}}
++\sum_{b=1}^{m}\gamma_bD_{b,t}
++\sum_{b=1}^{m}\theta_bD_{b,t}
+  \bigl(k_t^{\mathrm{ME}}-k_{T_b}^{\mathrm{ME}}\bigr)+u_t ,
+\end{equation}
+where \(\beta_{\mathrm{ME},1}=\beta_1\) and
+\(\beta_{\mathrm{ME},j}=\beta_1+\sum_{b<j}\theta_b\).
+Here \(\gamma_b\) denotes deterministic step controls in the single equation;
+the system form uses \(\boldsymbol{\Gamma}\mathbf D_t\).
+Uncentered and sample-mean-centered versions would be numerical
+comparators assessed by confidence-band overlap and condition numbers.
+Residualization is not used. Since the cointegration conditions fail, these
+coefficients and their cumulative covariance are not estimated.
+
+Analytic break-aware and HAC inference is the default. Restricted-null
+residual bootstrap inference would be reserved for an eligible
+estimated-break system lacking analytic rank inference, material
+break-selection uncertainty not covered analytically, or an indispensable
+period with at most 30 observations. None of those situations arises after
+the identification conditions fail, so the number of bootstrap replications
+used is zero.
+
+\subsection{System interpretation}
+
+The bivariate error-correction representation underlying the system checks is
+\begin{equation}
+\Delta X_t=\boldsymbol{\Pi}X_{t-1}
++\sum_{i=1}^{p-1}\boldsymbol{\Gamma}_i\Delta X_{t-i}
++\boldsymbol{\Gamma}\mathbf D_t+\varepsilon_t,
+\qquad
+\boldsymbol{\Pi}=\boldsymbol{\alpha}\boldsymbol{\beta}' .
+\end{equation}
+For two persistent capital stocks, rank zero means that no stationary
+long-run combination enters the system. Rank one is the economically relevant
+case: \(\boldsymbol{\beta}\) contains the normalized capital-composition
+relation and \(\boldsymbol{\alpha}\) records how each stock responds to its
+disequilibrium. Rank two makes the levels system full rank and therefore does
+not deliver the single common-trend relation required to interpret
+\(\beta_{\mathrm{ME}}\). The no-break rank-two result is consequently not
+evidence of a stronger form of the desired cointegration; it shows that the
+proposed \(I(1)\), rank-one representation is not supported.
+
+Known step shifts enter through \(\boldsymbol{\Gamma}\mathbf D_t\), while
+slope changes belong in the cointegrating vector and require break-aware rank
+inference. A deterministic shift can alter the mean of \(\kappa_t\), but it
+cannot be used mechanically to remove stochastic persistence. Adjustment
+coefficients, weak-exogeneity tests, recursive constancy, and companion-root
+diagnostics become interpretable only after an admissible rank is established.
+They are therefore not reported as isolated system statistics after the
+rank-one condition fails.
+
+\FloatBarrier
+\clearpage
+\section{References}
+
+\begin{description}
+\setlength{\itemsep}{2pt}
+\item Bai, J., and P. Perron. 2003. ``Computation and Analysis of Multiple
+Structural Change Models.'' \emph{Journal of Applied Econometrics}
+18(1): 1--22.
+\item Gregory, A. W., and B. E. Hansen. 1996. ``Residual-Based Tests for
+Cointegration in Models with Regime Shifts.'' \emph{Journal of Econometrics}
+70(1): 99--126.
+\item Hansen, H., and S. Johansen. 1999. ``Some Tests for Parameter Constancy
+in Cointegrated VAR-Models.'' \emph{Econometrics Journal} 2(2): 306--333.
+\item Johansen, S., R. Mosconi, and B. Nielsen. 2000. ``Cointegration Analysis
+in the Presence of Structural Breaks in the Deterministic Trend.''
+\emph{Econometrics Journal} 3(2): 216--249.
+\item Kejriwal, M., and P. Perron. 2010. ``Testing for Multiple Structural
+Changes in Cointegrated Regression Models.'' \emph{Journal of Business and
+Economic Statistics} 28(4): 503--522.
+\item Lee, J., and M. C. Strazicich. 2003. ``Minimum Lagrange Multiplier Unit
+Root Test with Two Structural Breaks.'' \emph{Review of Economics and
+Statistics} 85(4): 1082--1089.
+\item L\"utkepohl, H., P. Saikkonen, and C. Trenkler. 2004. ``Testing for the
+Cointegrating Rank of a VAR Process with Level Shift at Unknown Time.''
+\emph{Econometrica} 72(2): 647--662.
+\item Nguyen, T. H., Y. Yamamoto, and P. Perron. 2025. \emph{mbreaks:
+Multiple Break Testing and Estimation}. R package version 1.0.1.
+\item Phillips, P. C. B., and S. Ouliaris. 1990. ``Asymptotic Properties of
+Residual Based Tests for Cointegration.'' \emph{Econometrica}
+58(1): 165--193.
+\item Zivot, E., and D. W. K. Andrews. 1992. ``Further Evidence on the Great
+Crash, the Oil-Price Shock, and the Unit-Root Hypothesis.''
+\emph{Journal of Business and Economic Statistics} 10(3): 251--270.
+\end{description}
+
+\end{document}

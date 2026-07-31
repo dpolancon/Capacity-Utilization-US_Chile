@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+title: "rscd-shaikh-2016-replication"
+version: "1.6.0"
+date-released: "2026-07-10"
+authors:
+  - family-names: "Anderson"
+    given-names: "Nicholas"
+    affiliation: "The New School for Social Research"
+repository-code: ""
+license: MIT
+keywords:
+  - economics
+  - data-replication
+  - reproducible-research
+references:
+  - type: book
+    authors:
+      - name: "Anwar Shaikh"
+    title: "Capitalism: Competition, Conflict, Crises"
+    year: 2016
+    publisher:
+      name: "Oxford University Press"

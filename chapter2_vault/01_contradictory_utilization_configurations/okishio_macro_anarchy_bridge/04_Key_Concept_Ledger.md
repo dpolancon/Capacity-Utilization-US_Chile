@@ -1,16 +1,22 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-04-23
 title: Okishio Key Concept Ledger
 project: "Chapter 2 \u2014 utilization, accumulation, and firm fracture"
 tags:
-- okishio
-- concept-ledger
-- market-anarchy
+  - okishio
+  - concept-ledger
+  - market-anarchy
+subtype: analytical_foundation
+blocks: []
+layer: theory
+scope: chapter2
+priority: reference
 ---
 
 # Key Concept Ledger

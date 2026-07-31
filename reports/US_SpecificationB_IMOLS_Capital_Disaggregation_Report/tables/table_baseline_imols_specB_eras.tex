@@ -1,0 +1,43 @@
+\begin{landscape}
+\begin{table}[H]
+\centering
+\caption{Specification B Accumulation Eras Comparative Matrix (Fordism 1929--1973 vs. Post-Fordism 1974--2024)}
+\label{tab:specB_eras}
+\small
+\begin{tabular}{p{5.0cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}
+\toprule
+\multicolumn{9}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}} / S_{y^{\text{NFC}}}$}} \\
+\midrule
+Model & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)  \\
+Centering Treatment & Initial-St & Initial-St & Uncentered & Uncentered & Initial-St & Initial-St & Uncentered & Uncentered  \\
+\midrule
+$\hat{\theta}_{\text{NRC}}$ & 1.21$^{***}$ & 0.40 & 1.29$^{***}$ & 0.62$^{**}$ & 0.53$^{***}$ & 0.52$^{***}$ & 0.50$^{***}$ & 0.67$^{***}$  \\
+ & {\scriptsize (5.99)} & {\scriptsize (1.54)} & {\scriptsize (6.40)} & {\scriptsize (2.10)} & {\scriptsize (7.79)} & {\scriptsize (8.43)} & {\scriptsize (7.01)} & {\scriptsize (10.51)}  \\
+$\hat{\theta}_{\kappa}$ & 1.90 & 5.22 & 1.93 & -5.87 & 2.45 & 5.12 & 2.09 & 6.94  \\
+ & {\scriptsize (0.53)} & {\scriptsize (0.92)} & {\scriptsize (0.57)} & {\scriptsize (-1.08)} & {\scriptsize (0.73)} & {\scriptsize (0.94)} & {\scriptsize (0.62)} & {\scriptsize (1.30)}  \\
+$\hat{\beta}_{p^{\kappa}}$ & 1.76 & -3.67 & 2.27 & 5.33$^{**}$ & 0.29 & 0.76 & 0.20 & 0.35  \\
+ & {\scriptsize (0.98)} & {\scriptsize (-1.47)} & {\scriptsize (1.44)} & {\scriptsize (2.17)} & {\scriptsize (1.00)} & {\scriptsize (1.64)} & {\scriptsize (0.67)} & {\scriptsize (0.77)}  \\
+$\hat{\beta}_{\omega}$ & -7.89$^{*}$ & -4.30 & -8.16$^{*}$ & 4.96 & 0.18 & -1.66 & 1.25 & -3.25  \\
+ & {\scriptsize (-1.79)} & {\scriptsize (-0.54)} & {\scriptsize (-1.86)} & {\scriptsize (0.61)} & {\scriptsize (0.06)} & {\scriptsize (-0.34)} & {\scriptsize (0.41)} & {\scriptsize (-0.68)}  \\
+$\hat{\theta}_{\omega \kappa}$ & -4.10 & -0.27 & -5.05 & 5.61 & -4.77 & -10.52 & -4.37 & -12.04  \\
+ & {\scriptsize (-0.96)} & {\scriptsize (-0.04)} & {\scriptsize (-1.17)} & {\scriptsize (0.72)} & {\scriptsize (-0.85)} & {\scriptsize (-1.16)} & {\scriptsize (-0.76)} & {\scriptsize (-1.32)}  \\
+$\hat{\theta}_{\kappa p^{\kappa}}$ & 0.37 & -4.18$^{*}$ & 0.75 & 3.02 & 0.82$^{*}$ & 1.42$^{**}$ & 0.60 & 0.48  \\
+ & {\scriptsize (0.24)} & {\scriptsize (-1.87)} & {\scriptsize (0.56)} & {\scriptsize (1.47)} & {\scriptsize (1.90)} & {\scriptsize (1.99)} & {\scriptsize (1.33)} & {\scriptsize (0.69)}  \\
+$\boldsymbol{\gamma}' \mathbf{D}_t$ & Yes & No & Yes & No & Yes & No & Yes & No  \\
+\midrule
+\multicolumn{9}{l}{\underline{Cointegration Tests}} \\
+VW Type 2 ($\lambda_2 = 0$) [$H_0$: Coint] & 9.1117 & 4.9543 & 8.8692 & 4.4550 & 1.9416 & 1.8726 & 1.2789 & 0.8590  \\
+Resid. ADF ($t_{\text{ADF}}$) [$H_0$: No Coint] & -4.85$^{**}$ & -4.91$^{**}$ & -4.97$^{**}$ & -4.25$^{*}$ & -5.57$^{***}$ & -3.57 & -5.20$^{***}$ & -3.06  \\
+Shin LM ($C_{\text{Shin}}$) [$H_0$: Coint] & 0.048 & 0.139 & 0.025 & 0.057 & 0.023 & 0.037 & 0.025 & 0.046  \\
+\midrule
+\multicolumn{9}{l}{\underline{Goodness-of-Fit \& Controls}} \\
+$R_{\text{level}}^2$ & 0.994 & 0.981 & 0.995 & 0.980 & 0.995 & 0.990 & 0.994 & 0.984  \\
+$R_{\text{sum}}^2$ & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000  \\
+$\hat{\sigma}_u$ & 0.057 & 0.096 & 0.053 & 0.099 & 0.036 & 0.049 & 0.040 & 0.062  \\
+Sample Window & Fordism & Fordism & Fordism & Fordism & Post-Fordism & Post-Fordism & Post-Fordism & Post-Fordism  \\
+Sample Size ($T$) & 43 & 43 & 43 & 43 & 51 & 51 & 51 & 51  \\
+\bottomrule
+\multicolumn{9}{p{19.5cm}}{\footnotesize Note: Estimated via Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014). Fixed-$b$ HAR $t$-statistics reported in parentheses underneath point estimates. $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. **Star Reversal Warning:** For the Residual ADF test, significance stars indicate rejection of No Cointegration (supporting cointegration). For the VW Type 2 ($\lambda_2 = 0$) and Shin LM ($C_{\text{Shin}}$) tests, significance stars indicate rejection of Cointegration (indicating non-stationarity / spurious regression). Dependent variable $y_t^{\text{NFC}}$ denotes log real gross value added of the U.S. Non-Financial Corporate (NFC) sector (BEA NIPA Table 1.14). Structural step dummy controls $\boldsymbol{\gamma}' \mathbf{D}_t$ incorporate LOESS-diagnosed inflections on aggregate capital stock at 1933, 1947, 1968, 1982, and 2008.}
+\end{tabular}
+\end{table}
+\end{landscape}

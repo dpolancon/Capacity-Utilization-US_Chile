@@ -1,10 +1,16 @@
 ---
-type: prompt_execution_contract
+type: research_note
 status: active
-depends_on: [chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md
 stage_scope: all_stages
 country: US_CL
 last_updated: 2026-07-21
+subtype: prompt_execution_contract
+blocks: []
+layer: implementation
+scope: chapter2
+priority: context
 ---
 
 # Implementation Plan: Chapter 2 Comparative Reconstruction & Micro-Outline

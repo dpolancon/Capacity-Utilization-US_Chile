@@ -1,7 +1,8 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-05-19
@@ -12,55 +13,59 @@ level: theoretical-core
 flat_notebook: true
 core_object: contradictory utilization configurations
 higher_order_object: utilization regimes
-central_claim: A firm-level normal degree of capacity utilization presupposes a unified
-  organizational subject that capitalist labor management does not actually provide.
+central_claim: A firm-level normal degree of capacity utilization presupposes a unified organizational subject that capitalist labor management does not actually provide.
 primary_function:
-- theoretical core
-- concept formation
-- micro-foundational critique
+  - theoretical core
+  - concept formation
+  - micro-foundational critique
 ontological_target:
-- unified firm
-- unified normal benchmark
+  - unified firm
+  - unified normal benchmark
 mechanism_of_contradiction:
-- discipline-empowerment
-- labor-process/valorization split
-- managerial satisficing
+  - discipline-empowerment
+  - labor-process/valorization split
+  - managerial satisficing
 scale:
-- shop floor
-- plant
-- corporate
+  - shop floor
+  - plant
+  - corporate
 capacity_convention:
-- practical
-- planned
+  - practical
+  - planned
 utilization_object:
-- theoretical normal
-- realized
+  - theoretical normal
+  - realized
 temporal_horizon:
-- medium-run tactical adjustment
-- historical regime
+  - medium-run tactical adjustment
+  - historical regime
 critical_leverage:
-- agency
-- unity
-- temporality
+  - agency
+  - unity
+  - temporality
 main_authors:
-- Braverman
-- Vidal
-- Adler
-- Thompson
-- Elger
-- Littler
-- Cressey and MacInnes
+  - Braverman
+  - Vidal
+  - Adler
+  - Thompson
+  - Elger
+  - Littler
+  - Cressey and MacInnes
 tags:
-- utilization
-- normal-degree
-- contradictory-utilization-configurations
-- utilization-regimes
-- labor-process
-- valorization
-- divided-management
-- managerial-satisficing
-- post-fordism
-- firm-theory
+  - utilization
+  - normal-degree
+  - contradictory-utilization-configurations
+  - utilization-regimes
+  - labor-process
+  - valorization
+  - divided-management
+  - managerial-satisficing
+  - post-fordism
+  - firm-theory
+subtype: analytical_foundation
+blocks: []
+layer: theory
+scope: chapter2
+priority: reference
 ---
 
 > Flat-notebook rule: this note remains one developed artifact. Classification is handled through YAML and sparse wikilinks. Wikilinks connect reusable concepts, authors, and export objects; they do not split the notebook into nested notes.

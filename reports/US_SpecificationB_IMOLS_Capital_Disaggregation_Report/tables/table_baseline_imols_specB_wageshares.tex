@@ -1,0 +1,44 @@
+\begin{landscape}
+\begin{table}[H]
+\centering
+\caption{Specification B Multi-Wage Share Robustness Matrix (Full Century 1929--2024, Initial-State Centering)}
+\label{tab:specB_wageshares}
+\small
+\begin{tabular}{p{5.0cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}
+\toprule
+\multicolumn{9}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}} / S_{y^{\text{NFC}}}$}} \\
+\midrule
+Model & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)  \\
+Wage Measure & Baseline NFC GVA & Baseline NFC GVA & Corporate GVA & Corporate GVA & Shaikh-Tonak Tier 1 & Shaikh-Tonak Tier 1 & Shaikh-Tonak Tier 2 & Shaikh-Tonak Tier 2  \\
+Centering Treatment & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St  \\
+\midrule
+$\hat{\theta}_{\text{NRC}}$ & 0.33$^{***}$ & 0.43$^{***}$ & 0.31$^{***}$ & 0.42$^{***}$ & 0.38$^{***}$ & 0.49$^{***}$ & 0.48$^{***}$ & 0.55$^{***}$  \\
+ & {\scriptsize (4.62)} & {\scriptsize (11.16)} & {\scriptsize (4.53)} & {\scriptsize (10.78)} & {\scriptsize (5.80)} & {\scriptsize (10.41)} & {\scriptsize (7.22)} & {\scriptsize (17.52)}  \\
+$\hat{\theta}_{\kappa}$ & -7.14$^{***}$ & -1.99 & -8.70$^{***}$ & -5.87 & -2.68 & 0.62 & 0.16 & 1.74  \\
+ & {\scriptsize (-2.59)} & {\scriptsize (-0.43)} & {\scriptsize (-3.29)} & {\scriptsize (-1.32)} & {\scriptsize (-1.32)} & {\scriptsize (0.19)} & {\scriptsize (0.10)} & {\scriptsize (0.88)}  \\
+$\hat{\beta}_{p^{\kappa}}$ & -1.17$^{***}$ & -0.48 & -1.28$^{***}$ & -0.37 & -0.95$^{***}$ & -0.42 & -0.47 & 0.09  \\
+ & {\scriptsize (-3.00)} & {\scriptsize (-0.98)} & {\scriptsize (-3.52)} & {\scriptsize (-0.73)} & {\scriptsize (-2.70)} & {\scriptsize (-0.89)} & {\scriptsize (-1.31)} & {\scriptsize (0.17)}  \\
+$\hat{\beta}_{\omega}$ & 8.11$^{**}$ & -3.09 & 10.17$^{***}$ & 1.88 & 1.44 & -5.04 & -2.92 & -8.02$^{***}$  \\
+ & {\scriptsize (2.32)} & {\scriptsize (-0.55)} & {\scriptsize (3.03)} & {\scriptsize (0.34)} & {\scriptsize (0.65)} & {\scriptsize (-1.39)} & {\scriptsize (-1.04)} & {\scriptsize (-2.88)}  \\
+$\hat{\theta}_{\omega \kappa}$ & 15.40$^{***}$ & 5.74 & 18.03$^{***}$ & 11.47$^{*}$ & 6.87$^{***}$ & 1.11 & 1.70 & -3.51  \\
+ & {\scriptsize (3.63)} & {\scriptsize (0.84)} & {\scriptsize (4.40)} & {\scriptsize (1.74)} & {\scriptsize (2.61)} & {\scriptsize (0.26)} & {\scriptsize (0.55)} & {\scriptsize (-1.09)}  \\
+$\hat{\theta}_{\kappa p^{\kappa}}$ & -1.14$^{**}$ & -0.78 & -1.18$^{**}$ & -0.45 & -0.74 & -0.56 & -0.81 & -0.40  \\
+ & {\scriptsize (-2.21)} & {\scriptsize (-1.13)} & {\scriptsize (-2.45)} & {\scriptsize (-0.65)} & {\scriptsize (-1.46)} & {\scriptsize (-0.83)} & {\scriptsize (-1.62)} & {\scriptsize (-0.59)}  \\
+$\boldsymbol{\gamma}' \mathbf{D}_t$ & Yes & No & Yes & No & Yes & No & Yes & No  \\
+\midrule
+\multicolumn{9}{l}{\underline{Cointegration Tests}} \\
+VW Type 2 ($\lambda_2 = 0$) [$H_0$: Coint] & 2.1825 & 0.2893 & 1.3062 & 2.0369 & 2.6332 & 1.6797 & 1.9217 & 0.6831  \\
+Resid. ADF ($t_{\text{ADF}}$) [$H_0$: No Coint] & -6.32$^{***}$ & -2.97 & -6.98$^{***}$ & -3.11 & -6.62$^{***}$ & -3.35 & -5.12$^{***}$ & -2.92  \\
+Shin LM ($C_{\text{Shin}}$) [$H_0$: Coint] & 0.042 & 0.261 & 0.036 & 0.280 & 0.043 & 0.214 & 0.064 & 0.150  \\
+\midrule
+\multicolumn{9}{l}{\underline{Goodness-of-Fit \& Controls}} \\
+$R_{\text{level}}^2$ & 0.991 & 0.969 & 0.992 & 0.967 & 0.993 & 0.977 & 0.991 & 0.984  \\
+$R_{\text{sum}}^2$ & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000  \\
+$\hat{\sigma}_u$ & 0.112 & 0.200 & 0.103 & 0.206 & 0.099 & 0.171 & 0.108 & 0.145  \\
+Sample Window & Full Sample & Full Sample & Full Sample & Full Sample & Full Sample & Full Sample & Full Sample & Full Sample  \\
+Sample Size ($T$) & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94  \\
+\bottomrule
+\multicolumn{9}{p{19.5cm}}{\footnotesize Note: Estimated via Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014). Fixed-$b$ HAR $t$-statistics reported in parentheses underneath point estimates. $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. **Star Reversal Warning:** For the Residual ADF test, significance stars indicate rejection of No Cointegration (supporting cointegration). For the VW Type 2 ($\lambda_2 = 0$) and Shin LM ($C_{\text{Shin}}$) tests, significance stars indicate rejection of Cointegration (indicating non-stationarity / spurious regression). Dependent variable $y_t^{\text{NFC}}$ denotes log real gross value added of the U.S. Non-Financial Corporate (NFC) sector (BEA NIPA Table 1.14). Structural step dummy controls $\boldsymbol{\gamma}' \mathbf{D}_t$ incorporate LOESS-diagnosed inflections on aggregate capital stock at 1933, 1947, 1968, 1982, and 2008.}
+\end{tabular}
+\end{table}
+\end{landscape}

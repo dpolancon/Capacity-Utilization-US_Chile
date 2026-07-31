@@ -1,0 +1,20 @@
+"check","pass"
+"105 canonical observations",TRUE
+"complete urca row count",TRUE
+"all six urca families present",TRUE
+"every ZA row records a breakpoint",TRUE
+"LOESS break source is kappa only",TRUE
+"LOESS fitted path is excluded from unit-root tests",TRUE
+"parametric route excludes LOESS evidence",TRUE
+"no mixed route model IDs",TRUE
+"no singular trivariate model",TRUE
+"no VECM estimated behind failed route gate",TRUE
+"rank bootstrap omitted when not strictly necessary",TRUE
+"exact kappa restriction ledger exists",TRUE
+"I2 fallback cannot relabel failed I1 model",TRUE
+"all coefficients carry data hash and model ID",TRUE
+"KP critical-value implementation validated",TRUE
+"KP excludes LOESS evidence",TRUE
+"candidate dates do not define beta periods",TRUE
+"cumulative beta mapping is correct",TRUE
+"no period coefficient before all gates",TRUE

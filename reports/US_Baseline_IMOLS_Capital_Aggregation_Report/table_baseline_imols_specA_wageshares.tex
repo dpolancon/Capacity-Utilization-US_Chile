@@ -1,0 +1,37 @@
+\begin{landscape}
+\begin{table}[H]
+\centering
+\caption{Specification A Multi-Wage Share Robustness Matrix (Full Century 1929--2024, With vs. Without Dummies)}
+\label{tab:specA_wageshares}
+\small
+\begin{tabular}{p{5.2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}
+\toprule
+\multicolumn{9}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}} / S_{y^{\text{NFC}}}$}} \\
+\midrule
+Model & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)  \\
+Centering Treatment & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St & Initial-St  \\
+\midrule
+$\hat{\beta}_{\text{Kcap}}$ & 12.65$^{***}$ & 12.57$^{***}$ & 12.66$^{***}$ & 12.55$^{***}$ & 12.69$^{***}$ & 12.65$^{***}$ & 12.60$^{***}$ & 12.74$^{***}$  \\
+ & {\scriptsize (128.24)} & {\scriptsize (97.07)} & {\scriptsize (130.83)} & {\scriptsize (95.83)} & {\scriptsize (133.88)} & {\scriptsize (125.19)} & {\scriptsize (148.15)} & {\scriptsize (170.08)}  \\
+$\hat{\phi}_{\omega}$ & 0.81$^{***}$ & 0.61$^{***}$ & 0.84$^{***}$ & 0.62$^{***}$ & 0.83$^{***}$ & 0.62$^{***}$ & 0.92$^{***}$ & 0.59$^{***}$  \\
+ & {\scriptsize (19.15)} & {\scriptsize (30.41)} & {\scriptsize (18.92)} & {\scriptsize (29.47)} & {\scriptsize (20.21)} & {\scriptsize (42.32)} & {\scriptsize (13.53)} & {\scriptsize (9.62)}  \\
+$\hat{\theta}_{1}$ & -10.64$^{***}$ & -10.16$^{**}$ & -11.37$^{***}$ & -9.85$^{***}$ & -5.40$^{***}$ & -4.88$^{***}$ & -3.33$^{***}$ & -3.66$^{***}$  \\
+ & {\scriptsize (-3.70)} & {\scriptsize (-2.48)} & {\scriptsize (-4.03)} & {\scriptsize (-2.67)} & {\scriptsize (-3.46)} & {\scriptsize (-2.66)} & {\scriptsize (-3.14)} & {\scriptsize (-4.26)}  \\
+$\boldsymbol{\Lambda} \mathbf{D}_t'$ & Yes & No & Yes & No & Yes & No & Yes & No  \\
+\midrule
+\multicolumn{9}{l}{\underline{Cointegration Tests}} \\
+\makecell[l]{VW Type 2 ($S_{\text{Type 2}}$) \\ {\scriptsize [$H_0$: Cointegration]}} & 26397.92$^{***}$ & 2.90 & 38251.92$^{***}$ & 1.83 & 25461.39$^{***}$ & 10.33 & 48546.98$^{***}$ & 13.91$^{**}$  \\
+\makecell[l]{Resid. ADF ($t_{\text{ADF}}$) \\ {\scriptsize [$H_0$: No Cointegration]}} & -3.75 & -1.77 & -3.87$^{*}$ & -1.76 & -3.90$^{*}$ & -1.72 & -3.28 & -1.21  \\
+\makecell[l]{Shin LM ($C_{\text{Shin}}$) \\ {\scriptsize [$H_0$: Cointegration]}} & 0.08 & 4.66$^{***}$ & 0.08 & 3.75$^{***}$ & 0.10$^{*}$ & 3.11$^{***}$ & 0.11$^{*}$ & 7.32$^{***}$  \\
+\midrule
+\multicolumn{9}{l}{\underline{Goodness-of-Fit \& Controls}} \\
+$R_{\text{level}}^2$ & 0.982 & 0.650 & 0.983 & 0.679 & 0.984 & 0.733 & 0.984 & 0.821  \\
+$R_{\text{sum}}^2$ & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000  \\
+$\hat{\sigma}_u$ & 0.155 & 0.662 & 0.147 & 0.634 & 0.145 & 0.579 & 0.144 & 0.474  \\
+Sample Window & Full Sample & Full Sample & Full Sample & Full Sample & Full Sample & Full Sample & Full Sample & Full Sample  \\
+Sample Size ($T$) & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94  \\
+\bottomrule
+\multicolumn{9}{p{18.5cm}}{\footnotesize Note: Estimated via Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014). Fixed-$b$ HAR $t$-statistics reported in parentheses underneath point estimates. $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. **Star Reversal Warning:** For the Residual ADF test, significance stars indicate rejection of No Cointegration (supporting cointegration). For the VW Type 2 ($S_{\text{Type 2}}$) and Shin LM ($C_{\text{Shin}}$) tests, significance stars indicate rejection of Cointegration (indicating spurious regression). Dependent variable $y_t^{\text{NFC}}$ denotes log real gross value added of the U.S. Non-Financial Corporate (NFC) sector used to estimate structural capacity $Y_t^p$. Structural step dummy controls $\boldsymbol{\Lambda} \mathbf{D}_t'$ incorporate LOESS-diagnosed inflections on aggregate capital stock at 1933, 1947, 1974, and 2008.}
+\end{tabular}
+\end{table}
+\end{landscape}

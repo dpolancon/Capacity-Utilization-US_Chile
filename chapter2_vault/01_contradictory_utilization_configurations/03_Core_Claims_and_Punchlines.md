@@ -1,16 +1,21 @@
 ---
 type: analytical_foundation
 status: locked
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-04-23
 title: Core Claims and Punchlines
 project: Normal utilization and the fractured firm
 tags:
-- core-claim
-- punchline
-- utilization
+  - core-claim
+  - punchline
+  - utilization
+blocks: []
+layer: theory
+scope: chapter2
+priority: reference
 ---
 
 # Core claims

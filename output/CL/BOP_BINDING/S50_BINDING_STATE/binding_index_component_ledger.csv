@@ -1,0 +1,5 @@
+"component","weight","positive_pressure_definition","role"
+"reduced import ECT",0.5,"-ECT standardized within split sample","latent import shortfall"
+"current account",0.2,"negative current-account balance","observed BOP"
+"goods balance",0.15,"negative goods balance","observed BOP"
+"manufactured-import compression",0.15,"annual fall in manufactured imports/GDP","observed BOP"

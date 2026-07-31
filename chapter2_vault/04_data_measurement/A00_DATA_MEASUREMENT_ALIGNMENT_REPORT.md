@@ -1,7 +1,8 @@
 ---
-type: data_measurement
-status: superseded
-depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+type: research_note
+status: deprecated
+depends_on:
+  - chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
 stage_scope: S10
 country: US_CL
 last_updated: 2026-06-09
@@ -12,11 +13,15 @@ scope: chapter2_core_support
 created: 2026-06-01
 updated: 2026-06-08
 related_to:
-- A00_Aggregate_Transformation_Benchmark
-- A03_TransformationElasticity_Two-CapitalCapacityComposition
-- A04_PeripheralTransformationElasticity
-- M10_Empirical_Identification_Framework
-- N01_CapacityUtilization_StructuralObject
+  - A00_Aggregate_Transformation_Benchmark
+  - A03_TransformationElasticity_Two-CapitalCapacityComposition
+  - A04_PeripheralTransformationElasticity
+  - M10_Empirical_Identification_Framework
+  - N01_CapacityUtilization_StructuralObject
+subtype: data_measurement
+status_detail: superseded
+blocks: []
+priority: reference
 ---
 
 # A00 Data Measurement Alignment Report

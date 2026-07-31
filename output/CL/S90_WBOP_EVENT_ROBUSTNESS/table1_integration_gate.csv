@@ -1,0 +1,6 @@
+"window_id","window","years","n","k_me_order","k_nr_order","capital_model","reason"
+"DEMO_NEOLIBERAL","Democratic Neoliberal Export Model","1990--2024",35,"I(2)-risk","I(2)-risk","Blocked","k_me=I(2)-risk; k_nr=I(2)-risk"
+"DICTATORSHIP","Dictatorship Shock","1974--1989",16,"unresolved","unresolved","Blocked","k_me=unresolved; k_nr=unresolved"
+"FULL","Full Chile Century","1920--2024",105,"I(2)-risk","I(2)-risk","Blocked","k_me=I(2)-risk; k_nr=I(2)-risk"
+"ISI","Classic ISI","1939--1973",35,"I(2)-risk","I(2)-risk","Blocked","k_me=I(2)-risk; k_nr=I(2)-risk"
+"NITRATE","Nitrate Crisis and Early State","1920--1938",19,"unresolved","unresolved","Blocked","k_me=unresolved; k_nr=unresolved"

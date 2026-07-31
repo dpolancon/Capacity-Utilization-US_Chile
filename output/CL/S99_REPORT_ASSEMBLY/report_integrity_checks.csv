@@ -1,0 +1,18 @@
+"check","passed"
+"No legacy tau notation",TRUE
+"No legacy gamma cointegrating notation",TRUE
+"No NRC capital notation",TRUE
+"No Markdown bold in LaTeX",TRUE
+"All tables use H or h! floats",TRUE
+"Exactly three central tables",TRUE
+"Exactly six principal figures",TRUE
+"FloatBarrier precedes every section",TRUE
+"A4 U.S.-template geometry and no table of contents",TRUE
+"Figure and table captions configured above",TRUE
+"No BCCh source in replacement report",TRUE
+"No artificial phi, F_avail, or mu estimate",TRUE
+"Canonical capital panel has 105 complete observations",TRUE
+"No model estimated after a failed integration gate",TRUE
+"Central model ledger contains the complete report interface",TRUE
+"Short blocked samples retain the 999-replication requirement",TRUE
+"All required ledgers present",TRUE

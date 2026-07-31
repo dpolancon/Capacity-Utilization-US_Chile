@@ -1,7 +1,8 @@
 ---
 type: econometric_protocol
 status: locked
-depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
 stage_scope: all_stages
 country: US_CL
 last_updated: 2026-07-06
@@ -10,19 +11,20 @@ design_role: identification_rule
 scope: chapter2_core_support
 estimator_status: structural-identification-guardrail
 related_to:
-- M10_Empirical_Identification_Framework
-- N02_SuperConsistency
-- N01_CapacityUtilization_StructuralObject
-- L00_Econometrics_References
+  - M10_Empirical_Identification_Framework
+  - N02_SuperConsistency
+  - N01_CapacityUtilization_StructuralObject
+  - L00_Econometrics_References
 priority: high
 role: methodological-rationale
 stage: pre-estimation-design
 aliases:
-- Residual identification guardrail
+  - Residual identification guardrail
 tags:
-- chapter2/econometrics
-- chapter2/methodological-rationale
+  - chapter2/econometrics
+  - chapter2/methodological-rationale
 updated_by: D12V2_OBSIDIAN_ECONOMETRICS_VAULT_ORGANIZATION
+blocks: []
 ---
 
 # Residuals, Productive Capacity, and the Algebraic Illusion

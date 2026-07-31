@@ -1,0 +1,5 @@
+"inferential_object","bootstrap_required","reason","replications"
+"independent KP stability",FALSE,"published integrated-regressor critical values are available",0
+"stable full-sample cointegration",FALSE,"analytic Phillips-Ouliaris and Johansen evidence is decisive",0
+"estimated-break VECM rank",FALSE,"not eligible because no cointegration-validated break exists",0
+"long-run beta_ME",FALSE,"coefficient is not identified and is not estimated",0

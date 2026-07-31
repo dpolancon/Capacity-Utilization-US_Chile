@@ -1,0 +1,5 @@
+"candidate","stationary_votes_first_difference","stationary_votes_level","stationary_votes_second_difference","valid_tests_first_difference","valid_tests_level","valid_tests_second_difference","stationary_share_first_difference","stationary_share_level","stationary_share_second_difference","integration_order","permitted_role","label","intended_role"
+"current_account_gdp",8,4,8,10,10,10,0.8,0.4,0.8,"I(1)","one_at_a_time_long_run_candidate","Current account / GDP","Net external-financing requirement"
+"gross_foreign_liabilities_gdp",10,8,10,10,10,10,1,0.8,1,"I(0)","short_run_exogenous_or_impulse","Gross foreign liabilities / GDP","Short-run foreign-liability exposure"
+"manufactures_imports_gdp",8,1,8,10,10,10,0.8,0.1,0.8,"I(1)","one_at_a_time_long_run_candidate","Manufactured imports / GDP","Broad import-dependence conditioner; not machinery imports"
+"net_foreign_income_gdp",10,2,10,10,10,10,1,0.2,1,"I(1)","one_at_a_time_long_run_candidate","Net foreign income / GDP","Foreign-income drainage"

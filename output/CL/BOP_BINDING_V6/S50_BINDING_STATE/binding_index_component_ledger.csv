@@ -1,0 +1,5 @@
+"component","weight","positive_pressure_definition","role"
+"machinery-import ECT",0.5,"negative ECT standardized within sample; lower-ECT regime retained","latent import shortfall; exploratory machinery route"
+"current account",0.2,"negative current-account balance","observed BOP"
+"goods balance",0.15,"negative goods balance","observed BOP"
+"manufactured-import compression",0.15,"annual fall in manufactured imports/GDP","observed BOP"

@@ -1,0 +1,7 @@
+"challenge","evidence","resolution","severity","resolved"
+"The independent KP statistic rejects stability, so periods should be estimated.","Kejriwal-Perron assumes a cointegrated regression; Gregory-Hansen and Phillips-Ouliaris do not establish that prerequisite.","Do not define long-run coefficient periods.","critical",TRUE
+"The 2005 dynamic break supplies the missing elasticity periods.","The break test uses stationary-regression critical values, but the six-family order verdict remains inconclusive.","Report the date as diagnostic structural evidence only.","critical",TRUE
+"ADF, PP, and KPSS are enough to call growth stationary.","ERS, Schmidt-Phillips, Zivot-Andrews, and Lee-Strazicich evidence prevents the declared four-family agreement.","Withhold eta and disclose the conflicting evidence.","critical",TRUE
+"A bootstrap could rescue the desired coefficient.","Resampling cannot convert a failed stochastic prerequisite into an identified estimand.","Use no bootstrap.","major",TRUE
+"Older positive VECM coefficients corroborate the new result.","Those coefficients use a 91-observation legacy panel and mislabeled estimator implementations.","Exclude legacy coefficients from central evidence.","critical",TRUE
+"The absence of a coefficient means the analysis failed.","The data distinguish historical changes from parameters that can be interpreted as elasticities.","State definitive non-identification as the empirical result.","major",TRUE

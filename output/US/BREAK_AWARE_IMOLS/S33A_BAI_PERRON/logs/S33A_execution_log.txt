@@ -1,0 +1,51 @@
+[2026-07-30 19:21:38] US_S33A start. mbreaks 1.0.1; R version 4.5.2 (2025-10-31 ucrt)
+[2026-07-30 19:21:38] Spec A panel: 94 rows, 1931-2024
+[2026-07-30 19:21:38] Spec B panel: 94 rows, 1931-2024
+[2026-07-30 19:21:38] Spec_A / Fordist_1929_1973: 42 differenced obs, eps=0.2, m=3
+[2026-07-30 19:21:38]   [univariate_mean] d_y: 0 break(s) none
+[2026-07-30 19:21:38]   [univariate_mean] d_k_cap: 1 break(s) 1939
+[2026-07-30 19:21:38]   [univariate_mean] d_omega: 0 break(s) none
+[2026-07-30 19:21:40]   [system_equation] p=0, spec=partial_break_capital_terms(p=0): 1 break(s) 1942
+[2026-07-30 19:21:40] Spec_A / Post_Fordist_1974_2024: 51 differenced obs, eps=0.15, m=3
+[2026-07-30 19:21:40]   [univariate_mean] d_y: 0 break(s) none
+[2026-07-30 19:21:40]   [univariate_mean] d_k_cap: 1 break(s) 1981
+[2026-07-30 19:21:40]   [univariate_mean] d_omega: 0 break(s) none
+[2026-07-30 19:21:40]   [system_equation] partial_break_capital_terms(p=2) not estimable
+[2026-07-30 19:21:40]   [system_equation] intercept_only_break_fallback(p=2) not estimable
+[2026-07-30 19:21:42]   [system_equation] p=1, spec=partial_break_capital_terms(p=1): 3 break(s) 1981;2000;2010
+[2026-07-30 19:21:42] Spec_B / Full_Sample_1929_2024: 93 differenced obs, eps=0.15, m=5
+[2026-07-30 19:21:42]   [univariate_mean] d_y: 0 break(s) none
+[2026-07-30 19:21:43]   [univariate_mean] d_k_NRC: 0 break(s) none
+[2026-07-30 19:21:44]   [univariate_mean] d_kappa: 0 break(s) none
+[2026-07-30 19:21:44]   [univariate_mean] d_omega: 0 break(s) none
+[2026-07-30 19:21:45]   [univariate_mean] d_p_kappa: 3 break(s) 1945;1995;2008
+[2026-07-30 19:21:45]   [system_equation] partial_break_capital_terms(p=4) not estimable
+[2026-07-30 19:21:45]   [system_equation] intercept_only_break_fallback(p=4) not estimable
+[2026-07-30 19:21:45]   [system_equation] partial_break_capital_terms(p=3) not estimable
+[2026-07-30 19:21:45]   [system_equation] intercept_only_break_fallback(p=3) not estimable
+[2026-07-30 19:21:45]   [system_equation] partial_break_capital_terms(p=2) not estimable
+[2026-07-30 19:21:45]   [system_equation] intercept_only_break_fallback(p=2) not estimable
+[2026-07-30 19:21:54]   [system_equation] p=1, spec=partial_break_capital_terms(p=1): 0 break(s) none
+[2026-07-30 19:21:54] Spec_B / Fordist_1929_1973: 42 differenced obs, eps=0.2, m=3
+[2026-07-30 19:21:55]   [univariate_mean] d_y: 0 break(s) none
+[2026-07-30 19:21:55]   [univariate_mean] d_k_NRC: 0 break(s) none
+[2026-07-30 19:21:55]   [univariate_mean] d_kappa: 0 break(s) none
+[2026-07-30 19:21:55]   [univariate_mean] d_omega: 0 break(s) none
+[2026-07-30 19:21:55]   [univariate_mean] d_p_kappa: 1 break(s) 1945
+[2026-07-30 19:21:56]   [system_equation] p=0, spec=partial_break_capital_terms(p=0): 1 break(s) 1943
+[2026-07-30 19:21:56] Spec_B / Post_Fordist_1974_2024: 51 differenced obs, eps=0.15, m=3
+[2026-07-30 19:21:57]   [univariate_mean] d_y: 0 break(s) none
+[2026-07-30 19:21:57]   [univariate_mean] d_k_NRC: 1 break(s) 1981
+[2026-07-30 19:21:57]   [univariate_mean] d_kappa: 0 break(s) none
+[2026-07-30 19:21:57]   [univariate_mean] d_omega: 0 break(s) none
+[2026-07-30 19:21:57]   [univariate_mean] d_p_kappa: 1 break(s) 1992
+[2026-07-30 19:21:58]   [system_equation] partial_break_capital_terms(p=2) not estimable
+[2026-07-30 19:21:58]   [system_equation] intercept_only_break_fallback(p=2) not estimable
+[2026-07-30 19:21:58]   [system_equation] partial_break_capital_terms(p=1) not estimable
+[2026-07-30 19:21:58]   [system_equation] intercept_only_break_fallback(p=1) not estimable
+[2026-07-30 19:22:00]   [system_equation] p=0, spec=partial_break_capital_terms(p=0): 3 break(s) 1980;1990;1998
+[2026-07-30 19:22:00] Spec_B_WageMech / Full_Sample_1929_2024: 93 differenced obs on d_kappa_omega, eps=0.15, m=5
+[2026-07-30 19:22:01]   [univariate_mean] d_kappa_omega: 1 break(s) 1969
+[2026-07-30 19:22:01]   T_B* nearest 1974: 1969 (distance 5 years)
+[2026-07-30 19:22:01] US_S33A complete. 244 test rows, 17 break dates, 8/15 protocol dates supported within 2 years.
+[2026-07-30 19:22:01] Next: Rscript codes/US_S33B_lee_strazicich_break_robust_unitroot.R

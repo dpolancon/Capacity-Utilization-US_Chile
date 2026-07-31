@@ -1,0 +1,5 @@
+"identity","maximum_absolute_residual","passed","tolerance","note"
+"goods balance = goods exports - goods imports",0,TRUE,1e-10,"Identity check only; this is not a coefficient-comparability gate"
+"manufactures balance = manufactures exports - manufactures imports",1.38777878078145e-17,TRUE,1e-10,"Identity check only; this is not a coefficient-comparability gate"
+"current account = goods and services + net foreign income + net transfers",2.08166817117217e-17,TRUE,1e-10,"Identity check only; this is not a coefficient-comparability gate"
+"net foreign wealth = gross foreign assets - gross foreign liabilities",4.44089209850063e-16,TRUE,1e-10,"Identity check only; this is not a coefficient-comparability gate"

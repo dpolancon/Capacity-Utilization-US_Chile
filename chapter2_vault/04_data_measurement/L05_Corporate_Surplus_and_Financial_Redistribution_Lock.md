@@ -1,14 +1,15 @@
 ---
 type: data_measurement
 status: locked
-depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
 stage_scope: S10
 country: US
 last_updated: 2026-06-24
 title: Corporate Surplus and Financial Redistribution Lock
 aliases:
-- Corporate Surplus Theory Lock
-- Nonproductive Finance Dataset-Role Lock
+  - Corporate Surplus Theory Lock
+  - Nonproductive Finance Dataset-Role Lock
 project: Dissertation Chapter 2
 chapter: 2
 stage: S30H
@@ -16,11 +17,14 @@ scope: corporate surplus and financial redistribution
 created: 2026-06-24
 updated: 2026-06-24
 tags:
-- chapter2
-- corporate-surplus
-- financial-redistribution
-- theory-lock
-- data-governance
+  - chapter2
+  - corporate-surplus
+  - financial-redistribution
+  - theory-lock
+  - data-governance
+blocks: []
+layer: empirics
+priority: reference
 ---
 
 # Lock - Corporate Surplus and Financial Redistribution
@@ -172,13 +176,16 @@ flow, or replace `NFC_NOS` as the strict productive-origin baseline.
 
 | Object | Interpretation |
 |---|---|
-| `NFC_NOS` | Productive-origin surplus |
+| `NFC_NOS` | Productive-origin surplus ($S^{origin}$) |
 | `FIN_NOS_IMPLIED` | Redistributed financial profit-type income proxy |
 | `FIN_NVA_IMPLIED` | Financial-sector absorption of primary value proxy |
+| `FIN_TRANSFER_MASS` (`NFC_NET_INT + FIN_NOS_IMPLIED`) | Total mass of primary surplus absorbed by financial instruments ($T^{FIN}$) |
 | `NFC_NOS - NFC_NET_INT` | NFC surplus remaining after bounded financial claims |
 | `CORP_NOS - NFC_NET_INT` | Partial corporate financial-claims consolidation proxy |
 
-These objects answer different questions and must not be used interchangeably.
+### No Double-Accounting Enforcement
+$$S_t^{total\_corporate\_clean} = S_t^{origin} = NFC\_NOS_t \quad (\text{Never } S_t^{origin} + T_t^{FIN})$$
+Because $T_t^{FIN}$ is a secondary transfer/absorption out of $S_t^{origin}$, adding $T_t^{FIN}$ to primary surplus counts the same value creation twice.
 
 ## Empirical qualification
 

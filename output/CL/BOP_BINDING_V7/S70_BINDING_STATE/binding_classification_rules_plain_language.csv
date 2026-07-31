@@ -1,0 +1,8 @@
+"classification","plain_language_meaning"
+"binding_confirmed","Imports sat below the level the long-run relation implies, and the external accounts showed stress in the same year. Both kinds of evidence agree."
+"imports_short_only","Imports sat below the implied level, but no external-account indicator crossed its threshold. The model sees a shortfall the accounts do not corroborate."
+"external_stress_only","The external accounts showed stress, but imports were at or above the level the relation implies. Pressure without an import shortfall."
+"not_binding","Neither imports fell short of the implied level nor did the accounts show stress."
+"no_estimate_for_year","The lag structure leaves this year without a value for the long-run relation, so no statement is made about it."
+"external_stress_no_usable_model_signal","The accounts showed stress, and in this sample the model provides no usable import signal because imports do not adjust to the relation."
+"no_stress_no_usable_model_signal","The accounts showed no stress, and in this sample the model provides no usable import signal."

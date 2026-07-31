@@ -1,0 +1,6 @@
+"gate","evidence","pass_at_S20B","implication"
+"capital integration order","S20 route-specific order ledger",NA,"necessary before long-run estimation"
+"Kejriwal-Perron stability","UDmax 6.823; 5% critical 12.25",FALSE,"a rejection permits break dating only conditional on cointegration"
+"Gregory-Hansen break cointegration","minimum ADF* -4.778; model regime; 5% critical -4.95",FALSE,"a rejection establishes one-break cointegration evidence"
+"breakpoint intervals","bounded=TRUE; distinct=TRUE",TRUE,"required before dates define periods"
+"system rank and residual stability","completed in S30",NA,"required before any beta_ME magnitude is reported"

@@ -1,0 +1,3 @@
+"sample","promoted_state","condition_number_standardized","maximum_absolute_pairwise_correlation","condition_number_gate_pass","pairwise_gate_pass"
+"pre_1920_1973","log_imports;log_non_reinvested_surplus;log_RER",3.02143009901427,0.824095760060794,TRUE,TRUE
+"post_1974_2024","log_imports;log_non_reinvested_surplus;wage_share",13.9489074806497,0.978548305649737,TRUE,TRUE

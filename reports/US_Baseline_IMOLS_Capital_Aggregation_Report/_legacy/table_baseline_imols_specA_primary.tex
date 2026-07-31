@@ -1,0 +1,37 @@
+\begin{landscape}
+\begin{table}[H]
+\centering
+\caption{Specification A Primary Accumulation Eras IM-OLS Matrix (Full Sample, Fordism, Post-Fordism)}
+\label{tab:specA_primary}
+\small
+\begin{tabular}{p{4.8cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}}
+\toprule
+\multicolumn{10}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}} / S_{y^{\text{NFC}}}$}} \\
+\midrule
+Model & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) & (9)  \\
+Centering Treatment & Uncentered & Initial-St & Sample-Mean & Uncentered & Initial-St & Sample-Mean & Uncentered & Initial-St & Sample-Mean  \\
+\midrule
+$\hat{\beta}_{\text{Kcap}}$ & 0.49 & 12.65$^{***}$ & 15.37$^{***}$ & 4.91 & 12.61$^{***}$ & 13.67$^{***}$ & -2.01 & 14.57$^{***}$ & 15.70$^{***}$  \\
+ & {\scriptsize (0.08)} & {\scriptsize (128.24)} & {\scriptsize (50.50)} & {\scriptsize (0.56)} & {\scriptsize (140.32)} & {\scriptsize (51.06)} & {\scriptsize (-0.42)} & {\scriptsize (172.69)} & {\scriptsize (430.47)}  \\
+$\hat{\phi}_{\omega}$ & 1.21$^{***}$ & 0.81$^{***}$ & 0.76$^{***}$ & 1.25$^{*}$ & 0.89$^{***}$ & 0.89$^{***}$ & 1.18$^{***}$ & 0.67$^{***}$ & 0.73$^{***}$  \\
+ & {\scriptsize (3.05)} & {\scriptsize (19.15)} & {\scriptsize (20.42)} & {\scriptsize (1.78)} & {\scriptsize (13.82)} & {\scriptsize (13.02)} & {\scriptsize (3.96)} & {\scriptsize (18.64)} & {\scriptsize (12.74)}  \\
+$\hat{\theta}_{1}$ & 5.01 & -10.64$^{***}$ & -3.16$^{**}$ & -3.24 & -8.84$^{***}$ & -8.14$^{***}$ & 9.13 & 3.76 & -1.03  \\
+ & {\scriptsize (0.55)} & {\scriptsize (-3.70)} & {\scriptsize (-2.37)} & {\scriptsize (-0.23)} & {\scriptsize (-2.99)} & {\scriptsize (-3.61)} & {\scriptsize (1.26)} & {\scriptsize (1.11)} & {\scriptsize (-0.68)}  \\
+$\boldsymbol{\Lambda} \mathbf{D}_t'$ & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes & Yes  \\
+\midrule
+\multicolumn{10}{l}{\underline{Cointegration Tests}} \\
+VW Type 2 ($\lambda_2 = 0$) [$H_0$: Coint] & 0.0736 & 1.5956 & 0.2570 & 0.1691 & 3.3686 & 2.2916 & 0.0662 & 0.4206 & 0.5620  \\
+Resid. ADF ($t_{\text{ADF}}$) [$H_0$: No Coint] & -3.78 & -3.75 & -4.56$^{**}$ & -3.34 & -3.35 & -3.53 & -3.16 & -2.04 & -3.24  \\
+Shin LM ($C_{\text{Shin}}$) [$H_0$: Coint] & 0.118 & 0.082 & 0.157 & 0.116 & 0.133 & 0.065 & 0.619 & 3.556 & 0.459  \\
+\midrule
+\multicolumn{10}{l}{\underline{Goodness-of-Fit \& Controls}} \\
+$R_{\text{level}}^2$ & 0.974 & 0.982 & 0.979 & 0.957 & 0.948 & 0.964 & 0.927 & 0.852 & 0.909  \\
+$R_{\text{sum}}^2$ & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 1.000  \\
+$\hat{\sigma}_u$ & 0.185 & 0.155 & 0.164 & 0.143 & 0.158 & 0.132 & 0.129 & 0.184 & 0.144  \\
+Sample Window & Full Sample & Full Sample & Full Sample & Fordism & Fordism & Fordism & Post-Fordism & Post-Fordism & Post-Fordism  \\
+Sample Size ($T$) & 94 & 94 & 94 & 43 & 43 & 43 & 51 & 51 & 51  \\
+\bottomrule
+\multicolumn{10}{p{19.5cm}}{\footnotesize Note: Estimated via Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014). Fixed-$b$ HAR $t$-statistics reported in parentheses underneath point estimates. $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. Dependent variable $y_t^{\text{NFC}}$ denotes log real gross value added of the U.S. Non-Financial Corporate (NFC) sector (BEA NIPA Table 1.14) used to estimate latent structural potential capacity $Y_t^p$. Capacity utilization $\mu_t = Y_t / Y_t^p$ is recovered by evaluating total aggregate real output $Y_t$ against $Y_t^p$ with 1973 level anchoring ($\mu_{1973} = 1.00$). Structural step dummy controls $\boldsymbol{\Lambda} \mathbf{D}_t'$ incorporate LOESS-diagnosed inflections on aggregate capital stock at 1933, 1947, 1974, and 2008.}
+\end{tabular}
+\end{table}
+\end{landscape}

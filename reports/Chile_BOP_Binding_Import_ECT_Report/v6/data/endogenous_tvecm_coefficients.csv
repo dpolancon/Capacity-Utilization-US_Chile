@@ -1,0 +1,31 @@
+"sample","model","equation","term","estimate"
+"full_1920_2024","primary_2regime","Equation log_imports","ECT-",-0.248923197903897
+"full_1920_2024","primary_2regime","Equation log_K_ME_gross","ECT-",0.00193033404928333
+"full_1920_2024","primary_2regime","Equation log_imports","ECT+",-0.0835135798954612
+"full_1920_2024","primary_2regime","Equation log_K_ME_gross","ECT+",0.0206895105990813
+"full_1920_2024","primary_2regime","Equation log_imports","Const",-0.0149059024395943
+"full_1920_2024","primary_2regime","Equation log_K_ME_gross","Const",0.00428409160828239
+"full_1920_2024","primary_2regime","Equation log_imports","log_imports t -1",0.355077741869954
+"full_1920_2024","primary_2regime","Equation log_K_ME_gross","log_imports t -1",0.0290958215292892
+"full_1920_2024","primary_2regime","Equation log_imports","log_K_ME_gross t -1",0.66980718417128
+"full_1920_2024","primary_2regime","Equation log_K_ME_gross","log_K_ME_gross t -1",0.814365108821711
+"pre_1920_1973","primary_2regime","Equation log_imports","ECT-",-0.230574192482345
+"pre_1920_1973","primary_2regime","Equation log_K_ME_gross","ECT-",0.00105202449976885
+"pre_1920_1973","primary_2regime","Equation log_imports","ECT+",-0.80335132644924
+"pre_1920_1973","primary_2regime","Equation log_K_ME_gross","ECT+",-0.0228790013555569
+"pre_1920_1973","primary_2regime","Equation log_imports","Const",8.74675902938216e-05
+"pre_1920_1973","primary_2regime","Equation log_K_ME_gross","Const",0.00290879381588466
+"pre_1920_1973","primary_2regime","Equation log_imports","log_imports t -1",0.500715302442628
+"pre_1920_1973","primary_2regime","Equation log_K_ME_gross","log_imports t -1",0.0272587267852512
+"pre_1920_1973","primary_2regime","Equation log_imports","log_K_ME_gross t -1",0.0311100241181174
+"pre_1920_1973","primary_2regime","Equation log_K_ME_gross","log_K_ME_gross t -1",0.850756999957544
+"post_1974_2024","primary_2regime","Equation log_imports","ECT-",-0.145570081220064
+"post_1974_2024","primary_2regime","Equation log_K_ME_gross","ECT-",0.0320211918741347
+"post_1974_2024","primary_2regime","Equation log_imports","ECT+",0.154888200820532
+"post_1974_2024","primary_2regime","Equation log_K_ME_gross","ECT+",0.0585055331141198
+"post_1974_2024","primary_2regime","Equation log_imports","Const",0.0858985937149298
+"post_1974_2024","primary_2regime","Equation log_K_ME_gross","Const",0.0248225098452415
+"post_1974_2024","primary_2regime","Equation log_imports","log_imports t -1",0.128752205323914
+"post_1974_2024","primary_2regime","Equation log_K_ME_gross","log_imports t -1",0.0331633743334627
+"post_1974_2024","primary_2regime","Equation log_imports","log_K_ME_gross t -1",-0.652143351392356
+"post_1974_2024","primary_2regime","Equation log_K_ME_gross","log_K_ME_gross t -1",0.601692744725838

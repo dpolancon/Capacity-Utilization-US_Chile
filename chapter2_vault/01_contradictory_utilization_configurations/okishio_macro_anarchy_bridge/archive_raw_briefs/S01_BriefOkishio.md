@@ -1,10 +1,16 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-04-28
+subtype: analytical_foundation
+blocks: []
+layer: theory
+scope: chapter2
+priority: reference
 ---
 
 # The Theory of Accumulation: A Marxian Approach to the Dynamics of Capitalist Economy

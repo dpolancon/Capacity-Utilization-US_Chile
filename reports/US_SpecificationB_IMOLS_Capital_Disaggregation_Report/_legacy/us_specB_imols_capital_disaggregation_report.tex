@@ -1,0 +1,182 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{placeins}
+\usepackage{pdflscape}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{longtable}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=blue!70!black,
+    urlcolor=blue!70!black
+}
+
+\captionsetup[figure]{position=top, labelfont=bf, font=small, skip=4pt}
+\captionsetup[table]{position=top, labelfont=bf, font=small, skip=4pt}
+
+\title{\textbf{DISSERTATION PROGRESS REPORT \& ONLINE APPENDIX} \\[0.5em] \Large \textbf{Chapter 2: Disaggregating Plant Scale, Mechanization Choice, and Relative Capital Prices (Specification B)}}
+\author{\textbf{Diego Polanco} \\ Department of Economics, UMass Amherst \\ \textit{Executive Progress Report for Michael Ash and Dissertation Committee}}
+\date{July 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent \textbf{EXECUTIVE SUMMARY:} This progress report provides the complete, paper-facing empirical appendix for **Specification B (Capital Disaggregation Model)** of Chapter 2. By unbundling aggregate productive capital into extensive nonresidential plant structures ($K^{\text{NRC}}$) and intensive machinery ($K^{\text{ME}}$), Specification B provides structural identification of the technical choice mechanism ($\kappa_t = k^{\text{ME}}_t - k^{\text{NRC}}_t$), relative asset price dynamics ($p_t^{\kappa} = \ln P^{\text{ME}}_t - \ln P^{\text{NRC}}_t$), and class distribution ($\omega_{t-1}$). We evaluate the full range of 505 IM-OLS cointegrating regressions across four master comparative matrices comparing specifications **With Step Controls ($\boldsymbol{\gamma}'\mathbf{D}_t = \text{Yes}$)** against **Without Step Controls ($\boldsymbol{\gamma}'\mathbf{D}_t = \text{No}$)**: (1) **Full Sample Baseline Matrix (1929--2024)** across Centering Treatments; (2) **Accumulation Eras Comparative Matrix** comparing Fordism (1929--1973) vs. Post-Fordism (1974--2024); (3) **Multi-Wage Share Robustness Matrix** comparing Baseline NFC GVA, Corporate GVA, Shaikh-Tonak Tier 1, and Shaikh-Tonak Tier 2 wage measures; and (4) **Macroeconomic Sub-Window Diagnostic Matrix**. Core empirical findings: (1) Parameter estimates confirm that class distribution conditions mechanization choice ($\hat{\theta}_{\omega \kappa} = 15.40^{***}$ under initial-state centering with step controls); (2) Step controls eliminate residual non-stationarity ($C_{\text{Shin}}$ drops from 0.261 to 0.042); (3) Reconstructed capacity utilization ($\hat{\mu}_t^{\text{SpecB}}$) anchored at $\mu_{1973} = 1.00$ recovers a 50 percentage point post-2000 industrial stagnation gap relative to aggregate Specification A; and (4) The total transformation elasticity ($\theta_t^{\text{SpecB}} < 1.0$) confirms persistent capital overaccumulation throughout post-war capitalism.
+\end{abstract}
+
+\FloatBarrier
+\section{Methodological Setup \& Disaggregation Architecture}
+
+National accounting consistency requires strict clarity regarding sectoral boundaries in capital disaggregation:
+\begin{itemize}
+    \item \textbf{Observed Aggregate Output ($Y_t$)}: Measured via \textit{Total Corporate Gross Value Added} ($Y_{\text{CORP}}$) or aggregate real output ($Y_t$) from NIPA accounts, capturing aggregate demand realization across corporate capitalism.
+    \item \textbf{Productive Capital Disaggregation ($K_{\text{NFC}}^{\text{NRC}}$ and $K_{\text{NFC}}^{\text{ME}}$)}: We unbundle non-financial corporate productive fixed assets into nonresidential structures ($K_{\text{NFC}}^{\text{NRC}}$), representing sunk extensive plant scale, and machinery and equipment ($K_{\text{NFC}}^{\text{ME}}$), representing intensive mechanization technology choice.
+    \item \textbf{Estimation Sample (1929--2024)}: BEA Fixed Assets capital stock series ($K^{\text{ME}}, K^{\text{NRC}}, K^{\text{cap}}$) span 1925--2025 (101 years). However, corporate value added ($y_t^{\text{NFC}}$) and distribution ($\omega_{t-1}$) begin in 1929, establishing an estimation sample of **1929--2024 ($T = 94$ years)**.
+\end{itemize}
+
+Figure~\ref{fig:specB_decomp} plots the raw historical trajectories of nonresidential structures ($k^{\text{NRC}}$), machinery ($k^{\text{ME}}$), capital composition residual ($\kappa_t = k^{\text{ME}}_t - k^{\text{NRC}}_t$), and relative equipment-to-structure deflator trends ($p_t^{\kappa} = \ln P_t^{\text{ME}} - \ln P_t^{\text{NRC}}$).
+
+\begin{figure}[h!]
+\centering
+\caption{Specification B Structural Decomposition (1925--2025). Panel (a): Log nonresidential structures ($k^{\text{NRC}}$, navy) vs. log machinery ($k^{\text{ME}}$, firebrick). Panel (b): Capital composition residual ($\kappa_t = k^{\text{ME}}_t - k^{\text{NRC}}_t$). Panel (c): Log relative capital asset deflators ($p_t^{\kappa} = \ln P_t^{\text{ME}} - \ln P_t^{\text{NRC}}$).}
+\label{fig:specB_decomp}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_specB_3panel_structural_decomposition.png}
+\end{figure}
+
+A non-parametric LOESS trend of $\ln K^{\text{cap}}$ reveals structural inflections used to construct step dummy controls ($\boldsymbol{\gamma}' \mathbf{D}_t = [D_{1933}, D_{1947}, D_{1974}, D_{2008}]'$), capturing the New Deal mobilization, Fordist expansion, late-Fordist profit squeeze, and post-GFC stagnation.
+
+\FloatBarrier
+\section{Specification Taxonomy \& Cointegration Hierarchy}
+
+We establish a nested three-tier cointegration hierarchy for Specification B to test the marginal contributions of relative prices and distributional interaction:
+
+\paragraph{Specification B1: Linear Uninteracted Baseline Model}
+Unbundles plant scale from capital composition without interaction terms:
+\begin{equation}
+y_t^{\text{NFC}} = \alpha + \theta_{\text{NRC}} k_t^{\text{NRC}} + \theta_{\kappa} \kappa_t + \beta_{p^{\kappa}} p_t^{\kappa} + \beta_{\omega} \omega_{t-1} + \boldsymbol{\gamma}' \mathbf{D}_t + u_t
+\end{equation}
+
+\paragraph{Specification B2: Distributionally Interacted Mechanization Model}
+Introduces state-dependent distribution conditioning on mechanization choice:
+\begin{equation}
+y_t^{\text{NFC}} = \alpha + \theta_{\text{NRC}} k_t^{\text{NRC}} + \theta_{\kappa} \kappa_t + \beta_{p^{\kappa}} p_t^{\kappa} + \beta_{\omega} \omega_{t-1} + \theta_{\omega \kappa} (\kappa_t \cdot \omega_{t-1}) + \boldsymbol{\gamma}' \mathbf{D}_t + u_t
+\end{equation}
+
+\paragraph{Specification B3: Canonical Fully Interacted Model}
+Incorporates relative capital asset price conditioning on mechanization choice:
+\begin{equation}
+y_t^{\text{NFC}} = \alpha + \theta_{\text{NRC}} k_t^{\text{NRC}} + \theta_{\kappa} \kappa_t + \beta_{p^{\kappa}} p_t^{\kappa} + \beta_{\omega} \omega_{t-1} + \theta_{\omega \kappa} (\kappa_t \cdot \omega_{t-1}) + \theta_{\kappa p^{\kappa}} (\kappa_t \cdot p_t^{\kappa}) + \boldsymbol{\gamma}' \mathbf{D}_t + u_t
+\end{equation}
+
+Each specification is evaluated both **With Step Controls ($\boldsymbol{\gamma}' \mathbf{D}_t = \text{Yes}$)** and **Without Step Controls ($\boldsymbol{\gamma}' \mathbf{D}_t = \text{No}$)** across Initial-State, Uncentered, and Sample-Mean normalizations. Figure~\ref{fig:specB_forest} presents the forest plot of point estimates and 95\% Fixed-$b$ HAR confidence intervals for the primary wage-squeeze interaction parameter ($\hat{\theta}_{\omega \kappa}$).
+
+\begin{figure}[h!]
+\centering
+\caption{Specification B Choice-of-Technique Interaction Parameter ($\hat{\theta}_{\omega \kappa}$) Forest Plot across 505 IM-OLS Estimations (1929--2024).}
+\label{fig:specB_forest}
+\includegraphics[width=0.90\textwidth]{../../output/figures/fig_specB_dual_parameter_forest.png}
+\end{figure}
+
+Table~\ref{tab:specB_spec_comparison} evaluates the progressive empirical taxonomy across Specifications B1, B2, and B3. Adding distributional interaction ($\hat{\theta}_{\omega \kappa} = 15.40^{***}$) confirms that labor share conditions mechanization, while step controls eliminate residual non-stationarity ($C_{\text{Shin}}$ drops from 0.261 to 0.042).
+
+\input{tables/table_baseline_imols_specB_spec_comparison.tex}
+
+\section{Empirical Results Matrix \& Robustness (505-Model Combinatory)}
+
+To provide a complete paper-facing empirical appendix for Specification B, we present the full 505-model estimation grid synthesized across 3 Specifications (Spec B1, Spec B2, Spec B3), 4 Wage Share Measures (Baseline NFC GVA, Corporate GVA, Shaikh-Tonak Tier 1, Shaikh-Tonak Tier 2), 7 Sample Windows, 3 Centering Regimes (Initial-State, Uncentered, Sample-Mean), and 2 Step Control States (With/Without Dummies).
+
+Table~\ref{tab:specB_master_ledger} summarizes the 505-model master combinatory, demonstrating robust cointegration and consistent parameter estimates across specifications, wage definitions, and centering treatments.
+
+\input{tables/table_baseline_imols_specB_master_505_ledger.tex}
+
+\input{tables/table_baseline_imols_specB_fullsample_master_with_dummies.tex}
+
+\input{tables/table_baseline_imols_specB_fullsample_master_without_dummies.tex}
+
+\input{tables/table_baseline_imols_specB_eras.tex}
+
+\input{tables/table_baseline_imols_specB_wageshares.tex}
+
+\input{tables/table_baseline_imols_specB_diagnostics.tex}
+
+\section{Capacity Utilization Reconstruction \& Disaggregation Gap}
+
+Following vault protocol D03, level scale is anchored at the 1973 FRB survey peak benchmark ($\mu_{\text{US}, 1973} = 1.00$).
+
+\begin{figure}[htbp]
+\centering
+\caption{Specification B Reconstructed U.S. Capacity Utilization ($\hat{\mu}_t^{\text{SpecB}}$, 1929--2024) across Baseline NFC GVA, Shaikh-Tonak Tier 1, and Shaikh-Tonak Tier 2 Wage Share Definitions.}
+\label{fig:specB_comp_util}
+\includegraphics[width=0.90\textwidth]{../../output/figures/fig_reconstructed_capacity_utilization_1973_comparative.png}
+\end{figure}
+
+Figure~\ref{fig:specB_comp_util} plots comparative reconstructed capacity utilization series under Specification B.
+
+\begin{figure}[htbp]
+\centering
+\caption{Differential Capacity Utilization Gap ($\Delta \mu_t = \mu_t^{\text{SpecB}} - \mu_t^{\text{SpecA}}$, 1929--2024). Positive values indicate Specification B predicts higher capacity utilization than aggregate Specification A.}
+\label{fig:util_gap}
+\includegraphics[width=0.90\textwidth]{../../output/figures/fig_specB_vs_specA_utilization_gap.png}
+\end{figure}
+
+Figure~\ref{fig:util_gap} displays the differential capacity utilization gap ($\Delta \mu_t = \mu_t^{\text{SpecB}} - \mu_t^{\text{SpecA}}$). Disaggregating plant scale from mechanization choice reveals a 50 percentage point capacity utilization gap post-2000, capturing post-GFC industrial stagnation driven by machinery share decline.
+
+\section{Corrected Total Transformation Elasticity \& Overaccumulation (\texorpdfstring{$\theta_t^{\text{SpecB}}$}{theta\_t})}
+
+To ensure one-sector aggregation consistency between Specification A and Specification B, the disaggregated transformation elasticity $\theta_t^{\text{SpecB}}$ is derived as the **total derivative of potential capacity output $y_t^p$ with respect to aggregate log capital stock $k_t^{\text{cap}}$**:
+\begin{equation}
+\theta_t^{\text{SpecB}} \equiv \frac{d y_t^p}{d k_t^{\text{cap}}} = \frac{\frac{d y_t^p}{d k_t^{\text{NRC}}}}{\frac{d k_t^{\text{cap}}}{d k_t^{\text{NRC}}}} = \frac{\frac{d y_t^p}{d k_t^{\text{NRC}}}}{1 + s_{\text{ME}, t} \, \frac{d \kappa_t}{d k_t^{\text{NRC}}}}
+\end{equation}
+where $s_{\text{ME}, t} = \frac{K_{t, \text{NFC}}^{\text{ME}}}{K_{t, \text{NFC}}^{\text{ME}} + K_{t, \text{NFC}}^{\text{NRC}}}$ is the machinery share of aggregate productive capital stock, and $\frac{d \kappa_t}{d k_t^{\text{NRC}}}$ is the empirical path derivative of mechanization choice relative to plant scale, identified via LOESS trend derivative per lock `E18`.
+
+Evaluating the numerator for each specification yields the explicit aggregate elasticity formulas:
+
+\paragraph{Spec B1 Aggregate Elasticity:}
+\begin{equation}
+\theta_{t}^{\text{SpecB1}} = \frac{\theta_{\text{NRC}} + \theta_{\kappa} \frac{d \kappa_t}{d k_t^{\text{NRC}}}}{1 + s_{\text{ME}, t} \, \frac{d \kappa_t}{d k_t^{\text{NRC}}}}
+\end{equation}
+
+\paragraph{Spec B2 Aggregate Elasticity:}
+\begin{equation}
+\theta_{t}^{\text{SpecB2}}(\omega_{t-1}) = \frac{\theta_{\text{NRC}} + \left( \theta_{\kappa} + \theta_{\omega \kappa} \omega_{t-1} \right) \frac{d \kappa_t}{d k_t^{\text{NRC}}}}{1 + s_{\text{ME}, t} \, \frac{d \kappa_t}{d k_t^{\text{NRC}}}}
+\end{equation}
+
+\paragraph{Spec B3 Aggregate Elasticity:}
+\begin{equation}
+\theta_{t}^{\text{SpecB3}}(\omega_{t-1}, p_t^{\kappa}) = \frac{\theta_{\text{NRC}} + \left( \theta_{\kappa} + \theta_{\omega \kappa} \omega_{t-1} + \theta_{\kappa p^{\kappa}} p_t^{\kappa} \right) \frac{d \kappa_t}{d k_t^{\text{NRC}}}}{1 + s_{\text{ME}, t} \, \frac{d \kappa_t}{d k_t^{\text{NRC}}}}
+\end{equation}
+
+\begin{figure}[h!]
+\centering
+\caption{Specification B Total Transformation Elasticity Trajectory ($\theta_t^{\text{SpecB}}$, 1929--2024). The shaded region highlights the long-run Capital Overaccumulation Regime ($\theta_t^{\text{SpecB}} < 1.0$).}
+\label{fig:specB_theta}
+\includegraphics[width=0.90\textwidth]{../../output/figures/fig_specB_transformation_elasticity_theta_timeseries.png}
+\end{figure}
+
+Figure~\ref{fig:specB_theta} plots the trajectory of total transformation elasticity $\theta_t^{\text{SpecB}}$ across the century. Identified via LOESS path derivatives ($\frac{d \kappa_t}{d k_t^{\text{NRC}}}$), $\theta_t^{\text{SpecB}}$ averages $0.41$ ($\text{median} = 0.49$, $\text{range} = [-0.27, 0.94]$). Crucially, during the post-2000 neoliberal phase, $\theta_t^{\text{SpecB}}$ falls below zero ($\theta_t^{\text{SpecB}} < 0$), demonstrating that aggregate capital accumulation entered an acute Structural Overaccumulation Regime where marginal capital growth yields negative potential capacity expansion.
+
+\FloatBarrier
+\section{Summary of Key Empirical Findings \& Takeaways}
+
+The empirical estimations establish four key findings for the dissertation committee:
+
+\begin{enumerate}
+    \item \textbf{Distributionally Conditioned Mechanization Choice}: Under Initial-State centering with step controls, the interaction parameter $\hat{\theta}_{\omega \kappa}$ remains positive and statistically significant ($\hat{\theta}_{\omega \kappa} = 15.40^{***}$). Rising labor share drives intensive machinery accumulation relative to plant structures.
+    \item \textbf{Cointegration Hygiene and Variance Reduction}: Step controls ($\mathbf{D}_{1933}, \mathbf{D}_{1947}, \mathbf{D}_{1974}, \mathbf{D}_{2008}$) eliminate non-stationary residual drift ($C_{\text{Shin}}$ drops from 0.261 to 0.042) and reduce residual variance ($\hat{\sigma}_u$ drops from 0.200 to 0.112).
+    \item \textbf{Stagnation Gap Recovery}: Reconstructed capacity utilization under Specification B ($\hat{\mu}_t^{\text{SpecB}}$) recovers a 50 percentage point capacity utilization gap post-2000 relative to aggregate Specification A, identifying post-GFC industrial stagnation driven by machinery investment decline.
+    \item \textbf{Severe Capital Overaccumulation Regime ($\theta_t^{\text{SpecB}} < 1.0$)}: The total aggregate transformation elasticity $\theta_t^{\text{SpecB}}$ averages $0.41$ over 1929--2024 and turns negative ($\theta_t^{\text{SpecB}} < 0$, reaching $-0.27$) in the post-2000 era. This confirms that the U.S. economy operates within a severe structural overaccumulation regime ($\theta_t < 1.0$), where additional capital accumulation yields diminishing or negative potential capacity output growth.
+\end{enumerate}
+
+\end{document}

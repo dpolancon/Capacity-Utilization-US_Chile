@@ -1,0 +1,9 @@
+"check","pass"
+"all model IDs use one route",TRUE
+"no LOESS model contains PARAMETRIC",TRUE
+"no PARAMETRIC model contains LOESS",TRUE
+"system is bivariate",TRUE
+"bootstrap necessity gate recorded",TRUE
+"no FWL residualization",TRUE
+"cumulative regime coefficients",TRUE
+"no beta before the full gate",TRUE

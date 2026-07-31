@@ -1,0 +1,500 @@
+Chile Capital Composition and the External Constraint
+                A WBOP-Based Admissibility and Event Audit, 1920–2024
+
+
+                                   Chapter 2 Research Pipeline
+
+                                             27 July 2026
+
+
+                                               Abstract
+
+        This report replaces the former Chile capital-composition report with a pre-estimation audit.
+    It adopts the investigative sequence of the United States capital-composition report—visual
+    history, integration orders, cointegration choice, stability, and bounded interpretation—without
+    importing United States estimates or imposing its model on Chile. The historical external-sector
+    evidence comes exclusively from the World Historical Balance of Payments database (WBOP).
+    The WBOP workbook supplies complete annual Chile series for trade, income, transfers, the
+    current account, and foreign wealth over 1920–2024, and its accounting identities close to
+    machine precision. It does not identify machinery imports, gross capital inflows, reserve use,
+    debt service, or essential imports jointly. The A04 conversion ratio ϕt is therefore latent and is
+    not reconstructed.
+        The admissibility battery produces the decisive result. Sixteen external candidates receive an
+    I(1) verdict and two foreign-wealth candidates receive an I(0) verdict, but ktME , ktNR , and κt =
+    ktME − ktNR remain unresolved because their first differences do not secure a stationary majority
+    across ADF, PP, KPSS, ERS–GLS, and break-allowing tests. The active gate consequently
+    blocks Johansen, IM–OLS, FM–OLS, DOLS, and degree-2 CPR interaction estimates. This is
+    not an absence of evidence: it overturns the former report’s unsupported elasticity and prevents
+    a non-admissible regression from becoming a historical conclusion. Annual WBOP financing-
+    compression events in 1937, 1976, 1999, and 2023 coincide with a larger contemporaneous
+    reduction in machinery accumulation than in structures, but the four-episode bootstrap interval
+    includes zero. The evidence establishes external-pressure timing and a machinery-sensitive
+    pattern; it does not yet identify a stable long-run external-constraint coefficient.
+
+
+
+Contents
+
+1 Empirical Problem and the A04 Measurement Boundary                                                     3
+
+
+2 Data and Provenance                                                                                    3
+
+
+3 Visual-First Chilean History                                                                           5
+
+                                                    1
+Chile Capital Composition and External Constraint   WBOP Audit
+
+
+4 Integration and Break Audit                                6
+
+
+5 Capital-Composition Benchmark                              7
+
+
+6 WBOP Candidate Adjudication                                8
+
+
+7 VECM and Super-Consistent Results                          8
+
+
+8 Interaction and CPR Results                                9
+
+
+9 Annual External Pressure and Growth Evidence               9
+
+
+10 Specification Map and Bounded Verdict                    11
+
+
+A Executable Artifact Register                              12
+
+
+B Research and Integrity Checkpoints                        12
+
+
+
+
+                                             2
+Chile Capital Composition and External Constraint                                        WBOP Audit
+
+
+1    Empirical Problem and the A04 Measurement Boundary
+
+Chile’s two-capital history presents a concrete identification problem. Machinery and equipment KtME
+is the import-dependent intensive margin, while nonresidential structures KtNR is the predominantly
+domestic extensive margin. That distinction is a maintained analytical restriction. The available
+stocks do not reveal the imported fraction of each investment flow, and the WBOP manufactured-
+goods import series is broader than capital goods. The report therefore tests the observable
+implication—whether external pressure is associated with a relative interruption of machinery
+accumulation—without relabelling manufactured imports as machinery imports.
+
+A04 defines foreign-exchange availability as exports plus net capital inflows and reserve use, net
+of debt service and essential imports, and compares that envelope with consistently measured
+machinery-import requirements. WBOP observes the long historical current account and foreign-
+wealth positions, but it does not provide every term required for that conversion ratio in one
+consistent Chile series. Hence Ftavail , Ftreq , ν, and ϕt remain analytical objects. No numerical value
+is assigned to them. The former report’s exports-only envelope and 0.15 import-intensity calibration
+are removed because they converted missing measurement into artificial abundance.
+
+The same boundary applies to capacity utilization. No cumulative GDP peak is used to construct
+µt . Capacity utilization requires an independently reconstructed productive-capacity level and its
+active anchoring protocol; this capital-composition audit neither supplies nor substitutes for that
+reconstruction.
+
+The United States report contributes only an audit architecture: inspect the raw histories, establish
+integration orders, adjudicate the estimator, test breaks and system stability, then issue a verdict.
+Chile’s data decide which stages survive. No United States coefficient, regime, or comparison enters
+this report.
+
+
+
+2    Data and Provenance
+
+The canonical panel joins the existing Chile capital-stock file to the Chile column (CL) of the official
+WBOP workbook. The frozen workbook has SHA–256 7198FE3F173056A849A5FD8F89F6FD99F598508D2B59C4749AF
+The source ledger records the retrieval timestamp, byte size, official download address, sheet, and
+variable map. WBOP describes itself as an annual database covering 57 core territories over
+1800–2025 and provides its data and replication package at https://wbop.world/. The present
+release extracts 1920–2024 because that is the common historical span fixed for this audit.
+
+
+
+
+                                                   3
+Chile Capital Composition and External Constraint                                               WBOP Audit
+
+
+                            Table 1: Canonical sources and empirical roles
+
+  Object                 Coverage                Source                          Role and boundary
+  K ME , K NR            1920–2024               Chile capital-stock source      Log stocks and κt ; not an
+                                                 panel                           import-content measure.
+  Real GDP and in-       1920–2010               Chile historical national ac-   Growth and investment
+  vestment                                       counts in the source panel      outcomes only; never event-
+                                                                                 definition inputs.
+  Trade    decomposi-    1920–2024               WBOP B1–B3 and C1               Goods, primary goods,
+  tion                                           sheets                          manufactures, and goods-
+                                                                                 and-services balances.
+  Income, transfers,     1920–2024               WBOP D1, E1, and F1             External-pressure candi-
+  current account                                sheets                          dates and annual financing
+                                                                                 proxy.
+  Foreign wealth         1920–2024               WBOP G1 sheets                  Gross assets, gross liabili-
+                                                                                 ties, and net foreign wealth;
+                                                                                 stocks are not gross inflow
+                                                                                 measures.
+  Notes: Manufactured-goods imports are a broad import-dependence indicator, not direct capital-goods
+  imports. The source and coverage ledgers are stored under output/CL/S10 SOURCE PANEL/.
+
+
+
+Four WBOP identities were checked year by year: goods exports less goods imports equals the goods
+balance; manufactured exports less manufactured imports equals the manufactured balance; goods
+and services plus net foreign income plus transfers equals the current account; and gross foreign
+assets less gross foreign liabilities equals net foreign wealth. Their maximum absolute residuals
+range from 5.1 × 10−16 to 7.0 × 10−15 . The workbook therefore closes internally for Chile, and the
+extracted signs and sheet assignments are verified.
+
+
+
+
+                                                       4
+Chile Capital Composition and External Constraint                                          WBOP Audit
+
+
+3    Visual-First Chilean History
+
+
+
+
+         Figure 1: Capital stocks and capital composition. Source: canonical Chile panel.
+
+
+Both capital stocks rise persistently, but their relative movement is not smooth. The capital-
+composition ratio κt turns across several historical intervals instead of tracing a single linear relation.
+That history rules out treating the bivariate slope as a mechanical constant before breaks and
+stochastic orders are adjudicated.
+
+
+
+
+                                                    5
+Chile Capital Composition and External Constraint                                     WBOP Audit
+
+
+
+
+Figure 2: Selected WBOP external-pressure candidates. Source: official WBOP workbook, Chile
+column.
+
+
+Manufactured-goods imports, the current account, net foreign income, and gross foreign liabilities
+carry distinct historical information. Their divergence is economically meaningful: trade dependence,
+income drainage, net financing need, and accumulated foreign obligations are not interchangeable
+measures of a single latent scarcity index. The model therefore introduces one candidate at a time
+and never averages them into an undocumented composite.
+
+LOESS derivatives are retained only as visual inflection markers. Formal Bai–Perron results locate
+multiple breaks in each capital series: 1934, 1949, 1964, 1989, and 2009 for ktME ; 1934, 1949, 1971,
+1988, and 2009 for ktNR ; and 1945, 1962, 1994, and 2009 for κt . SupF and CUSUM tests reject
+stability for every series. The evidence rejects a full-sample invariant slope before the external
+candidates even enter.
+
+
+
+4    Integration and Break Audit
+
+Every capital and WBOP candidate is tested in levels and first differences with ADF, Phillips–Perron,
+KPSS, ERS–GLS, and Zivot–Andrews procedures under constant and trend specifications. Annual
+autoregressive corrections are capped at four lags, with ADF selecting within that bound by AIC. A
+
+
+                                                 6
+Chile Capital Composition and External Constraint                                                      WBOP Audit
+
+
+variable is classified stationary when at least six of ten tests support stationarity. An I(1) promotion
+also requires no more than four level-stationarity votes. All other outcomes remain held.
+
+                                Table 2: Selected integration-order verdicts
+
+    Candidate                           Level votes       Difference        Verdict           Disposition
+                                                          votes
+    ktME                                0/10              2/10              unresolved        held
+    ktNR                                0/10              4/10              unresolved        held
+    κt                                  1/10              4/10              unresolved        held
+    Current account / GDP               4/10              8/10              I(1)              promoted
+    Manufactured imports / GDP          1/10              8/10              I(1)              promoted
+    Gross foreign assets / GDP          0/10              10/10             I(1)              promoted
+    Gross foreign liabilities / GDP     8/10              10/10             I(0)              short run only
+    Net foreign wealth / GDP            7/10              10/10             I(0)              short run only
+    Notes: A stationary vote applies each test’s own null correctly: rejection supports stationarity for
+    unit-root tests, while non-rejection supports stationarity for KPSS. Full statistics, critical values,
+    deterministic cases, lags, and samples appear in integration order test ledger.csv.
+
+
+
+Sixteen external candidates pass as I(1), and two pass as I(0), but the capital variables fail the
+first-difference gate. This pattern is consistent with very smooth stock accumulation, multiple
+level and slope breaks, or higher-order persistence; the present battery does not distinguish those
+possibilities decisively. The verdict is therefore held, not forced I(1). Because the dependent and
+benchmark capital variables fail first, no external candidate can rescue the cointegration design.
+
+
+
+5    Capital-Composition Benchmark
+
+The intended Layer-2 relation is
+
+                                            ktNR = α + βME ktME + εt ,
+
+where βME belongs to the cointegrating vector. The bivariate benchmark is specification CL-L2-BIV-001.
+Its data, estimator menu, sample, and release hash are recorded in the model ledger before estimation.
+
+The benchmark is blocked because neither capital series has an admissible I(1) verdict. Estimating
+a Johansen rank or an IM–OLS slope under these conditions would make cointegration inference
+depend on an integration order the audit has rejected. The former report’s elasticity near 0.88 is
+therefore withdrawn; it has no valid successor in this release.
+
+This blockage narrows the next empirical task. The capital stocks require an explicit I(2)-risk and
+multiple-break investigation, followed by a decision between an I(2) system, break-adjusted I(1)
+representation, or accumulation-rate model. That extension must pass a new gate before the level
+relation can be reopened.
+
+
+
+                                                          7
+Chile Capital Composition and External Constraint                                                       WBOP Audit
+
+
+6       WBOP Candidate Adjudication
+
+The WBOP variables are assigned roles by their own stochastic properties. Current-account, trade,
+income, transfer, and gross-asset candidates that pass as I(1) may eventually enter one-at-a-time
+trivariate cointegrating systems. Gross foreign liabilities and net foreign wealth pass as I(0) and are
+restricted to exogenous short-run, impulse, or deterministic roles. No stock series is relabelled as a
+flow.
+
+                                    Table 3: External-candidate role map
+
+    Candidate family                  Order              Admissible role              Current disposition
+    Trade and current-account         predominantly      One-at-a-time trivari-       Blocked by capital gate
+    flows                             I(1)               ate vector
+    Foreign income and trans-         I(1)               One-at-a-time trivari-       Blocked by capital gate
+    fers                                                 ate vector
+    Gross foreign assets              I(1)               One-at-a-time trivari-       Blocked by capital gate
+                                                         ate vector
+    Gross foreign liabilities         I(0)               Short-run exogenous          Held until a valid capital
+                                                         or impulse control           system exists
+    Net foreign wealth                I(0)               Short-run exogenous          Held until a valid capital
+                                                         or impulse control           system exists
+    Manufactured imports              I(1)               Broad dependence can-        Never interpreted as ma-
+                                                         didate                       chinery imports
+    Notes: Candidate-specific verdicts and all blocked trivariate IDs appear in the complete specification-
+    space map under output/CL/S90 WBOP EVENT ROBUSTNESS/.
+
+
+
+The WBOP current account can measure an annual external-financing requirement through −CA/Y ,
+but it cannot supply a Forbes–Warnock gross-inflow sudden stop. This report therefore names the
+observed object “annual WBOP financing compression” and does not claim that it is a gross-flow
+event. That distinction prevents a current-account reversal from being misreported as a directly
+observed capital-flow collapse.
+
+
+
+7       VECM and Super-Consistent Results
+
+The S30 script contains the complete conditional estimator implementation. When both capital
+variables pass as I(1), it searches Johansen deterministic cases and lag lengths, saves ranks and
+normalized vectors, estimates adjustment coefficients, evaluates serial correlation and normality,
+and checks companion-root stability. The single-equation menu assigns IM–OLS the baseline role,
+FM–OLS the linear diagnostic role, and DOLS the fragility role.
+
+None of those branches executes in the present release. Every S30 result file is saved, but the
+coefficient, rank-vector, adjustment, and diagnostic tables are empty by construction; the specification
+ledger records “blocked” and the failed prerequisite for every proposed model. This is the econometric
+
+
+                                                           8
+Chile Capital Composition and External Constraint                                     WBOP Audit
+
+
+result: no VECM rank, βj , adjustment speed, weak-exogeneity verdict, or super-consistent slope is
+admissible on the current capital integration evidence.
+
+
+
+8    Interaction and CPR Results
+                                                                              (j)         (j)
+For each WBOP candidate, S20 creates the raw lagged cross-products ktME zt−1 and κt zt−1 , distin-
+guishes I(1) × I(0) conditioners from degree-2 CPR candidates, and computes condition numbers
+under Uncentered, Initial-State, and Sample-Mean treatments. No Frisch–Waugh–Lovell residualiza-
+tion is used.
+
+The capital order remains unresolved, so every interaction is held before coefficient estimation.
+Consequently, the three centering treatments cannot be compared by confidence-band overlap, and
+no conditioning effect is reported. This blocks the old practice of generating a nonlinear term first
+and deciding its stochastic order afterward.
+
+
+
+9    Annual External Pressure and Growth Evidence
+
+The primary annual event rule records years in which the WBOP external-financing proxy −CA/Y
+falls by at least five percentage points. Growth, investment, and capital accumulation do not enter
+the event definition. The rule identifies 1937, 1976, 1999, and 2023. Because WBOP does not observe
+historical gross inflows at the required frequency and decomposition, these are financing-compression
+episodes rather than Forbes–Warnock sudden stops.
+
+
+
+
+                                                 9
+Chile Capital Composition and External Constraint                                WBOP Audit
+
+
+
+
+Figure 3: Annual WBOP external-financing compression. The red line is the five-percentage-point
+rule.
+
+
+
+
+   Figure 4: Outcomes in [−3, +3]-year windows around independently dated WBOP events.
+
+
+                                              10
+Chile Capital Composition and External Constraint                                              WBOP Audit
+
+
+At the event year, mean machinery accumulation falls to 1.30 percent while structures accumulate
+at 2.43 percent, so ∆κt falls by 1.13 percentage points. One year later, machinery remains below
+structures by 0.60 percentage points. The direction matches the maintained import-dependence
+restriction, but the episode bootstrap for the mean post-event machinery-minus-structures difference
+spans [−2.36, 0.55] percentage points. The interval includes zero; timing supports a machinery-
+sensitive pattern, but the four events do not establish a stable differential response.
+
+The GDP evidence is weaker. Only three events fall inside the 1920–2010 real-GDP coverage, and
+mean growth is positive in the event and following year. Event overlap therefore does not support a
+claim that every financing compression produces an immediate output contraction. Growth remains
+an outcome, and the report rejects causal language.
+
+Threshold sensitivity confirms that episode selection matters: a three-point rule yields 14 events,
+four points yields eight, five points yields four, and six points yields two. Leave-one-episode-out,
+pre/post-1974, and placebo ledgers are retained. The event evidence is descriptive and bounded
+because the result changes with the threshold and the historical event count is small.
+
+
+10     Specification Map and Bounded Verdict
+
+                                 Table 4: Specification-space disposition
+
+     Specification fam-      Intended estima-       Gate result                 Final disposition
+     ily                     tor
+     Layer-2   bivariate     Johansen; IM–OLS       Capital integration un-     blocked
+     benchmark               baseline               resolved
+     WBOP trivariate         Johansen, one candi-   External orders re-         blocked
+     vectors                 date at a time         solved; capital unre-
+                                                    solved
+     I(0) external con-      VECM         exoge-    Capital system unavail-     held
+     trols                   nous/impulse           able
+                             controls
+     Degree-2     interac-   CPR-adapted IM–        Interaction order cannot    held
+     tions                   OLS                    clear capital gate
+     Annual event win-       Episode means and      Definition independent      descriptive only
+     dows                    999-draw bootstrap     of outcomes
+     Persistent step or      Break-conditioned      Breaks detected; institu-   held
+     slope shifts            systems                tional concurrence not
+                                                    adjudicated
+     Notes: Every specification has an ID, source hash, script, sample, model role, and reason in
+     complete specification space map.csv. No coefficient exists outside a saved model ledger.
+
+
+
+The historical WBOP evidence changes the Chile research design in three ways. First, it replaces
+a fabricated scalar scarcity ratio with observed and separately interpretable balance-of-payments
+candidates. Second, it dates annual financing-compression episodes independently of growth and
+finds a machinery-sensitive response whose uncertainty remains wide. Third, it blocks the long-run
+
+                                                     11
+Chile Capital Composition and External Constraint                                               WBOP Audit
+
+
+capital-composition model because the capital stocks do not satisfy the active I(1) gate. These are
+affirmative adjudications, not unfinished regressions.
+
+The bounded verdict is therefore precise. Chile’s external accounts contain long-run pressure
+variables capable of disciplining A04, and the event evidence is consistent with a relative machinery
+interruption during financing compression. The current release does not identify ϕt , a permanent
+external regime, a cointegrating vector, or a causal external-constraint coefficient. The next
+admissible step is an I(2)-risk and multiple-break capital-stock audit; only its outcome can reopen
+Johansen, IM–OLS, and CPR estimation.
+
+
+
+A     Executable Artifact Register
+
+                                 Table 5: Stage-correct implementation
+
+      Stage      Script                                Primary artifacts
+      S10        CL_S10_wbop_source_of_truth_          Frozen WBOP panel, provenance, coverage, iden-
+                 panel.R                               tity audit, dictionary
+      S20        CL_S20_external_constraint_           Integration ledger, interaction gate, breaks, an-
+                 admissibility.R                       nual events, visual audit
+      S30        CL_S30_choice_technique_bop_          Specification ledger and conditionally executed
+                 models.R                              Johansen/cointReg outputs
+      S90        CL_S90_wbop_event_                    Event windows, bootstrap, thresholds, placebos,
+                 robustness.R                          complete specification map
+      S99        CL_S99_capital_composition_           Integrity checks, LaTeX compilation, and build
+                 external_report.R                     manifest
+      Notes: The legacy CL S40–CL S45 scripts remain preserved as superseded evidence and are not
+      executed by this pipeline. Quantitative artifacts are under output/CL/; only report source and
+      PDF are stored under reports/.
+
+
+
+B     Research and Integrity Checkpoints
+
+The research checkpoint verified the WBOP coverage, workbook, conceptual identities, and official
+replication claim against https://wbop.world/ and Nievas and Piketty’s 2025 working paper. The
+data checkpoint froze the workbook and closed the four accounting identities. The econometric
+checkpoint kept all conflicting capital classifications held and prevented interaction promotion. The
+failure-mode checkpoint searched the new pipeline and report for the former calibrated objects, legacy
+notation, Markdown bold inside LaTeX, prohibited float specifications, and FWL residualization.
+The adversarial checkpoint asked whether the event rule observes gross inflows, whether manufactured
+imports directly measure machinery, and whether timing identifies causality; the answer is no in all
+three cases, and the prose states each boundary.
+
+
+
+
+                                                      12
+Chile Capital Composition and External Constraint                                  WBOP Audit
+
+
+References
+
+Johansen, S. (1995). Likelihood-Based Inference in Cointegrated Vector Autoregressive Models.
+Oxford University Press.
+
+Nievas, G., and Piketty, T. (2025). “Unequal Exchange and North–South Relations: Evidence
+from Global Trade Flows and the World Balance of Payments 1800–2025.” World Inequality Lab
+Working Paper 2025/11.
+
+Phillips, P. C. B., and Hansen, B. E. (1990). “Statistical Inference in Instrumental Variables
+Regression with I(1) Processes.” Review of Economic Studies, 57(1), 99–125.
+
+Stock, J. H., and Watson, M. W. (1993). “A Simple Estimator of Cointegrating Vectors in Higher
+Order Integrated Systems.” Econometrica, 61(4), 783–820.
+
+Vogelsang, T. J., and Wagner, M. (2014). “Integrated Modified OLS Estimation and Fixed-b
+Inference for Cointegrating Regressions.” Journal of Econometrics, 178, 741–760.
+
+
+
+
+                                               13
+

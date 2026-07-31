@@ -1,22 +1,26 @@
 ---
-type: data_measurement
+type: research_note
 status: active
-depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
 stage_scope: S10
 country: US_CL
-last_updated: 2026-06-10
+last_updated: 2026-07-26
 layer: empirical_design
 design_role: price_deflator_protocol
 scope: chapter2_core_support
 related_to:
-- R_distribution_conditioned_theta_identification
-- A00_Aggregate_Transformation_Benchmark
-- A03_TransformationElasticity_Two-CapitalCapacityComposition
-- N04_Composition_of_Accumulation_and_Transformation
-- R04_What_is_Identified_vs_Reconstructed
-- TARGET_REPO_STRUCTURE_AND_CODE_STAGE_IMPLEMENTATION
+  - R_distribution_conditioned_theta_identification
+  - A00_Aggregate_Transformation_Benchmark
+  - A03_TransformationElasticity_Two-CapitalCapacityComposition
+  - N04_Composition_of_Accumulation_and_Transformation
+  - R04_What_is_Identified_vs_Reconstructed
+  - TARGET_REPO_STRUCTURE_AND_CODE_STAGE_IMPLEMENTATION
 created: 2026-05-06
 updated: 2026-06-08
+subtype: data_measurement
+blocks: []
+priority: reference
 ---
 
 # Price-deflator protocol for ME–NRC nonfinancial-corporate composition
@@ -510,3 +514,29 @@ It should be constructed using account-specific real stock and investment measur
 The price-deflator protocol requires that each asset account be deflated internally before aggregation. Differences between machinery and construction price indexes must be recorded through a relative-price wedge and not silently absorbed into the composition variable.
 
 This preserves the distinction between real productive-capital composition, valuation composition, and external-expenditure pressure.
+
+---
+
+# 14. Data Provenance Audit: Specification B Relative Capital Asset Prices
+
+> [!note] Audit Date: 2026-07-26
+> Governed by [[A06_RelativePrice_Mechanization_Theory]] and [[V01_DataProvenance_Managment]].
+
+1. **Source Objects & File Locations**:
+   - `P_K_SFC_IMPL_NFC_ME`: Stock-Flow Consistent Implicit Price Deflator for Non-Financial Corporate Machinery & Equipment ($2017 = 100$).
+   - `P_K_SFC_IMPL_NFC_NRC`: Stock-Flow Consistent Implicit Price Deflator for Non-Financial Corporate Nonresidential Construction ($2017 = 100$).
+   - Staged Location: `output/US/S12D_B_GPIM_BASELINE_CONSTRUCTION/csv/S12D_B_sfc_implicit_price_indexes.csv`.
+
+2. **Valuation & Index Coherence**:
+   - `k_ME` ($\ln K_{\text{NFC}}^{\text{ME}}$) and `k_NRC` ($\ln K_{\text{NFC}}^{\text{NRC}}$) in `output/gpim_baseline_components_long.csv` represent real physical chained 2017 dollar capital volumes.
+   - The mechanization variable $\tau_t = k_t^{\text{ME}} - k_t^{\text{NRC}}$ is strictly a **real physical volume mechanization choice**.
+   - The relative price variable:
+     $$p_t^{\text{rel}} \equiv \ln P_{\text{NFC}}^{\text{ME}} - \ln P_{\text{NFC}}^{\text{NRC}}$$
+     isolates pure relative asset price movements (valuation drift) from real physical choice of technique ($\tau_t$), preventing omitted-variable bias in Specification B.
+
+3. **Full-Century (1925–2025) Coverage & GPIM Baseline Coherence**:
+   - Both `P_ME_2017` and `P_NRC_2017` are 100% complete for the entire 1925–2024 sample in `output/US/S29C_FIXED_ASSETS_DEFLATOR_AND_REAL_INVESTMENT_CONSTRUCTION/csv/S29C_fixed_assets_price_real_investment_long.csv`.
+   - `P_ME_2017` uses recovered SFC baseline prices throughout 1925–2024.
+   - `P_NRC_2017` uses recovered SFC baseline prices for 1931–2024 and the GPIM-authorized `INITIALIZATION_SEED_PRICE` for 1925–1930. This strictly complies with GPIM Constitution rules ([[V02_GPIM_Constitution]]). No manual external back-casting or external proxy splicing is required.
+
+

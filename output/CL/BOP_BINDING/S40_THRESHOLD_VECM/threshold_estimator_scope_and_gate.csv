@@ -1,0 +1,4 @@
+"model_object","status","reason","interpretation_limit","estimator"
+"requested import-machinery threshold VECM","blocked","log gross K^ME has unresolved I(2) risk in both split samples","no promoted long-run machinery coefficient or machinery-defined ECT","not selected under the integration-order gate"
+"pre-1973 reduced conditional threshold VECM","estimated","I(1) state: imports, NRS, RER; I(0) wage-share control","nonlinear adjustment in a reduced import-surplus-RER system","fixed-rank-one beta, observed delta-log-RER threshold, conditional residual bootstrap"
+"post-1974 reduced conditional threshold VECM","estimated","I(1) state: imports, NRS, wage share; stationary delta-log-RER control","nonlinear adjustment in a reduced import-surplus-distribution system","fixed-rank-one beta, observed delta-log-RER threshold, conditional residual bootstrap"

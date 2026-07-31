@@ -1,6 +1,6 @@
 ---
-type: inactive_archive
-status: inactive
+type: research_note
+status: archived
 depends_on: []
 stage_scope: none
 country: US_CL
@@ -8,8 +8,14 @@ last_updated: 2026-04-25
 title: Export Memo
 project: Normal utilization and the fractured firm
 tags:
-- export
-- obsidian-bundle
+  - export
+  - obsidian-bundle
+subtype: inactive_archive
+status_detail: inactive
+blocks: []
+layer: archive
+scope: chapter2
+priority: legacy
 ---
 
 # Export memo

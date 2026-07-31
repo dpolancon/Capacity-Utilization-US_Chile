@@ -1,0 +1,245 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs,array}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{placeins}
+\usepackage{float}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=blue!70!black,
+    urlcolor=blue!70!black
+}
+\captionsetup[figure]{position=top,labelfont=bf,font=small,skip=6pt}
+\captionsetup[table]{position=top,labelfont=bf,font=small,skip=6pt}
+
+\title{\textbf{Capital Composition without Standard Cointegration? A Unified Empirical Admissibility Audit of Chilean Heterogeneous Capital and External Pressure (1920--2024)}}
+\author{\textbf{Chapter 2 Research Group} \\ Department of Economics, UMass Amherst}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper asks whether Chile's nonresidential structures (\(K^{\mathrm{NR}}\)) form a stable long-run accommodating envelope for machinery and equipment (\(K^{\mathrm{ME}}\), 1920--2024), and whether World Historical Balance of Payments (WBOP) pressure conditions that relationship. We reproduce the data-first sequence used in the United States capital-composition audit while enforcing the current integration-order, break, bootstrap, and notation rules. Four results determine the verdict. First, machinery and structures rise together over the century, but the normalized relation \(k_t^{\mathrm{NR}}=\alpha+\beta_{\mathrm{ME}}k_t^{\mathrm{ME}}+\varepsilon_t\) is unstable: Bai--Perron dates 1934, 1949, 1964, and 1994, while CUSUM rejects parameter constancy. Second, the full century, Classic ISI, and post-1990 windows classify both capital stocks as \(I(2)\)-risk; the 1920--1938 and 1974--1989 crisis windows remain unresolved. No window supplies the common \(I(1)\) prerequisite for Johansen, IM--OLS, FM--OLS, or DOLS, so the paper reports no pseudo-cointegrating coefficient or adjustment speed. Third, manufactured imports, the current account, and net foreign income pass as \(I(1)\), while gross foreign liabilities pass as \(I(0)\); their model roles are identified, but the failed capital prerequisite blocks long-run WBOP conditioning. Fourth, annual WBOP financing compressions in 1937, 1976, 1999, and 2023 coincide with a mean post-event machinery-minus-structures accumulation gap of \(-0.57\) percentage points, yet the 999-draw interval \([-2.36,0.55]\) includes zero. Chile's external accounts remain relevant to the realization of mechanization, but the current capital stocks do not identify a standard long-run choice-of-technique vector.
+\end{abstract}
+
+\FloatBarrier
+\section{Introduction: Choice of Technique and Chilean Capital Heterogeneity}
+
+Capital accumulation combines physically distinct commitments. Machinery and equipment (\(K^{\mathrm{ME}}\)) records the intensive choice of technique: the equipment, imported complements, and production systems through which firms reorganize labor and raise technical productivity. Nonresidential structures (\(K^{\mathrm{NR}}\)) record the extensive envelope: factories, warehouses, transport installations, and other durable plant required to house and connect that machinery. In Chile, machinery is maintained as the more import-dependent margin and structures as the predominantly domestic margin. This is an analytical restriction whose observable implications must be tested; the capital accounts do not directly measure import content.
+
+The Layer-2 relation is normalized with structures on the left:
+\begin{equation}
+k_t^{\mathrm{NR}}=\alpha+\beta_{\mathrm{ME}}k_t^{\mathrm{ME}}+\varepsilon_t.
+\end{equation}
+The interpretation follows the normalization. A coefficient \(\beta_{\mathrm{ME}}<1\) means machinery expands faster than its structural envelope; \(\beta_{\mathrm{ME}}>1\) means structures respond more than proportionally to machinery. Exact proportionality requires \(\beta_{\mathrm{ME}}=1\), and stationarity of
+\begin{equation}
+\kappa_t=k_t^{\mathrm{ME}}-k_t^{\mathrm{NR}}
+\end{equation}
+requires testing that exact restriction within a valid cointegrating system. A coefficient merely near one does not establish it.
+
+The empirical question precedes the estimator. Standard Johansen and modified-OLS inference requires the two capital stocks to share the appropriate integration order. Chile's century-long stocks contain strong stochastic persistence and repeated structural change; imposing \(I(1)\) because both series trend upward would manufacture the equilibrium the paper is supposed to test. We therefore place the stochastic-order verdict before the coefficient comparison and let it determine whether a long-run vector exists.
+
+\FloatBarrier
+\section{Data-First Inspection and Chilean Macro-Era Periodization}
+
+The canonical annual panel contains 105 observations for each capital component from 1920 through 2024. It joins the Chile capital-stock reconstruction to the official WBOP Chile series for trade, income, transfers, the current account, and foreign wealth. The WBOP workbook is frozen under SHA--256 \texttt{7198FE3F173056A849A5FD8F89F6FD99F598508D2B59C4749AF9A50E9BC91C7B}; its four principal accounting identities close to machine precision. Manufactured imports remain a broad import-dependence indicator, not a capital-goods series.
+
+\begin{figure}[h!]
+\centering
+\caption{Chile Capital Stock Components in Log Levels with LOESS Inflection Overlays, 1920--2024}
+\label{fig:capital_levels}
+\includegraphics[width=0.88\textwidth]{../../output/CL/S20_EXTERNAL_CONSTRAINT_ADMISSIBILITY/fig_cl_capital_levels_loess.png}
+\vspace{3pt}\par{\footnotesize \textbf{Note:} Navy denotes machinery and equipment \(k_t^{\mathrm{ME}}\); crimson denotes nonresidential structures \(k_t^{\mathrm{NR}}\). Dashed lines are zero-crossings of the second derivative of the LOESS-smoothed capital-composition path. Source: canonical Chile capital panel.}
+\end{figure}
+
+Figure~\ref{fig:capital_levels} shows parallel secular expansion without establishing a common stochastic trend. The two log stocks are smooth because they cumulate investment and retirement flows; this smoothness is precisely why their first differences require direct testing. The widening and subsequent narrowing between the paths appears more clearly in \(\kappa_t\).
+
+\begin{figure}[h!]
+\centering
+\caption{Chile Capital Composition with LOESS Trend and Historical Accumulation Windows}
+\label{fig:kappa_regimes}
+\includegraphics[width=0.90\textwidth]{../../output/CL/S20_EXTERNAL_CONSTRAINT_ADMISSIBILITY/fig_cl_kappa_regime_bands.png}
+\vspace{3pt}\par{\footnotesize \textbf{Note:} The purple line is \(\kappa_t=k_t^{\mathrm{ME}}-k_t^{\mathrm{NR}}\); green is its LOESS trend. Shading denotes the Nitrate Crisis and Early State (1920--1938), Classic ISI (1939--1973), Dictatorship Shock (1974--1989), and Democratic Neoliberal Export Model (1990--2024). Red dashed lines are diagnostic curvature inflections, not imposed regime breaks.}
+\end{figure}
+
+The LOESS second derivative turns in 1932, 1952, 1970, 1975, 1996, and 2005. These dates identify changes in the velocity of capital composition; they do not independently justify step dummies. The four historical windows therefore remain institutionally fixed, while formal break tests determine whether their internal parameters are stable.
+
+\FloatBarrier
+\section{Integration Orders and Cointegrating-Coefficient Admissibility}
+
+Each capital series is tested in levels, first differences, and second differences using ADF, Phillips--Perron, KPSS, ERS--GLS, and Zivot--Andrews procedures under constant and trend specifications. A transformation passes only when at least six valid tests are available and at least 60 percent support stationarity. An \(I(1)\) verdict requires nonstationary levels and stationary first differences; \(I(2)\)-risk requires nonstationary first differences and stationary second differences. Conflicting short-window evidence remains unresolved.
+
+\begin{table}[h!]
+\centering
+\small
+\caption{Chile Capital Integration-Order and Standard-Model Admissibility Matrix}
+\label{tab:integration_matrix}
+\begin{tabular}{p{3.8cm}p{1.8cm}p{0.8cm}p{1.8cm}p{1.8cm}p{2.5cm}}
+\toprule
+\textbf{Historical Window} & \textbf{Years} & \textbf{N} & \textbf{\(k^{\mathrm{ME}}\)} & \textbf{\(k^{\mathrm{NR}}\)} & \textbf{Standard Model}\\
+\midrule
+Full Chile Century & 1920--2024 & 105 & \(I(2)\)-risk & \(I(2)\)-risk & \textbf{Blocked}\\
+Nitrate Crisis and Early State & 1920--1938 & 19 & Unresolved & Unresolved & \textbf{Blocked}\\
+Classic ISI & 1939--1973 & 35 & \(I(2)\)-risk & \(I(2)\)-risk & \textbf{Blocked}\\
+Dictatorship Shock & 1974--1989 & 16 & Unresolved & Unresolved & \textbf{Blocked}\\
+Democratic Neoliberal Export Model & 1990--2024 & 35 & \(I(2)\)-risk & \(I(2)\)-risk & \textbf{Blocked}\\
+\bottomrule
+\multicolumn{6}{p{13.0cm}}{\footnotesize \textbf{Note:} A blocked window fails the common-\(I(1)\) prerequisite for standard level cointegration. The two short windows would require 999-replication residual bootstrap inference if they became admissible; no model exists to bootstrap after the integration screen. Full statistics, controls, lags, and critical values remain in the quantitative ledger.}
+\end{tabular}
+\end{table}
+
+\begin{figure}[h!]
+\centering
+\caption{Capital-Stock Stationarity Evidence across Transformations and Historical Windows}
+\label{fig:integration_votes}
+\includegraphics[width=0.91\textwidth]{../../output/CL/S30_CHOICE_TECHNIQUE_BOP/fig_cl_integration_vote_map.png}
+\vspace{3pt}\par{\footnotesize \textbf{Note:} Points report the share of valid tests supporting stationarity. The dashed line is the pre-declared 60 percent threshold. The full, ISI, and post-1990 samples cross the threshold only after second differencing.}
+\end{figure}
+
+Table~\ref{tab:integration_matrix} and Figure~\ref{fig:integration_votes} overturn the premise needed for a Chilean replica of the United States coefficient matrix. In the full century, machinery receives 2 of 10 stationarity votes after first differencing and structures receive 4 of 10; both receive 10 of 10 after second differencing. Classic ISI and the post-1990 model show the same ordering. The result is \(I(2)\)-risk, not weak \(I(1)\). The crisis windows are too short and internally unstable to resolve the order. No historical window can promote \(\beta_{\mathrm{ME}}\).
+
+\begin{figure}[h!]
+\centering
+\caption{Coefficient and System-Estimation Admissibility Map}
+\label{fig:estimator_gate}
+\includegraphics[width=0.86\textwidth]{../../output/CL/S30_CHOICE_TECHNIQUE_BOP/fig_cl_estimator_gate_map.png}
+\vspace{3pt}\par{\footnotesize \textbf{Note:} Red cells mark specifications blocked before estimation. IM--OLS is the intended baseline; FM--OLS and DOLS are diagnostic comparators; Johansen is the system benchmark. None executes when the component stocks fail the common-\(I(1)\) requirement.}
+\end{figure}
+
+\FloatBarrier
+\section{System Dynamics and the Absence of Admissible Adjustment Speeds}
+
+In an admissible system,
+\begin{equation}
+\Delta X_t=\boldsymbol{\alpha}\boldsymbol{\beta}'X_{t-1}
++\sum_{i=1}^{p-1}\boldsymbol{\Gamma}_i\Delta X_{t-i}
++\boldsymbol{\epsilon}_t,
+\qquad X_t=(k_t^{\mathrm{NR}},k_t^{\mathrm{ME}})' ,
+\end{equation}
+the loading vector \(\boldsymbol{\alpha}\) measures how structures and machinery correct disequilibrium. That interpretation depends on a valid rank and integration order; an estimated loading from a misspecified \(I(1)\) system is not an institutional adjustment speed.
+
+\begin{table}[h!]
+\centering
+\small
+\caption{Chile Cointegrating-Coefficient and VECM Results Disposition}
+\label{tab:model_disposition}
+\begin{tabular}{p{3.7cm}p{0.8cm}p{1.6cm}p{1.6cm}p{1.6cm}p{2.4cm}}
+\toprule
+\textbf{Historical Window} & \textbf{N} & \textbf{IM--OLS} & \textbf{FM--OLS} & \textbf{DOLS} & \textbf{Johansen / \(\boldsymbol{\alpha}\)}\\
+\midrule
+Full Chile Century & 105 & Blocked & Blocked & Blocked & Blocked\\
+Nitrate Crisis and Early State & 19 & Blocked & Blocked & Blocked & Blocked\\
+Classic ISI & 35 & Blocked & Blocked & Blocked & Blocked\\
+Dictatorship Shock & 16 & Blocked & Blocked & Blocked & Blocked\\
+Democratic Neoliberal Export Model & 35 & Blocked & Blocked & Blocked & Blocked\\
+\bottomrule
+\multicolumn{6}{p{12.6cm}}{\footnotesize \textbf{Note:} ``Blocked'' means no coefficient was generated. It does not denote an insignificant estimate. Consequently, there is no rank, normalized \(\beta_{\mathrm{ME}}\), unit-vector restriction, error-correction loading, weak-exogeneity test, or system-stability statistic to interpret.}
+\end{tabular}
+\end{table}
+
+The empty coefficient space is the system result. It withdraws the former Chile elasticity near 0.88 and prevents rank-zero or wrong-order vectors from being presented as long-run parameters. The data may support an \(I(2)\) system, a break-adjusted accumulation-rate relation, or a differently reconstructed capital stock, but none is equivalent to the standard level VECM requested by the United States template.
+
+\FloatBarrier
+\section{Structural Breaks and WBOP External Pressure}
+
+The failure is not produced by one isolated crisis year. The full-sample relation \(k_t^{\mathrm{NR}}\) on \(k_t^{\mathrm{ME}}\) has Bai--Perron breaks in 1934, 1949, 1964, and 1994, while recursive CUSUM rejects stability. Within-window tests also reject stability, including a 1983 break inside the dictatorship window and several shifts inside Classic ISI and the post-1990 period.
+
+\begin{table}[h!]
+\centering
+\small
+\caption{Capital Breaks, LOESS Inflections, and WBOP Financing Compression}
+\label{tab:break_wbop}
+\begin{tabular}{p{3.5cm}p{3.4cm}p{4.9cm}}
+\toprule
+\textbf{Evidence} & \textbf{Dates} & \textbf{Empirical Disposition}\\
+\midrule
+Bai--Perron capital relation & 1934, 1949, 1964, 1994 & Endogenous instability; no automatic step controls\\
+LOESS curvature inflections & 1932, 1952, 1970, 1975, 1996, 2005 & Diagnostic periodization markers only\\
+WBOP financing compression & 1937, 1976, 1999, 2023 & Outcome-independent events; never permanent regimes\\
+\bottomrule
+\multicolumn{3}{p{12.2cm}}{\footnotesize \textbf{Note:} Persistent step or slope controls require formal and institutional concurrence. Nearby dates inform interpretation but are not treated as identical events.}
+\end{tabular}
+\end{table}
+
+\begin{figure}[h!]
+\centering
+\caption{OLS-CUSUM Path and Bai--Perron Break Dates in the Chile Capital Relation}
+\label{fig:cusum_breaks}
+\includegraphics[width=0.86\textwidth]{../../output/CL/S20_EXTERNAL_CONSTRAINT_ADMISSIBILITY/fig_cl_cusum_breaks.png}
+\vspace{3pt}\par{\footnotesize \textbf{Note:} The black line is the recursive empirical fluctuation process from \(k_t^{\mathrm{NR}}\) on \(k_t^{\mathrm{ME}}\). Red dashed lines mark endogenous Bai--Perron dates. The break evidence rejects an invariant full-century coefficient.}
+\end{figure}
+
+WBOP enters only after this capital adjudication. Manufactured imports/GDP, the current account/GDP, and net foreign income/GDP pass as \(I(1)\) and could enter one at a time in a valid long-run system. Gross foreign liabilities/GDP passes as \(I(0)\) and is restricted to a short-run or impulse role. None can repair the failed capital order, so no WBOP interaction or trivariate vector is estimated.
+
+\begin{figure}[h!]
+\centering
+\caption{Annual WBOP Financing Compression and Capital Accumulation around Events}
+\label{fig:wbop_events}
+\includegraphics[width=0.88\textwidth]{../../output/CL/S90_WBOP_EVENT_ROBUSTNESS/fig_cl_wbop_event_capital_response.png}
+\vspace{3pt}\par{\footnotesize \textbf{Note:} Panel A dates annual falls of at least five GDP points in the external-financing proxy \(-CA/Y\); these are not gross-flow sudden stops. Panel B reports mean \(\Delta k_t^{\mathrm{ME}}\) and \(\Delta k_t^{\mathrm{NR}}\) in \([-3,+3]\)-year windows. Growth and capital outcomes never enter the event definition.}
+\end{figure}
+
+The event-year mean falls to 1.30 percent for machinery and 2.43 percent for structures, reducing \(\Delta\kappa_t\) by 1.13 percentage points. Across event years and the following three years, the mean machinery-minus-structures gap is \(-0.57\) percentage points. The 999-draw interval spans \([-2.36,0.55]\), so the direction is consistent with machinery sensitivity but the four-event evidence does not identify a stable differential response. Threshold sensitivity strengthens the same caution: the event count moves from 14 at three points to two at six points.
+
+\FloatBarrier
+\section{Admissibility and the A04 Measurement Boundary}
+
+The WBOP evidence sharpens A04 without supplying its latent conversion ratio. WBOP observes trade, income, transfers, the current account, and foreign-wealth positions. It does not jointly observe the historical machinery-import requirement, usable capital inflows, reserve use, debt service, and essential imports needed to construct \(F_t^{\mathrm{avail}}\), \(F_t^{\mathrm{req}}\), or \(\phi_t\). No exports-only envelope or import-intensity calibration is introduced.
+
+The research establishes three bounded conclusions. First, Chile's capital composition is historically structured but does not satisfy the standard \(I(1)\) conditions required for a level cointegrating coefficient. Second, formal breaks and WBOP events cluster near several changes in \(\kappa_t\), but their dates are not interchangeable and do not define permanent regimes. Third, machinery accumulation weakens relative to structures around the four financing-compression events, yet the small-event interval includes zero. External pressure remains a plausible condition on the realization of mechanization; it is not an identified causal coefficient in this release.
+
+Break adjustment sharpens rather than reverses this verdict. After removing one endogenous step and slope change, residual ADF tests reject a unit root in both capital levels for the full century, the Nitrate window, the dictatorship window, and the post-1990 window. That evidence points toward break-stationary levels, not a common \(I(1)\) system. Classic ISI remains mixed: the adjusted structures level rejects a unit root while machinery does not. Because standard cointegration requires integrated levels rather than separately break-stationary or mixed-order series, the break-dummy evidence cannot be used to reopen Johansen or modified OLS.
+
+Capacity utilization \(\mu_t\) is not reconstructed here. Stationarity of \(\kappa_t\) would not by itself identify productive capacity, and the present evidence does not even establish that stationarity. The next admissible empirical move is a separately governed \(I(2)\) or accumulation-rate design, not the restoration of a blocked \(I(1)\) regression.
+
+\FloatBarrier
+\newpage
+\section*{Appendix: Correct Normalization, Drift Alignment, and the Unit Restriction}
+
+Let the deterministic components of the two log stocks be
+\begin{equation}
+k_t^{\mathrm{NR}}=g_{\mathrm{NR}}t+u_t^{\mathrm{NR}},
+\qquad
+k_t^{\mathrm{ME}}=g_{\mathrm{ME}}t+u_t^{\mathrm{ME}}.
+\end{equation}
+Under the stated normalization, the expected cointegrating residual is
+\begin{equation}
+E[\varepsilon_t]
+=\left(g_{\mathrm{NR}}-\beta_{\mathrm{ME}}g_{\mathrm{ME}}\right)t.
+\end{equation}
+Eliminating deterministic drift therefore implies
+\begin{equation}
+\beta_{\mathrm{ME}}=\frac{g_{\mathrm{NR}}}{g_{\mathrm{ME}}},
+\end{equation}
+not its inverse. If machinery grows faster than structures, \(g_{\mathrm{ME}}>g_{\mathrm{NR}}\), then \(\beta_{\mathrm{ME}}<1\). This is the interpretation maintained throughout the report.
+
+Moreover,
+\begin{equation}
+\kappa_t=k_t^{\mathrm{ME}}-k_t^{\mathrm{NR}}
+=-\alpha+\left(1-\beta_{\mathrm{ME}}\right)k_t^{\mathrm{ME}}-\varepsilon_t.
+\end{equation}
+Even if a rank-one system existed, \(\kappa_t\sim I(0)\) would require the exact restriction \(\beta_{\mathrm{ME}}=1\). The redevelopment includes a likelihood-ratio restriction test in the estimator code, but it is not executed because no window reaches an admissible rank-one system.
+
+\FloatBarrier
+\section*{References}
+
+Johansen, S. (1995). \textit{Likelihood-Based Inference in Cointegrated Vector Autoregressive Models}. Oxford University Press.
+
+Nievas, G., and Piketty, T. (2025). ``Unequal Exchange and North--South Relations: Evidence from Global Trade Flows and the World Balance of Payments 1800--2025.'' World Inequality Lab Working Paper 2025/11.
+
+Phillips, P. C. B., and Hansen, B. E. (1990). ``Statistical Inference in Instrumental Variables Regression with \(I(1)\) Processes.'' \textit{Review of Economic Studies}, 57(1), 99--125.
+
+Stock, J. H., and Watson, M. W. (1993). ``A Simple Estimator of Cointegrating Vectors in Higher Order Integrated Systems.'' \textit{Econometrica}, 61(4), 783--820.
+
+Vogelsang, T. J., and Wagner, M. (2014). ``Integrated Modified OLS Estimation and Fixed-\(b\) Inference for Cointegrating Regressions.'' \textit{Journal of Econometrics}, 178, 741--760.
+
+\end{document}

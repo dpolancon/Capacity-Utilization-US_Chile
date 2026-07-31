@@ -1,7 +1,8 @@
 ---
-type: constitutional_core
+type: theory
 status: active
-depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-06-10
@@ -11,6 +12,9 @@ topic: distribution_conditioned_transformation_elasticity
 created: 2026-06-08
 updated: 2026-06-11
 design_role: specification_governance
+subtype: constitutional_core
+blocks: []
+priority: core
 ---
 
 # Distribution-Conditioned Transformation Elasticity Identification

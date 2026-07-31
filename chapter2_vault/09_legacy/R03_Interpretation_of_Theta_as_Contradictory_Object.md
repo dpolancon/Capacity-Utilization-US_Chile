@@ -1,5 +1,5 @@
 ---
-type: legacy_note
+type: research_note
 status: active
 depends_on: []
 stage_scope: S00
@@ -9,13 +9,16 @@ layer: analytical_foundation
 design_role: interpretation_rule
 scope: chapter2_core
 related_to:
-- H00_Okishio_Vidal_Decentralized_Accumulation
-- H01_Cajas_to_Transformation_Elasticity
-- N01_Two_Corridor_Transformation_Elasticity
-- N02_Peripheral_Mechanization_Constraint
-- R01_Marx_Okishio_Regime_Diagnostic_Guardrail
-- R02_Threshold_Model_Peripheral_Diagnostic
+  - H00_Okishio_Vidal_Decentralized_Accumulation
+  - H01_Cajas_to_Transformation_Elasticity
+  - N01_Two_Corridor_Transformation_Elasticity
+  - N02_Peripheral_Mechanization_Constraint
+  - R01_Marx_Okishio_Regime_Diagnostic_Guardrail
+  - R02_Threshold_Model_Peripheral_Diagnostic
 created: 2026-05-05
+subtype: legacy_note
+blocks: []
+priority: legacy
 ---
 
 # Interpretation of θ as a contradictory object

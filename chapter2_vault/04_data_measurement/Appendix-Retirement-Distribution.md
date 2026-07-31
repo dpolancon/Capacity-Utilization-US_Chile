@@ -1,7 +1,8 @@
 ---
-type: data_measurement
+type: research_note
 status: active
-depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
 stage_scope: S10
 country: US_CL
 last_updated: 2026-06-05
@@ -9,6 +10,11 @@ source: appendix_K_ret_distribution.tex
 source_type: latex
 latex_label: app:ret_distribution
 bib: references.bib
+subtype: data_measurement
+blocks: []
+layer: empirics
+scope: chapter2
+priority: reference
 ---
 
 ---

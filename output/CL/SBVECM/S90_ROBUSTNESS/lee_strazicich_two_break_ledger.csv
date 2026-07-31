@@ -1,0 +1,4 @@
+"variable","model","break_1","break_2","selected_lag","lm_t_statistic","conservative_reference_5pct","rejects_unit_root_diagnostic","role"
+"k_ME","Lee-Strazicich LM Model C, two breaks",1936,1999,1,-4.60647258426673,-5.65,FALSE,"parametric unit-root diagnostic; does not select D_P"
+"k_NR","Lee-Strazicich LM Model C, two breaks",1936,1999,1,-1.75713233582278,-5.65,FALSE,"parametric unit-root diagnostic; does not select D_P"
+"kappa","Lee-Strazicich LM Model C, two breaks",1936,1999,1,-2.37795714610425,-5.65,FALSE,"parametric unit-root diagnostic; does not select D_P"

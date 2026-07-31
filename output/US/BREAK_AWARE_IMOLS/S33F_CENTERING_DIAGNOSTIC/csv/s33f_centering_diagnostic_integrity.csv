@@ -1,0 +1,8 @@
+"check","passed","detail"
+"diagnostic_only_no_pipeline_mutation",TRUE,"writes only under S33F_CENTERING_DIAGNOSTIC; s33_imols left unmodified"
+"both_deter_specs_fitted",TRUE,"deter specs: intercept, intercept_plus_trend"
+"all_three_centering_regimes_fitted",TRUE,"regimes: Regime_A_Uncentered, Regime_B_Initial_Centered, Regime_C_Mean_Centered"
+"theta_kappa_in_and_out_both_fitted",TRUE,"Sec.3.2 form (theta_kappa present) and B4 form (absent) both fitted"
+"span_broken_and_complete_both_fitted",TRUE,"interacted models fitted with and without kappa.D + omega.D, isolating the interaction-span mechanism from the deterministic-specification one"
+"tb_star_sourced_from_s33a_not_hardcoded",TRUE,"T_B* = 1969 read from US_S33A break-dates ledger"
+"outputs_confined_to_break_aware_tree",TRUE,"C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/BREAK_AWARE_IMOLS/S33F_CENTERING_DIAGNOSTIC/csv"

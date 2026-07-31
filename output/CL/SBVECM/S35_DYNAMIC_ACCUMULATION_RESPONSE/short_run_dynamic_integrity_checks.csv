@@ -1,0 +1,7 @@
+"check","pass","detail"
+"stationarity gate read before estimation",TRUE,"stationarity gate=FALSE"
+"no response reported after failed gate",TRUE,"conditional accumulation elasticity not identified: growth-rate stationarity is inconclusive"
+"response distinction from beta_ME",TRUE,"eta notation only"
+"bootstrap necessity",TRUE,"zero replications"
+"figure contains observed data",TRUE,"1922-2024"
+"system estimate respects stationarity gate",TRUE,"not estimated: stationarity prerequisite fails"

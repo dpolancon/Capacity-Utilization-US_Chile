@@ -1,5 +1,5 @@
 ---
-type: legacy_note
+type: research_note
 status: active
 depends_on: []
 stage_scope: S00
@@ -10,25 +10,28 @@ note_class: R-note
 design_role: measurement_guardrail
 scope: chapter2_implementation
 object_governed:
-- s_t
-- K_ME
-- K_NRC
-- phi_t
+  - s_t
+  - K_ME
+  - K_NRC
+  - phi_t
 core_rule: stock_flow_consistency
 related_to:
-- M10_Empirical_Identification_Framework
-- N_Capital_Composition_and_Productive_Capacity
-- R_StockFlowConsistency
-- R_No_Nominal_Share_Allocation
+  - M10_Empirical_Identification_Framework
+  - N_Capital_Composition_and_Productive_Capacity
+  - R_StockFlowConsistency
+  - R_No_Nominal_Share_Allocation
 tags:
-- chapter2
-- measurement
-- stock_flow_consistency
-- capital_stock
-- machinery_equipment
-- non_residential_construction
-- price_wedge
-- deflators
+  - chapter2
+  - measurement
+  - stock_flow_consistency
+  - capital_stock
+  - machinery_equipment
+  - non_residential_construction
+  - price_wedge
+  - deflators
+subtype: legacy_note
+blocks: []
+priority: legacy
 ---
 
 # ME/NRC price wedge guardrail

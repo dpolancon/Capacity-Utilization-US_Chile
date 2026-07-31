@@ -1,27 +1,34 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-06-01
-subtype: object
+subtype: analytical_foundation
 layer: analytical_foundation
 design_role: mechanism_definition
 scope: chapter2_core
 related_to:
-- N00_Mechanization_Analytical_References
-- A01_Extensive_Accumulation
-- A03_TransformationElasticity_Two-CapitalCapacityComposition
-- A04_PeripheralTransformationElasticity
-- H03_Double_Choice_of_Technique
-- R05_Frontier_of_Not_Becoming
-- R06_Regime_Gating_and_Diagnostic_Ladder
+  - N00_Mechanization_Analytical_References
+  - A01_Extensive_Accumulation
+  - A03_TransformationElasticity_Two-CapitalCapacityComposition
+  - A04_PeripheralTransformationElasticity
+  - H03_Double_Choice_of_Technique
+  - R05_Frontier_of_Not_Becoming
+  - R06_Regime_Gating_and_Diagnostic_Ladder
+  - E12_QStar_Demotion_Lock
 created: 2026-05-27
-updated: 2026-05-27
+updated: 2026-07-23
+blocks: []
+priority: reference
 ---
 
 # A02: Intensive Accumulation: Choice of Technique and Mechanization Optimization
+
+> [!CAUTION]
+> **Empirical Proxy Demotion Lock**: Optimal technique choice $q^*(\pi, s)$ is an unobservable smooth reproduction benchmark. Macro accumulated-path proxies ($Q_t^\omega, Q_t^q$) are formally demoted and blocked per [[E12_QStar_Demotion_Lock]] due to extreme collinearity ($r = 0.99997$) and $I(2)$ risk. Empirical estimation requires FWL residual centering ($\hat{u}_t$).
 
 ## Core Claim
 The optimization over mechanization is not a unified, globally coherent profit-maximization problem. It is a **conditional cost-surplus maximization** along a technological frontier strictly conditioned by the structural envelope ($K^{NRC}$). 
@@ -95,7 +102,7 @@ Per the Okishio-Vidal articulation and [[R05_Frontier_of_Not_Becoming]], this op
    - Capitalist market anarchy (Okishio)
    - Contested capacity conventions and internal firm division (Vidal)
    - Financial constraints and external wedges
-3. **Peripheral Truncation:** In the capitalist periphery, FX scarcity may further squeeze the realized accumulation rate via $\pi^{eff} = \pi \cdot \phi_t$ (per [[A04_PeripheralTransformationElasticity]]). This does not alter the analytical benchmark; it truncates its materialization, widening the gap between $a^N$ and historical $a_t$.
+3. **Peripheral Truncation:** In the capitalist periphery, FX scarcity may further squeeze the realized accumulation rate via $\pi^{eff} = \pi \cdot \phi_t$ (per [[02_analyitical_foundation/_legacy/A04_PeripheralTransformationElasticity]]). This does not alter the analytical benchmark; it truncates its materialization, widening the gap between $a^N$ and historical $a_t$.
 4. **Analytical Function:** The optimization provides the necessary theoretical limit against which historical contradiction is measured. The gap $a_t - a^N$ and the resulting utilization deviation $\mu_t \neq 1$ are the empirical fingerprints of capitalist "becoming."
 
 ---

@@ -1,7 +1,8 @@
 ---
 type: paper_facing_map
 status: locked
-depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
 stage_scope: all_stages
 country: US_CL
 last_updated: 2026-07-23
@@ -9,6 +10,7 @@ layer: design
 design_role: chapter_map
 scope: chapter2
 priority: core
+blocks: []
 ---
 
 # Paper-facing Chapter 2 — section map

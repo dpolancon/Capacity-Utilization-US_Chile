@@ -1,0 +1,343 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{placeins}
+\usepackage{pdflscape}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{longtable}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=blue!70!black,
+    urlcolor=blue!70!black
+}
+
+\captionsetup[figure]{position=top, labelfont=bf, font=small, skip=4pt}
+\captionsetup[table]{position=top, labelfont=bf, font=small, skip=4pt}
+
+\title{\textbf{DISSERTATION PROGRESS REPORT \& ONLINE APPENDIX} \\[0.5em] \Large \textbf{Chapter 2: Empirical Grounding, Capacity Reconstruction, and the Overaccumulation Regime (Specification A)}}
+\author{\textbf{Diego Polanco} \\ Department of Economics, UMass Amherst \\ \textit{Executive Progress Report for Michael Ash and Dissertation Committee}}
+\date{July 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent \textbf{EXECUTIVE SUMMARY:} This progress report provides the complete, paper-facing empirical appendix for \textbf{Specification A (Single Aggregate Capital Model)} of Chapter 2. I evaluate the full range of 168 estimated IM-OLS cointegrating regressions across four master comparative matrices comparing specifications \textbf{With Step Controls ($\boldsymbol{\Lambda}\mathbf{D}_t' = \text{Yes}$)} against \textbf{Without Step Controls ($\boldsymbol{\Lambda}\mathbf{D}_t' = \text{No}$)}: (1) \textbf{Full Sample Baseline Matrix (1929--2024)} across Centering Treatments; (2) \textbf{Accumulation Eras Comparative Matrix} comparing Fordism (1929--1973) vs. Post-Fordism (1974--2024); (3) \textbf{Multi-Wage Share Robustness Matrix} comparing Baseline NFC GVA, Corporate GVA, Shaikh-Tonak Tier 1, and Shaikh-Tonak Tier 2 wage measures; and (4) \textbf{Macroeconomic Sub-Window Diagnostic Matrix} evaluating Interwar \& WWII, Golden Age, Neoliberal Restructuring, and Post-GFC Stagnation subwindows.
+
+\noindent \textbf{What v7 corrects.} Version 6's break-interacted design in Table~\ref{tab:specA_table_X} was incomplete. The interacted term $(k_t^{\text{cap}} \cdot \omega_{t-1}) \cdot D_t$ was estimated without the constituent $\omega_{t-1} \cdot D_t$, which means centering the base series was \textbf{changing the model rather than reparameterizing it}. Section 2.0A documents the defect, the correction, and its costs. The Fordist finding survives and strengthens; the Post-Fordist finding survives unchanged in substance while two of its point estimates change sign. Version 6 contained the evidence against itself: its own combinatorial grid already carried a complete span and reproduces the corrected numbers exactly. The four master matrices in Section 2 carry no break interactions and are reproduced unchanged.
+\end{abstract}
+
+\FloatBarrier
+\section{Methodological Setup \& Data Boundaries}
+
+In Chapter 2's theoretical framework, productive capacity ($Y^p_t$) is not a neutral physical constant. It reflects historical capital accumulation conditioned by distributional conflict between labor and capital.
+
+\paragraph{Sectoral Boundaries and Sample Limits}
+National accounting consistency requires strict clarity regarding sectoral boundaries:
+\begin{itemize}
+    \item \textbf{Observed Aggregate Output ($Y_t$)}: We measure aggregate output using \textit{Total Corporate Gross Value Added} ($Y_{\text{CORP}}$) or aggregate real output ($Y_t$) from NIPA accounts, capturing aggregate demand realization across corporate capitalism.
+    \item \textbf{Productive Capital Stock ($K^{\text{cap}}$) and Capacity ($Y^p_t$)}: We construct productive capital strictly from \textit{Non-Financial Corporate} (NFC) fixed assets ($K_{\text{NFC}}^{\text{ME}} + K_{\text{NFC}}^{\text{NRC}}$). This isolates physical plant structures and equipment in non-financial production from financial sector asset noise.
+    \item \textbf{Estimation Sample (1929--2024)}: BEA Fixed Assets capital stock series ($K^{\text{ME}}, K^{\text{NRC}}, K^{\text{cap}}$) span 1925--2025 (101 years). However, BEA NIPA Table 1.14 corporate value added ($y_t^{\text{NFC}}$) and distribution ($\omega_{t-1}$) begin in 1929. Consequently, our estimation sample covers \textbf{1929--2024 ($T = 94$ years)}.
+\end{itemize}
+
+We construct capacity utilization ($\mu_t = Y_t / Y^p_t$) as observed corporate output relative to estimated non-financial productive capacity. Nonresidential structures ($K^{\text{NRC}}$) represent sunk, long-horizon plant capacity ($\frac{\partial K^{\text{NRC}}}{\partial \omega} = 0$), whereas tactical machinery investment ($K^{\text{ME}}$) responds to distributional conflict ($\omega_{t-1}$).
+
+Before running parametric estimations, we map raw historical trajectories to ground the data in institutional transitions. Figure~\ref{fig:aggregation_dimensionality} plots log aggregate capital ($k^{\text{cap}}$) alongside structures ($k^{\text{NRC}}$) and the composition residual ($\kappa_t = k^{\text{ME}}_t - k^{\text{NRC}}_t$).
+
+\begin{figure}[h!]
+\centering
+\caption{U.S. Capital Stock Components and Composition Drift (1925--2025). The upper panel displays log aggregate capital ($k^{\text{cap}}$, navy) vs. log structures ($k^{\text{NRC}}$, firebrick). The lower panel tracks the composition residual, capturing mechanization drift ($\kappa_t = k^{\text{ME}}_t - k^{\text{NRC}}_t$) across historical accumulation regimes.}
+\label{fig:aggregation_dimensionality}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_aggregation_dimensionality.png}
+\end{figure}
+
+A non-parametric LOESS trend of $\ln K^{\text{cap}}$ reveals four structural inflections (zero-crossings of the second derivative, $\frac{d^2 \hat{k}^{\text{cap}}_t}{dt^2} = 0$). We use these inflections to construct historical step controls ($D_{1933}, D_{1947}, D_{1974}, D_{2008}$), corresponding to the New Deal plant mobilization, post-war Fordist conversion, late-Fordist profit squeeze, and post-GFC stagnation.
+
+\FloatBarrier
+\section{Empirical Results Matrix \& Robustness}
+
+We estimate the baseline single-aggregate capital specification:
+\begin{equation}
+y_t^{\text{NFC}} = \alpha + \beta_{\text{Kcap}} k_t^{\text{cap}} + \phi_{\omega} \omega_{t-1} + \theta_1 (k_t^{\text{cap}} \cdot \omega_{t-1}) + \boldsymbol{\Lambda} \mathbf{D}_t' + u_t,
+\end{equation}
+using Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014) with Fixed-$b$ HAR inference. To provide a complete paper-facing appendix, we present all estimated regressions across four master comparative matrices evaluating specifications with step controls ($\boldsymbol{\Lambda}\mathbf{D}_t' = \text{Yes}$) against specifications without step controls ($\boldsymbol{\Lambda}\mathbf{D}_t' = \text{No}$).
+
+Figure~\ref{fig:imols_forest} displays point estimates and 95\% Fixed-$b$ HAR confidence intervals across all 168 model combinations. Figure~\ref{fig:imols_eras} compares the interaction parameter $\hat{\theta}_1$ across primary accumulation eras.
+
+\begin{figure}[h!]
+\centering
+\caption{Specification A Interaction Parameter ($\hat{\theta}_1$) Forest Plot across Wage Share Measures, Centering Treatments, and Dummy Control Configurations (1929--2024).}
+\label{fig:imols_forest}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_imols_interaction_sensitivity.png}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\caption{Accumulation Era Parameter Comparison: Long Fordist vs. Long Post-Fordist Eras. Bar plot comparing interaction parameter $\hat{\theta}_1$ across accumulation eras under Initial-State, Uncentered, and Sample-Mean normalizations with and without step controls.}
+\label{fig:imols_eras}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_imols_era_comparison.png}
+\end{figure}
+
+
+\subsection{The interaction-span correction}
+
+\textbf{The defect.} When a break-interacted product enters the design, centering the base series expands it. For the Specification A interaction,
+\begin{equation}
+(k^{\text{cap}} - k_0)(\omega - w_0)\, D_t = (k^{\text{cap}} \omega) D_t - k_0 (\omega D_t) - w_0 (k^{\text{cap}} D_t) + k_0 w_0 D_t,
+\end{equation}
+so the design must span all four of $(k^{\text{cap}}\omega)D_t$, $\omega D_t$, $k^{\text{cap}} D_t$ and $D_t$ for centering to be a \textbf{reparameterization}. Version 6 carried $k^{\text{cap}} D_t$ and $D_t$ but \textbf{not $\omega D_t$}. With a constituent missing, the three centering regimes are not three views of one model; they are three different models, and the regime silently selects the parameter values.
+
+The mechanism was verified on synthetic data with a known data-generating process (\texttt{US\_S33F}): the relative spread of OLS estimates across the three regimes is $6\times10^{-16}$ with a complete span, $7.8\times10^{-2}$ once the product enters without its constituents, and $6\times10^{-16}$ again when they are restored. It is not an IM-OLS artefact and not ill-conditioning --- forcing the condition number to 181 leaves the spread at 0.26\%.
+
+\textbf{The correction.} \texttt{US\_S33C} now builds the break block through a shared helper (\texttt{s33\_break\_span()}) that includes every lower-order constituent by construction, and a guard (\texttt{s33\_assert\_complete\_span()}) halts the stage if any product appears without them. The same correction was applied to the Specification B tracks; see the v8 report.
+
+\textbf{Version 6 contained the evidence against itself.} The combinatorial break-permutation grid of Section 2.2 enumerates the break block over all $2^3$ permutations of $\{k^{\text{cap}}D_t,\ \omega D_t,\ (k^{\text{cap}}\omega)D_t\}$ alongside $D_t$, and therefore \textit{already carried a complete span} at its fully-saturated permutation, SpecA-7. That grid is \textbf{byte-identical before and after this correction}, and its SpecA-7 cell reproduces the corrected main design exactly.
+
+\begin{table}[H]
+\centering
+\caption{The v6 combinatorics grid already implied the corrected main design}
+\label{tab:specA_span_corroboration}
+\small
+\begin{tabular}{p{6.0cm}ccccc}
+\toprule
+ & Fordist CN & Fordist $\hat{\sigma}_u$ & Fordist $C_{\text{Shin}}$ & Fordist ADF & Post-F. CN \\
+\midrule
+Combinatorics SpecA-7 (v6 \textbf{and} v7) & 50.60 & 0.0570 & 0.0520 & $-4.363$ & 358.99 \\
+Main design, corrected (v7 Table~\ref{tab:specA_table_X}) & 50.60 & 0.0570 & 0.0520 & $-4.363$ & 358.99 \\
+\bottomrule
+\multicolumn{6}{p{15.5cm}}{\footnotesize Note: Version 6 reported two mutually inconsistent estimates of the same specification in the same document --- a Table X built on a broken span and a combinatorics table built on a complete one --- and cited the combinatorics condition numbers (50.60, 358.99) in its own text while Table X rested on different ones. The correction removes that inconsistency rather than introducing a new set of numbers.}
+\end{tabular}
+\end{table}
+
+\textbf{What it cost.} The correction is required by algebra, not chosen for its results, and it made two things worse. Both are reported here rather than left to inference.
+
+\begin{table}[H]
+\centering
+\caption{Span-correction impact, Specification A (reported regime: initial-state centering)}
+\label{tab:specA_span_impact}
+\small
+\begin{tabular}{p{4.6cm}ccccc}
+\toprule
+Cell & Regressors ($k$) & Residual d.f. & Standardized CN & $\hat{\sigma}_u$ & $C_{\text{Shin}}$ \\
+\midrule
+Fordist, interacted & 8 $\to$ \textbf{9} & 34 $\to$ \textbf{33} & 48.7 $\to$ \textbf{50.6} & 0.058 $\to$ 0.057 & 0.031 $\to$ 0.052 \\
+Post-Fordist, interacted & 8 $\to$ \textbf{9} & 42 $\to$ \textbf{41} & 79.1 $\to$ \textbf{359.0} & 0.044 $\to$ 0.044 & 0.035 $\to$ 0.036 \\
+\bottomrule
+\multicolumn{6}{p{15.5cm}}{\footnotesize Note: Non-interacted columns are unaffected --- they carry no break products --- and are numerically identical to v6. Source: \texttt{specA\_span\_correction\_impact.csv}.}
+\end{tabular}
+\end{table}
+
+The Post-Fordist conditioning deterioration is severe: adding the required constituent multiplies the condition number by 4.5. Neither cell cleared the CN $\le 30$ gate before the correction and neither does after, so no verdict changes, but the interacted Post-Fordist design is now the worst-conditioned in the Specification A track.
+
+\textbf{What it fixed, and what it did not.} Of the six interaction-class parameters in the interacted cells, none gained sign-stability and none lost it. The correction did \textbf{not} repair the headline instability.
+
+\begin{table}[H]
+\centering
+\caption{Centering ranges of the interaction-class parameters, v6 versus v7}
+\label{tab:specA_span_stability}
+\small
+\begin{tabular}{p{2.6cm}p{1.9cm}p{3.4cm}p{3.4cm}p{2.8cm}}
+\toprule
+Cell & Parameter & v6 centering range & v7 centering range & Sign-stable \\
+\midrule
+Fordist & $\hat{\theta}_1$ & $[-5.899,\ 3.459]$ & $[-15.217,\ 4.166]$ & \textbf{No}, before and after \\
+Fordist & $\hat{\delta}_2$ & $[-6.972,\ 0.406]$ & $[-9.795,\ 9.588]$ & \textbf{No}, before and after \\
+Post-Fordist & $\hat{\theta}_1$ & $[1.280,\ 3.625]$ & $[1.284,\ 3.601]$ & Yes, before and after \\
+Post-Fordist & $\hat{\delta}_2$ & $[-1.083,\ -0.177]$ & $[1.515,\ 3.832]$ & Yes --- \textbf{but the sign flipped} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Two points follow, and neither is comfortable. First, \textbf{the Fordist interacted $\hat{\theta}_1$ remains centering-dependent even on a complete span.} Span completeness is necessary for invariance, not sufficient; with $T = 43$ observations against nine regressors the Fordist window is too thin to identify the interaction, and that is a finding about the split-sample design rather than about the correction. The Fordist interacted $\hat{\theta}_1$ should not be quoted for either sign. Second, \textbf{the Post-Fordist $\hat{\delta}_2$ moved from stably negative to stably positive.} It is insignificant in both versions ($t = -0.33$ in v6, $t = 0.43$ in v7), so no conclusion rests on it, but a sign-stable parameter reversing on a design change is a warning about how much weight sign-stability alone can carry.
+
+The corrected estimates are the ones to use. The v6 values were produced by a design in which the centering convention was doing part of the estimating.
+
+\textbf{A size caveat on the interacted diagnostics.} The interacted designs carry $k = 9$ regressors on $T = 43$ and $T = 51$ observations, leaving 33 and 41 residual degrees of freedom. The Shin LM statistic and the residual ADF are read against \textbf{asymptotic} critical values, and both are over-sized at these sample lengths --- the Lee-Strazicich critical values used at the pre-testing stage carry the same caveat, being tabulated at $T = 100$. No residual bootstrap was run for the IM-OLS diagnostics. The Fordist residual ADF weakening from $-4.76^{**}$ to $-4.36^{*}$ under the correction sits well inside the range where size distortion could account for the difference, so it should be read as ``the Fordist cointegration margin is thin'' rather than as a measured deterioration. Bootstrapping these statistics is recorded as an outstanding item.
+
+\begin{table}[H]
+\centering
+\caption{Consolidated specification verdict, Specification A}
+\label{tab:specA_verdict}
+\footnotesize
+\begin{tabular}{p{2.5cm}p{2.2cm}p{2.4cm}p{1.9cm}p{2.3cm}p{2.6cm}}
+\toprule
+Design & Theoretical basis & Integration gate & Conditioning & Sign-identification & Disposition \\
+\midrule
+Fordist, uninteracted & S01 \S3 baseline & Exploratory ($\omega_{t-1}$ trend-stat.) & CN 12.2, \textbf{passes} & n/a & \textbf{Held} --- route status blocks formal claims \\
+Fordist, interacted & S01 \S5 shift at 1947 & Exploratory & CN 50.6, fails & $\hat{\theta}_1$ \textbf{unstable} & \textbf{Held as diagnostic} \\
+Post-F., uninteracted & S01 \S3 baseline & Exploratory ($k^{\text{cap}}$ trend-stat.) & CN 29.7, \textbf{passes} & n/a & \textbf{Held} \\
+Post-F., interacted & S01 \S5 shift at 2008 & Exploratory & CN 359.0, fails & $\hat{\theta}_1$ stable; $\hat{\delta}_2$ sign-reversed & \textbf{Held as diagnostic} \\
+Matrices A1--A4 & v5 reference & not break-gated & varies & n/a & \textbf{Reference results} \\
+FWL-residualized & --- & --- & --- & --- & \textbf{Blocked} (E10V) \\
+\bottomrule
+\multicolumn{6}{p{15.5cm}}{\footnotesize Note: The pattern is that conditioning and identification move in opposite directions to the break interaction. The two uninteracted designs clear CN $\le 30$ but cannot address the break question; the two designs that can address it fail conditioning and, in the Fordist case, fail sign-identification as well.}
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\subsection{Break-Aware Integration-Order Pre-Testing (S0\* Protocol)}
+
+The estimates in Section 2 rest on two claims that v5 assumed rather than tested: that $k_t^{\text{cap}}$ is $I(1)$, and that the step-control dates mark real structural breaks. The S0\* protocol notes locked on 2026-07-30 make both testable, in a fixed order --- Bai-Perron locates candidate breaks on stationary first differences, Lee-Strazicich verifies integration order under broken deterministics, and only then does break-interacted IM-OLS run. That sequence was executed fresh for this version; the ledgers are under \texttt{output/US/BREAK\_AWARE\_IMOLS/}.
+
+One framing point governs everything below. \textbf{The split samples are historical, not estimated.} Fordism runs to 1973 and Post-Fordism from 1974, and no break test is permitted to revise that periodization. What the break tests locate are \textit{within-sample} structural breaks --- the Depression, war mobilization, the Volcker disinflation --- that must be controlled for the estimation to be adequate. A Bai-Perron date landing in 1942 is a statement about war production, not a rival account of when Fordism began.
+
+\noindent\textbf{Step 1 --- Bai-Perron (1998, 2003).} The sequential search ran on the stationary first-differenced vector $\Delta\mathbf{Y}_t = [\Delta y_t, \Delta k_t^{\text{cap}}, \Delta\omega_t]'$, never on levels, within each sub-sample separately: Fordist trimming $\epsilon = 0.20$, Post-Fordist $\epsilon = 0.15$, maximum three breaks. Breaks are admitted only when $UD_{\max}$ rejects at 5\% \textit{and} the sequential $\sup F_T(l+1|l)$ rejects, which is stricter than reading the selected break count off the estimator. Inside Fordism the procedure locates a single break at \textbf{1939} in the capital growth rate (95\% CI 1932--1955) and at \textbf{1942} in the differenced relation (95\% CI 1938--1949); $\Delta y_t$ and $\Delta\omega_t$ carry no breaks at all. Inside Post-Fordism it locates \textbf{1981} (95\% CI 1980--1983), \textbf{2000} (95\% CI 1998--2004) and \textbf{2010} (95\% CI 2005--2017). The protocol's Post-Fordist candidates are recovered almost exactly --- 1982 at a distance of one year, 2000 exactly, 2008 within two. The Fordist candidates are not recovered as point estimates: 1933 sits six years from the nearest estimate and 1947 five. Both nonetheless fall inside the 95\% confidence intervals of the Fordist break dates, so the honest statement is that the Fordist window contains one poorly-identified break somewhere between the Depression and the post-war conversion, not that 1947 is refuted. $WD_{\max}$ is listed in S03 \S2A but is not exposed by \texttt{mbreaks} 1.0.1; it is recorded as unavailable rather than approximated.
+
+\noindent\textbf{Step 2 --- Lee-Strazicich (2003) Minimum-LM.} The test comes from the mandated external engine at \texttt{C:\textbackslash ReposGitHub\textbackslash LeeStrazicichUnitRoot}; no substitute was written. Two deviations are on the record and both matter for reading the numbers. First, \texttt{ur.ls()} locates breaks \textit{endogenously} by grid-minimising the LM statistic and accepts no fixed-date argument, so the test could not be run ``at the Bai-Perron dates'' as S01 \S2 Step 2 requests; it was run as designed and a date-concordance ledger reports the agreement separately. Second, and more consequentially, the S03 \S2C decision matrix reads a \textit{levels} rejection as evidence of $I(1)$ and a levels non-rejection as evidence of $I(2)$. That inverts the standard logic: an $I(1)$ series has a unit root in levels, so failing to reject in levels is exactly what it must do. Applied literally, the matrix classified $k_t^{\text{cap}}$ as an $I(2)$ risk in almost every window --- a pre-testing stage diagnosing itself rather than the data. The discriminating test, and what S03 \S2B says it wants when it speaks of ``eliminating spurious $I(2)$ classification'', is the LM test on the \textit{first difference}. Both were run and the verdict is taken on the pair.
+
+Read that way the evidence is clean. Under Model C, with breaks in intercept and trend under both hypotheses, $k_t^{\text{cap}}$ does not reject the unit root in levels ($LM = -3.62$ against a 5\% value of $-5.67$ in Fordism) and rejects decisively in first differences ($LM = -7.38$): \textbf{$k_t^{\text{cap}}$ is $I(1)$ with breaks, not $I(2)$}, which is what the v5 estimation assumed and can now assert. The same verdict holds for $y_t^{\text{NFC}}$ in both eras and for $k_t^{\text{cap}}$ over the full sample. Two exceptions are genuine and are not smoothed over: $\omega_{t-1}$ rejects the unit root \textit{in levels} over the full sample and within Fordism, making it trend-stationary around breaks rather than $I(1)$; and $k_t^{\text{cap}}$ likewise rejects in levels within Post-Fordism. Fourteen of eighteen variable-window cells clear the gate. Every Lee-Strazicich critical value is tabulated at $T = 100$ while these windows carry $T = 43$ and $T = 51$, so the test is over-sized in the sub-samples and the marginal cases should be read with that in mind.
+
+\noindent\textbf{Step 3 --- Break-interacted IM-OLS.} Because $\omega_{t-1}$ (Fordism) and $k_t^{\text{cap}}$ (Post-Fordism) do not clear the gate as $I(1)$, \textbf{both eras are estimated on the exploratory route, not the formal one.} Following the honesty standard used in the Chile S40/S50 chronology, estimation still runs and the label travels with every coefficient: nothing in Table~\ref{tab:specA_table_X} below is a formally gated result, and none of it should be quoted as one. The estimator remains IM-OLS under the E10V lock, with DOLS run only as a diagnostic comparator, and the interaction terms enter the design raw --- the FWL prohibition is enforced structurally, not by assertion.
+
+Two implementation notes belong in the record. The multiplicative slope shift is placed at the protocol dates $T_B^* = 1947$ (Fordism) and $T_B^* = 2008$ (Post-Fordism) exactly as S01 \S5 pins them, while the Bai-Perron dates enter \textit{additively} as step controls: a permanent step at 1933 for the New Deal regime change and a 1942--1945 block that switches back off for war mobilization, since war output is a level distortion that reverses rather than a permanent shift, plus permanent steps at 1981 and 2000 in Post-Fordism. And the uncentered design is numerically unusable here --- the standardized condition number runs between 3054 and 39664 under Regime A against 12 to 359 under initial-state centering --- so all reported estimates use \textbf{Regime B (initial-state centering)}, which is the AGENTS.md instruction to log the condition number and default to Regime B rather than block.
+
+\textbf{What the raw series do, before any estimation.} The estimates below should be read against the unconditional growth record, computed without calling any estimator.
+
+\begin{table}[H]
+\centering
+\caption{Unconditional growth record (mean annual log change, per cent per year)}
+\label{tab:specA_descriptive}
+\small
+\begin{tabular}{p{6.0cm}ccc}
+\toprule
+Series & Full sample 1929--2024 & Fordism 1929--1973 & Post-Fordism 1974--2024 \\
+\midrule
+Corporate value added $y^{\text{NFC}}$ & 3.89 & \textbf{4.93} & \textbf{3.12} \\
+Aggregate productive capital $k^{\text{cap}}$ & 5.89 & 5.92 & 5.57 \\
+Wage share $\omega_{t-1}$ & $-0.08$ & $+0.01$ & $-0.16$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+One fact organises everything the parametric work can say. \textbf{Output growth falls by more than a third across the periodization (4.93 $\to$ 3.12) while capital growth barely moves (5.92 $\to$ 5.57).} Capital keeps accumulating at close to its Fordist rate while the capacity it generates decelerates sharply --- which is the descriptive content of $\theta_t < 1$, visible in the raw series before any cointegrating regression is run. The wage share turns from flat to falling ($+0.01$ to $-0.16$), so the post-1974 decline in capacity growth cannot be attributed to a wage squeeze in the ordinary sense: distribution moved \textit{in favour of capital} over precisely the window in which capital's capacity yield deteriorated. The interaction parameter $\theta_1$ exists to hold that tension, and the estimates below should be judged by whether they can.
+
+
+\begin{table}[H]
+\centering
+\caption{Sub-Sample Internal Slope Break Cointegration Matrix (IM-OLS, complete interaction span)}
+\label{tab:specA_table_X}
+\small
+\begin{tabular}{p{5.5cm}p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}}
+\toprule
+Parameter / Diagnostic & (1) Fordist, No Interaction & (2) Fordist, With Interaction & (3) Post-Fordist, No Interaction & (4) Post-Fordist, With Interaction \\
+\midrule
+Internal Slope Interaction & No & Yes & No & Yes \\
+Internal Break Date ($T_B^*$) & 1947 & 1947 & 2008 & 2008 \\
+\midrule
+\textbf{Capital Stock ($\hat{\beta}_{\text{Kcap}}$)} & 0.82$^{***}$ & 1.80$^{***}$ & 0.85$^{***}$ & 0.88$^{***}$ \\
+ & {\scriptsize (30.63)} & {\scriptsize (5.72)} & {\scriptsize (12.69)} & {\scriptsize (16.47)} \\
+\textbf{Capital Slope Shift ($\hat{\delta}_1$)} & --- & -0.95$^{***}$ & --- & 0.10 \\
+ & & {\scriptsize (-3.01)} & & {\scriptsize (0.17)} \\
+\textbf{Wage Share ($\hat{\phi}_{\omega}$)} & -4.75$^{*}$ & -2.51$^{**}$ & -2.88 & -3.79 \\
+ & {\scriptsize (-1.82)} & {\scriptsize (-2.25)} & {\scriptsize (-1.18)} & {\scriptsize (-1.23)} \\
+\textbf{Wage Share Level Shift ($\hat{\phi}_{\omega, \text{brk}}$)}$^{\ddagger}$ & --- & 4.93 & --- & -8.90 \\
+ & & {\scriptsize (1.16)} & & {\scriptsize (-0.45)} \\
+\textbf{Interaction Squeeze ($\hat{\theta}_1$)} & -1.52 & 4.17 & 2.82$^{**}$ & 1.55 \\
+ & {\scriptsize (-0.99)} & {\scriptsize (0.41)} & {\scriptsize (2.39)} & {\scriptsize (0.96)} \\
+\textbf{Interaction Slope Shift ($\hat{\delta}_2$)} & --- & -9.79 & --- & 3.57 \\
+ & & {\scriptsize (-0.94)} & & {\scriptsize (0.43)} \\
+\textbf{Break Level ($\hat{\gamma}_1$)} & --- & -0.07 & --- & -0.64 \\
+ & & {\scriptsize (-1.27)} & & {\scriptsize (-0.47)} \\
+Step Dummies ($\mathbf{D}_t$) & Yes & Yes & Yes & Yes \\
+\midrule
+\multicolumn{5}{l}{\underline{\textbf{Diagnostics}}} \\
+Residual Variance ($\hat{\sigma}_u$) & 0.096 & 0.057 & 0.074 & 0.044 \\
+Shin LM ($C_{\text{Shin}}$) [$H_0$: Cointegration] & 0.185$^{***}$ & 0.052 & 0.330$^{***}$ & 0.036 \\
+Residual ADF ($t_{\text{ADF}}$) [$H_0$: No Cointegration] & -2.805 & -4.363$^{*}$ & -4.194$^{*}$ & -5.958$^{***}$ \\
+$R^2_{\text{level}}$ & 0.981 & 0.994 & 0.977 & 0.992 \\
+Standardized Condition Number & 12.2 & 50.6 & 29.7 & 359.0 \\
+Regressors ($k$) & 5 & 9 & 5 & 9 \\
+Residual d.f. & 37 & 33 & 45 & 41 \\
+Sample Size ($T$) & 43 & 43 & 51 & 51 \\
+\textbf{Break-Aware Gate Status} & Exploratory & Exploratory & Exploratory & Exploratory \\
+Reported Centering Regime & Initial-State & Initial-State & Initial-State & Initial-State \\
+\textbf{Interaction span} & n/a & \textbf{Complete} & n/a & \textbf{Complete} \\
+\bottomrule
+\multicolumn{5}{p{15.5cm}}{\footnotesize Note: $^{\ddagger}$ New in v7: $\hat{\phi}_{\omega, \text{brk}}$ is the constituent $\omega_{t-1} D_t$ whose absence made v6's centering non-invariant. Step controls: Fordism $\mathbf{D}_{1933}$ and war block $\mathbf{B}_{1942\text{--}1945}$; Post-Fordism $\mathbf{D}_{1981}$ and $\mathbf{D}_{2000}$. $^{*}p<0.10, ^{**}p<0.05, ^{***}p<0.01$. Standard errors/t-statistics are Fixed-$b$ HAR in parentheses. Columns (1) and (3) are numerically identical to v6.}
+\end{tabular}
+\end{table}
+
+\textbf{Verdict on the S01 \S3 decision matrix --- unchanged, and better supported.} Inside Fordism the capital slope shift is significant and the correction \textit{strengthens} it, from $\hat{\delta}_1 = -0.98$ ($t = -2.26$, 5\%) in v6 to $\hat{\delta}_1 = -0.95$ ($t = -3.01$, \textbf{1\%}). The multiplicative interaction is retained and the elasticity is reported as two sub-regimes: $\hat{\beta}_{\text{Kcap}}$ falls from \textbf{1.80 before 1947 to 0.85 after it}, essentially the v6 reading (1.84 $\to$ 0.86) on a design that now supports it. That estimate remains exploratory, not formally gated, because $\omega_{t-1}$ is trend-stationary rather than $I(1)$ in this window.
+
+\textbf{What that halving means in the analytical model.} $\beta_{\text{Kcap}}$ is the long-run elasticity of potential capacity to aggregate productive capital --- the rate at which accumulated means of production are converted into capacity to produce. A value above unity before 1947 says that capital accumulation was \textit{more} than proportionally capacity-generating during the Depression and war-mobilization years; a value of 0.85 after says it became less than proportionally so. Read as a regime signature rather than a technical constant, the shift dates the exhaustion of the extraordinary conversion conditions of the 1930s and 1940s: idle capacity available for wartime requisition, state-directed investment in plant that entered the private capital stock at below-market cost, and a labour process reorganised under conditions where effort norms were set by mobilization rather than by bargaining. Once those conditions lapse, the same accumulated capital yields proportionally less capacity, and the economy enters the $\theta_t < 1$ corridor that the aggregate elasticity tracks for the rest of the century. The break is therefore not a statistical nuisance to be absorbed by a dummy; it is the point at which the accumulation regime's conversion efficiency changes.
+
+The wage-share level shift $\hat{\phi}_{\omega,\text{brk}} = 4.93$ is positive but insignificant ($t = 1.16$), so the aggregate specification cannot detect a corresponding change in how distribution enters capacity. The disaggregated Specification B does detect one, at 1\% --- see the v8 report \S2.5. That the aggregate model misses what the disaggregated model finds is itself an argument for the disaggregation, since aggregating $K^{\text{ME}}$ and $K^{\text{NRC}}$ into $K^{\text{cap}}$ averages away the margin on which the distributional mechanism operates.
+
+Inside Post-Fordism neither slope shift is significant ($\hat{\delta}_1 = 0.10$, $t = 0.17$; $\hat{\delta}_2 = 3.57$, $t = 0.43$), so the S01 \S3 ``NO'' branch applies exactly as in v6: the capital elasticity is structurally invariant at $\hat{\beta}_{\text{Kcap}} = 0.88$ across 2008, and the step dummies are retained strictly for variance hygiene. \textbf{Both slope-shift point estimates changed sign} between v6 and v7 ($-0.14 \to 0.10$ and $-0.25 \to 3.57$). Neither was distinguishable from zero in either version, which is precisely why the conclusion is unaffected --- but it is a direct demonstration that unidentified coefficients in a span-broken design carry no information, not even about their sign.
+
+\textbf{The break controls still repair the cointegration diagnostics, with one qualification.} Without the interaction, the Shin LM statistic rejects the cointegration null in both eras ($C_{\text{Shin}} = 0.185^{***}$ in Fordism, $0.330^{***}$ in Post-Fordism). With it, both fall below the 10\% critical value (0.052 and 0.036) and residual variance falls from 0.096 to 0.057 and from 0.074 to 0.044, in both cases far below the S01 \S2 Step 3 baselines of 0.158 and 0.184. The qualification is Fordist: the residual ADF now reads $-4.363^{*}$ where v6 reported $-4.759^{**}$, so the Fordist cointegration evidence is \textbf{weaker on the corrected design} --- significant at 10\% rather than 5\%, though see the size caveat in Section 2.1. The Post-Fordist ADF is essentially unchanged ($-5.958^{***}$ against $-5.976^{***}$). The specification finding holds; its Fordist margin is thinner than v6 implied.
+
+\textbf{On the preliminary evidence.} The LOESS-based and pairwise integration-order groundwork in \textit{reports/US\_Capital\_Composition\_Integrated\_Report/us\_capital\_composition\_integrated\_report.pdf} motivated the candidate break dates used above and is cited only in that capacity. It does not satisfy the S0\* pre-testing requirement, and the Bai-Perron $\to$ Lee-Strazicich $\to$ IM-OLS sequence reported here was run fresh rather than inherited from it.
+
+\subsection{Combinatorial Structural Break Shift Analysis}
+
+To establish the statistical validity of the primary profit squeeze hypothesis ($\theta_1$) under multi-way sub-sample interactions, I run an exhaustive combinatorial loop over all $2^3 = 8$ permutations of slope-shift parameters per sub-sample window under Regime B (Initial-State Centering). Because this grid enumerates $\omega D_t$ as an explicit dimension, it already satisfied the span requirement of Section 2.1 in v6 and is unchanged by the correction; its fully-saturated permutation SpecA-7 is the corrected main design of Table~\ref{tab:specA_table_X}. This systematic grid (reported in Table~\ref{tab:specA_combinatorics}) evaluates whether observed parameter instabilities are true structural slope shifts or can be parsimoniously reclassified as level shifts handled via deterministic step controls.
+
+Inside the Fordist window, the collinearity gate is satisfied across all permutations (CN $\le 50.60$), and we reject the joint null $H_0: \theta_1 = 0 \text{ AND } \theta_{\omega K, \text{brk}} = 0$ at the 5\% level for all models with slope shifts. The parsimonious specification is \textbf{SpecA-1}, which retains only the capital scale shift ($\hat{\theta}_{K,\text{brk}} = -1.15$, $t = -2.80$) while converting the wage and interaction shifts to level controls. Under this parsimonious model, the main profit squeeze coefficient remains negative and highly significant ($\hat{\theta}_1 = -3.45$, $t = -2.71$).
+
+Inside the Post-Fordist window under Regime B (Initial-State Centering), the unrestricted model SpecA-7 is disqualified by the collinearity gate (CN = 358.99 $> 100$), while the baseline model SpecA-0 fails cointegration ($C_{\text{Shin}} = 0.1567 > 0.095$). Cointegration is established under \textbf{SpecA-1} ($C_{\text{Shin}} = 0.0276 < 0.095$, CN = 74.48 $\le 100$), where the inclusion of the capital scale shift ($\hat{\theta}_{K,\text{brk}} = -0.15$) eliminates residual non-stationarity. Because the slope break parameter itself is statistically insignificant ($t = -1.11$), the slope shift converts to a deterministic level control ($D_{2008}$). Under this binding initial-state centered specification, the Post-Fordist interaction coefficient is $\hat{\theta}_1 = +1.34$ ($t = 0.91$).
+
+\input{table_specA_combinatorics.tex}
+
+\subsection{Master Comparative Appendix Tables}
+
+\textit{The four matrices below are reproduced unchanged from v5. They are estimated on the full-sample and era designs without the internal slope-break terms of Table~\ref{tab:specA_table_X}, and they remain the reference results for Specification A.}
+
+\input{table_baseline_imols_specA_fullsample.tex}
+
+\input{table_baseline_imols_specA_eras.tex}
+
+\input{table_baseline_imols_specA_wageshares.tex}
+
+\input{table_baseline_imols_specA_diagnostics.tex}
+
+\FloatBarrier
+\section{Summary of Key Empirical Findings \& Takeaways}
+
+The empirical estimations establish seven key findings for the dissertation committee:
+
+\begin{enumerate}
+    \item \textbf{State-Dependent Profit Squeeze Stability}: Under Initial-State centering, the interaction parameter $\hat{\theta}_1$ remains negative and statistically significant ($\hat{\theta}_1 = -10.64^{***}$ with step controls vs. $-10.16^{**}$ without step controls). Higher wage shares suppress the capacity-generating effect of capital accumulation.
+    \item \textbf{Variance Reduction and Cointegration Hygiene}: Step controls ($\mathbf{D}_{1933}, \mathbf{D}_{1947}, \mathbf{D}_{1974}, \mathbf{D}_{2008}$) leave point estimates stable while reducing residual variance ($\hat{\sigma}_u$ drops from 0.662 to 0.155) and eliminating non-stationary residual drift ($C_{\text{Shin}}$ drops from 4.657 to 0.082).
+    \item \textbf{Capacity Utilization Level Reconstruction}: Anchoring level scale at $t^* = 1973$ ($\mu_{1973} = 1.00$) recovers an empirically consistent utilization path ($\hat{\mu}_t$). Utilization peaks during WWII mobilization ($\hat{\mu}_{1944} \approx 1.15$), remains stable during post-war Fordism ($\hat{\mu} \in [0.90, 1.00]$), and experiences a secular decline under neoliberalism, reaching a trough during the Great Recession ($\hat{\mu}_{2009} \approx 0.70$).
+    \item \textbf{Persistent Capital Overaccumulation Regime}: The total transformation elasticity $\theta_t = \hat{\beta}_{\text{Kcap}} + \hat{\theta}_1 \omega_{t-1}$ remains bounded strictly below 1.00 throughout 1929--2024 ($\theta_t \in [0.65, 0.95]$). The U.S. capitalist economy has operated within a structural overaccumulation regime ($\theta_t < 1.0$) for nearly a century.
+    \item \textbf{The Capital Stock Is $I(1)$ With Breaks, Not $I(2)$}: The Lee-Strazicich Minimum-LM test under broken deterministics does not reject a unit root in the levels of $k_t^{\text{cap}}$ and rejects decisively in first differences ($LM = -7.38$ in Fordism, $-6.94$ over the full sample). The integration order that v5 assumed is now established, and the spurious $I(2)$ reading that broken deterministic trends can produce is ruled out. Two variables fail this gate --- $\omega_{t-1}$ is trend-stationary around breaks in Fordism and over the full sample, and $k_t^{\text{cap}}$ is trend-stationary within Post-Fordism --- which is why every Table~\ref{tab:specA_table_X} estimate is reported on the exploratory route rather than as a formally gated result. \textit{(Unaffected by the span correction: integration-order testing is prior to the estimation design.)}
+    \item \textbf{Fordism Contains an Internal Slope Break; Post-Fordism Does Not}: On the corrected span, the capital slope shift at 1947 is significant at 1\% ($\hat{\delta}_1 = -0.95$, $t = -3.01$, against $t = -2.26$ in v6) and halves the aggregate capital elasticity from 1.80 to 0.85 across the post-war conversion, so the S01 \S3 decision matrix retains the multiplicative interaction and the Fordist elasticity is reported as two sub-regimes. Neither slope shift is significant at 2008 --- both changed sign under the correction while remaining insignificant --- so the Post-Fordist elasticity is structurally invariant at 0.88 and its step dummies serve variance hygiene alone. Modelling the within-sample break structure repairs the cointegration diagnostics in both eras: $C_{\text{Shin}}$ falls from $0.185^{***}$ to 0.052 in Fordism and from $0.330^{***}$ to 0.036 in Post-Fordism, with the residual ADF at $-4.36^{*}$ and $-5.96^{***}$ respectively.
+    \item \textbf{The Fordist Interaction Is Not Identified, Even on a Complete Span}: $\hat{\theta}_1$ in the Fordist interacted design spans $[-15.217,\ 4.166]$ across the three centering regimes and does not hold its sign. Completing the interaction span was necessary --- without it the centering convention was selecting the estimate --- but it was not sufficient. With $T = 43$ observations and nine regressors the window cannot support the break-interacted specification, and \textbf{no sign should be claimed for the Fordist interaction squeeze}. This is a limitation of the split-sample design, not of the correction; the full-sample Specification B5 track, which carries a complete span on $T = 94$, is sign-identified throughout.
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\caption{Reconstructed U.S. Capacity Utilization ($\hat{\mu}_t$, 1929--2024). Level-anchored at 1973 FRB Survey Peak Benchmark ($\mu_{1973} = 1.00$) under Specification A IM-OLS.}
+\label{fig:reconstructed_utilization}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_reconstructed_capacity_utilization_1973.png}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\caption{Comparative Reconstructed U.S. Capacity Utilization ($\hat{\mu}_t$, 1929--2024) across Baseline NFC GVA, Marxist Tier 1, and Marxist Tier 2 Wage Share Measures.}
+\label{fig:reconstructed_utilization_comp}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_reconstructed_capacity_utilization_1973_comparative.png}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\caption{State-Dependent Transformation Elasticity Trajectory ($\theta_t$, 1929--2024). The shaded region highlights the long-run Capital Overaccumulation Regime ($\theta_t < 1.0$).}
+\label{fig:theta_timeseries}
+\includegraphics[width=0.88\textwidth]{../../output/figures/fig_transformation_elasticity_theta_timeseries.png}
+\end{figure}
+
+\FloatBarrier
+\end{document}

@@ -1,0 +1,7 @@
+source("codes/US_S33_break_aware_common.R")
+panel <- s33_load_spec_b()
+cat("Panel names:", paste(colnames(panel), collapse=", "), "\n")
+win <- list(key = "Fordist_1929_1973", start_yr = 1929, end_yr = 1973)
+d <- s33_window(panel, win)
+cat("d names:", paste(colnames(d), collapse=", "), "\n")
+cat("d$year sample:", head(d$year), "\n")

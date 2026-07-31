@@ -1,0 +1,11 @@
+"sample","classification","basis","years"
+"full_1920_2024","binding_confirmed","model shortfall plus external accounts",18
+"full_1920_2024","external_stress_only","model shortfall plus external accounts",37
+"full_1920_2024","imports_short_only","model shortfall plus external accounts",18
+"full_1920_2024","not_binding","model shortfall plus external accounts",32
+"post_1974_2024","binding_confirmed","model shortfall plus external accounts",7
+"post_1974_2024","external_stress_only","model shortfall plus external accounts",18
+"post_1974_2024","imports_short_only","model shortfall plus external accounts",1
+"post_1974_2024","not_binding","model shortfall plus external accounts",25
+"pre_1920_1973","external_stress_no_usable_model_signal","external accounts only; imports do not error-correct",30
+"pre_1920_1973","no_stress_no_usable_model_signal","external accounts only; imports do not error-correct",24

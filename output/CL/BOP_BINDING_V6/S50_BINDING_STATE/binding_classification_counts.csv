@@ -1,0 +1,16 @@
+"sample","classification","regime_evidence_label","machinery_route_status","years"
+"full_1920_2024","ECT_only_pressure","ECT_regime_exploratory_screening_only","exploratory_break_route",21
+"full_1920_2024","confirmed_binding","ECT_regime_exploratory_screening_only","exploratory_break_route",28
+"full_1920_2024","ect_unavailable","no_ECT_estimate","exploratory_break_route",2
+"full_1920_2024","non_binding_adjustment","ECT_regime_exploratory_screening_only","exploratory_break_route",28
+"full_1920_2024","observed_BOP_only_pressure","ECT_regime_exploratory_screening_only","exploratory_break_route",26
+"post_1974_2024","ECT_only_pressure","ECT_regime_exploratory_screening_only","exploratory_break_route",1
+"post_1974_2024","confirmed_binding","ECT_regime_exploratory_screening_only","exploratory_break_route",7
+"post_1974_2024","ect_unavailable","no_ECT_estimate","exploratory_break_route",2
+"post_1974_2024","non_binding_adjustment","ECT_regime_exploratory_screening_only","exploratory_break_route",24
+"post_1974_2024","observed_BOP_only_pressure","ECT_regime_exploratory_screening_only","exploratory_break_route",17
+"pre_1920_1973","ECT_only_pressure","ECT_regime_marginal_exploratory","exploratory_break_route",17
+"pre_1920_1973","confirmed_binding","ECT_regime_marginal_exploratory","exploratory_break_route",19
+"pre_1920_1973","ect_unavailable","no_ECT_estimate","exploratory_break_route",2
+"pre_1920_1973","non_binding_adjustment","ECT_regime_marginal_exploratory","exploratory_break_route",6
+"pre_1920_1973","observed_BOP_only_pressure","ECT_regime_marginal_exploratory","exploratory_break_route",10

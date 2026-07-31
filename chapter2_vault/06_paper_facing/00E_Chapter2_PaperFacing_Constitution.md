@@ -1,7 +1,8 @@
 ---
-type: paper_facing_map
+type: paper_facing
 status: draft
-depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
 stage_scope: all_stages
 country: US_CL
 last_updated: 2026-04-23
@@ -9,6 +10,8 @@ layer: design
 design_role: chapter_constitution
 scope: chapter2
 priority: core
+subtype: paper_facing_map
+blocks: []
 ---
 
 s## Paper-facing Chapter 2 — constitutional core

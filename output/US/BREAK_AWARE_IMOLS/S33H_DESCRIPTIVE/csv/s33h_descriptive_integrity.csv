@@ -1,0 +1,5 @@
+"check","passed","detail"
+"descriptive_only_no_estimation",TRUE,"no estimator is called; means and standard deviations of annual differences only"
+"all_estimation_windows_covered",TRUE,"windows: Full_Sample_1929_2024, Fordist_1929_1973, Post_Fordist_1974_2024, Interwar_WWII_1929_1946, Golden_Age_1947_1973, Neoliberal_1974_1999, Post_2000_2000_2024"
+"kappa_reported_as_ratio_drift_not_growth",TRUE,"kappa and p_kappa are log ratios; their annual change is a divergence rate between two series, not a growth rate of a level"
+"outputs_confined_to_break_aware_tree",TRUE,"C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/BREAK_AWARE_IMOLS/S33H_DESCRIPTIVE/csv"

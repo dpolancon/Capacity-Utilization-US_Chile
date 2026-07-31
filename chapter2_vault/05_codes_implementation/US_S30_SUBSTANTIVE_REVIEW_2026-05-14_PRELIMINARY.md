@@ -1,7 +1,8 @@
 ---
-type: code_implementation_memo
-status: superseded
-depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+type: code_governance
+status: deprecated
+depends_on:
+  - chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md
 stage_scope: S30
 country: US
 last_updated: 2026-06-26
@@ -12,10 +13,10 @@ stage: S30
 repo: Capacity-Utilization-US_Chile
 review_date: 2026-05-14
 superseded_by:
-- R_distribution_conditioned_theta_identification
-- C04-US_S30_STABILITY_PROTOCOL
-- US_S40_Restricted_B1_Reconstruction_Contract
-- US_S40_Review_and_Figures_Contract
+  - R_distribution_conditioned_theta_identification
+  - C04-US_S30_STABILITY_PROTOCOL
+  - US_S40_Restricted_B1_Reconstruction_Contract
+  - US_S40_Review_and_Figures_Contract
 supersession_reason: formal_s30_gate_opened_restricted_b1_under_fragility
 active_contract: false
 historical_trace: true
@@ -30,10 +31,14 @@ us_s40_anchor_condition: mu_US_1973_equals_1
 created: 2026-05-14
 updated: 2026-06-08
 related_to:
-- C04-US_S30_STABILITY_PROTOCOL
-- D03_capacity_utilization_level_anchor_pinch_year_protocol
-- R09_structural_break_protocol
-- M10_Empirical_Identification_Framework
+  - C04-US_S30_STABILITY_PROTOCOL
+  - D03_capacity_utilization_level_anchor_pinch_year_protocol
+  - R09_structural_break_protocol
+  - M10_Empirical_Identification_Framework
+subtype: code_implementation_memo
+status_detail: superseded
+blocks: []
+priority: reference
 ---
 
 # US S30 Substantive Review — Preliminary Memo

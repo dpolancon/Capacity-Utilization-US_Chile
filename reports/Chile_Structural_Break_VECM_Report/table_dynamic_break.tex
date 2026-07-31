@@ -1,0 +1,16 @@
+\begin{table}[h!]
+\centering\small
+\caption{Break tests for the dynamic accumulation relation}
+\label{tab:dynamic-break}
+\begin{tabular}{p{2.3cm}p{1.7cm}p{1.7cm}p{1.4cm}p{5.5cm}}
+\toprule
+\textbf{Test} & \textbf{Statistic} & \textbf{5\% critical} & \textbf{Reject} & \textbf{Sequential implication}\\
+\midrule
+UDmax & 34.064 & 14.23 & Yes & 2005 (1997--2019) \\
+supF(1|0) & 34.064 & 13.98 & Yes & continue \\
+supF(2|1) & 9.503 & 15.72 & No & stop \\
+supF(3|2) & 15.324 & 16.83 & No & stop \\
+\bottomrule
+\multicolumn{5}{p{13.1cm}}{\footnotesize \textbf{Note:} The dynamic equation uses one annual lag, selected by BIC on a common sample, and passes a four-lag residual serial-correlation test. These statistics locate a visible conditional change. They do not become elasticity evidence because the growth-rate stationarity condition fails.}
+\end{tabular}
+\end{table}

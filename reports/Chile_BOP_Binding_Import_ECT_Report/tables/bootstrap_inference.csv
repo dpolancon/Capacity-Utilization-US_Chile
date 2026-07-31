@@ -1,0 +1,6 @@
+"object","bootstrap_status","inference"
+"requested machinery Johansen rank","not run: estimator blocked before rank promotion","no rank claim"
+"reduced Johansen rank","asymptotic trace retained; each split has more than 30 observations","rank is descriptive input to the reduced-system diagnostic"
+"reduced threshold effect","completed: 999 conditional residual replications per split","pre p=0.33; post p=0.573"
+"alternative observed threshold variables","completed: 999 replications for current-account pressure and financing-pressure change in each split","pre_1920_1973/current_account_pressure p=0.035; pre_1920_1973/financing_pressure_change p=0.048; post_1974_2024/current_account_pressure p=0.039; post_1974_2024/financing_pressure_change p=0.519"
+"binary financing-compression episode threshold","not run: observed episode regime fails the minimum-size gate","pre episodes=1; post episodes=3"

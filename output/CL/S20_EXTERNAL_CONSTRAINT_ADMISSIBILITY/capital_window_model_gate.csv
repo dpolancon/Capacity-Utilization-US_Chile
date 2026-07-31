@@ -1,0 +1,6 @@
+"window_id","window","integration_order_k_me","integration_order_k_nr","gate_status_k_me","gate_status_k_nr","standard_cointegration_eligible","disposition","reason","start_year","end_year"
+"DEMO_NEOLIBERAL","Democratic Neoliberal Export Model","I(2)-risk","I(2)-risk","blocked_I2","blocked_I2",FALSE,"blocked","k_me=I(2)-risk; k_nr=I(2)-risk",1990,2024
+"DICTATORSHIP","Dictatorship Shock","unresolved","unresolved","held","held",FALSE,"blocked","k_me=unresolved; k_nr=unresolved",1974,1989
+"FULL","Full Chile Century","I(2)-risk","I(2)-risk","blocked_I2","blocked_I2",FALSE,"blocked","k_me=I(2)-risk; k_nr=I(2)-risk",1920,2024
+"ISI","Classic ISI","I(2)-risk","I(2)-risk","blocked_I2","blocked_I2",FALSE,"blocked","k_me=I(2)-risk; k_nr=I(2)-risk",1939,1973
+"NITRATE","Nitrate Crisis and Early State","unresolved","unresolved","held","held",FALSE,"blocked","k_me=unresolved; k_nr=unresolved",1920,1938

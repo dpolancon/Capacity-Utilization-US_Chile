@@ -1,0 +1,11 @@
+"sample","variable_1","variable_2","correlation","blocked_at_abs_0_99"
+"post_1974_2024","log_imports","log_K_ME_gross",0.974494502042618,FALSE
+"post_1974_2024","log_imports","log_non_reinvested_surplus",0.978548305649737,FALSE
+"post_1974_2024","log_K_ME_gross","log_non_reinvested_surplus",0.955798380958688,FALSE
+"post_1974_2024","log_imports","wage_share",-0.845801227900805,FALSE
+"post_1974_2024","log_K_ME_gross","wage_share",-0.810088532620293,FALSE
+"post_1974_2024","log_non_reinvested_surplus","wage_share",-0.899881572328153,FALSE
+"post_1974_2024","log_imports","log_RER",0.52890321307046,FALSE
+"post_1974_2024","log_K_ME_gross","log_RER",0.557776316447922,FALSE
+"post_1974_2024","log_non_reinvested_surplus","log_RER",0.586742983152729,FALSE
+"post_1974_2024","wage_share","log_RER",-0.433726939938211,FALSE

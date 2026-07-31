@@ -1,0 +1,5 @@
+"test","statistic","critical_5","rejects_5","selected_lag","selected_break_count","selected_break_years","residual_serial_p","inferential_object","stationarity_prerequisite_pass","inferential_status"
+"UDmax",34.064,14.23,TRUE,1,1,"2005",0.504393056955524,"stationary dynamic relation between capital-stock growth rates",FALSE,"diagnostic break evidence only: growth-rate stationarity is inconclusive"
+"supF(1|0)",34.0639383482705,13.98,TRUE,1,1,"2005",0.504393056955524,"stationary dynamic relation between capital-stock growth rates",FALSE,"diagnostic break evidence only: growth-rate stationarity is inconclusive"
+"supF(2|1)",9.50321073095927,15.72,FALSE,1,1,"2005",0.504393056955524,"stationary dynamic relation between capital-stock growth rates",FALSE,"diagnostic break evidence only: growth-rate stationarity is inconclusive"
+"supF(3|2)",15.3241689586771,16.83,FALSE,1,1,"2005",0.504393056955524,"stationary dynamic relation between capital-stock growth rates",FALSE,"diagnostic break evidence only: growth-rate stationarity is inconclusive"

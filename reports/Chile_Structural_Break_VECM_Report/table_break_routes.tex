@@ -1,0 +1,15 @@
+\begin{table}[h!]
+\centering\small
+\caption{Separate structural-break identification methods}
+\label{tab:breaks}
+\begin{tabular}{p{2.1cm}p{3.3cm}p{6.0cm}p{1.4cm}}
+\toprule
+\textbf{Method} & \textbf{Dates} & \textbf{Selection evidence} & \textbf{Cross-use}\\
+\midrule
+LOESS & 1933, 2017 & LOOCV LOESS on $\kappa_t$; second-derivative zero-crossings; \LoessBootstrapDraws{} moving-block draws & Never \\
+Parametric & 1945, 1971, 1989 & Bai--Perron, Zivot--Andrews, Gregory--Hansen, and \texttt{cajolst}; two-procedure support & Never \\
+Lee--Strazicich & $k^{\mathrm{ME}}$: 1936/1999; $k^{\mathrm{NR}}$: 1936/1999; $\kappa$: 1936/1999 & Two-break LM unit-root diagnostic; does not select $\mathbf D_t^P$ & Not applicable \\
+\bottomrule
+\multicolumn{4}{p{13.1cm}}{\footnotesize \textbf{Note:} Agreement or proximity between dates is descriptive only. No comparison result enters either selection algorithm. The 2017 LOESS date is an endpoint-sensitive level shift and is never interpreted as a long historical regime.}
+\end{tabular}
+\end{table}

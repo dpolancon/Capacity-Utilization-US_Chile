@@ -1,0 +1,6 @@
+"upstream_object","sha256","consumed_by","release_version"
+"C:/ReposGitHub/Capacity-Utilization-US_Chile/data/processed/CL_BOP_BINDING/S10_SOURCE_PANEL/chile_bop_source_panel_wide.csv","0224becd3d3d95fe2fa5c020d94e99ff5937d675167ade9037688d4ad3bc1106","CL_S25_model_panel_release.R","chile_bop_binding_v1"
+"C:/ReposGitHub/Capacity-Utilization-US_Chile/data/processed/CL_BOP_BINDING/S20_RER_SPLICE/rer_spliced_2003base.csv","008af1a6fbd405567a25a57c8ed2c983de9ff09a75392d3ad12ed974db53c516","CL_S25_model_panel_release.R","chile_bop_binding_v1"
+"C:/ReposGitHub/Capacity-Utilization-US_Chile/data/processed/CL_BOP_BINDING/S20_RER_SPLICE/rer_splice_validation.csv","8c24c9069f10ac0978c2c4df9765d2290358a8c33a5755b26f0f1a10ac51889b","CL_S25_model_panel_release.R","chile_bop_binding_v1"
+"C:/ReposGitHub/Capacity-Utilization-US_Chile/data/raw/Chile/BCCh_TCR/bcch_tcr_query_manifest.csv","465d35a765d9664b8ba235a7a3aae3c653101aee11f56838a379332d8c23bf32","CL_S25_model_panel_release.R","chile_bop_binding_v1"
+"C:/ReposGitHub/Capacity-Utilization-US_Chile/output/CL/BOP_BINDING/S10_SOURCE_AUDIT/source_file_provenance_sha256.csv","290afa1ce3b2e722a93a560e9cf7bd381de272cfd5fa6f6b29129b05d5cd443e","CL_S25_model_panel_release.R","chile_bop_binding_v1"

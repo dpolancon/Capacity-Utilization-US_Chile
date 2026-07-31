@@ -1,0 +1,5 @@
+"classification","ECT_signal","observed_signal","interpretation"
+"confirmed_binding",TRUE,TRUE,"latent import shortfall and at least one observed BOP pressure indicator"
+"ECT_only_pressure",TRUE,FALSE,"latent pressure without observed confirmation"
+"observed_BOP_only_pressure",FALSE,TRUE,"observed external pressure without a one-SD ECT shortfall"
+"non_binding_adjustment",FALSE,FALSE,"neither triangulation family crosses its rule"

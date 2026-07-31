@@ -1,0 +1,2 @@
+"statistic","estimate","bootstrap_reps","ci_low","ci_high","inference"
+"post-event mean Δk_ME minus Δk_NR",-0.00568351104956587,999,-0.0236112138019371,0.00551966036192832,"interval includes zero"

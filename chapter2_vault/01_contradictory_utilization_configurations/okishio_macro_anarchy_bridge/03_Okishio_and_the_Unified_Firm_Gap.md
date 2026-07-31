@@ -1,7 +1,8 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-04-23
@@ -15,13 +16,17 @@ core_object: market anarchy
 bridge_object: unified firm abstraction
 landing_object: contradictory utilization configurations
 tags:
-- okishio
-- market-anarchy
-- macro-disequilibrium
-- accumulation
-- idle-capacity
-- unified-firm-gap
-- contradictory-utilization-configurations
+  - okishio
+  - market-anarchy
+  - macro-disequilibrium
+  - accumulation
+  - idle-capacity
+  - unified-firm-gap
+  - contradictory-utilization-configurations
+subtype: analytical_foundation
+blocks: []
+scope: chapter2
+priority: reference
 ---
 
 # Okishio and the unified-firm gap

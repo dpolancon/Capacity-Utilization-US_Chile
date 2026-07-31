@@ -1,0 +1,4 @@
+"inferential_object","bootstrap_required","replications","reason"
+"accumulation break tests",FALSE,0,"Bai-Perron analytic critical values apply to the stationary dynamic regression"
+"break-date confidence interval",FALSE,0,"mbreaks supplies analytic break-date intervals"
+"growth-rate stationarity",FALSE,0,"urca and Lee-Strazicich analytic reference values are used"

@@ -1,0 +1,7 @@
+"check","pass"
+"LOESS evidence contains only LOESS route",TRUE
+"parametric evidence contains only PARAMETRIC route",TRUE
+"comparison table never used for selection",TRUE
+"route labels are locked",TRUE
+"no shared dummy matrix constructed",TRUE
+"LOESS fitted path is excluded from unit-root testing",TRUE

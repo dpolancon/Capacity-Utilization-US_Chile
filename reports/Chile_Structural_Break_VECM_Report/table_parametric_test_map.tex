@@ -1,0 +1,20 @@
+\begin{table}[h!]
+\centering\scriptsize
+\caption{What each parametric structural-break test can establish}
+\label{tab:test-map}
+\begin{tabular}{p{2.25cm}p{3.05cm}p{4.45cm}p{3.05cm}}
+\toprule
+\textbf{Test} & \textbf{Economic question} & \textbf{Formal hypotheses} & \textbf{Permitted claim}\\
+\midrule
+Bai-Perron & Where do coefficients in a stable regression appear to change? & \textbf{$H_0$:} specified number of stable regression coefficients. \textbf{$H_1$:} one or more unknown coefficient changes. & Candidate dates only \\
+Zivot-Andrews & Does one observed series remain compatible with a unit root after one break? & \textbf{$H_0$:} unit root without an included break under the null. \textbf{$H_1$:} trend-stationary process with one endogenous break. & Integration-order evidence only \\
+Gregory-Hansen & Is there cointegration only after admitting one unknown change? & \textbf{$H_0$:} no cointegration. \textbf{$H_1$:} cointegration with one unknown level or regime shift. & One-break cointegration evidence \\
+Kejriwal-Perron & Are coefficients stable within an already cointegrated regression? & \textbf{$H_0$:} no coefficient change, or k changes in the sequential test. \textbf{$H_1$:} one or more unknown changes in a cointegrated regression. & Multiple coefficient-break evidence, conditional on cointegration \\
+Johansen-Mosconi-Nielsen & What is the system rank when deterministic breaks are known? & \textbf{$H_0$:} rank at most r under a known piecewise-linear deterministic design. \textbf{$H_1$:} higher rank and testable restrictions under known breaks. & Rank and vector restrictions for the specified known-break design \\
+Lutkepohl-Saikkonen-Trenkler & What is the system rank after estimating one unknown level shift? & \textbf{$H_0$:} rank at most r after removing one estimated level shift. \textbf{$H_1$:} higher rank in a system with one unknown level shift. & Rank evidence for one unknown system shift \\
+Hansen-Johansen & Does an established cointegrating vector remain constant recursively? & \textbf{$H_0$:} constant long-run parameters. \textbf{$H_1$:} recursive fluctuation or LM evidence of instability. & Parameter-constancy evidence after rank is established \\
+Lee-Strazicich & Does one series retain a unit root when two breaks are allowed under both hypotheses? & \textbf{$H_0$:} unit root while allowing two breaks under the null. \textbf{$H_1$:} break-stationary alternative with two endogenous breaks. & Integration-order evidence with two endogenous breaks \\
+\bottomrule
+\multicolumn{4}{p{13.1cm}}{\footnotesize \textbf{Note:} The tests concern different statistical objects. A breakpoint in one observed series is not a change in the cointegrating slope, and a stability test conditional on cointegration cannot establish cointegration.}
+\end{tabular}
+\end{table}

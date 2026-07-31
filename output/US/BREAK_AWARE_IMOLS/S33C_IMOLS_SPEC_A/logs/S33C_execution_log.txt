@@ -1,0 +1,11 @@
+[2026-07-31 13:41:23] Step 2 gate read from C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/BREAK_AWARE_IMOLS/S33B_LEE_STRAZICICH/csv/integration_order_verdict.csv (18 rows)
+[2026-07-31 13:41:23] Spec A panel: 94 rows, 1931-2024
+[2026-07-31 13:41:23] Fordist Era (1929-1973): gate exploratory_break_route [k_cap=I1_with_break; y=I1_with_break; omega_lag1=I0_trend_stationary_with_break]
+[2026-07-31 13:41:23]   no-interaction: standardized CN: A=3054.4 B=12.248 C=10.726; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:24]   with-interaction: standardized CN: A=39664 B=50.604 C=43.016; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:24] Post-Fordist Era (1974-2024): gate exploratory_break_route [k_cap=I0_trend_stationary_with_break; y=I1_with_break; omega_lag1=I1_with_break]
+[2026-07-31 13:41:24]   no-interaction: standardized CN: A=4101.6 B=29.678 C=17.245; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:24]   with-interaction: standardized CN: A=21337 B=358.99 C=65.785; threshold 30; reported regime Regime_B_Initial_Centered
+[2026-07-31 13:41:24] Starting Specification A Combinatorics Grid (8 models per window x 3 regimes)...
+[2026-07-31 13:41:26] US_S33C complete. 60 coefficient rows; decisions: Fordist_1929_1973 retain_multiplicative_interaction; Post_Fordist_1974_2024 retain_additive_step_control
+[2026-07-31 13:41:26] Next: Rscript codes/US_S33D_break_interacted_imols_specB.R

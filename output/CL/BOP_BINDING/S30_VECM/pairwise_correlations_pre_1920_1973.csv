@@ -1,0 +1,11 @@
+"sample","variable_1","variable_2","correlation","blocked_at_abs_0_99"
+"pre_1920_1973","log_imports","log_K_ME_gross",0.824095760060794,FALSE
+"pre_1920_1973","log_imports","log_non_reinvested_surplus",0.603445501798839,FALSE
+"pre_1920_1973","log_K_ME_gross","log_non_reinvested_surplus",0.714750419703694,FALSE
+"pre_1920_1973","log_imports","wage_share",0.0723562585013092,FALSE
+"pre_1920_1973","log_K_ME_gross","wage_share",-0.00809752318742451,FALSE
+"pre_1920_1973","log_non_reinvested_surplus","wage_share",-0.424955025501906,FALSE
+"pre_1920_1973","log_imports","log_RER",-0.710790550062269,FALSE
+"pre_1920_1973","log_K_ME_gross","log_RER",-0.529598780304003,FALSE
+"pre_1920_1973","log_non_reinvested_surplus","log_RER",-0.386400358665557,FALSE
+"pre_1920_1973","wage_share","log_RER",-0.112654591035655,FALSE

@@ -1,7 +1,8 @@
 ---
 type: code_implementation_memo
 status: locked
-depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+depends_on:
+  - chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md
 stage_scope: S10
 country: US
 last_updated: 2026-06-23
@@ -33,10 +34,10 @@ financial_sector_interpretation: broader_corporate_reproduction_capacity_not_str
 distributive_boundary_rule: distribution_conditioning_need_not_share_output_capital_sector_boundary
 prohibited_baseline_mismatch: Y_Corp_star_with_K_NFC_without_separate_theory
 required_layers:
-- A_NFC_STRICT
-- B_CORP_SHAIKH_CORRECTED
-- C_NFC_WITH_CORP_DISTRIBUTION
-- D_RAW_DIAGNOSTIC
+  - A_NFC_STRICT
+  - B_CORP_SHAIKH_CORRECTED
+  - C_NFC_WITH_CORP_DISTRIBUTION
+  - D_RAW_DIAGNOSTIC
 s10_canonical_panel: data/processed/us/S10_SOURCE_TRUTH/S10_us_source_truth_wide.rds
 s10_canonical_csv: data/processed/us/S10_SOURCE_TRUTH/S10_us_source_truth_wide.csv
 s10_long_panel: data/processed/us/S10_SOURCE_TRUTH/S10_us_source_truth_long.csv
@@ -48,40 +49,42 @@ s10_validation_report: data/processed/us/S10_SOURCE_TRUTH/S10_us_validation_repo
 s10_build_manifest: data/processed/us/S10_SOURCE_TRUTH/S10_us_build_manifest.txt
 upstream_bundle_path: output/ch2_s10_export
 required_upstream_files:
-- us_bea_s10_carrier_wide.csv
-- us_bea_s10_carrier_long.csv
-- us_bea_s10_variable_ledger.csv
-- us_bea_s10_source_manifest.csv
-- us_bea_s10_gpim_inputs.csv
-- us_bea_s10_validation_report.md
-- us_bea_s10_export_commit.txt
+  - us_bea_s10_carrier_wide.csv
+  - us_bea_s10_carrier_long.csv
+  - us_bea_s10_variable_ledger.csv
+  - us_bea_s10_source_manifest.csv
+  - us_bea_s10_gpim_inputs.csv
+  - us_bea_s10_validation_report.md
+  - us_bea_s10_export_commit.txt
 validation_gates:
-- upstream_provenance_complete
-- gpim_ingredient_completeness
-- bea_asset_mapping_complete
-- fraumeni_service_life_crosscheck
-- nomura_mapping_flagged_as_interpretive
-- government_transportation_hybrid_flag
-- shaikh_bea1993_toggle_retained
-- sectoral_layer_identifiers_exported
-- no_downstream_estimation_before_s10_freeze
+  - upstream_provenance_complete
+  - gpim_ingredient_completeness
+  - bea_asset_mapping_complete
+  - fraumeni_service_life_crosscheck
+  - nomura_mapping_flagged_as_interpretive
+  - government_transportation_hybrid_flag
+  - shaikh_bea1993_toggle_retained
+  - sectoral_layer_identifiers_exported
+  - no_downstream_estimation_before_s10_freeze
 downstream_blocked_until_s10_passes:
-- S20
-- S30
-- S31I
-- S32
-- S40
+  - S20
+  - S30
+  - S31I
+  - S32
+  - S40
 related_to:
-- R_distribution_conditioned_theta_identification
-- US-BEA-Income-FixedAssets-Dataset
-- Capacity-Utilization-US_Chile
-- GPIM_Application
-- S20_US_SourceTruth_Panel
-- S31I_Integration_Order_Precheck
-- S32_B1_E2B_Model_Choice
-- S40_Restricted_B1_Reconstruction
-- A00_Aggregate_Transformation_Benchmark
-- A03_TransformationElasticity_Two-CapitalCapacityComposition
+  - R_distribution_conditioned_theta_identification
+  - US-BEA-Income-FixedAssets-Dataset
+  - Capacity-Utilization-US_Chile
+  - GPIM_Application
+  - S20_US_SourceTruth_Panel
+  - S31I_Integration_Order_Precheck
+  - S32_B1_E2B_Model_Choice
+  - S40_Restricted_B1_Reconstruction
+  - A00_Aggregate_Transformation_Benchmark
+  - A03_TransformationElasticity_Two-CapitalCapacityComposition
+blocks: []
+priority: reference
 ---
 
 ## First-layer variable construction lock

@@ -1,0 +1,18 @@
+\begin{table}[h!]
+\centering\scriptsize
+\caption{Conditional VECM rank evidence under alternative deterministic-break specifications}
+\label{tab:vecm}
+\begin{tabular}{p{1.65cm}p{1.7cm}p{1.9cm}p{0.5cm}p{1.0cm}p{0.95cm}p{0.90cm}p{3.00cm}}
+\toprule
+\textbf{Date source} & \textbf{Break form} & \textbf{Dates} & \textbf{$K$} & \textbf{Trace $r=0$} & \textbf{5\% CV} & \textbf{Rank} & \textbf{Interpretation}\\
+\midrule
+Curvature & None & None & 2 & 31.79 & 19.96 & 2 & Not interpreted: full rank \\
+Curvature & Level & 1933, 2017 & 2 & 31.43 & 19.96 & 1 & Requires break-specific inference \\
+Curvature & PW trend & 1933, 2017 & 2 & 25.58 & 25.32 & 1 & Requires break-specific inference \\
+Parametric & None & None & 2 & 31.79 & 19.96 & 2 & Not interpreted: full rank \\
+Parametric & Level & 1945, 1971, 1989 & 2 & 28.49 & 19.96 & 1 & Requires break-specific inference \\
+Parametric & PW trend & 1945, 1971, 1989 & 2 & 34.57 & 25.32 & 1 & Requires break-specific inference \\
+\bottomrule
+\multicolumn{8}{p{13.1cm}}{\footnotesize \textbf{Note:} All rows use the bivariate system $(k_t^{\mathrm{NR}},k_t^{\mathrm{ME}})'$. Rank uses conventional asymptotic critical values. The no-break system returns full rank, while estimated-break rank-one cases require inference matched to their deterministic design before adjustment-speed, weak-exogeneity, or $\kappa_t$ stationarity claims. No cointegrating coefficient is reported from these conditional systems.}
+\end{tabular}
+\end{table}

@@ -1,20 +1,25 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-05-19
 note_class: N
 layer: theoretical_object
 anchors:
-- Okishio
-- Vidal
-- contradictory_utilization_configurations
-- market_anarchy
-- divided_management
-- capacity_utilization
+  - Okishio
+  - Vidal
+  - contradictory_utilization_configurations
+  - market_anarchy
+  - divided_management
+  - capacity_utilization
 function: connects market-level disproportionality to firm-level utilization configurations
+subtype: analytical_foundation
+blocks: []
+scope: chapter2
+priority: reference
 ---
 
 # Okishio–Vidal Bridge

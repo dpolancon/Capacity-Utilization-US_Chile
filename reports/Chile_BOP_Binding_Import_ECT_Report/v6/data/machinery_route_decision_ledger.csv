@@ -1,0 +1,4 @@
+"sample","machinery_variable","standard_gate_status","break_route_status","selected_break_year","selected_model","disposition"
+"full_1920_2024","log_K_ME_gross","I(2)","exploratory_break_route",1991,"trend","estimated_as_exploratory_with_limitation"
+"pre_1920_1973","log_K_ME_gross","I(2)","exploratory_break_route",1936,"regime_trend","estimated_as_exploratory_with_limitation"
+"post_1974_2024","log_K_ME_gross","I(2)","exploratory_break_route",1991,"level","estimated_as_exploratory_with_limitation"

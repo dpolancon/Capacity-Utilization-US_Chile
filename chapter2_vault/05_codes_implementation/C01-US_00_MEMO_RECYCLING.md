@@ -1,7 +1,8 @@
 ---
-type: code_implementation_memo
+type: code_governance
 status: active
-depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+depends_on:
+  - chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md
 stage_scope: all_stages
 country: US
 last_updated: 2026-06-10
@@ -10,12 +11,12 @@ design_role: us_code_recycling_and_stage_mapping
 scope: chapter2_results_repo
 repo: Capacity-Utilization-US_Chile
 related_to:
-- M10_Empirical_Identification_Framework
-- D03_capacity_utilization_level_anchor_pinch_year_protocol
-- C03-REPO_STRUCTURE
-- R02_DOLS_reconstruction_dilemma
-- R04_FMOLS_structural_preservation
-- R06_IMOLS_integration_ladder_reconstruction
+  - M10_Empirical_Identification_Framework
+  - D03_capacity_utilization_level_anchor_pinch_year_protocol
+  - C03-REPO_STRUCTURE
+  - R02_DOLS_reconstruction_dilemma
+  - R04_FMOLS_structural_preservation
+  - R06_IMOLS_integration_ladder_reconstruction
 anchor_protocol_governed_by: D03_capacity_utilization_level_anchor_pinch_year_protocol
 anchor_protocol_country: US
 anchor_protocol_preferred_year: 1973
@@ -26,6 +27,9 @@ anchor_protocol_role: level_normalization
 window_average_anchor_allowed_as_baseline: false
 created: 2026-05-06
 updated: 2026-06-02
+subtype: code_implementation_memo
+blocks: []
+priority: reference
 ---
 
 # Memo 1 — US Code Recycling Map

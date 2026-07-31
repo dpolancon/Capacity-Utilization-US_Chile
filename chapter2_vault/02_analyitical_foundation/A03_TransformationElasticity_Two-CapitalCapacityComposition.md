@@ -1,26 +1,29 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-06-10
-subtype: object
+subtype: analytical_foundation
 layer: analytical_foundation
 design_role: mechanism_definition
 scope: chapter2_core
 related_to:
-- R_distribution_conditioned_theta_identification
-- A00_Aggregate_Transformation_Benchmark
-- A01_Extensive_Accumulation
-- A02_Intensive_Accumulation
-- A04_PeripheralTransformationElasticity
-- N00_Mechanization_Analytical_References
-- R05_Frontier_of_Not_Becoming
-- R06_Regime_Gating_and_Diagnostic_Ladder
-- H01_Cajas_to_Transformation_Elasticity
+  - R_distribution_conditioned_theta_identification
+  - A00_Aggregate_Transformation_Benchmark
+  - A01_Extensive_Accumulation
+  - A02_Intensive_Accumulation
+  - A04_PeripheralTransformationElasticity
+  - N00_Mechanization_Analytical_References
+  - R05_Frontier_of_Not_Becoming
+  - R06_Regime_Gating_and_Diagnostic_Ladder
+  - H01_Cajas_to_Transformation_Elasticity
 created: 2026-05-27
 updated: 2026-06-11
+blocks: []
+priority: reference
 ---
 
 # A03: Transformation Elasticity and Two-Capital Capacity Composition
@@ -54,7 +57,7 @@ The analytical hypothesis treats productive capacity ($Y^p$) as the joint outcom
 
 Eliminating labor $L$ between $a^N$ and $q^*$ yields the **capacity composition identity**:
 $$ Y^p = \frac{a^N(\pi, s)}{q^*(\pi, s)} K^{ME} + \Gamma(K^{NRC}) $$
-where $\pi = 1-\omega$ is the nominal profit share, and $s = K^{ME}/(K^{ME} + K^{NRC})$ is the mechanization composition share. *(Note: $a^N(\pi, s) \equiv a^N(\omega, s)$ by definition; $\pi$ notation is used here for symmetry with [[A02_Intensive_Accumulation]] and [[A04_PeripheralTransformationElasticity]].)*
+where $\pi = 1-\omega$ is the nominal profit share, and $s = K^{ME}/(K^{ME} + K^{NRC})$ is the mechanization composition share. *(Note: $a^N(\pi, s) \equiv a^N(\omega, s)$ by definition; $\pi$ notation is used here for symmetry with [[A02_Intensive_Accumulation]] and [[02_analyitical_foundation/_legacy/A04_PeripheralTransformationElasticity]].)*
 
 As a candidate analytical decomposition:
 - $\frac{a^N}{q^*}K^{ME}$ represents a possible technique/composition channel.
@@ -125,7 +128,7 @@ Given $\lambda_2^{[s]} < 0$ (concave frontier), $\theta^{ME}$ typically exhibits
 1. **Abstraction of "Not Becoming":** $\theta^N(\pi, s)$ is a smooth-reproduction benchmark. It defines the maximum structural efficiency of the accumulation process under idealized coordination and fixed regime parameters $\lambda^{[s]}$.
 2. **Historical "Becoming":** Real capacity formation is decentralized, internally divided, and crisis-prone. The actual transformation ratio $\theta_t$ systematically deviates from $\theta^N$ due to Okishio's market anarchy, Vidal's internal firm division, and utilization gaps ($\mu_t \neq 1$).
 3. **Regime Dependence:** Any discrete shift in the candidate composition mapping is a later-layer hypothesis. It does not activate threshold estimation before the diagnostic ladder in [[R06_Regime_Gating_and_Diagnostic_Ladder]].
-4. **Empirical Bridge:** In the Basu-compliant cointegration framework, $\theta^N$ corresponds to the systematic part of the capacity reconstruction vector. The deviation $\tilde{\mu}_t = \ln(Y_t/Y_r) - \ln \hat{Y}^p_t$ captures the ontological distance between the smooth-reproduction abstraction and historical reality.
+4. **Empirical Bridge:** In the Basu-compliant cointegration framework, $\theta^N$ corresponds to the systematic part of the capacity reconstruction vector. The deviation $\tilde{\mu}_t = \ln(Y_t/Y_r) - \ln \hat{Y}^p_t$ captures the ontological distance between the smooth-reproduction abstraction and historical reality. The empirical translation of the Okishio-Vidal Double Choice of Technique into pre-testing gates is formalized in [[N12_PreTesting_Protocol_Integration_Breaks_ChoiceOfTechnique]].
 
 ---
 

@@ -1,0 +1,8 @@
+"failure_mode","status","evidence"
+"artifact drift","cleared","canonical 105-observation panel isolated"
+"mislabeled estimator","cleared","legacy CL_S42 outputs excluded"
+"conditional test treated as unconditional","cleared","independent KP recorded but not used to define periods"
+"persistent growth treated as stationary","cleared","eta remains unestimated after the stationarity gate"
+"bootstrap used as identification","cleared","zero bootstrap replications"
+"LOESS contamination","cleared","separate identification checks pass"
+"causal language from conditional association","cleared","no accumulation coefficient is interpreted"

@@ -1,19 +1,22 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-05-27
-subtype: rule
+subtype: analytical_foundation
 layer: analytical_foundation
 design_role: diagnostic_protocol
 scope: chapter2_core
 related_to:
-- A01_Extensive_Accumulation
-- A02_Intensive_Accumulation
-- A04_PeripheralTransformationElasticity
+  - A01_Extensive_Accumulation
+  - A02_Intensive_Accumulation
+  - A04_PeripheralTransformationElasticity
 created: 2026-05-27
+blocks: []
+priority: reference
 ---
 
 # R03: Regime Diagnostic and Threshold Gating
@@ -26,12 +29,12 @@ Regime transitions ($\lambda^{[s]} \to \lambda^{[s']}$) are gated **exclusively*
 |-------|-----------|------------------|------------------|
 | L1: Closure Conditions | Breaks in $r^N$, $\chi^N$, institutional wage-price norms | Basu reproduction schemas, Regulation theory | Multi-decade |
 | L2: Extensive-Margin Structure | Structural breaks in $K^{NRC}$ trend, lumpy investment episodes | Lumpiness, irreversibility, long gestation (per [[A01_Extensive_Accumulation]]) | 5–15 years |
-| L3: Peripheral FX-Realization | $\phi_t$ drops below 1, $\pi^{eff} < \pi$, BoP stress indicators | Import-dependent $K^{ME}$, realization bottleneck (per [[A04_PeripheralTransformationElasticity]]) | 2–7 years |
+| L3: Peripheral FX-Realization | $\phi_t$ drops below 1, $\pi^{eff} < \pi$, BoP stress indicators | Import-dependent $K^{ME}$, realization bottleneck (per [[02_analyitical_foundation/_legacy/A04_PeripheralTransformationElasticity]]) | 2–7 years |
 | L4: Intensive-Margin Friction | $\omega_t \cdot c_t$ attenuation, credit/vintage hysteresis, Vidal friction | Financial gating, internal division, diffusion lags (per [[A02_Intensive_Accumulation]]) | 1–3 years |
 
 **Decision Rule:** $s \to s'$ transition is **only admissible** if L1 or L2 confirms a structural break. L3 and L4 are corroborative or trigger mechanism-validation protocols.
 
-## 2. Peripheral FX-Realization Gate (per [[A04_PeripheralTransformationElasticity]])
+## 2. Peripheral FX-Realization Gate (per [[02_analyitical_foundation/_legacy/A04_PeripheralTransformationElasticity]])
 When $F^{avail}_t < F^{req}_t$, the FX-conversion ratio $\phi_t < 1$ squeezes $\pi^{eff} = \pi \cdot \phi_t$. This truncates $\theta^{ME}_{periph}$ independently of $\omega$. 
 - **Diagnostic:** Current account stress, reserve adequacy, import compression, terms-of-trade shocks.
 - **Action:** If $\phi_t$ binds, interpret $\omega_t \cdot c_t$ attenuation as realization-gated accumulation, not mechanism failure. Do not escalate to regime transition unless L1/L2 triggers.

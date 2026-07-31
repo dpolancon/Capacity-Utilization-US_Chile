@@ -1,0 +1,3 @@
+"hypothesis","statistic","df","p_value","status"
+"equal impact responses",NA,NA,NA,"not tested: stationarity prerequisite fails"
+"equal three-year responses",NA,NA,NA,"not tested: stationarity prerequisite fails"

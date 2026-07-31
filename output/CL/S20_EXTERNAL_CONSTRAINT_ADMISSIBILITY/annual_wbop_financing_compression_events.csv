@@ -1,0 +1,5 @@
+"event_id","event_year","change_external_financing_gdp","change_manufactures_imports_gdp","change_net_foreign_income_gdp","event_definition"
+1,1937,-0.087765095190477,-0.006248723370691,0.0019469204655839,"Annual WBOP financing compression of at least five GDP points; not a gross-flow sudden stop"
+2,1976,-0.0729664442880679,-0.0336636348234489,0.0054170829586503,"Annual WBOP financing compression of at least five GDP points; not a gross-flow sudden stop"
+3,1999,-0.0549609214328275,-0.035349629868936,-0.0058739846448902,"Annual WBOP financing compression of at least five GDP points; not a gross-flow sudden stop"
+4,2023,-0.0508275600544895,-0.056424095994782,-0.0013943398633845,"Annual WBOP financing compression of at least five GDP points; not a gross-flow sudden stop"

@@ -1,0 +1,6 @@
+"specification","state_variables","n_state","role","nests_within"
+"M1_kaldor_core","log_imports;log_K_ME_gross",2,"Kaldor core: imports and machinery accumulation",
+"M2_plus_surplus","log_imports;log_K_ME_gross;log_non_reinvested_surplus",3,"adds the surplus not internally recapitalized","M1_kaldor_core"
+"M3_plus_rer","log_imports;log_K_ME_gross;log_non_reinvested_surplus;log_RER",4,"headline: Kaldor controlled by the real exchange rate","M2_plus_surplus"
+"M4_plus_wage_share","log_imports;log_K_ME_gross;log_non_reinvested_surplus;wage_share",4,"robustness: legacy fourth variable in place of the RER","M2_plus_surplus"
+"M3d_machinery_differenced","log_imports;d_log_K_ME_gross;log_non_reinvested_surplus;log_RER",4,"balanced-order diagnostic: machinery enters in first differences","M3_plus_rer"

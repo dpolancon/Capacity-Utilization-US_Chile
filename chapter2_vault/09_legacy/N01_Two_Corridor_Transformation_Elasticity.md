@@ -1,5 +1,5 @@
 ---
-type: legacy_note
+type: research_note
 status: active
 depends_on: []
 stage_scope: S00
@@ -9,11 +9,14 @@ layer: superseded
 design_role: theory_to_identification
 scope: chapter2_core
 related_to:
-- N01_CapacityUtilization_StructuralObject
-- N02_SuperConsistency
-- M10_Empirical_Identification_Framework
-- Marx_Okishio_Closure_Logic
+  - N01_CapacityUtilization_StructuralObject
+  - N02_SuperConsistency
+  - M10_Empirical_Identification_Framework
+  - Marx_Okishio_Closure_Logic
 created: 2026-05-05
+subtype: legacy_note
+blocks: []
+priority: legacy
 ---
 
 # Two-corridor foundation for the transformation elasticity

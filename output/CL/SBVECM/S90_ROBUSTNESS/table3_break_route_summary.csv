@@ -1,0 +1,3 @@
+"break_route","retained_dates","source_rule","use_in_other_route"
+"LOESS","1933, 2017","LOESS(kappa), second derivative only; 999 moving-block draws","never"
+"PARAMETRIC","1945, 1971, 1989","Two-procedure interval support; no LOESS evidence","never"

@@ -1,0 +1,7 @@
+"check","pass","detail"
+"canonical observation count",TRUE,"105"
+"canonical sample",TRUE,"1920-2024"
+"canonical source hash unique",TRUE,"3a76c95396024d98eae221099e1037fc9c534535d4c320a251e52cc5010b3b02"
+"legacy panel excluded",TRUE,"1920-2010"
+"legacy estimator labels excluded",TRUE,"CL_S42 inspected directly"
+"mbreaks pinned version recorded",TRUE,"1.0.1"

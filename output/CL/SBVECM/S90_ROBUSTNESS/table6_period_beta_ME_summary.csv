@@ -1,0 +1,5 @@
+"period","start_year","end_year","N","boundary_status","beta_ME","standard_error","ci_low","ci_high","beta_equals_1_p","adjacent_equality_p","estimator","system_rank","residual_gate","bootstrap_use","result"
+"1920--1944",1920,1944,25,"initial candidate span",NA,NA,NA,NA,NA,NA,"not run",NA,FALSE,"not required: coefficient blocked before inference","magnitude not identified: KP stability not rejected"
+"1945--1970",1945,1970,26,"candidate boundary not validated",NA,NA,NA,NA,NA,NA,"not run",NA,FALSE,"not required: coefficient blocked before inference","magnitude not identified: KP stability not rejected"
+"1971--1988",1971,1988,18,"candidate boundary not validated",NA,NA,NA,NA,NA,NA,"not run",NA,FALSE,"not required: coefficient blocked before inference","magnitude not identified: KP stability not rejected"
+"1989--2024",1989,2024,36,"candidate boundary not validated",NA,NA,NA,NA,NA,NA,"not run",NA,FALSE,"not required","magnitude not identified: KP stability not rejected"

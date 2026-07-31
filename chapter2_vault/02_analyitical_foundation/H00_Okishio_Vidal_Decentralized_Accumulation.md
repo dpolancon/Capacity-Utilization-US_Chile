@@ -1,20 +1,23 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-05-26
-subtype: hinge
+subtype: analytical_foundation
 layer: analytical_foundation
 design_role: ontological_hinge
 scope: chapter2_core
 related_to:
-- H01_Cajas_to_Transformation_Elasticity
-- N01_Two_Corridor_Transformation_Elasticity
-- N02_Peripheral_Mechanization_Constraint
-- R01_Marx_Okishio_Regime_Diagnostic_Guardrail
+  - H01_Cajas_to_Transformation_Elasticity
+  - N01_Two_Corridor_Transformation_Elasticity
+  - N02_Peripheral_Mechanization_Constraint
+  - R01_Marx_Okishio_Regime_Diagnostic_Guardrail
 created: 2026-05-05
+blocks: []
+priority: reference
 ---
 
 # From Okishio → Vidal → Transformation Elasticity

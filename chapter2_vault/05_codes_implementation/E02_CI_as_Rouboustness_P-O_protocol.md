@@ -1,7 +1,8 @@
 ---
-type: code_implementation_memo
+type: code_governance
 status: draft
-depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
+depends_on:
+  - chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md
 stage_scope: all_stages
 country: US_CL
 last_updated: 2026-06-10
@@ -21,48 +22,53 @@ baseline_statistic: Pz
 baseline_deterministic_case: constant
 baseline_lag_correction: short
 primary_estimators:
-- FM-OLS
-- IM-OLS
-- DOLS
+  - FM-OLS
+  - IM-OLS
+  - DOLS
 implementation_scope:
-- S33_cointegration_robustness
-- B1_E2B_model_choice_review
-- residual_based_admissibility
-- robustness_protocol
+  - S33_cointegration_robustness
+  - B1_E2B_model_choice_review
+  - residual_based_admissibility
+  - robustness_protocol
 locked_terms:
-- Phillips-Ouliaris gate
-- Pz normalization-invariant test
-- formal residual-based cointegration gate
-- residual ADF diagnostic
-- estimator triangulation
+  - Phillips-Ouliaris gate
+  - Pz normalization-invariant test
+  - formal residual-based cointegration gate
+  - residual ADF diagnostic
+  - estimator triangulation
 forbidden_terms:
-- pass FM-OLS cointegration test
-- Phillips-Hansen cointegration test
-- feed FM residuals into ca.po
-- S40 reconstruction authorized
+  - pass FM-OLS cointegration test
+  - Phillips-Hansen cointegration test
+  - feed FM residuals into ca.po
+  - S40 reconstruction authorized
 related_specs:
-- SPEC_A00_PRIMITIVE_SCALE_INTERACTION
-- SPEC_A05_COMPOSITION_INTERACTION
+  - SPEC_A00_PRIMITIVE_SCALE_INTERACTION
+  - SPEC_A05_COMPOSITION_INTERACTION
 related_notes:
-- R_distribution_conditioned_theta_identification
-- R_Cointegration_Admissibility_Superconsistent_Estimators
-- A06_B1_E2B_Model_Choice_Lock
-- S32_B1_E2B_MODEL_CHOICE_REVIEW
+  - R_distribution_conditioned_theta_identification
+  - R_Cointegration_Admissibility_Superconsistent_Estimators
+  - A06_B1_E2B_Model_Choice_Lock
+  - S32_B1_E2B_MODEL_CHOICE_REVIEW
 outputs_required:
-- S33_phillips_ouliaris_gate.csv
-- S33_cointegration_admissibility_ledger.csv
-- S33_phillips_ouliaris_robustness.md
+  - S33_phillips_ouliaris_gate.csv
+  - S33_cointegration_admissibility_ledger.csv
+  - S33_phillips_ouliaris_robustness.md
 tags:
-- chapter2
-- econometrics
-- implementation
-- cointegration
-- phillips-ouliaris
-- urca
-- ca-po
-- fmols
-- imols
-- dols
+  - chapter2
+  - econometrics
+  - implementation
+  - cointegration
+  - phillips-ouliaris
+  - urca
+  - ca-po
+  - fmols
+  - imols
+  - dols
+subtype: code_implementation_memo
+blocks: []
+layer: implementation
+scope: chapter2
+priority: reference
 ---
 
 # Phillips-Ouliaris Implementation Protocol for Cointegration Robustness

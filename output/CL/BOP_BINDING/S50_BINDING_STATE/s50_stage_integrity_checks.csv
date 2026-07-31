@@ -1,0 +1,8 @@
+"check","passed","detail"
+"ECT_sign_verified",TRUE,"positive original ECT means imports above equilibrium; pressure=-ECT"
+"ECT_not_sufficient_for_confirmation",TRUE,"confirmation requires at least one observed WBOP signal"
+"four_class_typology",TRUE,"confirmed / ECT-only / observed-only / non-binding"
+"threshold_nonrejection_respected",TRUE,"threshold regimes retained as descriptive only"
+"full_1920_2024_panel",TRUE,"annual 1920-2024"
+"component_weights_sum_to_one",TRUE,"0.50 + 0.20 + 0.15 + 0.15"
+"machinery_scope_limit_retained",TRUE,"S40 reduced-system ECT does not estimate a machinery coefficient"

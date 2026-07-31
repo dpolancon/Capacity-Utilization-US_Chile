@@ -1,0 +1,7 @@
+"check","pass","detail"
+"canonical 105 observations",TRUE,"1920-2024"
+"published KP critical values encoded",TRUE,"Category (a), Case 1, q_b=1, epsilon=0.15"
+"DOLS lag chosen by BIC on common sample",TRUE,"q=0"
+"LOESS evidence excluded",TRUE,"S20B reads only parametric and observed-capital objects"
+"candidate dates do not automatically define periods",TRUE,"single-equation gate=FALSE"
+"simulation validation",TRUE,""

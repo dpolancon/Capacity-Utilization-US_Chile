@@ -1,0 +1,6 @@
+"criterion","finding","disposition"
+"The estimand is defined before the estimator.","beta_ME is the long-run stock elasticity; eta is the distinct conditional accumulation response.","resolved"
+"Kejriwal-Perron is interpreted conditional on cointegration.","The independent rejection is reported as instability evidence but cannot create coefficient periods.","resolved"
+"The 2005 accumulation break is not relabeled as a long-run break.","The date is retained as a diagnostic change in the observed dynamic relation.","resolved"
+"Growth-rate stationarity is required before eta is interpreted.","Both growth-rate orders remain inconclusive under the six-family rule.","resolved"
+"Bootstrap inference is not used to repair failed identification.","Zero replications are used because neither estimand reaches an eligible inferential model.","resolved"

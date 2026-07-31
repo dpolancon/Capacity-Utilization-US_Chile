@@ -1,10 +1,17 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
-last_updated: 2026-06-01
+last_updated: 2026-07-25
+updated_by: CPR_IMOLS_ESTIMATION_PROTOCOL_LOCK
+subtype: analytical_foundation
+blocks: []
+layer: theory
+scope: chapter2
+priority: reference
 ---
 
 **---
@@ -26,25 +33,30 @@ created: 2026-05-27
 Capacity is **structurally reconstructed**, never residually extracted. The empirical model identifies a composition-weighted aggregate; structural payoffs ($\theta^{NRC}$, $\theta^{ME}$) are inferred via mapping rules, not directly estimated.
 
 ## 1. Estimable Specification
-The standard log-level cointegrating equation (via FM-OLS) is:
+The baseline log-level cointegrating equation estimated via Integrated Modified OLS (IM-OLS CPR framework, per [[E10V_IMOLS_CPR_Active_Estimator_Lock]]) is:
 $$
-\ln Y_t = \alpha_0 + \beta_1 \ln K^{NRC}_t + \beta_2 \ln K^{ME}_t + \beta_3 (\omega_t \cdot \ln K^{ME}_t) + \tilde{\mu}_t
+y_t = \alpha + b k_t + \psi \tau_t + f \omega_t + d (\tau_t \omega_{t-1}) + u_t
 $$
+where $k_t \equiv \ln K^{NRC}_t$ is the structural envelope scale and $\tau_t \equiv \ln K^{ME}_t - \ln K^{NRC}_t$ is the capital composition log difference. The partial sum IM-OLS transformation is:
+$$
+\sum_{s=1}^t y_s = \alpha \cdot t + b \sum_{s=1}^t k_s + \psi \sum_{s=1}^t \tau_s + f \sum_{s=1}^t \omega_s + d \sum_{s=1}^t (\tau_s \omega_{s-1}) + \lambda_k k_t + \lambda_\omega \omega_t + \varepsilon_t
+$$
+Centering follows the Three-Regime Architecture (see [[N11_Centering_Protocol_Three_Regime]]): Regime A (Uncentered main) and Regime B (Initial-state centering primary robustness). Pre-estimation diagnostic gating follows the 5-stage protocol in [[N12_PreTesting_Protocol_Integration_Breaks_ChoiceOfTechnique]], reconciling unit root orders, LOESS early-warning inflections, VECM drift leakage, and Okishio choice of technique. FWL pre-filtering of the interaction is strictly forbidden.
 
-**Intercept Rule ($\alpha_0$):** The intercept absorbs base-year dimensional constants and the non-zero mean of $\ln \mu_t$. It is **strictly discarded** for structural inference. Capacity reconstruction uses only super-consistent slopes.
+**Intercept Rule ($\alpha$):** The intercept absorbs base-year dimensional constants and the non-zero mean of $\ln \mu_t$. It is **strictly discarded** for structural capacity inference. Capacity reconstruction uses only super-consistent slopes.
 
 ## 2. Identification vs. Reconstruction
-- **Identified Object:** Systematic part of $\ln Y_t$ (composition-weighted capacity trend)
+- **Identified Object:** Systematic part of $y_t$ (composition-weighted capacity trend)
 - **Reconstructed Capacity:** 
 $$
-\ln \hat{Y}^p_t = \hat{\beta}_1 \ln K^{NRC}_t + \hat{\beta}_2 \ln K^{ME}_t + \hat{\beta}_3 (\omega_t \cdot \ln K^{ME}_t)
+\hat{y}^p_t = \hat{b} k_t + \hat{\psi} \tau_t + \hat{f} \omega_t + \hat{d} (\tau_t \omega_{t-1})
 $$
-- **Utilization Gap:** $\ln \mu_t = \ln Y_t - \ln \hat{Y}^p_t$ (mean-zero cyclical deviation)
+- **Utilization Gap:** $\ln \mu_t = y_t - \hat{y}^p_t$ (mean-zero cyclical deviation)
 
 ## 3. Level Anchoring Protocol
 To recover the absolute historical level of $\mu_t$, pin the dimensionless gap to a verified benchmark year $t^*$ where central surveys or historical accounts indicate $\mu_{t^*} = \mu^*$ (e.g., 0.85):
 $$
-\mu_t = \mu^* \cdot \exp\left[ (\ln Y_t - \ln \hat{Y}^p_t) - (\ln Y_{t^*} - \ln \hat{Y}^p_{t^*}) \right]
+\mu_t = \mu^* \cdot \exp\left[ (y_t - \hat{y}^p_t) - (y_{t^*} - \hat{y}^p_{t^*}) \right]
 $$
 
 This bypasses the contaminated intercept and ensures dimensional homogeneity.

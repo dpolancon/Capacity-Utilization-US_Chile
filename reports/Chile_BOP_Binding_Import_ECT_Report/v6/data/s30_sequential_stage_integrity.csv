@@ -1,0 +1,6 @@
+"check","passed","detail"
+"full_sample",TRUE,"1920-2024"
+"pre_sample",TRUE,"1920-1973"
+"post_sample",TRUE,"1974-2024"
+"wage_share_not_logged",TRUE,"wage share is tested in original level form"
+"nonresidential_context_only",TRUE,"log_K_NR_gross is never promoted into the VECM"

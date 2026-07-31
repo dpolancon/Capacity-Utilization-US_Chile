@@ -1,0 +1,3 @@
+"sample","threshold_variable","n_no_episode","n_episode","minimum_required_each_regime","gate_passed","disposition"
+"pre_1920_1973","financing_compression_5pp",51,1,10,FALSE,"held_out_due_to_insufficient_episode_regime_size"
+"post_1974_2024","financing_compression_5pp",46,3,10,FALSE,"held_out_due_to_insufficient_episode_regime_size"

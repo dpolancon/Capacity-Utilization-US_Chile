@@ -1,0 +1,2 @@
+"test","category","case","changing_parameters","I1_regressors","trim","maximum_breaks","q_dols","statistic","critical_5","rejects_stability_5","selected_break_count","selected_break_years","break_count_rule","inferential_scope"
+"Kejriwal-Perron UDmax","a",1,"intercept and beta_ME",1,0.15,3,0,6.82284544275758,12.25,FALSE,0,"","BIC conditional on UDmax rejection","tests parameter stability conditional on a cointegrated regression"

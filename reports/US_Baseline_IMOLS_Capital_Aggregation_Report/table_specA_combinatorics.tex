@@ -1,0 +1,37 @@
+% reports/US_Baseline_IMOLS_Capital_Aggregation_Report/table_specA_combinatorics.tex
+\begin{table}[h!]
+\centering
+\caption{Specification A Structural Break Shift Combinatorics Grid (Regime B)}
+\label{tab:specA_combinatorics}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccccccc}
+\toprule
+Model & $D_t$ & $\theta_{K,\text{brk}}$ & $\theta_{\omega,\text{brk}}$ & $\theta_{\omega K,\text{brk}}$ & CN & $\hat{\sigma}_u$ & $C_{\text{Shin}}$ & Wald $F$ ($p$) & Adjudication \\
+\midrule
+\multicolumn{10}{l}{\textbf{Panel A: Fordist Era (1929--1973; $T_B^* = 1947$)}} \\
+SpecA-0 & Yes & No & No & No & 13.63 & 0.0715 & 0.0381 & 3.78 (0.061) & Baseline (Level Only) \\
+SpecA-1 & Yes & Yes & No & No & 46.02 & 0.0591 & 0.0255 & 7.32 (0.011) & \textbf{Retain} \\
+SpecA-2 & Yes & No & Yes & No & 14.04 & 0.0668 & 0.0460 & 6.52 (0.016) & Convert to Level \\
+SpecA-3 & Yes & Yes & Yes & No & 46.89 & 0.0580 & 0.0372 & 6.12 (0.020) & \textbf{Retain} \\
+SpecA-4 & Yes & No & No & Yes & 29.78 & 0.0625 & 0.0391 & 3.26 (0.053) & Convert to Level \\
+SpecA-5 & Yes & Yes & No & Yes & 48.72 & 0.0580 & 0.0463 & 4.29 (0.025) & \textbf{Retain} \\
+SpecA-6 & Yes & No & Yes & Yes & 31.97 & 0.0605 & 0.0487 & 2.56 (0.097) & Convert to Level \\
+SpecA-7 & Yes & Yes & Yes & Yes & 50.60 & 0.0570 & 0.0489 & 3.15 (0.061) & \textbf{Retain} \\
+\midrule
+\multicolumn{10}{l}{\textbf{Panel B: Post-Fordist Era (1974--2024; $T_B^* = 2008$)}} \\
+SpecA-0 & Yes & No & No & No & 32.25 & 0.0520 & 0.1567$^{***}$ & 1.63 (0.210) & Disqualified (Non-st.) \\
+SpecA-1 & Yes & Yes & No & No & 74.48 & 0.0436 & 0.0617 & 0.83 (0.368) & Drop \\
+SpecA-2 & Yes & No & Yes & No & 42.39 & 0.0523 & 0.1585$^{***}$ & 1.21 (0.279) & Disqualified (Non-st.) \\
+SpecA-3 & Yes & Yes & Yes & No & 85.03 & 0.0438 & 0.0620 & 1.10 (0.303) & Drop \\
+SpecA-4 & Yes & No & No & Yes & 47.50 & 0.0521 & 0.1601$^{***}$ & 1.00 (0.379) & Disqualified (Non-st.) \\
+SpecA-5 & Yes & Yes & No & Yes & 79.13 & 0.0438 & 0.0620 & 0.53 (0.593) & Drop \\
+SpecA-6 & Yes & No & Yes & Yes & 83.86 & 0.0484 & 0.1170$^{*}$ & 4.75 (0.015) & Disqualified (Non-st.) \\
+SpecA-7 & Yes & Yes & Yes & Yes & 358.99 & 0.0441 & 0.0631 & 0.66 (0.524) & Collinear \\
+\bottomrule
+\end{tabular}%
+}
+\vspace{4pt}
+\begin{minipage}{\textwidth}
+\footnotesize Note: Estimations run under Regime B (Initial-State Centering). $\theta_{K,\text{brk}}, \theta_{\omega,\text{brk}}, \theta_{\omega K,\text{brk}}$ indicate inclusion of break interactions with $k_t^{\text{cap}}, \omega_{t-1}, k_t^{\text{cap}}\omega_{t-1}$. Shin LM critical values: 10\% = 0.095, 5\% = 0.121, 1\% = 0.184. $^{*}p<0.10, ^{**}p<0.05, ^{***}p<0.01$ indicate rejection of the cointegration null (stationarity). Wald test $F$-statistic and $p$-value evaluate $H_0: \theta_{\text{main}} = 0 \text{ AND } \theta_{\text{brk}} = 0$ for the primary profit squeeze hypothesis.
+\end{minipage}
+\end{table}

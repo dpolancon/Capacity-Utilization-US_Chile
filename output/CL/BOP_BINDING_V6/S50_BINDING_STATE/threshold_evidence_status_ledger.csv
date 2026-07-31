@@ -1,0 +1,4 @@
+"sample","hansen_seo_statistic","hansen_seo_p_value","hansen_seo_p_mc_se","threshold_evidence_status"
+"full_1920_2024",13.4728966186005,0.374374374374374,0.015311846878839,"threshold_not_supported_linear_adequate"
+"pre_1920_1973",16.5766514221857,0.0720720720720721,0.00818197000314977,"threshold_marginal_exploratory"
+"post_1974_2024",9.00149809365443,0.851851851851852,0.0112395107077387,"threshold_not_supported_linear_adequate"

@@ -1,0 +1,3 @@
+"variable","break_route","adjustment","level_verdict","first_difference_verdict","second_difference_verdict","level_stationary_families","first_difference_stationary_families","second_difference_stationary_families","integration_order","disposition"
+"d_k_NR","ACCUMULATION","mean_shift_2005","held","stationary","stationary",3,5,5,"held","held"
+"d_k_ME","ACCUMULATION","mean_shift_2005","held","stationary","stationary",2,5,5,"held","held"

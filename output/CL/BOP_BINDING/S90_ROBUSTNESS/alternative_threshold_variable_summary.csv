@@ -1,0 +1,5 @@
+"threshold_variable","threshold_hat","n","n_low","n_high","lr_statistic","bootstrap_replications","bootstrap_p_value","threshold_effect_reject_5","status","sample"
+"current_account_pressure",0.0528495759803909,52,42,10,5.69062761403597,999,0.035035035035035,TRUE,"estimated_reduced_system_robustness","pre_1920_1973"
+"financing_pressure_change",0.00781141295679986,52,34,18,5.52983547252144,999,0.048048048048048,TRUE,"estimated_reduced_system_robustness","pre_1920_1973"
+"current_account_pressure",-0.0014553438623923,49,12,37,6.75012504374266,999,0.039039039039039,TRUE,"estimated_reduced_system_robustness","post_1974_2024"
+"financing_pressure_change",0.019469841865587,49,38,11,2.70619633379766,999,0.518518518518518,FALSE,"estimated_reduced_system_robustness","post_1974_2024"

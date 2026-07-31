@@ -1,0 +1,9 @@
+"sample","deterministic","lag_order","gate_status","selected_rank_5","serial_portmanteau_p","maximum_companion_root","stable_roots"
+"post_1974_2024","const",2,"held: core_pass=FALSE;design_pass=TRUE;rer_route=mixed_level_evidence_I(1)_risk",1,0.801902215508882,NA,NA
+"post_1974_2024","const",3,"held: core_pass=FALSE;design_pass=TRUE;rer_route=mixed_level_evidence_I(1)_risk",1,0.5498168912908,NA,NA
+"post_1974_2024","trend",2,"held: core_pass=FALSE;design_pass=TRUE;rer_route=mixed_level_evidence_I(1)_risk",1,0.895450877338817,NA,NA
+"post_1974_2024","trend",3,"held: core_pass=FALSE;design_pass=TRUE;rer_route=mixed_level_evidence_I(1)_risk",1,0.527473060172892,NA,NA
+"pre_1920_1973","const",2,"held: core_pass=FALSE;design_pass=TRUE;rer_route=I(1)",2,0.323316468640455,NA,NA
+"pre_1920_1973","const",3,"held: core_pass=FALSE;design_pass=TRUE;rer_route=I(1)",1,0.551429737943302,NA,NA
+"pre_1920_1973","trend",2,"held: core_pass=FALSE;design_pass=TRUE;rer_route=I(1)",2,0.793206865341868,NA,NA
+"pre_1920_1973","trend",3,"held: core_pass=FALSE;design_pass=TRUE;rer_route=I(1)",2,0.55498876614557,NA,NA

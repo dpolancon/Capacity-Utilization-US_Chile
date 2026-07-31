@@ -1,17 +1,20 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-06-01
-subtype: rule
+subtype: analytical_foundation
 layer: analytical_toolkit
 design_role: measurement_guardrail
 scope: chapter2_implementation
 related_to:
-- A03_TransformationElasticity_Two-CapitalCapacityComposition
+  - A03_TransformationElasticity_Two-CapitalCapacityComposition
 created: 2026-05-27
+blocks: []
+priority: reference
 ---
 
 # R04: Measurement and Accounting Consistency

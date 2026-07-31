@@ -1,0 +1,3 @@
+"year","sample","historical_marker","historical_marker_source","model_classification","regime_evidence_label","bop_binding_index","observed_signal_count","benchmark_agreement"
+1961,"full_1920_2024","official BOP crisis and abandonment of the fixed exchange rate","Banco Central de Chile centennial history (verified in kaldor_chile_evidence_matrix.md)","observed_BOP_only_pressure","ECT_regime_exploratory_screening_only",0.220151236551567,1,"captured_as_observed_BOP_only"
+1961,"pre_1920_1973","official BOP crisis and abandonment of the fixed exchange rate","Banco Central de Chile centennial history (verified in kaldor_chile_evidence_matrix.md)","observed_BOP_only_pressure","ECT_regime_marginal_exploratory",-0.5100784674023,1,"captured_as_observed_BOP_only"

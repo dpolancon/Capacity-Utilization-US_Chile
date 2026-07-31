@@ -1,0 +1,3 @@
+"threshold_variable","threshold_hat","threshold_ci_low","threshold_ci_high","trim","grid_candidates","n","n_low","n_high","lr_statistic","bootstrap_replications","bootstrap_p_value","bootstrap_critical_95","threshold_effect_reject_5","sample"
+"dlog_RER",-0.0917737726770312,-0.0973291237467437,0.0456043193847634,0.15,160,52,13,39,3.26958728724368,999,0.33033033033033,5.85457362408244,FALSE,"pre_1920_1973"
+"dlog_RER",-0.0423544750066769,-0.0504966465788004,0.0780782950170308,0.15,160,49,14,35,2.24608670769831,999,0.572572572572573,6.17998894759729,FALSE,"post_1974_2024"

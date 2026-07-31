@@ -1,25 +1,28 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-06-01
-subtype: reference_map
+subtype: analytical_foundation
 layer: analytical_foundation
 design_role: intellectual_genealogy
 scope: chapter2_core_support
 related_to:
-- A01_Extensive_Accumulation
-- A02_Intensive_Accumulation
-- A03_TransformationElasticity_Two-CapitalCapacityComposition
-- A04_PeripheralTransformationElasticity
-- H00_Okishio_Vidal_Decentralized_Accumulation
-- H01_Cajas_to_Transformation_Elasticity
-- R05_Frontier_of_Not_Becoming
-- R06_Regime_Gating_and_Diagnostic_Ladder
+  - A01_Extensive_Accumulation
+  - A02_Intensive_Accumulation
+  - A03_TransformationElasticity_Two-CapitalCapacityComposition
+  - A04_PeripheralTransformationElasticity
+  - H00_Okishio_Vidal_Decentralized_Accumulation
+  - H01_Cajas_to_Transformation_Elasticity
+  - R05_Frontier_of_Not_Becoming
+  - R06_Regime_Gating_and_Diagnostic_Ladder
 created: 2026-05-05
 updated: 2026-05-27
+blocks: []
+priority: reference
 ---
 
 > **Constitutional Note**: This note maps sources to equations. It does not derive, define, or transform. All analytical operations reside in A-notes and H-notes.
@@ -48,7 +51,7 @@ All analytical operations occur in:
 - [[A01_Extensive_Accumulation]] (structural envelope & normal corridor)
 - [[A02_Intensive_Accumulation]] (tactical optimization & frontier conditioning)
 - [[A03_TransformationElasticity_Two-CapitalCapacityComposition]] (capacity identity & $\theta^N$ emergence)
-- [[A04_PeripheralTransformationElasticity]] (FX-conversion bottleneck & $\pi^{eff}$)
+- [[02_analyitical_foundation/_legacy/A04_PeripheralTransformationElasticity]] (FX-conversion bottleneck & $\pi^{eff}$)
 - [[H00_Okishio_Vidal_Decentralized_Accumulation]] (ontological hinge: "not becoming" vs "becoming")
 - [[H01_Cajas_to_Transformation_Elasticity]] (conceptual bridge to empirical mapping)
 
@@ -84,7 +87,7 @@ https://doi.org/10.1016/j.strueco.2024.03.006
 **Kaldor, N. (1957)** | **Kaldor, N. (1959) (Chile context)**  
 **Role:** Productivity linked to capital deepening; investment depends on structural conditions; capital goods often externally constrained.  
 **Function in this framework:** Supports the capacity composition identity and motivates the peripheral extension where $K^{ME}$ accumulation is import-dependent.  
-**Used in:** [[A01_Extensive_Accumulation]], [[A03_TransformationElasticity_Two-CapitalCapacityComposition]], [[A04_PeripheralTransformationElasticity]]
+**Used in:** [[A01_Extensive_Accumulation]], [[A03_TransformationElasticity_Two-CapitalCapacityComposition]], [[02_analyitical_foundation/_legacy/A04_PeripheralTransformationElasticity]]
 
 ---
 
@@ -117,7 +120,7 @@ https://doi.org/10.1016/j.strueco.2024.03.006
 **Prebisch, R. (1950)** | **Thirlwall, A. (1979)**  
 **Role:** External constraint on accumulation; import dependence of capital goods.  
 **Function in this framework:** Justifies the FX-conversion bottleneck $\phi_t$ and the effective profit share squeeze $\pi^{eff} = \pi \cdot \phi_t$ in the periphery.  
-**Used in:** [[A04_PeripheralTransformationElasticity]]
+**Used in:** [[02_analyitical_foundation/_legacy/A04_PeripheralTransformationElasticity]]
 
 ---
 
@@ -133,8 +136,8 @@ This section maps each key analytical component to the theoretical sources and t
 | **Capacity composition identity** | $Y^p = \frac{a^N(\pi, s)}{q^*(\pi, s)} K^{ME} + \Gamma(K^{NRC})$ | Accounting identity, Kaldor (1957) | [[A03_TransformationElasticity_Two-CapitalCapacityComposition]] |
 | **Normal accumulation corridor** | $g_{K^{NRC}}^N = \chi^N r^N - \delta$ | Basu (2022, 2024), Marx Vol. II | [[A01_Extensive_Accumulation]] |
 | **Aggregate transformation elasticity** | $\theta^N(\pi, s) = \frac{g_{Y^p}}{g_K^N}$ (composition-weighted) | This framework, Basu, Kaldor | [[A03_TransformationElasticity_Two-CapitalCapacityComposition]] |
-| **FX-conversion bottleneck** | $\phi_t = \min\left(1, \frac{F^{avail}_t}{F^{req}_t}\right)$ | Prebisch, Thirlwall, Kaldor (Chile) | [[A04_PeripheralTransformationElasticity]] |
-| **Effective profit share squeeze** | $\pi^{eff}_t = \pi_t \cdot \phi_t$ | Peripheral political economy tradition | [[A04_PeripheralTransformationElasticity]] |
+| **FX-conversion bottleneck** | $\phi_t = \min\left(1, \frac{F^{avail}_t}{F^{req}_t}\right)$ | Prebisch, Thirlwall, Kaldor (Chile) | [[02_analyitical_foundation/_legacy/A04_PeripheralTransformationElasticity]] |
+| **Effective profit share squeeze** | $\pi^{eff}_t = \pi_t \cdot \phi_t$ | Peripheral political economy tradition | [[02_analyitical_foundation/_legacy/A04_PeripheralTransformationElasticity]] |
 | **Regime threshold structure** | $\lambda^{[s]} \to \lambda^{[s']}$ gating | Basu (closure), Regulation theory | [[R06_Regime_Gating_and_Diagnostic_Ladder]], [[A01_Extensive_Accumulation]] |
 
 ---

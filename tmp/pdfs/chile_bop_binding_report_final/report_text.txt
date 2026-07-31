@@ -1,0 +1,725 @@
+When Does Chile’s Balance-of-Payments Constraint
+Bind?
+A reproducible RER-controlled import-system audit, 1920–2024
+Chapter 2 research pipeline
+29 July 2026
+
+Abstract
+This report rebuilds the Chilean import-system analysis from source snapshots through
+a frozen release, exact split samples, formal integration-order gates, RER-controlled VECMs,
+observed-threshold conditional VECMs, and a triangulated balance-of-payments screening index.
+The legacy four-variable long-run coefficients reproduce to a maximum absolute difference of
+1.03e-10. The reproduction succeeds, but the promoted machinery model does not: log gross
+machinery capital remains unresolved or at risk of I(2) in both 1920–1973 and 1974–2024. The
+machinery VECM and machinery-defined threshold VECM are therefore blocked. Reduced
+admissible systems find no RER-threshold effect (bootstrap p = 0.330 before 1974 and p = 0.573
+after 1973). The resulting episode chronology is a screening device, not a validated latent-state
+estimator.
+Keywords: Chile; balance of payments; imports; machinery; real exchange rate; VECM;
+threshold VECM; Kaldor; Thirlwall
+
+Resumen
+Este informe reconstruye el análisis chileno de importaciones desde las fuentes hasta una versión
+de datos congelada. La reproducción de los coeficientes heredados es exacta, pero el capital bruto
+de maquinaria no supera la compuerta de orden de integración en ninguna submuestra. Por tanto,
+el VECM de maquinaria y su versión umbral no se promueven. Los sistemas reducidos tampoco
+rechazan linealidad (p = 0.330 y p = 0.573). La cronología final triangula presión del ECT e
+indicadores observados y debe leerse como diagnóstico de episodios, no como fechamiento definitivo.
+
+1
+
+Introduction and verdict
+
+Chile’s industrialization made foreign exchange a condition of productive transformation: machinery
+and intermediate imports expanded the productive apparatus, while weak export performance
+periodically restricted the capacity to finance those imports. The mechanism makes an import
+disequilibrium measure worth testing, but it does not authorize classifying crises from a residual
+alone (Banco Central de Chile, 2025; Álvarez and Fuentes, 2003).
+
+1
+
+Chile BOP-Binding Audit
+
+RER–VECM–TVECM
+
+This paper examines whether the import requirement associated with non-reinvested surplus, gross
+machinery accumulation, distribution, and the real exchange rate yields an admissible long-run
+system and whether its adjustment identifies periods in which Chile’s balance-of-payments constraint
+became binding. The answer is disciplined by the gate: the legacy relation is computationally
+reproducible, but gross machinery capital fails the required I(1) classification in both politicaleconomic samples, so the central machinery VECM cannot carry the proposed inference.
+The result separates replication from validation. Exact numerical reconciliation establishes that
+the archived calculation has been recovered; it cannot establish that the level variables form an
+admissible cointegrating system. The report consequently advances the reproducible data release
+and reduced-system diagnostics while holding the requested machinery coefficients and machinery
+ECT outside the paper-facing evidence.
+
+2
+
+Mechanism and identification
+
+Kaldor’s mechanism runs from manufacturing expansion to increasing returns and productivity
+growth; cumulative causation then makes productive structure path dependent (Kaldor, 1967, 1970).
+Modern cross-country evidence supports the general manufacturing-growth mechanism but cannot
+identify a Chilean coefficient (Marconi et al., 2016). Thirlwall’s closure makes sustained growth
+conditional on export earnings and the income elasticity of imports, while later extensions admit
+capital flows and debt service (Thirlwall, 1979; Thirlwall and Hussain, 1982; Moreno-Brid, 2003).
+The combined theory predicts a foreign-exchange constraint on transformation, not a particular
+time-series rank or crisis classifier.
+For Chile, the connecting mechanism is imported productive inputs. Official history records that
+CORFO-led industrialization raised capital- and intermediate-goods imports from the late 1940s,
+while export stagnation left insufficient foreign exchange and produced the 1961 balance-of-payments
+crisis (Banco Central de Chile, 2025). Plant-level analysis also emphasizes technology embodied in
+imported capital and intermediate goods and their limited domestic substitutability (Álvarez and
+Fuentes, 2003). These findings make the import–machinery relation substantively grounded; they
+do not permit its stochastic properties to be assumed.
+The post-1974 split is also substantive. Trade reform changed manufacturing composition and
+productivity, import penetration weakened domestic interindustry linkages, and Chile’s development remained tied to copper and externally exposed structural change (Ffrench-Davis, 1983a,b,
+2002; Albala-Bertrand, 2006; Palma, 2019; Solimano and Zapata-Román, 2024). A direct Chilean
+application of balance-of-payments-constrained growth covers 1980–2019 but cannot adjudicate the
+earlier system or the 1961 benchmark (Yunga Medina et al., 2022). The 1920–1973 and 1974–2024
+estimates therefore represent distinct political-economic systems rather than an arbitrary mechanical
+partition.
+
+3
+
+Ordered data architecture
+
+The pipeline enforces the sequence source snapshots → canonical panel → base-year and splice
+audit → frozen release → integration gates → split VECM → conditional threshold test → BOP
+screening state → report. No downstream stage repairs an upstream object, and every estimator
+
+2
+
+Chile BOP-Binding Audit
+
+RER–VECM–TVECM
+
+consumes the frozen release.
+GDP, imports, investment, non-reinvested surplus, and gross machinery capital are documented in
+2003 CLP. The monthly Banco Central RER series is annualized by arithmetic mean and rebased
+from its 1986 reference to the ClioLab 2003 scale. Table 1 shows that the splice passes every declared
+audit while retaining a measurable source transition.
+Table 1: RER splice and base-year audit
+Audit object
+
+Result
+
+Verdict
+
+Level correlation, 1986–2010
+
+0.825
+
+Growth correlation, 1987–2010
+
+0.750
+
+Median absolute level gap
+
+9.34%
+
+2011 boundary log growth
+
+0.133
+
+Coverage
+
+1920–2024
+
+Passes the declared 0.80 floor; definitions are related, not identical.
+Common annual movement is strong
+enough for a documented splice.
+The gap is material and remains part
+of the sensitivity analysis.
+The boundary passes the overlapvariance rule but is not described as
+seamless.
+One annual row per year; exact split
+samples are preserved.
+
+Chile real exchange−rate overlap audit, 1986−2010
+
+RER index (ClioLab 2003 scale)
+
+110
+
+100
+
+90
+
+80
+
+70
+
+1985
+
+1990
+
+1995
+
+2000
+
+BCCh rebased
+
+2005
+
+2010
+
+ClioLab
+
+Figure 1: ClioLab and Banco Central real exchange-rate series on the 2003 scale.
+
+3
+
+Chile BOP-Binding Audit
+
+4
+
+RER–VECM–TVECM
+
+Split-sample VECM audit
+
+The motivating long-run relation is
+log Mt = α + βK ktM E + βN RS log N RSt + βω ωt + βR log RERt + et ,
+where Mt is real imports, N RSt = Πt − It , ktM E is log gross machinery and equipment, and ωt is
+the wage share. This equation is a candidate cointegrating relation only when the level variables
+pass the integration gate.
+Table 2 rejects promotion of the requested system. Gross machinery capital remains unresolved or
+at risk of I(2) in both samples. The pre-1974 wage share is I(0) and enters as a stationary control;
+the post-1974 RER produces mixed level evidence and is held outside the promoted long-run state.
+Rank selection cannot repair these failures because the variable set must be admissible before the
+Johansen estimator is selected.
+Table 2: Integration-order gate and estimator disposition
+Sample
+
+Variable
+
+Classification
+
+1920–1973
+1920–1973
+
+log real imports
+log gross machinery
+capital
+log non-reinvested surplus
+wage share
+log real exchange rate
+log real imports
+log gross machinery
+capital
+log non-reinvested surplus
+wage share
+log real exchange rate
+
+I(1)
+unresolved
+risk
+I(1)
+
+1920–1973
+1920–1973
+1920–1973
+1974–2024
+1974–2024
+1974–2024
+1974–2024
+1974–2024
+
+I(0)
+I(1)
+I(1)
+unresolved
+risk
+I(1)
+
+or
+
+Disposition
+
+I(2)
+
+promoted to cointegrating state
+held out of promoted long run system
+promoted to cointegrating state
+
+or
+
+I(2)
+
+I(1)
+mixed level evidence
+I(1) risk
+
+stationary control
+promoted to cointegrating state
+promoted to cointegrating state
+held out of promoted long run system
+promoted to cointegrating state
+promoted to cointegrating state
+held out of promoted long run system
+
+The archived four-variable coefficients reproduce exactly, with a maximum absolute difference
+of 1.03e-10. This result resolves the computational provenance question: the new release and
+code recover the legacy calculation. The same evidence rejects a stronger verdict because exact
+reproduction does not transform an unresolved machinery series into an I(1) state.
+
+4
+
+Chile BOP-Binding Audit
+
+RER–VECM–TVECM
+
+Chile import−system variables before parametric estimation
+Annual levels and LOESS paths; dotted line separates the planned samples
+
+Within−series standard deviation
+
+2
+
+0
+
+−2
+
+−4
+1925
+
+1950
+log_K_ME_gross
+
+1975
+log_RER
+
+2000
+
+log_imports
+
+2025
+
+log_non_reinvested_surplus
+
+Figure 2: Split-sample levels and local trends for the import-system variables.
+
+5
+
+Conditional threshold test
+
+The requested import–machinery threshold VECM is blocked by the same integration gate. The
+reported nonlinear exercise is a reduced conditional system: imports, non-reinvested surplus, and
+RER form the pre-1974 state with an I(0) wage-share control; imports, non-reinvested surplus,
+and wage share form the post-1974 state with stationary ∆ log RERt as a control. The observed
+threshold variable is annual ∆ log RERt , and the import ECT does not define its own regime.
+The 15% trimmed search evaluates 160 candidates, imposes minimum regime sizes, and uses 999
+conditional residual bootstrap replications in each sample. Table 3 shows that neither sample rejects
+a linear adjustment process. The threshold estimates therefore locate descriptive profile minima;
+they do not identify statistically distinct crisis regimes.
+Table 3: Observed-RER threshold tests
+Sample
+
+Threshold
+
+Profile interval
+
+LR
+
+Bootstrap
+p
+
+Verdict
+
+1920–1973
+
+-0.092
+
+[-0.097, 0.046]
+
+3.270
+
+0.330
+
+1974–2024
+
+-0.042
+
+[-0.050, 0.078]
+
+2.246
+
+0.573
+
+No threshold effect
+No threshold effect
+
+5
+
+Chile BOP-Binding Audit
+
+RER–VECM–TVECM
+
+Observed−RER threshold search in gate−admissible reduced systems
+
+Profile LR relative to minimum SSR
+
+post_1974_2024
+
+pre_1920_1973
+
+3
+
+2
+
+1
+
+0
+−0.05
+
+0.00
+
+0.05
+
+−0.10
+
+−0.05
+
+0.00
+
+0.05
+
+Lagged annual change in log RER
+post_1974_2024
+
+pre_1920_1973
+
+Figure 3: Trimmed threshold-search objective profiles.
+
+6
+
+Balance-of-payments screening state
+
+The reduced-system ECT is normalized on imports:
+d
+ECTM,t = log Mt − log
+Mt ,
+
+BtECT = −ECTM,t .
+
+A positive BtECT records imports below the reduced-system requirement. The screening index
+combines standardized ECT pressure with current-account pressure, the goods balance, and
+manufactured-import compression. Confirmed binding requires ECT pressure of at least one
+robust standard deviation and at least one observed BOP signal; disagreement remains visible as
+ECT-only or observed-only pressure.
+Table 4 lists the confirmed runs. The concentration in the 1950s and the immediate post-1973
+years is historically plausible, but plausibility is not validation. The classifier does not confirm the
+officially documented 1961 crisis, and that false negative is decisive: the index organizes evidence
+but cannot supply a definitive chronology.
+Table 4: Confirmed binding runs in the triangulation screen
+Sample
+
+Run
+
+Duration
+
+Peak year
+
+Peak index
+
+1920–1973
+1920–1973
+1920–1973
+1974–2024
+1974–2024
+
+1953–1955
+1958–1958
+1973–1973
+1975–1976
+1978–1979
+
+3
+1
+1
+2
+2
+
+1954
+1958
+1973
+1976
+1979
+
+1.430
+1.292
+0.974
+0.659
+1.179
+
+6
+
+Chile BOP-Binding Audit
+
+RER–VECM–TVECM
+
+Chile: import shortfall and observed external−pressure evidence
+Shading marks confirmed years; threshold regimes are not used because their bootstrap tests fail
+
+Triangulated BOP−binding index
+
+1
+
+0
+
+−1
+
+−2
+
+1925
+
+1950
+
+1975
+
+2000
+
+2025
+
+Figure 4: Triangulated balance-of-payments screening index and classification.
+
+BOP−binding index components
+current_account_pressure_z
+2
+0
+−2
+
+goods_balance_pressure_z
+2
+
+Standardized pressure
+
+0
+−2
+−4
+import_shortfall_pressure_z
+2
+0
+−2
+
+manufactured_import_compression_z
+6
+3
+0
+−3
+
+1925
+
+1950
+
+1975
+
+2000
+
+2025
+
+Figure 5: Model-based and observed components of the screening index.
+
+7
+
+Chile BOP-Binding Audit
+
+7
+
+RER–VECM–TVECM
+
+Robustness and specification space
+
+The robustness stage covers alternative RER splice dates, ClioLab-only and spliced RER inputs,
+deterministic terms, lag orders, adjacent sample boundaries, the 999-replication threshold bootstrap,
+leave-one-episode-out checks, condition-number reporting, and confidence-band overlap. These
+exercises expose sensitivity without using decimal equality as a gate. The machinery model remains
+blocked throughout; stability of a held coefficient cannot substitute for integration admissibility.
+The reduced Johansen ranks retain asymptotic trace evidence as a descriptive input because each
+split exceeds 30 annual observations. A machinery-rank bootstrap is not reported because the
+machinery estimator is blocked before rank promotion. This omission is a governed result rather than
+missing computation: bootstrap refinement cannot rescue a state vector rejected by the upstream
+gate.
+Alternative observed threshold variables reveal reduced-system nonlinearity that the RER-change
+threshold does not. Current-account pressure rejects linearity in both samples, and annual financingpressure change rejects only before 1974. Table 5 reports the 999-replication results. Because
+current-account pressure is itself an observed BOP outcome, the test conditions ECT adjustment
+but cannot independently validate a chronology that also uses external-account evidence.
+Table 5: Alternative observed threshold variables in reduced systems
+Sample
+
+Threshold variable
+
+Estimate
+
+Bootstrap p
+
+Verdict
+
+1920–1973
+1974–2024
+1920–1973
+
+Current-account pressure
+Current-account pressure
+Annual
+financing-pressure
+change
+Annual
+financing-pressure
+change
+
+0.053
+-0.001
+0.008
+
+0.035
+0.039
+0.048
+
+Reject linearity
+Reject linearity
+Reject linearity
+
+0.019
+
+0.519
+
+Do not reject
+
+1974–2024
+
+The discrete financing-compression indicator contains only 1 pre-1974 episode observation and
+3 post-1973 observations after lag alignment. Both regimes fail the minimum size of ten, so no
+binary-regime estimator or bootstrap is promoted.
+
+8
+
+Chile BOP-Binding Audit
+
+RER–VECM–TVECM
+
+Machinery coefficient sensitivity across sample boundaries
+Descriptive only: the machinery level fails the long−run integration gate
+pre_1920_1974
+
+pre_1920_1973
+
+pre_1920_1972
+
+post_1975_2024
+
+post_1974_2024
+
+post_1973_2024
+
+0.0
+
+0.3
+
+0.6
+
+0.9
+
+OLS coefficient and 95% interval
+post boundary
+
+pre boundary
+
+Figure 6: Adjacent-boundary sensitivity for the held machinery relation.
+
+8
+
+Conclusion
+
+The rebuild succeeds as an audit and rejects the central econometric shortcut. Chile’s importedmachinery and foreign-exchange mechanism is historically coherent, but the current gross machinery
+series does not support the proposed split-sample machinery VECM. The reduced systems provide no
+formal evidence of RER-defined threshold adjustment, while current-account pressure and pre-1974
+financing-pressure change condition adjustment nonlinearly. Those external-pressure thresholds
+are evidence about the adjustment mechanism, not independent confirmation of binding dates.
+The report therefore retains the BOP index as a transparent screening panel and directs the next
+research step toward resolving the machinery stock’s stochastic properties and validating crisis dates
+against independent historical records.
+The empirical verdict changes the report’s contribution. It no longer claims to have estimated when
+the external constraint became binding from a machinery ECT; it demonstrates which parts of that
+claim reproduce, which parts pass stochastic gates, and where the evidence fails. That distinction
+preserves the Kaldorian question while preventing a generated latent state from validating itself.
+
+Data availability and reproducibility
+The frozen modelling release is stored at data/releases/chile_bop_binding_v1/. Every report
+table and figure is copied from completed stage ledgers. The report builder performs no estimation
+and records the SHA-256 hash of each consumed input.
+
+9
+
+Chile BOP-Binding Audit
+
+RER–VECM–TVECM
+
+Limitations
+The annual sample is small, the RER splice joins related but non-identical source definitions, the
+gross machinery series fails the I(1) gate, the reduced Johansen ranks are descriptive rather than
+bootstrapped rank claims, and the observed BOP indicators are incomplete proxies for reserve
+scarcity, rationing, and access to finance. These limits bind the interpretation rather than appearing
+as generic qualifications.
+
+Declarations
+Ethics. The study uses historical aggregate data and involves no human subjects.
+Author contributions (CRediT). Conceptualization, methodology, software, validation, formal
+analysis, data curation, visualization, and writing are documented in the repository workflow; final
+scholarly responsibility remains with the dissertation author.
+Funding. No project-specific funding information was supplied.
+Conflicts of interest. None declared.
+AI-use disclosure. Codex assisted with reproducible code, evidence organization, diagnostics, and
+report assembly under human direction. All claims remain auditable against the frozen release,
+stage ledgers, and verified sources.
+
+References
+Albala-Bertrand, J. M. (2006). Changes in Chile’s production structure, 1986–1996: Output and
+industrial interdependence. CEPAL Review, 88, 159–172. https://repositorio.cepal.org/
+server/api/core/bitstreams/8b0c80bc-2006-4abb-b9ac-cc45e7fb6ba0/content
+Álvarez, R., & Fuentes, J. R. (2003). Trade reforms and manufacturing industry in Chile (Working
+Paper No. 210). Banco Central de Chile.
+https://www.bcentral.cl/contenido/-/details/documento-de-trabajo-n-210
+Banco Central de Chile. (2025). 100 años de política económica y comercio exterior de Chile.
+https://www.bcentral.cl/en/w/blog/
+100-anios-de-politica-economica-y-comercio-exterior-de-chile
+Ffrench-Davis, R. (1983a). El experimento monetarista en Chile: Una síntesis crítica. Desarrollo
+Económico, 23 (90), 163–196. https://doi.org/10.2307/3466468
+Ffrench-Davis, R. (1983b). Deuda externa y balanza de pagos de América Latina: Tendencias
+recientes y perspectivas. Estudios Internacionales, 16 (62), 281–304.
+https://doi.org/10.5354/0719-3769.1983.16673
+Ffrench-Davis, R. (2002). Economic reforms in Chile: From dictatorship to democracy. University
+of Michigan Press. https://doi.org/10.3998/mpub.17208
+Kaldor, N. (1967). Strategic factors in economic development. Cornell University.
+https://books.google.com/books?id=_IgeAAAAMAAJ
+10
+
+Chile BOP-Binding Audit
+
+RER–VECM–TVECM
+
+Kaldor, N. (1970). The case for regional policies. Scottish Journal of Political Economy, 17 (3),
+337–348. https://doi.org/10.1111/j.1467-9485.1970.tb00712.x
+Marconi, N., Reis, C. F. de B., & Araújo, E. C. de. (2016). Manufacturing and economic
+development: The actuality of Kaldor’s first and second laws. Structural Change and Economic
+Dynamics, 37, 75–89. https://doi.org/10.1016/j.strueco.2015.12.002
+Moreno-Brid, J. C. (2003). Capital flows, interest payments and the balance-of-payments
+constrained growth model. Metroeconomica, 54 (2–3), 346–365.
+https://doi.org/10.1111/1467-999X.00170
+Palma, J. G. (2019). Desindustrialización, desindustrialización “prematura” y “síndrome holandés”.
+El Trimestre Económico, 86 (344), 901–966. https://doi.org/10.20430/ete.v86i344.970
+Solimano, A., & Zapata-Román, G. (2024). Chilean economic development under neoliberalism.
+Cambridge University Press. https://doi.org/10.1017/9781009477352
+Thirlwall, A. P. (1979). The balance of payments constraint as an explanation of international
+growth rate differences. PSL Quarterly Review, 32 (128), 45–53.
+https://doi.org/10.13133/2037-3643/12804
+Thirlwall, A. P., & Hussain, M. N. (1982). The balance of payments constraint, capital flows and
+growth rate differences between developing countries. Oxford Economic Papers, 34 (3), 498–510.
+https://doi.org/10.1093/oxfordjournals.oep.a041565
+Yunga Medina, F., Tapia Morquecho, C., Camacho Manzanillas, S., & Cueva Jiménez, A. (2022).
+Does the balance of payments constrain economic growth? New evidence for Chile 1980–2019.
+Boletín de Coyuntura, 35, 25–35. https://doi.org/10.31243/bcoyu.35.2022.1851
+
+11
+
+

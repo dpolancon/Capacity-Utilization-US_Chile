@@ -1,0 +1,6 @@
+"window_id","window","years","n","im_ols","fm_ols","dols","johansen","promoted_beta_me","unit_vector_restriction"
+"DEMO_NEOLIBERAL","Democratic Neoliberal Export Model","1990--2024",35,"Blocked","Blocked","Blocked","Blocked",,"Not tested: capital gate failed"
+"DICTATORSHIP","Dictatorship Shock","1974--1989",16,"Blocked","Blocked","Blocked","Blocked",,"Not tested: capital gate failed"
+"FULL","Full Chile Century","1920--2024",105,"Blocked","Blocked","Blocked","Blocked",,"Not tested: capital gate failed"
+"ISI","Classic ISI","1939--1973",35,"Blocked","Blocked","Blocked","Blocked",,"Not tested: capital gate failed"
+"NITRATE","Nitrate Crisis and Early State","1920--1938",19,"Blocked","Blocked","Blocked","Blocked",,"Not tested: capital gate failed"

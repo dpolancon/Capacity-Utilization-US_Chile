@@ -1,0 +1,25 @@
+[2026-07-31 12:47:48] Spec B panel: 94 rows, 1931-2024
+[2026-07-31 12:47:48] 
+[2026-07-31 12:47:48] MEAN ANNUAL CHANGE (percent per year for levels; pp per year for ratios and shares)
+[2026-07-31 12:47:48]   Full_Sample_1929_2024
+[2026-07-31 12:47:48]     Corporate value added (y^NFC)                     3.89  (sd  5.10)
+[2026-07-31 12:47:48]     Nonresidential structures (k^NRC)                 5.76  (sd  4.62)
+[2026-07-31 12:47:48]     Machinery and equipment (k^ME)                    6.21  (sd  5.03)
+[2026-07-31 12:47:48]     Mechanization gap (kappa = k^ME - k^NRC)          0.45  (sd  2.97)
+[2026-07-31 12:47:48]     Relative price (p^kappa = ln P^ME - ln P^NRC)    -0.69  (sd  3.89)
+[2026-07-31 12:47:48]     Wage share (omega)                               -0.10  (sd  1.14)
+[2026-07-31 12:47:48]   Fordist_1929_1973
+[2026-07-31 12:47:48]     Corporate value added (y^NFC)                     4.93  (sd  6.65)
+[2026-07-31 12:47:48]     Nonresidential structures (k^NRC)                 5.46  (sd  4.99)
+[2026-07-31 12:47:48]     Machinery and equipment (k^ME)                    6.95  (sd  5.90)
+[2026-07-31 12:47:48]     Mechanization gap (kappa = k^ME - k^NRC)          1.49  (sd  3.15)
+[2026-07-31 12:47:48]     Relative price (p^kappa = ln P^ME - ln P^NRC)     0.90  (sd  3.67)
+[2026-07-31 12:47:48]     Wage share (omega)                               -0.05  (sd  1.33)
+[2026-07-31 12:47:48]   Post_Fordist_1974_2024
+[2026-07-31 12:47:48]     Corporate value added (y^NFC)                     3.12  (sd  3.13)
+[2026-07-31 12:47:48]     Nonresidential structures (k^NRC)                 5.72  (sd  3.85)
+[2026-07-31 12:47:48]     Machinery and equipment (k^ME)                    5.30  (sd  3.56)
+[2026-07-31 12:47:48]     Mechanization gap (kappa = k^ME - k^NRC)         -0.43  (sd  2.56)
+[2026-07-31 12:47:48]     Relative price (p^kappa = ln P^ME - ln P^NRC)    -2.03  (sd  3.63)
+[2026-07-31 12:47:48]     Wage share (omega)                               -0.17  (sd  0.97)
+[2026-07-31 12:47:48] US_S33H complete. 42 descriptive rows across 7 windows.

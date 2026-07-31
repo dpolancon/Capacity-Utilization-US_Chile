@@ -1,15 +1,21 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-04-23
 title: "References Note \u2014 Utilization, Firm Fracture, and Capacity Conventions"
 project: Normal utilization and the fractured firm
 tags:
-- references
-- utilization
+  - references
+  - utilization
+subtype: analytical_foundation
+blocks: []
+layer: theory
+scope: chapter2
+priority: reference
 ---
 
 # References note

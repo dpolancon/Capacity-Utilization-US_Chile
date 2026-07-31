@@ -1,22 +1,25 @@
 ---
-type: legacy_note
-status: legacy
+type: research_note
+status: deprecated
 depends_on: []
 stage_scope: S00
 country: US_CL
 last_updated: 2026-05-27
-subtype: rule
+subtype: legacy_note
 layer: analytical_foundation
 design_role: diagnostic_protocol
 scope: chapter2_core
 related_to:
-- A02_Intensive_Accumulation_Choice_of_Technique
-- N04_Extensive_Margin_and_Structural_Envelope
-- R05_Frontier_of_Not_Becoming
-- R06_Regime_Gating_and_Diagnostic_Ladder
-- Okishio_Vidal_Transformation_Elasticity
-- M10_Empirical_Identification_Framework
+  - A02_Intensive_Accumulation_Choice_of_Technique
+  - N04_Extensive_Margin_and_Structural_Envelope
+  - R05_Frontier_of_Not_Becoming
+  - R06_Regime_Gating_and_Diagnostic_Ladder
+  - Okishio_Vidal_Transformation_Elasticity
+  - M10_Empirical_Identification_Framework
 created: 2026-05-27
+status_detail: legacy
+blocks: []
+priority: legacy
 ---
 
 # R07: Intensive-Margin Diagnostic Ladder (Mechanism Validation & Friction Diagnosis)

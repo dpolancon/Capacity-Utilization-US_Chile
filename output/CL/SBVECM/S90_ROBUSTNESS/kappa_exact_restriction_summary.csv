@@ -1,0 +1,7 @@
+"model_id","break_route","break_form","rank","beta_ME","beta_ME_equals_1_boot_p","global_kappa_stationarity_admissible","piecewise_kappa_stationarity_admissible","restriction_verdict","permanent_shift_condition"
+"CL-BVECM-LOESS-NONE-NONE-K2-NA","LOESS","NONE",2,0.852278553916566,NA,FALSE,FALSE,"not_identified_held_model","no deterministic shift by construction"
+"CL-BVECM-LOESS-LEVEL-1933_2017-K2-NA","LOESS","LEVEL",1,0.910747154972201,NA,FALSE,FALSE,"not_identified_held_model","requires zero slope shifts; see route slope ledger"
+"CL-BVECM-LOESS-PIECEWISE_TREND-1933_2017-K2-NA","LOESS","PIECEWISE_TREND",1,0.683951404564341,NA,FALSE,FALSE,"not_identified_held_model","requires zero slope shifts; see route slope ledger"
+"CL-BVECM-PARAMETRIC-NONE-NONE-K2-NA","PARAMETRIC","NONE",2,0.852278553916566,NA,FALSE,FALSE,"not_identified_held_model","no deterministic shift by construction"
+"CL-BVECM-PARAMETRIC-LEVEL-1945_1971_1989-K2-NA","PARAMETRIC","LEVEL",1,0.809441973545533,NA,FALSE,FALSE,"not_identified_held_model","requires zero slope shifts; see route slope ledger"
+"CL-BVECM-PARAMETRIC-PIECEWISE_TREND-1945_1971_1989-K2-NA","PARAMETRIC","PIECEWISE_TREND",1,1.05361272982763,NA,FALSE,FALSE,"not_identified_held_model","requires zero slope shifts; see route slope ledger"

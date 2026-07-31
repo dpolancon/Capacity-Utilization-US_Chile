@@ -1,27 +1,29 @@
 ---
-type: inactive_archive
+type: research_note
 status: active
 depends_on: []
 stage_scope: none
 country: US_CL
 last_updated: 2026-06-01
-subtype: prospecting
+subtype: inactive_archive
 layer: governance
 design_role: pipeline_planning
 scope: chapter2_transition
 related_to:
-- A01_Extensive_Accumulation
-- A02_Intensive_Accumulation
-- A03_TransformationElasticity_Two-CapitalCapacityComposition
-- A04_PeripheralTransformationElasticity
-- H00_Okishio_Vidal_Decentralized_Accumulation
-- H01_Cajas_to_Transformation_Elasticity
-- R01_Ontological_Interpretation_Guardrails
-- R02_Identification_and_Estimation_Protocol
-- R03_Regime_Diagnostic_and_Threshold_Gating
-- R04_Measurement_and_Accounting_Consistency
+  - A01_Extensive_Accumulation
+  - A02_Intensive_Accumulation
+  - A03_TransformationElasticity_Two-CapitalCapacityComposition
+  - A04_PeripheralTransformationElasticity
+  - H00_Okishio_Vidal_Decentralized_Accumulation
+  - H01_Cajas_to_Transformation_Elasticity
+  - R01_Ontological_Interpretation_Guardrails
+  - R02_Identification_and_Estimation_Protocol
+  - R03_Regime_Diagnostic_and_Threshold_Gating
+  - R04_Measurement_and_Accounting_Consistency
 created: 2026-05-27
 updated: 2026-05-27
+blocks: []
+priority: legacy
 ---
 
 # PROSPECTING: Analytical Closure Confirmed & Empirical Implementation Handoff

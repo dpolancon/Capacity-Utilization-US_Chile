@@ -1,0 +1,7 @@
+"file","role","bytes","rows"
+"README.md","release documentation",405,
+"CHILE_BOP_BINDING_SOURCE_OF_TRUTH_WIDE.csv","sole wide model input",93624,105
+"CHILE_BOP_BINDING_SOURCE_OF_TRUTH_LONG.csv","long audit input",266751,5565
+"CHILE_BOP_BINDING_VARIABLE_DICTIONARY.csv","variable dictionary",2193,16
+"CHILE_BOP_BINDING_PROVENANCE_LEDGER.csv","upstream provenance",1250,5
+"CHILE_BOP_BINDING_VALIDATION_SUMMARY.md","validation summary",624,

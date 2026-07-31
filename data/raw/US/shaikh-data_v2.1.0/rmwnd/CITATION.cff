@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+title: "measuring-wealth-of-nations-replication"
+version: "2.1.0"
+date-released: "2026-07-09"
+authors:
+  - family-names: "Anderson"
+    given-names: "Nick"
+    affiliation: "Independent researcher"
+repository-code: ""
+license: MIT
+keywords:
+  - economics
+  - data-replication
+  - reproducible-research
+references:
+  - type: book
+    authors:
+      - name: "Anwar Shaikh and E. Ahmet Tonak"
+    title: "Measuring the Wealth of Nations: The Political Economy of National Accounts"
+    year: 1994
+    publisher:
+      name: "Cambridge University Press"

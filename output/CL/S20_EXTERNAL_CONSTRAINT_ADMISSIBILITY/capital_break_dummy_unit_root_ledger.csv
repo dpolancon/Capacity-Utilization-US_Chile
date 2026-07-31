@@ -1,0 +1,31 @@
+"window_id","window","variable","transformation","break_year","n","statistic","critical_5pct","reject_unit_root","lag"
+"FULL","Full Chile Century","k_me","level",1985,105,-2.80886525549884,-1.95,TRUE,4
+"FULL","Full Chile Century","k_me","first_difference",1992,104,-3.26011734275771,-1.95,TRUE,4
+"FULL","Full Chile Century","k_nr","level",1987,105,-2.65776295349705,-1.95,TRUE,4
+"FULL","Full Chile Century","k_nr","first_difference",2004,104,-3.42414204652032,-1.95,TRUE,4
+"FULL","Full Chile Century","kappa","level",1945,105,-2.59922711284384,-1.95,TRUE,4
+"FULL","Full Chile Century","kappa","first_difference",1945,104,-3.87358590228142,-1.95,TRUE,4
+"NITRATE","Nitrate Crisis and Early State","k_me","level",1931,19,-2.5753616136032,-1.95,TRUE,1
+"NITRATE","Nitrate Crisis and Early State","k_me","first_difference",1931,18,-2.75463631116374,-1.95,TRUE,1
+"NITRATE","Nitrate Crisis and Early State","k_nr","level",1929,19,-2.72676897146803,-1.95,TRUE,1
+"NITRATE","Nitrate Crisis and Early State","k_nr","first_difference",1931,18,-3.92243697812658,-1.95,TRUE,1
+"NITRATE","Nitrate Crisis and Early State","kappa","level",1924,19,-3.2566958705978,-1.95,TRUE,1
+"NITRATE","Nitrate Crisis and Early State","kappa","first_difference",1933,18,-2.59893328777689,-1.95,TRUE,1
+"ISI","Classic ISI","k_me","level",1946,35,-0.749144075213005,-1.95,FALSE,2
+"ISI","Classic ISI","k_me","first_difference",1946,34,-4.02581469433346,-1.95,TRUE,2
+"ISI","Classic ISI","k_nr","level",1946,35,-2.30191291583174,-1.95,TRUE,2
+"ISI","Classic ISI","k_nr","first_difference",1956,34,-3.75860130791708,-1.95,TRUE,2
+"ISI","Classic ISI","kappa","level",1949,35,-1.91317776418888,-1.95,FALSE,2
+"ISI","Classic ISI","kappa","first_difference",1946,34,-3.75776929505959,-1.95,TRUE,2
+"DICTATORSHIP","Dictatorship Shock","k_me","level",1979,16,-2.46761453626028,-1.95,TRUE,1
+"DICTATORSHIP","Dictatorship Shock","k_me","first_difference",1981,15,-1.91722557837708,-1.95,FALSE,1
+"DICTATORSHIP","Dictatorship Shock","k_nr","level",1979,16,-2.09909873290037,-1.95,TRUE,1
+"DICTATORSHIP","Dictatorship Shock","k_nr","first_difference",1981,15,-2.54366747227532,-1.95,TRUE,1
+"DICTATORSHIP","Dictatorship Shock","kappa","level",1980,16,-2.54597983731915,-1.95,TRUE,1
+"DICTATORSHIP","Dictatorship Shock","kappa","first_difference",1981,15,-2.00886803846156,-1.95,TRUE,1
+"DEMO_NEOLIBERAL","Democratic Neoliberal Export Model","k_me","level",2011,35,-3.98814675766845,-1.95,TRUE,2
+"DEMO_NEOLIBERAL","Democratic Neoliberal Export Model","k_me","first_difference",2004,34,-3.79454627930011,-1.95,TRUE,2
+"DEMO_NEOLIBERAL","Democratic Neoliberal Export Model","k_nr","level",2011,35,-3.01305076870886,-1.95,TRUE,2
+"DEMO_NEOLIBERAL","Democratic Neoliberal Export Model","k_nr","first_difference",2004,34,-4.33813691534762,-1.95,TRUE,2
+"DEMO_NEOLIBERAL","Democratic Neoliberal Export Model","kappa","level",2012,35,-4.22186695573381,-1.95,TRUE,2
+"DEMO_NEOLIBERAL","Democratic Neoliberal Export Model","kappa","first_difference",1997,34,-2.75888166291799,-1.95,TRUE,2

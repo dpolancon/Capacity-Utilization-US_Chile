@@ -1,10 +1,16 @@
 ---
-type: analytical_foundation
+type: theory
 status: active
-depends_on: [chapter2_vault/00_constitutive_core/01_Governing_Memo.md]
+depends_on:
+  - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-05-19
+subtype: analytical_foundation
+blocks: []
+layer: theory
+scope: chapter2
+priority: reference
 ---
 
 **1. Decentralized Accumulation** Okishio’s core argument centers on the fact that the capitalist economy lacks central planning, operating instead under an "anarchy" of production. Because the means of production are privately owned, **individual capitalists make accumulation (investment) decisions dispersedly and privately, relying entirely on subjective expectations rather than prior knowledge of total social demand**. Crucially, capitalists must commit to their accumulation demand _before_ their profits are actually realized. Because these proactive, uncoordinated investment decisions dictate total social demand, aggregate production and aggregate demand fundamentally fail to match, guaranteeing that a macroeconomic disequilibrium arises across the entire society.

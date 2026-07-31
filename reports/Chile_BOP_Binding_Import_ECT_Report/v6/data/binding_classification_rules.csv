@@ -1,0 +1,6 @@
+"classification","ECT_estimate_available","ECT_regime_signal","observed_signal","interpretation"
+"confirmed_binding",TRUE,TRUE,TRUE,"negative machinery-import ECT in the lower regime plus independent BOP evidence"
+"ECT_only_pressure",TRUE,TRUE,FALSE,"candidate import-compression pressure without independent confirmation"
+"observed_BOP_only_pressure",TRUE,FALSE,TRUE,"observed external pressure without the estimated machinery ECT signal"
+"non_binding_adjustment",TRUE,FALSE,FALSE,"neither triangulation family crosses its rule"
+"ect_unavailable",FALSE,NA,NA,"lag and first difference leave no ECT estimate; the year is not evidence of non-binding"

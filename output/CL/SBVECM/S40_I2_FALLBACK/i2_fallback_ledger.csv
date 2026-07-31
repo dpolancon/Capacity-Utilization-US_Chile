@@ -1,0 +1,3 @@
+"break_route","trigger","retained_break","differenced_system_rank","trace_r0","trace_cv5","delta_beta_ME","unit_vector_test","disposition"
+"LOESS",FALSE,NA,NA,NA,NA,NA,"not executed","not_triggered_route_order_is_not_I2_risk"
+"PARAMETRIC",FALSE,NA,NA,NA,NA,NA,"not executed","not_triggered_route_order_is_not_I2_risk"

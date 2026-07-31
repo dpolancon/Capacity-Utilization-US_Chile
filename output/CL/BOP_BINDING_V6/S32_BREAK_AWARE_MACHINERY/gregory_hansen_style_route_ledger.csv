@@ -1,0 +1,4 @@
+"sample","mode","break_year","rss","adf_residual_tau","n","trim","bootstrap_replications","bootstrap_p_value","bootstrap_critical_05","break_route_status"
+"full_1920_2024","trend",1991,6.14623438283687,-5.24851345099751,105,0.15,499,0.943887775551102,-7.58253554033825,"exploratory_break_route"
+"pre_1920_1973","regime_trend",1936,3.378338593164,-5.38486145185123,54,0.15,499,0.254509018036072,-6.1233130565362,"exploratory_break_route"
+"post_1974_2024","level",1991,1.64018381390759,-4.44044989341217,51,0.15,499,0.440881763527054,-5.81136599828545,"exploratory_break_route"

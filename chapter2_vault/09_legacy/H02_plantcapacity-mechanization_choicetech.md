@@ -1,21 +1,24 @@
 ---
-type: legacy_note
-status: superseded
+type: research_note
+status: deprecated
 depends_on: []
 stage_scope: S00
 country: US_CL
 last_updated: 2026-05-27
-subtype: hinge
+subtype: legacy_note
 layer: analytical_foundation
 design_role: mechanism_definition
 scope: chapter2_core
 related_to:
-- H01_Cajas_to_Transformation_Elasticity
-- H02_Theta_to_Empirical_Coefficients
-- N00_Mechanization_Analytical_References
-- R05_Frontier_of_Not_Becoming
+  - H01_Cajas_to_Transformation_Elasticity
+  - H02_Theta_to_Empirical_Coefficients
+  - N00_Mechanization_Analytical_References
+  - R05_Frontier_of_Not_Becoming
 created: 2026-05-27
 updated: 2026-05-27
+status_detail: superseded
+blocks: []
+priority: legacy
 ---
 
 # H03: Double Choice of Technique and Plant Capacity

@@ -1,13 +1,17 @@
 ---
-type: constitutional_core
+type: theory
 status: active
-depends_on: [chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md]
+depends_on:
+  - chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
 stage_scope: S00
 country: US_CL
 last_updated: 2026-04-28
 layer: constitution
 priority: highest
 design_role: enforcement
+subtype: constitutional_core
+blocks: []
+scope: chapter2
 ---
 
 # 01A_Design_vs_Presentation_Firewall

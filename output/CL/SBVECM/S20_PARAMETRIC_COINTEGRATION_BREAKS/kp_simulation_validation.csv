@@ -1,0 +1,4 @@
+"simulation","true_breaks","udmax","critical_5","rejects_stability_5","selected_breaks","maximum_date_error","extra_selected_breaks","expected_result","validation_pass"
+"stable","",7.5501270163814,12.25,FALSE,"",0,0,"do not reject stability",TRUE
+"one_break","1972",37.1333167340448,12.25,TRUE,"1971;1988",1,1,"reject stability and recover nearby dates",TRUE
+"multiple_breaks","1955;1990",31.724782599057,12.25,TRUE,"1954;1989",1,0,"reject stability and recover nearby dates",TRUE

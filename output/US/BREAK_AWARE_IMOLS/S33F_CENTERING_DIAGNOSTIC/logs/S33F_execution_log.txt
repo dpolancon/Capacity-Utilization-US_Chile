@@ -1,0 +1,27 @@
+[2026-07-30 19:40:35] T_B* = 1969 (from US_S33A Sec.6.5)
+[2026-07-30 19:40:37] 
+[2026-07-30 19:40:37] CENTERING SPREAD ACROSS THE THREE REGIMES
+[2026-07-30 19:40:37]   H1  deter=intercept          : median rel spread 1.9581, max 2.9955; 0/45 invariant; 22 sign-unstable
+[2026-07-30 19:40:37]   H1  deter=intercept+trend    : median rel spread 1.6367, max 2.9523; 0/45 invariant; 19 sign-unstable
+[2026-07-30 19:40:37]   H2  span BROKEN  (interacted): median rel spread 2.0772, max 2.9523; 0/30 invariant; 20 sign-unstable
+[2026-07-30 19:40:37]   H2  span COMPLETE(interacted): median rel spread 1.5381, max 2.9955; 0/38 invariant; 12 sign-unstable
+[2026-07-30 19:40:37] 
+[2026-07-30 19:40:37] H1 (trend in deter restores invariance):        NOT CONFIRMED
+[2026-07-30 19:40:37] H2 (completing interaction span restores it):   NOT CONFIRMED
+[2026-07-30 19:40:37]   Neither hypothesis explains the non-invariance. Do not proceed to Spec B5;
+[2026-07-30 19:40:37]   reassess the mechanism before committing to any specification.
+[2026-07-30 19:40:37] 
+[2026-07-30 19:40:37] H2 READOUT -- theta_kappa_pkappa sign stability across centering regimes
+[2026-07-30 19:40:37]   intercept              B4_no_theta_kappa          int=No  span_complete=FALSE [   0.498,    3.487]  sign_stable=TRUE
+[2026-07-30 19:40:37]   intercept_plus_trend   B4_no_theta_kappa          int=No  span_complete=FALSE [  -0.059,    1.211]  sign_stable=FALSE
+[2026-07-30 19:40:37]   intercept              B4_no_theta_kappa          int=Yes span_complete=FALSE [  -0.744,    2.083]  sign_stable=FALSE
+[2026-07-30 19:40:37]   intercept              B4_no_theta_kappa          int=Yes span_complete=TRUE  [  -0.412,    1.081]  sign_stable=FALSE
+[2026-07-30 19:40:37]   intercept_plus_trend   B4_no_theta_kappa          int=Yes span_complete=FALSE [  -0.310,    0.975]  sign_stable=FALSE
+[2026-07-30 19:40:37]   intercept_plus_trend   B4_no_theta_kappa          int=Yes span_complete=TRUE  [   0.048,    0.769]  sign_stable=TRUE
+[2026-07-30 19:40:37]   intercept              B5_sec32_with_theta_kappa  int=No  span_complete=FALSE [   0.655,    1.027]  sign_stable=TRUE
+[2026-07-30 19:40:37]   intercept_plus_trend   B5_sec32_with_theta_kappa  int=No  span_complete=FALSE [  -0.294,    0.110]  sign_stable=FALSE
+[2026-07-30 19:40:37]   intercept              B5_sec32_with_theta_kappa  int=Yes span_complete=FALSE [  -1.024,    0.049]  sign_stable=FALSE
+[2026-07-30 19:40:37]   intercept              B5_sec32_with_theta_kappa  int=Yes span_complete=TRUE  [  -0.689,   -0.558]  sign_stable=TRUE
+[2026-07-30 19:40:37]   intercept_plus_trend   B5_sec32_with_theta_kappa  int=Yes span_complete=FALSE [  -0.188,    0.092]  sign_stable=FALSE
+[2026-07-30 19:40:37]   intercept_plus_trend   B5_sec32_with_theta_kappa  int=Yes span_complete=TRUE  [  -0.237,   -0.014]  sign_stable=TRUE
+[2026-07-30 19:40:37] US_S33F complete. 270 fitted-coefficient rows; mechanism NOT CONFIRMED
