@@ -209,3 +209,4 @@
 "NFC_SURPLUS_AFTER_NET_INTEREST_PROXY","distribution","CANDIDATE_ROBUSTNESS","","not_alias","not_metadata_only","not_blocked","observation_bearing"
 "NFC_SURPLUS_AFTER_NET_INTEREST_SHARE_NVA","distribution","CANDIDATE_ROBUSTNESS","","not_alias","not_metadata_only","not_blocked","observation_bearing"
 "NFC_SURPLUS_AFTER_NET_INTEREST_SHARE_GVA","distribution","CANDIDATE_ROBUSTNESS","","not_alias","not_metadata_only","not_blocked","observation_bearing"
+"CORP_IPP_INVESTMENT_SHARE","contextual","CONTEXTUAL_AUTHORIZED","","not_alias","not_metadata_only","not_blocked","observation_bearing"

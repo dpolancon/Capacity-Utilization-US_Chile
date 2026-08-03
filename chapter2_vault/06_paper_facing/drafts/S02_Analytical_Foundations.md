@@ -22,7 +22,7 @@ subtype: paper_draft_section
 status_detail: draft_for_review
 country: US_CL
 stage_scope: N/A
-last_updated: '2026-07-29'
+last_updated: '2026-08-01'
 depends_on: []
 blocks: []
 layer: design
@@ -154,7 +154,7 @@ $$ \theta^N \approx \theta^{\text{ME}} = 1 + \frac{a^N - q^*}{q^*} \approx 1 + \
 This proves that the productivity-mechanization gap $b$ is the intensive-margin limiting case of the two-capital transformation elasticity $\theta^N$.
 
 > [!CAUTION]
-> **Empirical Specification Bridge:** While $q^*$ and $a^N$ provide the smooth reproduction benchmark, raw $q_t = K^{\text{ME}}/L$ and accumulated path proxies $Q_t^\omega$ are demoted per [[2026-07-24_capital_integration_cointegration_handoff]]. The admissible empirical proxy for $s_t$ is the centered log composition ratio $\tau_t = \ln K^{\text{ME}}_t - \ln K^{\text{NRC}}_t$, entering via Frisch-Waugh-Lovell (FWL) residual-centered Specification $D_9$.
+> **Empirical Specification Bridge:** While $q^*$ and $a^N$ provide the smooth reproduction benchmark, raw $q_t = K^{\text{ME}}/L$ and accumulated path proxies $Q_t^\omega$ are demoted per [[2026-07-24_capital_integration_cointegration_handoff]]. The admissible empirical proxy for $s_t$ is the centered log composition ratio $\kappa_t = \ln K^{\text{ME}}_t - \ln K^{\text{NRC}}_t$, entering via Frisch-Waugh-Lovell (FWL) residual-centered Specification $D_9$.
 
 ### 2.3.5 Macro Disequilibrium and Profitability Ceilings
 

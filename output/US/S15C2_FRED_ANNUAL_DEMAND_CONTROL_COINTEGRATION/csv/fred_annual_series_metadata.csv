@@ -1,0 +1,5 @@
+"series_id","title","freq","units","units_short","seasonal","start","end"
+"GDPCA","Real Gross Domestic Product","Annual","Billions of Chained 2017 Dollars","Bil. of Chn. 2017 $","Not Seasonally Adjusted","1929-01-01","2025-01-01"
+"PCECCA","Real Personal Consumption Expenditures","Annual","Billions of Chained 2017 Dollars","Bil. of Chn. 2017 $","Not Seasonally Adjusted","1929-01-01","2025-01-01"
+"GPDICA","Real Gross Private Domestic Investment","Annual","Billions of Chained 2017 Dollars","Bil. of Chn. 2017 $","Not Seasonally Adjusted","1929-01-01","2025-01-01"
+"GCECA","Real Government Consumption Expenditures and Gross Investment","Annual","Billions of Chained 2017 Dollars","Bil. of Chn. 2017 $","Not Seasonally Adjusted","1929-01-01","2025-01-01"

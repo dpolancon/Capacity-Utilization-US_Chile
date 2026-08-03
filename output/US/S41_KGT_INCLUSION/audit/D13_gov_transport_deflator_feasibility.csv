@@ -1,0 +1,3 @@
+"line","deflator_start","deflator_end","investment_start","backcast_years_required","backcast_method_d14","backcast_sensitivity_d14","stamp"
+"HIGHWAYS_STREETS",1925,2024,1901,24,"log_linear_backward_extrapolation_1925_1950_mean_growth","flat_hold_at_first_observed_price","DIAGNOSTIC_ONLY;NOT_D06_BASELINE;S41_BRANCH"
+"TRANSPORTATION_STRUCTURES",1925,2024,1901,24,"log_linear_backward_extrapolation_1925_1950_mean_growth","flat_hold_at_first_observed_price","DIAGNOSTIC_ONLY;NOT_D06_BASELINE;S41_BRANCH"

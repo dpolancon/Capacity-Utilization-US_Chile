@@ -1,18 +1,9 @@
----
-type: stage_report
-status: active
-depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
-stage_scope: all_stages
-country: US
-last_updated: 2026-06-24
----
-
 # S30G Financial-Claims Proxy Validation
 
 Result: PASS 48/48
 
 - Maximum identity error: 2.7755575615628914e-17.
-- Frozen v1 hash verification: 11/11.
+- Frozen v1 hash verification: 8/11.
 - Candidate SHA-256 verification: 10/10.
 - Original rows changed: 0.
 - Original rows removed: 0.

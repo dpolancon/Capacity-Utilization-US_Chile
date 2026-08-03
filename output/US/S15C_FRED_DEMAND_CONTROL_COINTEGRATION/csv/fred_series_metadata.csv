@@ -1,0 +1,5 @@
+"series_id","title","freq","units","seasonal","base","start","end"
+"PCECC96","Real Personal Consumption Expenditures","Quarterly","Billions of Chained 2017 Dollars","Seasonally Adjusted Annual Rate","Bil. of Chn. 2017 $","1947-01-01","2026-04-01"
+"GCEC1","Real Government Consumption Expenditures and Gross Investment","Quarterly","Billions of Chained 2017 Dollars","Seasonally Adjusted Annual Rate","Bil. of Chn. 2017 $","1947-01-01","2026-04-01"
+"EXPGSC1","Real Exports of Goods and Services","Quarterly","Billions of Chained 2017 Dollars","Seasonally Adjusted Annual Rate","Bil. of Chn. 2017 $","1947-01-01","2026-04-01"
+"IMPGSC1","Real imports of goods and services","Quarterly","Billions of Chained 2017 Dollars","Seasonally Adjusted Annual Rate","Bil. of Chn. 2017 $","1947-01-01","2026-04-01"

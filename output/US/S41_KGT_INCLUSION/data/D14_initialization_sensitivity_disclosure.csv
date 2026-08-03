@@ -1,0 +1,2 @@
+"primary_initialization","sensitivity_a","sensitivity_b","cold_convergence_year_1pct","cold_divergence_1929_pct","cold_divergence_1947_pct","cold_divergence_1973_pct","warmup_risk_1929","constitution_ref","stamp"
+"benchmark_seeded_flat_pre1901_flow_calibrated_1929_BEA_net_x_late_sample_gross_net_ratio","cold_start_1901_observed_history_only","synthetic_pre_1901_history_60y_backcast_mean_growth_1901_1911",2003,-42.236,-17.523,-3.586,"HIGH (0.47) per D13 ledger","V02_GPIM_Constitution.md Sec. 12 (cold start not preferred baseline)","DIAGNOSTIC_ONLY;NOT_D06_BASELINE;S41_BRANCH"

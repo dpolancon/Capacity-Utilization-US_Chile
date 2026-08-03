@@ -32,5 +32,5 @@ $$ C_t = X_t \cdot ToT_t $$
 
 This variable is used to define the **External Stress** gating condition for the Binding Regime indicator ($B_t$), resolving the 1961 Timing Puzzle by identifying the *onset* of the Prebischian *estrangulamiento* (collapsing purchasing power) before the physical compression of imports actually occurs.
 
-$$ B_t = \mathbb{I}\Big( (m_t - \hat{m}^{req}_t < 0) \quad \text{AND} \quad (\Delta \ln(C_t) < \text{Threshold}) \Big) $
+$$ B_t = \mathbb{I}\Big( (m_t - \hat{m}^{req}_t < 0) \quad \text{AND} \quad (\Delta \ln(C_t) < \text{Threshold}) \Big) $$
 

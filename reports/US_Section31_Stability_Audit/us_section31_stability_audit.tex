@@ -1,0 +1,245 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage[hidelinks]{hyperref}
+\title{\textbf{Section 3.1 Cointegration Failure Diagnostics:\\ Parameter-Stability Audit of the U.S. NFC IM-OLS Matrix (1931--2024)}}
+\author{\textbf{Department of Economics, UMass Amherst}}
+\date{August 2026}
+\begin{document}
+\maketitle
+
+\section*{Executive Summary}
+The Section 3.1 IM-OLS estimation matrix reported overwhelming evidence \emph{against} cointegration. This audit finds that verdict was substantially an artifact of test mis-specification. The residual Engle--Granger test was implemented as an \emph{unaugmented} Dickey--Fuller regression (zero lagged differences) while being compared against MacKinnon critical values tabulated for the \emph{augmented} test. The IM-OLS residuals carry AR(2)--AR(4) structure with first-order autocorrelation between 0.81 and 0.96; lag augmentation is precisely the device that whitens such errors, and without it the test is severely biased toward non-rejection.
+
+Correcting the augmentation reverses the finding: rejections of the null of no cointegration rise from \textbf{2 of 18} models to \textbf{16 of 18} at the 5\% level (16 of 18 under BIC; 18 of 18 at the 10\% level). AIC and BIC select the same lag order in 17 of 18 models, and even minimal $p=1$ augmentation flips the verdict, so the reversal is not an artifact of lag selection.
+
+A genuine secondary finding survives the correction. The underlying relationship \emph{is} structurally unstable: the CUSUM family rejects parameter stability in 18 of 18 models, with break dates at 1974, 1948 and 1945, and the Gregory--Hansen regime-shift scan locates a break in 1976--77 in 15 of 18 models. That instability is real, but it is absorbed by the Bai--Perron step dummies already present in the specification --- it was never the reason the cointegration tests failed. Note that the Gregory--Hansen \emph{statistic} rejects its own null of no cointegration in only 1 of 18 models at 5\%: a single regime shift is not sufficient where the Bai--Perron audit identifies three to five level shifts.
+
+\FloatBarrier
+\section{What the Failure Was Not: Regressor Admissibility}
+The leading rival explanation --- that the interaction regressors inherit $I(2)$ behaviour and are inadmissible in an $I(1)$ cointegration framework --- is excluded. The S33 integration-order battery had already tested the interaction terms directly and returned $I(1)$ throughout. This audit closed two gaps that battery left open, testing the series \emph{exactly as US\_S50 constructs them}: the \textbf{lagged} interaction terms (S33 tested contemporaneous ones), and \texttt{omega\_ST\_Tier2\_GVA\_adj} standalone, which had never been tested despite being the wage share the project constitution mandates.
+
+\begin{table}[H]\centering\caption{Integration-order gap closure (ADF + KPSS, levels and first differences)}
+\small\begin{tabular}{p{9.5cm}l}
+\toprule
+Series & Verdict \\
+\midrule
+M1.1: k\_cap (level regressor) & I(1) \\
+M1.1: k\_x\_omega (lagged interaction as estimated) & I(1) \\
+M1.1: y\_t & I(1) \\
+M1.5: k\_cap (level regressor) & I(1) \\
+M1.5: k\_x\_omega (lagged interaction as estimated) & I(1) \\
+M1.5: y\_t & I(1) \\
+M2.1: k\_cap (level regressor) & I(1) \\
+M2.1: k\_x\_omega\_x\_iota (lagged interaction as estimated) & I(1) \\
+M2.1: y\_t & I(1) \\
+M2.9: k\_cap (level regressor) & I(1) \\
+M2.9: k\_x\_omega\_x\_iota (lagged interaction as estimated) & ambiguous \\
+M2.9: y\_t & I(1) \\
+omega\_ST\_Tier2\_GVA\_adj (standalone, 1929-2024) & I(1) \\
+\bottomrule
+\end{tabular}
+\caption*{\footnotesize The Integration Order Gate passes. One term (M2.9's triple interaction)  returns an ambiguous ADF/KPSS combination and is flagged for follow-up.}
+\end{table}
+\FloatBarrier
+\section{The Defect: Missing Lag Augmentation}
+US\_S50 computed the residual test as \texttt{lm(diff(u) \textasciitilde{} u[-T] - 1)} --- a plain Dickey--Fuller with no lagged differences. Table~\ref{tab:adfsens} shows the consequence.
+
+\begin{table}[H]\centering\caption{EG-ADF lag-augmentation sensitivity, all 18 models}\label{tab:adfsens}
+\small\begin{tabular}{lrrrrrrrr}
+\toprule
+Model & AR(1) & $p{=}0$ & $p{=}1$ & $p{=}2$ & $p{=}3$ & $p{=}4$ & AIC (lag) & 5\% cv \\
+\midrule
+M1.1 & 0.94 & -2.26 & \textbf{-4.67} & \textbf{-4.27} & \textbf{-3.87} & \textbf{-3.78} & \textbf{-4.67} (1) & -3.74 \\
+M1.2 & 0.96 & -1.73 & \textbf{-4.35} & \textbf{-4.37} & -3.66 & -3.27 & \textbf{-4.35} (1) & -3.74 \\
+M1.3 & 0.93 & -2.56 & \textbf{-4.90} & \textbf{-4.27} & \textbf{-4.33} & \textbf{-3.99} & \textbf{-4.90} (1) & -3.74 \\
+M1.4 & 0.94 & -2.13 & \textbf{-4.50} & \textbf{-4.26} & \textbf{-4.09} & \textbf{-3.80} & \textbf{-4.50} (1) & -3.74 \\
+M1.5 & 0.83 & \textbf{-4.68} & \textbf{-4.47} & -3.45 & -3.48 & \textbf{-4.07} & \textbf{-4.47} (1) & -3.74 \\
+M1.6 & 0.82 & \textbf{-4.51} & \textbf{-4.60} & -3.46 & -3.46 & \textbf{-3.98} & \textbf{-4.60} (1) & -3.74 \\
+M2.1 & 0.95 & -2.05 & \textbf{-4.46} & \textbf{-4.22} & -3.73 & -3.46 & \textbf{-4.46} (1) & -3.74 \\
+M2.2 & 0.94 & -1.67 & -2.96 & -3.14 & \textbf{-4.26} & -3.65 & \textbf{-4.26} (3) & -4.10 \\
+M2.3 & 0.95 & -1.96 & \textbf{-4.15} & \textbf{-4.09} & -3.59 & -3.28 & \textbf{-4.15} (1) & -3.74 \\
+M2.4 & 0.93 & -1.88 & -2.98 & -2.90 & -4.00 & -3.42 & -4.00 (3) & -4.10 \\
+M2.5 & 0.95 & -2.08 & \textbf{-4.03} & \textbf{-3.75} & \textbf{-3.98} & -3.49 & \textbf{-4.03} (1) & -3.74 \\
+M2.6 & 0.95 & -1.63 & -3.00 & -3.04 & \textbf{-4.34} & -3.64 & \textbf{-4.34} (3) & -4.10 \\
+M2.7 & 0.95 & -2.00 & \textbf{-3.79} & -3.58 & \textbf{-3.81} & -3.34 & \textbf{-3.79} (1) & -3.74 \\
+M2.8 & 0.94 & -1.71 & -3.01 & -2.83 & -4.09 & -3.43 & -4.09 (3) & -4.10 \\
+M2.9 & 0.92 & -2.16 & \textbf{-3.89} & -3.52 & -3.40 & -2.98 & \textbf{-3.89} (1) & -3.74 \\
+M2.10 & 0.81 & -2.97 & \textbf{-5.44} & \textbf{-4.41} & \textbf{-5.66} & -4.02 & \textbf{-5.44} (1) & -4.10 \\
+M2.11 & 0.92 & -2.21 & \textbf{-3.95} & -3.68 & -3.51 & -3.12 & \textbf{-3.95} (1) & -3.74 \\
+M2.12 & 0.82 & -2.95 & \textbf{-5.33} & \textbf{-4.33} & \textbf{-5.66} & -4.05 & \textbf{-5.66} (3) & -4.10 \\
+\midrule
+\textbf{Rejections} & & \textbf{2} & 14 & 9 & 9 & 5 & \textbf{16} & \\
+\bottomrule
+\end{tabular}
+\caption*{\footnotesize Bold entries reject $H_0$: no cointegration at 5\%. Column $p{=}0$ is the  specification shipped in the v2 report. The decline at $p\ge4$ is the expected power loss from  over-augmentation at $T=94$. \textbf{Caveat:} the residuals come from a regression containing  endogenously-selected Bai--Perron step dummies; standard Engle--Granger critical values do not  account for estimated break dates and are therefore somewhat liberal here. The Gregory--Hansen  test in Section~4 is the break-robust cross-check.}
+\end{table}
+\FloatBarrier
+\section{Descriptive Evidence: Recursive Elasticity Paths and CUSUM}
+Following the visual-first protocol, the non-parametric evidence is presented before the parametric instability tests. Figure~\ref{fig:rec} shows the recursive capital elasticity $\hat{\theta}_0$ over expanding windows; Figure~\ref{fig:cus} the OLS-CUSUM path.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.78\textwidth]{C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S51_SECTION31_STABILITY/fig/s51_recursive_theta_M1.1.png}
+\caption{Recursive $\hat{\theta}_0$, model M1.1. Dashed lines are fixed-$b$ 95\% bands; they are unavailable for the shortest windows, where \texttt{cointRegIM} returns non-finite standard errors.}\label{fig:rec}
+\end{figure}
+\begin{figure}[H]\centering
+\includegraphics[width=0.78\textwidth]{C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S51_SECTION31_STABILITY/fig/s51_cusum_M1.1.png}
+\caption{OLS-CUSUM, model M1.1, core specification (step dummies excluded).}\label{fig:cus}
+\end{figure}
+\FloatBarrier
+\section{Parametric Instability Tests}
+The CUSUM family runs on the \textbf{core specification} --- intercept plus stochastic regressors, \emph{excluding} the Bai--Perron step dummies. Those dummies were selected from a break audit on these very residuals; including them would absorb the instability the test exists to detect.
+
+\begin{table}[H]\centering\caption{Parameter stability: CUSUM family, Hansen (1992), Gregory--Hansen}
+\small\begin{tabular}{lrrrrrrr}
+\toprule
+\multirow{2}{*}{Model} & \multicolumn{3}{c}{CUSUM family (core spec)} & \multicolumn{2}{c}{Hansen $L_c$} & \multicolumn{2}{c}{Gregory--Hansen} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+ & OLS-CUSUM $p$ & supF $p$ & break & $L_c$ & $p$ & stat & break \\
+\midrule
+M1.1 & 0.002 & $<$0.001 & 1974 & 390.6 & 0.477 & -4.60 & 1977 \\
+M1.2 & 0.002 & $<$0.001 & 1974 & 255.9 & 0.869 & -4.46 & 1977 \\
+M1.3 & 0.002 & $<$0.001 & 1974 & 396.5 & 0.461 & -4.76 & 1977 \\
+M1.4 & 0.002 & $<$0.001 & 1974 & 374.9 & 0.570 & -4.63 & 1977 \\
+M1.5 & 0.004 & $<$0.001 & 1945 & 337.2 & 0.007 & -4.25 & 1976 \\
+M1.6 & 0.003 & $<$0.001 & 1945 & 270.7 & 0.052 & -4.33 & 1972 \\
+M2.1 & 0.004 & $<$0.001 & 1945 & 267.2 & 0.825 & -4.63 & 1976 \\
+M2.2 & 0.046 & $<$0.001 & 1974 & 332.1 & 0.618 & -5.68 & 1976 \\
+M2.3 & 0.003 & $<$0.001 & 1945 & 246.8 & 0.861 & -4.66 & 1976 \\
+M2.4 & 0.040 & $<$0.001 & 1974 & 345.6 & 0.420 & -6.21 & 1976 \\
+M2.5 & 0.004 & $<$0.001 & 1945 & 272.7 & 0.798 & -4.57 & 1976 \\
+M2.6 & 0.051 & $<$0.001 & 1974 & 333.8 & 0.620 & -5.54 & 1976 \\
+M2.7 & 0.003 & $<$0.001 & 1974 & 253.1 & 0.865 & -4.40 & 1977 \\
+M2.8 & 0.045 & $<$0.001 & 1974 & 345.1 & 0.562 & -5.94 & 1976 \\
+M2.9 & 0.003 & $<$0.001 & 1945 & 276.6 & 0.649 & -4.70 & 1959 \\
+M2.10 & 0.104 & $<$0.001 & 1974 & 299.8 & 0.453 & -4.78 & 1976 \\
+M2.11 & 0.004 & $<$0.001 & 1948 & 284.3 & 0.543 & -5.07 & 1974 \\
+M2.12 & 0.084 & $<$0.001 & 1974 & 302.8 & 0.389 & -4.61 & 1976 \\
+\bottomrule
+\end{tabular}
+\caption*{\footnotesize Hansen $L_c$ is computed on the model \emph{as estimated}, i.e. including  the step dummies, with a bootstrapped null (1{,}000 replications, AR-sieve DGP).  Gregory--Hansen uses the regime-shift (C/S) specification, which allows the cointegrating vector  itself to break, with a random-walk null (499 replications).  The two families have opposite nulls: for CUSUM and Hansen, $H_0$ is stability; for  Gregory--Hansen, $H_0$ is \emph{no} cointegration.}
+\end{table}
+\subsection{Reconciling Hansen with Shin}
+Shin's $C$ statistic is Hansen's $L_c$ restricted to intercept-only parameter variation. The identity $L_c^{\text{intercept}} = T \cdot C_{\text{Shin}}$ was verified exactly across all 18 models (maximum relative error $3\times10^{-16}$) and is enforced as a blocking pre-condition in the audit script. The v2 report's 18/18 Shin rejection was therefore always a statement about \emph{intercept} instability, not about cointegration failure in general. Its apparent conflict with the non-rejecting $L_c$ reported above is a long-run-variance normalisation difference: Shin uses \texttt{cointReg}'s conditional $\omega_{u\cdot v}$, Hansen the score-process Bartlett LRV.
+
+\subsection{Where the instability sits}
+The per-parameter $L_c$ decomposition locates the instability in the \textbf{step-dummy coefficients} rather than the structural parameters. Representative values (model M1.1): intercept 4.4, $\hat\theta_0$ 4.6, $\hat\theta_1$ 2.7, against $D_{1965}$ 20.4, $D_{1985}$ 20.1, $D_{2003}$ 17.3. The capital elasticity is comparatively stable; what moves is the level. These magnitudes are \emph{descriptive only} --- see Section~6.
+
+\FloatBarrier
+\section{Regime-Split Re-estimation}
+Each model is split at its own endogenously identified break. 36 regime sub-models were estimated, of which 11 fall below 25 observations and are flagged as underpowered.
+
+\begin{longtable}{llrrrrrl}
+\toprule
+Model & Regime & Years & $n$ & $\hat\theta_0$ & (s.e.) & EG-ADF & Note \\
+\midrule
+\endhead
+M1.1 & pre & 1931--2009 & 79 & 0.398 & (0.075) & -1.45 &  \\
+M1.1 & post & 2010--2024 & 15 & 0.604 & (0.025) & -2.84 & underpowered \\
+M1.2 & pre & 1931--1980 & 50 & 0.601 & (0.074) & -0.94 &  \\
+M1.2 & post & 1981--2024 & 44 & 0.756 & (0.051) & -1.99 &  \\
+M1.3 & pre & 1931--2009 & 79 & 0.345 & (0.082) & -1.67 &  \\
+M1.3 & post & 2010--2024 & 15 & 0.609 & (0.027) & -3.18 & underpowered \\
+M1.4 & pre & 1931--2009 & 79 & 0.371 & (0.073) & -1.46 &  \\
+M1.4 & post & 2010--2024 & 15 & 0.611 & (0.030) & -3.19 & underpowered \\
+M1.5 & pre & 1931--1967 & 37 & 0.816 & (0.125) & -4.24 &  \\
+M1.5 & post & 1968--2024 & 57 & 0.386 & (0.057) & -2.00 &  \\
+M1.6 & pre & 1931--1967 & 37 & 0.851 & (0.117) & -4.11 &  \\
+M1.6 & post & 1968--2024 & 57 & 0.474 & (0.064) & -2.33 &  \\
+M2.1 & pre & 1931--1998 & 68 & 0.511 & (0.112) & -2.52 &  \\
+M2.1 & post & 1999--2024 & 26 & 0.663 & (0.069) & -2.07 &  \\
+M2.2 & pre & 1931--1994 & 64 & 0.582 & (0.092) & -1.50 &  \\
+M2.2 & post & 1995--2024 & 30 & 0.628 & (0.102) & -2.64 &  \\
+M2.3 & pre & 1931--1998 & 68 & 0.516 & (0.102) & -2.47 &  \\
+M2.3 & post & 1999--2024 & 26 & 0.662 & (0.083) & -2.01 &  \\
+M2.4 & pre & 1931--1948 & 18 & 0.441 & (0.225) & -4.84 & underpowered \\
+M2.4 & post & 1949--2024 & 76 & 0.476 & (0.074) & -4.25 &  \\
+M2.5 & pre & 1931--2009 & 79 & 0.536 & (0.099) & -1.79 &  \\
+M2.5 & post & 2010--2024 & 15 & 0.614 & (0.043) & -3.04 & underpowered \\
+M2.6 & pre & 1931--1994 & 64 & 0.553 & (0.090) & -1.49 &  \\
+M2.6 & post & 1995--2024 & 30 & 0.423 & (0.153) & -2.84 &  \\
+M2.7 & pre & 1931--2009 & 79 & 0.510 & (0.087) & -1.73 &  \\
+M2.7 & post & 2010--2024 & 15 & 0.606 & (0.046) & -3.07 & underpowered \\
+M2.8 & pre & 1931--1949 & 19 & 0.778 & (0.131) & -4.26 & underpowered \\
+M2.8 & post & 1950--2024 & 75 & 0.474 & (0.082) & -4.00 &  \\
+M2.9 & pre & 1931--2009 & 79 & 0.315 & (0.099) & -3.57 &  \\
+M2.9 & post & 2010--2024 & 15 & 0.764 & (0.112) & -2.57 & underpowered \\
+M2.10 & pre & 1931--2006 & 76 & 0.337 & (0.045) & -3.13 &  \\
+M2.10 & post & 2007--2024 & 18 & 0.691 & (0.190) & -3.49 & underpowered \\
+M2.11 & pre & 1931--2009 & 79 & 0.340 & (0.092) & -3.46 &  \\
+M2.11 & post & 2010--2024 & 15 & 0.730 & (0.117) & -2.65 & underpowered \\
+M2.12 & pre & 1931--2006 & 76 & 0.355 & (0.048) & -3.00 &  \\
+M2.12 & post & 2007--2024 & 18 & 0.644 & (0.204) & -3.56 & underpowered \\
+\bottomrule
+\end{longtable}
+\noindent\footnotesize Step dummies constant within a sub-sample are dropped before re-estimation (they are collinear with the intercept), so sub-sample specifications differ from the full-sample one. Sub-sample EG-ADF values are reported without stars because standard critical values are unreliable at these sample sizes.\normalsize
+
+\FloatBarrier
+\section{What This Audit Does Not Claim}
+\begin{enumerate}
+\item \textbf{The hand-rolled Hansen subset statistic is not used for inference.} $L_c^{\text{core}}$ inverts the submatrix $V_{\text{core,core}}$, ignoring covariance with the nuisance step-dummy scores. It failed a self-normalisation check --- independent i.i.d. and AR-sieve nulls produced materially different distributions --- whereas the joint $L_c$ agreed across both to within 1\%. Inferential instability verdicts therefore come from \texttt{strucchange}'s published asymptotics.
+\item \textbf{A null result was not reinterpreted as a finding.} The first bootstrap run returned Hansen $p \approx 0.96$ (``parameters are stable''), contradicting every other diagnostic. That was treated as an implementation problem to investigate rather than a result; investigating it is what surfaced the ADF defect.
+\item \textbf{A defect in this audit's own code was found and fixed mid-run.} The Gregory--Hansen inner ADF initially replicated the same unaugmented-DF bug being audited, inherited from the repository's existing convention. The first production run was discarded.
+\item \textbf{Break dates are reported as they came out}, including the disagreement between CUSUM (1974), Gregory--Hansen (1977), and the Bai--Perron dates already in the estimation matrix (1944, 1965--68, 1981--82, 1996--99, 2010). No date was selected to fit a narrative.
+\item \textbf{Shin LM critical values remain unverified}, carried over from the preceding significance-star audit.
+\end{enumerate}
+\FloatBarrier
+\section{Consolidated Verdict Ledger}
+\footnotesize
+\begin{longtable}{p{1.1cm}p{3.2cm}p{7.6cm}p{1.4cm}}
+\toprule
+Model & Theoretical Basis & Evidence & Status \\
+\midrule
+\endhead
+M1.1 & Baseline NFC GVA | Private Core (ME+NRC) & ADF(AIC,lag=1)=-4.67 vs cv -3.74 -> REJECTS no-coint [v2 unaugmented was -2.26 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.002; GH-regime=-4.60 (p=0.396); Lc\_all=390.6 (descriptive); breaks: CUSUM 1974 / GH 1977 / BP 1944, 1965, 1985, 2003 & \textbf{Held} \\
+\addlinespace
+M1.2 & Baseline NFC GVA | Infra-Augmented (+K\_GT) & ADF(AIC,lag=1)=-4.35 vs cv -3.74 -> REJECTS no-coint [v2 unaugmented was -1.73 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.002; GH-regime=-4.46 (p=0.498); Lc\_all=255.9 (descriptive); breaks: CUSUM 1974 / GH 1977 / BP 1944, 1965, 1982 & \textbf{Held} \\
+\addlinespace
+M1.3 & Corporate GVA (Finance-Adjusted) | Private Core (ME+NRC) & ADF(AIC,lag=1)=-4.90 vs cv -3.74 -> REJECTS no-coint [v2 unaugmented was -2.56 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.002; GH-regime=-4.76 (p=0.392); Lc\_all=396.5 (descriptive); breaks: CUSUM 1974 / GH 1977 / BP 1945, 1965, 1985, 2003 & \textbf{Held} \\
+\addlinespace
+M1.4 & Corporate GVA (Finance-Adjusted) | Infra-Augmented (+K\_GT) & ADF(AIC,lag=1)=-4.50 vs cv -3.74 -> REJECTS no-coint [v2 unaugmented was -2.13 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.002; GH-regime=-4.63 (p=0.446); Lc\_all=374.9 (descriptive); breaks: CUSUM 1974 / GH 1977 / BP 1944, 1965, 1985, 2003 & \textbf{Held} \\
+\addlinespace
+M1.5 & Shaikh-Tonak Tier 2 (Supervisory-Corrected) | Private Core (ME+NRC) & ADF(AIC,lag=1)=-4.47 vs cv -3.74 -> REJECTS no-coint [v2 unaugmented was -4.68 -> REJECTS]; supF p=0.000; OLS-CUSUM p=0.004; GH-regime=-4.25 (p=0.518); Lc\_all=337.2 (descriptive); breaks: CUSUM 1945 / GH 1976 / BP 1968, 1982, 1996, 2010 & \textbf{Held} \\
+\addlinespace
+M1.6 & Shaikh-Tonak Tier 2 (Supervisory-Corrected) | Infra-Augmented (+K\_GT) & ADF(AIC,lag=1)=-4.60 vs cv -3.74 -> REJECTS no-coint [v2 unaugmented was -4.51 -> REJECTS]; supF p=0.000; OLS-CUSUM p=0.003; GH-regime=-4.33 (p=0.448); Lc\_all=270.7 (descriptive); breaks: CUSUM 1945 / GH 1972 / BP 1967, 1981, 1996, 2010 & \textbf{Held} \\
+\addlinespace
+M2.1 & Baseline NFC GVA | Private Core (ME+NRC) & ADF(AIC,lag=1)=-4.46 vs cv -3.74 -> REJECTS no-coint [v2 unaugmented was -2.05 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.004; GH-regime=-4.63 (p=0.494); Lc\_all=267.2 (descriptive); breaks: CUSUM 1945 / GH 1976 / BP 1944, 1966, 1982 & \textbf{Held} \\
+\addlinespace
+M2.2 & Baseline NFC GVA | Private Core (ME+NRC) & ADF(AIC,lag=3)=-4.26 vs cv -4.10 -> REJECTS no-coint [v2 unaugmented was -1.67 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.046; GH-regime=-5.68 (p=0.066); Lc\_all=332.1 (descriptive); breaks: CUSUM 1974 / GH 1976 / BP 1944, 1966, 1981, 1999 & \textbf{Held} \\
+\addlinespace
+M2.3 & Baseline NFC GVA | Infra-Augmented (+K\_GT) & ADF(AIC,lag=1)=-4.15 vs cv -3.74 -> REJECTS no-coint [v2 unaugmented was -1.96 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.003; GH-regime=-4.66 (p=0.468); Lc\_all=246.8 (descriptive); breaks: CUSUM 1945 / GH 1976 / BP 1944, 1965, 1982 & \textbf{Held} \\
+\addlinespace
+M2.4 & Baseline NFC GVA | Infra-Augmented (+K\_GT) & ADF(AIC,lag=3)=-4.00 vs cv -4.10 -> fails to reject [v2 unaugmented was -1.88 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.040; GH-regime=-6.21 (p=0.034); Lc\_all=345.6 (descriptive); breaks: CUSUM 1974 / GH 1976 / BP 1944, 1965, 1981, 1998 & \textbf{Held} \\
+\addlinespace
+M2.5 & Corporate GVA (Finance-Adjusted) | Private Core (ME+NRC) & ADF(AIC,lag=1)=-4.03 vs cv -3.74 -> REJECTS no-coint [v2 unaugmented was -2.08 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.004; GH-regime=-4.57 (p=0.558); Lc\_all=272.7 (descriptive); breaks: CUSUM 1945 / GH 1976 / BP 1944, 1966, 1982 & \textbf{Held} \\
+\addlinespace
+M2.6 & Corporate GVA (Finance-Adjusted) | Private Core (ME+NRC) & ADF(AIC,lag=3)=-4.34 vs cv -4.10 -> REJECTS no-coint [v2 unaugmented was -1.63 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.051; GH-regime=-5.54 (p=0.130); Lc\_all=333.8 (descriptive); breaks: CUSUM 1974 / GH 1976 / BP 1944, 1966, 1981, 1999 & \textbf{Held} \\
+\addlinespace
+M2.7 & Corporate GVA (Finance-Adjusted) | Infra-Augmented (+K\_GT) & ADF(AIC,lag=1)=-3.79 vs cv -3.74 -> REJECTS no-coint [v2 unaugmented was -2.00 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.003; GH-regime=-4.40 (p=0.656); Lc\_all=253.1 (descriptive); breaks: CUSUM 1974 / GH 1977 / BP 1944, 1965, 1982 & \textbf{Held} \\
+\addlinespace
+M2.8 & Corporate GVA (Finance-Adjusted) | Infra-Augmented (+K\_GT) & ADF(AIC,lag=3)=-4.09 vs cv -4.10 -> fails to reject [v2 unaugmented was -1.71 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.045; GH-regime=-5.94 (p=0.096); Lc\_all=345.1 (descriptive); breaks: CUSUM 1974 / GH 1976 / BP 1944, 1966, 1981, 1998 & \textbf{Blocked} \\
+\addlinespace
+M2.9 & Shaikh-Tonak Tier 2 (Supervisory-Corrected) | Private Core (ME+NRC) & ADF(AIC,lag=1)=-3.89 vs cv -3.74 -> REJECTS no-coint [v2 unaugmented was -2.16 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.003; GH-regime=-4.70 (p=0.528); Lc\_all=276.6 (descriptive); breaks: CUSUM 1945 / GH 1959 / BP 1944, 1967, 1982 & \textbf{Held} \\
+\addlinespace
+M2.10 & Shaikh-Tonak Tier 2 (Supervisory-Corrected) | Private Core (ME+NRC) & ADF(AIC,lag=1)=-5.44 vs cv -4.10 -> REJECTS no-coint [v2 unaugmented was -2.97 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.104; GH-regime=-4.78 (p=0.496); Lc\_all=299.8 (descriptive); breaks: CUSUM 1974 / GH 1976 / BP 1944, 1967, 1981, 1996, 2010 & \textbf{Held} \\
+\addlinespace
+M2.11 & Shaikh-Tonak Tier 2 (Supervisory-Corrected) | Infra-Augmented (+K\_GT) & ADF(AIC,lag=1)=-3.95 vs cv -3.74 -> REJECTS no-coint [v2 unaugmented was -2.21 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.004; GH-regime=-5.07 (p=0.284); Lc\_all=284.3 (descriptive); breaks: CUSUM 1948 / GH 1974 / BP 1944, 1966, 1982 & \textbf{Held} \\
+\addlinespace
+M2.12 & Shaikh-Tonak Tier 2 (Supervisory-Corrected) | Infra-Augmented (+K\_GT) & ADF(AIC,lag=3)=-5.66 vs cv -4.10 -> REJECTS no-coint [v2 unaugmented was -2.95 -> fails to reject]; supF p=0.000; OLS-CUSUM p=0.084; GH-regime=-4.61 (p=0.674); Lc\_all=302.8 (descriptive); breaks: CUSUM 1974 / GH 1976 / BP 1944, 1967, 1981, 1996, 2010 & \textbf{Held} \\
+\addlinespace
+\bottomrule
+\end{longtable}
+\normalsize
+\noindent\footnotesize Status definitions (E18 protocol): \textbf{Promoted} --- cointegration holds under the corrected test with no detected instability; \textbf{Held} --- cointegration supported but parameters unstable, so the long-run relation is regime-conditional rather than a fixed-coefficient equilibrium; \textbf{Blocked} --- no cointegration even after correction and allowing a regime shift; \textbf{Rejected} --- evidence inconclusive.\normalsize
+
+\section*{Governing Locks}
+E18 (parameter stability audit protocol); E17 (significance stars and critical values); E15 (Vogelsang--Wagner triad); E10V (IM-OLS CPR active estimator). Full memo: \texttt{chapter2\_vault/08\_audits/2026-08-03\_section31\_cointegration\_failure\_diagnostics.md}.
+\end{document}

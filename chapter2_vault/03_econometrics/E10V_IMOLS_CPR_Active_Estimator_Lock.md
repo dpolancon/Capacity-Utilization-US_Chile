@@ -5,7 +5,7 @@ depends_on:
   - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
 stage_scope: all_stages
 country: US_CL
-last_updated: 2026-07-25
+last_updated: 2026-08-01
 layer: code_stage_design
 active_estimator: imols-cpr
 orthogonalization: forbidden
@@ -51,6 +51,20 @@ where unaccumulated level nuisance terms ($\lambda_k k_t, \lambda_\omega \omega_
 - **Main Specification (Regime A):** Uncentered raw variables; requires QR matrix factorization (`lm()`) or SVD (`lstsq`) to prevent floating-point precision loss.
 - **Primary Robustness (Regime B):** Initial-state centering ($\tilde{\tau}_t = \tau_t - \tau_1, \tilde{\omega}_t = \omega_t - \omega_1$); provides canonical Brownian initialization ($B(0)=0$), eliminates numerical drift, and gives base coefficient $\hat{\psi}$ structural interpretation at the historical regime origin.
 - **Secondary Robustness (Regime C):** Sample-mean centering ($\tilde{\tau}_t = \tau_t - \bar{\tau}, \tilde{\omega}_t = \omega_t - \bar{\omega}$); standard practice comparator.
+
+## LRV Kernel/Bandwidth: Inference Layer Only (clarification, 2026-08-01)
+
+The IM-OLS **point estimates are invariant to kernel and bandwidth choices**. The partial-sum transformation absorbs long-run endogeneity through the unaccumulated nuisance terms ($\lambda_k k_t, \lambda_\omega \omega_t$) above — no LRCV correction of the coefficients is performed, and no kernel enters the estimator itself.
+
+The `kernel = "ba", bandwidth = "nw"` (Bartlett / Newey–West) arguments appearing in the repo's `cointReg::cointRegIM` calls (S19/S22/S33/S41 wrappers) are a **repo-wide inference-layer reporting convention**, not part of this lock. They enter only:
+
+- the long-run variance $\hat\omega_{u \cdot v}$ that scales t-statistics,
+- the normalization of the Shin LM cointegration statistic,
+- the Vogelsang–Wagner test statistics.
+
+Changing kernel or bandwidth can therefore move significance stars and test verdicts, **never coefficients**. Any statement attributing "Bartlett kernel / Newey–West bandwidth" to the E10V lock itself is a misattribution: kernel-dependent LRCV bias correction of coefficients is an **FM-OLS** property, and that dependence is among the reasons FM-OLS is blocked for the baseline (see Blocked Roles).
+
+**Mechanism, corrected 2026-08-03**: the *how* of "moves significance stars" is the fixed-$b$ asymptotic framework (Kiefer & Vogelsang 2002, 2005) — critical values for both the VW Type 2 cointegration test and individual coefficient $t$-tests depend on the bandwidth-to-sample-size ratio $b=\text{bandwidth}/T$ and the number of stochastic regressors $k$, and are **not** the standard-normal 1.645/1.96/2.576 cutoffs. `codes/COMMON_VW_fixedb_critical_values.R` implements the correct $(b,k)$-indexed lookup (digitized from Vogelsang & Wagner 2014's published tables); see [[E17_Cointegration_Significance_Stars_Lock]] §2-4 for the full audit and correction.
 
 ## Blocked Roles
 *   **FWL Pre-Filtering / Auxiliary Residualization:** Blocked — mathematically non-commutative with partial summation.

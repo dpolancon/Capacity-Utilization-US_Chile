@@ -5,7 +5,7 @@ depends_on:
   - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
 stage_scope: all_stages
 country: US_CL
-last_updated: 2026-07-26
+last_updated: 2026-07-31
 scope: chapter2-econometrics
 stage: pre-estimation-design
 created_or_updated_by: CPR_IMOLS_ESTIMATION_PROTOCOL_LOCK
@@ -78,6 +78,17 @@ priority: reference
 - [[R06_IMOLS_integration_ladder_reconstruction|R06_IMOLS_integration_ladder_reconstruction]]
 - [[R09_structural_break_protocol|R09_structural_break_protocol]]
 - [[R10_Binding_Specification_Layering_Rule|R10_Binding_Specification_Layering_Rule]]
+
+## Recent Estimation Results & Diagnostics
+
+- [[S43_Auxiliary_Dummy_Diagnostics]]
+- [[S42_Full_Fordist_Window_CM_Extension_Results]]
+- [[S41_KGT_Inclusion_IMOLS_Results]]
+- [[S22_Restricted_Slope_Diagnostics]]
+- [[S09_Final_Demand_Controls_IMOLS_Results]]
+- [[S09B_Interpretation_Note_CM_Control]]
+- [[S08_C_and_M_Separate_Controls_IMOLS_Results]]
+- [[S07_AD_Control_Alternatives_IMOLS_Results]]
 
 ## Diagnostic-Only Notes
 

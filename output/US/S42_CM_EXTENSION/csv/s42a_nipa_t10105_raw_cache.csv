@@ -1,0 +1,2523 @@
+"year","line_number","line_description","series_code","value"
+1929,1,"Gross domestic product","A191RC",104556
+1930,1,"Gross domestic product","A191RC",92160
+1931,1,"Gross domestic product","A191RC",77391
+1932,1,"Gross domestic product","A191RC",59522
+1933,1,"Gross domestic product","A191RC",57154
+1934,1,"Gross domestic product","A191RC",66800
+1935,1,"Gross domestic product","A191RC",74241
+1936,1,"Gross domestic product","A191RC",84830
+1937,1,"Gross domestic product","A191RC",93003
+1938,1,"Gross domestic product","A191RC",87352
+1939,1,"Gross domestic product","A191RC",93437
+1940,1,"Gross domestic product","A191RC",102899
+1941,1,"Gross domestic product","A191RC",129309
+1942,1,"Gross domestic product","A191RC",165952
+1943,1,"Gross domestic product","A191RC",203084
+1944,1,"Gross domestic product","A191RC",224447
+1945,1,"Gross domestic product","A191RC",228007
+1946,1,"Gross domestic product","A191RC",227535
+1947,1,"Gross domestic product","A191RC",249616
+1948,1,"Gross domestic product","A191RC",274468
+1949,1,"Gross domestic product","A191RC",272475
+1950,1,"Gross domestic product","A191RC",299827
+1951,1,"Gross domestic product","A191RC",346914
+1952,1,"Gross domestic product","A191RC",367341
+1953,1,"Gross domestic product","A191RC",389218
+1954,1,"Gross domestic product","A191RC",390549
+1955,1,"Gross domestic product","A191RC",425478
+1956,1,"Gross domestic product","A191RC",449353
+1957,1,"Gross domestic product","A191RC",474039
+1958,1,"Gross domestic product","A191RC",481229
+1959,1,"Gross domestic product","A191RC",521654
+1960,1,"Gross domestic product","A191RC",542382
+1961,1,"Gross domestic product","A191RC",562209
+1962,1,"Gross domestic product","A191RC",603922
+1963,1,"Gross domestic product","A191RC",637450
+1964,1,"Gross domestic product","A191RC",684460
+1965,1,"Gross domestic product","A191RC",742289
+1966,1,"Gross domestic product","A191RC",813414
+1967,1,"Gross domestic product","A191RC",859959
+1968,1,"Gross domestic product","A191RC",940651
+1969,1,"Gross domestic product","A191RC",1017615
+1970,1,"Gross domestic product","A191RC",1073303
+1971,1,"Gross domestic product","A191RC",1164850
+1972,1,"Gross domestic product","A191RC",1279110
+1973,1,"Gross domestic product","A191RC",1425376
+1974,1,"Gross domestic product","A191RC",1545243
+1975,1,"Gross domestic product","A191RC",1684904
+1976,1,"Gross domestic product","A191RC",1873412
+1977,1,"Gross domestic product","A191RC",2081826
+1978,1,"Gross domestic product","A191RC",2351599
+1979,1,"Gross domestic product","A191RC",2627333
+1980,1,"Gross domestic product","A191RC",2857307
+1981,1,"Gross domestic product","A191RC",3207041
+1982,1,"Gross domestic product","A191RC",3343789
+1983,1,"Gross domestic product","A191RC",3634038
+1984,1,"Gross domestic product","A191RC",4037613
+1985,1,"Gross domestic product","A191RC",4338979
+1986,1,"Gross domestic product","A191RC",4579631
+1987,1,"Gross domestic product","A191RC",4855215
+1988,1,"Gross domestic product","A191RC",5236438
+1989,1,"Gross domestic product","A191RC",5641580
+1990,1,"Gross domestic product","A191RC",5963144
+1991,1,"Gross domestic product","A191RC",6158129
+1992,1,"Gross domestic product","A191RC",6520327
+1993,1,"Gross domestic product","A191RC",6858559
+1994,1,"Gross domestic product","A191RC",7287236
+1995,1,"Gross domestic product","A191RC",7639749
+1996,1,"Gross domestic product","A191RC",8073122
+1997,1,"Gross domestic product","A191RC",8577552
+1998,1,"Gross domestic product","A191RC",9062817
+1999,1,"Gross domestic product","A191RC",9631172
+2000,1,"Gross domestic product","A191RC",10250952
+2001,1,"Gross domestic product","A191RC",10581929
+2002,1,"Gross domestic product","A191RC",10929108
+2003,1,"Gross domestic product","A191RC",11456450
+2004,1,"Gross domestic product","A191RC",12217196
+2005,1,"Gross domestic product","A191RC",13039197
+2006,1,"Gross domestic product","A191RC",13815583
+2007,1,"Gross domestic product","A191RC",14474228
+2008,1,"Gross domestic product","A191RC",14769862
+2009,1,"Gross domestic product","A191RC",14478067
+2010,1,"Gross domestic product","A191RC",15048971
+2011,1,"Gross domestic product","A191RC",15599732
+2012,1,"Gross domestic product","A191RC",16253970
+2013,1,"Gross domestic product","A191RC",16880683
+2014,1,"Gross domestic product","A191RC",17608138
+2015,1,"Gross domestic product","A191RC",18295019
+2016,1,"Gross domestic product","A191RC",18804913
+2017,1,"Gross domestic product","A191RC",19612102
+2018,1,"Gross domestic product","A191RC",20656516
+2019,1,"Gross domestic product","A191RC",21539982
+2020,1,"Gross domestic product","A191RC",21375281
+2021,1,"Gross domestic product","A191RC",23725645
+2022,1,"Gross domestic product","A191RC",26054614
+2023,1,"Gross domestic product","A191RC",27811517
+2024,1,"Gross domestic product","A191RC",29298013
+2025,1,"Gross domestic product","A191RC",30762099
+1929,2,"Personal consumption expenditures","DPCERC",77382
+1930,2,"Personal consumption expenditures","DPCERC",70136
+1931,2,"Personal consumption expenditures","DPCERC",60672
+1932,2,"Personal consumption expenditures","DPCERC",48714
+1933,2,"Personal consumption expenditures","DPCERC",45945
+1934,2,"Personal consumption expenditures","DPCERC",51461
+1935,2,"Personal consumption expenditures","DPCERC",55932
+1936,2,"Personal consumption expenditures","DPCERC",62188
+1937,2,"Personal consumption expenditures","DPCERC",66839
+1938,2,"Personal consumption expenditures","DPCERC",64272
+1939,2,"Personal consumption expenditures","DPCERC",67209
+1940,2,"Personal consumption expenditures","DPCERC",71288
+1941,2,"Personal consumption expenditures","DPCERC",81072
+1942,2,"Personal consumption expenditures","DPCERC",89002
+1943,2,"Personal consumption expenditures","DPCERC",99903
+1944,2,"Personal consumption expenditures","DPCERC",108648
+1945,2,"Personal consumption expenditures","DPCERC",119977
+1946,2,"Personal consumption expenditures","DPCERC",144198
+1947,2,"Personal consumption expenditures","DPCERC",161852
+1948,2,"Personal consumption expenditures","DPCERC",174878
+1949,2,"Personal consumption expenditures","DPCERC",178333
+1950,2,"Personal consumption expenditures","DPCERC",192044
+1951,2,"Personal consumption expenditures","DPCERC",208339
+1952,2,"Personal consumption expenditures","DPCERC",219320
+1953,2,"Personal consumption expenditures","DPCERC",232740
+1954,2,"Personal consumption expenditures","DPCERC",239608
+1955,2,"Personal consumption expenditures","DPCERC",258288
+1956,2,"Personal consumption expenditures","DPCERC",271128
+1957,2,"Personal consumption expenditures","DPCERC",286296
+1958,2,"Personal consumption expenditures","DPCERC",295606
+1959,2,"Personal consumption expenditures","DPCERC",317130
+1960,2,"Personal consumption expenditures","DPCERC",331180
+1961,2,"Personal consumption expenditures","DPCERC",341475
+1962,2,"Personal consumption expenditures","DPCERC",362557
+1963,2,"Personal consumption expenditures","DPCERC",382035
+1964,2,"Personal consumption expenditures","DPCERC",410632
+1965,2,"Personal consumption expenditures","DPCERC",442973
+1966,2,"Personal consumption expenditures","DPCERC",479919
+1967,2,"Personal consumption expenditures","DPCERC",506685
+1968,2,"Personal consumption expenditures","DPCERC",556852
+1969,2,"Personal consumption expenditures","DPCERC",603639
+1970,2,"Personal consumption expenditures","DPCERC",646724
+1971,2,"Personal consumption expenditures","DPCERC",699937
+1972,2,"Personal consumption expenditures","DPCERC",768153
+1973,2,"Personal consumption expenditures","DPCERC",849575
+1974,2,"Personal consumption expenditures","DPCERC",930161
+1975,2,"Personal consumption expenditures","DPCERC",1030547
+1976,2,"Personal consumption expenditures","DPCERC",1147666
+1977,2,"Personal consumption expenditures","DPCERC",1273975
+1978,2,"Personal consumption expenditures","DPCERC",1422252
+1979,2,"Personal consumption expenditures","DPCERC",1585420
+1980,2,"Personal consumption expenditures","DPCERC",1750667
+1981,2,"Personal consumption expenditures","DPCERC",1933951
+1982,2,"Personal consumption expenditures","DPCERC",2071256
+1983,2,"Personal consumption expenditures","DPCERC",2281605
+1984,2,"Personal consumption expenditures","DPCERC",2492340
+1985,2,"Personal consumption expenditures","DPCERC",2712830
+1986,2,"Personal consumption expenditures","DPCERC",2886278
+1987,2,"Personal consumption expenditures","DPCERC",3076279
+1988,2,"Personal consumption expenditures","DPCERC",3330012
+1989,2,"Personal consumption expenditures","DPCERC",3576758
+1990,2,"Personal consumption expenditures","DPCERC",3808994
+1991,2,"Personal consumption expenditures","DPCERC",3943449
+1992,2,"Personal consumption expenditures","DPCERC",4197559
+1993,2,"Personal consumption expenditures","DPCERC",4451984
+1994,2,"Personal consumption expenditures","DPCERC",4720965
+1995,2,"Personal consumption expenditures","DPCERC",4962590
+1996,2,"Personal consumption expenditures","DPCERC",5244596
+1997,2,"Personal consumption expenditures","DPCERC",5536790
+1998,2,"Personal consumption expenditures","DPCERC",5877248
+1999,2,"Personal consumption expenditures","DPCERC",6283758
+2000,2,"Personal consumption expenditures","DPCERC",6767179
+2001,2,"Personal consumption expenditures","DPCERC",7073801
+2002,2,"Personal consumption expenditures","DPCERC",7348941
+2003,2,"Personal consumption expenditures","DPCERC",7740749
+2004,2,"Personal consumption expenditures","DPCERC",8231960
+2005,2,"Personal consumption expenditures","DPCERC",8769066
+2006,2,"Personal consumption expenditures","DPCERC",9277236
+2007,2,"Personal consumption expenditures","DPCERC",9746594
+2008,2,"Personal consumption expenditures","DPCERC",10050083
+2009,2,"Personal consumption expenditures","DPCERC",9891218
+2010,2,"Personal consumption expenditures","DPCERC",10260256
+2011,2,"Personal consumption expenditures","DPCERC",10698857
+2012,2,"Personal consumption expenditures","DPCERC",11047363
+2013,2,"Personal consumption expenditures","DPCERC",11388233
+2014,2,"Personal consumption expenditures","DPCERC",11874450
+2015,2,"Personal consumption expenditures","DPCERC",12297438
+2016,2,"Personal consumption expenditures","DPCERC",12726849
+2017,2,"Personal consumption expenditures","DPCERC",13290626
+2018,2,"Personal consumption expenditures","DPCERC",13934442
+2019,2,"Personal consumption expenditures","DPCERC",14437543
+2020,2,"Personal consumption expenditures","DPCERC",14231353
+2021,2,"Personal consumption expenditures","DPCERC",16119682
+2022,2,"Personal consumption expenditures","DPCERC",17690013
+2023,2,"Personal consumption expenditures","DPCERC",18833150
+2024,2,"Personal consumption expenditures","DPCERC",19896009
+2025,2,"Personal consumption expenditures","DPCERC",20954857
+1929,3,"Goods","DGDSRC",43770
+1930,3,"Goods","DGDSRC",38164
+1931,3,"Goods","DGDSRC",31709
+1932,3,"Goods","DGDSRC",24127
+1933,3,"Goods","DGDSRC",23756
+1934,3,"Goods","DGDSRC",28483
+1935,3,"Goods","DGDSRC",31628
+1936,3,"Goods","DGDSRC",35969
+1937,3,"Goods","DGDSRC",38373
+1938,3,"Goods","DGDSRC",36006
+1939,3,"Goods","DGDSRC",37921
+1940,3,"Goods","DGDSRC",40632
+1941,3,"Goods","DGDSRC",47448
+1942,3,"Goods","DGDSRC",51026
+1943,3,"Goods","DGDSRC",56332
+1944,3,"Goods","DGDSRC",60531
+1945,3,"Goods","DGDSRC",67624
+1946,3,"Goods","DGDSRC",86245
+1947,3,"Goods","DGDSRC",99429
+1948,3,"Goods","DGDSRC",107420
+1949,3,"Goods","DGDSRC",108081
+1950,3,"Goods","DGDSRC",116830
+1951,3,"Goods","DGDSRC",124748
+1952,3,"Goods","DGDSRC",128785
+1953,3,"Goods","DGDSRC",134835
+1954,3,"Goods","DGDSRC",135766
+1955,3,"Goods","DGDSRC",147398
+1956,3,"Goods","DGDSRC",152154
+1957,3,"Goods","DGDSRC",159602
+1958,3,"Goods","DGDSRC",161568
+1959,3,"Goods","DGDSRC",172607
+1960,3,"Goods","DGDSRC",177015
+1961,3,"Goods","DGDSRC",178808
+1962,3,"Goods","DGDSRC",188969
+1963,3,"Goods","DGDSRC",198154
+1964,3,"Goods","DGDSRC",212252
+1965,3,"Goods","DGDSRC",229675
+1966,3,"Goods","DGDSRC",249619
+1967,3,"Goods","DGDSRC",258991
+1968,3,"Goods","DGDSRC",284617
+1969,3,"Goods","DGDSRC",304678
+1970,3,"Goods","DGDSRC",318794
+1971,3,"Goods","DGDSRC",342116
+1972,3,"Goods","DGDSRC",373815
+1973,3,"Goods","DGDSRC",416635
+1974,3,"Goods","DGDSRC",451538
+1975,3,"Goods","DGDSRC",491334
+1976,3,"Goods","DGDSRC",546305
+1977,3,"Goods","DGDSRC",600384
+1978,3,"Goods","DGDSRC",663567
+1979,3,"Goods","DGDSRC",737938
+1980,3,"Goods","DGDSRC",799794
+1981,3,"Goods","DGDSRC",869368
+1982,3,"Goods","DGDSRC",899290
+1983,3,"Goods","DGDSRC",973783
+1984,3,"Goods","DGDSRC",1063700
+1985,3,"Goods","DGDSRC",1137609
+1986,3,"Goods","DGDSRC",1195627
+1987,3,"Goods","DGDSRC",1256297
+1988,3,"Goods","DGDSRC",1337309
+1989,3,"Goods","DGDSRC",1423805
+1990,3,"Goods","DGDSRC",1491301
+1991,3,"Goods","DGDSRC",1497434
+1992,3,"Goods","DGDSRC",1563268
+1993,3,"Goods","DGDSRC",1642347
+1994,3,"Goods","DGDSRC",1746554
+1995,3,"Goods","DGDSRC",1815533
+1996,3,"Goods","DGDSRC",1917671
+1997,3,"Goods","DGDSRC",2006506
+1998,3,"Goods","DGDSRC",2108439
+1999,3,"Goods","DGDSRC",2287062
+2000,3,"Goods","DGDSRC",2453172
+2001,3,"Goods","DGDSRC",2525593
+2002,3,"Goods","DGDSRC",2598805
+2003,3,"Goods","DGDSRC",2722597
+2004,3,"Goods","DGDSRC",2902021
+2005,3,"Goods","DGDSRC",3082923
+2006,3,"Goods","DGDSRC",3239655
+2007,3,"Goods","DGDSRC",3367031
+2008,3,"Goods","DGDSRC",3363221
+2009,3,"Goods","DGDSRC",3180022
+2010,3,"Goods","DGDSRC",3317825
+2011,3,"Goods","DGDSRC",3518121
+2012,3,"Goods","DGDSRC",3637739
+2013,3,"Goods","DGDSRC",3742183
+2014,3,"Goods","DGDSRC",3886577
+2015,3,"Goods","DGDSRC",3955130
+2016,3,"Goods","DGDSRC",4033036
+2017,3,"Goods","DGDSRC",4212214
+2018,3,"Goods","DGDSRC",4414208
+2019,3,"Goods","DGDSRC",4532817
+2020,3,"Goods","DGDSRC",4708625
+2021,3,"Goods","DGDSRC",5499445
+2022,3,"Goods","DGDSRC",5938667
+2023,3,"Goods","DGDSRC",6115666
+2024,3,"Goods","DGDSRC",6261530
+2025,3,"Goods","DGDSRC",6508041
+1929,4,"Durable goods","DDURRC",9829
+1930,4,"Durable goods","DDURRC",7661
+1931,4,"Durable goods","DDURRC",5911
+1932,4,"Durable goods","DDURRC",3959
+1933,4,"Durable goods","DDURRC",3762
+1934,4,"Durable goods","DDURRC",4564
+1935,4,"Durable goods","DDURRC",5493
+1936,4,"Durable goods","DDURRC",6749
+1937,4,"Durable goods","DDURRC",7393
+1938,4,"Durable goods","DDURRC",6123
+1939,4,"Durable goods","DDURRC",7168
+1940,4,"Durable goods","DDURRC",8287
+1941,4,"Durable goods","DDURRC",10268
+1942,4,"Durable goods","DDURRC",7630
+1943,4,"Durable goods","DDURRC",7471
+1944,4,"Durable goods","DDURRC",7743
+1945,4,"Durable goods","DDURRC",9098
+1946,4,"Durable goods","DDURRC",17114
+1947,4,"Durable goods","DDURRC",21833
+1948,4,"Durable goods","DDURRC",24453
+1949,4,"Durable goods","DDURRC",26623
+1950,4,"Durable goods","DDURRC",32445
+1951,4,"Durable goods","DDURRC",31739
+1952,4,"Durable goods","DDURRC",31243
+1953,4,"Durable goods","DDURRC",34616
+1954,4,"Durable goods","DDURRC",33713
+1955,4,"Durable goods","DDURRC",40745
+1956,4,"Durable goods","DDURRC",40169
+1957,4,"Durable goods","DDURRC",42027
+1958,4,"Durable goods","DDURRC",39530
+1959,4,"Durable goods","DDURRC",44888
+1960,4,"Durable goods","DDURRC",45625
+1961,4,"Durable goods","DDURRC",44206
+1962,4,"Durable goods","DDURRC",49465
+1963,4,"Durable goods","DDURRC",54228
+1964,4,"Durable goods","DDURRC",59556
+1965,4,"Durable goods","DDURRC",66390
+1966,4,"Durable goods","DDURRC",71745
+1967,4,"Durable goods","DDURRC",73981
+1968,4,"Durable goods","DDURRC",84828
+1969,4,"Durable goods","DDURRC",90483
+1970,4,"Durable goods","DDURRC",89988
+1971,4,"Durable goods","DDURRC",102446
+1972,4,"Durable goods","DDURRC",116444
+1973,4,"Durable goods","DDURRC",130527
+1974,4,"Durable goods","DDURRC",130177
+1975,4,"Durable goods","DDURRC",142165
+1976,4,"Durable goods","DDURRC",168624
+1977,4,"Durable goods","DDURRC",191963
+1978,4,"Durable goods","DDURRC",213348
+1979,4,"Durable goods","DDURRC",226340
+1980,4,"Durable goods","DDURRC",226391
+1981,4,"Durable goods","DDURRC",243938
+1982,4,"Durable goods","DDURRC",253032
+1983,4,"Durable goods","DDURRC",295031
+1984,4,"Durable goods","DDURRC",342156
+1985,4,"Durable goods","DDURRC",380365
+1986,4,"Durable goods","DDURRC",421439
+1987,4,"Durable goods","DDURRC",442022
+1988,4,"Durable goods","DDURRC",475053
+1989,4,"Durable goods","DDURRC",494330
+1990,4,"Durable goods","DDURRC",497079
+1991,4,"Durable goods","DDURRC",477183
+1992,4,"Durable goods","DDURRC",508081
+1993,4,"Durable goods","DDURRC",551532
+1994,4,"Durable goods","DDURRC",607171
+1995,4,"Durable goods","DDURRC",635738
+1996,4,"Durable goods","DDURRC",676295
+1997,4,"Durable goods","DDURRC",715530
+1998,4,"Durable goods","DDURRC",779293
+1999,4,"Durable goods","DDURRC",855568
+2000,4,"Durable goods","DDURRC",912572
+2001,4,"Durable goods","DDURRC",941515
+2002,4,"Durable goods","DDURRC",985368
+2003,4,"Durable goods","DDURRC",1017801
+2004,4,"Durable goods","DDURRC",1080574
+2005,4,"Durable goods","DDURRC",1128610
+2006,4,"Durable goods","DDURRC",1158333
+2007,4,"Durable goods","DDURRC",1188043
+2008,4,"Durable goods","DDURRC",1098761
+2009,4,"Durable goods","DDURRC",1012121
+2010,4,"Durable goods","DDURRC",1048962
+2011,4,"Durable goods","DDURRC",1093499
+2012,4,"Durable goods","DDURRC",1144221
+2013,4,"Durable goods","DDURRC",1191786
+2014,4,"Durable goods","DDURRC",1247260
+2015,4,"Durable goods","DDURRC",1315794
+2016,4,"Durable goods","DDURRC",1356495
+2017,4,"Durable goods","DDURRC",1415911
+2018,4,"Durable goods","DDURRC",1488831
+2019,4,"Durable goods","DDURRC",1523644
+2020,4,"Durable goods","DDURRC",1621700
+2021,4,"Durable goods","DDURRC",1991864
+2022,4,"Durable goods","DDURRC",2077929
+2023,4,"Durable goods","DDURRC",2141043
+2024,4,"Durable goods","DDURRC",2178085
+2025,4,"Durable goods","DDURRC",2265413
+1929,5,"Nondurable goods","DNDGRC",33941
+1930,5,"Nondurable goods","DNDGRC",30503
+1931,5,"Nondurable goods","DNDGRC",25798
+1932,5,"Nondurable goods","DNDGRC",20169
+1933,5,"Nondurable goods","DNDGRC",19994
+1934,5,"Nondurable goods","DNDGRC",23919
+1935,5,"Nondurable goods","DNDGRC",26135
+1936,5,"Nondurable goods","DNDGRC",29221
+1937,5,"Nondurable goods","DNDGRC",30980
+1938,5,"Nondurable goods","DNDGRC",29883
+1939,5,"Nondurable goods","DNDGRC",30754
+1940,5,"Nondurable goods","DNDGRC",32345
+1941,5,"Nondurable goods","DNDGRC",37180
+1942,5,"Nondurable goods","DNDGRC",43395
+1943,5,"Nondurable goods","DNDGRC",48861
+1944,5,"Nondurable goods","DNDGRC",52788
+1945,5,"Nondurable goods","DNDGRC",58525
+1946,5,"Nondurable goods","DNDGRC",69131
+1947,5,"Nondurable goods","DNDGRC",77596
+1948,5,"Nondurable goods","DNDGRC",82966
+1949,5,"Nondurable goods","DNDGRC",81457
+1950,5,"Nondurable goods","DNDGRC",84384
+1951,5,"Nondurable goods","DNDGRC",93009
+1952,5,"Nondurable goods","DNDGRC",97542
+1953,5,"Nondurable goods","DNDGRC",100219
+1954,5,"Nondurable goods","DNDGRC",102053
+1955,5,"Nondurable goods","DNDGRC",106653
+1956,5,"Nondurable goods","DNDGRC",111985
+1957,5,"Nondurable goods","DNDGRC",117575
+1958,5,"Nondurable goods","DNDGRC",122038
+1959,5,"Nondurable goods","DNDGRC",127719
+1960,5,"Nondurable goods","DNDGRC",131390
+1961,5,"Nondurable goods","DNDGRC",134602
+1962,5,"Nondurable goods","DNDGRC",139504
+1963,5,"Nondurable goods","DNDGRC",143927
+1964,5,"Nondurable goods","DNDGRC",152696
+1965,5,"Nondurable goods","DNDGRC",163285
+1966,5,"Nondurable goods","DNDGRC",177874
+1967,5,"Nondurable goods","DNDGRC",185009
+1968,5,"Nondurable goods","DNDGRC",199788
+1969,5,"Nondurable goods","DNDGRC",214195
+1970,5,"Nondurable goods","DNDGRC",228806
+1971,5,"Nondurable goods","DNDGRC",239670
+1972,5,"Nondurable goods","DNDGRC",257371
+1973,5,"Nondurable goods","DNDGRC",286108
+1974,5,"Nondurable goods","DNDGRC",321361
+1975,5,"Nondurable goods","DNDGRC",349170
+1976,5,"Nondurable goods","DNDGRC",377680
+1977,5,"Nondurable goods","DNDGRC",408421
+1978,5,"Nondurable goods","DNDGRC",450218
+1979,5,"Nondurable goods","DNDGRC",511598
+1980,5,"Nondurable goods","DNDGRC",573402
+1981,5,"Nondurable goods","DNDGRC",625430
+1982,5,"Nondurable goods","DNDGRC",646258
+1983,5,"Nondurable goods","DNDGRC",678753
+1984,5,"Nondurable goods","DNDGRC",721545
+1985,5,"Nondurable goods","DNDGRC",757244
+1986,5,"Nondurable goods","DNDGRC",774188
+1987,5,"Nondurable goods","DNDGRC",814275
+1988,5,"Nondurable goods","DNDGRC",862256
+1989,5,"Nondurable goods","DNDGRC",929475
+1990,5,"Nondurable goods","DNDGRC",994222
+1991,5,"Nondurable goods","DNDGRC",1020252
+1992,5,"Nondurable goods","DNDGRC",1055186
+1993,5,"Nondurable goods","DNDGRC",1090814
+1994,5,"Nondurable goods","DNDGRC",1139382
+1995,5,"Nondurable goods","DNDGRC",1179795
+1996,5,"Nondurable goods","DNDGRC",1241376
+1997,5,"Nondurable goods","DNDGRC",1290976
+1998,5,"Nondurable goods","DNDGRC",1329146
+1999,5,"Nondurable goods","DNDGRC",1431493
+2000,5,"Nondurable goods","DNDGRC",1540600
+2001,5,"Nondurable goods","DNDGRC",1584078
+2002,5,"Nondurable goods","DNDGRC",1613437
+2003,5,"Nondurable goods","DNDGRC",1704797
+2004,5,"Nondurable goods","DNDGRC",1821447
+2005,5,"Nondurable goods","DNDGRC",1954313
+2006,5,"Nondurable goods","DNDGRC",2081322
+2007,5,"Nondurable goods","DNDGRC",2178988
+2008,5,"Nondurable goods","DNDGRC",2264460
+2009,5,"Nondurable goods","DNDGRC",2167901
+2010,5,"Nondurable goods","DNDGRC",2268862
+2011,5,"Nondurable goods","DNDGRC",2424622
+2012,5,"Nondurable goods","DNDGRC",2493518
+2013,5,"Nondurable goods","DNDGRC",2550398
+2014,5,"Nondurable goods","DNDGRC",2639317
+2015,5,"Nondurable goods","DNDGRC",2639336
+2016,5,"Nondurable goods","DNDGRC",2676541
+2017,5,"Nondurable goods","DNDGRC",2796304
+2018,5,"Nondurable goods","DNDGRC",2925377
+2019,5,"Nondurable goods","DNDGRC",3009173
+2020,5,"Nondurable goods","DNDGRC",3086925
+2021,5,"Nondurable goods","DNDGRC",3507581
+2022,5,"Nondurable goods","DNDGRC",3860738
+2023,5,"Nondurable goods","DNDGRC",3974623
+2024,5,"Nondurable goods","DNDGRC",4083445
+2025,5,"Nondurable goods","DNDGRC",4242627
+1929,6,"Services","DSERRC",33613
+1930,6,"Services","DSERRC",31972
+1931,6,"Services","DSERRC",28963
+1932,6,"Services","DSERRC",24587
+1933,6,"Services","DSERRC",22189
+1934,6,"Services","DSERRC",22978
+1935,6,"Services","DSERRC",24305
+1936,6,"Services","DSERRC",26218
+1937,6,"Services","DSERRC",28466
+1938,6,"Services","DSERRC",28266
+1939,6,"Services","DSERRC",29287
+1940,6,"Services","DSERRC",30655
+1941,6,"Services","DSERRC",33624
+1942,6,"Services","DSERRC",37976
+1943,6,"Services","DSERRC",43570
+1944,6,"Services","DSERRC",48117
+1945,6,"Services","DSERRC",52354
+1946,6,"Services","DSERRC",57953
+1947,6,"Services","DSERRC",62423
+1948,6,"Services","DSERRC",67459
+1949,6,"Services","DSERRC",70252
+1950,6,"Services","DSERRC",75215
+1951,6,"Services","DSERRC",83591
+1952,6,"Services","DSERRC",90535
+1953,6,"Services","DSERRC",97905
+1954,6,"Services","DSERRC",103842
+1955,6,"Services","DSERRC",110890
+1956,6,"Services","DSERRC",118973
+1957,6,"Services","DSERRC",126693
+1958,6,"Services","DSERRC",134038
+1959,6,"Services","DSERRC",144523
+1960,6,"Services","DSERRC",154165
+1961,6,"Services","DSERRC",162667
+1962,6,"Services","DSERRC",173588
+1963,6,"Services","DSERRC",183880
+1964,6,"Services","DSERRC",198380
+1965,6,"Services","DSERRC",213298
+1966,6,"Services","DSERRC",230300
+1967,6,"Services","DSERRC",247695
+1968,6,"Services","DSERRC",272236
+1969,6,"Services","DSERRC",298960
+1970,6,"Services","DSERRC",327931
+1971,6,"Services","DSERRC",357821
+1972,6,"Services","DSERRC",394338
+1973,6,"Services","DSERRC",432939
+1974,6,"Services","DSERRC",478623
+1975,6,"Services","DSERRC",539213
+1976,6,"Services","DSERRC",601361
+1977,6,"Services","DSERRC",673591
+1978,6,"Services","DSERRC",758686
+1979,6,"Services","DSERRC",847482
+1980,6,"Services","DSERRC",950874
+1981,6,"Services","DSERRC",1064583
+1982,6,"Services","DSERRC",1171966
+1983,6,"Services","DSERRC",1307821
+1984,6,"Services","DSERRC",1428640
+1985,6,"Services","DSERRC",1575221
+1986,6,"Services","DSERRC",1690651
+1987,6,"Services","DSERRC",1819982
+1988,6,"Services","DSERRC",1992703
+1989,6,"Services","DSERRC",2152953
+1990,6,"Services","DSERRC",2317693
+1991,6,"Services","DSERRC",2446015
+1992,6,"Services","DSERRC",2634291
+1993,6,"Services","DSERRC",2809637
+1994,6,"Services","DSERRC",2974411
+1995,6,"Services","DSERRC",3147057
+1996,6,"Services","DSERRC",3326925
+1997,6,"Services","DSERRC",3530285
+1998,6,"Services","DSERRC",3768809
+1999,6,"Services","DSERRC",3996696
+2000,6,"Services","DSERRC",4314008
+2001,6,"Services","DSERRC",4548208
+2002,6,"Services","DSERRC",4750136
+2003,6,"Services","DSERRC",5018152
+2004,6,"Services","DSERRC",5329939
+2005,6,"Services","DSERRC",5686143
+2006,6,"Services","DSERRC",6037580
+2007,6,"Services","DSERRC",6379563
+2008,6,"Services","DSERRC",6686862
+2009,6,"Services","DSERRC",6711196
+2010,6,"Services","DSERRC",6942432
+2011,6,"Services","DSERRC",7180736
+2012,6,"Services","DSERRC",7409624
+2013,6,"Services","DSERRC",7646050
+2014,6,"Services","DSERRC",7987873
+2015,6,"Services","DSERRC",8342308
+2016,6,"Services","DSERRC",8693813
+2017,6,"Services","DSERRC",9078411
+2018,6,"Services","DSERRC",9520234
+2019,6,"Services","DSERRC",9904726
+2020,6,"Services","DSERRC",9522728
+2021,6,"Services","DSERRC",10620237
+2022,6,"Services","DSERRC",11751346
+2023,6,"Services","DSERRC",12717484
+2024,6,"Services","DSERRC",13634480
+2025,6,"Services","DSERRC",14446816
+1929,7,"Gross private domestic investment","A006RC",17170
+1930,7,"Gross private domestic investment","A006RC",11428
+1931,7,"Gross private domestic investment","A006RC",6549
+1932,7,"Gross private domestic investment","A006RC",1819
+1933,7,"Gross private domestic investment","A006RC",2276
+1934,7,"Gross private domestic investment","A006RC",4296
+1935,7,"Gross private domestic investment","A006RC",7370
+1936,7,"Gross private domestic investment","A006RC",9391
+1937,7,"Gross private domestic investment","A006RC",12967
+1938,7,"Gross private domestic investment","A006RC",7944
+1939,7,"Gross private domestic investment","A006RC",10229
+1940,7,"Gross private domestic investment","A006RC",14579
+1941,7,"Gross private domestic investment","A006RC",19369
+1942,7,"Gross private domestic investment","A006RC",11762
+1943,7,"Gross private domestic investment","A006RC",7405
+1944,7,"Gross private domestic investment","A006RC",9180
+1945,7,"Gross private domestic investment","A006RC",12400
+1946,7,"Gross private domestic investment","A006RC",33128
+1947,7,"Gross private domestic investment","A006RC",37131
+1948,7,"Gross private domestic investment","A006RC",50347
+1949,7,"Gross private domestic investment","A006RC",39099
+1950,7,"Gross private domestic investment","A006RC",56530
+1951,7,"Gross private domestic investment","A006RC",62759
+1952,7,"Gross private domestic investment","A006RC",57274
+1953,7,"Gross private domestic investment","A006RC",60414
+1954,7,"Gross private domestic investment","A006RC",58070
+1955,7,"Gross private domestic investment","A006RC",73754
+1956,7,"Gross private domestic investment","A006RC",77685
+1957,7,"Gross private domestic investment","A006RC",76505
+1958,7,"Gross private domestic investment","A006RC",70947
+1959,7,"Gross private domestic investment","A006RC",85669
+1960,7,"Gross private domestic investment","A006RC",86477
+1961,7,"Gross private domestic investment","A006RC",86584
+1962,7,"Gross private domestic investment","A006RC",96977
+1963,7,"Gross private domestic investment","A006RC",103284
+1964,7,"Gross private domestic investment","A006RC",112150
+1965,7,"Gross private domestic investment","A006RC",129645
+1966,7,"Gross private domestic investment","A006RC",144188
+1967,7,"Gross private domestic investment","A006RC",142700
+1968,7,"Gross private domestic investment","A006RC",156923
+1969,7,"Gross private domestic investment","A006RC",173562
+1970,7,"Gross private domestic investment","A006RC",170049
+1971,7,"Gross private domestic investment","A006RC",196824
+1972,7,"Gross private domestic investment","A006RC",228140
+1973,7,"Gross private domestic investment","A006RC",266925
+1974,7,"Gross private domestic investment","A006RC",274526
+1975,7,"Gross private domestic investment","A006RC",257253
+1976,7,"Gross private domestic investment","A006RC",323224
+1977,7,"Gross private domestic investment","A006RC",396613
+1978,7,"Gross private domestic investment","A006RC",478377
+1979,7,"Gross private domestic investment","A006RC",539657
+1980,7,"Gross private domestic investment","A006RC",530098
+1981,7,"Gross private domestic investment","A006RC",631229
+1982,7,"Gross private domestic investment","A006RC",581034
+1983,7,"Gross private domestic investment","A006RC",637518
+1984,7,"Gross private domestic investment","A006RC",820089
+1985,7,"Gross private domestic investment","A006RC",829650
+1986,7,"Gross private domestic investment","A006RC",849146
+1987,7,"Gross private domestic investment","A006RC",892176
+1988,7,"Gross private domestic investment","A006RC",936963
+1989,7,"Gross private domestic investment","A006RC",999701
+1990,7,"Gross private domestic investment","A006RC",993448
+1991,7,"Gross private domestic investment","A006RC",944344
+1992,7,"Gross private domestic investment","A006RC",1013006
+1993,7,"Gross private domestic investment","A006RC",1106826
+1994,7,"Gross private domestic investment","A006RC",1256484
+1995,7,"Gross private domestic investment","A006RC",1317489
+1996,7,"Gross private domestic investment","A006RC",1432055
+1997,7,"Gross private domestic investment","A006RC",1595600
+1998,7,"Gross private domestic investment","A006RC",1736671
+1999,7,"Gross private domestic investment","A006RC",1887059
+2000,7,"Gross private domestic investment","A006RC",2038408
+2001,7,"Gross private domestic investment","A006RC",1934842
+2002,7,"Gross private domestic investment","A006RC",1930417
+2003,7,"Gross private domestic investment","A006RC",2027056
+2004,7,"Gross private domestic investment","A006RC",2281253
+2005,7,"Gross private domestic investment","A006RC",2534720
+2006,7,"Gross private domestic investment","A006RC",2700954
+2007,7,"Gross private domestic investment","A006RC",2673011
+2008,7,"Gross private domestic investment","A006RC",2477613
+2009,7,"Gross private domestic investment","A006RC",1929664
+2010,7,"Gross private domestic investment","A006RC",2165473
+2011,7,"Gross private domestic investment","A006RC",2332562
+2012,7,"Gross private domestic investment","A006RC",2621754
+2013,7,"Gross private domestic investment","A006RC",2838327
+2014,7,"Gross private domestic investment","A006RC",3073981
+2015,7,"Gross private domestic investment","A006RC",3288481
+2016,7,"Gross private domestic investment","A006RC",3278305
+2017,7,"Gross private domestic investment","A006RC",3467664
+2018,7,"Gross private domestic investment","A006RC",3724770
+2019,7,"Gross private domestic investment","A006RC",3893734
+2020,7,"Gross private domestic investment","A006RC",3763386
+2021,7,"Gross private domestic investment","A006RC",4246545
+2022,7,"Gross private domestic investment","A006RC",4844333
+2023,7,"Gross private domestic investment","A006RC",5023712
+2024,7,"Gross private domestic investment","A006RC",5259320
+2025,7,"Gross private domestic investment","A006RC",5458629
+1929,8,"Fixed investment","A007RC",15630
+1930,8,"Fixed investment","A007RC",11651
+1931,8,"Fixed investment","A007RC",7661
+1932,8,"Fixed investment","A007RC",4169
+1933,8,"Fixed investment","A007RC",3680
+1934,8,"Fixed investment","A007RC",4876
+1935,8,"Fixed investment","A007RC",6230
+1936,8,"Fixed investment","A007RC",8230
+1937,8,"Fixed investment","A007RC",10341
+1938,8,"Fixed investment","A007RC",8519
+1939,8,"Fixed investment","A007RC",10021
+1940,8,"Fixed investment","A007RC",12186
+1941,8,"Fixed investment","A007RC",15039
+1942,8,"Fixed investment","A007RC",9856
+1943,8,"Fixed investment","A007RC",8151
+1944,8,"Fixed investment","A007RC",10104
+1945,8,"Fixed investment","A007RC",13877
+1946,8,"Fixed investment","A007RC",27118
+1947,8,"Fixed investment","A007RC",37681
+1948,8,"Fixed investment","A007RC",44689
+1949,8,"Fixed investment","A007RC",41791
+1950,8,"Fixed investment","A007RC",50761
+1951,8,"Fixed investment","A007RC",52848
+1952,8,"Fixed investment","A007RC",53759
+1953,8,"Fixed investment","A007RC",58466
+1954,8,"Fixed investment","A007RC",60007
+1955,8,"Fixed investment","A007RC",68767
+1956,8,"Fixed investment","A007RC",73735
+1957,8,"Fixed investment","A007RC",75728
+1958,8,"Fixed investment","A007RC",71313
+1959,8,"Fixed investment","A007RC",81752
+1960,8,"Fixed investment","A007RC",83245
+1961,8,"Fixed investment","A007RC",83610
+1962,8,"Fixed investment","A007RC",90876
+1963,8,"Fixed investment","A007RC",97663
+1964,8,"Fixed investment","A007RC",107329
+1965,8,"Fixed investment","A007RC",120398
+1966,8,"Fixed investment","A007RC",130552
+1967,8,"Fixed investment","A007RC",132834
+1968,8,"Fixed investment","A007RC",147871
+1969,8,"Fixed investment","A007RC",164389
+1970,8,"Fixed investment","A007RC",168048
+1971,8,"Fixed investment","A007RC",188569
+1972,8,"Fixed investment","A007RC",219034
+1973,8,"Fixed investment","A007RC",251048
+1974,8,"Fixed investment","A007RC",260536
+1975,8,"Fixed investment","A007RC",263509
+1976,8,"Fixed investment","A007RC",306109
+1977,8,"Fixed investment","A007RC",374289
+1978,8,"Fixed investment","A007RC",452586
+1979,8,"Fixed investment","A007RC",521673
+1980,8,"Fixed investment","A007RC",536430
+1981,8,"Fixed investment","A007RC",601420
+1982,8,"Fixed investment","A007RC",595947
+1983,8,"Fixed investment","A007RC",643269
+1984,8,"Fixed investment","A007RC",754684
+1985,8,"Fixed investment","A007RC",807826
+1986,8,"Fixed investment","A007RC",842575
+1987,8,"Fixed investment","A007RC",865027
+1988,8,"Fixed investment","A007RC",918481
+1989,8,"Fixed investment","A007RC",972008
+1990,8,"Fixed investment","A007RC",978903
+1991,8,"Fixed investment","A007RC",944738
+1992,8,"Fixed investment","A007RC",996678
+1993,8,"Fixed investment","A007RC",1086012
+1994,8,"Fixed investment","A007RC",1192700
+1995,8,"Fixed investment","A007RC",1286316
+1996,8,"Fixed investment","A007RC",1401255
+1997,8,"Fixed investment","A007RC",1524674
+1998,8,"Fixed investment","A007RC",1672952
+1999,8,"Fixed investment","A007RC",1826243
+2000,8,"Fixed investment","A007RC",1983864
+2001,8,"Fixed investment","A007RC",1973126
+2002,8,"Fixed investment","A007RC",1910443
+2003,8,"Fixed investment","A007RC",2012961
+2004,8,"Fixed investment","A007RC",2217186
+2005,8,"Fixed investment","A007RC",2477207
+2006,8,"Fixed investment","A007RC",2631965
+2007,8,"Fixed investment","A007RC",2639060
+2008,8,"Fixed investment","A007RC",2506855
+2009,8,"Fixed investment","A007RC",2080435
+2010,8,"Fixed investment","A007RC",2111555
+2011,8,"Fixed investment","A007RC",2286300
+2012,8,"Fixed investment","A007RC",2550542
+2013,8,"Fixed investment","A007RC",2732850
+2014,8,"Fixed investment","A007RC",2989189
+2015,8,"Fixed investment","A007RC",3148359
+2016,8,"Fixed investment","A007RC",3239237
+2017,8,"Fixed investment","A007RC",3434990
+2018,8,"Fixed investment","A007RC",3668362
+2019,8,"Fixed investment","A007RC",3820778
+2020,8,"Fixed investment","A007RC",3793858
+2021,8,"Fixed investment","A007RC",4219673
+2022,8,"Fixed investment","A007RC",4663096
+2023,8,"Fixed investment","A007RC",4970003
+2024,8,"Fixed investment","A007RC",5205774
+2025,8,"Fixed investment","A007RC",5443480
+1929,9,"Nonresidential","A008RC",11560
+1930,9,"Nonresidential","A008RC",9184
+1931,9,"Nonresidential","A008RC",5762
+1932,9,"Nonresidential","A008RC",3294
+1933,9,"Nonresidential","A008RC",2955
+1934,9,"Nonresidential","A008RC",3833
+1935,9,"Nonresidential","A008RC",4829
+1936,9,"Nonresidential","A008RC",6403
+1937,9,"Nonresidential","A008RC",8180
+1938,9,"Nonresidential","A008RC",6279
+1939,9,"Nonresidential","A008RC",6871
+1940,9,"Nonresidential","A008RC",8543
+1941,9,"Nonresidential","A008RC",10823
+1942,9,"Nonresidential","A008RC",7502
+1943,9,"Nonresidential","A008RC",6583
+1944,9,"Nonresidential","A008RC",8608
+1945,9,"Nonresidential","A008RC",12054
+1946,9,"Nonresidential","A008RC",19163
+1947,9,"Nonresidential","A008RC",25473
+1948,9,"Nonresidential","A008RC",28881
+1949,9,"Nonresidential","A008RC",26950
+1950,9,"Nonresidential","A008RC",30017
+1951,9,"Nonresidential","A008RC",34187
+1952,9,"Nonresidential","A008RC",34901
+1953,9,"Nonresidential","A008RC",38768
+1954,9,"Nonresidential","A008RC",38565
+1955,9,"Nonresidential","A008RC",43364
+1956,9,"Nonresidential","A008RC",49748
+1957,9,"Nonresidential","A008RC",53097
+1958,9,"Nonresidential","A008RC",48491
+1959,9,"Nonresidential","A008RC",53124
+1960,9,"Nonresidential","A008RC",56389
+1961,9,"Nonresidential","A008RC",56599
+1962,9,"Nonresidential","A008RC",61233
+1963,9,"Nonresidential","A008RC",64808
+1964,9,"Nonresidential","A008RC",72229
+1965,9,"Nonresidential","A008RC",85235
+1966,9,"Nonresidential","A008RC",97174
+1967,9,"Nonresidential","A008RC",99207
+1968,9,"Nonresidential","A008RC",107672
+1969,9,"Nonresidential","A008RC",120013
+1970,9,"Nonresidential","A008RC",124638
+1971,9,"Nonresidential","A008RC",130416
+1972,9,"Nonresidential","A008RC",146635
+1973,9,"Nonresidential","A008RC",172726
+1974,9,"Nonresidential","A008RC",191070
+1975,9,"Nonresidential","A008RC",196776
+1976,9,"Nonresidential","A008RC",219346
+1977,9,"Nonresidential","A008RC",259060
+1978,9,"Nonresidential","A008RC",314576
+1979,9,"Nonresidential","A008RC",373832
+1980,9,"Nonresidential","A008RC",406910
+1981,9,"Nonresidential","A008RC",472938
+1982,9,"Nonresidential","A008RC",485099
+1983,9,"Nonresidential","A008RC",482156
+1984,9,"Nonresidential","A008RC",564320
+1985,9,"Nonresidential","A008RC",607750
+1986,9,"Nonresidential","A008RC",607763
+1987,9,"Nonresidential","A008RC",615237
+1988,9,"Nonresidential","A008RC",662280
+1989,9,"Nonresidential","A008RC",715993
+1990,9,"Nonresidential","A008RC",739234
+1991,9,"Nonresidential","A008RC",723584
+1992,9,"Nonresidential","A008RC",741937
+1993,9,"Nonresidential","A008RC",799204
+1994,9,"Nonresidential","A008RC",868853
+1995,9,"Nonresidential","A008RC",962247
+1996,9,"Nonresidential","A008RC",1043194
+1997,9,"Nonresidential","A008RC",1149088
+1998,9,"Nonresidential","A008RC",1254144
+1999,9,"Nonresidential","A008RC",1364477
+2000,9,"Nonresidential","A008RC",1498432
+2001,9,"Nonresidential","A008RC",1460067
+2002,9,"Nonresidential","A008RC",1352848
+2003,9,"Nonresidential","A008RC",1375880
+2004,9,"Nonresidential","A008RC",1467369
+2005,9,"Nonresidential","A008RC",1620986
+2006,9,"Nonresidential","A008RC",1793801
+2007,9,"Nonresidential","A008RC",1948563
+2008,9,"Nonresidential","A008RC",1990871
+2009,9,"Nonresidential","A008RC",1690432
+2010,9,"Nonresidential","A008RC",1734981
+2011,9,"Nonresidential","A008RC",1907465
+2012,9,"Nonresidential","A008RC",2118527
+2013,9,"Nonresidential","A008RC",2221312
+2014,9,"Nonresidential","A008RC",2425155
+2015,9,"Nonresidential","A008RC",2507504
+2016,9,"Nonresidential","A008RC",2528995
+2017,9,"Nonresidential","A008RC",2661100
+2018,9,"Nonresidential","A008RC",2856471
+2019,9,"Nonresidential","A008RC",2993653
+2020,9,"Nonresidential","A008RC",2873312
+2021,9,"Nonresidential","A008RC",3087241
+2022,9,"Nonresidential","A008RC",3484561
+2023,9,"Nonresidential","A008RC",3855957
+2024,9,"Nonresidential","A008RC",4022935
+2025,9,"Nonresidential","A008RC",4250804
+1929,10,"Structures","B009RC",5491
+1930,10,"Structures","B009RC",4448
+1931,10,"Structures","B009RC",2619
+1932,10,"Structures","B009RC",1392
+1933,10,"Structures","B009RC",1091
+1934,10,"Structures","B009RC",1234
+1935,10,"Structures","B009RC",1433
+1936,10,"Structures","B009RC",1878
+1937,10,"Structures","B009RC",2706
+1938,10,"Structures","B009RC",2124
+1939,10,"Structures","B009RC",2217
+1940,10,"Structures","B009RC",2557
+1941,10,"Structures","B009RC",3250
+1942,10,"Structures","B009RC",2241
+1943,10,"Structures","B009RC",1770
+1944,10,"Structures","B009RC",2369
+1945,10,"Structures","B009RC",3336
+1946,10,"Structures","B009RC",7381
+1947,10,"Structures","B009RC",8137
+1948,10,"Structures","B009RC",9526
+1949,10,"Structures","B009RC",9178
+1950,10,"Structures","B009RC",9957
+1951,10,"Structures","B009RC",11954
+1952,10,"Structures","B009RC",12224
+1953,10,"Structures","B009RC",13570
+1954,10,"Structures","B009RC",13865
+1955,10,"Structures","B009RC",15157
+1956,10,"Structures","B009RC",18180
+1957,10,"Structures","B009RC",18950
+1958,10,"Structures","B009RC",17629
+1959,10,"Structures","B009RC",18149
+1960,10,"Structures","B009RC",19568
+1961,10,"Structures","B009RC",19715
+1962,10,"Structures","B009RC",20778
+1963,10,"Structures","B009RC",21199
+1964,10,"Structures","B009RC",23737
+1965,10,"Structures","B009RC",28321
+1966,10,"Structures","B009RC",31349
+1967,10,"Structures","B009RC",31511
+1968,10,"Structures","B009RC",33557
+1969,10,"Structures","B009RC",37699
+1970,10,"Structures","B009RC",40287
+1971,10,"Structures","B009RC",42679
+1972,10,"Structures","B009RC",47173
+1973,10,"Structures","B009RC",54983
+1974,10,"Structures","B009RC",61237
+1975,10,"Structures","B009RC",61350
+1976,10,"Structures","B009RC",65915
+1977,10,"Structures","B009RC",74578
+1978,10,"Structures","B009RC",93584
+1979,10,"Structures","B009RC",117701
+1980,10,"Structures","B009RC",136170
+1981,10,"Structures","B009RC",167314
+1982,10,"Structures","B009RC",177564
+1983,10,"Structures","B009RC",154344
+1984,10,"Structures","B009RC",177397
+1985,10,"Structures","B009RC",194518
+1986,10,"Structures","B009RC",176527
+1987,10,"Structures","B009RC",174202
+1988,10,"Structures","B009RC",182790
+1989,10,"Structures","B009RC",193716
+1990,10,"Structures","B009RC",202917
+1991,10,"Structures","B009RC",183606
+1992,10,"Structures","B009RC",172572
+1993,10,"Structures","B009RC",177151
+1994,10,"Structures","B009RC",186768
+1995,10,"Structures","B009RC",207270
+1996,10,"Structures","B009RC",224583
+1997,10,"Structures","B009RC",250265
+1998,10,"Structures","B009RC",276004
+1999,10,"Structures","B009RC",285724
+2000,10,"Structures","B009RC",321005
+2001,10,"Structures","B009RC",333510
+2002,10,"Structures","B009RC",286986
+2003,10,"Structures","B009RC",286605
+2004,10,"Structures","B009RC",307653
+2005,10,"Structures","B009RC",352958
+2006,10,"Structures","B009RC",425186
+2007,10,"Structures","B009RC",510302
+2008,10,"Structures","B009RC",571107
+2009,10,"Structures","B009RC",455817
+2010,10,"Structures","B009RC",379784
+2011,10,"Structures","B009RC",404457
+2012,10,"Structures","B009RC",479435
+2013,10,"Structures","B009RC",491463
+2014,10,"Structures","B009RC",574608
+2015,10,"Structures","B009RC",584524
+2016,10,"Structures","B009RC",566206
+2017,10,"Structures","B009RC",594900
+2018,10,"Structures","B009RC",636633
+2019,10,"Structures","B009RC",677866
+2020,10,"Structures","B009RC",624609
+2021,10,"Structures","B009RC",627872
+2022,10,"Structures","B009RC",755106
+2023,10,"Structures","B009RC",926792
+2024,10,"Structures","B009RC",934799
+2025,10,"Structures","B009RC",893430
+1929,11,"Equipment","Y033RC",5492
+1930,11,"Equipment","Y033RC",4180
+1931,11,"Equipment","Y033RC",2643
+1932,11,"Equipment","Y033RC",1460
+1933,11,"Equipment","Y033RC",1436
+1934,11,"Equipment","Y033RC",2098
+1935,11,"Equipment","Y033RC",2833
+1936,11,"Equipment","Y033RC",3881
+1937,11,"Equipment","Y033RC",4770
+1938,11,"Equipment","Y033RC",3401
+1939,11,"Equipment","Y033RC",3883
+1940,11,"Equipment","Y033RC",5167
+1941,11,"Equipment","Y033RC",6443
+1942,11,"Equipment","Y033RC",4065
+1943,11,"Equipment","Y033RC",3671
+1944,11,"Equipment","Y033RC",5002
+1945,11,"Equipment","Y033RC",7285
+1946,11,"Equipment","Y033RC",9945
+1947,11,"Equipment","Y033RC",15316
+1948,11,"Equipment","Y033RC",17280
+1949,11,"Equipment","Y033RC",15732
+1950,11,"Equipment","Y033RC",17799
+1951,11,"Equipment","Y033RC",19874
+1952,11,"Equipment","Y033RC",19694
+1953,11,"Equipment","Y033RC",21531
+1954,11,"Equipment","Y033RC",20812
+1955,11,"Equipment","Y033RC",23888
+1956,11,"Equipment","Y033RC",26343
+1957,11,"Equipment","Y033RC",28561
+1958,11,"Equipment","Y033RC",24876
+1959,11,"Equipment","Y033RC",28345
+1960,11,"Equipment","Y033RC",29679
+1961,11,"Equipment","Y033RC",28904
+1962,11,"Equipment","Y033RC",32056
+1963,11,"Equipment","Y033RC",34367
+1964,11,"Equipment","Y033RC",38684
+1965,11,"Equipment","Y033RC",45779
+1966,11,"Equipment","Y033RC",53023
+1967,11,"Equipment","Y033RC",53693
+1968,11,"Equipment","Y033RC",58532
+1969,11,"Equipment","Y033RC",65163
+1970,11,"Equipment","Y033RC",66404
+1971,11,"Equipment","Y033RC",69059
+1972,11,"Equipment","Y033RC",78885
+1973,11,"Equipment","Y033RC",95062
+1974,11,"Equipment","Y033RC",104316
+1975,11,"Equipment","Y033RC",107615
+1976,11,"Equipment","Y033RC",121242
+1977,11,"Equipment","Y033RC",148665
+1978,11,"Equipment","Y033RC",180634
+1979,11,"Equipment","Y033RC",208062
+1980,11,"Equipment","Y033RC",216386
+1981,11,"Equipment","Y033RC",240852
+1982,11,"Equipment","Y033RC",234862
+1983,11,"Equipment","Y033RC",246470
+1984,11,"Equipment","Y033RC",291874
+1985,11,"Equipment","Y033RC",307905
+1986,11,"Equipment","Y033RC",317693
+1987,11,"Equipment","Y033RC",320919
+1988,11,"Equipment","Y033RC",346816
+1989,11,"Equipment","Y033RC",372160
+1990,11,"Equipment","Y033RC",371891
+1991,11,"Equipment","Y033RC",360849
+1992,11,"Equipment","Y033RC",381698
+1993,11,"Equipment","Y033RC",425141
+1994,11,"Equipment","Y033RC",476380
+1995,11,"Equipment","Y033RC",528128
+1996,11,"Equipment","Y033RC",565309
+1997,11,"Equipment","Y033RC",610859
+1998,11,"Equipment","Y033RC",660014
+1999,11,"Equipment","Y033RC",713626
+2000,11,"Equipment","Y033RC",766088
+2001,11,"Equipment","Y033RC",711517
+2002,11,"Equipment","Y033RC",659640
+2003,11,"Equipment","Y033RC",670618
+2004,11,"Equipment","Y033RC",721896
+2005,11,"Equipment","Y033RC",794894
+2006,11,"Equipment","Y033RC",862283
+2007,11,"Equipment","Y033RC",893432
+2008,11,"Equipment","Y033RC",845381
+2009,11,"Equipment","Y033RC",670261
+2010,11,"Equipment","Y033RC",777027
+2011,11,"Equipment","Y033RC",881274
+2012,11,"Equipment","Y033RC",983401
+2013,11,"Equipment","Y033RC",1035250
+2014,11,"Equipment","Y033RC",1109086
+2015,11,"Equipment","Y033RC",1144101
+2016,11,"Equipment","Y033RC",1119782
+2017,11,"Equipment","Y033RC",1159953
+2018,11,"Equipment","Y033RC",1227620
+2019,11,"Equipment","Y033RC",1240901
+2020,11,"Equipment","Y033RC",1112497
+2021,11,"Equipment","Y033RC",1196318
+2022,11,"Equipment","Y033RC",1305765
+2023,11,"Equipment","Y033RC",1404659
+2024,11,"Equipment","Y033RC",1484254
+2025,11,"Equipment","Y033RC",1643718
+1929,12,"Intellectual property products","Y001RC",577
+1930,12,"Intellectual property products","Y001RC",556
+1931,12,"Intellectual property products","Y001RC",500
+1932,12,"Intellectual property products","Y001RC",442
+1933,12,"Intellectual property products","Y001RC",428
+1934,12,"Intellectual property products","Y001RC",501
+1935,12,"Intellectual property products","Y001RC",563
+1936,12,"Intellectual property products","Y001RC",644
+1937,12,"Intellectual property products","Y001RC",704
+1938,12,"Intellectual property products","Y001RC",754
+1939,12,"Intellectual property products","Y001RC",771
+1940,12,"Intellectual property products","Y001RC",819
+1941,12,"Intellectual property products","Y001RC",1130
+1942,12,"Intellectual property products","Y001RC",1196
+1943,12,"Intellectual property products","Y001RC",1142
+1944,12,"Intellectual property products","Y001RC",1237
+1945,12,"Intellectual property products","Y001RC",1433
+1946,12,"Intellectual property products","Y001RC",1837
+1947,12,"Intellectual property products","Y001RC",2020
+1948,12,"Intellectual property products","Y001RC",2075
+1949,12,"Intellectual property products","Y001RC",2040
+1950,12,"Intellectual property products","Y001RC",2261
+1951,12,"Intellectual property products","Y001RC",2359
+1952,12,"Intellectual property products","Y001RC",2983
+1953,12,"Intellectual property products","Y001RC",3667
+1954,12,"Intellectual property products","Y001RC",3888
+1955,12,"Intellectual property products","Y001RC",4318
+1956,12,"Intellectual property products","Y001RC",5225
+1957,12,"Intellectual property products","Y001RC",5586
+1958,12,"Intellectual property products","Y001RC",5986
+1959,12,"Intellectual property products","Y001RC",6630
+1960,12,"Intellectual property products","Y001RC",7142
+1961,12,"Intellectual property products","Y001RC",7979
+1962,12,"Intellectual property products","Y001RC",8399
+1963,12,"Intellectual property products","Y001RC",9243
+1964,12,"Intellectual property products","Y001RC",9808
+1965,12,"Intellectual property products","Y001RC",11135
+1966,12,"Intellectual property products","Y001RC",12802
+1967,12,"Intellectual property products","Y001RC",14003
+1968,12,"Intellectual property products","Y001RC",15582
+1969,12,"Intellectual property products","Y001RC",17152
+1970,12,"Intellectual property products","Y001RC",17947
+1971,12,"Intellectual property products","Y001RC",18678
+1972,12,"Intellectual property products","Y001RC",20577
+1973,12,"Intellectual property products","Y001RC",22681
+1974,12,"Intellectual property products","Y001RC",25517
+1975,12,"Intellectual property products","Y001RC",27811
+1976,12,"Intellectual property products","Y001RC",32189
+1977,12,"Intellectual property products","Y001RC",35817
+1978,12,"Intellectual property products","Y001RC",40358
+1979,12,"Intellectual property products","Y001RC",48068
+1980,12,"Intellectual property products","Y001RC",54354
+1981,12,"Intellectual property products","Y001RC",64773
+1982,12,"Intellectual property products","Y001RC",72674
+1983,12,"Intellectual property products","Y001RC",81343
+1984,12,"Intellectual property products","Y001RC",95048
+1985,12,"Intellectual property products","Y001RC",105327
+1986,12,"Intellectual property products","Y001RC",113543
+1987,12,"Intellectual property products","Y001RC",120116
+1988,12,"Intellectual property products","Y001RC",132674
+1989,12,"Intellectual property products","Y001RC",150117
+1990,12,"Intellectual property products","Y001RC",164426
+1991,12,"Intellectual property products","Y001RC",179129
+1992,12,"Intellectual property products","Y001RC",187667
+1993,12,"Intellectual property products","Y001RC",196912
+1994,12,"Intellectual property products","Y001RC",205705
+1995,12,"Intellectual property products","Y001RC",226849
+1996,12,"Intellectual property products","Y001RC",253303
+1997,12,"Intellectual property products","Y001RC",287964
+1998,12,"Intellectual property products","Y001RC",318126
+1999,12,"Intellectual property products","Y001RC",365127
+2000,12,"Intellectual property products","Y001RC",411339
+2001,12,"Intellectual property products","Y001RC",415040
+2002,12,"Intellectual property products","Y001RC",406222
+2003,12,"Intellectual property products","Y001RC",418656
+2004,12,"Intellectual property products","Y001RC",437819
+2005,12,"Intellectual property products","Y001RC",473134
+2006,12,"Intellectual property products","Y001RC",506332
+2007,12,"Intellectual property products","Y001RC",544828
+2008,12,"Intellectual property products","Y001RC",574384
+2009,12,"Intellectual property products","Y001RC",564354
+2010,12,"Intellectual property products","Y001RC",578170
+2011,12,"Intellectual property products","Y001RC",621733
+2012,12,"Intellectual property products","Y001RC",655691
+2013,12,"Intellectual property products","Y001RC",694599
+2014,12,"Intellectual property products","Y001RC",741461
+2015,12,"Intellectual property products","Y001RC",778879
+2016,12,"Intellectual property products","Y001RC",843007
+2017,12,"Intellectual property products","Y001RC",906246
+2018,12,"Intellectual property products","Y001RC",992217
+2019,12,"Intellectual property products","Y001RC",1074887
+2020,12,"Intellectual property products","Y001RC",1136206
+2021,12,"Intellectual property products","Y001RC",1263051
+2022,12,"Intellectual property products","Y001RC",1423690
+2023,12,"Intellectual property products","Y001RC",1524507
+2024,12,"Intellectual property products","Y001RC",1603882
+2025,12,"Intellectual property products","Y001RC",1713656
+1929,13,"Residential","A011RC",4071
+1930,13,"Residential","A011RC",2467
+1931,13,"Residential","A011RC",1899
+1932,13,"Residential","A011RC",875
+1933,13,"Residential","A011RC",724
+1934,13,"Residential","A011RC",1043
+1935,13,"Residential","A011RC",1400
+1936,13,"Residential","A011RC",1826
+1937,13,"Residential","A011RC",2161
+1938,13,"Residential","A011RC",2239
+1939,13,"Residential","A011RC",3151
+1940,13,"Residential","A011RC",3643
+1941,13,"Residential","A011RC",4216
+1942,13,"Residential","A011RC",2353
+1943,13,"Residential","A011RC",1568
+1944,13,"Residential","A011RC",1496
+1945,13,"Residential","A011RC",1823
+1946,13,"Residential","A011RC",7955
+1947,13,"Residential","A011RC",12209
+1948,13,"Residential","A011RC",15808
+1949,13,"Residential","A011RC",14841
+1950,13,"Residential","A011RC",20744
+1951,13,"Residential","A011RC",18661
+1952,13,"Residential","A011RC",18858
+1953,13,"Residential","A011RC",19699
+1954,13,"Residential","A011RC",21442
+1955,13,"Residential","A011RC",25403
+1956,13,"Residential","A011RC",23987
+1957,13,"Residential","A011RC",22631
+1958,13,"Residential","A011RC",22823
+1959,13,"Residential","A011RC",28628
+1960,13,"Residential","A011RC",26856
+1961,13,"Residential","A011RC",27011
+1962,13,"Residential","A011RC",29643
+1963,13,"Residential","A011RC",32855
+1964,13,"Residential","A011RC",35100
+1965,13,"Residential","A011RC",35163
+1966,13,"Residential","A011RC",33378
+1967,13,"Residential","A011RC",33627
+1968,13,"Residential","A011RC",40199
+1969,13,"Residential","A011RC",44375
+1970,13,"Residential","A011RC",43411
+1971,13,"Residential","A011RC",58153
+1972,13,"Residential","A011RC",72399
+1973,13,"Residential","A011RC",78322
+1974,13,"Residential","A011RC",69467
+1975,13,"Residential","A011RC",66733
+1976,13,"Residential","A011RC",86762
+1977,13,"Residential","A011RC",115229
+1978,13,"Residential","A011RC",138010
+1979,13,"Residential","A011RC",147841
+1980,13,"Residential","A011RC",129520
+1981,13,"Residential","A011RC",128482
+1982,13,"Residential","A011RC",110848
+1983,13,"Residential","A011RC",161113
+1984,13,"Residential","A011RC",190364
+1985,13,"Residential","A011RC",200077
+1986,13,"Residential","A011RC",234812
+1987,13,"Residential","A011RC",249790
+1988,13,"Residential","A011RC",256200
+1989,13,"Residential","A011RC",256014
+1990,13,"Residential","A011RC",239669
+1991,13,"Residential","A011RC",221153
+1992,13,"Residential","A011RC",254741
+1993,13,"Residential","A011RC",286808
+1994,13,"Residential","A011RC",323847
+1995,13,"Residential","A011RC",324069
+1996,13,"Residential","A011RC",358061
+1997,13,"Residential","A011RC",375585
+1998,13,"Residential","A011RC",418807
+1999,13,"Residential","A011RC",461766
+2000,13,"Residential","A011RC",485432
+2001,13,"Residential","A011RC",513059
+2002,13,"Residential","A011RC",557594
+2003,13,"Residential","A011RC",637082
+2004,13,"Residential","A011RC",749817
+2005,13,"Residential","A011RC",856221
+2006,13,"Residential","A011RC",838164
+2007,13,"Residential","A011RC",690497
+2008,13,"Residential","A011RC",515984
+2009,13,"Residential","A011RC",390004
+2010,13,"Residential","A011RC",376575
+2011,13,"Residential","A011RC",378836
+2012,13,"Residential","A011RC",432015
+2013,13,"Residential","A011RC",511538
+2014,13,"Residential","A011RC",564034
+2015,13,"Residential","A011RC",640855
+2016,13,"Residential","A011RC",710242
+2017,13,"Residential","A011RC",773891
+2018,13,"Residential","A011RC",811892
+2019,13,"Residential","A011RC",827125
+2020,13,"Residential","A011RC",920546
+2021,13,"Residential","A011RC",1132432
+2022,13,"Residential","A011RC",1178535
+2023,13,"Residential","A011RC",1114045
+2024,13,"Residential","A011RC",1182839
+2025,13,"Residential","A011RC",1192676
+1929,14,"Change in private inventories","A014RC",1539
+1930,14,"Change in private inventories","A014RC",-223
+1931,14,"Change in private inventories","A014RC",-1112
+1932,14,"Change in private inventories","A014RC",-2351
+1933,14,"Change in private inventories","A014RC",-1404
+1934,14,"Change in private inventories","A014RC",-580
+1935,14,"Change in private inventories","A014RC",1141
+1936,14,"Change in private inventories","A014RC",1161
+1937,14,"Change in private inventories","A014RC",2626
+1938,14,"Change in private inventories","A014RC",-575
+1939,14,"Change in private inventories","A014RC",208
+1940,14,"Change in private inventories","A014RC",2393
+1941,14,"Change in private inventories","A014RC",4330
+1942,14,"Change in private inventories","A014RC",1906
+1943,14,"Change in private inventories","A014RC",-746
+1944,14,"Change in private inventories","A014RC",-924
+1945,14,"Change in private inventories","A014RC",-1477
+1946,14,"Change in private inventories","A014RC",6011
+1947,14,"Change in private inventories","A014RC",-551
+1948,14,"Change in private inventories","A014RC",5659
+1949,14,"Change in private inventories","A014RC",-2692
+1950,14,"Change in private inventories","A014RC",5769
+1951,14,"Change in private inventories","A014RC",9911
+1952,14,"Change in private inventories","A014RC",3514
+1953,14,"Change in private inventories","A014RC",1948
+1954,14,"Change in private inventories","A014RC",-1937
+1955,14,"Change in private inventories","A014RC",4987
+1956,14,"Change in private inventories","A014RC",3950
+1957,14,"Change in private inventories","A014RC",777
+1958,14,"Change in private inventories","A014RC",-366
+1959,14,"Change in private inventories","A014RC",3917
+1960,14,"Change in private inventories","A014RC",3232
+1961,14,"Change in private inventories","A014RC",2974
+1962,14,"Change in private inventories","A014RC",6101
+1963,14,"Change in private inventories","A014RC",5621
+1964,14,"Change in private inventories","A014RC",4821
+1965,14,"Change in private inventories","A014RC",9247
+1966,14,"Change in private inventories","A014RC",13636
+1967,14,"Change in private inventories","A014RC",9866
+1968,14,"Change in private inventories","A014RC",9053
+1969,14,"Change in private inventories","A014RC",9173
+1970,14,"Change in private inventories","A014RC",2001
+1971,14,"Change in private inventories","A014RC",8256
+1972,14,"Change in private inventories","A014RC",9107
+1973,14,"Change in private inventories","A014RC",15878
+1974,14,"Change in private inventories","A014RC",13990
+1975,14,"Change in private inventories","A014RC",-6256
+1976,14,"Change in private inventories","A014RC",17116
+1977,14,"Change in private inventories","A014RC",22324
+1978,14,"Change in private inventories","A014RC",25791
+1979,14,"Change in private inventories","A014RC",17984
+1980,14,"Change in private inventories","A014RC",-6331
+1981,14,"Change in private inventories","A014RC",29809
+1982,14,"Change in private inventories","A014RC",-14914
+1983,14,"Change in private inventories","A014RC",-5751
+1984,14,"Change in private inventories","A014RC",65405
+1985,14,"Change in private inventories","A014RC",21824
+1986,14,"Change in private inventories","A014RC",6571
+1987,14,"Change in private inventories","A014RC",27149
+1988,14,"Change in private inventories","A014RC",18482
+1989,14,"Change in private inventories","A014RC",27693
+1990,14,"Change in private inventories","A014RC",14546
+1991,14,"Change in private inventories","A014RC",-394
+1992,14,"Change in private inventories","A014RC",16328
+1993,14,"Change in private inventories","A014RC",20814
+1994,14,"Change in private inventories","A014RC",63785
+1995,14,"Change in private inventories","A014RC",31174
+1996,14,"Change in private inventories","A014RC",30799
+1997,14,"Change in private inventories","A014RC",70927
+1998,14,"Change in private inventories","A014RC",63719
+1999,14,"Change in private inventories","A014RC",60816
+2000,14,"Change in private inventories","A014RC",54544
+2001,14,"Change in private inventories","A014RC",-38284
+2002,14,"Change in private inventories","A014RC",19975
+2003,14,"Change in private inventories","A014RC",14094
+2004,14,"Change in private inventories","A014RC",64068
+2005,14,"Change in private inventories","A014RC",57513
+2006,14,"Change in private inventories","A014RC",68989
+2007,14,"Change in private inventories","A014RC",33950
+2008,14,"Change in private inventories","A014RC",-29241
+2009,14,"Change in private inventories","A014RC",-150772
+2010,14,"Change in private inventories","A014RC",53917
+2011,14,"Change in private inventories","A014RC",46262
+2012,14,"Change in private inventories","A014RC",71212
+2013,14,"Change in private inventories","A014RC",105477
+2014,14,"Change in private inventories","A014RC",84792
+2015,14,"Change in private inventories","A014RC",140123
+2016,14,"Change in private inventories","A014RC",39068
+2017,14,"Change in private inventories","A014RC",32674
+2018,14,"Change in private inventories","A014RC",56408
+2019,14,"Change in private inventories","A014RC",72955
+2020,14,"Change in private inventories","A014RC",-30472
+2021,14,"Change in private inventories","A014RC",26872
+2022,14,"Change in private inventories","A014RC",181237
+2023,14,"Change in private inventories","A014RC",53709
+2024,14,"Change in private inventories","A014RC",53546
+2025,14,"Change in private inventories","A014RC",15148
+1929,15,"Net exports of goods and services","A019RC",383
+1930,15,"Net exports of goods and services","A019RC",323
+1931,15,"Net exports of goods and services","A019RC",1
+1932,15,"Net exports of goods and services","A019RC",43
+1933,15,"Net exports of goods and services","A019RC",58
+1934,15,"Net exports of goods and services","A019RC",322
+1935,15,"Net exports of goods and services","A019RC",-213
+1936,15,"Net exports of goods and services","A019RC",-147
+1937,15,"Net exports of goods and services","A019RC",78
+1938,15,"Net exports of goods and services","A019RC",966
+1939,15,"Net exports of goods and services","A019RC",833
+1940,15,"Net exports of goods and services","A019RC",1471
+1941,15,"Net exports of goods and services","A019RC",1033
+1942,15,"Net exports of goods and services","A019RC",-252
+1943,15,"Net exports of goods and services","A019RC",-2246
+1944,15,"Net exports of goods and services","A019RC",-2024
+1945,15,"Net exports of goods and services","A019RC",-766
+1946,15,"Net exports of goods and services","A019RC",7182
+1947,15,"Net exports of goods and services","A019RC",10807
+1948,15,"Net exports of goods and services","A019RC",5487
+1949,15,"Net exports of goods and services","A019RC",5235
+1950,15,"Net exports of goods and services","A019RC",738
+1951,15,"Net exports of goods and services","A019RC",2513
+1952,15,"Net exports of goods and services","A019RC",1164
+1953,15,"Net exports of goods and services","A019RC",-701
+1954,15,"Net exports of goods and services","A019RC",404
+1955,15,"Net exports of goods and services","A019RC",478
+1956,15,"Net exports of goods and services","A019RC",2361
+1957,15,"Net exports of goods and services","A019RC",4075
+1958,15,"Net exports of goods and services","A019RC",538
+1959,15,"Net exports of goods and services","A019RC",397
+1960,15,"Net exports of goods and services","A019RC",4204
+1961,15,"Net exports of goods and services","A019RC",4913
+1962,15,"Net exports of goods and services","A019RC",4101
+1963,15,"Net exports of goods and services","A019RC",4939
+1964,15,"Net exports of goods and services","A019RC",6914
+1965,15,"Net exports of goods and services","A019RC",5618
+1966,15,"Net exports of goods and services","A019RC",3863
+1967,15,"Net exports of goods and services","A019RC",3555
+1968,15,"Net exports of goods and services","A019RC",1350
+1969,15,"Net exports of goods and services","A019RC",1431
+1970,15,"Net exports of goods and services","A019RC",3948
+1971,15,"Net exports of goods and services","A019RC",621
+1972,15,"Net exports of goods and services","A019RC",-3372
+1973,15,"Net exports of goods and services","A019RC",4111
+1974,15,"Net exports of goods and services","A019RC",-815
+1975,15,"Net exports of goods and services","A019RC",15977
+1976,15,"Net exports of goods and services","A019RC",-1631
+1977,15,"Net exports of goods and services","A019RC",-23094
+1978,15,"Net exports of goods and services","A019RC",-25367
+1979,15,"Net exports of goods and services","A019RC",-22545
+1980,15,"Net exports of goods and services","A019RC",-13056
+1981,15,"Net exports of goods and services","A019RC",-12520
+1982,15,"Net exports of goods and services","A019RC",-19974
+1983,15,"Net exports of goods and services","A019RC",-51642
+1984,15,"Net exports of goods and services","A019RC",-102727
+1985,15,"Net exports of goods and services","A019RC",-114018
+1986,15,"Net exports of goods and services","A019RC",-131869
+1987,15,"Net exports of goods and services","A019RC",-144770
+1988,15,"Net exports of goods and services","A019RC",-109393
+1989,15,"Net exports of goods and services","A019RC",-86741
+1990,15,"Net exports of goods and services","A019RC",-77855
+1991,15,"Net exports of goods and services","A019RC",-28614
+1992,15,"Net exports of goods and services","A019RC",-34738
+1993,15,"Net exports of goods and services","A019RC",-65173
+1994,15,"Net exports of goods and services","A019RC",-92487
+1995,15,"Net exports of goods and services","A019RC",-89761
+1996,15,"Net exports of goods and services","A019RC",-96376
+1997,15,"Net exports of goods and services","A019RC",-101971
+1998,15,"Net exports of goods and services","A019RC",-162711
+1999,15,"Net exports of goods and services","A019RC",-259550
+2000,15,"Net exports of goods and services","A019RC",-381073
+2001,15,"Net exports of goods and services","A019RC",-376747
+2002,15,"Net exports of goods and services","A019RC",-439745
+2003,15,"Net exports of goods and services","A019RC",-521955
+2004,15,"Net exports of goods and services","A019RC",-634141
+2005,15,"Net exports of goods and services","A019RC",-739903
+2006,15,"Net exports of goods and services","A019RC",-786453
+2007,15,"Net exports of goods and services","A019RC",-735933
+2008,15,"Net exports of goods and services","A019RC",-740870
+2009,15,"Net exports of goods and services","A019RC",-419153
+2010,15,"Net exports of goods and services","A019RC",-532309
+2011,15,"Net exports of goods and services","A019RC",-579617
+2012,15,"Net exports of goods and services","A019RC",-551617
+2013,15,"Net exports of goods and services","A019RC",-478453
+2014,15,"Net exports of goods and services","A019RC",-508900
+2015,15,"Net exports of goods and services","A019RC",-524320
+2016,15,"Net exports of goods and services","A019RC",-503272
+2017,15,"Net exports of goods and services","A019RC",-543328
+2018,15,"Net exports of goods and services","A019RC",-593077
+2019,15,"Net exports of goods and services","A019RC",-577290
+2020,15,"Net exports of goods and services","A019RC",-618554
+2021,15,"Net exports of goods and services","A019RC",-849233
+2022,15,"Net exports of goods and services","A019RC",-937889
+2023,15,"Net exports of goods and services","A019RC",-786496
+2024,15,"Net exports of goods and services","A019RC",-898460
+2025,15,"Net exports of goods and services","A019RC",-926487
+1929,16,"Exports","B020RC",5939
+1930,16,"Exports","B020RC",4444
+1931,16,"Exports","B020RC",2906
+1932,16,"Exports","B020RC",1975
+1933,16,"Exports","B020RC",1987
+1934,16,"Exports","B020RC",2561
+1935,16,"Exports","B020RC",2769
+1936,16,"Exports","B020RC",3007
+1937,16,"Exports","B020RC",4039
+1938,16,"Exports","B020RC",3811
+1939,16,"Exports","B020RC",3969
+1940,16,"Exports","B020RC",4897
+1941,16,"Exports","B020RC",5482
+1942,16,"Exports","B020RC",4375
+1943,16,"Exports","B020RC",4034
+1944,16,"Exports","B020RC",4880
+1945,16,"Exports","B020RC",6781
+1946,16,"Exports","B020RC",14156
+1947,16,"Exports","B020RC",18740
+1948,16,"Exports","B020RC",15547
+1949,16,"Exports","B020RC",14484
+1950,16,"Exports","B020RC",12350
+1951,16,"Exports","B020RC",17099
+1952,16,"Exports","B020RC",16459
+1953,16,"Exports","B020RC",15313
+1954,16,"Exports","B020RC",15836
+1955,16,"Exports","B020RC",17677
+1956,16,"Exports","B020RC",21284
+1957,16,"Exports","B020RC",24017
+1958,16,"Exports","B020RC",20560
+1959,16,"Exports","B020RC",22725
+1960,16,"Exports","B020RC",27045
+1961,16,"Exports","B020RC",27602
+1962,16,"Exports","B020RC",29066
+1963,16,"Exports","B020RC",31074
+1964,16,"Exports","B020RC",35019
+1965,16,"Exports","B020RC",37146
+1966,16,"Exports","B020RC",40920
+1967,16,"Exports","B020RC",43467
+1968,16,"Exports","B020RC",47906
+1969,16,"Exports","B020RC",51922
+1970,16,"Exports","B020RC",59709
+1971,16,"Exports","B020RC",62963
+1972,16,"Exports","B020RC",70843
+1973,16,"Exports","B020RC",95269
+1974,16,"Exports","B020RC",126650
+1975,16,"Exports","B020RC",138706
+1976,16,"Exports","B020RC",149515
+1977,16,"Exports","B020RC",159349
+1978,16,"Exports","B020RC",186883
+1979,16,"Exports","B020RC",230129
+1980,16,"Exports","B020RC",280772
+1981,16,"Exports","B020RC",305239
+1982,16,"Exports","B020RC",283210
+1983,16,"Exports","B020RC",276996
+1984,16,"Exports","B020RC",302380
+1985,16,"Exports","B020RC",303211
+1986,16,"Exports","B020RC",320998
+1987,16,"Exports","B020RC",363943
+1988,16,"Exports","B020RC",444601
+1989,16,"Exports","B020RC",504289
+1990,16,"Exports","B020RC",551873
+1991,16,"Exports","B020RC",594931
+1992,16,"Exports","B020RC",633053
+1993,16,"Exports","B020RC",654799
+1994,16,"Exports","B020RC",720937
+1995,16,"Exports","B020RC",812810
+1996,16,"Exports","B020RC",867589
+1997,16,"Exports","B020RC",953803
+1998,16,"Exports","B020RC",952979
+1999,16,"Exports","B020RC",992910
+2000,16,"Exports","B020RC",1096111
+2001,16,"Exports","B020RC",1026812
+2002,16,"Exports","B020RC",997979
+2003,16,"Exports","B020RC",1035165
+2004,16,"Exports","B020RC",1176363
+2005,16,"Exports","B020RC",1301580
+2006,16,"Exports","B020RC",1470170
+2007,16,"Exports","B020RC",1659295
+2008,16,"Exports","B020RC",1835280
+2009,16,"Exports","B020RC",1582774
+2010,16,"Exports","B020RC",1857247
+2011,16,"Exports","B020RC",2115864
+2012,16,"Exports","B020RC",2217700
+2013,16,"Exports","B020RC",2287922
+2014,16,"Exports","B020RC",2378545
+2015,16,"Exports","B020RC",2270622
+2016,16,"Exports","B020RC",2235558
+2017,16,"Exports","B020RC",2388260
+2018,16,"Exports","B020RC",2538089
+2019,16,"Exports","B020RC",2539391
+2020,16,"Exports","B020RC",2163837
+2021,16,"Exports","B020RC",2568697
+2022,16,"Exports","B020RC",3036430
+2023,16,"Exports","B020RC",3073360
+2024,16,"Exports","B020RC",3215368
+2025,16,"Exports","B020RC",3319660
+1929,17,"Goods","A253RC",5347
+1930,17,"Goods","A253RC",3929
+1931,17,"Goods","A253RC",2494
+1932,17,"Goods","A253RC",1667
+1933,17,"Goods","A253RC",1736
+1934,17,"Goods","A253RC",2238
+1935,17,"Goods","A253RC",2404
+1936,17,"Goods","A253RC",2590
+1937,17,"Goods","A253RC",3451
+1938,17,"Goods","A253RC",3243
+1939,17,"Goods","A253RC",3347
+1940,17,"Goods","A253RC",4124
+1941,17,"Goods","A253RC",4533
+1942,17,"Goods","A253RC",3389
+1943,17,"Goods","A253RC",2920
+1944,17,"Goods","A253RC",3589
+1945,17,"Goods","A253RC",5365
+1946,17,"Goods","A253RC",11764
+1947,17,"Goods","A253RC",16097
+1948,17,"Goods","A253RC",13265
+1949,17,"Goods","A253RC",12213
+1950,17,"Goods","A253RC",10203
+1951,17,"Goods","A253RC",14243
+1952,17,"Goods","A253RC",13449
+1953,17,"Goods","A253RC",12412
+1954,17,"Goods","A253RC",12929
+1955,17,"Goods","A253RC",14424
+1956,17,"Goods","A253RC",17556
+1957,17,"Goods","A253RC",19562
+1958,17,"Goods","A253RC",16414
+1959,17,"Goods","A253RC",16458
+1960,17,"Goods","A253RC",20453
+1961,17,"Goods","A253RC",20947
+1962,17,"Goods","A253RC",21709
+1963,17,"Goods","A253RC",23345
+1964,17,"Goods","A253RC",26767
+1965,17,"Goods","A253RC",27974
+1966,17,"Goods","A253RC",31089
+1967,17,"Goods","A253RC",32547
+1968,17,"Goods","A253RC",35721
+1969,17,"Goods","A253RC",38744
+1970,17,"Goods","A253RC",45037
+1971,17,"Goods","A253RC",46196
+1972,17,"Goods","A253RC",52586
+1973,17,"Goods","A253RC",75771
+1974,17,"Goods","A253RC",103494
+1975,17,"Goods","A253RC",112490
+1976,17,"Goods","A253RC",121484
+1977,17,"Goods","A253RC",128410
+1978,17,"Goods","A253RC",149907
+1979,17,"Goods","A253RC",187266
+1980,17,"Goods","A253RC",230428
+1981,17,"Goods","A253RC",245206
+1982,17,"Goods","A253RC",222550
+1983,17,"Goods","A253RC",214049
+1984,17,"Goods","A253RC",231286
+1985,17,"Goods","A253RC",227489
+1986,17,"Goods","A253RC",231447
+1987,17,"Goods","A253RC",265554
+1988,17,"Goods","A253RC",332054
+1989,17,"Goods","A253RC",374750
+1990,17,"Goods","A253RC",403265
+1991,17,"Goods","A253RC",430135
+1992,17,"Goods","A253RC",455308
+1993,17,"Goods","A253RC",467723
+1994,17,"Goods","A253RC",518371
+1995,17,"Goods","A253RC",592442
+1996,17,"Goods","A253RC",628785
+1997,17,"Goods","A253RC",699887
+1998,17,"Goods","A253RC",692565
+1999,17,"Goods","A253RC",711724
+2000,17,"Goods","A253RC",795054
+2001,17,"Goods","A253RC",739568
+2002,17,"Goods","A253RC",706582
+2003,17,"Goods","A253RC",733875
+2004,17,"Goods","A253RC",827975
+2005,17,"Goods","A253RC",919344
+2006,17,"Goods","A253RC",1043084
+2007,17,"Goods","A253RC",1159734
+2008,17,"Goods","A253RC",1291025
+2009,17,"Goods","A253RC",1057391
+2010,17,"Goods","A253RC",1272920
+2011,17,"Goods","A253RC",1468456
+2012,17,"Goods","A253RC",1529597
+2013,17,"Goods","A253RC",1563863
+2014,17,"Goods","A253RC",1616954
+2015,17,"Goods","A253RC",1496686
+2016,17,"Goods","A253RC",1447588
+2017,17,"Goods","A253RC",1546657
+2018,17,"Goods","A253RC",1669294
+2019,17,"Goods","A253RC",1644755
+2020,17,"Goods","A253RC",1421647
+2021,17,"Goods","A253RC",1747242
+2022,17,"Goods","A253RC",2070333
+2023,17,"Goods","A253RC",2024358
+2024,17,"Goods","A253RC",2057990
+2025,17,"Goods","A253RC",2112712
+1929,18,"Services","A646RC",592
+1930,18,"Services","A646RC",515
+1931,18,"Services","A646RC",412
+1932,18,"Services","A646RC",308
+1933,18,"Services","A646RC",251
+1934,18,"Services","A646RC",323
+1935,18,"Services","A646RC",365
+1936,18,"Services","A646RC",417
+1937,18,"Services","A646RC",588
+1938,18,"Services","A646RC",568
+1939,18,"Services","A646RC",622
+1940,18,"Services","A646RC",773
+1941,18,"Services","A646RC",949
+1942,18,"Services","A646RC",986
+1943,18,"Services","A646RC",1114
+1944,18,"Services","A646RC",1291
+1945,18,"Services","A646RC",1416
+1946,18,"Services","A646RC",2392
+1947,18,"Services","A646RC",2643
+1948,18,"Services","A646RC",2282
+1949,18,"Services","A646RC",2271
+1950,18,"Services","A646RC",2147
+1951,18,"Services","A646RC",2856
+1952,18,"Services","A646RC",3010
+1953,18,"Services","A646RC",2901
+1954,18,"Services","A646RC",2907
+1955,18,"Services","A646RC",3253
+1956,18,"Services","A646RC",3728
+1957,18,"Services","A646RC",4455
+1958,18,"Services","A646RC",4146
+1959,18,"Services","A646RC",6267
+1960,18,"Services","A646RC",6592
+1961,18,"Services","A646RC",6655
+1962,18,"Services","A646RC",7357
+1963,18,"Services","A646RC",7729
+1964,18,"Services","A646RC",8252
+1965,18,"Services","A646RC",9173
+1966,18,"Services","A646RC",9831
+1967,18,"Services","A646RC",10920
+1968,18,"Services","A646RC",12185
+1969,18,"Services","A646RC",13178
+1970,18,"Services","A646RC",14671
+1971,18,"Services","A646RC",16767
+1972,18,"Services","A646RC",18257
+1973,18,"Services","A646RC",19498
+1974,18,"Services","A646RC",23156
+1975,18,"Services","A646RC",26216
+1976,18,"Services","A646RC",28031
+1977,18,"Services","A646RC",30939
+1978,18,"Services","A646RC",36976
+1979,18,"Services","A646RC",42863
+1980,18,"Services","A646RC",50344
+1981,18,"Services","A646RC",60033
+1982,18,"Services","A646RC",60660
+1983,18,"Services","A646RC",62947
+1984,18,"Services","A646RC",71094
+1985,18,"Services","A646RC",75722
+1986,18,"Services","A646RC",89552
+1987,18,"Services","A646RC",98389
+1988,18,"Services","A646RC",112547
+1989,18,"Services","A646RC",129539
+1990,18,"Services","A646RC",148608
+1991,18,"Services","A646RC",164795
+1992,18,"Services","A646RC",177745
+1993,18,"Services","A646RC",187076
+1994,18,"Services","A646RC",202566
+1995,18,"Services","A646RC",220369
+1996,18,"Services","A646RC",238805
+1997,18,"Services","A646RC",253916
+1998,18,"Services","A646RC",260414
+1999,18,"Services","A646RC",281187
+2000,18,"Services","A646RC",301056
+2001,18,"Services","A646RC",287244
+2002,18,"Services","A646RC",291397
+2003,18,"Services","A646RC",301290
+2004,18,"Services","A646RC",348388
+2005,18,"Services","A646RC",382236
+2006,18,"Services","A646RC",427086
+2007,18,"Services","A646RC",499561
+2008,18,"Services","A646RC",544255
+2009,18,"Services","A646RC",525382
+2010,18,"Services","A646RC",584326
+2011,18,"Services","A646RC",647408
+2012,18,"Services","A646RC",688103
+2013,18,"Services","A646RC",724059
+2014,18,"Services","A646RC",761591
+2015,18,"Services","A646RC",773936
+2016,18,"Services","A646RC",787970
+2017,18,"Services","A646RC",841603
+2018,18,"Services","A646RC",868795
+2019,18,"Services","A646RC",894635
+2020,18,"Services","A646RC",742190
+2021,18,"Services","A646RC",821455
+2022,18,"Services","A646RC",966097
+2023,18,"Services","A646RC",1049002
+2024,18,"Services","A646RC",1157378
+2025,18,"Services","A646RC",1206948
+1929,19,"Imports","B021RC",5556
+1930,19,"Imports","B021RC",4121
+1931,19,"Imports","B021RC",2905
+1932,19,"Imports","B021RC",1932
+1933,19,"Imports","B021RC",1929
+1934,19,"Imports","B021RC",2239
+1935,19,"Imports","B021RC",2982
+1936,19,"Imports","B021RC",3154
+1937,19,"Imports","B021RC",3961
+1938,19,"Imports","B021RC",2845
+1939,19,"Imports","B021RC",3136
+1940,19,"Imports","B021RC",3426
+1941,19,"Imports","B021RC",4449
+1942,19,"Imports","B021RC",4627
+1943,19,"Imports","B021RC",6280
+1944,19,"Imports","B021RC",6904
+1945,19,"Imports","B021RC",7547
+1946,19,"Imports","B021RC",6974
+1947,19,"Imports","B021RC",7933
+1948,19,"Imports","B021RC",10060
+1949,19,"Imports","B021RC",9249
+1950,19,"Imports","B021RC",11612
+1951,19,"Imports","B021RC",14586
+1952,19,"Imports","B021RC",15295
+1953,19,"Imports","B021RC",16014
+1954,19,"Imports","B021RC",15432
+1955,19,"Imports","B021RC",17199
+1956,19,"Imports","B021RC",18923
+1957,19,"Imports","B021RC",19942
+1958,19,"Imports","B021RC",20022
+1959,19,"Imports","B021RC",22328
+1960,19,"Imports","B021RC",22841
+1961,19,"Imports","B021RC",22688
+1962,19,"Imports","B021RC",24965
+1963,19,"Imports","B021RC",26135
+1964,19,"Imports","B021RC",28104
+1965,19,"Imports","B021RC",31529
+1966,19,"Imports","B021RC",37057
+1967,19,"Imports","B021RC",39912
+1968,19,"Imports","B021RC",46556
+1969,19,"Imports","B021RC",50491
+1970,19,"Imports","B021RC",55760
+1971,19,"Imports","B021RC",62342
+1972,19,"Imports","B021RC",74216
+1973,19,"Imports","B021RC",91159
+1974,19,"Imports","B021RC",127465
+1975,19,"Imports","B021RC",122730
+1976,19,"Imports","B021RC",151146
+1977,19,"Imports","B021RC",182443
+1978,19,"Imports","B021RC",212250
+1979,19,"Imports","B021RC",252674
+1980,19,"Imports","B021RC",293828
+1981,19,"Imports","B021RC",317758
+1982,19,"Imports","B021RC",303184
+1983,19,"Imports","B021RC",328638
+1984,19,"Imports","B021RC",405107
+1985,19,"Imports","B021RC",417229
+1986,19,"Imports","B021RC",452867
+1987,19,"Imports","B021RC",508713
+1988,19,"Imports","B021RC",553993
+1989,19,"Imports","B021RC",591031
+1990,19,"Imports","B021RC",629728
+1991,19,"Imports","B021RC",623544
+1992,19,"Imports","B021RC",667791
+1993,19,"Imports","B021RC",719973
+1994,19,"Imports","B021RC",813424
+1995,19,"Imports","B021RC",902572
+1996,19,"Imports","B021RC",963966
+1997,19,"Imports","B021RC",1055774
+1998,19,"Imports","B021RC",1115690
+1999,19,"Imports","B021RC",1252460
+2000,19,"Imports","B021RC",1477184
+2001,19,"Imports","B021RC",1403559
+2002,19,"Imports","B021RC",1437724
+2003,19,"Imports","B021RC",1557120
+2004,19,"Imports","B021RC",1810504
+2005,19,"Imports","B021RC",2041482
+2006,19,"Imports","B021RC",2256623
+2007,19,"Imports","B021RC",2395228
+2008,19,"Imports","B021RC",2576151
+2009,19,"Imports","B021RC",2001927
+2010,19,"Imports","B021RC",2389555
+2011,19,"Imports","B021RC",2695480
+2012,19,"Imports","B021RC",2769317
+2013,19,"Imports","B021RC",2766375
+2014,19,"Imports","B021RC",2887445
+2015,19,"Imports","B021RC",2794942
+2016,19,"Imports","B021RC",2738830
+2017,19,"Imports","B021RC",2931589
+2018,19,"Imports","B021RC",3131166
+2019,19,"Imports","B021RC",3116681
+2020,19,"Imports","B021RC",2782391
+2021,19,"Imports","B021RC",3417930
+2022,19,"Imports","B021RC",3974319
+2023,19,"Imports","B021RC",3859856
+2024,19,"Imports","B021RC",4113828
+2025,19,"Imports","B021RC",4246147
+1929,20,"Goods","A255RC",4463
+1930,20,"Goods","A255RC",3104
+1931,20,"Goods","A255RC",2120
+1932,20,"Goods","A255RC",1343
+1933,20,"Goods","A255RC",1510
+1934,20,"Goods","A255RC",1763
+1935,20,"Goods","A255RC",2462
+1936,20,"Goods","A255RC",2546
+1937,20,"Goods","A255RC",3181
+1938,20,"Goods","A255RC",2173
+1939,20,"Goods","A255RC",2409
+1940,20,"Goods","A255RC",2698
+1941,20,"Goods","A255RC",3416
+1942,20,"Goods","A255RC",2744
+1943,20,"Goods","A255RC",3442
+1944,20,"Goods","A255RC",3813
+1945,20,"Goods","A255RC",3893
+1946,20,"Goods","A255RC",5067
+1947,20,"Goods","A255RC",5973
+1948,20,"Goods","A255RC",7557
+1949,20,"Goods","A255RC",6874
+1950,20,"Goods","A255RC",9081
+1951,20,"Goods","A255RC",11176
+1952,20,"Goods","A255RC",10838
+1953,20,"Goods","A255RC",10975
+1954,20,"Goods","A255RC",10353
+1955,20,"Goods","A255RC",11527
+1956,20,"Goods","A255RC",12803
+1957,20,"Goods","A255RC",13291
+1958,20,"Goods","A255RC",12951
+1959,20,"Goods","A255RC",15310
+1960,20,"Goods","A255RC",15220
+1961,20,"Goods","A255RC",15053
+1962,20,"Goods","A255RC",16869
+1963,20,"Goods","A255RC",17713
+1964,20,"Goods","A255RC",19392
+1965,20,"Goods","A255RC",22247
+1966,20,"Goods","A255RC",26334
+1967,20,"Goods","A255RC",27761
+1968,20,"Goods","A255RC",33946
+1969,20,"Goods","A255RC",36813
+1970,20,"Goods","A255RC",40855
+1971,20,"Goods","A255RC",46550
+1972,20,"Goods","A255RC",56934
+1973,20,"Goods","A255RC",71843
+1974,20,"Goods","A255RC",104520
+1975,20,"Goods","A255RC",99000
+1976,20,"Goods","A255RC",124632
+1977,20,"Goods","A255RC",152629
+1978,20,"Goods","A255RC",177409
+1979,20,"Goods","A255RC",212787
+1980,20,"Goods","A255RC",248570
+1981,20,"Goods","A255RC",267814
+1982,20,"Goods","A255RC",250542
+1983,20,"Goods","A255RC",272677
+1984,20,"Goods","A255RC",336316
+1985,20,"Goods","A255RC",343295
+1986,20,"Goods","A255RC",370006
+1987,20,"Goods","A255RC",414768
+1988,20,"Goods","A255RC",452125
+1989,20,"Goods","A255RC",484792
+1990,20,"Goods","A255RC",508071
+1991,20,"Goods","A255RC",500720
+1992,20,"Goods","A255RC",544927
+1993,20,"Goods","A255RC",592761
+1994,20,"Goods","A255RC",676812
+1995,20,"Goods","A255RC",757449
+1996,20,"Goods","A255RC",807448
+1997,20,"Goods","A255RC",885654
+1998,20,"Goods","A255RC",930751
+1999,20,"Goods","A255RC",1051210
+2000,20,"Goods","A255RC",1251173
+2001,20,"Goods","A255RC",1176188
+2002,20,"Goods","A255RC",1198852
+2003,20,"Goods","A255RC",1299036
+2004,20,"Goods","A255RC",1513620
+2005,20,"Goods","A255RC",1722751
+2006,20,"Goods","A255RC",1900640
+2007,20,"Goods","A255RC",2002720
+2008,20,"Goods","A255RC",2148678
+2009,20,"Goods","A255RC",1588115
+2010,20,"Goods","A255RC",1947044
+2011,20,"Goods","A255RC",2231132
+2012,20,"Goods","A255RC",2293265
+2013,20,"Goods","A255RC",2293888
+2014,20,"Goods","A255RC",2389313
+2015,20,"Goods","A255RC",2289591
+2016,20,"Goods","A255RC",2218696
+2017,20,"Goods","A255RC",2369900
+2018,20,"Goods","A255RC",2559050
+2019,20,"Goods","A255RC",2516686
+2020,20,"Goods","A255RC",2305093
+2021,20,"Goods","A255RC",2839604
+2022,20,"Goods","A255RC",3256890
+2023,20,"Goods","A255RC",3092569
+2024,20,"Goods","A255RC",3267309
+2025,20,"Goods","A255RC",3350280
+1929,21,"Services","B656RC",1093
+1930,21,"Services","B656RC",1017
+1931,21,"Services","B656RC",785
+1932,21,"Services","B656RC",589
+1933,21,"Services","B656RC",419
+1934,21,"Services","B656RC",476
+1935,21,"Services","B656RC",520
+1936,21,"Services","B656RC",608
+1937,21,"Services","B656RC",780
+1938,21,"Services","B656RC",672
+1939,21,"Services","B656RC",727
+1940,21,"Services","B656RC",728
+1941,21,"Services","B656RC",1033
+1942,21,"Services","B656RC",1883
+1943,21,"Services","B656RC",2838
+1944,21,"Services","B656RC",3091
+1945,21,"Services","B656RC",3654
+1946,21,"Services","B656RC",1907
+1947,21,"Services","B656RC",1960
+1948,21,"Services","B656RC",2503
+1949,21,"Services","B656RC",2375
+1950,21,"Services","B656RC",2531
+1951,21,"Services","B656RC",3410
+1952,21,"Services","B656RC",4457
+1953,21,"Services","B656RC",5039
+1954,21,"Services","B656RC",5079
+1955,21,"Services","B656RC",5672
+1956,21,"Services","B656RC",6120
+1957,21,"Services","B656RC",6651
+1958,21,"Services","B656RC",7071
+1959,21,"Services","B656RC",7018
+1960,21,"Services","B656RC",7621
+1961,21,"Services","B656RC",7635
+1962,21,"Services","B656RC",8096
+1963,21,"Services","B656RC",8422
+1964,21,"Services","B656RC",8713
+1965,21,"Services","B656RC",9282
+1966,21,"Services","B656RC",10723
+1967,21,"Services","B656RC",12151
+1968,21,"Services","B656RC",12610
+1969,21,"Services","B656RC",13678
+1970,21,"Services","B656RC",14905
+1971,21,"Services","B656RC",15792
+1972,21,"Services","B656RC",17282
+1973,21,"Services","B656RC",19316
+1974,21,"Services","B656RC",22945
+1975,21,"Services","B656RC",23730
+1976,21,"Services","B656RC",26514
+1977,21,"Services","B656RC",29814
+1978,21,"Services","B656RC",34840
+1979,21,"Services","B656RC",39887
+1980,21,"Services","B656RC",45258
+1981,21,"Services","B656RC",49944
+1982,21,"Services","B656RC",52642
+1983,21,"Services","B656RC",55961
+1984,21,"Services","B656RC",68791
+1985,21,"Services","B656RC",73934
+1986,21,"Services","B656RC",82861
+1987,21,"Services","B656RC",93945
+1988,21,"Services","B656RC",101869
+1989,21,"Services","B656RC",106239
+1990,21,"Services","B656RC",121657
+1991,21,"Services","B656RC",122824
+1992,21,"Services","B656RC",122864
+1993,21,"Services","B656RC",127212
+1994,21,"Services","B656RC",136612
+1995,21,"Services","B656RC",145123
+1996,21,"Services","B656RC",156518
+1997,21,"Services","B656RC",170120
+1998,21,"Services","B656RC",184939
+1999,21,"Services","B656RC",201251
+2000,21,"Services","B656RC",226011
+2001,21,"Services","B656RC",227371
+2002,21,"Services","B656RC",238872
+2003,21,"Services","B656RC",258084
+2004,21,"Services","B656RC",296883
+2005,21,"Services","B656RC",318732
+2006,21,"Services","B656RC",355983
+2007,21,"Services","B656RC",392507
+2008,21,"Services","B656RC",427472
+2009,21,"Services","B656RC",413812
+2010,21,"Services","B656RC",442512
+2011,21,"Services","B656RC",464349
+2012,21,"Services","B656RC",476052
+2013,21,"Services","B656RC",472487
+2014,21,"Services","B656RC",498132
+2015,21,"Services","B656RC",505351
+2016,21,"Services","B656RC",520134
+2017,21,"Services","B656RC",561688
+2018,21,"Services","B656RC",572116
+2019,21,"Services","B656RC",599995
+2020,21,"Services","B656RC",477298
+2021,21,"Services","B656RC",578326
+2022,21,"Services","B656RC",717429
+2023,21,"Services","B656RC",767287
+2024,21,"Services","B656RC",846519
+2025,21,"Services","B656RC",895867
+1929,22,"Government consumption expenditures and gross investment","A822RC",9622
+1930,22,"Government consumption expenditures and gross investment","A822RC",10273
+1931,22,"Government consumption expenditures and gross investment","A822RC",10169
+1932,22,"Government consumption expenditures and gross investment","A822RC",8946
+1933,22,"Government consumption expenditures and gross investment","A822RC",8875
+1934,22,"Government consumption expenditures and gross investment","A822RC",10721
+1935,22,"Government consumption expenditures and gross investment","A822RC",11151
+1936,22,"Government consumption expenditures and gross investment","A822RC",13398
+1937,22,"Government consumption expenditures and gross investment","A822RC",13119
+1938,22,"Government consumption expenditures and gross investment","A822RC",14170
+1939,22,"Government consumption expenditures and gross investment","A822RC",15165
+1940,22,"Government consumption expenditures and gross investment","A822RC",15562
+1941,22,"Government consumption expenditures and gross investment","A822RC",27836
+1942,22,"Government consumption expenditures and gross investment","A822RC",65440
+1943,22,"Government consumption expenditures and gross investment","A822RC",98023
+1944,22,"Government consumption expenditures and gross investment","A822RC",108643
+1945,22,"Government consumption expenditures and gross investment","A822RC",96396
+1946,22,"Government consumption expenditures and gross investment","A822RC",43027
+1947,22,"Government consumption expenditures and gross investment","A822RC",39827
+1948,22,"Government consumption expenditures and gross investment","A822RC",43755
+1949,22,"Government consumption expenditures and gross investment","A822RC",49808
+1950,22,"Government consumption expenditures and gross investment","A822RC",50515
+1951,22,"Government consumption expenditures and gross investment","A822RC",73304
+1952,22,"Government consumption expenditures and gross investment","A822RC",89583
+1953,22,"Government consumption expenditures and gross investment","A822RC",96765
+1954,22,"Government consumption expenditures and gross investment","A822RC",92467
+1955,22,"Government consumption expenditures and gross investment","A822RC",92958
+1956,22,"Government consumption expenditures and gross investment","A822RC",98180
+1957,22,"Government consumption expenditures and gross investment","A822RC",107163
+1958,22,"Government consumption expenditures and gross investment","A822RC",114138
+1959,22,"Government consumption expenditures and gross investment","A822RC",118458
+1960,22,"Government consumption expenditures and gross investment","A822RC",120520
+1961,22,"Government consumption expenditures and gross investment","A822RC",129237
+1962,22,"Government consumption expenditures and gross investment","A822RC",140287
+1963,22,"Government consumption expenditures and gross investment","A822RC",147193
+1964,22,"Government consumption expenditures and gross investment","A822RC",154763
+1965,22,"Government consumption expenditures and gross investment","A822RC",164053
+1966,22,"Government consumption expenditures and gross investment","A822RC",185444
+1967,22,"Government consumption expenditures and gross investment","A822RC",207018
+1968,22,"Government consumption expenditures and gross investment","A822RC",225526
+1969,22,"Government consumption expenditures and gross investment","A822RC",238984
+1970,22,"Government consumption expenditures and gross investment","A822RC",252581
+1971,22,"Government consumption expenditures and gross investment","A822RC",267468
+1972,22,"Government consumption expenditures and gross investment","A822RC",286189
+1973,22,"Government consumption expenditures and gross investment","A822RC",304765
+1974,22,"Government consumption expenditures and gross investment","A822RC",341370
+1975,22,"Government consumption expenditures and gross investment","A822RC",381128
+1976,22,"Government consumption expenditures and gross investment","A822RC",404153
+1977,22,"Government consumption expenditures and gross investment","A822RC",434331
+1978,22,"Government consumption expenditures and gross investment","A822RC",476336
+1979,22,"Government consumption expenditures and gross investment","A822RC",524802
+1980,22,"Government consumption expenditures and gross investment","A822RC",589598
+1981,22,"Government consumption expenditures and gross investment","A822RC",654381
+1982,22,"Government consumption expenditures and gross investment","A822RC",711473
+1983,22,"Government consumption expenditures and gross investment","A822RC",766557
+1984,22,"Government consumption expenditures and gross investment","A822RC",827910
+1985,22,"Government consumption expenditures and gross investment","A822RC",910516
+1986,22,"Government consumption expenditures and gross investment","A822RC",976076
+1987,22,"Government consumption expenditures and gross investment","A822RC",1031530
+1988,22,"Government consumption expenditures and gross investment","A822RC",1078855
+1989,22,"Government consumption expenditures and gross investment","A822RC",1151862
+1990,22,"Government consumption expenditures and gross investment","A822RC",1238556
+1991,22,"Government consumption expenditures and gross investment","A822RC",1298951
+1992,22,"Government consumption expenditures and gross investment","A822RC",1344500
+1993,22,"Government consumption expenditures and gross investment","A822RC",1364922
+1994,22,"Government consumption expenditures and gross investment","A822RC",1402274
+1995,22,"Government consumption expenditures and gross investment","A822RC",1449431
+1996,22,"Government consumption expenditures and gross investment","A822RC",1492848
+1997,22,"Government consumption expenditures and gross investment","A822RC",1547133
+1998,22,"Government consumption expenditures and gross investment","A822RC",1611609
+1999,22,"Government consumption expenditures and gross investment","A822RC",1719905
+2000,22,"Government consumption expenditures and gross investment","A822RC",1826438
+2001,22,"Government consumption expenditures and gross investment","A822RC",1950034
+2002,22,"Government consumption expenditures and gross investment","A822RC",2089495
+2003,22,"Government consumption expenditures and gross investment","A822RC",2210600
+2004,22,"Government consumption expenditures and gross investment","A822RC",2338123
+2005,22,"Government consumption expenditures and gross investment","A822RC",2475313
+2006,22,"Government consumption expenditures and gross investment","A822RC",2623846
+2007,22,"Government consumption expenditures and gross investment","A822RC",2790556
+2008,22,"Government consumption expenditures and gross investment","A822RC",2983035
+2009,22,"Government consumption expenditures and gross investment","A822RC",3076338
+2010,22,"Government consumption expenditures and gross investment","A822RC",3155551
+2011,22,"Government consumption expenditures and gross investment","A822RC",3147929
+2012,22,"Government consumption expenditures and gross investment","A822RC",3136471
+2013,22,"Government consumption expenditures and gross investment","A822RC",3132576
+2014,22,"Government consumption expenditures and gross investment","A822RC",3168607
+2015,22,"Government consumption expenditures and gross investment","A822RC",3233420
+2016,22,"Government consumption expenditures and gross investment","A822RC",3303031
+2017,22,"Government consumption expenditures and gross investment","A822RC",3397141
+2018,22,"Government consumption expenditures and gross investment","A822RC",3590381
+2019,22,"Government consumption expenditures and gross investment","A822RC",3785995
+2020,22,"Government consumption expenditures and gross investment","A822RC",3999096
+2021,22,"Government consumption expenditures and gross investment","A822RC",4208652
+2022,22,"Government consumption expenditures and gross investment","A822RC",4458157
+2023,22,"Government consumption expenditures and gross investment","A822RC",4741151
+2024,22,"Government consumption expenditures and gross investment","A822RC",5041143
+2025,22,"Government consumption expenditures and gross investment","A822RC",5275101
+1929,23,"Federal","A823RC",1907
+1930,23,"Federal","A823RC",2017
+1931,23,"Federal","A823RC",2067
+1932,23,"Federal","A823RC",2006
+1933,23,"Federal","A823RC",2458
+1934,23,"Federal","A823RC",3457
+1935,23,"Federal","A823RC",3569
+1936,23,"Federal","A823RC",5777
+1937,23,"Federal","A823RC",5291
+1938,23,"Federal","A823RC",5915
+1939,23,"Federal","A823RC",6237
+1940,23,"Federal","A823RC",6837
+1941,23,"Federal","A823RC",19109
+1942,23,"Federal","A823RC",56699
+1943,23,"Federal","A823RC",89488
+1944,23,"Federal","A823RC",100086
+1945,23,"Federal","A823RC",87222
+1946,23,"Federal","A823RC",31986
+1947,23,"Federal","A823RC",25736
+1948,23,"Federal","A823RC",27041
+1949,23,"Federal","A823RC",30423
+1950,23,"Federal","A823RC",29418
+1951,23,"Federal","A823RC",49947
+1952,23,"Federal","A823RC",64815
+1953,23,"Federal","A823RC",70274
+1954,23,"Federal","A823RC",63255
+1955,23,"Federal","A823RC",61015
+1956,23,"Federal","A823RC",63115
+1957,23,"Federal","A823RC",68453
+1958,23,"Federal","A823RC",71521
+1959,23,"Federal","A823RC",73579
+1960,23,"Federal","A823RC",72875
+1961,23,"Federal","A823RC",77379
+1962,23,"Federal","A823RC",85518
+1963,23,"Federal","A823RC",87875
+1964,23,"Federal","A823RC",90256
+1965,23,"Federal","A823RC",93196
+1966,23,"Federal","A823RC",106575
+1967,23,"Federal","A823RC",120006
+1968,23,"Federal","A823RC",127963
+1969,23,"Federal","A823RC",131193
+1970,23,"Federal","A823RC",132805
+1971,23,"Federal","A823RC",134478
+1972,23,"Federal","A823RC",141646
+1973,23,"Federal","A823RC",146185
+1974,23,"Federal","A823RC",158835
+1975,23,"Federal","A823RC",173729
+1976,23,"Federal","A823RC",184800
+1977,23,"Federal","A823RC",200339
+1978,23,"Federal","A823RC",218922
+1979,23,"Federal","A823RC",240574
+1980,23,"Federal","A823RC",274870
+1981,23,"Federal","A823RC",313980
+1982,23,"Federal","A823RC",348336
+1983,23,"Federal","A823RC",382357
+1984,23,"Federal","A823RC",411805
+1985,23,"Federal","A823RC",452909
+1986,23,"Federal","A823RC",481658
+1987,23,"Federal","A823RC",502785
+1988,23,"Federal","A823RC",511440
+1989,23,"Federal","A823RC",534104
+1990,23,"Federal","A823RC",562377
+1991,23,"Federal","A823RC",582936
+1992,23,"Federal","A823RC",588453
+1993,23,"Federal","A823RC",580169
+1994,23,"Federal","A823RC",574684
+1995,23,"Federal","A823RC",576682
+1996,23,"Federal","A823RC",579159
+1997,23,"Federal","A823RC",583289
+1998,23,"Federal","A823RC",585515
+1999,23,"Federal","A823RC",610722
+2000,23,"Federal","A823RC",633069
+2001,23,"Federal","A823RC",670212
+2002,23,"Federal","A823RC",743097
+2003,23,"Federal","A823RC",826769
+2004,23,"Federal","A823RC",892123
+2005,23,"Federal","A823RC",947787
+2006,23,"Federal","A823RC",1001189
+2007,23,"Federal","A823RC",1051025
+2008,23,"Federal","A823RC",1151960
+2009,23,"Federal","A823RC",1220785
+2010,23,"Federal","A823RC",1300157
+2011,23,"Federal","A823RC",1299763
+2012,23,"Federal","A823RC",1287010
+2013,23,"Federal","A823RC",1227384
+2014,23,"Federal","A823RC",1217072
+2015,23,"Federal","A823RC",1222777
+2016,23,"Federal","A823RC",1237353
+2017,23,"Federal","A823RC",1266054
+2018,23,"Federal","A823RC",1346295
+2019,23,"Federal","A823RC",1419500
+2020,23,"Federal","A823RC",1524564
+2021,23,"Federal","A823RC",1604398
+2022,23,"Federal","A823RC",1640500
+2023,23,"Federal","A823RC",1765700
+2024,23,"Federal","A823RC",1892402
+2025,23,"Federal","A823RC",1966927
+1929,24,"National defense","A824RC",1056
+1930,24,"National defense","A824RC",1090
+1931,24,"National defense","A824RC",1081
+1932,24,"National defense","A824RC",1051
+1933,24,"National defense","A824RC",999
+1934,24,"National defense","A824RC",944
+1935,24,"National defense","A824RC",1174
+1936,24,"National defense","A824RC",1401
+1937,24,"National defense","A824RC",1448
+1938,24,"National defense","A824RC",1513
+1939,24,"National defense","A824RC",1667
+1940,24,"National defense","A824RC",2791
+1941,24,"National defense","A824RC",15368
+1942,24,"National defense","A824RC",53491
+1943,24,"National defense","A824RC",86801
+1944,24,"National defense","A824RC",97272
+1945,24,"National defense","A824RC",84786
+1946,24,"National defense","A824RC",27995
+1947,24,"National defense","A824RC",21072
+1948,24,"National defense","A824RC",20887
+1949,24,"National defense","A824RC",22341
+1950,24,"National defense","A824RC",22649
+1951,24,"National defense","A824RC",43689
+1952,24,"National defense","A824RC",57413
+1953,24,"National defense","A824RC",61134
+1954,24,"National defense","A824RC",54448
+1955,24,"National defense","A824RC",52363
+1956,24,"National defense","A824RC",54958
+1957,24,"National defense","A824RC",59941
+1958,24,"National defense","A824RC",62220
+1959,24,"National defense","A824RC",60945
+1960,24,"National defense","A824RC",60901
+1961,24,"National defense","A824RC",64543
+1962,24,"National defense","A824RC",69701
+1963,24,"National defense","A824RC",70002
+1964,24,"National defense","A824RC",69728
+1965,24,"National defense","A824RC",70583
+1966,24,"National defense","A824RC",82471
+1967,24,"National defense","A824RC",95034
+1968,24,"National defense","A824RC",101357
+1969,24,"National defense","A824RC",102067
+1970,24,"National defense","A824RC",100710
+1971,24,"National defense","A824RC",97995
+1972,24,"National defense","A824RC",100714
+1973,24,"National defense","A824RC",102635
+1974,24,"National defense","A824RC",109894
+1975,24,"National defense","A824RC",117976
+1976,24,"National defense","A824RC",124952
+1977,24,"National defense","A824RC",134408
+1978,24,"National defense","A824RC",145181
+1979,24,"National defense","A824RC",160587
+1980,24,"National defense","A824RC",183405
+1981,24,"National defense","A824RC",213372
+1982,24,"National defense","A824RC",245404
+1983,24,"National defense","A824RC",272055
+1984,24,"National defense","A824RC",298764
+1985,24,"National defense","A824RC",329501
+1986,24,"National defense","A824RC",352359
+1987,24,"National defense","A824RC",372385
+1988,24,"National defense","A824RC",382101
+1989,24,"National defense","A824RC",391228
+1990,24,"National defense","A824RC",405007
+1991,24,"National defense","A824RC",414041
+1992,24,"National defense","A824RC",406465
+1993,24,"National defense","A824RC",391646
+1994,24,"National defense","A824RC",382114
+1995,24,"National defense","A824RC",377159
+1996,24,"National defense","A824RC",377261
+1997,24,"National defense","A824RC",371990
+1998,24,"National defense","A824RC",368753
+1999,24,"National defense","A824RC",383254
+2000,24,"National defense","A824RC",392570
+2001,24,"National defense","A824RC",413162
+2002,24,"National defense","A824RC",458932
+2003,24,"National defense","A824RC",521221
+2004,24,"National defense","A824RC",569878
+2005,24,"National defense","A824RC",609437
+2006,24,"National defense","A824RC",640814
+2007,24,"National defense","A824RC",679264
+2008,24,"National defense","A824RC",750336
+2009,24,"National defense","A824RC",787565
+2010,24,"National defense","A824RC",827971
+2011,24,"National defense","A824RC",833978
+2012,24,"National defense","A824RC",814175
+2013,24,"National defense","A824RC",764319
+2014,24,"National defense","A824RC",744053
+2015,24,"National defense","A824RC",730372
+2016,24,"National defense","A824RC",729434
+2017,24,"National defense","A824RC",748294
+2018,24,"National defense","A824RC",795065
+2019,24,"National defense","A824RC",849506
+2020,24,"National defense","A824RC",884863
+2021,24,"National defense","A824RC",909095
+2022,24,"National defense","A824RC",929596
+2023,24,"National defense","A824RC",1003971
+2024,24,"National defense","A824RC",1082721
+2025,24,"National defense","A824RC",1143368
+1929,25,"Nondefense","A825RC",851
+1930,25,"Nondefense","A825RC",926
+1931,25,"Nondefense","A825RC",986
+1932,25,"Nondefense","A825RC",955
+1933,25,"Nondefense","A825RC",1459
+1934,25,"Nondefense","A825RC",2512
+1935,25,"Nondefense","A825RC",2395
+1936,25,"Nondefense","A825RC",4376
+1937,25,"Nondefense","A825RC",3843
+1938,25,"Nondefense","A825RC",4402
+1939,25,"Nondefense","A825RC",4570
+1940,25,"Nondefense","A825RC",4046
+1941,25,"Nondefense","A825RC",3741
+1942,25,"Nondefense","A825RC",3207
+1943,25,"Nondefense","A825RC",2687
+1944,25,"Nondefense","A825RC",2814
+1945,25,"Nondefense","A825RC",2435
+1946,25,"Nondefense","A825RC",3991
+1947,25,"Nondefense","A825RC",4663
+1948,25,"Nondefense","A825RC",6154
+1949,25,"Nondefense","A825RC",8082
+1950,25,"Nondefense","A825RC",6769
+1951,25,"Nondefense","A825RC",6258
+1952,25,"Nondefense","A825RC",7402
+1953,25,"Nondefense","A825RC",9140
+1954,25,"Nondefense","A825RC",8807
+1955,25,"Nondefense","A825RC",8653
+1956,25,"Nondefense","A825RC",8156
+1957,25,"Nondefense","A825RC",8513
+1958,25,"Nondefense","A825RC",9301
+1959,25,"Nondefense","A825RC",12633
+1960,25,"Nondefense","A825RC",11974
+1961,25,"Nondefense","A825RC",12836
+1962,25,"Nondefense","A825RC",15818
+1963,25,"Nondefense","A825RC",17873
+1964,25,"Nondefense","A825RC",20528
+1965,25,"Nondefense","A825RC",22613
+1966,25,"Nondefense","A825RC",24104
+1967,25,"Nondefense","A825RC",24972
+1968,25,"Nondefense","A825RC",26606
+1969,25,"Nondefense","A825RC",29126
+1970,25,"Nondefense","A825RC",32095
+1971,25,"Nondefense","A825RC",36483
+1972,25,"Nondefense","A825RC",40932
+1973,25,"Nondefense","A825RC",43550
+1974,25,"Nondefense","A825RC",48940
+1975,25,"Nondefense","A825RC",55753
+1976,25,"Nondefense","A825RC",59848
+1977,25,"Nondefense","A825RC",65931
+1978,25,"Nondefense","A825RC",73741
+1979,25,"Nondefense","A825RC",79987
+1980,25,"Nondefense","A825RC",91465
+1981,25,"Nondefense","A825RC",100608
+1982,25,"Nondefense","A825RC",102932
+1983,25,"Nondefense","A825RC",110302
+1984,25,"Nondefense","A825RC",113041
+1985,25,"Nondefense","A825RC",123408
+1986,25,"Nondefense","A825RC",129298
+1987,25,"Nondefense","A825RC",130400
+1988,25,"Nondefense","A825RC",129339
+1989,25,"Nondefense","A825RC",142876
+1990,25,"Nondefense","A825RC",157370
+1991,25,"Nondefense","A825RC",168896
+1992,25,"Nondefense","A825RC",181988
+1993,25,"Nondefense","A825RC",188523
+1994,25,"Nondefense","A825RC",192570
+1995,25,"Nondefense","A825RC",199523
+1996,25,"Nondefense","A825RC",201898
+1997,25,"Nondefense","A825RC",211299
+1998,25,"Nondefense","A825RC",216763
+1999,25,"Nondefense","A825RC",227468
+2000,25,"Nondefense","A825RC",240499
+2001,25,"Nondefense","A825RC",257050
+2002,25,"Nondefense","A825RC",284164
+2003,25,"Nondefense","A825RC",305548
+2004,25,"Nondefense","A825RC",322245
+2005,25,"Nondefense","A825RC",338350
+2006,25,"Nondefense","A825RC",360375
+2007,25,"Nondefense","A825RC",371761
+2008,25,"Nondefense","A825RC",401625
+2009,25,"Nondefense","A825RC",433220
+2010,25,"Nondefense","A825RC",472187
+2011,25,"Nondefense","A825RC",465785
+2012,25,"Nondefense","A825RC",472835
+2013,25,"Nondefense","A825RC",463065
+2014,25,"Nondefense","A825RC",473019
+2015,25,"Nondefense","A825RC",492405
+2016,25,"Nondefense","A825RC",507919
+2017,25,"Nondefense","A825RC",517761
+2018,25,"Nondefense","A825RC",551230
+2019,25,"Nondefense","A825RC",569993
+2020,25,"Nondefense","A825RC",639700
+2021,25,"Nondefense","A825RC",695303
+2022,25,"Nondefense","A825RC",710904
+2023,25,"Nondefense","A825RC",761729
+2024,25,"Nondefense","A825RC",809681
+2025,25,"Nondefense","A825RC",823559
+1929,26,"State and local","A829RC",7714
+1930,26,"State and local","A829RC",8256
+1931,26,"State and local","A829RC",8102
+1932,26,"State and local","A829RC",6940
+1933,26,"State and local","A829RC",6417
+1934,26,"State and local","A829RC",7264
+1935,26,"State and local","A829RC",7582
+1936,26,"State and local","A829RC",7622
+1937,26,"State and local","A829RC",7828
+1938,26,"State and local","A829RC",8256
+1939,26,"State and local","A829RC",8929
+1940,26,"State and local","A829RC",8725
+1941,26,"State and local","A829RC",8727
+1942,26,"State and local","A829RC",8742
+1943,26,"State and local","A829RC",8534
+1944,26,"State and local","A829RC",8558
+1945,26,"State and local","A829RC",9174
+1946,26,"State and local","A829RC",11041
+1947,26,"State and local","A829RC",14091
+1948,26,"State and local","A829RC",16714
+1949,26,"State and local","A829RC",19385
+1950,26,"State and local","A829RC",21097
+1951,26,"State and local","A829RC",23356
+1952,26,"State and local","A829RC",24768
+1953,26,"State and local","A829RC",26490
+1954,26,"State and local","A829RC",29212
+1955,26,"State and local","A829RC",31943
+1956,26,"State and local","A829RC",35065
+1957,26,"State and local","A829RC",38710
+1958,26,"State and local","A829RC",42617
+1959,26,"State and local","A829RC",44879
+1960,26,"State and local","A829RC",47645
+1961,26,"State and local","A829RC",51858
+1962,26,"State and local","A829RC",54768
+1963,26,"State and local","A829RC",59318
+1964,26,"State and local","A829RC",64507
+1965,26,"State and local","A829RC",70858
+1966,26,"State and local","A829RC",78869
+1967,26,"State and local","A829RC",87012
+1968,26,"State and local","A829RC",97563
+1969,26,"State and local","A829RC",107791
+1970,26,"State and local","A829RC",119776
+1971,26,"State and local","A829RC",132990
+1972,26,"State and local","A829RC",144544
+1973,26,"State and local","A829RC",158580
+1974,26,"State and local","A829RC",182536
+1975,26,"State and local","A829RC",207399
+1976,26,"State and local","A829RC",219353
+1977,26,"State and local","A829RC",233992
+1978,26,"State and local","A829RC",257414
+1979,26,"State and local","A829RC",284228
+1980,26,"State and local","A829RC",314728
+1981,26,"State and local","A829RC",340401
+1982,26,"State and local","A829RC",363137
+1983,26,"State and local","A829RC",384200
+1984,26,"State and local","A829RC",416106
+1985,26,"State and local","A829RC",457607
+1986,26,"State and local","A829RC",494418
+1987,26,"State and local","A829RC",528745
+1988,26,"State and local","A829RC",567416
+1989,26,"State and local","A829RC",617758
+1990,26,"State and local","A829RC",676179
+1991,26,"State and local","A829RC",716014
+1992,26,"State and local","A829RC",756047
+1993,26,"State and local","A829RC",784753
+1994,26,"State and local","A829RC",827591
+1995,26,"State and local","A829RC",872749
+1996,26,"State and local","A829RC",913688
+1997,26,"State and local","A829RC",963844
+1998,26,"State and local","A829RC",1026093
+1999,26,"State and local","A829RC",1109183
+2000,26,"State and local","A829RC",1193369
+2001,26,"State and local","A829RC",1279822
+2002,26,"State and local","A829RC",1346398
+2003,26,"State and local","A829RC",1383830
+2004,26,"State and local","A829RC",1446000
+2005,26,"State and local","A829RC",1527526
+2006,26,"State and local","A829RC",1622657
+2007,26,"State and local","A829RC",1739531
+2008,26,"State and local","A829RC",1831075
+2009,26,"State and local","A829RC",1855553
+2010,26,"State and local","A829RC",1855394
+2011,26,"State and local","A829RC",1848166
+2012,26,"State and local","A829RC",1849460
+2013,26,"State and local","A829RC",1905193
+2014,26,"State and local","A829RC",1951535
+2015,26,"State and local","A829RC",2010643
+2016,26,"State and local","A829RC",2065678
+2017,26,"State and local","A829RC",2131087
+2018,26,"State and local","A829RC",2244086
+2019,26,"State and local","A829RC",2366496
+2020,26,"State and local","A829RC",2474532
+2021,26,"State and local","A829RC",2604254
+2022,26,"State and local","A829RC",2817657
+2023,26,"State and local","A829RC",2975451
+2024,26,"State and local","A829RC",3148741
+2025,26,"State and local","A829RC",3308173

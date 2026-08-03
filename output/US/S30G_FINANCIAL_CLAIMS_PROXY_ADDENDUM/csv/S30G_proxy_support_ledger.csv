@@ -5,3 +5,4 @@
 "NFC_SURPLUS_AFTER_NET_INTEREST_PROXY",1929,2025,97,97,0,0,1929,2025,"Annual inner alignment of NFC_NET_INT, NFC_NOS, NFC_NVA, and NFC_GVA as required by each identity."
 "NFC_SURPLUS_AFTER_NET_INTEREST_SHARE_NVA",1929,2025,97,97,0,0,1929,2025,"Annual inner alignment of NFC_NET_INT, NFC_NOS, NFC_NVA, and NFC_GVA as required by each identity."
 "NFC_SURPLUS_AFTER_NET_INTEREST_SHARE_GVA",1929,2025,97,97,0,0,1929,2025,"Annual inner alignment of NFC_NET_INT, NFC_NOS, NFC_NVA, and NFC_GVA as required by each identity."
+"CORP_IPP_INVESTMENT_SHARE",1901,2024,124,124,0,0,1901,2024,"Annual alignment of CORP IPP and total gross investment."

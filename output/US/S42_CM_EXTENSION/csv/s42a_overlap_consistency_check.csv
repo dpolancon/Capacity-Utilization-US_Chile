@@ -1,0 +1,2 @@
+"n_overlap_years","overlap_start","overlap_end","corr_levels","corr_first_diff","mean_abs_diff_levels","mean_abs_diff_first_diff","note","stamp"
+79,1947,2025,0.999999999971058,0.999999993223183,0.00000155778363843838,0.00000247806061797594,"Level offsets between chained indexes are absorbed by per-window anchoring.","DIAGNOSTIC_ONLY;S42_BRANCH"

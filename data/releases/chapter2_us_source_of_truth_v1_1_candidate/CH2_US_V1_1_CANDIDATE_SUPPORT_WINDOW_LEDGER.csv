@@ -57,3 +57,4 @@
 "NFC_SURPLUS_AFTER_NET_INTEREST_PROXY","distribution",1929,2025,1929,"complete_annual_intersection","no","no"
 "NFC_SURPLUS_AFTER_NET_INTEREST_SHARE_NVA","distribution",1929,2025,1929,"complete_annual_intersection","no","no"
 "NFC_SURPLUS_AFTER_NET_INTEREST_SHARE_GVA","distribution",1929,2025,1929,"complete_annual_intersection","no","no"
+"CORP_IPP_INVESTMENT_SHARE","contextual",1901,2024,1901,"complete_annual_intersection","no","no"

@@ -1,12 +1,3 @@
----
-type: data_manifest
-status: frozen
-depends_on: [data/provider_handoffs/US_BEA_FixedAssets/2026-06-11/HANDOFF.md]
-stage_scope: S30
-country: none
-last_updated: 2026-06-24
----
-
 # Chapter 2 US Source-of-Truth Dataset v1.1 Candidate
 
 - Status: release candidate only; not frozen and not tagged.

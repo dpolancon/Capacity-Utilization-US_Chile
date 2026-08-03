@@ -1,0 +1,32 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\title{\textbf{Section 3.1 IM-OLS Cointegration Estimation Matrix: U.S. NFC Transformation Elasticity (1929--2024)}}
+\author{\textbf{Department of Economics, UMass Amherst}}
+\date{August 2026}
+\begin{document}
+\maketitle
+
+\section*{Data Provenance and Estimation Summary}
+This report presents the empirical cointegration results for Section 3.1 of Chapter 2. All models are estimated via Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014) over the full NIPA sample window (1931--2024, $N=94$ observations after listwise deletion for the lag-1 conditioning variables $\omega_{t-1}$ and $\iota_{t-1}$). Point estimates are tuning-parameter free; coefficient and cointegration-test significance stars use Vogelsang \& Wagner (2014) fixed-$b$ critical values (Bartlett kernel, Newey-West bandwidth), interpolated by each model's bandwidth ratio and number of stochastic regressors -- see the significance note under each table. Distributional conditioning variables ($\omega_{t-1}$ and $\iota_{t-1}$) are centered at their 1929 initial values, preserving $\hat{\theta}_0$ as the capital elasticity at the initial state. VIF statistics are computed on the level regressors space. To ensure robustness against structural instability, each specification dynamically incorporates step level-shift dummies $D^{\text{step}}_{T_b}$ for structural breaks identified by a first-pass Bai-Perron residual audit.
+
+\FloatBarrier
+\section{Specification Set 1: Double Interactions ($k^{\text{cap}} \cdot \omega_{t-1}$)}
+\FloatBarrier
+\input{table_spec_set_1.tex}
+
+\FloatBarrier
+\section{Specification Set 2: Triple Interactions ($k^{\text{cap}} \cdot \omega_{t-1} \cdot \iota_{t-1}$)}
+\FloatBarrier
+\input{table_spec_set_2_part1.tex}
+
+\FloatBarrier
+\input{table_spec_set_2_part2.tex}
+
+\end{document}

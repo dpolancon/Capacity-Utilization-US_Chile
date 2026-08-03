@@ -5,7 +5,8 @@ depends_on:
   - chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
 stage_scope: S10
 country: US
-last_updated: 2026-06-24
+last_updated: 2026-08-01
+updated_by: S30G_IPP_INVESTMENT_SHARE_CONSTRUCTION
 title: Corporate Surplus and Financial Redistribution Lock
 aliases:
   - Corporate Surplus Theory Lock
@@ -15,7 +16,7 @@ chapter: 2
 stage: S30H
 scope: corporate surplus and financial redistribution
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-08-01
 tags:
   - chapter2
   - corporate-surplus
@@ -163,6 +164,9 @@ The fully cleaned corporate productive-origin surplus measure is therefore
 
 This is surplus remaining with NFCs after the bounded net-interest and
 miscellaneous-payment position. It is not productive-origin surplus.
+
+### Intellectual Property Products (IPP) Investment Share Addendum
+As detailed in [[Handoff_S30G_IPP_Investment_Share]], the U.S. candidate dataset v1.1 incorporates the corporate sector IPP gross investment share (`CORP_IPP_INVESTMENT_SHARE`), which acts as the empirical frontier conditioner $\iota_t$ in downstream cost-minimization envelope estimations.
 
 | Variable | Locked role |
 |---|---|

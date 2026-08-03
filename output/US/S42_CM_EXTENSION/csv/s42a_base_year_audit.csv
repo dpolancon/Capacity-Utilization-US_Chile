@@ -1,0 +1,6 @@
+"series","base_year","base_source","flag","note","stamp"
+"C_real_nipa (T10106)",2017,"inferred: year where nominal/real ratio ~ 1","ok","Common-base log spreads cancel the base in differences; anchoring absorbs level offsets.","DIAGNOSTIC_ONLY;S42_BRANCH"
+"M_real_nipa (T10106)",2017,"same table as C_real_nipa","ok","Common-base log spreads cancel the base in differences; anchoring absorbs level offsets.","DIAGNOSTIC_ONLY;S42_BRANCH"
+"FRED C_real/M_real (S15C panel)",2017,"FRED chained 2017$ (GDPCA family)","ok","Common-base log spreads cancel the base in differences; anchoring absorbs level offsets.","DIAGNOSTIC_ONLY;S42_BRANCH"
+"D14 p_GT deflators",2017,"constructed 2017=100 (D14 assertion PASS)","ok","Common-base log spreads cancel the base in differences; anchoring absorbs level offsets.","DIAGNOSTIC_ONLY;S42_BRANCH"
+"S15B P_2017 deflator",2017,"rebased 2017=100 in S15B","ok","Common-base log spreads cancel the base in differences; anchoring absorbs level offsets.","DIAGNOSTIC_ONLY;S42_BRANCH"

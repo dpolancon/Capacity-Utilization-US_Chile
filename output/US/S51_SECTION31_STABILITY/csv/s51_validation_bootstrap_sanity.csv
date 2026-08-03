@@ -1,0 +1,3 @@
+"case","hansen_p","gh_p","hansen_expected","gh_expected","hansen_ok","gh_ok"
+"cointegrated",0.535,0.005,"high (do not reject stability)","low (reject no-coint)",TRUE,TRUE
+"spurious",0.02,0.3,"low (reject stability)","high (do not reject no-coint)",TRUE,TRUE

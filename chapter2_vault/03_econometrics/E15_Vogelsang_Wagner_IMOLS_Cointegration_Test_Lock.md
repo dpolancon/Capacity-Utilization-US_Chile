@@ -6,7 +6,7 @@ depends_on:
   - chapter2_vault/03_econometrics/E10V_IMOLS_CPR_Active_Estimator_Lock.md
 stage_scope: all_stages
 country: US_CL
-last_updated: 2026-07-26
+last_updated: 2026-08-03
 updated_by: VOGELSANG_WAGNER_COINTEGRATION_LOCK
 layer: governance_constraint
 role: cointegration_test_lock
@@ -25,10 +25,12 @@ priority: reference
 # E15: Vogelsang-Wagner IM-OLS Cointegration Test Lock
 
 > [!IMPORTANT]
-> **Constitutional Declaration (Updated 2026-07-26)**: The **Vogelsang-Wagner (2015) Type 2 IM-OLS Test ($S_{\text{Type 2}}$)** has been fully operationalized via custom matrix algebra in `COMMON_S40_baseline_imols_cpr_estimation.R`. 
+> **Constitutional Declaration (Updated 2026-07-26)**: The **Vogelsang-Wagner (2014) Type 2 IM-OLS Test ($S_{\text{Type 2}}$)** has been fully operationalized via custom matrix algebra in `COMMON_S40_baseline_imols_cpr_estimation.R`. 
 > 
 > It stands alongside the **Shin (1994) LM stationarity test ($C_{\text{Shin}}$)** and the **Engle-Granger ADF test ($t_{\text{ADF}}$)** to form the complete **3-Test Cointegration Triad** reported across all empirical matrices.
 > *See [[E17_Cointegration_Significance_Stars_Lock]] for critical values and Star Reversal rules.*
+>
+> **2026-08-03 correction**: this test's Wald statistic construction was always sound and was never actually banned in practice (an apparent contradiction with E17 §2's older text, now reconciled). What *was* wrong — found and fixed on this date — were the critical values the statistic was compared against: a single hardcoded triple used for every model regardless of bandwidth or regressor count. E17 §2-3 now documents the corrected, bandwidth- and regressor-count-indexed fixed-$b$ lookup (`codes/COMMON_VW_fixedb_critical_values.R`); the citation is Vogelsang & Wagner (2014), *Journal of Econometrics* 178(2), 741–760 (per [[L00_Econometrics_References]]) — not 2015, and not volume 148 as an earlier draft of this correction mistakenly wrote.
 
 ---
 

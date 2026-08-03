@@ -4,7 +4,8 @@ status: active
 depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
 stage_scope: all_stages
 country: US_CL
-last_updated: 2026-07-26
+last_updated: 2026-08-01
+updated_by: TABLE_FIGURE_FORMATTING_RULE_LOCK
 layer: governance_constraint
 scope: all_agent_sessions
 authority_files:
@@ -121,14 +122,22 @@ Stage transitions must also respect the active contracts indexed by
 
 ---
 
-## LaTeX table formatting (locked)
+## LaTeX table & figure formatting (locked)
 
 - Bold text in `.tex` files must use `\textbf{}`. Never use Markdown `**` syntax.
-- All `\begin{table}` environments must use `[h!]` or `[H]` float specifiers.
-- Use `\FloatBarrier` (from `placeins` package) before each `\section` to prevent
-  tables from drifting across section boundaries.
-- Column widths must use explicit `p{Xcm}` sizing for journal-ready output.
-- Footnotes in tables use `\footnotesize` within a `\multicolumn{N}{p{Wcm}}{...}` cell.
+- All `\begin{table}` and `\begin{figure}` environments must use `[h!]` or `[H]` float specifiers.
+- Use `\FloatBarrier` (from `placeins` package) before each `\section` to prevent float drift.
+- Table and figure captions must always be placed at the **top** of their respective environments.
+- Every table and figure must include a detailed **note at the bottom**.
+  - For tables, footnotes/notes must be placed at the bottom of the tabular using `\multicolumn{N}{p{Wcm}}{\footnotesize ...}`.
+- Every single column in a table must use explicit `p{Xcm}` sizing with context-specific widths to ensure proper wrapping and layout.
+
+## LaTeX paragraph numbering (locked)
+
+- Section 3.1, 3.2, etc., represent subsections, and their inner headings represent subsubsections.
+- Paragraphs must be numbered using **only uppercase letters** (e.g. `\paragraph{A}`, `\paragraph{B}`, ..., `\paragraph{Z}`, `\paragraph{AA}`, etc.).
+- Paragraph headings must not repeat the preceding section or subsection numbers.
+- The paragraph letter counter must reset to `A` at the start of every subsection (`\subsection`) and subsubsection (`\subsubsection`).
 
 ---
 
