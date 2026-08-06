@@ -1,0 +1,37 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in,landscape]{geometry}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{makecell}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+\usepackage{hyperref}
+\title{\textbf{Section 3.2 IM-OLS Cointegration Estimation Matrix: Specification B Heterogeneous Capital (1929--2024)}}
+\author{\textbf{Department of Economics, UMass Amherst}}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section*{Data Provenance and Estimation Summary}
+This report presents the empirical cointegration results for Section 3.2 of Chapter 2 (Specification B). All models are estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS (Vogelsang et al. 2024) over the full NIPA sample window ($1931$--$2024$, $T=94$ observations after listwise deletion for lag-1 conditioning variables). Capital is disaggregated into non-residential structures ($k^{\text{NRC}}$) and the mechanization gap ($\kappa_t = k^{\text{ME}} - k^{\text{NRC}}$). To resolve multi-collinearity, all interaction terms are orthogonalized via Frisch-Waugh-Lovell (FWL) against base capital regressors and any detected Bai-Perron step dummies.
+
+\section*{Key Empirical Findings and Cointegration Verdict}
+\begin{enumerate}
+    \item \textbf{Cointegration Triad Verdict:} All estimated models reject the null hypothesis of no cointegration under the Engle-Granger Residual ADF test ($t_{\text{ADF}} \le -4.19, p < 0.05$). Crucially, after applying FWL detrending to the deterministic space and correcting the Shin LM accumulator, both the Shin LM test ($C_{\text{Shin}} \le 0.057$) and the Vogelsang-Wagner Type 2 Wald test ($S_{\text{Type 2}} \le 15.63$) fail to reject the null hypothesis of cointegration across all specifications. This provides robust mutual confirmation of stable cointegration under IM-OLS, confirming that structural break step-shifts absorb historical regime shifts without spurious trend contamination.
+    \item \textbf{Failure of Standard Wage Share (Set 1):} In standard interactive specifications (Models M2.2a/b and M2.4a/b), the unadjusted wage interaction ($\hat{\theta}_{\omega\kappa}$) is statistically insignificant ($t = 0.54$ for M2.2a; $t = -1.00$ for M2.2b), demonstrating that raw wage shares fail to capture accumulation-channel dynamics.
+    \item \textbf{Success of Effective Wage Pressure (Set 2):} When scaled by productive accumulation $(1-\iota_{t-1})$ in Set 2, the effective wage interaction ($\hat{\theta}_{\omega\kappa}$) becomes statistically significant with the theoretically predicted negative sign ($\hat{\theta}_{\omega\kappa} = -15.99, t = -3.24, p < 0.01$ in M2.6a; $\hat{\theta}_{\omega\kappa} = -12.29, t = -2.91, p < 0.05$ in M2.6b). High effective wage pressure forces defensive mechanization, increasing the organic composition of capital and depressing marginal capacity yield.
+\end{enumerate}
+
+\FloatBarrier
+\section{Specification Set 1: Standard Wage Interaction ($k^{\text{NRC}} \cdot \omega_{t-1}$ and $\kappa \cdot p^{\kappa}$)}
+\FloatBarrier
+\input{table_specB_set1.tex}
+
+\FloatBarrier
+\section{Specification Set 2: Effective Wage Interaction ($k^{\text{NRC}} \cdot \omega_{t-1}(1-\iota_{t-1})$ and $\kappa \cdot p^{\kappa}$)}
+\FloatBarrier
+\input{table_specB_set2.tex}
+
+\end{document}

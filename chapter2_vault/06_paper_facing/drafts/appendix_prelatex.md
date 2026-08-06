@@ -15,7 +15,7 @@ priority: context
 
 This appendix provides the formal derivation of the partial derivatives governing the firm's choice of intensive mechanization ($q^{ME*}$) with respect to the distributional channel ($\omega$) and the relative price channel ($\rho^{ME,NRC}$).
 
-### A.1 The Constrained Objective Function
+## A.1 The Constrained Objective Function
 
 As established in Section 3.2.3, the firm maximizes the net productivity surplus $c(q^{ME}) = a - \text{Cost}$ subject to the Leontief proportionality constraint $q^{NRC} = \Phi(q^{ME})$. The unconstrained objective function is:
 $$ c(q^{ME}) = \Big[ 1 - (1-\omega)\rho^{NRC} \Big] \Phi(q^{ME}) - \Big[ (1-\omega)\rho^{NRC} \cdot \rho \Big] q^{ME} $$
@@ -28,7 +28,7 @@ where $H$ is the effective cost hurdle of mechanization.
 Given the technological frontier $\Phi(q) = \lambda_0 + \lambda_1 q + \lambda_2 q^2$, the marginal product is $\Phi'(q) = \lambda_1 + 2\lambda_2 q$. Substituting this into the FOC gives the optimal rate of mechanization:
 $$ q^{ME*} = \frac{H - \lambda_1}{2\lambda_2} $$
 
-### A.2 The Distributional Channel ($\omega$)
+## A.2 The Distributional Channel ($\omega$)
 
 We use the chain rule to find $\frac{\partial q^{ME*}}{\partial \omega} = \frac{\partial q^{ME*}}{\partial H} \cdot \frac{\partial H}{\partial \omega}$.
 
@@ -45,7 +45,7 @@ $$ \frac{\partial q^{ME*}}{\partial \omega} = \underbrace{\left( \frac{1}{2\lamb
 
 **Proof:** A rising wage share unequivocally increases optimal intensive mechanization.
 
-### A.3 The Relative Price Channel ($\rho$)
+## A.3 The Relative Price Channel ($\rho$)
 
 We use the chain rule to find $\frac{\partial q^{ME*}}{\partial \rho} = \frac{\partial q^{ME*}}{\partial H} \cdot \frac{\partial H}{\partial \rho}$.
 

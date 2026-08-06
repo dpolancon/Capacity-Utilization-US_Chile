@@ -44,10 +44,10 @@ df$p_rel_lag1 <- c(NA, df$p_rel[-nrow(df)])
 df$tau_real <- df$k_ME - df$k_NRC
 
 # Interaction terms
-df$inter_tau_omega_NFC_GVA <- df$tau_real * df$omega_NFC_GVA_lag1
-df$inter_tau_omega_CORP_GVA <- df$tau_real * df$omega_CORP_GVA_lag1
-df$inter_tau_omega_ST_Tier1 <- df$tau_real * df$omega_ST_Tier1_lag1
-df$inter_tau_omega_ST_Tier2 <- df$tau_real * df$omega_ST_Tier2_lag1
+df$inter_tau_omega_NFC_GVA   <- df$tau_real * df$omega_NFC_GVA_lag1
+df$inter_tau_omega_CORP_GVA  <- df$tau_real * df$omega_CORP_GVA_lag1
+df$inter_tau_omega_ST_Tier1  <- df$tau_real * df$omega_ST_Tier1_NVA_lag1
+df$inter_tau_omega_ST_Tier2  <- df$tau_real * df$omega_ST_Tier2_NVA_lag1
 
 df$inter_tau_prel <- df$tau_real * df$p_rel_lag1
 

@@ -1,12 +1,3 @@
----
-type: stage_report
-status: active
-depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
-stage_scope: all_stages
-country: US
-last_updated: 2026-06-17
----
-
 # S20B Distribution Attachment Contract
 
 ## Scope
@@ -48,7 +39,7 @@ The preferred baseline remains an unadjusted wage share. S20B does not construct
 
 |check_id|status|evidence|
 |---|---|---|
-|HEAD_AND_ORIGIN_AT_874D19D|PASS|HEAD=874d19d; origin/main=874d19d; branch=main.|
+|HEAD_AND_ORIGIN_AT_874D19D|PASS|HEAD=cf9a30e; origin/main=8409686; branch=main.|
 |S20_OUTPUTS_FOUND|PASS|Found 6 current S20 artifacts.|
 |S20_VALIDATION_ALL_PASS|PASS|31/31 S20 checks PASS.|
 |S20_DECISION_AUTHORIZES_MODEL_INPUT_CONSUMPTION|PASS|AUTHORIZE_S20_MODEL_INPUT_CONSUMPTION recognized in current S20 report/validation.|

@@ -2,9 +2,9 @@
 type: paper_facing
 status: active
 depends_on:
-  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
+  - chapter2_vault/06_paper_facing/others/Ch2_Outline_DEFINITIVE.md
   - chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
-  - chapter2_vault/02_analytical_foundations/A04_Peripheral_Transformation_Elasticity.md
+  - chapter2_vault/02_analyitical_foundation/A04_PeripheralTransformationElasticity.md
 stage_scope: all_stages
 country: US_CL
 last_updated: 2026-07-26
@@ -147,5 +147,5 @@ To preserve analytical consistency, the following partial derivatives are locked
 
 - Definitive Outline: [[Ch2_Outline_DEFINITIVE]]
 - Paper-Facing Constitution: [[00E_Chapter2_PaperFacing_Constitution]]
-- Peripheral Analytical Foundation: [[A04_Peripheral_Transformation_Elasticity]]
+- Peripheral Analytical Foundation: [[A04_PeripheralTransformationElasticity]]
 - Cointegration Stars & Triad Lock: [[E17_Cointegration_Significance_Stars_Lock]]

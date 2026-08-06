@@ -47,7 +47,7 @@ cumulated score is $S_t = \sum_{i\le t}\hat u_i$, and
 $$L_c^{\text{intercept}} \;=\; \frac{1}{T}\sum_t \frac{S_t^2}{\hat\omega^2} \;=\; T \cdot C_{\text{Shin}}, \qquad C_{\text{Shin}} = \frac{\sum_t S_t^2}{T^2 \hat\omega^2}$$
 
 This identity was **verified exactly (to machine precision, max relative error $3\times10^{-16}$)
-across all 18 Section 3.1 models** and is enforced as a blocking pre-condition in
+across all 36 Section 3.1 models** (covering both base ND and break-robust WD comparator specifications) and is enforced as a blocking pre-condition in
 `US_S51_section31_stability_audit.R` — no Hansen result may be reported unless it holds.
 
 **Governing consequence**: a Shin LM rejection is *already* evidence of parameter instability, not of
@@ -72,7 +72,7 @@ values, unless a properly indexed published table is digitized in full (as in
 `codes/COMMON_VW_fixedb_critical_values.R`).
 
 **Rationale**: the 2026-08-03 audit
-(`chapter2_vault/08_audits/2026-08-03_section31_cointegration_stars_audit.md`) found the Section 3.1
+(`chapter2_vault/08_audits_handoffs/2026-08-03_section31_cointegration_stars_audit.md`) found the Section 3.1
 report's headline defect was a correctly-computed statistic compared against hardcoded critical
 values not indexed to bandwidth or regressor count. The pre-existing Gregory-Hansen implementation in
 `CL_S20_structural_break_dual_route_audit.R` carries the identical exposure (hardcoded
@@ -239,4 +239,4 @@ break-robust cross-check and must be reported alongside.
 - VW Type 2 / cointegration triad: [[E15_Vogelsang_Wagner_IMOLS_Cointegration_Test_Lock]]
 - Active estimator and LRV/bandwidth doctrine: [[E10V_IMOLS_CPR_Active_Estimator_Lock]]
 - Integration order gate: [[Interaction_Term_Integration_Order_Gate]], [[E_01_I2_Trap]]
-- Originating audit: `chapter2_vault/08_audits/2026-08-03_section31_cointegration_stars_audit.md`
+- Originating audit: `chapter2_vault/08_audits_handoffs/2026-08-03_section31_cointegration_stars_audit.md`

@@ -95,11 +95,17 @@ calc_vw_type2_stat <- function(x, y, deter, fit) {
     
     if (d.k == 0) {
       Sd <- matrix(nrow = y.T, ncol = 0)
+      trend_mat_vw <- cbind(1, 1:y.T)
     } else {
       Sd <- matrixStats::colCumsums(deter)
+      trend_mat_vw <- cbind(deter, Sd)
     }
     
-    InvBase <- Sx[y.T:1, , drop = FALSE]
+    # FIX: Detrend x to remove deterministic drifts before reverse cumsums
+    x_det <- lm.fit(as.matrix(trend_mat_vw), as.matrix(x))$residuals
+    Sx_det <- matrixStats::colCumsums(x_det)
+    
+    InvBase <- Sx_det[y.T:1, , drop = FALSE]
     InvBaseCum <- matrixStats::colCumsums(InvBase)
     RevBase <- InvBaseCum[y.T:1, , drop = FALSE]
     Zreg <- matrixStats::colCumsums(RevBase)
@@ -175,10 +181,11 @@ cointRegIM_with_tests <- function(x, y, deter, kernel = "ba", bandwidth = "nw") 
   C_shin <- NA
   p_stars_shin <- ""
   try({
-    S_t <- cumsum(u)
+    # BUG FIX: NO double cumsum. u is fit$u.plus (already partial sums)
+    S_t <- u
     omega2 <- fit$omega.u.v
     if (is.null(omega2) || is.na(omega2) || omega2 <= 0) {
-      omega2 <- cointReg::getLongRunVar(u, kernel = kernel, bandwidth = bandwidth)$long.run
+      omega2 <- cointReg::getLongRunVar(fit$residuals, kernel = kernel, bandwidth = bandwidth)$long.run
     }
     C_shin <- sum(S_t^2) / (T_obs^2 * omega2)
     p_stars_shin <- if (C_shin >= 0.184) "$^{***}$" else if (C_shin >= 0.121) "$^{**}$" else if (C_shin >= 0.095) "$^{*}$" else ""

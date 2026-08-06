@@ -127,10 +127,11 @@ cointRegIM_with_tests <- function(x, y, deter, kernel = "ba", bandwidth = "nw") 
   # 2. Shin (1994) LM Stationarity Test
   C_shin <- NA
   try({
-    S_t <- cumsum(u)
+    # BUG FIX: NO double cumsum. u is fit$u.plus (already partial sums)
+    S_t <- u
     omega2 <- fit$omega.u.v
     if (is.null(omega2) || is.na(omega2) || omega2 <= 0) {
-      omega2 <- cointReg::getLongRunVar(u, kernel = kernel, bandwidth = bandwidth)$long.run
+      omega2 <- cointReg::getLongRunVar(fit$residuals, kernel = kernel, bandwidth = bandwidth)$long.run
     }
     C_shin <- sum(S_t^2) / (T_obs^2 * omega2)
   }, silent = TRUE)

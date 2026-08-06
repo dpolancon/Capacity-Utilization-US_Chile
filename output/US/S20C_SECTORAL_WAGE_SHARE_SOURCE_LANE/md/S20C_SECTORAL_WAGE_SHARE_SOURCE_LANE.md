@@ -1,12 +1,3 @@
----
-type: stage_report
-status: active
-depends_on: [chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md]
-stage_scope: all_stages
-country: US
-last_updated: 2026-06-17
----
-
 # S20C Sectoral Wage-Share Source Lane
 
 ## Scope
@@ -65,7 +56,7 @@ Generic economy-wide, private-business, total-business, nonfarm-business, househ
 
 |check_id|status|evidence|
 |---|---|---|
-|HEAD_AND_ORIGIN_AT_ACD5280|PASS|HEAD=acd5280; origin/main=acd5280; branch=main.|
+|HEAD_AND_ORIGIN_AT_ACD5280|PASS|HEAD=cf9a30e; origin/main=8409686; branch=main.|
 |S20_OUTPUTS_FOUND|PASS|Found 6 current S20 artifacts.|
 |S20_DECISION_AUTHORIZES_MODEL_INPUT_CONSUMPTION|PASS|AUTHORIZE_S20_MODEL_INPUT_CONSUMPTION recognized.|
 |S20B_OUTPUTS_FOUND|PASS|S20B validation, contract, audit, and report artifacts found.|

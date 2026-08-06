@@ -13,7 +13,9 @@ priority: context
 
 # Section 3.1: The Baseline Model of Cost-Minimizing Mechanization (Homogeneous Capital Stock)
 
-Before formalizing the cost-minimizing choice of technique, we establish the descriptive macro context for the United States across five distinct historical windows: the pre-war Fordist recovery (1931–1941), the World War II mobilization block (1942–1945), the postwar Fordist Golden Age (1947–1973), the post-Fordist restructuring era prior to the Global Financial Crisis (1974–2007), and the post-GFC stagnation period (2008–2024). We track the average annual growth rates (mean annual log differences) of real corporate output alongside gross capital stocks built using the Gross Perpetual Inventory Method (GPIM), distinguishing private machinery and equipment (\(K^{\text{ME}}\)), private nonresidential structures (\(K^{\text{NRC}}\)), and public infrastructure in the form of government transportation, highways, and streets (\(K^{\text{GT}}\)). We report both Non-Financial Corporate sector Gross Value Added (\(y_t\)) and total economy Real GDP (\(y_{\text{total}}\)) to capture corporate-level dynamics relative to aggregate activity.[^data_provenance_footnote]
+Before formalizing the cost-minimizing choice of technique, we establish the descriptive macro context for the United States across five distinct historical windows: the pre-war Fordist recovery (1931–1941), the World War II mobilization block (1942–1945), the postwar Fordist Golden Age (1947–1973), the post-Fordist restructuring era prior to the Global Financial Crisis (1974–2007), and the post-GFC stagnation period (2008–2024). We track the average annual growth rates (mean annual log differences) of real corporate output alongside gross capital stocks built using the Gross Perpetual Inventory Method (GPIM), distinguishing private machinery and equipment (\(K^{\text{ME}}\)), private nonresidential structures (\(K^{\text{NRC}}\)), and public infrastructure in the form of government transportation, highways, and streets (\(K^{\text{GT}}\)). We report both Non-Financial Corporate sector Gross Value Added (\(y_t\)) and total economy Real GDP (\(y_{\text{total}}\)) to capture corporate-level dynamics relative to aggregate activity.
+
+**Table 1: Descriptive Macro Indicators for the United States (Growth Rates, \% per year)**
 
 | Variable | Pre-war Fordism (1931–1941) | WWII Block (1942–1945) | Postwar Fordism (1947–1973) | Post-Fordism Pre-GFC (1974–2007) | Post-GFC (2008–2024) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -22,8 +24,6 @@ Before formalizing the cost-minimizing choice of technique, we establish the des
 | Gross Machinery & Equipment (\(K^{\text{ME}}\)) | 1.37% | 4.73% | 8.49% | 6.58% | 3.66% |
 | Gross Nonresidential Structures (\(K^{\text{NRC}}\)) | 1.08% | 3.79% | 6.38% | 7.02% | 3.99% |
 | Gross Government Transportation (\(K^{\text{GT}}\)) | 4.07% | -0.14% | 4.44% | 2.05% | 1.06% |
-
-[^data_provenance_footnote]: **Data Provenance and GPIM Construction:** Output and capital series are compiled from the repository's open source of truth database release (`chapter2_us_source_of_truth_v1`). Real corporate output is measured by log real Non-Financial Corporate Gross Value Added (BEA NIPA Table 1.14). The pre-war window begins in 1931 due to NIPA Table 1.14 reporting limits. Total economy output is real GDP in millions of 2017 chained dollars, constructed by deflating nominal GDP (FRED variable `GDPA`) by the GDP implicit price deflator (FRED variable `A191RD3A086NBEA`). Private capital stocks (\(K^{\text{ME}}\) and \(K^{\text{NRC}}\)) are gross GPIM stocks compiled from BEA Fixed Assets Table 4.1 investment inputs. They are convolved with Weibull survival functions: \(L = 14\text{ yr}, \alpha = 1.7\) for machinery, and \(L = 30\text{ yr}, \alpha = 1.6\) for structures. Government transportation stock (\(K^{\text{GT}}\)) is the real gross stock convolved with Weibull parameters \(L = 60\text{ yr}\) (Fraumeni U.S. design life lock) and \(\alpha = 1.3\) (Nomura 2005 road hazard shape proxy), constructed from BEA Fixed Assets Table 7.1 investment lines for Highways and Streets and Transportation Structures (Stage S41 diagnostic branch).
 
 These indicators show the structural breaks defining each regime. During the pre-war recovery (1931–1941), corporate GVA grew at a rapid 5.80% per year. Public investment drove this, with infrastructure expanding at 4.07% while private accumulation lagged. World War II changed everything. The mobilization block (1942–1945) redirected capital toward war production. Civilian infrastructure contracted at -0.14% per year, while military spending pushed total GDP growth to a massive 9.92%. The postwar Golden Age (1947–1973) represents the historical peak of coupled accumulation. Machinery grew at 8.49% annually, structures at 6.38%, and public infrastructure at 4.44%. This balanced growth sustained a 4.98% average expansion of real corporate GVA. In the post-Fordist era, this coordination broke down. Public infrastructure growth fell to 2.05% before the GFC, and sank to a mere 1.06% after 2008. Meanwhile, private structures decoupled, growing at 7.02% pre-GFC before dropping to 3.99% post-GFC. This combination of private overaccumulation and public decay explains the long-run slowdown of corporate capacity formation.
 
@@ -96,3 +96,35 @@ Expressed dynamically relative to this normal accumulation path, the aggregate t
 $$ \theta(\omega) = 1 + \frac{b^N(\omega)}{g_K^N} = 1 + \frac{a^N(\omega) - q^*(\omega)}{g_K^N} $$
 
 This proves a crucial point: the transformation elasticity is not an exogenous technical constant. It emerges endogenously from the cost-minimizing choice of technique. When distributive pressure forces firms to alter mechanization, it simultaneously shifts the structural efficiency of accumulation.
+
+## 3.1.3 Empirical Identification Strategy of the Baseline State-Dependent Elasticity
+
+The theoretical model derived in Sections 3.1.1 and 3.1.2 establishes that the transformation elasticity $\theta$ is an endogenous function of distributive pressure ($\omega$). To bridge this formal analytical model with empirical data, we translate the continuous growth relation into an estimable long-run cointegrating specification.
+
+By definition, the aggregate transformation elasticity governs the marginal response of potential log output ($y_t^p = \ln Y_t^p$) to log real capital stock ($k_t = \ln K_t$):
+
+$$ g_{Y^p} = \theta_t g_K \quad \implies \quad \frac{d y_t^p}{d k_t} = \theta_t $$
+
+Linearizing the theoretical function $\theta(\omega)$ around the initial state yields the baseline state-dependent elasticity specification:
+
+$$ \theta_t = \theta_0 + \theta_1 \omega_{t-1} $$
+
+where $\theta_0$ is the baseline transformation elasticity of capital at the initial state, and $\theta_1 = \frac{\partial \theta_t}{\partial \omega_{t-1}}$ measures the marginal shift in capital efficiency induced by distributive class pressure. We condition the wage share at lag 1 ($\omega_{t-1}$) to reflect the institutional lag between distributive bargaining and corporate capital expenditure execution.
+
+Integrating the differential relation $d y_t^p = (\theta_0 + \theta_1 \omega_{t-1}) d k_t$ over time yields the log-level potential capacity equation:
+
+$$ y_t^p = \alpha + \theta_0 k_t + \theta_1 \left( k_t \cdot \omega_{t-1} \right) $$
+
+where $\alpha$ is a constant of integration. Adding a stationary stochastic error term $u_t$ under the null hypothesis of cointegration yields the estimating equation:
+
+$$ y_t = \alpha + \theta_0 k_t + \theta_1 \left( k_t \cdot \omega_{t-1} \right) + u_t $$
+
+**Capacity Recovery and the Residual Critique.** Capacity utilization ($\mu_t$) is not the regression residual, nor a detrended output gap. Following the locked capacity level anchor pinch year protocol, $\mu_t$ is recovered by applying the estimated baseline state-dependent elasticity $\hat{\theta}_t$ to capital growth ($g_{K,t}$), anchoring the level at the pinch year ($t^*_{US} = 1973$), and extrapolating against aggregate real output ($Y_t = \text{GDP}_t$). The full four-step sequence is executed in Section 4.2.
+
+**Testable Hypothesis.** This baseline state-dependent specification yields a testable empirical proposition:
+
+* **Hypothesis 1 (The Okishio Distributive Dividend):** Domestic wage pressure compels cost-minimizing firms to substitute machinery for labor along the Mechanization Productive Frontier. The interaction coefficient between log capital and the lagged wage share is strictly positive:
+  $$ \hat{\theta}_1 > 0 $$
+  If $\hat{\theta}_1 > 0$, distributive pressure enhances the capacity-generating efficiency of capital, confirming that mechanization is endogenously induced by class struggle rather than driven by exogenous technical shocks.
+
+Section 3.1 closes the analytical identification of the homogeneous capital model. Translating the capacity equation into an estimable cointegrating specification — regressor orthogonalization, integration-order screening, and non-standard fixed-$b$ inference — is executed in Section 4.

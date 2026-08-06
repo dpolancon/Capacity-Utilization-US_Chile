@@ -1,32 +1,64 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=1in,landscape]{geometry}
 \usepackage{booktabs}
-\usepackage{float}
+\usepackage{pdflscape}
 \usepackage{makecell}
 \usepackage{placeins}
 \usepackage{caption}
 \usepackage{amsmath,amssymb}
+\usepackage{float}
 \usepackage{hyperref}
-\title{\textbf{Section 3.1 IM-OLS Cointegration Estimation Matrix: U.S. NFC Transformation Elasticity (1929--2024)}}
+\title{\textbf{Section 3.1 IM-OLS Cointegration Estimation Matrix: Specification A Aggregate Capital (1929--2024)}}
 \author{\textbf{Department of Economics, UMass Amherst}}
-\date{August 2026}
+\date{\today}
 \begin{document}
 \maketitle
 
 \section*{Data Provenance and Estimation Summary}
-This report presents the empirical cointegration results for Section 3.1 of Chapter 2. All models are estimated via Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014) over the full NIPA sample window (1931--2024, $N=94$ observations after listwise deletion for the lag-1 conditioning variables $\omega_{t-1}$ and $\iota_{t-1}$). Point estimates are tuning-parameter free; coefficient and cointegration-test significance stars use Vogelsang \& Wagner (2014) fixed-$b$ critical values (Bartlett kernel, Newey-West bandwidth), interpolated by each model's bandwidth ratio and number of stochastic regressors -- see the significance note under each table. Distributional conditioning variables ($\omega_{t-1}$ and $\iota_{t-1}$) are centered at their 1929 initial values, preserving $\hat{\theta}_0$ as the capital elasticity at the initial state. VIF statistics are computed on the level regressors space. To ensure robustness against structural instability, each specification dynamically incorporates step level-shift dummies $D^{\text{step}}_{T_b}$ for structural breaks identified by a first-pass Bai-Perron residual audit.
+This report presents the empirical cointegration results for Section 3.1 of Chapter 2 (Specification A). All models are estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS (Vogelsang et al. 2024) over the full NIPA sample window ($1931$--$2024$, $T=94$ observations after listwise deletion for lag-1 conditioning variables). Capital is measured as private core productive capital ($k^{\text{cap}} = \log(K_{\text{ME}} + K_{\text{NRC}})$). To resolve multi-collinearity, all interaction terms are orthogonalized via Frisch-Waugh-Lovell (FWL) against base capital regressors and any detected Bai-Perron step dummies.
+
+\section*{Theoretical Rationale: Binding Net Value Added (NVA) \& Distributive Domain}
+Under the synthesis of Okishio's market anarchy and Vidal's internally divided firm, class struggle over distribution is defined strictly over newly created value ($\text{Net Value Added} = v + s$), excluding pre-existing constant capital transfers ($CFC$, or physical depreciation):
+\begin{align*}
+\text{Gross Output } (W) &= c + v + s \\
+\text{Gross Value Added } (\text{GVA}) &= CFC + v + s \\
+\text{Net Value Added } (\text{NVA}) &= v + s
+\end{align*}
+\begin{enumerate}
+    \item \textbf{Exclusion of Constant Capital Transfer ($CFC$):} Physical depreciation ($CFC$) represents pre-existing value transferred to output by concrete labor. Because $CFC$ is not new value created on the shop floor, it lies outside zero-sum class struggle over surplus distribution.
+    \item \textbf{Elimination of Mechanization Distortion:} During intensive mechanization (substituting machinery for living labor), the ratio $CFC / \text{GVA}$ rises mechanically. Assessing wage share over GVA ($\omega_{\text{GVA}} = \frac{\text{COMP}}{CFC + v + s}$) causes the wage share to appear to fall even if the rate of surplus value extraction ($s/v$) remains constant. Evaluating wage share over NVA ($\omega_{\text{NFC,NVA}} = \frac{\text{COMP}}{\text{NFC\_NVA}}$) isolates the true balance of class power without pollution from physical depreciation shifts.
+    \item \textbf{Supervisory Adjustment (Shaikh-Tonak Tier 1 \& Tier 2):} Standard NIPA compensation includes managerial and executive salaries, which function as a distribution of surplus value rather than a variable labor cost. The Shaikh-Tonak Tier 1 ($\omega_{\text{ST,Tier1}} = \frac{\text{COMP}}{\text{NFC\_NVA}}$) and Tier 2 ($\omega_{\text{ST,Tier2}} = \frac{v_{\text{prod}}}{\text{NFC\_NVA}}$) measures strip supervisory overhead to isolate true variable capital ($v$), capturing the precise variable labor cost that enters corporate cost minimization decisions.
+\end{enumerate}
+
+\section*{Key Empirical Findings and Cointegration Verdict}
+\begin{enumerate}
+    \item \textbf{Cointegration Triad Verdict:} All estimated models reject the null hypothesis of no cointegration under the Engle-Granger Residual ADF test ($t_{\text{ADF}} \le -3.78, p < 0.05$). Crucially, after applying FWL detrending to the deterministic space and correcting the Shin LM accumulator, both the Shin LM test ($C_{\text{Shin}} \le 0.056$) and the Vogelsang-Wagner Type 2 Wald test ($S_{\text{Type 2}} \le 13.69$) fail to reject the null hypothesis of cointegration across all specifications. This provides robust mutual confirmation of stable cointegration under IM-OLS, confirming that structural break step-shifts absorb historical regime shifts without spurious trend contamination.
+    \item \textbf{Failure of Unadjusted GVA Wage Share (Set 1):} In standard interactive specifications (Models M1.1a/b through M1.8a/b), the unadjusted wage interaction ($\hat{\theta}_1$) fails to achieve statistical significance under custom Monte Carlo fixed-$b$ critical values ($t \le -2.67$, failing to breach the $2.96$ 90th percentile threshold), demonstrating that raw unconditioned wage shares fail to capture accumulation-channel dynamics.
+    \item \textbf{Success of NVA-Based Effective Wage Pressure (Set 2):} When scaled by productive accumulation $(1-\iota_{t-1})$ in Set 2, the effective wage interaction ($\hat{\theta}_1$) becomes statistically significant with the theoretically predicted negative sign in Shaikh-Tonak Tier 2 NVA models ($\hat{\theta}_1 = -0.29, t = -3.63, p < 0.10$ in M2.8a; $\hat{\theta}_1 = -0.34, t = -4.25, p < 0.05$ in M2.8b). High effective wage pressure forces defensive mechanization, increasing the organic composition of capital and depressing marginal capacity yield.
+\end{enumerate}
 
 \FloatBarrier
-\section{Specification Set 1: Double Interactions ($k^{\text{cap}} \cdot \omega_{t-1}$)}
+\section{Specification Set 1: Standard Wage Interaction (GVA vs.\ NVA Comparison)}
+
+\subsection{Panel A: Standard Wage Interaction over Gross Value Added (GVA Basis)}
 \FloatBarrier
-\input{table_spec_set_1.tex}
+\input{table_specA_set1_gva.tex}
 
 \FloatBarrier
-\section{Specification Set 2: Triple Interactions ($k^{\text{cap}} \cdot \omega_{t-1} \cdot \iota_{t-1}$)}
+\subsection{Panel B: Standard Wage Interaction over Net Value Added (NVA Basis)}
 \FloatBarrier
-\input{table_spec_set_2_part1.tex}
+\input{table_specA_set1_nva.tex}
 
 \FloatBarrier
-\input{table_spec_set_2_part2.tex}
+\section{Specification Set 2: Effective Wage Interaction (GVA vs.\ NVA Comparison)}
+
+\subsection{Panel A: Effective Wage Interaction over Gross Value Added (GVA Basis)}
+\FloatBarrier
+\input{table_specA_set2_gva.tex}
+
+\FloatBarrier
+\subsection{Panel B: Effective Wage Interaction over Net Value Added (NVA Basis)}
+\FloatBarrier
+\input{table_specA_set2_nva.tex}
 
 \end{document}

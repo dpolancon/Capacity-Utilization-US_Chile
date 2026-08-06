@@ -1,6 +1,6 @@
 ---
 type: theory
-status: active
+status: unactive
 depends_on:
   - chapter2_vault/00_constitutive_core/01_Governing_Memo.md
 stage_scope: S00

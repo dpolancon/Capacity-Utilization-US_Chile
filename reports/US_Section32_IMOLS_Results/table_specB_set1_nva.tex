@@ -1,0 +1,41 @@
+\begin{table}[H]
+\centering
+\setlength{\tabcolsep}{2.5pt}
+\caption{Specification Set 1: Standard Wage Interaction (NVA Basis)}
+\label{tab:specB_set1_nva}
+\scriptsize
+\begin{tabular}{p{3.8cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}}
+\toprule
+\multicolumn{7}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real GVA)}} \\
+\midrule
+Model & M2.3a & M2.4b & M2.7a & M2.8b & M2.11a & M2.12b \\
+\midrule
+$\hat{\alpha}$ (Intercept) & 12.90$^{***}$ & 12.82$^{***}$ & 12.90$^{***}$ & 12.82$^{***}$ & 12.93$^{***}$ & 12.77$^{***}$ \\
+ & (0.07) & (0.06) & (0.07) & (0.06) & (0.08) & (0.06) \\
+$\hat{\theta}_{NRC}$ (Structures $k^{\text{NRC}}$) & 0.60$^{***}$ & 0.51$^{***}$ & 0.60$^{***}$ & 0.51$^{***}$ & 0.59$^{***}$ & 0.49$^{***}$ \\
+ & (0.03) & (0.08) & (0.03) & (0.08) & (0.02) & (0.07) \\
+$\hat{\theta}_{\kappa}$ (Mech. Gap $\kappa$) & 0.38$^{**}$ & 0.67$^{**}$ & 0.38$^{**}$ & 0.67$^{**}$ & 0.45$^{**}$ & 0.52$^{*}$ \\
+ & (0.14) & (0.26) & (0.14) & (0.26) & (0.14) & (0.21) \\
+$\hat{\theta}_{\omega\kappa}$ (FWL Wage Interact) & -2.75 & -4.89 & -2.75 & -4.89 & 5.36 & -9.78$^{**}$ \\
+ & (4.07) & (3.10) & (4.07) & (3.10) & (4.16) & (3.76) \\
+$\hat{\theta}_{\kappa p}$ (FWL Price Interact) & -0.68 & 1.38 & -0.68 & 1.38 & -1.38$^{**}$ & 0.03 \\
+ & (0.58) & (0.82) & (0.58) & (0.82) & (0.52) & (0.61) \\
+Step Shifts ($D_{T_b}^{\text{step}}$) & No & Yes & No & Yes & No & Yes \\
+\midrule
+\multicolumn{7}{l}{\textbf{Collinearity Diagnostics (VIF)}} \\
+VIF ($k^{\text{NRC}}$) & 1.69 & 1.69 & 1.69 & 1.69 & 1.69 & 1.69 \\
+VIF ($\kappa$) & 1.69 & 1.69 & 1.69 & 1.69 & 1.69 & 1.69 \\
+VIF (Wage Interaction) & 1.32 & 1.06 & 1.32 & 1.06 & 1.07 & 1.02 \\
+VIF (Price Interaction) & 1.32 & 1.06 & 1.32 & 1.06 & 1.07 & 1.02 \\
+\midrule
+\multicolumn{7}{l}{\textbf{Cointegration Test Triad}} \\
+Resid. ADF ($t_{\text{ADF}}$) [$H_0$: No Coint.] & -4.16$^{*}$ & -4.46$^{**}$ & -4.16$^{*}$ & -4.46$^{**}$ & -4.42$^{**}$ & -4.79$^{**}$ \\
+Shin LM ($C_{\text{Shin}}$) [$H_0$: Coint.] & 0.05 & 0.03 & 0.05 & 0.03 & 0.04 & 0.02 \\
+VW Type 2 ($S_{\text{Type 2}}$) [$H_0$: Coint.] & 16.11 & 9.55 & 16.11 & 9.55 & 16.40 & 8.61 \\
+\midrule
+Bandwidth Ratio ($b$) & 0.2088 & 0.1758 & 0.2088 & 0.1758 & 0.2133 & 0.1758 \\
+Sample Size ($T$) & 94 & 94 & 94 & 94 & 94 & 94 \\
+\bottomrule
+\multicolumn{7}{p{15cm}}{\footnotesize Note: Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS (Vogelsang et al. 2024) over 1929--2024. Standard errors in parentheses. Significance: $^* p < 0.10, ^{**} p < 0.05, ^{***} p < 0.01$. Stars for coefficient rows (structures, mechanization gap, and interactions) and the Residual VW Type 2 cointegration test are derived from a 100,000-pass custom Monte Carlo simulation suite mapping the exact DGP variant (with/without step level-shifts). All interaction terms are FWL-orthogonalized against base capital regressors and step dummies.}
+\end{tabular}
+\end{table}

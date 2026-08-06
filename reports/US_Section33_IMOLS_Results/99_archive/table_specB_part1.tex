@@ -1,0 +1,42 @@
+\begin{table}[H]
+\centering
+\setlength{\tabcolsep}{2.5pt}
+\caption{Specification B: IM-OLS Estimation Results (Baseline Wage Measure)}
+\label{tab:specB_imols}
+\scriptsize
+\begin{tabular}{p{3.2cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}}
+\toprule
+Parameter & \multicolumn{5}{c}{Fordism (1929-1973)} & \multicolumn{5}{c}{Post-Fordism (1974-2024)} \\
+\cmidrule(lr){2-6} \cmidrule(lr){7-11}
+ & B1 & B3 & B3e & B4 & B4e & B1 & B3 & B3e & B4 & B4e \\
+\midrule
+$\theta_{NRC}$ (Extensive scale) & 0.295 & 0.189 & 0.782$^{**}$ & 0.861$^{***}$ & 0.903$^{***}$ & 0.598$^{***}$ & 0.685$^{***}$ & 0.674$^{***}$ & 0.578$^{***}$ & 0.584$^{***}$ \\
+  & (0.59) & (0.36) & (1.98) & (9.97) & (13.27) & (12.48) & (14.64) & (17.63) & (29.96) & (31.62) \\
+$\theta_{\kappa}$ (Mech. gap) & 1.330 & 1.548 & 0.170 & nan & nan & 0.307 & 0.611$^{***}$ & 0.525$^{***}$ & nan & nan \\
+  & (1.11) & (1.25) & (0.18) & (nan) & (nan) & (1.47) & (3.23) & (3.44) & (nan) & (nan) \\
+$\theta_{\omega\kappa}$ (Wage interact) & nan & -26.031 & -23.610 & -19.709 & -10.612 & nan & -25.332 & -39.437 & -5.596 & -5.356 \\
+  & (nan) & (-1.74) & (-1.84) & (-1.05) & (-0.74) & (nan) & (-2.23) & (-3.85) & (-0.69) & (-1.09) \\
+$\theta_{\kappa p}$ (Price interact) & nan & -17.673 & -15.662 & -0.835 & -1.893 & nan & -1.047 & 1.448$^{*}$ & -1.077 & -0.674 \\
+  & (nan) & (-2.46) & (-2.18) & (-0.28) & (-0.77) & (nan) & (-1.50) & (1.74) & (-1.52) & (-0.84) \\
+\bottomrule
+\multicolumn{11}{p{15cm}}{\footnotesize Notes: $***$, $**$, and $*$ denote significance at 1\%, 5\%, and 10\% levels respectively. B3e and B4e models apply the $(1-\iota)$ toggle to construct the effective wage pressure variable. B4/B4e drop the standalone mechanization gap $\kappa_t$. All interactions are FWL-orthogonalized.}
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Specification B Model Cross-Walk}
+\label{tab:specB_crosswalk}
+\scriptsize
+\begin{tabular}{p{2cm} p{12cm}}
+\toprule
+\textbf{Model Key} & \textbf{Specification Geometry} \\
+\midrule
+\textbf{B1} & Uninteracted Baseline: $y = \theta_{NRC} k^{NRC} + \theta_{\kappa} \kappa + \beta_{\omega} \omega_{t-1} + \gamma' D + u$ \\
+\textbf{B3} & Canonical Fully Interacted: B1 + $\theta_{\omega\kappa} (\kappa \cdot \omega_{t-1}) + \theta_{\kappa p} (\kappa \cdot p^{\kappa})$ \\
+\textbf{B3e} & Canonical Fully Interacted (Effective Wage): B1 + $\theta_{\omega\kappa} (\kappa \cdot \omega_{t-1}(1-\iota_{t-1})) + \theta_{\kappa p} (\kappa \cdot p^{\kappa})$ \\
+\textbf{B4} & Pure Distribution/Price-Conditioned (no standalone $\kappa$): Drops $\theta_{\kappa} \kappa$ from B3 \\
+\textbf{B4e} & Pure Distribution/Price-Conditioned (Effective Wage): Drops $\theta_{\kappa} \kappa$ from B3e \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,20 @@
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Unit Root Battery: Induced Demand Controls (1929--2024)}
+\label{tab:urca_demand}
+\begin{tabular}{p{5.5cm} p{0.5cm} p{0.5cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{2.2cm} p{2.2cm}}
+\toprule
+\textbf{Variable / Measure} & \textbf{$N_{\text{lev}}$} & \textbf{$N_{\text{diff}}$} & \textbf{ADF Level} & \textbf{ADF Diff} & \textbf{ERS Level} & \textbf{ERS Diff} & \textbf{KPSS Level} & \textbf{KPSS Diff} & \textbf{ZA Break (Year)} & \textbf{Verdict} \\
+\midrule
+Log Real Consumption ($c_t$) & 96 & 95 & -1.900 & -6.263 & -2.262 & -0.607 & 0.446 & 0.130 & -5.247 (1997) & \textbf{I(1) with Break} \\ 
+Log Real Imports ($m_t$) & 96 & 95 & -3.694 & -6.399 & -1.176 & -1.154 & 0.226 & 0.219 & -5.018 (1996) & \textbf{I(0)} \\ 
+Log Real GDP ($y_t$) & 96 & 95 & -1.720 & -6.261 & -2.040 & -1.330 & 0.513 & 0.171 & -3.939 (1976) & \textbf{I(1)} \\ 
+Consumption Share ($C_t/Y_t$) & 96 & 95 & -3.814 & -6.195 & -1.461 & -2.712 & 0.337 & 0.114 & -8.237 (1940) & \textbf{I(0)} \\ 
+Import Share ($M_t/Y_t$) & 96 & 95 & -2.544 & -8.835 & -1.215 & -1.559 & 0.321 & 0.226 & -3.187 (2003) & \textbf{I(1)} \\ 
+Net Consumption Share ($(C_t - M_t)/Y_t$) & 96 & 95 & -3.910 & -6.301 & -2.106 & -2.464 & 0.280 & 0.075 & -8.138 (1940) & \textbf{I(0)} \\ 
+Log Consumption-Import Spread ($cm_t$) & 96 & 95 & -3.327 & -6.506 & -0.975 & -2.009 & 0.380 & 0.258 & -4.650 (1945) & \textbf{I(1)} \\ 
+\bottomrule
+\multicolumn{11}{p{21.5cm}}{\footnotesize \textbf{Notes:} Primary audit sample: 1929--2024 ($N_{\text{lev}}=96$, $N_{\text{diff}}=95$). ADF Level uses a trend model (5\% CV: -3.45); ADF Diff uses a drift model (5\% CV: -2.89). ERS Level uses trend (5\% CV: -3.58); ERS Diff uses constant (5\% CV: -2.59). KPSS Level uses trend (5\% CV: 0.146); KPSS Diff uses drift (5\% CV: 0.463). Zivot-Andrews (ZA) evaluates endogenous breaks in intercept and trend (5\% CV: -5.08). Verdicts combine ADF, KPSS, and ZA tests.}
+\end{tabular}
+\end{table}

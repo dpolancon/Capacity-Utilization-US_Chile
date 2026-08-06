@@ -1,0 +1,38 @@
+\begin{table}[H]
+\centering
+\caption{Specification Set 1: Double Interaction IM-OLS (Part 1)}
+\label{tab:paper_spec_set_1_1}
+\scriptsize
+\begin{tabular}{p{3.8cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}}
+\toprule
+\multicolumn{7}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real GVA)}} \\
+\midrule
+Model & M1.1\_WD & M1.2\_WD & M1.3\_WD & M1.4\_WD & M1.5\_WD & M1.6\_WD  \\
+Capital Stock & $k^{\text{cap}}_1$ & $k^{\text{cap}}_2$ & $k^{\text{cap}}_1$ & $k^{\text{cap}}_2$ & $k^{\text{cap}}_1$ & $k^{\text{cap}}_2$  \\
+Demand Control & None & None & None & None & None & None  \\
+Step Level Shifts & BP Step Dummies & BP Step Dummies & BP Step Dummies & BP Step Dummies & BP Step Dummies & BP Step Dummies  \\
+\midrule
+$\hat{\alpha}$ (Intercept)  & 8.96$^{***}$ & 6.84$^{***}$ & 9.19$^{***}$ & 8.74$^{***}$ & 6.24$^{***}$ & 6.37$^{***}$  \\
+ & {\scriptsize (0.83)} & {\scriptsize (0.78)} & {\scriptsize (0.91)} & {\scriptsize (0.82)} & {\scriptsize (0.71)} & {\scriptsize (0.62)}  \\
+Break Dates ($T_b$) & 1944, 1965, 1985, 2003 & 1944, 1965, 1982 & 1945, 1965, 1985, 2003 & 1944, 1965, 1985, 2003 & 1946, 1965, 1980 & 1945, 1964, 1980  \\
+[1ex]
+$\hat{\theta}_0$ (Capital Elasticity)  & 0.34$^{***}$ & 0.52$^{***}$ & 0.33$^{***}$ & 0.35$^{***}$ & 0.59$^{***}$ & 0.56$^{***}$  \\
+ & {\scriptsize (0.07)} & {\scriptsize (0.07)} & {\scriptsize (0.08)} & {\scriptsize (0.07)} & {\scriptsize (0.06)} & {\scriptsize (0.05)}  \\
+$\hat{\theta}_1$ (Interaction)  & -0.05 & -0.07 & -0.07 & -0.04 & -0.08 & -0.05  \\
+ & {\scriptsize (0.14)} & {\scriptsize (0.10)} & {\scriptsize (0.15)} & {\scriptsize (0.13)} & {\scriptsize (0.08)} & {\scriptsize (0.07)}  \\
+\midrule
+\multicolumn{7}{l}{\underline{Collinearity Diagnostics (VIF)}} \\
+VIF ($k^{\text{cap}}$) & 1.38 & 1.40 & 1.54 & 1.56 & 1.00 & 1.00  \\
+VIF (Interaction) & 1.38 & 1.40 & 1.54 & 1.56 & 1.00 & 1.00  \\
+\midrule
+\multicolumn{7}{l}{\underline{Cointegration Test Triad}} \\
+\makecell[l]{Resid. ADF ($t_{\text{ADF}}$) \\ {\scriptsize [$H_0$: No Coint.]}} & -4.67$^{***}$ & -4.35$^{***}$ & -4.90$^{***}$ & -4.50$^{***}$ & -4.58$^{***}$ & -3.90$^{**}$  \\
+\makecell[l]{Shin LM ($C_{\text{Shin}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 0.63$^{***}$ & 1.02$^{***}$ & 0.52$^{***}$ & 0.71$^{***}$ & 1.04$^{***}$ & 1.22$^{***}$  \\
+\makecell[l]{VW Type 2 ($S_{\text{Type 2}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 5.53 & 802.81$^{***}$ & 5.92 & 2750.38$^{***}$ & 5338.29$^{***}$ & 7583.07$^{***}$  \\
+\midrule
+$R^2_{\text{sum}}$ & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00  \\
+Sample Size ($N$) & 94 & 94 & 94 & 94 & 94 & 94  \\
+\bottomrule
+\multicolumn{7}{p{13.2cm}}{\footnotesize Note: Estimated via Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014) over 1929--2024 ($N=94$). Standard errors in parentheses. Significance: $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. Fixed-$b$ critical values ($k=2$) applied throughout. Break Dates ($T_b$) reflect persistent level shifts from Bai-Perron residual audit.}
+\end{tabular}
+\end{table}

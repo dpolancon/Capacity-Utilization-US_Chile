@@ -1,0 +1,40 @@
+\begin{table}[H]
+\centering
+\caption{Specification Set 2: Combined Interaction IM-OLS (Part 4)}
+\label{tab:paper_spec_set_2_4}
+\scriptsize
+\begin{tabular}{p{3.8cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}}
+\toprule
+\multicolumn{7}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real GVA)}} \\
+\midrule
+Model & M2.19\_WD & M2.20\_WD & M2.21\_WD & M2.22\_WD & M2.23\_WD & M2.24\_WD  \\
+Capital Stock & $k^{\text{cap}}_2$ & $k^{\text{cap}}_2$ & $k^{\text{cap}}_1$ & $k^{\text{cap}}_1$ & $k^{\text{cap}}_2$ & $k^{\text{cap}}_2$  \\
+Demand Control & None & NetC Share & None & NetC Share & None & NetC Share  \\
+Step Level Shifts & BP Step Dummies & BP Step Dummies & BP Step Dummies & BP Step Dummies & BP Step Dummies & BP Step Dummies  \\
+\midrule
+$\hat{\alpha}$ (Intercept)  & 8.09$^{***}$ & 7.13$^{***}$ & 8.67$^{***}$ & 9.43$^{***}$ & 8.43$^{***}$ & 8.92$^{***}$  \\
+ & {\scriptsize (1.03)} & {\scriptsize (0.77)} & {\scriptsize (0.64)} & {\scriptsize (0.77)} & {\scriptsize (0.67)} & {\scriptsize (0.84)}  \\
+Break Dates ($T_b$) & 1945, 1964, 1980 & 1944, 1965, 1980, 1996, 2010 & 1996, 2010 & 1967, 1981, 1996, 2010 & 1996, 2010 & 1967, 1981, 1996, 2010  \\
+[1ex]
+$\hat{\theta}_0$ (Capital Elasticity)  & 0.41$^{***}$ & 0.50$^{***}$ & 0.39$^{***}$ & 0.43$^{***}$ & 0.40$^{***}$ & 0.46$^{***}$  \\
+ & {\scriptsize (0.09)} & {\scriptsize (0.06)} & {\scriptsize (0.06)} & {\scriptsize (0.06)} & {\scriptsize (0.06)} & {\scriptsize (0.06)}  \\
+$\hat{\theta}_1$ (Interaction)  & -0.16 & -0.48$^{***}$ & -0.38$^{**}$ & -0.31$^{***}$ & -0.36$^{**}$ & -0.29$^{***}$  \\
+ & {\scriptsize (0.09)} & {\scriptsize (0.11)} & {\scriptsize (0.10)} & {\scriptsize (0.07)} & {\scriptsize (0.10)} & {\scriptsize (0.07)}  \\
+$\hat{\beta}_{\text{cm}}$ ($\text{NetC}^{\text{share}}$)  & --- & -0.22 & --- & -2.12$^{***}$ & --- & -1.98$^{***}$  \\
+ &  & {\scriptsize (0.52)} &  & {\scriptsize (0.37)} &  & {\scriptsize (0.38)}  \\
+\midrule
+\multicolumn{7}{l}{\underline{Collinearity Diagnostics (VIF)}} \\
+VIF ($k^{\text{cap}}$) & 3.69 & 3.69 & 14.01 & 14.01 & 14.46 & 14.46  \\
+VIF (Interaction) & 3.69 & 3.69 & 14.01 & 14.01 & 14.46 & 14.46  \\
+\midrule
+\multicolumn{7}{l}{\underline{Cointegration Test Triad}} \\
+\makecell[l]{Resid. ADF ($t_{\text{ADF}}$) \\ {\scriptsize [$H_0$: No Coint.]}} & -3.96$^{**}$ & -4.50$^{***}$ & -4.68$^{***}$ & -4.10$^{**}$ & -5.02$^{***}$ & -4.09$^{**}$  \\
+\makecell[l]{Shin LM ($C_{\text{Shin}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 0.79$^{***}$ & 0.51$^{***}$ & 0.61$^{***}$ & 0.42$^{***}$ & 0.61$^{***}$ & 0.43$^{***}$  \\
+\makecell[l]{VW Type 2 ($S_{\text{Type 2}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 414.09$^{***}$ & 7174.23$^{***}$ & 4694.64$^{***}$ & 12318.19$^{***}$ & 4218.16$^{***}$ & 14870.24$^{***}$  \\
+\midrule
+$R^2_{\text{sum}}$ & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00  \\
+Sample Size ($N$) & 94 & 94 & 94 & 94 & 94 & 94  \\
+\bottomrule
+\multicolumn{7}{p{13.2cm}}{\footnotesize Note: Estimated via Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014) over 1929--2024 ($N=94$). Standard errors in parentheses. Significance: $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. Fixed-$b$ critical values ($k=2$) applied throughout. Break Dates ($T_b$) reflect persistent level shifts from Bai-Perron residual audit.}
+\end{tabular}
+\end{table}

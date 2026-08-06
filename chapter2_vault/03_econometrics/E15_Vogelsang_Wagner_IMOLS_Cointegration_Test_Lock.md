@@ -2,12 +2,12 @@
 type: econometrics
 status: active
 depends_on:
-  - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
+  - chapter2_vault/06_paper_facing/others/Ch2_Outline_DEFINITIVE.md
   - chapter2_vault/03_econometrics/E10V_IMOLS_CPR_Active_Estimator_Lock.md
 stage_scope: all_stages
 country: US_CL
-last_updated: 2026-08-03
-updated_by: VOGELSANG_WAGNER_COINTEGRATION_LOCK
+last_updated: 2026-08-05
+updated_by: VW_PROMOTION_TO_CORE
 layer: governance_constraint
 role: cointegration_test_lock
 stage: post-estimation-diagnostics
@@ -105,11 +105,39 @@ While $\lambda_2 = 0$ serves as the primary binding cointegration test, two resi
 
 ## 4. Paper-Facing Table Presentation Rule
 
-In all paper-facing estimation matrices (Specification A and Specification B reports):
+> [!IMPORTANT]
+> **2026-08-05 amendment (`VW_PROMOTION_TO_CORE`)**: this section previously required all
+> three tests to appear together in every paper-facing table. That requirement sat awkwardly
+> beside §1's own designation of the Type 2 test as PRIMARY & BINDING, and in practice the
+> generated tables presented the three as a co-equal "triad" while the surrounding prose led
+> with the ADF result — inverting the hierarchy this lock establishes. The rule below
+> completes the hierarchy rather than changing it: the main text carries the binding test,
+> and the secondary diagnostics move to a named appendix where they can be reported in full
+> with their critical values and the star-reversal warning.
 
-1. **Primary Cointegration Test Row**: **Vogelsang-Wagner Type 2 Test Statistic ($\lambda_2$ / Wald test)** is presented as the primary cointegration diagnostic row directly under the parameter estimates.
-2. **Secondary Diagnostic Rows**: `Residual ADF Stat ($t_{\text{ADF}}$)` and `Shin LM Stat ($C_{\text{Shin}}$)` follow as robustness metrics.
-3. **Cointegration Verdict**: Assigned primarily based on the VW Type 2 test result.
+**Main-text (core) tables**, for Specification A, Specification B, and the Chilean threshold
+specification alike:
+
+1. **One cointegration row only**: the **Vogelsang-Wagner Type 2 statistic ($\lambda_2$ Wald
+   test, $H_0$: cointegration)**, placed directly beneath the parameter estimates and above
+   the sample-size block.
+2. **No residual diagnostics**: `Residual ADF ($t_{\text{ADF}}$)` and `Shin LM ($C_{\text{Shin}}$)`
+   do not appear in the main text, nor do the collinearity (VIF) rows or the bandwidth ratio.
+3. **Verdict**: assigned on the Type 2 test alone.
+4. **Note requirement**: because the Type 2 null *is* cointegration, its stars run opposite to
+   the coefficient rows in the same table. The note must state that an absence of stars is the
+   favourable result. Where the statistic has not been evaluated against its $(b,k)$-indexed
+   fixed-$b$ critical value, the note must say so explicitly rather than presenting a bare
+   number that reads as though inference had been performed.
+
+**Appendix tables** (Appendix D of the chapter) carry the full set for every model reported in
+the main text: ADF, Shin LM, and Type 2 together, plus VIF rows, the bandwidth ratio $b$, the
+critical values in force, and the mandatory star-reversal warning from
+[[E17_Cointegration_Significance_Stars_Lock]] §1.
+
+**Implementation**: `chapter2_paper/WP_Chapter2_1.0/split_core_triad_tables.py` derives both
+variants from a single source fragment in `reports/`, so the two cannot drift apart. It copies
+every cell verbatim and invents no value.
 
 ---
 

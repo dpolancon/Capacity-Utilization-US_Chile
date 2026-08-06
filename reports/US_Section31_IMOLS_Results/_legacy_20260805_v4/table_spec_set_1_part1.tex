@@ -1,0 +1,37 @@
+\begin{table}[H]
+\centering
+\caption{Specification Set 1: Double Interaction FWL-Orthogonalized IM-OLS}
+\label{tab:spec_set_1}
+\setlength{\tabcolsep}{2.5pt}
+\scriptsize
+\begin{tabular}{p{3.2cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}}
+\toprule
+\multicolumn{13}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real NVA)}} \\
+\midrule
+Model & M1.1a & M1.1b & M1.2a & M1.2b & M1.3a & M1.3b & M1.4a & M1.4b & M1.5a & M1.5b & M1.6a & M1.6b  \\
+\midrule
+$\hat{\alpha}$ (Intercept)  & 6.57$^{***}$ & 6.03$^{***}$ & 6.47$^{***}$ & 6.30$^{***}$ & 6.56$^{***}$ & 5.93$^{***}$ & 6.47$^{***}$ & 6.20$^{***}$ & 6.34$^{***}$ & 5.05$^{***}$ & 6.19$^{***}$ & 4.44$^{***}$  \\
+ & {\scriptsize (0.32)} & {\scriptsize (0.73)} & {\scriptsize (0.33)} & {\scriptsize (0.68)} & {\scriptsize (0.32)} & {\scriptsize (0.76)} & {\scriptsize (0.33)} & {\scriptsize (0.71)} & {\scriptsize (0.22)} & {\scriptsize (0.75)} & {\scriptsize (0.23)} & {\scriptsize (0.68)}  \\
+$\hat{\beta}$ (Private Core $k_{priv}$)  & 0.58$^{***}$ & 0.60$^{***}$ & --- & --- & 0.58$^{***}$ & 0.61$^{***}$ & --- & --- & 0.60$^{***}$ & 0.70$^{***}$ & --- & ---  \\
+ & {\scriptsize (0.02)} & {\scriptsize (0.06)} &  &  & {\scriptsize (0.02)} & {\scriptsize (0.07)} &  &  & {\scriptsize (0.02)} & {\scriptsize (0.06)} &  &   \\
+$\hat{\beta}$ (Infra-Augmented $k_{aug}$)  & --- & --- & 0.58$^{***}$ & 0.57$^{***}$ & --- & --- & 0.58$^{***}$ & 0.57$^{***}$ & --- & --- & 0.59$^{***}$ & 0.74$^{***}$  \\
+ &  &  & {\scriptsize (0.02)} & {\scriptsize (0.06)} &  &  & {\scriptsize (0.02)} & {\scriptsize (0.06)} &  &  & {\scriptsize (0.02)} & {\scriptsize (0.05)}  \\
+$\hat{\theta}$ (Orthogonalized Interaction)  & -0.02 & -0.08 & 0.02 & -0.07 & -0.03 & -0.04 & 0.01 & -0.03 & -0.24 & -0.27 & -0.24 & -0.27  \\
+ & {\scriptsize (0.13)} & {\scriptsize (0.10)} & {\scriptsize (0.13)} & {\scriptsize (0.09)} & {\scriptsize (0.12)} & {\scriptsize (0.10)} & {\scriptsize (0.12)} & {\scriptsize (0.09)} & {\scriptsize (0.09)} & {\scriptsize (0.12)} & {\scriptsize (0.09)} & {\scriptsize (0.10)}  \\
+Step Shifts ($D^{\text{step}}_{T_b}$)  & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes  \\
+\midrule
+\multicolumn{13}{l}{\underline{Collinearity Diagnostics (VIF)}} \\
+VIF ($k^{\text{cap}}$) & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00  \\
+VIF (Interaction) & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00  \\
+\midrule
+\multicolumn{13}{l}{\underline{Cointegration Test Triad}} \\
+\makecell[l]{Resid. ADF ($t_{\text{ADF}}$) \\ {\scriptsize [$H_0$: No Coint.]}} & -2.41 & -2.81 & -2.22 & -2.79 & -2.33 & -2.73 & -2.16 & -2.73 & -2.94 & -2.95 & -2.77 & -3.50$^{*}$  \\
+\makecell[l]{Shin LM ($C_{\text{Shin}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.04 & 0.04 & 0.03 & 0.04 & 0.03  \\
+\makecell[l]{VW Type 2 ($S_{\text{Type 2}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 3.30 & 11.34 & 3.74 & 10.93 & 2.70 & 11.41 & 3.22 & 10.94 & 0.05 & 11.94 & 0.11 & 10.70  \\
+\midrule
+Bandwidth Ratio ($b$) & 0.2746 & 0.1872 & 0.3037 & 0.1844 & 0.2864 & 0.1934 & 0.3145 & 0.1892 & 0.1940 & 0.1935 & 0.2037 & 0.1478  \\
+Sample Size ($T$) & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94  \\
+\bottomrule
+\multicolumn{13}{p{\linewidth}}{\footnotesize Note: Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS (Vogelsang et al. 2024) over 1929--2024. Standard errors in parentheses. Significance: $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. Stars for coefficient rows and the Residual VW Type 2 cointegration test are derived from a custom Monte Carlo simulation suite mapping the exact DGP variant (double vs. triple interaction polynomials, with/without step level-shifts, applying FWL orthogonalization in simulation). Distributional variables centered at 1929 initial state ($t_0$).}
+\end{tabular}
+\end{table}

@@ -1,0 +1,36 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in,landscape]{geometry}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{makecell}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+\usepackage{hyperref}
+
+\title{\textbf{Section 3.3 IM-OLS Cointegration Estimation Matrix: Chile Peripheral Extension and Foreign Strain (1920--2024)}}
+\author{\textbf{Department of Economics, UMass Amherst}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Data Provenance and Estimation Summary}
+This report evaluates the empirical cointegration estimation for Section 3.3 of Chapter 2 (Peripheral Extension: Foreign Strain and Financial Subordination). Because Chile does not possess sector-level Non-Financial Corporate (NFC) accounting over 1920--2024, all specifications are estimated using aggregate real Gross Domestic Product ($y_t = \ln Y_t$). Capital is disaggregated into non-residential structures ($k^{\text{NRC}}$) and the mechanization gap ($\kappa_t = k^{\text{ME}} - k^{\text{NRC}}$). To control for capital asset prices prior to 1940, relative price ratios ($p_t^{\kappa}$) integrate the U.S. wholesale price index proxy for imported machinery from \texttt{W04\_Precios\_ClioLabPUC.xlsx}.
+
+The Balance of Payments (BoP) constraint is operationalized via a Threshold CMPR IM-OLS estimator (Chen 2015; Vogelsang et al. 2024), where the threshold variable is the Prebischian Capacity to Import ($M^{\text{cap}}_t = X_t \cdot ToT_t$). The optimal threshold cutoff $\hat{\gamma}_{M^{\text{cap}}} = 92.40$ is identified endogenously via Profile Least Squares, converting the non-linear external constraint into the state-dependent dummy $D^{\text{ext}}_t = \mathbb{I}(M^{\text{cap}}_t \le \hat{\gamma})$. All interaction terms are orthogonalized via Frisch-Waugh-Lovell (FWL) to maintain strict Variance Inflation Factors ($VIF \le 1.42$).
+
+\section*{Key Empirical Findings and Cointegration Verdict}
+\begin{enumerate}
+    \item \textbf{Cointegration Triad Confirmation:} Across all Chilean specifications, the Engle-Granger residual ADF test rejects the null of no cointegration ($t_{\text{ADF}} \le -4.12, p < 0.05$). The Shin LM test ($C_{\text{Shin}} \le 0.04$) and Vogelsang-Wagner Type 2 test ($S_{\text{Type 2}} \le 11.40$) comfortably fail to reject the null of cointegration, confirming long-run structural stability without requiring exogenous step level-shift dummies.
+    \item \textbf{Unconstrained Okishio Mechanization Dividend (Regime $E_A$):} When foreign exchange availability is slack ($D^{\text{ext}}_t = 0$), the wage-mechanization interaction parameter is positive and statistically significant ($\hat{\theta}_{\omega\kappa} = 5.12, t = 2.38, p < 0.05$). Rising labor costs compel Chilean firms to deepen machinery relative to plant structures.
+    \item \textbf{The Peripheral Realization Trap (Regime $E_B$):} When the capacity to import drops below the threshold ($M^{\text{cap}}_t \le 92.40 \implies D^{\text{ext}}_t = 1$), the peripheral realization penalty activates violently ($\hat{\delta}_{\omega\kappa} = -16.24, t = -3.35, p < 0.01$). The net intensive elasticity turns negative ($\hat{\theta}_{\omega\kappa} + \hat{\delta}_{\omega\kappa} = -11.12$), proving that external foreign exchange strangulation blocks the absorption of surplus value and triggers structural realization failure.
+\end{enumerate}
+
+\FloatBarrier
+\section{Chile Peripheral Threshold Estimation Matrix}
+\FloatBarrier
+\input{table_chile_threshold_imols.tex}
+
+\end{document}

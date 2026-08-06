@@ -1,7 +1,7 @@
 ---
 type: system_rules
 status: active
-depends_on: [chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md]
+depends_on: [chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md]
 stage_scope: all_stages
 country: US_CL
 last_updated: 2026-08-01
@@ -9,11 +9,12 @@ updated_by: TABLE_FIGURE_FORMATTING_RULE_LOCK
 layer: governance_constraint
 scope: all_agent_sessions
 authority_files:
-- chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
+- chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md
 - chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md
 - chapter2_vault/06_paper_facing/00S_Chapter2_Symbology_and_Notation_Lock.md
-- chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md
-- chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md
+- chapter2_vault/05_codes_implementation/99_legacy/C03-REPO_STRUCTURE.md
+superseded_authority_files:
+- chapter2_vault/06_paper_facing/others/Ch2_Outline_DEFINITIVE.md
 ---
 
 # AGENTS.md — Capacity-Utilization-US_Chile
@@ -29,10 +30,19 @@ Chapter 2 dissertation pipeline: "Demand-Led Profitability and Structural Crisis
 in Chile and the United States during the Fordist Era."
 
 Authority files:
-- `chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md` — locked outline and content decisions
-- `chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md` — constitutional paper-facing claim
-- `chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md` — locked paper-facing section map
-- `chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md` — implementation and stage governance
+- `chapter2_vault/06_paper_facing/00N_Chapter2_PaperFacing_MAP.md` — **locked 6-section paper-facing map. Sole authority on chapter structure.**
+- `chapter2_vault/06_paper_facing/00E_Chapter2_PaperFacing_Constitution.md` — constitutional paper-facing claim (binds as procedure, not lexicon)
+- `chapter2_vault/06_paper_facing/00S_Chapter2_Symbology_and_Notation_Lock.md` — notation lock
+- `chapter2_vault/05_codes_implementation/99_legacy/C03-REPO_STRUCTURE.md` — implementation and stage governance
+
+Superseded:
+- `chapter2_vault/06_paper_facing/others/Ch2_Outline_DEFINITIVE.md` — a 7-section planning
+  outline that conflicts with the locked 6-section map. **Not authoritative on structure**
+  as of 2026-08-05. Retained because it carries material found nowhere else (the writing
+  calibration, the estimator hierarchy, the mandatory counterfactuals, and the §4.2.1
+  objection to pre-estimation FWL orthogonalization — the last of which is unresolved and
+  is recorded as an open item in the lock-consistency ledger). Note the path: it lives in
+  `others/`, not in `06_paper_facing/` directly.
 
 ---
 
@@ -107,9 +117,27 @@ external source?" If the latter, cut it.
   by construction, conflating μ and b. This argument derives from the chapter's own
   accounting framework and requires no external authority.
 
-**Voice:** All prose must conform to WLM v4.0. Evidence and verdict in the same
-paragraph. No hedging. No neutral summaries. For advisor-facing exposition, also use
-`chapter2_vault/07_WrittingSkills_and_Rules/C02_Advisor_Michael_Facing_Exposition_Prompt.md`.
+**Voice:** Prose conforms to the `umass-applied-econometrics` guidelines in their political
+economy variant (`C:\ReposGitHub\academic-research-skills\umass-applied-econometrics`):
+bottom line up front by the second paragraph of the introduction; active voice; no mechanical
+transitions; variables defined in-text at first appearance; coefficients read through the
+surplus approach, class struggle, and institutional periodization rather than reported as bare
+magnitudes. Evidence and verdict in the same paragraph. No hedging. No neutral summaries.
+The `econ-write` skill may be used for mechanics — structure, sentence-level revision, LaTeX
+— but never for conceptual vocabulary, and it does not override the political economy
+framing. For advisor-facing exposition and slides, additionally use
+`chapter2_vault/07_WrittingSkills_and_Rules/C02_Advisor_Michael_Facing_Exposition_Prompt.md`,
+whose lexical prohibitions are scoped to that material as the file itself states.
+
+*(The former `WLM v4.0` mandate was removed on 2026-08-05: no such file exists anywhere in
+this repository or in the skills repository. See
+`chapter2_vault/08_audits_handoffs/2026-08-05_ch2_paper_assembly_lock_consistency_ledger.md`.)*
+
+**Constitutional scope:** `00E_Chapter2_PaperFacing_Constitution.md` binds as **procedure,
+not as lexicon**. What is constitutional is the analytical sequence — μ is not a residual, θ
+is identified first, distribution mediates θ, the pinch-year anchors the level without
+defining the object. The particular phrasing used to express that sequence is not binding,
+which is why `C02`'s prohibitions on "reconstructed object" and cognates raise no conflict.
 
 ---
 
@@ -118,7 +146,7 @@ paragraph. No hedging. No neutral summaries. For advisor-facing exposition, also
 No nonlinear, interacted, or generated specification may advance to estimator selection
 before passing `chapter2_vault/03_econometrics/Interaction_Term_Integration_Order_Gate.md`.
 Stage transitions must also respect the active contracts indexed by
-`chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md`.
+`chapter2_vault/05_codes_implementation/99_legacy/C03-REPO_STRUCTURE.md`.
 
 ---
 

@@ -1,0 +1,41 @@
+\begin{table}[H]
+\centering
+\setlength{\tabcolsep}{2.5pt}
+\caption{Specification Set 2: Effective Wage Interaction FWL-Orthogonalized IM-OLS (Specification B)}
+\label{tab:specB_set2}
+\scriptsize
+\begin{tabular}{p{3.8cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}}
+\toprule
+\multicolumn{9}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real GVA)}} \\
+\midrule
+Model & M2.6a & M2.6b & M2.7a & M2.7b & M2.8a & M2.8b & M2.9a & M2.9b \\
+\midrule
+$\hat{\alpha}$ (Intercept) & 12.79$^{***}$ & 12.76$^{***}$ & 12.79$^{***}$ & 12.76$^{***}$ & 12.82$^{***}$ & 12.77$^{***}$ & 12.90$^{***}$ & 12.76$^{***}$ \\
+ & (0.07) & (0.06) & (0.10) & (0.07) & (0.07) & (0.06) & (0.08) & (0.06) \\
+$\hat{\theta}_{\text{NRC}}$ (Structures $k^{\text{NRC}}$) & 0.61$^{***}$ & 0.62$^{***}$ & 0.61$^{***}$ & 0.78$^{***}$ & 0.61$^{***}$ & 0.58$^{***}$ & 0.62$^{***}$ & 0.67$^{***}$ \\
+ & (0.02) & (0.08) & (0.02) & (0.08) & (0.02) & (0.08) & (0.02) & (0.04) \\
+$\hat{\theta}_{\kappa}$ (Mech. Gap $\kappa$) & 0.31$^{*}$ & 0.14 & --- & --- & 0.32$^{**}$ & 0.39 & --- & --- \\
+ & (0.14) & (0.38) &  &  & (0.13) & (0.29) &  &  \\
+$\hat{\theta}_{\omega\kappa}$ (FWL Wage Interact) & -15.99$^{***}$ & -12.29$^{**}$ & -23.47$^{***}$ & -3.66 & -12.77$^{***}$ & -10.13$^{**}$ & -15.11$^{***}$ & -4.17 \\
+ & (4.94) & (4.22) & (7.08) & (6.98) & (3.81) & (3.43) & (4.01) & (3.57) \\
+$\hat{\theta}_{\kappa p^{\kappa}}$ (FWL Price Interact) & -0.39 & 0.58 & 0.31 & 0.51 & 0.18 & 0.92 & 0.30$^{*}$ & 0.49$^{*}$ \\
+ & (0.45) & (0.60) & (0.17) & (0.39) & (0.51) & (0.69) & (0.14) & (0.22) \\
+Step Shifts ($\boldsymbol{\Gamma} \mathbf{D}_t$) & No & Yes & No & Yes & No & Yes & No & Yes \\
+\midrule
+\multicolumn{9}{l}{\textbf{Collinearity Diagnostics (VIF)}} \\
+VIF ($k^{\text{NRC}}$) & 1.69 & 1.69 & 1.00 & 1.00 & 1.69 & 1.69 & 1.00 & 1.00 \\
+VIF ($\kappa$) & 1.69 & 1.69 & --- & --- & 1.69 & 1.69 & --- & --- \\
+VIF (Wage Interaction) & 1.03 & 1.00 & 1.01 & 1.27 & 1.18 & 1.03 & 1.00 & 1.01 \\
+VIF (Price Interaction) & 1.03 & 1.00 & 1.01 & 1.27 & 1.18 & 1.03 & 1.00 & 1.01 \\
+\midrule
+\multicolumn{9}{l}{\textbf{Cointegration Test Triad}} \\
+Resid. ADF ($t_{\text{ADF}}$) [$H_0$: No Coint.] & -4.40$^{*}$ & -4.77$^{**}$ & -4.04$^{*}$ & -4.31$^{**}$ & -4.33$^{*}$ & -4.58$^{**}$ & -4.13$^{**}$ & -5.50$^{***}$ \\
+Shin LM ($C_{\text{Shin}}$) [$H_0$: Coint.] & 0.03 & 0.02 & 0.05 & 0.02 & 0.03 & 0.02 & 0.03 & 0.02 \\
+VW Type 2 ($S_{\text{Type 2}}$) [$H_0$: Coint.] & 14.58 & 3.71 & 5.71 & 7.79 & 14.97 & 5.93 & 3.03 & 3.50 \\
+\midrule
+Bandwidth Ratio ($b$) & 0.1921 & 0.1735 & 0.2560 & 0.1649 & 0.1854 & 0.1731 & 0.2012 & 0.1694 \\
+Sample Size ($T$) & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94 \\
+\bottomrule
+\multicolumn{9}{p{12.6cm}}{\footnotesize Note: Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS (Vogelsang et al. 2024) over 1929--2024. Standard errors in parentheses. Significance: $^* p < 0.10, ^{**} p < 0.05, ^{***} p < 0.01$. Stars for coefficient rows (structures, mechanization gap, and interactions) and the Residual VW Type 2 cointegration test are derived from a 100,000-pass custom Monte Carlo simulation suite mapping the exact DGP variant (with/without step level-shifts). All interaction terms are FWL-orthogonalized against base capital regressors and step dummies.}
+\end{tabular}
+\end{table}

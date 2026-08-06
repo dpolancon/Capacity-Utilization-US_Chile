@@ -256,8 +256,10 @@ source_ids <- c(
   total_fixed_assets = "NFC__TOTAL__net_stock_current_cost",
   omega_CORP_numerator = "CORP_COMP",
   omega_CORP_denominator = "CORP_GVA",
+  omega_CORP_cfc = "CORP_CFC",
   omega_NFC_numerator = "NFC_COMP",
   omega_NFC_denominator = "NFC_GVA",
+  omega_NFC_cfc = "NFC_CFC",
   GOV_TRANS_transportation =
     "GOV_TRANS__TRANSPORTATION_STRUCTURES__net_stock_current_cost",
   GOV_TRANS_highways =
@@ -388,10 +390,12 @@ panel$NRC_share <- safe_ratio(panel$K_NRC, panel$K_cap)
 
 corp_comp <- extract_series(source_ids[["omega_CORP_numerator"]], years)
 corp_gva <- extract_series(source_ids[["omega_CORP_denominator"]], years)
+corp_cfc <- extract_series(source_ids[["omega_CORP_cfc"]], years)
 nfc_comp <- extract_series(source_ids[["omega_NFC_numerator"]], years)
 nfc_gva <- extract_series(source_ids[["omega_NFC_denominator"]], years)
-panel$omega_CORP <- safe_ratio(corp_comp, corp_gva)
-panel$omega_NFC <- safe_ratio(nfc_comp, nfc_gva)
+nfc_cfc <- extract_series(source_ids[["omega_NFC_cfc"]], years)
+panel$omega_CORP <- safe_ratio(corp_comp, corp_gva - corp_cfc)
+panel$omega_NFC <- safe_ratio(nfc_comp, nfc_gva - nfc_cfc)
 panel$pi_res_CORP <- 1 - panel$omega_CORP
 panel$pi_res_NFC <- 1 - panel$omega_NFC
 panel$e_CORP <- safe_ratio(panel$pi_res_CORP, panel$omega_CORP)

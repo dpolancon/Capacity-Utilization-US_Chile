@@ -1,0 +1,38 @@
+\begin{table}[H]
+\centering
+\caption{Specification Set 2 (Part B: Shaikh-Tonak Tier 2 Wage Share): Triple Interaction IM-OLS Cointegration Estimates}
+\label{tab:spec_set_2_b}
+\scriptsize
+\begin{tabular}{p{3.8cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}}
+\toprule
+\multicolumn{7}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real GVA)}} \\
+\midrule
+Model & M2.7 & M2.8 & M2.9 & M2.10 & M2.11 & M2.12  \\
+Capital Stock & $k^{\text{cap}}_2$ & $k^{\text{cap}}_2$ & $k^{\text{cap}}_1$ & $k^{\text{cap}}_1$ & $k^{\text{cap}}_2$ & $k^{\text{cap}}_2$  \\
+Demand Control & None & NetC Share & None & NetC Share & None & NetC Share  \\
+\midrule
+$\hat{\alpha}$ (Intercept)  & 7.93 & 8.60 & 8.68 & 9.49 & 8.44 & 8.98  \\
+ & {\scriptsize (1.13)} & {\scriptsize (1.00)} & {\scriptsize (0.70)} & {\scriptsize (0.81)} & {\scriptsize (0.73)} & {\scriptsize (0.88)}  \\
+Step Shifts ($D^{	ext{step}}_{T_b}$)  &   \
+$\hat{\theta}_0$ (Capital Elasticity)  & 0.43 & 0.41 & 0.39 & 0.43 & 0.40 & 0.45  \\
+ & {\scriptsize (0.10)} & {\scriptsize (0.08)} & {\scriptsize (0.06)} & {\scriptsize (0.06)} & {\scriptsize (0.06)} & {\scriptsize (0.07)}  \\
+$\hat{\theta}_1$ (Interaction)  & -0.15 & -0.01 & -0.38 & -0.30 & -0.36 & -0.29  \\
+ & {\scriptsize (0.10)} & {\scriptsize (0.09)} & {\scriptsize (0.11)} & {\scriptsize (0.07)} & {\scriptsize (0.11)} & {\scriptsize (0.07)}  \\
+$\hat{\beta}_{\text{cm}}$ ($\text{NetC}^{\text{share}}$)  & --- & -0.89 & --- & -2.12 & --- & -1.99  \\
+ &  & {\scriptsize (0.63)} &  & {\scriptsize (0.39)} &  & {\scriptsize (0.40)}  \\
+\midrule
+\multicolumn{7}{l}{\underline{Collinearity Diagnostics (VIF)}} \\
+VIF ($k^{\text{cap}}$) & 4.00 & 4.84 & 14.01 & 14.05 & 14.46 & 14.48  \\
+VIF (Interaction) & 4.00 & 4.01 & 14.01 & 15.20 & 14.46 & 15.56  \\
+\midrule
+\multicolumn{7}{l}{\underline{Cointegration Test Triad}} \\
+\makecell[l]{Resid. ADF ($t_{\text{ADF}}$) \\ {\scriptsize [$H_0$: No Coint.]}} & -2.98 & -2.50 & -2.90 & -3.06 & -2.85 & -3.09  \\
+\makecell[l]{Shin LM ($C_{\text{Shin}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 0.76$^{***}$ & 0.90$^{***}$ & 0.51$^{***}$ & 0.38$^{***}$ & 0.52$^{***}$ & 0.39$^{***}$  \\
+\makecell[l]{VW Type 2 ($S_{\text{Type 2}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 223.87$^{***}$ & --- & 3570.21$^{***}$ & --- & 3285.32$^{***}$ & ---  \\
+\midrule
+$R^2_{\text{sum}}$ & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00  \\
+Sample Size ($T$) & 94 & 94 & 94 & 94 & 94 & 94  \\
+\bottomrule
+\multicolumn{7}{p{13.2cm}}{\footnotesize Note: Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS (Vogelsang et al. 2024) over 1929--2024. Standard errors in parentheses. Significance: $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. Coefficient rows ($\hat{\alpha}$, $\hat{\gamma}^{\text{step}}$, $\hat{\theta}_0$, $\hat{\theta}_1$, $\hat{\beta}_{\text{cm}}$) and the Residual ADF and VW Type 2 rows use Vogelsang \& Wagner (2014) fixed-$b$ critical values, interpolated by each model's bandwidth ratio $b=\text{bandwidth}/T$ (Bartlett kernel, Newey-West bandwidth) and its number of stochastic regressors $k$ -- NOT a single generic $t$/normal cutoff. Resid. ADF stars instead follow MacKinnon (2010) Engle-Granger critical values, indexed by the total number of $I(1)$ variables; the test is lag-augmented with the order selected by AIC (max 8), which is required because the IM-OLS residuals are strongly autocorrelated -- an unaugmented Dickey-Fuller is biased toward non-rejection and was the source of the superseded v2 results. Shin LM stars use Shin's (1994) critical values (10\%/5\%/1\% = 0.095/0.121/0.184); these have not been independently re-verified as regressor-count-specific for this report's $k=2$/$k=3$ mix and should be treated as provisional (see the audit memo referenced in the repository). \textbf{Star reversal warning:} For Residual ADF, stars indicate rejection of No Cointegration (supporting cointegration). For Shin LM and VW Type 2, stars indicate rejection of Cointegration. Distributional variables centered at 1929 initial state ($t_0$). Step dummies $D^{\text{step}}_{T_b} = \mathbb{I}(t \ge T_b)$ represent persistent level shifts from structural breaks identified via a first-pass Bai-Perron residual audit (15\% trimming), distinguished from impulse outlier controls $D^{\text{imp}}_{T_b} = \mathbb{I}(t = T_b)$.}
+\end{tabular}
+\end{table}

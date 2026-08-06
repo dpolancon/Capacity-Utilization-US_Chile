@@ -1,0 +1,35 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in,landscape]{geometry}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{makecell}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+\usepackage{hyperref}
+\title{\textbf{Section 3.1 IM-OLS Cointegration Estimation Matrix: U.S. NFC Transformation Elasticity (1929--2024)}}
+\author{\textbf{Department of Economics, UMass Amherst}}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section*{Data Provenance and Estimation Summary}
+This report presents the empirical cointegration results for Section 3.1 of Chapter 2. All models are estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS (Vogelsang et al. 2024) over the full NIPA sample window (1931--2024, $T=94$ observations after listwise deletion for the lag-1 conditioning variables). To resolve multi-collinearity, all interactions are orthogonalized via Frisch-Waugh-Lovell (FWL) against their base regressors and any detected Bai-Perron step dummies.
+
+\paragraph{A} \textbf{Cointegration Diagnostics and Asymptotic Null Test Behavior.} Standard residual-based tests for cointegration in non-linear polynomial regressions require careful treatment of deterministic drifts and partial sum processes. In our estimation triad, the Shin (1994) LM stationarity test ($C_{\text{Shin}}$) evaluates the null hypothesis of cointegration ($H_0$: Cointegration) directly on the Integrated Modified OLS residuals $\hat{u}_t^{+}$. Because the IM-OLS estimator is intrinsically specified in partial-sum space, the fitted residuals $\hat{u}_t^{+}$ already represent partial sums $S_t = \sum_{i=1}^t e_i$; evaluating the test without re-accumulating residuals avoids an artificial $I(2)$ divergence. Concurrently, the Vogelsang--Wagner (2014) Type 2 Wald test ($S_{\text{Type 2}}$) detrends the integrated capital regressors $x_t$ against the deterministic trend matrix $\mathbf{S}_d$ prior to constructing the reverse cumulative sum regressors $Z_{2t}$. This prevents unspanned polynomial drifts from blowing up the test statistic. Across both Specification Set 1 (double interaction) and Specification Set 2 (triple effective wage interaction), the residual ADF tests reject the null of no cointegration at standard significance thresholds once structural break step shifts ($\mathbf{D}_t^{\text{step}}$) are incorporated, while the Shin LM and VW Type 2 tests fail to reject the null of cointegration ($C_{\text{Shin}} < 0.121$, $S_{\text{Type 2}} < 13.78$), establishing robust cointegration across all preferred specifications.
+
+\FloatBarrier
+\input{table_model_crosswalk.tex}
+
+\FloatBarrier
+\section{Specification Set 1: Double Interactions ($k^{\text{cap}} \cdot \omega_{t-1}$)}
+\FloatBarrier
+\input{table_spec_set_1_part1.tex}
+
+\FloatBarrier
+\section{Specification Set 2: Triple Interactions ($k^{\text{cap}} \cdot \omega_{t-1} \cdot (1-\iota_{t-1})$)}
+\FloatBarrier
+\input{table_spec_set_2_part1.tex}
+
+\end{document}

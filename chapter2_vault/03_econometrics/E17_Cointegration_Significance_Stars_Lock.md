@@ -6,8 +6,8 @@ depends_on:
   - chapter2_vault/03_econometrics/E15_Vogelsang_Wagner_IMOLS_Cointegration_Test_Lock.md
 stage_scope: all_stages
 country: US_CL
-last_updated: 2026-08-03
-updated_by: COINTEGRATION_STARS_AUDIT
+last_updated: 2026-08-05
+updated_by: VW_PROMOTION_TO_CORE
 layer: governance_constraint
 role: cointegration_star_lock
 stage: post-estimation-diagnostics
@@ -26,7 +26,7 @@ priority: reference
 > [!IMPORTANT]
 > **Constitutional Declaration**: This lock governs the interpretation, reporting, and critical value calibration of cointegration tests for IM-OLS estimations in Chapter 2. It formally recognizes the **"Star Reversal Paradox"** between competing Null Hypotheses, enforcing that significance stars (`*`, `**`, `***`) have diametrically opposed economic meanings depending on the test.
 >
-> **2026-08-03 update**: §2's prior ban on the VW Type 2 row is **superseded**. The manual Euclidean-norm calculation §2 warned against was never what shipped — `US_S50_section31_imols_estimation.R` and `COMMON_S40_baseline_imols_cpr_estimation.R` implement a proper Wald quadratic form (`λ2' V2⁻¹ λ2 / ω²`), consistent with [[E15_Vogelsang_Wagner_IMOLS_Cointegration_Test_Lock]]'s "PRIMARY & BINDING" designation. What *was* wrong, and is now fixed, is the critical values that statistic was compared against: a single hardcoded triple (11.45/13.78/18.90) applied to every model regardless of bandwidth or regressor count. See §3 below for the corrected methodology and the audit memo at `chapter2_vault/08_audits/2026-08-03_section31_cointegration_stars_audit.md` for the full before/after accounting.
+> **2026-08-03 update**: §2's prior ban on the VW Type 2 row is **superseded**. The manual Euclidean-norm calculation §2 warned against was never what shipped — `US_S50_section31_imols_estimation.R` and `COMMON_S40_baseline_imols_cpr_estimation.R` implement a proper Wald quadratic form (`λ2' V2⁻¹ λ2 / ω²`), consistent with [[E15_Vogelsang_Wagner_IMOLS_Cointegration_Test_Lock]]'s "PRIMARY & BINDING" designation. What *was* wrong, and is now fixed, is the critical values that statistic was compared against: a single hardcoded triple (11.45/13.78/18.90) applied to every model regardless of bandwidth or regressor count. See §3 below for the corrected methodology and the audit memo at `chapter2_vault/08_audits_handoffs/2026-08-03_section31_cointegration_stars_audit.md` for the full before/after accounting.
 
 ---
 
@@ -40,8 +40,24 @@ The two primary cointegration diagnostic tests employed in the IM-OLS framework 
 | **Shin LM ($C_{\text{Shin}}$)** | **Cointegration** (Residuals are I(0)) | **Cointegration is Invalid/Spurious** (Rejects I(0)) | **NO STARS** |
 
 ### Reader Warning Clause
-To prevent cognitive dissonance when readers observe mixed star patterns across tests, **all paper-facing tables must include the following explicit warning in their footnotes**:
+
+**Appendix tables** — the only place the ADF and Shin statistics now appear, per
+[[E15_Vogelsang_Wagner_IMOLS_Cointegration_Test_Lock]] §4 as amended 2026-08-05 — must carry
+this warning in their footnotes verbatim:
 > *"Note: For the Residual ADF test, significance stars indicate rejection of No Cointegration (supporting cointegration). For the Shin LM test, significance stars indicate rejection of Cointegration (indicating spurious regression)."*
+
+**Main-text core tables** carry no ADF or Shin row, so the two-way warning does not apply to
+them. They require instead a Type 2 specific note, because the reversal problem does not go
+away when the tests are separated — it sharpens. A core table places the Type 2 row directly
+beneath coefficient rows that use the same star glyphs for the opposite meaning, so a reader
+scanning down the column moves from "stars are good" to "stars are bad" without a visual
+break. The note must therefore state that the Type 2 null is cointegration and that an
+**absence of stars is the favourable result**.
+
+Where the Type 2 statistic has not been evaluated against its $(b,k)$-indexed fixed-$b$
+critical value, the note must say so. An unstarred statistic that has never been tested and an
+unstarred statistic that was tested and did not reject are typographically identical and
+substantively opposite; the note is the only thing that distinguishes them.
 
 ---
 
@@ -53,7 +69,17 @@ The Vogelsang and Wagner (2014) Type 2 test ($H_0$: Cointegration) is theoretica
 
 **Fix**: `codes/COMMON_VW_fixedb_critical_values.R` digitizes the Vogelsang & Wagner (2014) critical-value supplement (Bartlett kernel, intercept-only case) for $k = 1..4$ stochastic regressors, over the full tabulated bandwidth-ratio grid $b = \text{bandwidth}/T \in [0.02, 1.00]$, and exposes `fixedb_crit()` / `fixedb_stars()` to interpolate the correct critical value for each model's actual $(b, k)$. Both the VW Type 2 row **and** every coefficient-level significance star (`$\hat\alpha$`, `$\hat\gamma^{\text{step}}$`, `$\hat\theta_0$`, `$\hat\theta_1$`, `$\hat\beta_{\text{cm}}$` — see §4) now use this module. Any script computing IM-OLS significance stars should `source()` this module rather than hardcoding critical values.
 
-**Not yet resolved**: Shin LM ($C_{\text{Shin}}$) still uses a single fixed critical-value row (10%/5%/1% = 0.095/0.121/0.184) applied regardless of regressor count. Shin's (1994) original table could not be retrieved during the 2026-08-03 audit (source unreachable). This is flagged as provisional in all paper-facing footnotes pending independent verification — see the audit memo.
+**Resolved (2026-08-03)**: Shin LM ($C_{\text{Shin}}$) critical values have been rescued from Shin (1994), Table 1 ("Demeaned ($C_\mu$)"). For $k=2$ stochastic regressors ($m=2$), the upper-tail critical values are:
+- 10% Significance ($^*$): **0.163**
+- 5% Significance ($^{**}$): **0.221**
+- 1% Significance ($^{***}$): **0.380**
+
+For $k=3$ stochastic regressors ($m=3$), the critical values are:
+- 10% Significance ($^*$): **0.121**
+- 5% Significance ($^{**}$): **0.159**
+- 1% Significance ($^{***}$): **0.271**
+
+Because exogenous $I(0)$ controls like `netc_share` are placed in the deterministic matrix `deter`, $k$ (the count of stochastic $I(1)$ regressors) remains strictly equal to 2 across Section 3.1 specifications.
 
 ---
 

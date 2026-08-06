@@ -1,0 +1,37 @@
+\begin{table}[H]
+\centering
+\caption{Specification Set 1 (Part A: Baseline NFC \& Corporate GVA Wage Shares): Double Interaction IM-OLS Cointegration Estimates}
+\label{tab:spec_set_1_a}
+\scriptsize
+\begin{tabular}{p{3.8cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}
+\toprule
+\multicolumn{13}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real GVA)}} \\
+\midrule
+Model & M1.1a & M1.1b & M1.2a & M1.2b & M1.3a & M1.3b & M1.4a & M1.4b & M1.5a & M1.5b & M1.6a & M1.6b  \\
+Demand Control & None & None & NetC Share & NetC Share & None & None & NetC Share & NetC Share & None & None & NetC Share & NetC Share  \\
+\midrule
+$\hat{\alpha}$ (Intercept)  & 6.47$^{*}$ & 8.97 & 6.47$^{*}$ & 8.97 & 6.29$^{*}$ & 6.81 & 6.29$^{*}$ & 6.81 & 6.48$^{*}$ & 9.19 & 6.48$^{*}$ & 9.19  \\
+ & {\scriptsize (0.34)} & {\scriptsize (0.89)} & {\scriptsize (0.34)} & {\scriptsize (0.89)} & {\scriptsize (0.34)} & {\scriptsize (0.83)} & {\scriptsize (0.34)} & {\scriptsize (0.83)} & {\scriptsize (0.35)} & {\scriptsize (0.98)} & {\scriptsize (0.35)} & {\scriptsize (0.98)}  \\
+$\hat{\theta}_0^{\text{priv}}$ (Private Core $k_{priv}$)  & 0.59$^{**}$ & 0.34 & 0.59$^{**}$ & 0.34 & --- & --- & --- & --- & 0.59$^{**}$ & 0.33 & 0.59$^{**}$ & 0.33  \\
+ & {\scriptsize (0.02)} & {\scriptsize (0.08)} & {\scriptsize (0.02)} & {\scriptsize (0.08)} &  &  &  &  & {\scriptsize (0.03)} & {\scriptsize (0.09)} & {\scriptsize (0.03)} & {\scriptsize (0.09)}  \\
+$\hat{\theta}_0^{\text{aug}}$ (Infra-Augmented $k_{aug}$)  & --- & --- & --- & --- & 0.59$^{**}$ & 0.52 & 0.59$^{**}$ & 0.52 & --- & --- & --- & ---  \\
+ &  &  &  &  & {\scriptsize (0.02)} & {\scriptsize (0.07)} & {\scriptsize (0.02)} & {\scriptsize (0.07)} &  &  &  &   \\
+$\hat{\theta}_1$ (Interaction)  & 0.02 & -0.05 & 0.02 & -0.05 & 0.06 & -0.07 & 0.06 & -0.07 & 0.01 & -0.07 & 0.01 & -0.07  \\
+ & {\scriptsize (0.13)} & {\scriptsize (0.15)} & {\scriptsize (0.13)} & {\scriptsize (0.15)} & {\scriptsize (0.12)} & {\scriptsize (0.10)} & {\scriptsize (0.12)} & {\scriptsize (0.10)} & {\scriptsize (0.12)} & {\scriptsize (0.16)} & {\scriptsize (0.12)} & {\scriptsize (0.16)}  \\
+Step Shifts ($D^{\text{step}}_{T_b}$)  & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes  \\
+\midrule
+\multicolumn{13}{l}{\underline{Collinearity Diagnostics (VIF)}} \\
+VIF ($k^{\text{cap}}$) & 1.38 & 1.38 & 1.38 & 1.38 & 1.40 & 1.40 & 1.40 & 1.40 & 1.54 & 1.54 & 1.54 & 1.54  \\
+VIF (Interaction) & 1.38 & 1.38 & 1.38 & 1.38 & 1.40 & 1.40 & 1.40 & 1.40 & 1.54 & 1.54 & 1.54 & 1.54  \\
+\midrule
+\multicolumn{13}{l}{\underline{Cointegration Test Triad}} \\
+\makecell[l]{Resid. ADF ($t_{\text{ADF}}$) \\ {\scriptsize [$H_0$: No Coint.]}} & -4.15$^{**}$ & -3.00 & -4.15$^{**}$ & -3.00 & -3.97$^{**}$ & -3.52$^{*}$ & -3.97$^{**}$ & -3.52$^{*}$ & -4.10$^{**}$ & -3.15 & -4.10$^{**}$ & -3.15  \\
+\makecell[l]{Shin LM ($C_{\text{Shin}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 2.12$^{***}$ & 0.56$^{***}$ & 2.12$^{***}$ & 0.56$^{***}$ & 2.15$^{***}$ & 0.92$^{***}$ & 2.15$^{***}$ & 0.92$^{***}$ & 2.08$^{***}$ & 0.45$^{***}$ & 2.08$^{***}$ & 0.45$^{***}$  \\
+\makecell[l]{VW Type 2 ($S_{\text{Type 2}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 819.23$^{***}$ & 1835.00$^{***}$ & 819.23$^{***}$ & 1835.00$^{***}$ & 924.93$^{***}$ & 719.49$^{***}$ & 924.93$^{***}$ & 719.49$^{***}$ & 934.98$^{***}$ & 1794.32$^{***}$ & 934.98$^{***}$ & 1794.32$^{***}$  \\
+\midrule
+Bandwidth Ratio ($b$) & 0.2852 & 0.1737 & 0.2852 & 0.1737 & 0.2832 & 0.1946 & 0.2832 & 0.1946 & 0.2876 & 0.1658 & 0.2876 & 0.1658  \\
+Sample Size ($T$) & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94  \\
+\bottomrule
+\multicolumn{13}{p{\linewidth}}{\footnotesize Note: Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS (Vogelsang et al. 2024) over 1929--2024. Standard errors in parentheses. Significance: $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. Stars for coefficient rows ($\hat{\alpha}$, $\hat{\theta}_0$, $\hat{\theta}_1$, $\hat{\beta}_{\text{cm}}$) and the Residual VW Type 2 ($S_{\text{Type 2}}$ / $CT_{\text{IM}}$) cointegration test are derived from a **100,000-pass custom Monte Carlo simulation suite** mapping the exact DGP variant (double vs. triple interaction polynomials, with/without step level-shifts, and with/without deterministic $I(0)$ demand controls). This custom simulation adjusts the critical values for the non-linear integration orders of the regressors ($I(1) \times I(1)$ and $I(1) \times I(1) \times I(1)$) and accounts for break-search degrees of freedom loss under the dynamic Bai-Perron audit (15\% trimming). Resid. ADF stars follow MacKinnon (2010) Engle-Granger critical values, indexed by the total number of $I(1)$ variables; the test is lag-augmented with the order selected by AIC (max 8) to whiten serial correlation. Shin LM stars use Shin's (1994) critical values (10\%/5\%/1\% = 0.095/0.121/0.184) and are included for reference. **Star reversal warning:** For Residual ADF, stars indicate rejection of No Cointegration (supporting cointegration). For Shin LM and VW Type 2, stars indicate rejection of Cointegration. Distributional variables centered at 1929 initial state ($t_0$).}
+\end{tabular}
+\end{table}

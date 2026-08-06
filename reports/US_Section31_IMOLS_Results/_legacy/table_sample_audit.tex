@@ -1,0 +1,19 @@
+\begin{table}[h!]
+\centering
+\small
+\caption{Forensic Audit of Repository Data Sources and Year Spans}
+\label{tab:sample_audit}
+\begin{tabular}{p{7.0cm} p{2.2cm} p{1.6cm} p{1.6cm} p{2.2cm}}
+\toprule
+\textbf{Repository Data Source / File Path} & \textbf{Year Range} & \textbf{$N_{\text{lev}}$} & \textbf{$N_{\text{diff}}$} & \textbf{Governing Scope} \\
+\midrule
+\texttt{data/releases/chapter2\_us\_source\_of\_truth\_v1\_1\_candidate/...} & 1901--2024 & 124 & 123 & Wide Panel Release \\
+\texttt{output/US/S29F\_SHAIKH\_TONAK\_WAGE\_SHARE\_CONSTRUCTION/...} & 1929--2024 & 96 & 95 & Shaikh-Tonak Panel \\
+\texttt{output/US/S41\_KGT\_INCLUSION/data/s41\_extended\_capital\_panel.csv} & 1925--2024 & 100 & 99 & Extended Capital Panel \\
+\texttt{output/US/S42\_CM\_EXTENSION/csv/s42a\_extended\_cm\_control\_panel.csv} & 1929--2024 & 96 & 95 & Extended CM Panel \\
+\textbf{Window A: Capped Century Benchmark} & \textbf{1925--2024} & \textbf{100} & \textbf{99} & \textbf{Padded Audit} \\
+\textbf{Window B: Official NIPA Sample} & \textbf{1929--2024} & \textbf{96} & \textbf{95} & \textbf{Zero-NA Benchmark} \\
+\bottomrule
+\multicolumn{5}{p{14.6cm}}{\footnotesize \textbf{Note:} Sourced from BEA and staged panels. Window A padding for wage shares is reconstructed via a constant backcast of NIPA 1929 values. Chained real series for consumption and imports start in 1929.}
+\end{tabular}
+\end{table}

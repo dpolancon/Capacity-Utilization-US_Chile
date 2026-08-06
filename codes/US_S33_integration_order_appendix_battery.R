@@ -54,6 +54,9 @@ df <- merge(df, df_cm[, c("year", "C_real_nipa", "M_real_nipa", "c_share_nom", "
 df <- df[order(df$year), ]
 df <- df[!is.na(df$year), ]
 
+# Construct physical capital share (1 - iota)
+df$iota_phys <- 1 - df$CORP_IPP_INVESTMENT_SHARE
+
 # Construct capital composition ratio kappa (replacing legacy tau)
 df$kappa <- df$k_ME - df$k_NRC
 
@@ -91,7 +94,7 @@ for (var in wage_vars) {
   }
 }
 
-# Construct double and triple interaction terms for baseline
+# Construct double and triple interaction terms and combined composite terms
 for (var in wage_vars) {
   df[[paste0("inter_ipp_", var)]] <- df$CORP_IPP_INVESTMENT_SHARE * df[[var]]
   df[[paste0("inter_kappa_ipp_", var)]] <- df$kappa * df$CORP_IPP_INVESTMENT_SHARE * df[[var]]
@@ -99,11 +102,18 @@ for (var in wage_vars) {
   df[[paste0("inter_nogov_ipp_", var)]] <- df$k_cap_NoGov * df[[var]] * df$CORP_IPP_INVESTMENT_SHARE
   df[[paste0("inter_gov_", var)]] <- df$k_cap_Gov * df[[var]]
   df[[paste0("inter_gov_ipp_", var)]] <- df$k_cap_Gov * df[[var]] * df$CORP_IPP_INVESTMENT_SHARE
+  
+  # Composite Index C_i = omega_i * (1 - iota)
+  df[[paste0("C_index_", var)]] <- df[[var]] * df$iota_phys
+  # Combined interaction k_cap * C_i
+  df[[paste0("inter_nogov_C_", var)]] <- df$k_cap_NoGov * df[[paste0("C_index_", var)]]
+  df[[paste0("inter_gov_C_", var)]] <- df$k_cap_Gov * df[[paste0("C_index_", var)]]
 }
 
 # Define the target series list to test
 vars_to_test <- c(
   "CORP_IPP_INVESTMENT_SHARE",
+  "iota_phys",
   "kappa",
   "k_cap_NoGov",
   "k_cap_Gov",
@@ -114,6 +124,9 @@ vars_to_test <- c(
   "m_share",
   "net_c_share",
   "cm_t",
+  paste0("C_index_", wage_vars),
+  paste0("inter_nogov_C_", wage_vars),
+  paste0("inter_gov_C_", wage_vars),
   paste0("inter_ipp_", wage_vars),
   paste0("inter_kappa_ipp_", wage_vars),
   paste0("inter_nogov_", wage_vars),
@@ -124,6 +137,7 @@ vars_to_test <- c(
 
 var_labels <- c(
   CORP_IPP_INVESTMENT_SHARE = "Corp IPP Share ($\\iota_t$)",
+  iota_phys = "Physical Capital Share ($1 - \\iota_t$)",
   kappa = "Capital Composition ($\\kappa_t$)",
   k_cap_NoGov = "Private Capital ($k^{\\text{cap}}_{\\text{NoGov}}$)",
   k_cap_Gov = "Infrastructure-Augmented Capital ($k^{\\text{cap}}_{\\text{Gov}}$)",
@@ -146,6 +160,9 @@ for (var in wage_vars) {
   omega_label <- gsub("omega_ST_Tier1", "ST,Tier1", omega_label)
   omega_label <- gsub("omega_ST_Tier2", "ST,Tier2", omega_label)
   
+  var_labels[paste0("C_index_", var)] <- paste0("Composite Index $C_{", omega_label, "}$")
+  var_labels[paste0("inter_nogov_C_", var)] <- paste0("$k^{\\text{cap}}_{\\text{NoGov}} \\times C_{", omega_label, "}$")
+  var_labels[paste0("inter_gov_C_", var)] <- paste0("$k^{\\text{cap}}_{\\text{Gov}} \\times C_{", omega_label, "}$")
   var_labels[paste0("inter_ipp_", var)] <- paste0("$\\iota_t \\times \\omega_{\\text{", omega_label, "}}$")
   var_labels[paste0("inter_kappa_ipp_", var)] <- paste0("$\\kappa_t \\times \\iota_t \\times \\omega_{\\text{", omega_label, "}}$")
   var_labels[paste0("inter_nogov_", var)] <- paste0("$k^{\\text{cap}}_{\\text{NoGov}} \\times \\omega_{\\text{", omega_label, "}}$")
@@ -272,6 +289,9 @@ out_csv <- file.path(csv_dir, "US_integration_order_appendix_results.csv")
 write.csv(results_all, out_csv, row.names = FALSE)
 cat("Full audit results saved to:", out_csv, "\n")
 
+rep_dir <- file.path(repo_root, "reports", "US_Section31_IMOLS_Results")
+dir.create(rep_dir, recursive = TRUE, showWarnings = FALSE)
+
 # Generate LaTeX Table lines for Window B (Official NIPA 1929-2024)
 out_tex_lines <- file.path(csv_dir, "US_integration_order_appendix_table_lines.tex")
 rows_B <- results_all[results_all$window_name == "Window B: 1929-2024", ]
@@ -284,49 +304,53 @@ format_latex_row <- function(row) {
           row$za_stat_both, row$za_break_year, verdict_str)
 }
 
-# Panel A: Level Series and Composition Baseline
-panel_a_vars <- c("CORP_IPP_INVESTMENT_SHARE", "kappa", "k_cap_NoGov", "k_cap_Gov")
-panel_a_lines <- c("\\midrule", "\\multicolumn{11}{l}{\\textbf{Panel A: Level Series and Composition Baseline}} \\\\", "\\midrule")
-for (v in panel_a_vars) {
-  row <- rows_B[rows_B$var_id == v, ]
-  if (nrow(row) > 0) panel_a_lines <- c(panel_a_lines, format_latex_row(row))
+# 1. Sample Audit Table Fragment
+sink(file.path(rep_dir, "table_sample_audit.tex"))
+cat("\\begin{table}[h!]\n\\centering\n\\small\n")
+cat("\\caption{Forensic Audit of Repository Data Sources and Year Spans}\n\\label{tab:sample_audit}\n")
+cat("\\begin{tabular}{p{7.0cm} p{2.2cm} p{1.6cm} p{1.6cm} p{2.2cm}}\n\\toprule\n")
+cat("\\textbf{Repository Data Source / File Path} & \\textbf{Year Range} & \\textbf{$N_{\\text{lev}}$} & \\textbf{$N_{\\text{diff}}$} & \\textbf{Governing Scope} \\\\\n\\midrule\n")
+cat("\\texttt{data/releases/chapter2\\_us\\_source\\_of\\_truth\\_v1\\_1\\_candidate/...} & 1901--2024 & 124 & 123 & Wide Panel Release \\\\\n")
+cat("\\texttt{output/US/S29F\\_SHAIKH\\_TONAK\\_WAGE\\_SHARE\\_CONSTRUCTION/...} & 1929--2024 & 96 & 95 & Shaikh-Tonak Panel \\\\\n")
+cat("\\texttt{output/US/S41\\_KGT\\_INCLUSION/data/s41\\_extended\\_capital\\_panel.csv} & 1925--2024 & 100 & 99 & Extended Capital Panel \\\\\n")
+cat("\\texttt{output/US/S42\\_CM\\_EXTENSION/csv/s42a\\_extended\\_cm\\_control\\_panel.csv} & 1929--2024 & 96 & 95 & Extended CM Panel \\\\\n")
+cat("\\textbf{Window A: Capped Century Benchmark} & \\textbf{1925--2024} & \\textbf{100} & \\textbf{99} & \\textbf{Padded Audit} \\\\\n")
+cat("\\textbf{Window B: Official NIPA Sample} & \\textbf{1929--2024} & \\textbf{96} & \\textbf{95} & \\textbf{Zero-NA Benchmark} \\\\\n")
+cat("\\bottomrule\n")
+cat("\\multicolumn{5}{p{14.6cm}}{\\footnotesize \\textbf{Note:} Sourced from BEA and staged panels. Window A padding for wage shares is reconstructed via a constant backcast of NIPA 1929 values. Chained real series for consumption and imports start in 1929.}\n")
+cat("\\end{tabular}\n\\end{table}\n")
+sink()
+
+# Helper for exporting URCA landscape tables
+export_urca_table <- function(var_list, title_text, label_text, file_path) {
+  sink(file_path)
+  cat("\\begin{table}[H]\n\\centering\n\\scriptsize\n")
+  cat("\\caption{", title_text, "}\n", sep="")
+  cat("\\label{", label_text, "}\n", sep="")
+  cat("\\begin{tabular}{p{5.5cm} p{0.5cm} p{0.5cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{2.2cm} p{2.2cm}}\n")
+  cat("\\toprule\n")
+  cat("\\textbf{Variable / Measure} & \\textbf{$N_{\\text{lev}}$} & \\textbf{$N_{\\text{diff}}$} & \\textbf{ADF Level} & \\textbf{ADF Diff} & \\textbf{ERS Level} & \\textbf{ERS Diff} & \\textbf{KPSS Level} & \\textbf{KPSS Diff} & \\textbf{ZA Break (Year)} & \\textbf{Verdict} \\\\\n")
+  cat("\\midrule\n")
+  for (v in var_list) {
+    row <- rows_B[rows_B$var_id == v, ]
+    if (nrow(row) > 0) cat(format_latex_row(row), "\n")
+  }
+  cat("\\bottomrule\n")
+  cat("\\multicolumn{11}{p{21.5cm}}{\\footnotesize \\textbf{Notes:} Primary audit sample: 1929--2024 ($N_{\\text{lev}}=96$, $N_{\\text{diff}}=95$). ADF Level uses a trend model (5\\% CV: -3.45); ADF Diff uses a drift model (5\\% CV: -2.89). ERS Level uses trend (5\\% CV: -3.58); ERS Diff uses constant (5\\% CV: -2.59). KPSS Level uses trend (5\\% CV: 0.146); KPSS Diff uses drift (5\\% CV: 0.463). Zivot-Andrews (ZA) evaluates endogenous breaks in intercept and trend (5\\% CV: -5.08). Verdicts combine ADF, KPSS, and ZA tests.}\n")
+  cat("\\end{tabular}\n\\end{table}\n")
+  sink()
 }
 
-# Panel B: IPP and Capital Composition Interactions
-panel_b_vars <- c(paste0("inter_ipp_", wage_vars), paste0("inter_kappa_ipp_", wage_vars))
-panel_b_lines <- c("\\midrule", "\\multicolumn{11}{l}{\\textbf{Panel B: IPP and Capital Composition Interactions}} \\\\", "\\midrule")
-for (v in panel_b_vars) {
-  row <- rows_B[rows_B$var_id == v, ]
-  if (nrow(row) > 0) panel_b_lines <- c(panel_b_lines, format_latex_row(row))
-}
+# 2. Export URCA Tables
+panel_a_vars <- c("CORP_IPP_INVESTMENT_SHARE", "iota_phys", "kappa", "k_cap_NoGov", "k_cap_Gov")
+panel_b_vars <- c(paste0("C_index_", wage_vars), paste0("inter_ipp_", wage_vars), paste0("inter_kappa_ipp_", wage_vars))
+panel_c_vars <- c(paste0("inter_nogov_C_", wage_vars), paste0("inter_gov_C_", wage_vars), paste0("inter_nogov_", wage_vars), paste0("inter_gov_", wage_vars))
+panel_d_vars <- c("c_t", "m_t", "y_t", "c_share", "m_share", "net_c_share", "cm_t")
 
-# Panel C: Private Capital Interactions
-panel_c_vars <- c(paste0("inter_nogov_", wage_vars), paste0("inter_nogov_ipp_", wage_vars))
-panel_c_lines <- c("\\midrule", "\\multicolumn{11}{l}{\\textbf{Panel C: Private Capital Interactions ($K^{\\text{cap}}_{\\text{NoGov}}$)}} \\\\", "\\midrule")
-for (v in panel_c_vars) {
-  row <- rows_B[rows_B$var_id == v, ]
-  if (nrow(row) > 0) panel_c_lines <- c(panel_c_lines, format_latex_row(row))
-}
-
-# Panel D: Infrastructure-Augmented Capital Interactions
-panel_d_vars <- c(paste0("inter_gov_", wage_vars), paste0("inter_gov_ipp_", wage_vars))
-panel_d_lines <- c("\\midrule", "\\multicolumn{11}{l}{\\textbf{Panel D: Infrastructure-Augmented Capital Interactions ($K^{\\text{cap}}_{\\text{Gov}}$)}} \\\\", "\\midrule")
-for (v in panel_d_vars) {
-  row <- rows_B[rows_B$var_id == v, ]
-  if (nrow(row) > 0) panel_d_lines <- c(panel_d_lines, format_latex_row(row))
-}
-
-# Panel E: Induced-Demand Control Variables
-panel_e_vars <- c("c_t", "m_t", "y_t", "c_share", "m_share", "net_c_share", "cm_t")
-panel_e_lines <- c("\\midrule", "\\multicolumn{11}{l}{\\textbf{Panel E: Induced-Demand Control Variables}} \\\\", "\\midrule")
-for (v in panel_e_vars) {
-  row <- rows_B[rows_B$var_id == v, ]
-  if (nrow(row) > 0) panel_e_lines <- c(panel_e_lines, format_latex_row(row))
-}
-
-tex_lines <- c(panel_a_lines, panel_b_lines, panel_c_lines, panel_d_lines, panel_e_lines)
-cat(paste(tex_lines, collapse = "\n"), file = out_tex_lines)
-cat("LaTeX table lines saved to:", out_tex_lines, "\n")
+export_urca_table(panel_a_vars, "Unit Root Battery: Level Series and Capital Aggregates (1929--2024)", "tab:urca_levels", file.path(rep_dir, "table_urca_levels.tex"))
+export_urca_table(panel_b_vars, "Unit Root Battery: Composite Indices ($C_i$) and IPP Interactions (1929--2024)", "tab:urca_composite", file.path(rep_dir, "table_urca_composite.tex"))
+export_urca_table(panel_c_vars, "Unit Root Battery: Combined Capital Interactions ($k^{\\text{cap}} \\times C_i^c$) (1929--2024)", "tab:urca_interactions", file.path(rep_dir, "table_urca_interactions.tex"))
+export_urca_table(panel_d_vars, "Unit Root Battery: Induced Demand Controls (1929--2024)", "tab:urca_demand", file.path(rep_dir, "table_urca_demand.tex"))
 
 # Plotting Function 1: Original baseline diagnostic plot
 generate_plots_baseline <- function() {

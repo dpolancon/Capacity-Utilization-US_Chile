@@ -1,0 +1,6 @@
+Model_ID,Regime,Variable,Coefficient,Std_Error,t_stat,p_value
+M3.1a,Base,k_NRC,0.61,0.02,30.50,0.00
+M3.1a,Base,kappa,0.31,0.14,2.21,0.02
+M3.1a,Slack_RegimeA,omega_kappa,4.85,1.85,2.62,0.01
+M3.1a,Binding_RegimeB,kappa_Dext,-0.10,0.18,-0.55,0.58
+M3.1a,Binding_RegimeB,omega_kappa_Dext,-15.99,4.94,-3.24,0.00

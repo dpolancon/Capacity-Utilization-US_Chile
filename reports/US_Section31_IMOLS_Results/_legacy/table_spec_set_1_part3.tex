@@ -1,0 +1,37 @@
+\begin{table}[H]
+\centering
+\caption{Specification Set 1: Double Interaction IM-OLS Cointegration Estimates (Part 3)}
+\label{tab:spec_set_1_p3}
+\scriptsize
+\begin{tabular}{p{3.8cm}p{2.1cm}p{2.1cm}p{2.1cm}p{2.1cm}p{2.1cm}p{2.1cm}}
+\toprule
+\multicolumn{7}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real GVA)}} \\
+\midrule
+Model Group & \multicolumn{2}{c}{\textbf{M1.7}} & \multicolumn{2}{c}{\textbf{M1.8}} & \multicolumn{2}{c}{\textbf{M1.9}}  \\
+Specification & Base (ND) & Break-Robust (WD) & Base (ND) & Break-Robust (WD) & Base (ND) & Break-Robust (WD)  \\
+Capital Stock & $k^{\text{cap}}_1$ & $k^{\text{cap}}_1$ & $k^{\text{cap}}_2$ & $k^{\text{cap}}_2$ & $k^{\text{cap}}_1$ & $k^{\text{cap}}_1$  \\
+Demand Control & None & None & None & None & None & None  \\
+\midrule
+$\hat{\alpha}$ (Intercept)  & 7.26$^{***}$ & 7.27$^{***}$ & 7.15$^{***}$ & 6.71$^{***}$ & 6.47$^{***}$ & 8.96$^{***}$  \\
+ & {\scriptsize (0.35)} & {\scriptsize (1.08)} & {\scriptsize (0.36)} & {\scriptsize (0.93)} & {\scriptsize (0.32)} & {\scriptsize (0.83)}  \\
+[1ex]
+$\hat{\theta}_0$ (Capital Elasticity)  & 0.51$^{***}$ & 0.51$^{***}$ & 0.51$^{***}$ & 0.54$^{***}$ & 0.59$^{***}$ & 0.34$^{***}$  \\
+ & {\scriptsize (0.03)} & {\scriptsize (0.09)} & {\scriptsize (0.03)} & {\scriptsize (0.08)} & {\scriptsize (0.02)} & {\scriptsize (0.07)}  \\
+$\hat{\theta}_1$ (Interaction)  & -0.24$^{**}$ & -0.27$^{*}$ & -0.24$^{**}$ & -0.29$^{**}$ & 0.02 & -0.05  \\
+ & {\scriptsize (0.08)} & {\scriptsize (0.10)} & {\scriptsize (0.08)} & {\scriptsize (0.08)} & {\scriptsize (0.12)} & {\scriptsize (0.14)}  \\
+\midrule
+\multicolumn{7}{l}{\underline{Collinearity Diagnostics (VIF)}} \\
+VIF ($k^{\text{cap}}$) & 4.40 & 4.40 & 4.42 & 4.42 & 1.38 & 1.38  \\
+VIF (Interaction) & 4.40 & 4.40 & 4.42 & 4.42 & 1.38 & 1.38  \\
+\midrule
+\multicolumn{7}{l}{\underline{Cointegration Test Triad}} \\
+\makecell[l]{Resid. ADF ($t_{\text{ADF}}$) \\ {\scriptsize [$H_0$: No Coint.]}} & -4.25$^{**}$ & -2.93 & -4.01$^{**}$ & -4.41$^{***}$ & -2.65 & -4.67$^{***}$  \\
+\makecell[l]{Shin LM ($C_{\text{Shin}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 1.19$^{***}$ & 0.99$^{***}$ & 1.30$^{***}$ & 0.30$^{**}$ & 2.53$^{***}$ & 0.63$^{***}$  \\
+\makecell[l]{VW Type 2 ($S_{\text{Type 2}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 2461.01$^{***}$ & 2137.86$^{***}$ & 2813.32$^{***}$ & 172.16$^{***}$ & 4.20 & 5.53  \\
+\midrule
+$R^2_{\text{sum}}$ & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00  \\
+Sample Size ($N$) & 94 & 94 & 94 & 94 & 94 & 94  \\
+\bottomrule
+\multicolumn{7}{p{16.5cm}}{\footnotesize Note: Estimated via Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014) over 1929--2024 ($N=94$). Standard errors in parentheses. Significance: $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. Coefficient rows and cointegration statistics use Vogelsang \& Wagner (2014) fixed-$b$ critical values ($k=2$). Resid. ADF stars follow MacKinnon (2010) Engle-Granger critical values, lag-augmented via AIC. Shin LM stars use Shin's (1994) critical values (Table 1, $C_\mu$: 10\%/5\%/1\% = 0.163/0.221/0.380). NetC share is an $I(0)$ exogenous control in the deterministic matrix. Step dummies $D^{\text{step}}_{T_b} = \mathbb{I}(t \ge T_b)$ represent persistent level shifts identified via Bai-Perron residual audit (15\% trimming).}
+\end{tabular}
+\end{table}

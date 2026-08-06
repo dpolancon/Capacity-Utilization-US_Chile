@@ -1,0 +1,45 @@
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Unit Root Battery: Combined Capital Interactions ($k^{\text{cap}} \times C_i^c$) (1929--2024)}
+\label{tab:urca_interactions}
+\begin{tabular}{p{5.5cm} p{0.5cm} p{0.5cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{2.2cm} p{2.2cm}}
+\toprule
+\textbf{Variable / Measure} & \textbf{$N_{\text{lev}}$} & \textbf{$N_{\text{diff}}$} & \textbf{ADF Level} & \textbf{ADF Diff} & \textbf{ERS Level} & \textbf{ERS Diff} & \textbf{KPSS Level} & \textbf{KPSS Diff} & \textbf{ZA Break (Year)} & \textbf{Verdict} \\
+\midrule
+$k^{\text{cap}}_{\text{NoGov}} \times C_{CORP,GVA}$ & 96 & 95 & -1.126 & -6.907 & -0.731 & -4.295 & 0.521 & 0.310 & -5.068 (1976) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times C_{CORP,NVA}$ & 96 & 95 & -1.380 & -7.108 & -0.772 & -3.213 & 0.472 & 0.256 & -4.716 (1976) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times C_{NFC,GVA}$ & 96 & 95 & -1.256 & -6.637 & -0.905 & -4.634 & 0.518 & 0.275 & -5.229 (1976) & \textbf{I(1) with Break} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times C_{NFC,NVA}$ & 96 & 95 & -1.515 & -6.927 & -0.925 & -4.685 & 0.469 & 0.226 & -4.907 (1976) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times C_{ST,Tier1}$ & 96 & 95 & -1.515 & -6.927 & -0.925 & -4.685 & 0.469 & 0.226 & -4.907 (1976) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times C_{ST,Tier2}$ & 96 & 95 & -2.980 & -6.958 & -1.889 & -4.785 & 0.203 & 0.070 & -4.032 (1975) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times C_{ST,Tier1,GVA}$ & 96 & 95 & -1.256 & -6.637 & -0.905 & -4.634 & 0.518 & 0.275 & -5.229 (1976) & \textbf{I(1) with Break} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times C_{ST,Tier2,GVA}$ & 96 & 95 & -2.688 & -6.412 & -2.082 & -4.948 & 0.205 & 0.072 & -3.859 (1975) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times C_{CORP,GVA}$ & 96 & 95 & -1.117 & -6.992 & -0.693 & -4.181 & 0.525 & 0.320 & -5.069 (1977) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times C_{CORP,NVA}$ & 96 & 95 & -1.369 & -7.179 & -0.739 & -3.110 & 0.476 & 0.263 & -4.687 (1976) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times C_{NFC,GVA}$ & 96 & 95 & -1.244 & -6.705 & -0.870 & -4.717 & 0.521 & 0.283 & -5.232 (1976) & \textbf{I(1) with Break} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times C_{NFC,NVA}$ & 96 & 95 & -1.503 & -6.980 & -0.895 & -4.641 & 0.472 & 0.232 & -4.889 (1976) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times C_{ST,Tier1}$ & 96 & 95 & -1.503 & -6.980 & -0.895 & -4.641 & 0.472 & 0.232 & -4.889 (1976) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times C_{ST,Tier2}$ & 96 & 95 & -2.983 & -7.005 & -1.909 & -4.667 & 0.200 & 0.069 & -4.008 (1971) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times C_{ST,Tier1,GVA}$ & 96 & 95 & -1.244 & -6.705 & -0.870 & -4.717 & 0.521 & 0.283 & -5.232 (1976) & \textbf{I(1) with Break} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times C_{ST,Tier2,GVA}$ & 96 & 95 & -2.690 & -6.468 & -2.100 & -4.974 & 0.200 & 0.072 & -3.766 (1975) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times \omega_{\text{CORP,GVA}}$ & 96 & 95 & -1.910 & -7.797 & -1.149 & -3.808 & 0.423 & 0.170 & -4.847 (2001) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times \omega_{\text{CORP,NVA}}$ & 96 & 95 & -2.547 & -8.050 & -1.567 & -3.005 & 0.324 & 0.108 & -4.202 (1997) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times \omega_{\text{NFC,GVA}}$ & 96 & 95 & -2.018 & -7.307 & -1.386 & -5.587 & 0.413 & 0.133 & -4.791 (2003) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times \omega_{\text{NFC,NVA}}$ & 96 & 95 & -2.645 & -7.741 & -1.730 & -5.153 & 0.311 & 0.086 & -4.266 (2003) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times \omega_{\text{ST,Tier1}}$ & 96 & 95 & -2.645 & -7.741 & -1.730 & -5.153 & 0.311 & 0.086 & -4.266 (2003) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times \omega_{\text{ST,Tier2}}$ & 96 & 95 & -3.037 & -7.956 & -1.975 & -4.444 & 0.284 & 0.065 & -3.739 (1971) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times \omega_{\text{ST,Tier1,GVA}}$ & 96 & 95 & -2.018 & -7.307 & -1.386 & -5.587 & 0.413 & 0.133 & -4.791 (2003) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{NoGov}} \times \omega_{\text{ST,Tier2,GVA}}$ & 96 & 95 & -2.775 & -7.227 & -2.032 & -5.237 & 0.226 & 0.061 & -3.256 (1975) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times \omega_{\text{CORP,GVA}}$ & 96 & 95 & -1.954 & -7.916 & -1.150 & -3.659 & 0.428 & 0.172 & -4.866 (2001) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times \omega_{\text{CORP,NVA}}$ & 96 & 95 & -2.600 & -8.131 & -1.606 & -2.901 & 0.325 & 0.107 & -4.200 (1997) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times \omega_{\text{NFC,GVA}}$ & 96 & 95 & -2.060 & -7.409 & -1.392 & -5.677 & 0.417 & 0.133 & -4.806 (2003) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times \omega_{\text{NFC,NVA}}$ & 96 & 95 & -2.699 & -7.812 & -1.772 & -5.058 & 0.311 & 0.084 & -4.258 (2003) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times \omega_{\text{ST,Tier1}}$ & 96 & 95 & -2.699 & -7.812 & -1.772 & -5.058 & 0.311 & 0.084 & -4.258 (2003) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times \omega_{\text{ST,Tier2}}$ & 96 & 95 & -3.017 & -8.018 & -2.017 & -4.271 & 0.292 & 0.063 & -3.780 (1971) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times \omega_{\text{ST,Tier1,GVA}}$ & 96 & 95 & -2.060 & -7.409 & -1.392 & -5.677 & 0.417 & 0.133 & -4.806 (2003) & \textbf{I(1)} \\ 
+$k^{\text{cap}}_{\text{Gov}} \times \omega_{\text{ST,Tier2,GVA}}$ & 96 & 95 & -2.761 & -7.311 & -2.070 & -5.134 & 0.231 & 0.060 & -3.277 (1953) & \textbf{I(1)} \\ 
+\bottomrule
+\multicolumn{11}{p{21.5cm}}{\footnotesize \textbf{Notes:} Primary audit sample: 1929--2024 ($N_{\text{lev}}=96$, $N_{\text{diff}}=95$). ADF Level uses a trend model (5\% CV: -3.45); ADF Diff uses a drift model (5\% CV: -2.89). ERS Level uses trend (5\% CV: -3.58); ERS Diff uses constant (5\% CV: -2.59). KPSS Level uses trend (5\% CV: 0.146); KPSS Diff uses drift (5\% CV: 0.463). Zivot-Andrews (ZA) evaluates endogenous breaks in intercept and trend (5\% CV: -5.08). Verdicts combine ADF, KPSS, and ZA tests.}
+\end{tabular}
+\end{table}

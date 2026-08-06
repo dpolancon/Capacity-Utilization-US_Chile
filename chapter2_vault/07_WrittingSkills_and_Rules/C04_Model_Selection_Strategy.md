@@ -274,4 +274,4 @@ depends_on: [AGENTS.md, CLAUDE.md, HANDOFF_S40_TO_S99_FOR_CLAUDE_CODE.md]
 
 **Monitor:** You'll likely use <$10 on core pipeline with this strategy, leaving $90 for experimentation or additional polish passes.
 
-See also: [[../00_constitutive_core/01_Governing_Memo]], [[../05_codes_implementation/C03-REPO_STRUCTURE]], [[AGENTS]]
+See also: [[../00_constitutive_core/01_Governing_Memo]], [[C03-REPO_STRUCTURE]], [[AGENTS]]

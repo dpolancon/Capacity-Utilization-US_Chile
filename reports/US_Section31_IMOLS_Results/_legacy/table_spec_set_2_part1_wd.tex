@@ -1,0 +1,52 @@
+\begin{table}[H]
+\centering
+\caption{Specification Set 2 (Part A: Baseline NFC \& Corporate GVA Wage Shares): Break-Robust Specifications (With Step Dummies)}
+\label{tab:spec_set_2_a_wd}
+\scriptsize
+\begin{tabular}{p{3.8cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}}
+\toprule
+\multicolumn{9}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real GVA)}} \\
+\midrule
+Model & M2.1\_WD & M2.2\_WD & M2.3\_WD & M2.4\_WD & M2.5\_WD & M2.6\_WD & M2.7\_WD & M2.8\_WD  \\
+Capital Stock & $k^{\text{cap}}_1$ & $k^{\text{cap}}_1$ & $k^{\text{cap}}_2$ & $k^{\text{cap}}_2$ & $k^{\text{cap}}_1$ & $k^{\text{cap}}_1$ & $k^{\text{cap}}_2$ & $k^{\text{cap}}_2$  \\
+Demand Control & None & NetC Share & None & NetC Share & None & NetC Share & None & NetC Share  \\
+\midrule
+$\hat{\alpha}$ (Intercept)  & 6.19$^{***}$ & 7.34$^{***}$ & 6.38$^{***}$ & 7.82$^{***}$ & 6.31$^{***}$ & 7.28$^{***}$ & 6.52$^{***}$ & 7.78$^{***}$  \\
+ & {\scriptsize (1.04)} & {\scriptsize (1.07)} & {\scriptsize (0.93)} & {\scriptsize (1.00)} & {\scriptsize (1.08)} & {\scriptsize (1.10)} & {\scriptsize (0.98)} & {\scriptsize (1.03)}  \\
+$\hat{\gamma}^{\text{step}}_{S.1944}$ ($D^{\text{step}}_{S.1944}$)  & --- & --- & --- & --- & --- & --- & --- & ---  \\
+ &  &  &  &  &  &  &  &   \\
+$\hat{\gamma}^{\text{step}}_{S.1965}$ ($D^{\text{step}}_{S.1965}$)  & --- & --- & --- & --- & --- & --- & --- & ---  \\
+ &  &  &  &  &  &  &  &   \\
+$\hat{\gamma}^{\text{step}}_{S.1966}$ ($D^{\text{step}}_{S.1966}$)  & --- & --- & --- & --- & --- & --- & --- & ---  \\
+ &  &  &  &  &  &  &  &   \\
+$\hat{\gamma}^{\text{step}}_{S.1981}$ ($D^{\text{step}}_{S.1981}$)  & --- & --- & --- & --- & --- & --- & --- & ---  \\
+ &  &  &  &  &  &  &  &   \\
+$\hat{\gamma}^{\text{step}}_{S.1982}$ ($D^{\text{step}}_{S.1982}$)  & --- & --- & --- & --- & --- & --- & --- & ---  \\
+ &  &  &  &  &  &  &  &   \\
+$\hat{\gamma}^{\text{step}}_{S.1998}$ ($D^{\text{step}}_{S.1998}$)  & --- & --- & --- & --- & --- & --- & --- & ---  \\
+ &  &  &  &  &  &  &  &   \\
+$\hat{\gamma}^{\text{step}}_{S.1999}$ ($D^{\text{step}}_{S.1999}$)  & --- & --- & --- & --- & --- & --- & --- & ---  \\
+ &  &  &  &  &  &  &  &   \\
+[1ex]
+$\hat{\theta}_0$ (Capital Elasticity)  & 0.59$^{***}$ & 0.56$^{***}$ & 0.56$^{***}$ & 0.48$^{***}$ & 0.58$^{***}$ & 0.56$^{***}$ & 0.55$^{***}$ & 0.49$^{***}$  \\
+ & {\scriptsize (0.09)} & {\scriptsize (0.08)} & {\scriptsize (0.08)} & {\scriptsize (0.07)} & {\scriptsize (0.09)} & {\scriptsize (0.08)} & {\scriptsize (0.08)} & {\scriptsize (0.07)}  \\
+$\hat{\theta}_1$ (Interaction)  & -0.09 & 1.20 & 0.01 & 0.96 & -0.08 & 1.09 & 0.00 & 0.87  \\
+ & {\scriptsize (1.00)} & {\scriptsize (0.86)} & {\scriptsize (0.92)} & {\scriptsize (0.76)} & {\scriptsize (0.97)} & {\scriptsize (0.84)} & {\scriptsize (0.90)} & {\scriptsize (0.75)}  \\
+$\hat{\beta}_{\text{cm}}$ ($\text{NetC}^{\text{share}}$)  & --- & -1.18 & --- & -0.84 & --- & -1.17 & --- & -0.83  \\
+ &  & {\scriptsize (0.65)} &  & {\scriptsize (0.64)} &  & {\scriptsize (0.65)} &  & {\scriptsize (0.64)}  \\
+\midrule
+\multicolumn{9}{l}{\underline{Collinearity Diagnostics (VIF)}} \\
+VIF ($k^{\text{cap}}$) & 1.57 & 1.57 & 1.59 & 1.59 & 1.74 & 1.74 & 1.78 & 1.78  \\
+VIF (Interaction) & 1.57 & 1.57 & 1.59 & 1.59 & 1.74 & 1.74 & 1.78 & 1.78  \\
+\midrule
+\multicolumn{9}{l}{\underline{Cointegration Test Triad}} \\
+\makecell[l]{Resid. ADF ($t_{\text{ADF}}$) \\ {\scriptsize [$H_0$: No Coint.]}} & -4.46$^{***}$ & -4.07$^{**}$ & -4.15$^{**}$ & -4.20$^{**}$ & -4.03$^{**}$ & -4.01$^{**}$ & -3.79$^{**}$ & -4.15$^{**}$  \\
+\makecell[l]{Shin LM ($C_{\text{Shin}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 0.78$^{***}$ & 0.79$^{***}$ & 0.87$^{***}$ & 0.76$^{***}$ & 0.77$^{***}$ & 0.79$^{***}$ & 0.85$^{***}$ & 0.76$^{***}$  \\
+\makecell[l]{VW Type 2 ($S_{\text{Type 2}}$) \\ {\scriptsize [$H_0$: Coint.]}} & 1542.22$^{***}$ & 5460.57$^{***}$ & 1947.14$^{***}$ & 6126.78$^{***}$ & 2222.23$^{***}$ & 6821.16$^{***}$ & 2740.33$^{***}$ & 7795.89$^{***}$  \\
+\midrule
+$R^2_{\text{sum}}$ & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00  \\
+Sample Size ($N$) & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94  \\
+\bottomrule
+\multicolumn{9}{p{13.2cm}}{\footnotesize Note: Estimated via Integrated Modified OLS (IM-OLS; Vogelsang \& Wagner 2014) over 1929--2024. Standard errors in parentheses. Significance: $^*p<0.10, ^{**}p<0.05, ^{***}p<0.01$. Coefficient rows ($\hat{\alpha}$, $\hat{\gamma}^{\text{step}}$, $\hat{\theta}_0$, $\hat{\theta}_1$, $\hat{\beta}_{\text{cm}}$) and the Residual ADF and VW Type 2 rows use Vogelsang \& Wagner (2014) fixed-$b$ critical values, interpolated by each model's bandwidth ratio $b=\text{bandwidth}/T$ (Bartlett kernel, Newey-West bandwidth) and its number of stochastic regressors $k=2$ -- NOT a single generic $t$/normal cutoff. Resid. ADF stars follow MacKinnon (2010) Engle-Granger critical values, indexed by total $I(1)$ variables; the test is lag-augmented with order selected by AIC (max 8). Shin LM stars use Shin's (1994) critical values for demeaned $I(1)$ regressions (Table 1, $C_\mu$: 10\%/5\%/1\% = 0.163/0.221/0.380 for $k=2$ stochastic regressors). \textbf{Star reversal warning:} For Residual ADF, stars indicate rejection of No Cointegration (supporting cointegration). For Shin LM and VW Type 2, stars indicate rejection of Cointegration. Distributional variables centered at 1929 initial state ($t_0$). NetC share is an $I(0)$ exogenous demand-composition control included in the deterministic matrix. Step dummies $D^{\text{step}}_{T_b} = \mathbb{I}(t \ge T_b)$ represent persistent level shifts from structural breaks identified via a first-pass Bai-Perron residual audit (15\% trimming).}
+\end{tabular}
+\end{table}

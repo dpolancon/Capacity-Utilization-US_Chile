@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering
+\scriptsize
+\caption{Unit Root Battery: Level Series and Capital Aggregates (1929--2024)}
+\label{tab:urca_levels}
+\begin{tabular}{p{5.5cm} p{0.5cm} p{0.5cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{1.3cm} p{2.2cm} p{2.2cm}}
+\toprule
+\textbf{Variable / Measure} & \textbf{$N_{\text{lev}}$} & \textbf{$N_{\text{diff}}$} & \textbf{ADF Level} & \textbf{ADF Diff} & \textbf{ERS Level} & \textbf{ERS Diff} & \textbf{KPSS Level} & \textbf{KPSS Diff} & \textbf{ZA Break (Year)} & \textbf{Verdict} \\
+\midrule
+Corp IPP Share ($\iota_t$) & 96 & 95 & -2.432 & -7.129 & -2.104 & -4.883 & 0.444 & 0.108 & -4.529 (1976) & \textbf{I(1)} \\ 
+Physical Capital Share ($1 - \iota_t$) & 96 & 95 & -2.432 & -7.129 & -2.104 & -4.883 & 0.444 & 0.108 & -4.529 (1976) & \textbf{I(1)} \\ 
+Capital Composition ($\kappa_t$) & 96 & 95 & -0.196 & -4.592 & -1.024 & -2.737 & 0.593 & 0.761 & -3.632 (1974) & \textbf{I(2) / Non-Stationary} \\ 
+Private Capital ($k^{\text{cap}}_{\text{NoGov}}$) & 96 & 95 & -1.811 & -5.744 & -2.041 & -0.837 & 0.318 & 0.237 & -4.792 (1972) & \textbf{I(1)} \\ 
+Infrastructure-Augmented Capital ($k^{\text{cap}}_{\text{Gov}}$) & 96 & 95 & -1.828 & -6.586 & -1.723 & -0.847 & 0.319 & 0.230 & -4.940 (1972) & \textbf{I(1)} \\ 
+\bottomrule
+\multicolumn{11}{p{21.5cm}}{\footnotesize \textbf{Notes:} Primary audit sample: 1929--2024 ($N_{\text{lev}}=96$, $N_{\text{diff}}=95$). ADF Level uses a trend model (5\% CV: -3.45); ADF Diff uses a drift model (5\% CV: -2.89). ERS Level uses trend (5\% CV: -3.58); ERS Diff uses constant (5\% CV: -2.59). KPSS Level uses trend (5\% CV: 0.146); KPSS Diff uses drift (5\% CV: 0.463). Zivot-Andrews (ZA) evaluates endogenous breaks in intercept and trend (5\% CV: -5.08). Verdicts combine ADF, KPSS, and ZA tests.}
+\end{tabular}
+\end{table}
