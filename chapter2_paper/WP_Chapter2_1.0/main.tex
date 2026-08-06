@@ -1,0 +1,115 @@
+\documentclass[11pt]{article}
+\usepackage{lmodern}
+
+% ---------- Layout ----------
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{setspace}
+\setstretch{1.05}
+
+% ---------- Math & text ----------
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+
+% ---------- Figures & tables ----------
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{placeins}
+
+% ---------- Links ----------
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% ---------- Bibliography ----------
+\usepackage[authoryear]{natbib}
+
+% ---------- Notation macros (00S Symbology and Notation Lock) ----------
+% The notation lock is binding but had no mechanical enforcement: every symbol was
+% hand-typed at every occurrence, so nothing prevented the retired \tau_t from
+% reappearing in place of \kappa_t, or \delta from being reused for step dummies.
+% Use these macros in new material; they are the single place to change a symbol.
+\newcommand{\mut}{\mu_t}                        % capacity utilization Y/Y^p -- never "u"
+\newcommand{\chit}{\chi_t}                      % recapitalization rate I/Pi -- never beta_t
+\newcommand{\kapt}{\kappa_t}                    % capital composition k^ME - k^NRC -- replaces tau_t
+\newcommand{\knrc}{k^{\text{NRC}}}              % nonresidential structures (log)
+\newcommand{\kme}{k^{\text{ME}}}                % machinery and equipment (log)
+\newcommand{\Ypot}{Y^{p}}                       % productive capacity
+\newcommand{\mech}{q}                           % mechanization growth rate -- never "m"
+\newcommand{\pkap}{p_t^{\kappa}}                % relative capital asset price P^ME/P^NRC
+\newcommand{\impint}{\nu}                       % macro import intensity -- never mu
+\newcommand{\deprec}{\delta}                    % net depreciation ONLY -- never step dummies
+\newcommand{\discard}{z}                        % gross capital discard/depletion rate
+\newcommand{\stepD}{\boldsymbol{\gamma}'\mathbf{D}_t}      % step dummies, single equation
+\newcommand{\stepDsys}{\boldsymbol{\Gamma}\mathbf{D}_t}    % step dummies, system form
+\newcommand{\MPF}{Mechanization Productive Frontier}
+
+% ---------- Placeholder marker for underdeveloped analysis ----------
+% Renders visibly in the PDF so gaps are legible to a reader rather than silent.
+\newcommand{\PLACEHOLDER}[1]{%
+  \par\medskip\noindent\fbox{\parbox{0.96\linewidth}{%
+  \footnotesize\textbf{[PLACEHOLDER]}~#1}}\par\medskip}
+
+% ---------- Title block ----------
+\title{Distribution, Technique, and the Transformation of Accumulation: Reconstructing Capacity Utilization in the Center and Periphery\thanks{This paper benefited from AI-assisted editing for syntax refinement, structural suggestions, and stylistic consistency checks. All analytical arguments, historical interpretations, and substantive content remain the author's sole responsibility.}\\
+\begin{large}
+\textbf{WORK IN PROGRESS / PLEASE DO NOT CIRCULATE}     
+\end{large}
+}
+\author{Diego Polanco\thanks{Doctoral Candidate in Economics, Department of Economics, University of Massachusetts Amherst.}\\
+Department of Economics, University of Massachusetts Amherst\\
+\texttt{dpolanconeco@umass.edu}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Capacity utilization has been treated either as a given macro ratio, an inherited benchmark, or an empirical residual. That leaves unresolved the problem of how accumulation is transformed into productive capacity under capitalist disequilibrium. This chapter reconstructs capacity utilization as a structurally mediated object, recovered through the identification of the transformation elasticity $\theta$, where distribution mediates the conversion of accumulation into productive capacity. Applying this framework comparative-econometrically to the United States (1947–2024) and Chile (1920–2024), we demonstrate that the transformation elasticity is endogenously determined through the choice of technique and the balance of class forces. In the center, the shift from a wage-led Fordist nexus to a post-Fordist relative price channel led to institutional decoupling and overaccumulation. In the periphery, this transformation is structurally truncated by external balance constraints and balance of payments dynamics. Our findings challenge the view of utilization as a simple residual, showing it to be a key institutional marker of macro-political-economic reproduction.
+\end{abstract}
+
+\vspace{1cm}
+
+\noindent\textbf{Keywords:} Capacity Utilization; Transformation Elasticity; Choice of Technique; Cointegration; Marx-Okishio; External Balance; Center-Periphery.
+
+\noindent\textbf{JEL Codes:} B51; C32; E01; E22; E32; P16.
+
+\pagebreak
+
+\FloatBarrier
+\input{section1}
+\FloatBarrier
+\input{section2}
+\FloatBarrier
+\input{section3}
+\FloatBarrier
+\input{section4}
+\FloatBarrier
+\input{section5}
+\FloatBarrier
+\input{section6}
+
+% ---------- Appendix ----------%
+% \appendix precedes the bibliography so appendix sections carry their own lettered
+% numbering instead of being absorbed into the preceding section's outline branch.
+\pagebreak
+\appendix
+\FloatBarrier
+\input{appendixA}
+\FloatBarrier
+\input{appendixB}
+\FloatBarrier
+\input{appendixC}
+\FloatBarrier
+\input{appendixD}
+\FloatBarrier
+\input{appendixE}
+
+% ---------- Bibliography ----------%
+\pagebreak
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
