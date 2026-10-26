@@ -9,9 +9,6 @@
 % ---------- Math & text ----------
 \usepackage{amsmath,amssymb}
 \usepackage{microtype}
-\usepackage{longtable}
-\usepackage{booktabs}
-\usepackage{pdflscape}
 
 % ---------- Figures & tables ----------
 \usepackage{graphicx}
@@ -19,39 +16,44 @@
 \usepackage{array}
 \usepackage{caption}
 \usepackage{placeins}
-
-% ---------- Links ----------
-\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{threeparttable}       % NEW: table notes
+\usepackage{siunitx}              % NEW: S columns for decimal alignment
+\usepackage{pdflscape}
 
 % ---------- Bibliography ----------
+% natbib MUST be loaded BEFORE hyperref
 \usepackage[authoryear]{natbib}
 
+% ---------- Links ----------
+% hyperref should be loaded after all other packages (except cleveref)
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% ---------- Smart cross-references ----------
+% cleveref MUST be loaded AFTER hyperref
+\usepackage{cleveref}             % NEW: \cref and \Cref commands
+
 % ---------- Notation macros (00S Symbology and Notation Lock) ----------
-% The notation lock is binding but had no mechanical enforcement: every symbol was
-% hand-typed at every occurrence, so nothing prevented the retired \tau_t from
-% reappearing in place of \kappa_t, or \delta from being reused for step dummies.
-% Use these macros in new material; they are the single place to change a symbol.
-\newcommand{\mut}{\mu_t}                        % capacity utilization Y/Y^p -- never "u"
-\newcommand{\chit}{\chi_t}                      % recapitalization rate I/Pi -- never beta_t
-\newcommand{\kapt}{\kappa_t}                    % capital composition k^ME - k^NRC -- replaces tau_t
-\newcommand{\knrc}{k^{\text{NRC}}}              % nonresidential structures (log)
-\newcommand{\kme}{k^{\text{ME}}}                % machinery and equipment (log)
-\newcommand{\Ypot}{Y^{p}}                       % productive capacity
-\newcommand{\mech}{q}                           % mechanization growth rate -- never "m"
-\newcommand{\pkap}{p_t^{\kappa}}                % relative capital asset price P^ME/P^NRC
-\newcommand{\impint}{\nu}                       % macro import intensity -- never mu
-\newcommand{\deprec}{\delta}                    % net depreciation ONLY -- never step dummies
-\newcommand{\discard}{z}                        % gross capital discard/depletion rate
-\newcommand{\stepD}{\boldsymbol{\gamma}'\mathbf{D}_t}      % step dummies, single equation
-\newcommand{\stepDsys}{\boldsymbol{\Gamma}\mathbf{D}_t}    % step dummies, system form
+\newcommand{\mut}{\mu_t}
+\newcommand{\chit}{\chi_t}
+\newcommand{\kapt}{\kappa_t}
+\newcommand{\knrc}{k^{\text{NRC}}}
+\newcommand{\kme}{k^{\text{ME}}}
+\newcommand{\Ypot}{Y^{p}}
+\newcommand{\mech}{q}
+\newcommand{\pkap}{p_t^{\kappa}}
+\newcommand{\impint}{\nu}
+\newcommand{\deprec}{\delta}
+\newcommand{\discard}{z}
+\newcommand{\stepD}{\boldsymbol{\gamma}'\mathbf{D}_t}
+\newcommand{\stepDsys}{\boldsymbol{\Gamma}\mathbf{D}_t}
 \newcommand{\MPF}{Mechanization Productive Frontier}
 
-% ---------- Placeholder marker for underdeveloped analysis ----------
-% Renders visibly in the PDF so gaps are legible to a reader rather than silent.
+% ---------- Placeholder marker ----------
 \newcommand{\PLACEHOLDER}[1]{%
-  \par\medskip\noindent\fbox{\parbox{0.96\linewidth}{%
-  \footnotesize\textbf{[PLACEHOLDER]}~#1}}\par\medskip}
-
+	\par\medskip\noindent\fbox{\parbox{0.96\linewidth}{%
+			\footnotesize\textbf{[PLACEHOLDER]}~#1}}\par\medskip}
 % ---------- Title block ----------
 \title{Distribution, Technique, and the Transformation of Accumulation: Reconstructing Capacity Utilization in the Center and Periphery\thanks{This paper benefited from AI-assisted editing for syntax refinement, structural suggestions, and stylistic consistency checks. All analytical arguments, historical interpretations, and substantive content remain the author's sole responsibility.}\\
 \begin{large}
@@ -91,6 +93,13 @@ Capacity utilization has been treated either as a given macro ratio, an inherite
 \FloatBarrier
 \input{section6}
 
+
+% ---------- Bibliography ----------%
+\pagebreak
+\bibliographystyle{apalike}
+\bibliography{references}
+
+
 % ---------- Appendix ----------%
 % \appendix precedes the bibliography so appendix sections carry their own lettered
 % numbering instead of being absorbed into the preceding section's outline branch.
@@ -107,9 +116,5 @@ Capacity utilization has been treated either as a given macro ratio, an inherite
 \FloatBarrier
 \input{appendixE}
 
-% ---------- Bibliography ----------%
-\pagebreak
-\bibliographystyle{apalike}
-\bibliography{references}
 
 \end{document}

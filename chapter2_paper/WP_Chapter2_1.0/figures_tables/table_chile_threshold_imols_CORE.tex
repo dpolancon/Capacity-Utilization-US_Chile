@@ -1,0 +1,30 @@
+\begin{table}[H]
+\centering
+\setlength{\tabcolsep}{3.5pt}
+\caption{Chile Peripheral Extension: Threshold CMPR IM-OLS Cointegration Estimates (1920--2024)}
+\label{tab:chile_peripheral_imols_core}
+\scriptsize
+\begin{tabular}{p{4.2cm}p{1.4cm}p{1.4cm}p{1.4cm}p{1.4cm}p{1.4cm}}
+\toprule
+\multicolumn{6}{l}{\textbf{Dependent Variable: $y_t$ (Log Aggregate Chilean Real GDP)}} \\
+\midrule
+Parameter / Variable & Spec M3.1a (Baseline) & Spec M3.2a (Mediated) & Spec M3.3a (T-CMPR Slack $E_A$) & Spec M3.3b (T-CMPR Trap $E_B$) & Spec M3.4a (Full T-CMPR) \\
+\midrule
+$\hat{\alpha}$ (Intercept) & 10.42$^{***}$ (0.12) & 10.45$^{***}$ (0.10) & 10.48$^{***}$ (0.11) & 10.39$^{***}$ (0.09) & 10.44$^{***}$ (0.08) \\
+$\hat{\theta}_{\text{NRC}}$ (Structures $k^{\text{NRC}}$) & 0.58$^{***}$ (0.04) & 0.59$^{***}$ (0.03) & 0.60$^{***}$ (0.03) & 0.56$^{***}$ (0.04) & 0.59$^{***}$ (0.03) \\
+$\hat{\theta}_{\kappa}$ (Mech. Gap $\kappa$) & 0.28$^{*}$ (0.15) & 0.30$^{**}$ (0.13) & 0.31$^{**}$ (0.14) & 0.12 (0.22) & 0.29$^{**}$ (0.13) \\
+$\hat{\theta}_{\omega\kappa}$ (FWL Wage Dividend) & 4.21$^{*}$ (2.40) & 4.85$^{**}$ (2.10) & 5.12$^{**}$ (2.15) & --- & 5.12$^{**}$ (2.15) \\
+$\hat{\theta}_{\text{periph}}$ (Continuous $M^{\text{cap}}$ Interact) & --- & 1.45$^{**}$ (0.62) & --- & --- & --- \\
+$\hat{\theta}_{\kappa p^{\kappa}}$ (FWL Price Proxy Interact) & -0.42 (0.38) & -0.38 (0.35) & -0.35 (0.33) & -0.20 (0.45) & -0.36 (0.32) \\
+$\hat{\delta}_{\kappa}$ (State Gap Penalty $\kappa \cdot D^{\text{ext}}$) & --- & --- & --- & -0.19 (0.25) & -0.15 (0.21) \\
+$\hat{\delta}_{\omega\kappa}$ (Realization Trap Penalty) & --- & --- & --- & -15.99$^{*}$ (4.94) & -16.24$^{*}$ (4.85) \\
+Step Shifts ($\boldsymbol{\Gamma} \mathbf{D}_t$) & No & No & No & No & No \\
+\midrule
+VW Type 2 ($S_{\text{Type 2}}$) [$H_0$: Coint.] & 9.15 & 7.82 & 7.25 & 11.40 & 6.85 \\
+\midrule
+Optimal Threshold ($\hat{\gamma}_{M^{\text{cap}}}$) & --- & --- & 92.40 & 92.40 & 92.40 \\
+Sample Size ($T$) & 104 & 104 & 104 & 104 & 104 \\
+\bottomrule
+\multicolumn{6}{p{11.2cm}}{\footnotesize \textbf{Note:} Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS (Vogelsang and Wagner 2014; Vogelsang et al.\ 2024) over 1920--2024 on aggregate Chilean real GDP ($y_t$). Standard errors in parentheses. Coefficient significance ($^* p < 0.10$, $^{**} p < 0.05$, $^{***} p < 0.01$) is derived from a 100,000-pass Monte Carlo simulation of the exact DGP variant. The Vogelsang--Wagner Type 2 statistic tests $H_0$: \emph{cointegration}. Its stars therefore run opposite to the coefficient rows: an \textbf{absence of stars is the favourable result}, indicating the null of cointegration is not rejected. \textbf{[PENDING: the Type 2 statistics below have not yet been evaluated against the fixed-$b$ critical values in \texttt{codes/COMMON\_VW\_fixedb\_critical\_values.R}, which are indexed by each model's bandwidth ratio $b$ and stochastic regressor count $k$. They are reported here without inference.]} Residual ADF and Shin LM diagnostics, collinearity statistics, and bandwidth ratios are reported in Appendix D. All interaction terms are FWL-orthogonalized against base capital regressors.} \\
+\end{tabular}
+\end{table}

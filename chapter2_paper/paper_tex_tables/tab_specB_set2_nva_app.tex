@@ -1,0 +1,35 @@
+\FloatBarrier
+\begin{table}[h!]
+\centering
+\caption{\textbf{Specification B, Set 2: Effective Wage Interaction (NVA Basis)}}
+\label{tab:specB_set2_nva_app}
+\tiny
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular}{p{3.2cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}}
+\toprule
+Model & M2.27a & M2.28b & M2.31a & M2.32b & M2.35a & M2.36b & M2.39a & M2.40b & M2.43a & M2.44b & M2.47a & M2.48b \\
+\midrule
+$\hat{\alpha}$ (Intercept) & 12.82$^{***}$ & 12.77$^{***}$ & 12.82$^{***}$ & 12.77$^{***}$ & 12.82$^{***}$ & 12.77$^{***}$ & 13.72$^{***}$ & 13.69$^{***}$ & 12.83$^{***}$ & 12.78$^{***}$ & 13.73$^{***}$ & 13.73$^{***}$ \\
+ & (0.07) & (0.06) & (0.07) & (0.06) & (0.07) & (0.06) & (0.04) & (0.04) & (0.07) & (0.07) & (0.04) & (0.04) \\
+$\hat{\theta}_{\text{NRC}}$ & 0.61$^{***}$ & 0.58$^{***}$ & 0.61$^{***}$ & 0.58$^{***}$ & 0.61$^{***}$ & 0.58$^{***}$ & 0.54$^{***}$ & 0.51$^{***}$ & 0.60$^{***}$ & 0.60$^{***}$ & 0.54$^{***}$ & 0.54$^{***}$ \\
+ & (0.02) & (0.08) & (0.02) & (0.08) & (0.02) & (0.08) & (0.01) & (0.01) & (0.02) & (0.08) & (0.01) & (0.01) \\
+$\hat{\theta}_{\kappa}$ & 0.32$^{*}$ & 0.39 & 0.32$^{*}$ & 0.39 & 0.32$^{*}$ & 0.39 & 0.33$^{***}$ & 0.06 & 0.32$^{*}$ & 0.39 & 0.31$^{***}$ & 0.31$^{***}$ \\
+ & (0.13) & (0.29) & (0.13) & (0.29) & (0.13) & (0.29) & (0.06) & (0.09) & (0.13) & (0.29) & (0.06) & (0.06) \\
+$\hat{\theta}_{\omega\kappa}$ & -12.77$^{**}$ & -10.13$^{**}$ & -12.97$^{**}$ & -10.28$^{**}$ & -12.77$^{**}$ & -10.13$^{**}$ & -17.05$^{***}$ & -16.76$^{***}$ & -11.08$^{**}$ & -7.93$^{**}$ & -14.97$^{***}$ & -14.97$^{***}$ \\
+ & (3.81) & (3.43) & (3.86) & (3.48) & (3.81) & (3.43) & (2.34) & (2.55) & (3.48) & (2.96) & (2.01) & (2.01) \\
+$\hat{\theta}_{\kappa p}$ & 0.18 & 0.92 & 0.18 & 0.92 & 0.18 & 0.92 & -0.79$^{**}$ & -0.71$^{*}$ & 0.69 & 1.41$^{*}$ & -0.31 & -0.31 \\
+ & (0.51) & (0.69) & (0.51) & (0.69) & (0.51) & (0.69) & (0.32) & (0.31) & (0.63) & (0.75) & (0.33) & (0.33) \\
+\midrule
+Step shifts & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\
+$C_{\text{Shin}}$ [$H_0$: coint.] & 0.03 & 0.02 & 0.03 & 0.02 & 0.03 & 0.02 & 0.02 & 0.02 & 0.03 & 0.03 & 0.02 & 0.02 \\
+$S_{\text{Type 2}}$ [$H_0$: coint.] & 14.97 & 5.93 & 14.97 & 5.93 & 14.97 & 5.93 & 10.28 & 8.70 & 15.37 & 6.37 & 8.96 & 8.96 \\
+$t_{\text{ADF}}$ [$H_0$: no coint.] & -4.33$^{*}$ & -4.58$^{**}$ & -4.33$^{*}$ & -4.58$^{**}$ & -4.33$^{*}$ & -4.58$^{**}$ & -4.71$^{**}$ & -4.57$^{**}$ & -4.34$^{*}$ & -4.60$^{**}$ & -4.24$^{*}$ & -4.24$^{*}$ \\
+Bandwidth ratio $b$ & 0.185 & 0.173 & 0.185 & 0.173 & 0.185 & 0.173 & 0.208 & 0.208 & 0.193 & 0.181 & 0.208 & 0.208 \\
+Sample Size $T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 & 94 & 94 & 76 & 76 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{\textwidth}
+\scriptsize
+\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log real capacity). Estimated via CMPR IM-OLS \citep{VogelsangWagner2024}. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies. Significance: $^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$. Stars for coefficient rows and cointegration tests are derived from a 100,000-pass Monte Carlo simulation suite mapping the exact DGP variant and fixed-$b$ Wald tables. Standard errors in parentheses.
+\end{minipage}
+\end{table}

@@ -1,0 +1,131 @@
+\section{Appendix D: Specification A - Full Estimation Results}
+\label{app:specA_full_results}
+
+This appendix reports the full estimation results for all 32
+specifications of the aggregate capital model (Specification A).
+The specifications span two interaction sets (Set 1: standard wage
+interaction; Set 2: effective wage interaction scaled by
+$(1-\iota_{t-1})$), two value-added bases (GVA and NVA), four wage
+share measures per basis (NFC baseline, Corporate, Shaikh-Tonak
+Tier 1, Shaikh-Tonak Tier 2), and two structural break modes (no
+break dummies; Bai-Perron step dummies).
+
+\begin{table}[htbp]
+	\centering
+	\caption{Specification A, Set 1: Standard Wage Interaction (GVA Basis)}
+	\label{tab:specA_set1_gva_app}
+	\small
+	\begin{tabular}{@{}lcccccccc@{}}
+		\toprule
+		& \multicolumn{2}{c}{NFC GVA} & \multicolumn{2}{c}{CORP GVA} & \multicolumn{2}{c}{ST Tier 1 GVA} & \multicolumn{2}{c}{ST Tier 2 GVA} \\
+		\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+		& (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+		\midrule
+		$\hat{\theta}_0$ & 0.58$^{***}$ & 0.60$^{***}$ & 0.58$^{***}$ & 0.61$^{***}$ & 0.58$^{***}$ & 0.59$^{**}$ & 0.57$^{***}$ & 0.55$^{***}$ \\
+		& (0.02) & (0.06) & (0.02) & (0.07) & (0.02) & (0.06) & (0.02) & (0.08) \\
+		$\hat{\theta}_1$ & $-0.02$ & $-0.08$ & $-0.03$ & $-0.04$ & 0.06 & $-0.08$ & $-0.19$ & $-0.23$ \\
+		& (0.13) & (0.10) & (0.12) & (0.10) & (0.14) & (0.11) & (0.12) & (0.11) \\
+		\midrule
+		Step shifts & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.06 & 0.04 & 0.06 & 0.04 & 0.05 & 0.03 & 0.06 & 0.05 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 3.30$^{***}$ & 11.34$^{***}$ & 2.70$^{***}$ & 11.41$^{***}$ & 5.82$^{***}$ & 9.68$^{**}$ & 2.56 & 12.13 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & $-2.41$ & $-2.81$ & $-2.33$ & $-2.73$ & $-4.15^{**}$ & $-3.56^{**}$ & $-1.80$ & $-2.15$ \\
+		Bandwidth ratio $b$ & 0.275 & 0.187 & 0.286 & 0.193 & 0.285 & 0.200 & 0.315 & 0.254 \\
+		$T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log NFC real NVA). Estimated via CMPR IM-OLS \citep{VogelsangWagner2024}. The standard wage interaction is $\omega_{t-1} \times k_{\text{cap},t}$. All other notes as in Table~\ref{tab:specA_set2_nva_main}.
+	\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Specification A, Set 1: Standard Wage Interaction (NVA Basis)}
+	\label{tab:specA_set1_nva_app}
+	\small
+	\begin{tabular}{@{}lcccccccc@{}}
+		\toprule
+		& \multicolumn{2}{c}{NFC NVA} & \multicolumn{2}{c}{CORP NVA} & \multicolumn{2}{c}{ST Tier 1 NVA} & \multicolumn{2}{c}{ST Tier 2 NVA} \\
+		\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+		& (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+		\midrule
+		$\hat{\theta}_0$ & 0.58$^{***}$ & 0.60$^{***}$ & 0.58$^{***}$ & 0.61$^{***}$ & 0.58$^{***}$ & 0.59$^{**}$ & 0.57$^{***}$ & 0.55$^{***}$ \\
+		& (0.02) & (0.06) & (0.02) & (0.07) & (0.02) & (0.06) & (0.02) & (0.08) \\
+		$\hat{\theta}_1$ & $-0.02$ & $-0.08$ & $-0.02$ & $-0.08$ & 0.06 & $-0.08$ & $-0.19$ & $-0.23$ \\
+		& (0.13) & (0.10) & (0.13) & (0.10) & (0.14) & (0.11) & (0.12) & (0.11) \\
+		\midrule
+		Step shifts & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.06 & 0.04 & 0.06 & 0.04 & 0.05 & 0.03 & 0.06 & 0.05 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 3.30$^{***}$ & 11.34$^{***}$ & 2.70$^{***}$ & 11.41$^{***}$ & 5.82$^{***}$ & 9.68$^{**}$ & 2.56 & 12.13 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & $-2.41$ & $-2.81$ & $-2.33$ & $-2.73$ & $-4.15^{**}$ & $-3.56^{**}$ & $-1.80$ & $-2.15$ \\
+		Bandwidth ratio $b$ & 0.275 & 0.187 & 0.286 & 0.193 & 0.285 & 0.200 & 0.315 & 0.254 \\
+		$T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log NFC real NVA). Estimated via CMPR IM-OLS \citep{VogelsangWagner2024}. The standard wage interaction is $\omega_{t-1} \times k_{\text{cap},t}$. All other notes as in Table~\ref{tab:specA_set2_nva_main}.
+	\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Specification A, Set 2: Effective Wage Interaction (GVA Basis)}
+	\label{tab:specA_set2_gva_app}
+	\small
+	\begin{tabular}{@{}lcccccccc@{}}
+		\toprule
+		& \multicolumn{2}{c}{NFC GVA} & \multicolumn{2}{c}{CORP GVA} & \multicolumn{2}{c}{ST Tier 1 GVA} & \multicolumn{2}{c}{ST Tier 2 GVA} \\
+		\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+		& (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+		\midrule
+		$\hat{\theta}_0$ & 0.58$^{***}$ & 0.56$^{***}$ & 0.58$^{***}$ & 0.56$^{***}$ & 0.58$^{***}$ & 0.56$^{***}$ & 0.57$^{***}$ & 0.55$^{***}$ \\
+		& (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.06) \\
+		$\hat{\theta}_1$ & 0.00 & $-0.17$ & 0.00 & $-0.17$ & 0.00 & $-0.17$ & $-0.21$ & $-0.35$ \\
+		& (0.10) & (0.07) & (0.10) & (0.07) & (0.10) & (0.07) & (0.08) & (0.07) \\
+		\midrule
+		Step shifts & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.04 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 10.76$^{***}$ & 9.07$^{***}$ & 10.76$^{***}$ & 9.07$^{***}$ & 10.76$^{***}$ & 9.07$^{**}$ & 6.13 & 13.18 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & $-2.32$ & $-3.06$ & $-2.32$ & $-3.06$ & $-2.32$ & $-3.06$ & $-2.00$ & $-2.72$ \\
+		Bandwidth ratio $b$ & 0.298 & 0.169 & 0.298 & 0.169 & 0.298 & 0.169 & 0.259 & 0.237 \\
+		$T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log NFC real NVA). Estimated via CMPR IM-OLS \citep{VogelsangWagner2024}. The effective wage interaction is $\omega_{t-1}(1-\iota_{t-1}) \times k_{\text{cap},t}$. All other notes as in Table~\ref{tab:specA_set2_nva_main}.
+	\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Specification A, Set 2: Effective Wage Interaction (NVA Basis)}
+	\label{tab:specA_set2_nva_app}
+	\small
+	\begin{tabular}{@{}lcccccccc@{}}
+		\toprule
+		& \multicolumn{2}{c}{NFC NVA} & \multicolumn{2}{c}{CORP NVA} & \multicolumn{2}{c}{ST Tier 1 NVA} & \multicolumn{2}{c}{ST Tier 2 NVA} \\
+		\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+		& (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+		\midrule
+		$\hat{\theta}_0$ & 0.58$^{***}$ & 0.56$^{***}$ & 0.58$^{***}$ & 0.56$^{***}$ & 0.58$^{***}$ & 0.56$^{***}$ & 0.57$^{***}$ & 0.55$^{***}$ \\
+		& (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.06) \\
+		$\hat{\theta}_1$ & 0.00 & $-0.17$ & 0.00 & $-0.17$ & 0.00 & $-0.17$ & $-0.21^{*}$ & $-0.35^{**}$ \\
+		& (0.10) & (0.07) & (0.10) & (0.07) & (0.10) & (0.07) & (0.08) & (0.07) \\
+		\midrule
+		Step shifts & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.04 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 10.76$^{***}$ & 9.07$^{***}$ & 10.76$^{***}$ & 9.07$^{***}$ & 10.76$^{***}$ & 9.07$^{**}$ & 6.13 & 13.18 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & $-2.32$ & $-3.06$ & $-2.32$ & $-3.06$ & $-2.32$ & $-3.06$ & $-2.00$ & $-2.72$ \\
+		Bandwidth ratio $b$ & 0.298 & 0.169 & 0.298 & 0.169 & 0.298 & 0.169 & 0.259 & 0.237 \\
+		$T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log NFC real NVA). Estimated via CMPR IM-OLS \citep{VogelsangWagner2024}. The effective wage interaction is $\omega_{t-1}(1-\iota_{t-1}) \times k_{\text{cap},t}$. All other notes as in Table~\ref{tab:specA_set2_nva_main}.
+	\end{minipage}
+\end{table}

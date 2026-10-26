@@ -1,0 +1,26 @@
+\begin{table}[h!]
+\centering
+\begin{threeparttable}
+\caption{Summary Statistics: U.S. NFC Estimation Panel (1931--2024)}
+\label{tab:41:summary_stats}
+\begin{tabular}{l p{7.0cm} c c c c c}
+\toprule
+\textbf{Symbol} & \textbf{Variable Description} & \textbf{N} & \textbf{Mean} & \textbf{Std. Dev.} & \textbf{Min} & \textbf{Max} \\
+\midrule
+$\ln Y_t$ & Log Real Output (NFC Real Net Value Added) & 94 & 14.734 & 1.107 & 12.485 & 16.289 \\
+$K_t$ & Gross Productive Capital (Trillions of 2017 USD) & 94 & 38.24 & 17.58 & 19.32 & 91.74 \\
+$\ln K_t$ & Log Aggregate Gross Capital & 94 & 17.375 & 0.395 & 16.777 & 18.334 \\
+$k_t^{\text{NRC}}$ & Log Nonresidential Structures Stock & 94 & 13.725 & 1.753 & 11.012 & 16.423 \\
+$k_t^{\text{ME}}$ & Log Machinery \& Equipment Stock & 94 & 13.087 & 1.942 & 9.845 & 15.728 \\
+$\kappa_t$ & Mechanization Gap ($k_t^{\text{ME}} - k_t^{\text{NRC}}$) & 94 & -0.637 & 0.278 & -1.210 & -0.313 \\
+$\Delta \ln K_t$ & Capital Stock Growth Rate & 94 & -0.017 & 0.015 & -0.055 & 0.009 \\
+$\omega_t^{\text{NVA}}$ & Baseline Nominal Wage Share (NVA) & 94 & 0.706 & 0.029 & 0.647 & 0.805 \\
+$\omega_t^{\text{GVA}}$ & Robustness Nominal Wage Share (GVA) & 94 & 0.623 & 0.026 & 0.565 & 0.678 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes:} Sample restricted to years with full baseline window eligibility per the Support Window Ledger ($T=94$). Capital stock level $K_t$ is gross real GPIM stock expressed in trillions of 2017 USD (formatted to 2 decimal places). Log variables, growth rates, and dimensionless wage share ratios are formatted to 3 decimal places. Source: BEA NIPA and Fixed Assets Accounts, reconstructed via S12D-B GPIM engine.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

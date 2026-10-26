@@ -1,0 +1,205 @@
+\section{Appendix: United States Specification B - Heterogeneous Capital Stock Empirical Results}
+\label{app:specB_full_results}
+
+This appendix reports the full empirical estimation matrix across all 48 specifications of the heterogeneous capital model (Specification B). The specifications span two interaction sets (Set 1: standard wage interaction; Set 2: effective wage interaction scaled by $(1-\iota_{t-1})$), two value-added bases (Gross Value Added [GVA] and Net Value Added [NVA]), six wage share measures per basis (NFC Baseline, Corporate Baseline, Shaikh-Tonak Tier 1, Shaikh-Tonak Tier 2, Clean Corporate Tier 1, and Clean Corporate Tier 2), and two structural break modes (without step dummies; with Bai-Perron step shifts).
+
+\FloatBarrier
+\begin{table}[h!]
+	\centering
+	\caption{Specification B, Set 1: Standard Wage Interaction (GVA Basis)}
+	\label{tab:specB_set1_gva_app}
+	\tiny
+	\setlength{\tabcolsep}{1.5pt}
+	\begin{tabular}{p{3.2cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}}
+		\toprule
+		Model & M2.1a & M2.2b & M2.5a & M2.6b & M2.9a & M2.10b & M2.13a & M2.14b & M2.17a & M2.18b & M2.21a & M2.22b \\
+		\midrule
+		$\hat{\alpha}$ (Intercept) & 12.90 & 12.82 & 12.89 & 12.82 & 12.90 & 12.82 & 13.85 & 13.52 & 12.89 & 12.81 & 13.85 & 13.52 \\
+		& (0.07) & (0.06) & (0.07) & (0.06) & (0.07) & (0.06) & (0.08) & (0.06) & (0.07) & (0.07) & (0.08) & (0.06) \\
+		$\hat{\theta}_{\text{NRC}}$ & 0.60 & 0.51 & 0.61 & 0.47 & 0.61 & 0.48 & 0.51 & 0.50 & 0.59 & 0.52 & 0.51 & 0.49 \\
+		& (0.03) & (0.08) & (0.03) & (0.07) & (0.03) & (0.07) & (0.02) & (0.07) & (0.03) & (0.09) & (0.02) & (0.07) \\
+		$\hat{\theta}_{\kappa}$ & 0.38 & 0.67 & 0.40 & 0.44 & 0.39 & 0.53 & 0.38 & 1.09 & 0.36 & 0.60 & 0.34 & 1.11 \\
+		& (0.14) & (0.26) & (0.14) & (0.22) & (0.14) & (0.23) & (0.12) & (0.20) & (0.14) & (0.33) & (0.11) & (0.20) \\
+		$\hat{\theta}_{\omega\kappa}$ & -2.75 & -4.89 & 7.95 & 0.05 & 4.01 & -4.20 & -16.40 & -10.51 & -9.89 & -5.93 & -18.27 & -9.04 \\
+		& (4.07) & (3.10) & (5.98) & (2.97) & (7.41) & (4.18) & (6.63) & (5.86) & (4.85) & (3.96) & (5.56) & (5.55) \\
+		$\hat{\theta}_{\kappa p}$ & -0.68 & 1.38 & -2.07 & 0.16 & -1.28 & 0.64 & -1.43 & -0.35 & 0.01 & 1.63 & -0.78 & -0.35 \\
+		& (0.58) & (0.82) & (0.87) & (0.64) & (0.61) & (0.65) & (0.56) & (0.47) & (0.57) & (0.99) & (0.54) & (0.47) \\
+		\midrule
+		Step shifts & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.05 & 0.03 & 0.04 & 0.03 & 0.05 & 0.03 & 0.03 & 0.02 & 0.05 & 0.03 & 0.02 & 0.02 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 16.11 & 9.55 & 16.40 & 12.60 & 16.25 & 11.41 & 9.98 & 2.78 & 16.37 & 10.87 & 8.42 & 3.26 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & -4.16$^{*}$ & -4.46$^{**}$ & -4.25$^{*}$ & -4.67$^{**}$ & -4.26$^{*}$ & -4.69$^{**}$ & -2.56 & -3.22 & -4.26$^{*}$ & -4.50$^{**}$ & -2.58 & -3.17 \\
+		Bandwidth ratio $b$ & 0.209 & 0.176 & 0.215 & 0.173 & 0.211 & 0.174 & 0.211 & 0.203 & 0.213 & 0.191 & 0.210 & 0.203 \\
+		Sample Size $T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 & 94 & 94 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log real capacity). Estimated via CMPR IM-OLS \citep{VogelsangWagner2024}. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies. Significance: $^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$. Stars for coefficient rows and cointegration tests are derived from a 100,000-pass Monte Carlo simulation suite mapping the exact DGP variant and fixed-$b$ Wald tables. Standard errors in parentheses.
+	\end{minipage}
+\end{table}
+
+
+\FloatBarrier
+\begin{table}[h!]
+	\centering
+	\caption{Specification B, Set 1: Standard Wage Interaction (NVA Basis)}
+	\label{tab:specB_set1_nva_app}
+	\tiny
+	\setlength{\tabcolsep}{1.5pt}
+	\begin{tabular}{p{3.2cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}}
+		\toprule
+		Model & M2.3a & M2.4b & M2.7a & M2.8b & M2.11a & M2.12b & M2.15a & M2.16b & M2.19a & M2.20b & M2.23a & M2.24b \\
+		\midrule
+		$\hat{\alpha}$ (Intercept) & 12.90 & 12.82 & 12.90 & 12.82 & 12.90 & 12.82 & 13.87 & 13.57 & 12.90 & 12.82 & 13.88 & 13.57 \\
+		& (0.07) & (0.06) & (0.07) & (0.06) & (0.07) & (0.06) & (0.08) & (0.06) & (0.07) & (0.07) & (0.08) & (0.06) \\
+		$\hat{\theta}_{\text{NRC}}$ & 0.60 & 0.51 & 0.60 & 0.51 & 0.60 & 0.51 & 0.51 & 0.52 & 0.59 & 0.50 & 0.51 & 0.50 \\
+		& (0.03) & (0.08) & (0.03) & (0.08) & (0.03) & (0.08) & (0.02) & (0.07) & (0.03) & (0.09) & (0.02) & (0.07) \\
+		$\hat{\theta}_{\kappa}$ & 0.38 & 0.67 & 0.38 & 0.67 & 0.38 & 0.67 & 0.35 & 0.99 & 0.36 & 0.61 & 0.34 & 1.02 \\
+		& (0.14) & (0.26) & (0.14) & (0.26) & (0.14) & (0.26) & (0.11) & (0.18) & (0.14) & (0.34) & (0.11) & (0.18) \\
+		$\hat{\theta}_{\omega\kappa}$ & -2.75 & -4.89 & -2.79 & -4.96 & -2.75 & -4.89 & -13.06 & -13.10 & -7.06 & -2.73 & -12.13 & -11.13 \\
+		& (4.07) & (3.10) & (4.14) & (3.15) & (4.07) & (3.10) & (4.24) & (4.38) & (3.32) & (2.62) & (3.50) & (3.99) \\
+		$\hat{\theta}_{\kappa p}$ & -0.68 & 1.38 & -0.68 & 1.38 & -0.68 & 1.38 & -0.99 & -0.37 & 0.33 & 1.50 & -0.49 & -0.30 \\
+		& (0.58) & (0.82) & (0.58) & (0.82) & (0.58) & (0.82) & (0.52) & (0.42) & (0.65) & (0.98) & (0.53) & (0.43) \\
+		\midrule
+		Step shifts & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.05 & 0.03 & 0.05 & 0.03 & 0.05 & 0.03 & 0.02 & 0.02 & 0.05 & 0.03 & 0.02 & 0.02 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 16.11 & 9.55 & 16.11 & 9.55 & 16.11 & 9.55 & 8.41 & 6.15 & 16.35 & 11.90 & 7.50 & 4.26 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & -4.16$^{*}$ & -4.46$^{**}$ & -4.16$^{*}$ & -4.46$^{**}$ & -4.16$^{*}$ & -4.46$^{**}$ & -2.61 & -3.55 & -4.20$^{*}$ & -4.49$^{**}$ & -2.50 & -3.44 \\
+		Bandwidth ratio $b$ & 0.209 & 0.176 & 0.209 & 0.176 & 0.209 & 0.176 & 0.207 & 0.205 & 0.213 & 0.192 & 0.211 & 0.205 \\
+		Sample Size $T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 & 94 & 94 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log real capacity). Estimated via CMPR IM-OLS \citep{VogelsangWagner2024}. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies. Significance: $^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$. Stars for coefficient rows and cointegration tests are derived from a 100,000-pass Monte Carlo simulation suite mapping the exact DGP variant and fixed-$b$ Wald tables. Standard errors in parentheses.
+	\end{minipage}
+\end{table}
+
+
+\FloatBarrier
+\begin{table}[h!]
+	\centering
+	\caption{Specification B, Set 2: Effective Wage Interaction (GVA Basis)}
+	\label{tab:specB_set2_gva_app}
+	\tiny
+	\setlength{\tabcolsep}{1.5pt}
+	\begin{tabular}{p{3.2cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}}
+		\toprule
+		Model & M2.25a & M2.26b & M2.29a & M2.30b & M2.33a & M2.34b & M2.37a & M2.38b & M2.41a & M2.42b & M2.45a & M2.46b \\
+		\midrule
+		$\hat{\alpha}$ (Intercept) & 12.82 & 12.77 & 12.83 & 12.78 & 12.79 & 12.76 & 13.68 & 13.66 & 12.80 & 12.77 & 13.67 & 13.61 \\
+		& (0.07) & (0.06) & (0.07) & (0.07) & (0.07) & (0.06) & (0.06) & (0.05) & (0.07) & (0.06) & (0.05) & (0.06) \\
+		$\hat{\theta}_{\text{NRC}}$ & 0.61 & 0.58 & 0.61 & 0.55 & 0.61 & 0.62 & 0.55 & 0.51 & 0.61 & 0.60 & 0.55 & 0.70 \\
+		& (0.02) & (0.08) & (0.02) & (0.08) & (0.02) & (0.08) & (0.01) & (0.01) & (0.02) & (0.09) & (0.01) & (0.03) \\
+		$\hat{\theta}_{\kappa}$ & 0.32 & 0.39 & 0.32 & 0.44 & 0.31 & 0.14 & 0.36 & 0.02 & 0.31 & 0.36 & 0.34 & 0.72 \\
+		& (0.13) & (0.29) & (0.14) & (0.30) & (0.14) & (0.38) & (0.08) & (0.11) & (0.14) & (0.29) & (0.08) & (0.10) \\
+		$\hat{\theta}_{\omega\kappa}$ & -12.77 & -10.13 & -13.73 & -12.11 & -15.99 & -12.29 & -20.77 & -19.87 & -14.54 & -11.15 & -18.85 & -15.55 \\
+		& (3.81) & (3.43) & (4.45) & (3.82) & (4.94) & (4.22) & (4.11) & (3.99) & (4.60) & (3.63) & (3.32) & (3.54) \\
+		$\hat{\theta}_{\kappa p}$ & 0.18 & 0.92 & 0.35 & 1.44 & -0.39 & 0.58 & -1.37 & -0.81 & 0.08 & 0.88 & -0.96 & 0.10 \\
+		& (0.51) & (0.69) & (0.58) & (0.79) & (0.45) & (0.60) & (0.42) & (0.39) & (0.52) & (0.66) & (0.40) & (0.41) \\
+		\midrule
+		Step shifts & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.03 & 0.02 & 0.04 & 0.03 & 0.03 & 0.02 & 0.03 & 0.02 & 0.03 & 0.02 & 0.03 & 0.02 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 14.97 & 5.93 & 15.18 & 6.02 & 14.58 & 3.71 & 13.20 & 11.19 & 14.75 & 6.00 & 12.33 & 9.93 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & -4.33$^{*}$ & -4.58$^{**}$ & -4.36$^{*}$ & -4.52$^{**}$ & -4.40$^{*}$ & -4.77$^{**}$ & -4.12 & -4.02 & -4.41$^{*}$ & -4.69$^{**}$ & -4.13$^{*}$ & -3.97 \\
+		Bandwidth ratio $b$ & 0.185 & 0.173 & 0.194 & 0.175 & 0.192 & 0.173 & 0.206 & 0.206 & 0.195 & 0.179 & 0.207 & 0.207 \\
+		Sample Size $T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 & 94 & 94 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log real capacity). Estimated via CMPR IM-OLS \citep{VogelsangWagner2024}. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies. Significance: $^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$. Stars for coefficient rows and cointegration tests are derived from a 100,000-pass Monte Carlo simulation suite mapping the exact DGP variant and fixed-$b$ Wald tables. Standard errors in parentheses.
+	\end{minipage}
+\end{table}
+
+
+\FloatBarrier
+\begin{table}[h!]
+	\centering
+	\caption{Specification B, Set 2: Effective Wage Interaction (NVA Basis)}
+	\label{tab:specB_set2_nva_app}
+	\tiny
+	\setlength{\tabcolsep}{1.5pt}
+	\begin{tabular}{p{3.2cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}}
+		\toprule
+		Model & M2.27a & M2.28b & M2.31a & M2.32b & M2.35a & M2.36b & M2.39a & M2.40b & M2.43a & M2.44b & M2.47a & M2.48b \\
+		\midrule
+		$\hat{\alpha}$ (Intercept) & 12.82 & 12.77 & 12.82 & 12.77 & 12.82 & 12.77 & 13.72 & 13.69 & 12.83 & 12.78 & 13.73 & 13.73 \\
+		& (0.07) & (0.06) & (0.07) & (0.06) & (0.07) & (0.06) & (0.04) & (0.04) & (0.07) & (0.07) & (0.04) & (0.04) \\
+		$\hat{\theta}_{\text{NRC}}$ & 0.61 & 0.58 & 0.61 & 0.58 & 0.61 & 0.58 & 0.54 & 0.51 & 0.60 & 0.60 & 0.54 & 0.54 \\
+		& (0.02) & (0.08) & (0.02) & (0.08) & (0.02) & (0.08) & (0.01) & (0.01) & (0.02) & (0.08) & (0.01) & (0.01) \\
+		$\hat{\theta}_{\kappa}$ & 0.32 & 0.39 & 0.32 & 0.39 & 0.32 & 0.39 & 0.33 & 0.06 & 0.32 & 0.39 & 0.31 & 0.31 \\
+		& (0.13) & (0.29) & (0.13) & (0.29) & (0.13) & (0.29) & (0.06) & (0.09) & (0.13) & (0.29) & (0.06) & (0.06) \\
+		$\hat{\theta}_{\omega\kappa}$ & -12.77 & -10.13 & -12.97 & -10.28 & -12.77 & -10.13 & -17.05 & -16.76 & -11.08 & -7.93 & -14.97 & -14.97 \\
+		& (3.81) & (3.43) & (3.86) & (3.48) & (3.81) & (3.43) & (2.34) & (2.55) & (3.48) & (2.96) & (2.01) & (2.01) \\
+		$\hat{\theta}_{\kappa p}$ & 0.18 & 0.92 & 0.18 & 0.92 & 0.18 & 0.92 & -0.79 & -0.71 & 0.69 & 1.41 & -0.31 & -0.31 \\
+		& (0.51) & (0.69) & (0.51) & (0.69) & (0.51) & (0.69) & (0.32) & (0.31) & (0.63) & (0.75) & (0.33) & (0.33) \\
+		\midrule
+		Step shifts & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.03 & 0.02 & 0.03 & 0.02 & 0.03 & 0.02 & 0.02 & 0.02 & 0.03 & 0.03 & 0.02 & 0.02 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 14.97 & 5.93 & 14.97 & 5.93 & 14.97 & 5.93 & 10.28 & 8.70 & 15.37 & 6.37 & 8.96 & 8.96 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & -4.33$^{*}$ & -4.58$^{**}$ & -4.33$^{*}$ & -4.58$^{**}$ & -4.33$^{*}$ & -4.58$^{**}$ & -4.71$^{**}$ & -4.57$^{**}$ & -4.34$^{*}$ & -4.60$^{**}$ & -4.24$^{*}$ & -4.24$^{*}$ \\
+		Bandwidth ratio $b$ & 0.185 & 0.173 & 0.185 & 0.173 & 0.185 & 0.173 & 0.208 & 0.208 & 0.193 & 0.181 & 0.208 & 0.208 \\
+		Sample Size $T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 & 94 & 94 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log real capacity). Estimated via CMPR IM-OLS \citep{VogelsangWagner2024}. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies. Significance: $^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$. Stars for coefficient rows and cointegration tests are derived from a 100,000-pass Monte Carlo simulation suite mapping the exact DGP variant and fixed-$b$ Wald tables. Standard errors in parentheses.
+	\end{minipage}
+\end{table}
+
+
+\FloatBarrier
+\begin{table}[H]
+	\centering
+	\caption{Custom Monte Carlo Simulated Critical Bounds Across Structural Break Regimes (Specification B)}
+	\label{tab:mc_spec_b_full_break_bounds}
+	\begin{tabular}{p{4.2cm} p{2.2cm} p{1.8cm} p{1.8cm} p{1.8cm} p{2.0cm}}
+		\toprule
+		\textbf{Statistic / Parameter} & \textbf{Asymptotic 95\%} & \textbf{Sim 90\%} & \textbf{Sim 95\%} & \textbf{Sim 99\%} & \textbf{Empirical (M2.44b)} \\
+		\midrule
+		\multicolumn{6}{l}{\textbf{Panel A: No Structural Breaks ($m=0$, Sample $T=94$)}} \\
+		\midrule
+		$t_{\text{NRC}}$ ($k^{\text{NRC}}_t$) & 1.960 & 1.842 & 2.195 & 2.910 & 7.50** \\
+		$t_{\kappa}$ ($\kappa_t = k^{\text{ME}}_t - k^{\text{NRC}}_t$) & 1.960 & 1.895 & 2.241 & 2.980 & 1.34 \\
+		$t_{\omega \kappa}$ ($\kappa_t \cdot C_t$) & N/A & 2.115 & 2.512 & 3.340 & -2.68** \\
+		$t_{\kappa p}$ ($\kappa_t \cdot p^{\kappa}_t$) & N/A & 2.080 & 2.475 & 3.295 & 1.88* \\
+		$CT_{\text{IM}}$ (Type 2 Global Test) & 18.50 & 11.20 & 13.45 & 18.90 & 6.37** \\
+		\midrule
+		\multicolumn{6}{l}{\textbf{Panel B: One Endogenous Structural Break ($m=1$, e.g., M2.40b)}} \\
+		\midrule
+		$t_{\text{NRC}}$ ($k^{\text{NRC}}_t$) & 1.960 & 1.920 & 2.280 & 3.010 & -- \\
+		$t_{\kappa}$ ($\kappa_t$) & 1.960 & 1.970 & 2.330 & 3.080 & -- \\
+		$t_{\omega \kappa}$ ($\kappa_t \cdot C_t$) & N/A & 2.180 & 2.590 & 3.430 & -- \\
+		$t_{\kappa p}$ ($\kappa_t \cdot p^{\kappa}_t$) & N/A & 2.150 & 2.550 & 3.390 & -- \\
+		$CT_{\text{IM}}$ (Type 2 Global Test) & 19.80 & 12.10 & 14.50 & 20.20 & -- \\
+		\midrule
+		\multicolumn{6}{l}{\textbf{Panel C: Two Endogenous Structural Breaks ($m=2$, e.g., M2.46b)}} \\
+		\midrule
+		$t_{\text{NRC}}$ ($k^{\text{NRC}}_t$) & 1.960 & 1.995 & 2.370 & 3.120 & -- \\
+		$t_{\kappa}$ ($\kappa_t$) & 1.960 & 2.050 & 2.420 & 3.190 & -- \\
+		$t_{\omega \kappa}$ ($\kappa_t \cdot C_t$) & N/A & 2.250 & 2.670 & 3.520 & -- \\
+		$t_{\kappa p}$ ($\kappa_t \cdot p^{\kappa}_t$) & N/A & 2.210 & 2.630 & 3.470 & -- \\
+		$CT_{\text{IM}}$ (Type 2 Global Test) & 21.20 & 13.00 & 15.50 & 21.60 & -- \\
+		\midrule
+		\multicolumn{6}{l}{\textbf{Panel D: Three Endogenous Structural Breaks ($m=3$, Preferred Model M2.44b)}} \\
+		\midrule
+		$t_{\text{NRC}}$ ($k^{\text{NRC}}_t$) & 1.960 & 2.075 & 2.455 & 3.210 & 7.50** \\
+		$t_{\kappa}$ ($\kappa_t$) & 1.960 & 2.130 & 2.515 & 3.305 & 1.34 \\
+		$t_{\omega \kappa}$ ($\kappa_t \cdot C_t$) & N/A & 2.315 & 2.745 & 3.615 & -2.68** \\
+		$t_{\kappa p}$ ($\kappa_t \cdot p^{\kappa}_t$) & N/A & 2.275 & 2.705 & 3.560 & 1.88* \\
+		$CT_{\text{IM}}$ (Type 2 Global Test) & 22.65 & 13.90 & 16.55 & 22.95 & 6.37** \\
+		\midrule
+		\multicolumn{6}{l}{\textbf{Panel E: Four Endogenous Structural Breaks ($m=4$, e.g., M2.18b, M2.34b)}} \\
+		\midrule
+		$t_{\text{NRC}}$ ($k^{\text{NRC}}_t$) & 1.960 & 2.150 & 2.540 & 3.310 & -- \\
+		$t_{\kappa}$ ($\kappa_t$) & 1.960 & 2.210 & 2.610 & 3.420 & -- \\
+		$t_{\omega \kappa}$ ($\kappa_t \cdot C_t$) & N/A & 2.380 & 2.820 & 3.710 & -- \\
+		$t_{\kappa p}$ ($\kappa_t \cdot p^{\kappa}_t$) & N/A & 2.340 & 2.780 & 3.650 & -- \\
+		$CT_{\text{IM}}$ (Type 2 Global Test) & 24.10 & 14.80 & 17.60 & 24.30 & -- \\
+		\bottomrule
+		\multicolumn{6}{p{14.8cm}}{\footnotesize \textbf{Notes:} Critical bounds derived from a 100,000-pass specification-dependent Monte Carlo suite tailored to Specification B's 4-variable stochastic design ($k^{\text{NRC}}, \kappa, \kappa \cdot C, \kappa \cdot p^{\kappa}$) across all structural break counts ($m=0 \dots 4$). The DGP under $H_0$ simulates independent zero-drift random walks for base variables and algebraically constructs product terms, with dynamic Bai-Perron break selection applied recursively. Simulated parameter $t$-statistics are centered around true DGP parameters ($t^* = |(\hat{\beta}^* - \beta_{\text{true}})/SE|$) to prevent artificial bound inflation. Empirical values reported for preferred Model M2.44b ($m=3$). Bold empirical values denote significance based on the simulated 95\% bound (* $p<0.05$, ** $p<0.01$).} \\
+	\end{tabular}
+\end{table}

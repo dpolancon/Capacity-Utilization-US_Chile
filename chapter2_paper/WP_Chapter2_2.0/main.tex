@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+\usepackage{lmodern}
+
+% ---------- Layout ----------
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{setspace}
+\setstretch{1.05}
+
+% ---------- Math & text ----------
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+
+% ---------- Figures & tables ----------
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{threeparttable}       % NEW: table notes
+\usepackage{siunitx}              % NEW: S columns for decimal alignment
+\usepackage{pdflscape}
+
+
+% ---------- Bibliography ----------
+% natbib MUST be loaded BEFORE hyperref
+\usepackage[authoryear]{natbib}
+
+% ---------- Links ----------
+% hyperref should be loaded after all other packages (except cleveref)
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% ---------- Smart cross-references ----------
+% cleveref MUST be loaded AFTER hyperref
+\usepackage{cleveref}             % NEW: \cref and \Cref commands
+
+% ---------- Notation macros (00S Symbology and Notation Lock) ----------
+\newcommand{\mut}{\mu_t}
+\newcommand{\chit}{\chi_t}
+\newcommand{\kapt}{\kappa_t}
+\newcommand{\knrc}{k^{\text{NRC}}}
+\newcommand{\kme}{k^{\text{ME}}}
+\newcommand{\Ypot}{Y^{p}}
+\newcommand{\mech}{q}
+\newcommand{\pkap}{p_t^{\kappa}}
+\newcommand{\impint}{\nu}
+\newcommand{\deprec}{\delta}
+\newcommand{\discard}{z}
+\newcommand{\stepD}{\boldsymbol{\gamma}'\mathbf{D}_t}
+\newcommand{\stepDsys}{\boldsymbol{\Gamma}\mathbf{D}_t}
+\newcommand{\MPF}{Mechanization Productive Frontier}
+
+% ---------- Placeholder marker ----------
+\newcommand{\PLACEHOLDER}[1]{%
+	\par\medskip\noindent\fbox{\parbox{0.96\linewidth}{%
+			\footnotesize\textbf{[PLACEHOLDER]}~#1}}\par\medskip}
+% ---------- Title block ----------
+\title{The Transformation of Accumulation into Productive Capacities: Capacity Utilization in the Center and Periphery\thanks{This paper benefited from AI-assisted editing for syntax refinement, structural suggestions, and stylistic consistency checks. All analytical arguments, historical interpretations, and substantive content remain the author's sole responsibility.}\\
+\begin{large}
+\textbf{WORK IN PROGRESS / PLEASE DO NOT CIRCULATE}     
+\end{large}
+}
+\author{Diego Polanco\thanks{Doctoral Candidate in Economics, Department of Economics, University of Massachusetts Amherst.}\\
+Department of Economics, University of Massachusetts Amherst\\
+\texttt{dpolanconeco@umass.edu}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\vspace{1cm}
+
+\noindent\textbf{Keywords:} Capacity Utilization; Transformation Elasticity; Choice of Technique; Cointegration; Marx-Okishio; External Balance; Center-Periphery.
+
+\noindent\textbf{JEL Codes:} B51; C32; E01; E22; E32; P16.
+
+\pagebreak
+
+\FloatBarrier
+\input{section1}
+\FloatBarrier
+\input{section2}
+\FloatBarrier
+\input{section3}
+\FloatBarrier
+\input{section4}
+\FloatBarrier
+\input{section5}
+\FloatBarrier
+
+
+% ---------- Bibliography ----------%
+\pagebreak
+\bibliographystyle{apalike}
+\bibliography{references}
+
+
+% ---------- Appendix ----------%
+% \appendix precedes the bibliography so appendix sections carry their own lettered
+% numbering instead of being absorbed into the preceding section's outline branch.
+\pagebreak
+\appendix
+\input{appendixA}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%
+\input{appendixB}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%
+\input{appendixC}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%
+\input{appendixD}
+
+\end{document}

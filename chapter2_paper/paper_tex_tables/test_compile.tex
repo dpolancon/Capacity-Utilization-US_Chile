@@ -1,0 +1,40 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in,landscape]{geometry}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{makecell}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{amsmath,amssymb}
+\usepackage{float}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\title{\textbf{Test Compilation: Section 4.3.1 Baseline Results \& Appendix D Tables}}
+\author{Department of Economics, UMass Amherst}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\input{section4_baseline_empirical_results.tex}
+
+\newpage
+\input{appendix_specA_tables.tex}
+
+\begin{thebibliography}{99}
+\bibitem[Vogelsang and Wagner(2014)]{VogelsangWagner2014}
+Vogelsang, T. J., \& Wagner, M. (2014). Integrated modified OLS estimation and fixed-$b$ inference for cointegrating regressions. \textit{Journal of Econometrics}, 178(2), 741--760.
+
+\bibitem[Vogelsang et al.(2024)]{VogelsangWagner2024}
+Vogelsang, T. J., Wagner, M., \& colleagues. (2024). Fixed-$b$ asymptotics for cointegrating polynomial regressions. \textit{Working Paper}.
+
+\bibitem[Shin(1994)]{Shin1994}
+Shin, Y. (1994). A residual-based test of the null of cointegration in models with deterministic trends. \textit{Econometric Theory}, 10(1), 91--115.
+
+\bibitem[Shaikh and Tonak(1994)]{ShaikhTonak1994}
+Shaikh, A. M., \& Tonak, E. A. (1994). \textit{Measuring the Wealth of Nations: The Political Economy of National Accounts}. Cambridge University Press.
+\end{thebibliography}
+
+\end{document}

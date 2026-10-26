@@ -1,0 +1,36 @@
+\FloatBarrier
+\begin{table}[h!]
+\centering
+\caption{Custom Monte Carlo Simulated Critical Bounds for CMPR IM-OLS Inference (Specification A)}
+\label{tab:appendixD_specA_mc_bounds}
+\begin{tabular}{p{4.2cm} p{2.6cm} p{2.2cm} p{2.2cm} p{2.2cm}}
+\toprule
+\textbf{Statistic / Parameter} & \textbf{Asymptotic 95\%} & \textbf{Sim 90\%} & \textbf{Sim 95\%} & \textbf{Sim 99\%} \\
+\midrule
+\multicolumn{5}{l}{\textbf{Panel A: Baseline Sample ($T=94$, 1931--2024) --- No Structural Breaks ($m=0$)}} \\
+\midrule
+$t_{\text{level}}$ ($k_t^{\text{cap}}$) & 1.960 & 3.877 & 5.119 & 8.502 \\
+$t_{\text{inter}}$ ($k_t^{\text{cap}} \cdot C_t$) & N/A & 3.123 & 4.006 & 6.238 \\
+$CT_{\text{IM}}$ (Type 2 Cointegration) & 0.070 & 0.0580 & 0.0705 & 0.1005 \\
+\midrule
+\multicolumn{5}{l}{\textbf{Panel B: Baseline Sample ($T=94$, 1931--2024) --- Bai-Perron Level-Shift Breaks ($m \ge 1$)}} \\
+\midrule
+$t_{\text{level}}$ ($k_t^{\text{cap}}$) & 1.960 & 2.607 & 3.267 & 4.989 \\
+$t_{\text{inter}}$ ($k_t^{\text{cap}} \cdot C_t$) & N/A & 3.455 & 4.325 & 6.444 \\
+$CT_{\text{IM}}$ (Type 2 Cointegration) & 0.070 & 0.0482 & 0.0598 & 0.0895 \\
+\midrule
+\multicolumn{5}{l}{\textbf{Panel C: Supervisory Sample ($T=76$, 1948--2024) --- No Structural Breaks ($m=0$)}} \\
+\midrule
+$t_{\text{level}}$ ($k_t^{\text{cap}}$) & 1.960 & 3.900 & 5.155 & 8.387 \\
+$t_{\text{inter}}$ ($k_t^{\text{cap}} \cdot C_t$) & N/A & 3.139 & 4.018 & 6.206 \\
+$CT_{\text{IM}}$ (Type 2 Cointegration) & 0.070 & 0.0635 & 0.0780 & 0.1151 \\
+\midrule
+\multicolumn{5}{l}{\textbf{Panel D: Supervisory Sample ($T=76$, 1948--2024) --- Bai-Perron Level-Shift Breaks ($m \ge 1$)}} \\
+\midrule
+$t_{\text{level}}$ ($k_t^{\text{cap}}$) & 1.960 & 2.687 & 3.371 & 5.188 \\
+$t_{\text{inter}}$ ($k_t^{\text{cap}} \cdot C_t$) & N/A & 3.427 & 4.277 & 6.213 \\
+$CT_{\text{IM}}$ (Type 2 Cointegration) & 0.070 & 0.0545 & 0.0696 & 0.1065 \\
+\bottomrule
+\multicolumn{5}{p{14.2cm}}{\footnotesize \textbf{Notes:} Critical bounds derived from a custom $N=100,000$ iteration Monte Carlo simulation suite calibrated specifically to the $I(1) \times I(1)$ product integration geometry of the regressors and dynamic Bai-Perron break degrees of freedom. Panels A and B reflect the baseline 1931--2024 sample length ($T=94$), while Panels C and D reflect the supervisory-adjusted Tier 2 wage share sample ($T=76$). Bandwidth $b = M/T$ is fixed per Vogelsang \& Wagner (2014) IM-OLS specification. Data Generating Process ($H_0$) constructs independent zero-drift random walks for base level variables ($k_t^{\text{cap}}, \omega_t$), with interaction product processes algebraically assembled prior to estimation. Parameter $t$-statistics are centered around their true theoretical values ($t^* = |(\hat{\beta}^* - \beta_{\text{true}})/SE|$) to ensure pure size calibration rather than power distortion.} \\
+\end{tabular}
+\end{table}

@@ -1,0 +1,33 @@
+\begin{table}[h!]
+	\centering
+	\caption{Specification B, Set 2: Effective Wage Interaction (NVA Basis)}
+	\label{tab:specB_set2_nva_main}
+	\small
+	\begin{tabular}{p{3.0cm}p{1.25cm}p{1.25cm}p{1.25cm}p{1.25cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}
+		\toprule
+		& \multicolumn{2}{c}{NFC NVA Baseline} & \multicolumn{2}{c}{Clean Corp Tier 1} & \multicolumn{2}{c}{Clean Corp Tier 2} & \multicolumn{2}{c}{ST Tier 2 NVA} \\
+		\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+		& (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+		\midrule
+		$\hat{\theta}_{\text{NRC}}$  (Structures $k^{\text{NRC}}$) & 0.61$^{***}$ & 0.58$^{***}$ & 0.60$^{***}$ & 0.60$^{***}$ & 0.54$^{***}$ & 0.54$^{***}$ & 0.54$^{***}$ & 0.51$^{***}$ \\
+		& (0.02) & (0.08) & (0.02) & (0.08) & (0.01) & (0.01) & (0.01) & (0.01) \\
+		$\hat{\theta}_{\kappa}$ (Mechanization Gap $\kappa$) & 0.32$^{*}$ & 0.39 & 0.32$^{*}$ & 0.39 & 0.31$^{***}$ & 0.31$^{***}$ & 0.33$^{***}$ & 0.06 \\
+		& (0.13) & (0.29) & (0.13) & (0.29) & (0.06) & (0.06) & (0.06) & (0.09) \\
+		$\hat{\theta}_{\omega\kappa}$ (Wage Interaction) & -12.77$^{**}$ & -10.13$^{**}$ & -11.08$^{**}$ & -7.93$^{**}$ & -14.97$^{***}$ & -14.97$^{***}$ & -17.05$^{***}$ & -16.76$^{***}$ \\
+		& (3.81) & (3.43) & (3.48) & (2.96) & (2.01) & (2.01) & (2.34) & (2.55) \\
+		$\hat{\theta}_{\kappa p}$ (Price Interaction) & 0.18 & 0.92 & 0.69 & 1.41$^{*}$ & -0.31 & -0.31 & -0.79$^{**}$ & -0.71$^{**}$ \\
+		& (0.51) & (0.69) & (0.63) & (0.75) & (0.33) & (0.33) & (0.32) & (0.31) \\
+		\midrule
+		Step Shifts ($D_{T_b}^{\text{step}}$) & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.03 & 0.02 & 0.03 & 0.03 & 0.02 & 0.02 & 0.02 & 0.02 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 14.97 & 5.93 & 15.37 & 6.37 & 8.96 & 8.96 & 10.28 & 8.70 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & -4.33$^{*}$ & -4.58$^{**}$ & -4.34$^{*}$ & -4.60$^{**}$ & -4.24$^{*}$ & -4.24$^{*}$ & -4.71$^{**}$ & -4.57$^{**}$ \\
+		Bandwidth ratio $b$ & 0.185 & 0.173 & 0.193 & 0.181 & 0.208 & 0.208 & 0.208 & 0.208 \\
+		Sample Size $T$ & 94 & 94 & 94 & 94 & 76 & 76 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log NFC real GVA). Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS \citep{VogelsangWagner2024}. Step Shifts "No": no structural break dummies; "Yes": Bai-Perron step dummies included. All interaction terms are FWL-orthogonalized against base capital regressors ($k^{\text{NRC}}_t, \kappa_t$) and step dummies. The effective wage interaction is $\xi^\omega_t = \omega_{t-1}(1-\iota_{t-1}) \times \kappa_t$, where $\kappa_t = k^{\text{ME}}_t - k^{\text{NRC}}_t$ is the capital composition ratio (mechanization gap) and $\iota_{t-1}$ is the lagged IPP share of capital. Significance: $^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$. Stars for coefficient rows and cointegration tests are derived from a 100,000-pass Monte Carlo simulation suite mapping the exact DGP variant and fixed-$b$ Wald tables. Standard errors in parentheses.
+	\end{minipage}
+\end{table}

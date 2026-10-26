@@ -1,0 +1,36 @@
+\paragraph{The aggregate transformation elasticity along the historical path.}
+Having established the structural asset-weighted transformation elasticity $\theta^{\text{Aggregate}}_t$ in Equation~\eqref{eq:32:theta_aggregate_structural} (Section~3.2), I evaluate its empirical trajectory using the estimated parameters from the preferred Specification~B model (Clean Corporate Tier~1 NVA, Set~2, Column~4 of Table~\ref{tab:specB_set2_nva_main}). The structural marginal capacity yield of mechanization $MP_{\kappa,t}^{\text{str}} = \beta_\kappa + \theta_{\omega\kappa} C_{\text{index},t} + \theta_{\kappa p} p^\kappa_t$ is driven directly by the state-dependent levels of effective wage pressure ($C_{\text{index},t}$) and relative asset prices ($p^\kappa_t$), where initial-observation centering ($\theta_\kappa^{\text{str}} = 0.39$) serves as an anchoring convention to identify the baseline dimensionless yield at $t=1931$.
+
+Figure~\ref{fig:specB_candidate1} plots $\theta^{\text{Aggregate}}_t$ against the dynamic Specification~A baseline ($\theta^{\text{SpecA}}_t = 0.58 - 0.30 \cdot C_{\text{index},t}$) and the Harrodian knife-edge threshold ($\theta = 1.00$) under standard structural regime shading.
+
+\begin{figure}[h!]
+	\centering
+	\caption{Aggregate Transformation Elasticity ($\theta^{\text{Aggregate}}_t$), Specification~B vs.\ Baseline}
+	\label{fig:specB_candidate1}
+	\includegraphics[width=0.88\textwidth]{fig_specB_candidate1_aggregate_elasticity.png}
+	\begin{tabular}{p{0.88\textwidth}}
+		\hline
+		\footnotesize \textbf{Notes:} Aggregate transformation elasticity $\theta^{\text{Aggregate}}_t$ (Navy line) computed according to Equation~\eqref{eq:32:theta_aggregate_structural} using FWL structural parameters from the preferred Specification~B model (Clean Corporate Tier~1 NVA, Set~2, Column~4 of Table~\ref{tab:specB_set2_nva_main}). The Slate Blue line traces the dynamic Specification~A baseline ($\theta^{\text{SpecA}}_t = 0.58 - 0.30 \, C_{\text{index},t}$). The dotted horizontal line at $\theta = 0.58$ marks the constant base from Specification~A. The dashed line at $\theta = 1.00$ marks the Harrodian knife-edge. Background shading indicates structural accumulation regimes. \\
+		\hline
+	\end{tabular}
+\end{figure}
+
+\paragraph{Empirical comparison: Specification~B disciplines the Specification~A baseline.}
+Figure~\ref{fig:specB_candidate1} delivers two core empirical findings. First, the structural aggregate elasticity $\theta^{\text{Aggregate}}_t$ closely tracks the dynamic Specification~A path but operates within a narrower, disciplined band---$[0.32, 0.86]$ versus $[0.37, 0.75]$. The two paths move together because both capture the same underlying macroeconomic force: effective wage pressure depresses the marginal capacity yield of capital across both specifications, and the estimated base elasticity of structures ($\hat{\theta}_{\text{NRC}} \approx 0.60$) matches Specification~A's aggregate base ($\hat{\theta}_0 = 0.58$). Second, the Specification~B trajectory remains strictly below the Harrodian knife-edge ($\theta < 1$) across the entire 1931--2024 sample, confirming that aggregate capacity formation in the U.S.\ economy operates permanently within the sub-Harrodian stability regime.
+
+The disaggregated capital structure explains what Specification~A's aggregate elasticity averages over. During the Fordist era ($C_{\text{index},t} > 0.65$), high effective wage pressure drove negative marginal mechanization yields ($MP_{\kappa,t}^{\text{str}} < 0$). Firms substituted equipment for labor to contain unit labor costs, but because this expansion was defensive rather than technically autonomous, it depressed the aggregate capacity yield of total capital. In the Neoliberal period ($C_{\text{index},t} < 0.50$), declining wage pressure restored $MP_{\kappa,t}^{\text{str}}$ to positive territory, pulling $\theta^{\text{Aggregate}}_t$ back toward the structural base. Specification~A collapses this compositional mechanism into a scalar interaction ($\hat{\theta}_1 = -0.30$); Specification~B opens the intensive margin and confirms the Okishio mechanism empirically.
+
+\begin{figure}[h!]
+	\centering
+	\caption{Empirical Accumulation Path Derivatives ($dk^{\text{ME}} / dk^{\text{NRC}}$ and $d\kappa / dk^{\text{NRC}}$)}
+	\label{fig:specB_dkappa_dknrc_slope}
+	\includegraphics[width=0.88\textwidth]{fig_specB_dkappa_dknrc_slope.png}
+	\begin{tabular}{p{0.88\textwidth}}
+		\hline
+		\footnotesize \textbf{Notes:} Empirical accumulation path derivatives estimated via non-parametric LOESS time-domain chain rule ($\text{span} = 0.35$). The green solid line measures the relative accumulation slope $dk^{\text{ME}}_t / dk^{\text{NRC}}_t$. The red dot-dashed line measures the mechanization gap derivative $d\kappa_t / dk^{\text{NRC}}_t = (dk^{\text{ME}}_t / dk^{\text{NRC}}_t) - 1$. The horizontal dashed line at $1.00$ indicates balanced expansion where equipment and structures grow at identical rates. \\
+		\hline
+	\end{tabular}
+\end{figure}
+
+\paragraph{Empirical failure of the conventional Divisia derivative path.}
+Figure~\ref{fig:specB_dkappa_dknrc_slope} illustrates why the empirical total-derivative path $\theta^{\text{Aggregate}}_{\text{total},t}$ (Equation~\eqref{eq:32:theta_aggregate}) fails in practice. In the mid-1990s, corporate accumulation shifted away from physical machinery toward intellectual property products and financial assets, causing physical equipment growth to slow relative to structures ($dk^{\text{ME}}_t / dk^{\text{NRC}}_t < 1.00$). As $d\kappa_t / dk^{\text{NRC}}_t$ crossed zero, the Divisia denominator in Equation~\eqref{eq:32:theta_aggregate} approached zero, sending the raw total-derivative elasticity to spurious infinite spikes. As established in Section~3.2, this instability reflects the theoretical pathology of differentiating a value aggregate under structural accumulation shifts. The structural asset-weighted elasticity $\theta^{\text{Aggregate}}_t$ in Equation~\eqref{eq:32:theta_aggregate_structural} purges these Divisia singularities, yielding a continuous, empirically well-behaved trajectory.

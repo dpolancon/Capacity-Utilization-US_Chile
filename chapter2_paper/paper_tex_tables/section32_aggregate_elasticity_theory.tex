@@ -1,0 +1,48 @@
+\subsubsection{The Transformation Elasticity under Heterogeneous Capital Stock}
+
+\paragraph{3.19}
+Specification~B recovers separate capacity elasticities for nonresidential structures ($\theta_{\text{NRC}}$) and machinery ($\theta_\kappa$), but evaluating aggregate capacity dynamics requires defining an aggregate transformation elasticity ($\theta^{\text{Aggregate}}_t$). In a single-asset model (Specification~A), $\theta_A = \partial y^p / \partial k^{\text{cap}}$ is a scalar. Under heterogeneous capital, the total differential of productive capacity \eqref{eq:32:capacity_eq} separates extensive expansion from intensive composition shifters:
+\begin{align}
+	dy^p_t &= \theta_{\text{NRC}}\, dk^{\text{NRC}}_t + MP_\kappa\, d\kappa_t
+	\label{eq:32:dy_total} \\
+	&= \theta_{\text{NRC}}\, dk^{\text{NRC}}_t
+	+ \left(\theta_\kappa + \theta_{\omega\kappa}\, \omega_{t-1}
+	+ \theta_{\kappa p\kappa}\, p^\kappa_t\right) d\kappa_t.
+	\label{eq:32:dy_expanded}
+\end{align}
+
+\paragraph{3.20}
+Standard continuous-time growth accounting evaluates aggregate capital variation using a Divisia index of heterogeneous components \citep{Divisia1925}. Since $s_{\text{ME},t} + s_{\text{NRC},t} = 1$ and $d\kappa_t = dk^{\text{ME}}_t - dk^{\text{NRC}}_t$, aggregate capital growth decomposes as:
+\begin{align}
+	dk^{\text{cap}}_t &\approx s_{\text{ME},t}\, dk^{\text{ME}}_t
+	+ s_{\text{NRC},t}\, dk^{\text{NRC}}_t
+	\label{eq:32:dk_divisia} \\
+	&= dk^{\text{NRC}}_t + s_{\text{ME},t}\, d\kappa_t.
+	\label{eq:32:dk_simplified}
+\end{align}
+Dividing \eqref{eq:32:dy_expanded} by \eqref{eq:32:dk_simplified} yields the conventional total-derivative aggregate elasticity along the empirical growth path:
+\begin{equation}
+	\theta^{\text{Aggregate}}_{\text{total},t}
+	= \frac{\theta_{\text{NRC}}
+		+ \left(\theta_\kappa + \theta_{\omega\kappa}\, \omega_{t-1}
+		+ \theta_{\kappa p\kappa}\, p^\kappa_t\right)
+		\frac{d\kappa_t}{dk^{\text{NRC}}_t}}
+	{1 + s_{\text{ME},t}\, \frac{d\kappa_t}{dk^{\text{NRC}}_t}}.
+	\label{eq:32:theta_aggregate}
+\end{equation}
+
+\paragraph{3.21}
+Equation \eqref{eq:32:theta_aggregate} suffers from a severe theoretical flaw illuminated by the Cambridge Capital Controversy \citep{Robinson1953, Sraffa1960}. Heterogeneous physical assets cannot be aggregated into a single scalar $k^{\text{cap}}$ without value weights that depend on distribution and prices. Differentiating such a value aggregate and placing $dk^{\text{cap}}_t$ in the denominator re-introduces the circularity Specification~B was designed to eliminate: the ``marginal product'' of aggregate capital is computed from an aggregate whose construction presupposes the distribution it purports to govern. Empirically, the denominator $1 + s_{\text{ME},t}(d\kappa_t / dk^{\text{NRC}}_t)$ vanishes whenever physical accumulation stalls or shifts composition, producing spurious zero-denominator singularities ($\theta \to \pm\infty$).
+
+\paragraph{3.22}
+To establish theoretical coherence and escape the Cambridge critique, I construct the aggregate transformation elasticity from the structural primitives of the heterogeneous system. Rather than differentiating a value aggregate, the structural asset-weighted transformation elasticity weights identified heterogeneous elasticities by physical asset stock shares:
+\begin{equation}
+	\theta^{\text{Aggregate}}_t = \theta_{\text{NRC}}^{\text{str}} + s_{\text{ME},t} \cdot MP_{\kappa,t}^{\text{str}},
+	\label{eq:32:theta_aggregate_structural}
+\end{equation}
+where $\theta_{\text{NRC}}^{\text{str}}$ is the base elasticity of structures, $s_{\text{ME},t} = K_{\text{ME},t} / K_{\text{cap},t}$ is the physical equipment share, and the structural marginal capacity yield of mechanization is evaluated as a state-dependent function of effective wage pressure and relative prices:
+\begin{equation}
+	MP_{\kappa,t}^{\text{str}} = \beta_\kappa + \theta_{\omega\kappa}\, C_{\text{index},t} + \theta_{\kappa p}\, p^\kappa_t.
+	\label{eq:32:mp_kappa_level}
+\end{equation}
+When estimated empirically, the state variables are anchored relative to a baseline pinch year ($t=0$) to isolate $\theta_\kappa^{\text{str}} \equiv \beta_\kappa + \theta_{\omega\kappa} C_{\text{index},0} + \theta_{\kappa p} p^\kappa_0$ as a dimensionless initial yield, giving the equivalent representation $MP_{\kappa,t}^{\text{str}} = \theta_\kappa^{\text{str}} + \theta_{\omega\kappa}(C_{\text{index},t} - C_{\text{index},0}) + \theta_{\kappa p}(p^\kappa_t - p^\kappa_0)$. Baseline-centering serves solely as an anchoring transformation for parameter identification; the historical path of $MP_{\kappa,t}^{\text{str}}$ is determined strictly by the state-dependent levels $C_{\text{index},t}$ and $p^\kappa_t$. Equation \eqref{eq:32:theta_aggregate_structural} is immune to the Cambridge critique because the parameters are identified in a disaggregated system without prior scalar aggregation, and the weighting share $s_{\text{ME},t}$ is a physical asset ratio.

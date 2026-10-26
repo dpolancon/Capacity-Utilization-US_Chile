@@ -1,58 +1,128 @@
-\section{Mathematical Derivation of the Dual-Channel Choice of Technique}
+\appendix
+\section*{Appendix A: Proof of Proposition 3}
 
-\paragraph{A}
-This appendix provides the formal derivation of the partial derivatives governing the firm's choice of intensive mechanization ($q^{ME*}$) with respect to the distributional channel ($\omega$) and the relative price channel ($\rho^{ME,NRC}$).
+\paragraph{A.1}
+This appendix provides the detailed derivation of the
+comparative statics stated in Proposition~3
+(\S\ref{eq:32:cs_omega}--\ref{eq:32:cs_price}). The proof
+proceeds by differentiating the optimal mechanization gap
+\eqref{eq:32:kappa_star} with respect to each state
+variable.
 
-\subsection{The Constrained Objective Function}
+\subsection*{A.1 The Optimal Mechanization Gap}
 
-\paragraph{A}
-As established in Section 3.2.3, the firm maximizes the net productivity surplus $c(q^{ME}) = a - \text{Cost}$ subject to the Leontief proportionality constraint $q^{NRC} = \Phi(q^{ME})$. The unconstrained objective function is:
-\[ c(q^{ME}) = \Big[ 1 - (1-\omega)\rho^{NRC} \Big] \Phi(q^{ME}) - \Big[ (1-\omega)\rho^{NRC} \cdot \rho \Big] q^{ME} \]
-where $\rho = P^{ME}/P^{NRC}$ is the relative price of machinery to structures, and $\rho^{NRC}$ is the relative price of structures to output.
+\paragraph{A.2}
+Recall from \S3.2 that the firm maximizes the net
+viability surplus:
+\begin{equation}
+	\max_{\kappa_t}\; c(\kappa_t)
+	= \Phi(\kappa_t) - \kappa_t \cdot MC(\omega_{t-1}, p^\kappa_t)
+	\label{eq:A:objective}
+\end{equation}
+where $\Phi(\kappa_t) = \lambda_0 + \lambda_1 \kappa_t
++ \lambda_2 \kappa_t^2$ is the mechanization frontier
+\eqref{eq:32:frontier_kappa}, and
+$MC(\omega_{t-1}, p^\kappa_t) = \gamma_0 - \gamma_1 \omega_{t-1}
++ \gamma_2 p^\kappa_t$ is the marginal viability cost
+\eqref{eq:32:MC}. Substituting and differentiating:
+\begin{align}
+	c(\kappa_t) &= \lambda_0
+	+ \left[\lambda_1 - \gamma_0 + \gamma_1 \omega_{t-1}
+	- \gamma_2 p^\kappa_t\right] \kappa_t
+	+ \lambda_2 \kappa_t^2
+	\label{eq:A:unconstrained} \\
+	\frac{dc}{d\kappa_t} &= \lambda_1 - \gamma_0
+	+ \gamma_1 \omega_{t-1} - \gamma_2 p^\kappa_t
+	+ 2\lambda_2 \kappa_t^* = 0
+	\label{eq:A:foc}
+\end{align}
+Solving \eqref{eq:A:foc} under Assumption~1
+($\lambda_2 < 0$) yields the optimal mechanization gap:
+\begin{equation}
+	\kappa_t^*(\omega_{t-1}, p^\kappa_t)
+	= \frac{(\gamma_0 - \lambda_1) - \gamma_1 \omega_{t-1}
+		+ \gamma_2 p^\kappa_t}{2\lambda_2}
+	\label{eq:A:kappa_star}
+\end{equation}
+which reproduces \eqref{eq:32:kappa_star}.
 
-\paragraph{B}
-Taking the derivative with respect to $q^{ME}$ and setting it to zero yields the first-order condition:
-\[ \Phi'(q^{ME*}) = \frac{(1-\omega)\rho^{NRC} \cdot \rho}{1 - (1-\omega)\rho^{NRC}} \equiv H \]
-where $H$ is the effective cost hurdle of mechanization.
+\subsection*{A.2 The Distributive Channel}
 
-\paragraph{C}
-Given the technological frontier $\Phi(q) = \lambda_0 + \lambda_1 q + \lambda_2 q^2$, the marginal product is $\Phi'(q) = \lambda_1 + 2\lambda_2 q$. Substituting this into the FOC gives the optimal rate of mechanization:
-\[ q^{ME*} = \frac{H - \lambda_1}{2\lambda_2} \]
+\paragraph{A.3}
+\textbf{Proof of} \eqref{eq:32:cs_omega}. Differentiating
+\eqref{eq:A:kappa_star} with respect to $\omega_{t-1}$:
+\begin{equation}
+	\frac{\partial \kappa_t^*}{\partial \omega_{t-1}}
+	= \frac{-\gamma_1}{2\lambda_2}
+	\label{eq:A:cs_omega}
+\end{equation}
+Under Assumption~1, $\lambda_2 < 0$. By Assumption~3
+($\gamma_1 > 0$), the numerator $-\gamma_1 < 0$ and the
+denominator $2\lambda_2 < 0$. Therefore:
+\begin{equation}
+	\frac{\partial \kappa_t^*}{\partial \omega_{t-1}}
+	= \frac{-\gamma_1}{2\lambda_2} > 0
+	\label{eq:A:cs_omega_sign}
+\end{equation}
+A rising wage share forces cost-minimizing firms to widen
+the mechanization gap, substituting machinery for labor.
+$\hfill\blacksquare$
 
-\subsection{The Distributional Channel ($\omega$)}
+\subsection*{A.3 The Relative Price Channel}
 
-\paragraph{A}
-We use the chain rule to find $\frac{\partial q^{ME*}}{\partial \omega} = \frac{\partial q^{ME*}}{\partial H} \cdot \frac{\partial H}{\partial \omega}$.
+\paragraph{A.4}
+\textbf{Proof of} \eqref{eq:32:cs_price}. Differentiating
+\eqref{eq:A:kappa_star} with respect to $p^\kappa_t$:
+\begin{equation}
+	\frac{\partial \kappa_t^*}{\partial p^\kappa_t}
+	= \frac{\gamma_2}{2\lambda_2}
+	\label{eq:A:cs_price}
+\end{equation}
+Under Assumption~1, $\lambda_2 < 0$. By Assumption~3
+($\gamma_2 > 0$), the numerator $\gamma_2 > 0$ and the
+denominator $2\lambda_2 < 0$. Therefore:
+\begin{equation}
+	\frac{\partial \kappa_t^*}{\partial p^\kappa_t}
+	= \frac{\gamma_2}{2\lambda_2} < 0
+	\label{eq:A:cs_price_sign}
+\end{equation}
+A rising relative price of machinery suppresses the optimal
+mechanization gap, as the structural cost of the composition
+shift penalizes mechanization. $\hfill\blacksquare$
 
-\paragraph{B}
-Because of the concavity of the technological frontier (diminishing returns to mechanization), $\lambda_2 < 0$. Therefore:
-\[ \frac{\partial q^{ME*}}{\partial H} = \frac{1}{2\lambda_2} < 0 \]
+\subsection*{A.4 The Cost Hurdle Formulation (Alternative
+	Derivation)}
 
-\paragraph{C}
-Next, we differentiate the hurdle $H$ with respect to the wage share $\omega$:
-\[ \frac{\partial H}{\partial \omega} = \frac{ - \rho^{NRC} \rho \cdot \Big[1 - (1-\omega)\rho^{NRC}\Big] - \Big[(1-\omega)\rho^{NRC} \rho\Big] \cdot \rho^{NRC} }{ \Big[1 - (1-\omega)\rho^{NRC}\Big]^2 } \]
-Simplifying the numerator:
-\[ \frac{\partial H}{\partial \omega} = \frac{-\rho^{NRC} \cdot \rho}{\Big[1 - (1-\omega)\rho^{NRC}\Big]^2} < 0 \]
-
-\paragraph{D}
-Applying the chain rule:
-\[ \frac{\partial q^{ME*}}{\partial \omega} = \underbrace{\left( \frac{1}{2\lambda_2} \right)}_{(-)} \cdot \underbrace{\left( \frac{-\rho^{NRC} \cdot \rho}{[ \dots ]^2} \right)}_{(-)} > 0 \]
-
-\paragraph{E}
-\textbf{Proof:} A rising wage share unequivocally increases optimal intensive mechanization.
-
-\subsection{The Relative Price Channel ($\rho$)}
-
-\paragraph{A}
-We use the chain rule to find $\frac{\partial q^{ME*}}{\partial \rho} = \frac{\partial q^{ME*}}{\partial H} \cdot \frac{\partial H}{\partial \rho}$.
-
-\paragraph{B}
-We differentiate the hurdle $H$ with respect to the relative price of machinery to structures ($\rho$):
-\[ \frac{\partial H}{\partial \rho} = \frac{(1-\omega)\rho^{NRC}}{1 - (1-\omega)\rho^{NRC}} > 0 \]
-
-\paragraph{C}
-Applying the chain rule:
-\[ \frac{\partial q^{ME*}}{\partial \rho} = \underbrace{\left( \frac{1}{2\lambda_2} \right)}_{(-)} \cdot \underbrace{\left( \frac{(1-\omega)\rho^{NRC}}{1 - (1-\omega)\rho^{NRC}} \right)}_{(+)} < 0 \]
-
-\paragraph{D}
-\textbf{Proof:} A falling relative price of machinery ($\rho \downarrow$) unequivocally increases optimal intensive mechanization, acting mathematically identically to an aggressive wage squeeze.
+\paragraph{A.5}
+An equivalent derivation expresses the FOC as a cost
+hurdle. Define the effective cost hurdle of mechanization:
+\begin{equation}
+	H(\omega_{t-1}, p^\kappa_t)
+	\equiv \frac{MC(\omega_{t-1}, p^\kappa_t)}{1}
+	= \gamma_0 - \gamma_1 \omega_{t-1} + \gamma_2 p^\kappa_t
+	\label{eq:A:hurdle}
+\end{equation}
+The FOC \eqref{eq:A:foc} can be rewritten as:
+\begin{equation}
+	\Phi'(\kappa_t^*) = H(\omega_{t-1}, p^\kappa_t)
+	\label{eq:A:foc_hurdle}
+\end{equation}
+The firm mechanizes up to the point where the marginal
+productivity of the mechanization gap equals the effective
+cost hurdle. The comparative statics follow from the
+implicit function theorem applied to
+\eqref{eq:A:foc_hurdle}:
+\begin{align}
+	\frac{\partial \kappa_t^*}{\partial \omega_{t-1}}
+	&= -\frac{\partial H / \partial \omega_{t-1}}
+	{\Phi''(\kappa_t^*)}
+	= -\frac{-\gamma_1}{2\lambda_2} > 0
+	\label{eq:A:ift_omega} \\
+	\frac{\partial \kappa_t^*}{\partial p^\kappa_t}
+	&= -\frac{\partial H / \partial p^\kappa_t}
+	{\Phi''(\kappa_t^*)}
+	= -\frac{\gamma_2}{2\lambda_2} < 0
+	\label{eq:A:ift_price}
+\end{align}
+Both derivations yield identical results, confirming
+Proposition~3.
