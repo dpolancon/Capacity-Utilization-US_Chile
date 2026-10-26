@@ -1,14 +1,38 @@
+# ── Secrets and Environment ──────────────────────────
+.env
+*.env
+.env.*
+
+# ── Python & Virtual Environments ────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+env/
+
+# ── IDE & Local Tooling ──────────────────────────────
+.claudeprism/
+.prism/
+.claude/
+.DS_Store
+* - copia/
+* - copia
+* - copy/
+* - copy
+
+# ── Scratch & Ephemeral Work ─────────────────────────
+scratch/
+
 # ── R artifacts ──────────────────────────────────────
 .Rhistory
+**/.Rhistory
 .RData
 .Rproj.user/
 .Ruserdata
 Rplots.pdf
-
-# ── Output data (large/reproducible) ────────────────
-output/**/*.rds
-output/**/*.RData
-output/Manifest/
 
 # ── Docs bundles ─────────────────────────────────────
 docs/**/*.zip
@@ -16,17 +40,16 @@ docs/**/*.docx
 docs/essay_tex/*.tex
 docs/essay_tex/*.pdf
 
-# ── OS ───────────────────────────────────────────────
-.DS_Store
-
-# Local figures — do not track
-*.pdf
-*.png
+# ── Obsidian local cache ─────────────────────────────
 chapter2_vault/.obsidian/workspace.json
 chapter2_vault/.obsidian/graph.json
 
+# ── Local figures — do not track ─────────────────────
+*.pdf
+*.png
+
 # ── Versioned research artifacts ─────────────────────
-# These artifacts are part of the cross-machine research record.
+# Whitelist explicit research artifacts across machines
 !docs/**/*.pdf
 !chapter2_paper/**/*.pdf
 !chapter2_vault/**/*.pdf
@@ -34,7 +57,15 @@ chapter2_vault/.obsidian/graph.json
 !output/**
 !reports/**
 
-# ── Global LaTeX & machine-local build junk (overrides !output/** and !reports/**) ──
+# ── Post-Whitelist Overrides (MUST come after !output/** and !reports/**) ──
+# 1. Reproducible binary outputs (large/reproducible)
+output/**/*.rds
+output/*.rds
+output/**/*.RData
+output/*.RData
+output/Manifest/
+
+# 2. Global LaTeX build junk
 *.aux
 *.nav
 *.snm
@@ -47,8 +78,3 @@ chapter2_vault/.obsidian/graph.json
 *.bbl
 *.blg
 *.synctex.gz
-.Rhistory
-**/.Rhistory
-.Rproj.user/
-chapter2_vault/.obsidian/workspace.json
-chapter2_vault/.obsidian/graph.json
