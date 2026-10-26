@@ -1,0 +1,194 @@
+country,iso3,year,sector_boundary,local_currency,gdp_nominal_mil,gdp_real_mil,gdp_deflator_index,base_year,source_provenance
+United States,USA,1929,Total Economy (Aggregate GDP),USD,104556.0,1191114.1490088857,8.778,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1930,Total Economy (Aggregate GDP),USD,92160.0,1089748.13763746,8.457,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1931,Total Economy (Aggregate GDP),USD,77391.0,1020047.4495848162,7.587,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1932,Total Economy (Aggregate GDP),USD,59522.0,888388.0597014924,6.7,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1933,Total Economy (Aggregate GDP),USD,57154.0,877402.5176542831,6.514,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1934,Total Economy (Aggregate GDP),USD,66800.0,972202.0084412749,6.871,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1935,Total Economy (Aggregate GDP),USD,74241.0,1058770.6788362807,7.012,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1936,Total Economy (Aggregate GDP),USD,84830.0,1195293.7861068055,7.097,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1937,Total Economy (Aggregate GDP),USD,93003.0,1256457.7141313157,7.402,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1938,Total Economy (Aggregate GDP),USD,87352.0,1214909.5966620306,7.19,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1939,Total Economy (Aggregate GDP),USD,93437.0,1312317.4157303371,7.12,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1940,Total Economy (Aggregate GDP),USD,102899.0,1428160.9993060373,7.205,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1941,Total Economy (Aggregate GDP),USD,129309.0,1681084.2433697348,7.692,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1942,Total Economy (Aggregate GDP),USD,165952.0,1998458.5741811176,8.304,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1943,Total Economy (Aggregate GDP),USD,203084.0,2338869.0544742597,8.683,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1944,Total Economy (Aggregate GDP),USD,224447.0,2524713.160854893,8.89,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1945,Total Economy (Aggregate GDP),USD,228007.0,2500076.7543859654,9.12,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1946,Total Economy (Aggregate GDP),USD,227535.0,2209935.8974358975,10.296,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1947,Total Economy (Aggregate GDP),USD,249616.0,2184631.542096972,11.426,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1948,Total Economy (Aggregate GDP),USD,274468.0,2274533.852656004,12.067,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1949,Total Economy (Aggregate GDP),USD,272475.0,2261954.1756599704,12.046,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1950,Total Economy (Aggregate GDP),USD,299827.0,2458605.9860598603,12.195,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1951,Total Economy (Aggregate GDP),USD,346914.0,2656309.3415007656,13.06,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1952,Total Economy (Aggregate GDP),USD,367341.0,2764872.7984344424,13.286,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1953,Total Economy (Aggregate GDP),USD,389218.0,2894459.730794973,13.447,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1954,Total Economy (Aggregate GDP),USD,390549.0,2877608.3112290013,13.572,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1955,Total Economy (Aggregate GDP),USD,425478.0,3082950.5108325486,13.801,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1956,Total Economy (Aggregate GDP),USD,449353.0,3148714.1756008686,14.271,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1957,Total Economy (Aggregate GDP),USD,474039.0,3215131.5789473685,14.744,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1958,Total Economy (Aggregate GDP),USD,481229.0,3191173.7400530507,15.08,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1959,Total Economy (Aggregate GDP),USD,521654.0,3412402.695100412,15.287,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1960,Total Economy (Aggregate GDP),USD,542382.0,3500367.8606001935,15.495,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1961,Total Economy (Aggregate GDP),USD,562209.0,3590095.785440613,15.66,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1962,Total Economy (Aggregate GDP),USD,603922.0,3810233.4384858045,15.85,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1963,Total Economy (Aggregate GDP),USD,637450.0,3976110.279441118,16.032,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1964,Total Economy (Aggregate GDP),USD,684460.0,4205333.005652495,16.276,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1965,Total Economy (Aggregate GDP),USD,742289.0,4478635.211777482,16.574,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1966,Total Economy (Aggregate GDP),USD,813414.0,4773836.4927519215,17.039,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1967,Total Economy (Aggregate GDP),USD,859959.0,4904802.372668682,17.533,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1968,Total Economy (Aggregate GDP),USD,940651.0,5145793.216630196,18.28,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1969,Total Economy (Aggregate GDP),USD,1017615.0,5306711.514392992,19.176,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1970,Total Economy (Aggregate GDP),USD,1073303.0,5316276.190004458,20.189,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1971,Total Economy (Aggregate GDP),USD,1164850.0,5491467.09409768,21.212,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1972,Total Economy (Aggregate GDP),USD,1279110.0,5779981.924988703,22.13,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1973,Total Economy (Aggregate GDP),USD,1425376.0,6106486.162282581,23.342,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1974,Total Economy (Aggregate GDP),USD,1545243.0,6073352.199033133,25.443,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1975,Total Economy (Aggregate GDP),USD,1684904.0,6060805.7553956825,27.8,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1976,Total Economy (Aggregate GDP),USD,1873412.0,6387357.654278895,29.33,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1977,Total Economy (Aggregate GDP),USD,2081826.0,6682800.462249614,31.152,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1978,Total Economy (Aggregate GDP),USD,2351599.0,7052751.702006417,33.343,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1979,Total Economy (Aggregate GDP),USD,2627333.0,7275915.2589310445,36.11,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1980,Total Economy (Aggregate GDP),USD,2857307.0,7257389.9570750045,39.371,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1981,Total Economy (Aggregate GDP),USD,3207041.0,7441448.360674757,43.097,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1982,Total Economy (Aggregate GDP),USD,3343789.0,7307390.895780065,45.759,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1983,Total Economy (Aggregate GDP),USD,3634038.0,7642240.0740242265,47.552,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1984,Total Economy (Aggregate GDP),USD,4037613.0,8195370.126047861,49.267,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1985,Total Economy (Aggregate GDP),USD,4338979.0,8536927.950261677,50.826,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1986,Total Economy (Aggregate GDP),USD,4579631.0,8832631.29472121,51.849,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1987,Total Economy (Aggregate GDP),USD,4855215.0,9137680.20476531,53.134,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1988,Total Economy (Aggregate GDP),USD,5236438.0,9519411.721931355,55.008,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1989,Total Economy (Aggregate GDP),USD,5641580.0,9868940.78544564,57.165,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1990,Total Economy (Aggregate GDP),USD,5963144.0,10055044.262709722,59.305,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1991,Total Economy (Aggregate GDP),USD,6158129.0,10044248.899037678,61.31,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1992,Total Economy (Aggregate GDP),USD,6520327.0,10398084.743330091,62.707,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1993,Total Economy (Aggregate GDP),USD,6858559.0,10684112.222326074,64.194,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1994,Total Economy (Aggregate GDP),USD,7287236.0,11114690.988957357,65.564,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1995,Total Economy (Aggregate GDP),USD,7639749.0,11413001.389324611,66.939,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1996,Total Economy (Aggregate GDP),USD,8073122.0,11843674.080159614,68.164,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1997,Total Economy (Aggregate GDP),USD,8577552.0,12370279.780790308,69.34,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1998,Total Economy (Aggregate GDP),USD,9062817.0,12924909.083130108,70.119,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1999,Total Economy (Aggregate GDP),USD,9631172.0,13543856.787276229,71.111,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2000,Total Economy (Aggregate GDP),USD,10250952.0,14096080.965870026,72.722,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2001,Total Economy (Aggregate GDP),USD,10581929.0,14230673.749327594,74.36,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2002,Total Economy (Aggregate GDP),USD,10929108.0,14472764.351453355,75.515,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2003,Total Economy (Aggregate GDP),USD,11456450.0,14877347.219697166,77.006,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2004,Total Economy (Aggregate GDP),USD,12217196.0,15449746.449662987,79.077,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2005,Total Economy (Aggregate GDP),USD,13039197.0,15988029.084310168,81.556,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2006,Total Economy (Aggregate GDP),USD,13815583.0,16433232.624805225,84.071,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2007,Total Economy (Aggregate GDP),USD,14474228.0,16762473.219145559,86.349,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2008,Total Economy (Aggregate GDP),USD,14769862.0,16781455.012327723,88.013,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2009,Total Economy (Aggregate GDP),USD,14478067.0,16349052.576900491,88.556,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2010,Total Economy (Aggregate GDP),USD,15048971.0,16789730.2302749,89.632,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2011,Total Economy (Aggregate GDP),USD,15599732.0,17052428.3731048,91.481,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2012,Total Economy (Aggregate GDP),USD,16253970.0,17442689.27402479,93.185,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2013,Total Economy (Aggregate GDP),USD,16880683.0,17812076.479091704,94.771,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2014,Total Economy (Aggregate GDP),USD,17608138.0,18261725.14286307,96.421,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2015,Total Economy (Aggregate GDP),USD,18295019.0,18799600.271281186,97.316,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2016,Total Economy (Aggregate GDP),USD,18804913.0,19141613.990085606,98.241,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2017,Total Economy (Aggregate GDP),USD,19612102.0,19612102.0,100.0,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2018,Total Economy (Aggregate GDP),USD,20656516.0,20193874.338895895,102.291,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2019,Total Economy (Aggregate GDP),USD,21539982.0,20715704.13256523,103.979,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2020,Total Economy (Aggregate GDP),USD,21375281.0,20284579.17761941,105.377,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2021,Total Economy (Aggregate GDP),USD,23725645.0,21532358.920371007,110.186,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2022,Total Economy (Aggregate GDP),USD,26054614.0,22075878.430475418,118.023,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2023,Total Economy (Aggregate GDP),USD,27811517.0,22723684.124519978,122.39,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,2024,Total Economy (Aggregate GDP),USD,29298013.0,23358431.1318047,125.428,2017,BEA NIPA Table 1.1.5 (GDPA) & NIPA Table 1.1.9 (A191RD3A086NBEA) via FRED API
+United States,USA,1929,Non-Financial Corporate (NFC GVA),USD,50825.0,379518.0,13.3919866778387,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1930,Non-Financial Corporate (NFC GVA),USD,45259.0,353276.0,12.8112297467136,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1931,Non-Financial Corporate (NFC GVA),USD,35431.0,319385.0,11.0935078353711,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1932,Non-Financial Corporate (NFC GVA),USD,25721.0,271204.0,9.48400466069822,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1933,Non-Financial Corporate (NFC GVA),USD,24976.0,264338.0,9.4485091057661,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1934,Non-Financial Corporate (NFC GVA),USD,31484.0,301216.0,10.4523000106236,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1935,Non-Financial Corporate (NFC GVA),USD,34931.0,327713.0,10.6590217659965,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1936,Non-Financial Corporate (NFC GVA),USD,40184.0,374488.0,10.7303838841298,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1937,Non-Financial Corporate (NFC GVA),USD,45751.0,405694.0,11.277218790517,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1938,Non-Financial Corporate (NFC GVA),USD,40242.0,376207.0,10.696770660833,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1939,Non-Financial Corporate (NFC GVA),USD,44443.0,420183.0,10.5770580913554,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1940,Non-Financial Corporate (NFC GVA),USD,51078.0,474124.0,10.7731310796332,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1941,Non-Financial Corporate (NFC GVA),USD,66680.0,570642.0,11.6850845188402,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1942,Non-Financial Corporate (NFC GVA),USD,84033.0,647653.0,12.9750035898853,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1943,Non-Financial Corporate (NFC GVA),USD,99680.0,720413.0,13.836507669906,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1944,Non-Financial Corporate (NFC GVA),USD,103244.0,732875.0,14.0875319802149,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1945,Non-Financial Corporate (NFC GVA),USD,96576.0,679342.0,14.2161091173518,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1946,Non-Financial Corporate (NFC GVA),USD,100771.0,658573.0,15.301416851283,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1947,Non-Financial Corporate (NFC GVA),USD,122211.0,703904.0,17.3618845751693,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1948,Non-Financial Corporate (NFC GVA),USD,140041.0,758556.0,18.4615242645236,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1949,Non-Financial Corporate (NFC GVA),USD,136291.0,751642.0,18.1324353881236,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1950,Non-Financial Corporate (NFC GVA),USD,154866.0,848936.0,18.2423645598726,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1951,Non-Financial Corporate (NFC GVA),USD,177643.0,896303.0,19.8195253167735,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1952,Non-Financial Corporate (NFC GVA),USD,185883.0,930356.0,19.9797711843638,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1953,Non-Financial Corporate (NFC GVA),USD,199043.0,999235.0,19.9195384469119,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1954,Non-Financial Corporate (NFC GVA),USD,196164.0,989290.0,19.8287660847679,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1955,Non-Financial Corporate (NFC GVA),USD,221376.0,1107804.0,19.9833183487332,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1956,Non-Financial Corporate (NFC GVA),USD,237233.0,1146054.0,20.6999844684456,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1957,Non-Financial Corporate (NFC GVA),USD,247921.0,1161542.0,21.3441270311362,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1958,Non-Financial Corporate (NFC GVA),USD,242248.0,1117530.0,21.6770914427353,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1959,Non-Financial Corporate (NFC GVA),USD,271655.0,1243327.0,21.8490389093135,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1960,Non-Financial Corporate (NFC GVA),USD,282484.0,1285478.0,21.9750162974396,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1961,Non-Financial Corporate (NFC GVA),USD,290423.0,1316239.0,22.064609846692,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1962,Non-Financial Corporate (NFC GVA),USD,316808.0,1427784.0,22.1887904613023,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1963,Non-Financial Corporate (NFC GVA),USD,337829.0,1515745.0,22.2879837967468,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1964,Non-Financial Corporate (NFC GVA),USD,364523.0,1622045.0,22.4730509942696,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1965,Non-Financial Corporate (NFC GVA),USD,400741.0,1758279.0,22.7916616191173,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1966,Non-Financial Corporate (NFC GVA),USD,440080.0,1888178.0,23.3071246460874,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1967,Non-Financial Corporate (NFC GVA),USD,463191.0,1942223.0,23.848497314675,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1968,Non-Financial Corporate (NFC GVA),USD,510944.0,2068281.0,24.7037999188698,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1969,Non-Financial Corporate (NFC GVA),USD,554625.0,2150996.0,25.7845667774371,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1970,Non-Financial Corporate (NFC GVA),USD,572890.0,2132246.0,26.8679129894018,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1971,Non-Financial Corporate (NFC GVA),USD,618097.0,2216302.0,27.8886631875981,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1972,Non-Financial Corporate (NFC GVA),USD,685949.0,2384020.0,28.7727871410475,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1973,Non-Financial Corporate (NFC GVA),USD,768838.0,2529343.0,30.3967472976184,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1974,Non-Financial Corporate (NFC GVA),USD,830040.0,2491175.0,33.3192168354291,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1975,Non-Financial Corporate (NFC GVA),USD,898280.0,2456693.0,36.564601274966,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1976,Non-Financial Corporate (NFC GVA),USD,1014666.0,2657867.0,38.1759508658635,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1977,Non-Financial Corporate (NFC GVA),USD,1147401.0,2854488.0,40.1963854813893,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1978,Non-Financial Corporate (NFC GVA),USD,1303931.0,3038745.0,42.9101816703935,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1979,Non-Financial Corporate (NFC GVA),USD,1450326.0,3118975.0,46.5000841622648,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1980,Non-Financial Corporate (NFC GVA),USD,1574527.0,3140096.0,50.1426389511658,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1981,Non-Financial Corporate (NFC GVA),USD,1789067.0,3283888.0,54.4801467041507,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1982,Non-Financial Corporate (NFC GVA),USD,1854861.0,3253862.0,57.0049067846147,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1983,Non-Financial Corporate (NFC GVA),USD,1985899.0,3415215.0,58.1485792256125,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1984,Non-Financial Corporate (NFC GVA),USD,2226000.0,3757179.0,59.246578350406,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1985,Non-Financial Corporate (NFC GVA),USD,2369165.0,3937620.0,60.1674361670248,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1986,Non-Financial Corporate (NFC GVA),USD,2464907.0,4071203.0,60.544929840148,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1987,Non-Financial Corporate (NFC GVA),USD,2641902.0,4287736.0,61.6153140025412,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1988,Non-Financial Corporate (NFC GVA),USD,2873908.0,4545230.0,63.2290995175162,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1989,Non-Financial Corporate (NFC GVA),USD,3020213.0,4636114.0,65.1453566499875,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1990,Non-Financial Corporate (NFC GVA),USD,3160697.0,4719096.0,66.9767472414208,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1991,Non-Financial Corporate (NFC GVA),USD,3231237.0,4702624.0,68.7113619970468,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1992,Non-Financial Corporate (NFC GVA),USD,3376497.0,4884039.0,69.1332931616639,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1993,Non-Financial Corporate (NFC GVA),USD,3534936.0,5047961.0,70.0270069439918,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1994,Non-Financial Corporate (NFC GVA),USD,3816575.0,5373895.0,71.020647035344,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1995,Non-Financial Corporate (NFC GVA),USD,4041486.0,5619403.0,71.9202021994151,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1996,Non-Financial Corporate (NFC GVA),USD,4296356.0,5924143.0,72.522827352412,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1997,Non-Financial Corporate (NFC GVA),USD,4609353.0,6322882.0,72.8995575119067,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1998,Non-Financial Corporate (NFC GVA),USD,4875176.0,6667650.0,73.1168552638486,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,1999,Non-Financial Corporate (NFC GVA),USD,5168284.0,7003623.0,73.7944346804504,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2000,Non-Financial Corporate (NFC GVA),USD,5510787.0,7340205.0,75.0767451317777,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2001,Non-Financial Corporate (NFC GVA),USD,5470157.0,7164251.0,76.3535085523944,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2002,Non-Financial Corporate (NFC GVA),USD,5543551.0,7237884.0,76.5907687937524,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2003,Non-Financial Corporate (NFC GVA),USD,5733743.0,7402525.0,77.4565840709758,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2004,Non-Financial Corporate (NFC GVA),USD,6133641.0,7768745.0,78.9527909591575,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2005,Non-Financial Corporate (NFC GVA),USD,6575529.0,8055939.0,81.6233712792512,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2006,Non-Financial Corporate (NFC GVA),USD,7021572.0,8367204.0,83.91778185401,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2007,Non-Financial Corporate (NFC GVA),USD,7257367.0,8463493.0,85.7490754703761,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2008,Non-Financial Corporate (NFC GVA),USD,7327703.0,8373691.0,87.5086386636431,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2009,Non-Financial Corporate (NFC GVA),USD,6904035.0,7780498.0,88.7351298078863,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2010,Non-Financial Corporate (NFC GVA),USD,7287190.0,8118731.0,89.75774662321,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2011,Non-Financial Corporate (NFC GVA),USD,7661063.0,8339193.0,91.8681579860306,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2012,Non-Financial Corporate (NFC GVA),USD,8110944.0,8648610.0,93.7832090937156,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2013,Non-Financial Corporate (NFC GVA),USD,8417763.0,8855091.0,95.0612816965969,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2014,Non-Financial Corporate (NFC GVA),USD,8851699.0,9155687.0,96.6797903860191,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2015,Non-Financial Corporate (NFC GVA),USD,9222330.0,9453733.0,97.5522579281645,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2016,Non-Financial Corporate (NFC GVA),USD,9346389.0,9514298.0,98.2351929695706,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2017,Non-Financial Corporate (NFC GVA),USD,9771449.0,9771449.0,100.0,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2018,Non-Financial Corporate (NFC GVA),USD,10337804.0,10136297.0,101.987974503904,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2019,Non-Financial Corporate (NFC GVA),USD,10799812.0,10406488.0,103.779603647263,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2020,Non-Financial Corporate (NFC GVA),USD,10498662.0,9979518.0,105.202094930837,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2021,Non-Financial Corporate (NFC GVA),USD,12072724.0,10945065.0,110.302899069124,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2022,Non-Financial Corporate (NFC GVA),USD,13445428.0,11350816.0,118.453404583424,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2023,Non-Financial Corporate (NFC GVA),USD,14163359.0,11550328.0,122.623002567546,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2024,Non-Financial Corporate (NFC GVA),USD,14849197.0,11864210.0,125.159593432685,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol
+United States,USA,2025,Non-Financial Corporate (NFC GVA),USD,15602020.0,12229586.0,127.576027512297,2017,BEA NIPA Table 1.14 (T11400 lines 17 and 41) via S12B output layer protocol

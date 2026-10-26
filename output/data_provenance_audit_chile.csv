@@ -1,0 +1,21 @@
+Variable,Stage,Source_Path,Status,Details
+Raw_File_Registry,Raw_Source,data/raw/Chile/cliolab/W04_Precios.xlsx,VERIFIED,File exists (Size: 150147 bytes)
+Raw_File_Registry,Raw_Source,data/raw/Chile/cliolab/W05_Comercio.xlsx,VERIFIED,File exists (Size: 184277 bytes)
+Raw_File_Registry,Raw_Source,data/raw/Chile/cliolab/W06_Monetaria.xlsx,VERIFIED,File exists (Size: 196886 bytes)
+Raw_File_Registry,Raw_Source,data/raw/Chile/WBOP/NievasPiketty2025WBOPFinalSeries.xlsx,VERIFIED,File exists (Size: 6134910 bytes)
+Raw_File_Registry,Raw_Source,data/raw/Chile/PerezEyzaguirre_DemandaAgregada.xlsx,VERIFIED,File exists (Size: 42319 bytes)
+Raw_File_Registry,Raw_Source,data/raw/Chile/distr_19202024.xlsx,VERIFIED,File exists (Size: 35998 bytes)
+Raw_File_Registry,Raw_Source,data/raw/Chile/W04_Precios_ClioLabPUC.xlsx,VERIFIED,File exists (Size: 150147 bytes)
+Raw_File_Registry,Raw_Source,C:/ReposGitHub/K-Stock-Harmonization/outputs/HARMONIZED_BCCH_2003CLP_v1/harmonized_series_2003CLP_1900_2024.csv,VERIFIED,File exists (Size: 153819 bytes)
+SolvR_M0,Staged_Panel,data/staged/ch2_panel_chile_with_prices.csv,VERIFIED,Columns present | Non-NA Obs: 85 | Min: -0.1786 | Max: 6.7923
+imbalance_level,Staged_Panel,data/staged/ch2_panel_chile_with_prices.csv,VERIFIED,Columns present | Non-NA Obs: 151 | Min: -4.8039 | Max: -0.4388
+GDP_real,Staged_Panel,data/staged/ch2_panel_chile_with_prices.csv,VERIFIED,Columns present | Non-NA Obs: 166 | Min: 554064.1623 | Max: 99333617.3678
+K_NR,Staged_Panel,data/staged/ch2_panel_chile_with_prices.csv,VERIFIED,Columns present | Non-NA Obs: 125 | Min: 534904.9684 | Max: 955218814.3087
+K_ME,Staged_Panel,data/staged/ch2_panel_chile_with_prices.csv,VERIFIED,Columns present | Non-NA Obs: 125 | Min: 215216.7278 | Max: 582354369.7880
+omega_gross,Staged_Panel,data/staged/ch2_panel_chile_with_prices.csv,VERIFIED,Columns present | Non-NA Obs: 105 | Min: 0.3049 | Max: 0.6903
+omega_net,Staged_Panel,data/staged/ch2_panel_chile_with_prices.csv,VERIFIED,Columns present | Non-NA Obs: 85 | Min: 0.3879 | Max: 0.9644
+e_gross,Staged_Panel,data/staged/ch2_panel_chile_with_prices.csv,VERIFIED,Columns present | Non-NA Obs: 105 | Min: 0.4485 | Max: 2.2796
+e_net,Staged_Panel,data/staged/ch2_panel_chile_with_prices.csv,VERIFIED,Columns present | Non-NA Obs: 85 | Min: 0.0369 | Max: 1.5781
+TCREAL,Staged_Panel,data/staged/ch2_panel_chile_with_prices.csv,VERIFIED,Columns present | Non-NA Obs: 151 | Min: 22.4826 | Max: 122.4847
+p_kappa_rer,Staged_Panel,data/staged/ch2_panel_chile_with_prices.csv,VERIFIED,Columns present | Non-NA Obs: 151 | Min: -1.4924 | Max: 0.2028
+Z_t_2D_Grid_Search,Optimization,scratch/extract_omega_table_results.R,VERIFIED,"Confirmed p* = 0.2, gamma* = 0.425, SSR = 0.232287"
