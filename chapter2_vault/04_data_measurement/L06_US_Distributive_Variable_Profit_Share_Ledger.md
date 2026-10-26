@@ -8,7 +8,8 @@ depends_on:
   - output/US/D10_CLEAN_US_ECONOMETRIC_AND_ACCOUNTING_SOURCE_OF_TRUTH_DATASET
 stage_scope: S24A-S30H
 country: US
-last_updated: 2026-07-23
+last_updated: 2026-08-11
+updated_by: S29F_CLEAN_CORPORATE_WAGE_SHARE_CONSTRUCTION
 title: U.S. Distributive Variable and Profit-Share Measurement Ledger
 aliases:
   - U.S. Profit-Share Ledger
@@ -123,6 +124,10 @@ levels and ratios for shares.
 | `CORP_COMPENSATION_SHARE_GVA` | `CORP_COMP / CORP_GVA` | Broad corporate compensation share. | Gross corporate boundary includes financial corporations. | `CONSTRUCTED_AUTHORIZED`; raw corporate comparison robustness only. | `S29A`, `S30B`, `D10` |
 | `CORP_COMPENSATION_SHARE_NVA` | `CORP_COMP / CORP_NVA` | Broad corporate compensation share on NVA. | CFC removed once; financial-corporate compensation remains included. | `CONSTRUCTED_AUTHORIZED`; raw corporate comparison robustness only. | `S29A`, `S30B`, `D10` |
 | `omega_NFC_productive_origin_GVA` | Copy of `NFC_COMPENSATION_SHARE_GVA` | D10 alias for the NFC GVA wage share. | Identical account treatment to its authoritative source variable. | `CONSTRUCTED_AUTHORIZED`; alias only, not a second measure. | `D10` |
+| `omega_CORP_NVA_clean_Tier1` | `CORP_COMP / CORP_NVA_clean` | Tier 1 Clean Corporate NVA wage share. | Denominator purges financial double-counting (`CORP_NVA - FIN_NOS_IMPLIED - NFC_NET_INT`). | `CONSTRUCTED_DIAGNOSTIC`; clean corporate NVA robustness. | `S29F` |
+| `omega_CORP_GVA_clean_Tier1` | `CORP_COMP / CORP_GVA_clean` | Tier 1 Clean Corporate GVA wage share. | Denominator purges financial double-counting (`CORP_GVA - FIN_NOS_IMPLIED - NFC_NET_INT`). | `CONSTRUCTED_DIAGNOSTIC`; clean corporate GVA robustness. | `S29F` |
+| `omega_CORP_NVA_clean_Tier2` | `v_prod_corp / CORP_NVA_clean` | Tier 2 Supervisory-Adjusted Clean Corporate NVA wage share. | Denominator purges double-counting; numerator uses empirical $v_{\text{prod\_corp}}$ without extrapolation. | `CONSTRUCTED_DIAGNOSTIC`; supervisory clean corporate NVA robustness. | `S29F` |
+| `omega_CORP_GVA_clean_Tier2` | `v_prod_corp / CORP_GVA_clean` | Tier 2 Supervisory-Adjusted Clean Corporate GVA wage share. | Denominator purges double-counting; numerator uses empirical $v_{\text{prod\_corp}}$ without extrapolation. | `CONSTRUCTED_DIAGNOSTIC`; supervisory clean corporate GVA robustness. | `S29F` |
 
 The D10 alias does not define a second wage-share series.
 
@@ -351,6 +356,11 @@ $$\omega_{ST, t}^{(2)} = \frac{v_t}{NFC\_NVA_t}$$
 | Variable ID | Formula | Status | Permitted role |
 |---|---|---|---|
 | `omega_ST_Tier2` | `(NFC_COMP * (1 - phi_sup)) / NFC_NVA` | `CONSTRUCTED_DIAGNOSTIC` | Unblocked empirical supervisory-adjusted Shaikh-Tonak wage share; authorized for robustness and sensitivity analyses. |
+| `omega_ST_Tier2_GVA_adj` | `(NFC_COMP * (1 - phi_sup)) / NFC_GVA` | `CONSTRUCTED_DIAGNOSTIC` | GVA-adjusted empirical supervisory-adjusted wage share. |
+| `omega_CORP_NVA_clean_Tier2` | `(CORP_COMP * (1 - phi_sup)) / CORP_NVA_clean` | `CONSTRUCTED_DIAGNOSTIC` | Clean Corporate NVA supervisory-adjusted wage share. |
+| `omega_CORP_GVA_clean_Tier2` | `(CORP_COMP * (1 - phi_sup)) / CORP_GVA_clean` | `CONSTRUCTED_DIAGNOSTIC` | Clean Corporate GVA supervisory-adjusted wage share. |
+
+> **Strict Non-Extrapolation Mandate**: For all Tier 2 supervisory-adjusted series (`omega_ST_Tier2`, `omega_ST_Tier2_GVA_adj`, `omega_CORP_NVA_clean_Tier2`, `omega_CORP_GVA_clean_Tier2`), the empirical supervisory ratio $\phi_{\text{sup}}$ is evaluated strictly without constant backfilling or forwardfilling extrapolation. For years where direct empirical S512 data is missing, $\phi_{\text{sup}}$ remains `NA`, evaluating Tier 2 series to `NA`.
 
 ### 10.2 Blocked Exact Micro-Crosswalk Objects
 

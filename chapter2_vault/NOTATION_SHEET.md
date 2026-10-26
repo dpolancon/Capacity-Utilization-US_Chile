@@ -15,17 +15,17 @@ priority: reference
 
 ## Capacity Utilization & Transformation Elasticity
 
-| Symbol | Definition | Never Use | Notes |
-|---|---|---|---|
-| μ_t | Capacity utilization = Y / Y^p | u, U, u_t | Reconstructed object, not residual |
-| θ_t | Transformation elasticity | β_t, m_t | Mediates ω → Y^p; distribution-conditioned |
-| χ_t | Recapitalization rate = I / Π | β_t | Fixed capital reinvestment |
-| q | Mechanization growth rate | m | Not import share (m = import propensity) |
-| Y | Output (level) | — | Observed |
-| Y^p | Potential productive capacity | Y*, Y_trend | Reconstructed via θ identification |
-| ω_t | Wage share | w, ω | Distribution parameter |
-| K^NR | Nonresidential structures capital | K_struct | BEA layer |
-| K^ME | Machinery & equipment capital | K_equip | BEA layer |
+| Symbol | Definition                        | Never Use   | Notes                                      |
+| ------ | --------------------------------- | ----------- | ------------------------------------------ |
+| μ_t    | Capacity utilization = Y / Y^p    | u, U, u_t   | Reconstructed object, not residual         |
+| θ_t    | Transformation elasticity         | β_t, m_t    | Mediates ω → Y^p; distribution-conditioned |
+| χ_t    | Recapitalization rate = I / Π     | β_t         | Fixed capital reinvestment                 |
+| q      | Mechanization growth rate         | m           | Not import share (m = import propensity)   |
+| Y      | Output (level)                    | —           | Observed                                   |
+| Y^p    | Potential productive capacity     | Y*, Y_trend | Reconstructed via θ identification         |
+| ω_t    | Wage share                        | w, ω        | Distribution parameter                     |
+| K^NR   | Nonresidential structures capital | K_struct    | BEA layer                                  |
+| K^ME   | Machinery & equipment capital     | K_equip     | BEA layer                                  |
 
 ## Conventions
 

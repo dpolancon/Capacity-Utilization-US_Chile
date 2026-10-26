@@ -2,10 +2,13 @@
 type: code_governance
 status: active
 depends_on:
-  - chapter2_vault/05_codes_implementation/C03-REPO_STRUCTURE.md
+  - chapter2_vault/05_codes_implementation/99_legacy/C03-REPO_STRUCTURE.md
+related_to:
+  - "[[C06-ARTIFACT_ROUTING_REGISTRY]]"
 stage_scope: all_stages
 country: US_CL
-last_updated: 2026-05-26
+last_updated: 2026-08-07
+updated_by: ARTIFACT_ROUTING_REGISTRY_ESTABLISHED
 layer: figure_protocol
 design_role: recession_shading_and_stage_figure_conventions
 scope: chapter2_results_repo
@@ -187,6 +190,12 @@ Any script adding U.S. recession shading must record:
 
 If a figure uses annual recession shading, the report or manifest should state the annualization rule.
 
+> **2026-08-07.** "The report or manifest" is now a named document:
+> [[C06-ARTIFACT_ROUTING_REGISTRY]]. It records, per figure, the producing script at
+> `file:line`, the data that script reads, and where the figure is consumed. C05 continues to
+> govern what a figure may *claim*; C06 governs where it *came from*, and neither imports the
+> other's authority.
+
 ---
 
 ## 7. Anchor marker rule
@@ -251,6 +260,15 @@ CSV summaries and reports should be tracked unless the repository policy says ot
 Binary figure files may remain ignored by `.gitignore` if that is the repository policy.
 
 If binary figures are ignored, the report should list their expected local output paths.
+
+> **2026-08-07.** Expected local output paths are now listed in
+> [[C06-ARTIFACT_ROUTING_REGISTRY]] §3 for the paper-facing set, and exhaustively in the
+> generated ledger `output/artifact_routing/artifact_routing_edges.csv`.
+>
+> Compliance with the both-formats rule above is **not** currently met by the manuscript: four
+> of the six figures the chapter draws exist as `.png` only. This is recorded as a finding in
+> `chapter2_paper/WP_Chapter2_1.0/figures_tables/FIGURE_COHERENCE_REPORT.md` and is not
+> repaired there — the report gathers evidence for a fix protocol rather than applying one.
 
 ---
 

@@ -3,7 +3,7 @@ type: research_note
 status: active
 country: US_CL
 stage_scope: N/A
-last_updated: '2026-07-29'
+last_updated: '2026-08-07'
 depends_on: []
 blocks: []
 layer: design
@@ -41,6 +41,22 @@ priority: reference
 |---|---|---|---|---|
 | S35 | US | Active (refreeze) | US_S* | output/US/ |
 | CL_S10 | Chile | Rebuild | CL_S* | output/CL/ |
+
+### Which code produced which figure or table?
+
+**[[C06-ARTIFACT_ROUTING_REGISTRY]]** (`05_codes_implementation/`) — the code → artifact
+routing registry. Curated Chapter 2 paper-facing lineage, known routing defects, and the
+generated edge ledgers at `output/artifact_routing/`. Regenerate with
+`python codes/COMMON_S00_artifact_routing_scan.py`.
+
+### Audits, Handoffs & Data Provenance
+- **[[2026-08-07_data_provenance_audit_report]]** — Complete data provenance, raw NIPA/Fixed Asset intake, script contracts, LaTeX report registry, and draft mirrors.
+- **[[2026-08-05_ch2_paper_assembly_lock_consistency_ledger]]** — Governance lock reconciliation.
+
+Note that the script-name → output-directory mapping is *ad hoc*, not mechanical: four
+incompatible path conventions coexist, and the S-number meanings in the live tree do not match
+the abstract stage map in `05_codes_implementation/99_legacy/C03-REPO_STRUCTURE.md`. C06 §5
+records both divergences without resolving them.
 
 **Code organization:** Flat, country/stage-prefixed in `codes/`  
 **Data flow:** raw/ → interim/ → processed/ → final/ → releases/

@@ -5,7 +5,7 @@ depends_on:
   - chapter2_vault/06_paper_facing/Ch2_Outline_DEFINITIVE.md
 stage_scope: all_stages
 country: US_CL
-last_updated: 2026-07-31
+last_updated: 2026-08-09
 scope: chapter2-econometrics
 stage: pre-estimation-design
 created_or_updated_by: CPR_IMOLS_ESTIMATION_PROTOCOL_LOCK
@@ -81,6 +81,10 @@ priority: reference
 
 ## Recent Estimation Results & Diagnostics
 
+- [[R05_Chile_Preferable_Models_and_Aggregate_Elasticity_Audit]] (Chile Model Selection, Cointegration Rank & Trustworthy Aggregate Elasticity Audit)
+- [[V02_Chile_KStock_DataProvenance_Management]] (Chile Capital Stock & Peripheral Data Provenance Management)
+- [[2026-08-09_chile_data_provenance_audit_report]] (Chile Master Data Provenance & Cross-Referenced Audit Report)
+- [[2026-08-07_data_provenance_audit_report]] (US Master Data Provenance Audit Report)
 - [[S43_Auxiliary_Dummy_Diagnostics]]
 - [[S42_Full_Fordist_Window_CM_Extension_Results]]
 - [[S41_KGT_Inclusion_IMOLS_Results]]
