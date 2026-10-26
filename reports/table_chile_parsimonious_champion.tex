@@ -1,0 +1,31 @@
+\begin{table}[h!]
+	\centering
+	\caption{\textbf{Primary Paper Specification: Ultra-Parsimonious Cointegrating Model of Peripheral Capital Accumulation (Chile, 1942--2024)}}
+	\label{tab:chile_parsimonious_champion}
+	\small
+	\begin{tabular}{p{5.5cm}p{3.2cm}p{3.2cm}}
+		\toprule
+		& Uninteracted Baseline & \textbf{Parsimonious Threshold} \\
+		& (1) & (2) \\
+		\midrule
+		$\hat{\theta}_{k^{\text{NR}}}$ (Structures $k^{\text{NR}}$) & 0.99^{***} & 0.82^{***} \\
+		& (0.01) & (0.08) \\
+		$\hat{\theta}_{\kappa}$ (Mechanization Gap $\kappa$) & -0.42^{***} & 0.85 \\
+		& (0.08) & (0.38) \\
+		$\hat{\theta}_{e\kappa}$ (Exploitation Interaction) & 0.00 & -0.69^{*} \\
+		& (0.10) & (0.23) \\
+		$\hat{\theta}_{\kappa D}$ (Regime Shift $\kappa D$) & — & -0.73 \\
+		& & (0.29) \\
+		$\hat{\theta}_{e\kappa D}$ (Triple Interaction) & — & 0.67^{*} \\
+		& & (0.22) \\
+		\midrule
+		Balance-of-Payments Threshold ($D_t$) & None & $Z_t \le 0.425$ \\
+		Price Control Included & Yes & No \\
+		$CT_{\text{IM}}$ [$H_0$: Cointegration] & — & 8.34 \\
+		$t_{\text{ADF}}$ [$H_0$: Unit Root] & -1.96 & -3.89$^{*}$ \\
+		Bandwidth ratio $b$ & 0.635 & 0.654 \\
+		Sample Size $T$ & 68 & 68 \\
+		\bottomrule
+		\multicolumn{3}{p{12.4cm}}{\footnotesize \textit{Notes:} Dependent variable: $y_t$ (log real GDP). Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS \citep{VogelsangWagner2024}. Sample anchored at 1942--2024 ($T=68$ effective observations). Column (1) reports the uninteracted baseline model. Column (2) presents the primary paper-facing ultra-parsimonious specification under the composite balance-of-payments regime shift ($Z_t = 0.2 \tilde{M}_t + 0.8 \tilde{S}_t \le 0.425$). Significance stars ($^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$) are benchmarked directly against the 10,000-pass Monte Carlo simulation critical bounds.} \\
+	\end{tabular}
+\end{table}

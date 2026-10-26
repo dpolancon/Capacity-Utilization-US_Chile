@@ -1,0 +1,35 @@
+\begin{table}[h!]
+	\centering
+	\caption{\textbf{Specification B: Comparative Cointegration Estimates across Net and Gross Wage Shares (Chile, 1942--2024)}}
+	\label{tab:specB_omega_comparison}
+	\small
+	\begin{tabular}{p{3.5cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}p{1.35cm}}
+		\toprule
+		 & \multicolumn{4}{c}{\textbf{Net Wage Share} ($\omega^{\text{net}}$)} & \multicolumn{4}{c}{\textbf{Gross Wage Share} ($\omega^{\text{gross}}$)} \\
+		\cmidrule(lr){2-5} \cmidrule(lr){6-9}
+		 & Baseline & Bai-Perron & Comp. Threshold & Parsimonious & Baseline & Bai-Perron & Comp. Threshold & Parsimonious \\
+		 & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+		\midrule
+$\hat{\theta}_{k^{\text{NR}}}$ (Structures $k^{\text{NR}}$) & 0.96^{***} & 0.73^{***} & 0.67^{***} & 0.79^{***} & 0.99^{***} & 0.98^{***} & 0.70^{***} & 0.82^{***} \\
+ & (0.01) & (0.12) & (0.09) & (0.07) & (0.00) & (0.05) & (0.08) & (0.08) \\
+$\hat{\theta}_{\kappa}$ (Mechanization Gap $\kappa$) & 0.03 & 0.56 & 0.53 & 0.12 & -0.41 & 0.22 & -0.14 & -1.48^{*} \\
+ & (0.25) & (0.50) & (0.40) & (0.39) & (0.29) & (0.27) & (0.44) & (0.54) \\
+$\hat{\theta}_{\omega\kappa}$ (Wage Interaction) & -0.28 & -0.16 & -0.12 & -0.01 & 0.01 & -0.35 & 0.96 & 3.29^{*} \\
+ & (0.22) & (0.21) & (0.17) & (0.22) & (0.38) & (0.26) & (0.73) & (1.07) \\
+$\hat{\theta}_{\kappa D}$ (Regime Shift $\kappa D$) & — & -0.18 & 0.36^{*} & 0.34 & — & 5.13^{***} & 0.66 & 1.52^{**} \\
+ & (0.00) & (0.28) & (0.13) & (0.16) & (0.00) & (1.00) & (0.31) & (0.45) \\
+$\hat{\theta}_{\omega\kappa D}$ (Triple Interaction) & — & -0.09 & -0.15 & -0.17 & — & -11.86^{***} & -0.95 & -3.15^{*} \\
+ &  & (0.33) & (0.18) & (0.23) &  & (2.35) & (0.72) & (1.04) \\
+$\hat{\theta}_{p}$ (Price Control $\tilde{p}$) & -0.05 & -0.19^{**} & -0.24^{***} & — & -0.04 & 0.02 & -0.20^{***} & — \\
+ & (0.11) & (0.09) & (0.07) &  & (0.11) & (0.07) & (0.07) &  \\
+		\midrule
+Regime Threshold ($D_t$) & None & BP (1987) & $Z_t \le 0.425$ & $Z_t \le 0.425$ & None & BP (1999) & $Z_t \le 0.425$ & $Z_t \le 0.425$ \\
+Price Control Included & Yes & Yes & Yes & No & Yes & Yes & Yes & No \\
+$CT_{\text{IM}}$ [$H_0$: Cointegration] & — & 12.88 & 11.72 & 15.20 & — & 14.55 & 8.50 & 8.39 \\
+$t_{\text{ADF}}$ [$H_0$: Unit Root] & -1.84 & -2.72 & -3.82^{*} & -3.81^{*} & -1.92 & -2.98 & -4.11^{**} & -3.81^{*} \\
+Bandwidth ratio $b$ & 0.626 & 0.650 & 0.654 & 0.654 & 0.635 & 0.652 & 0.655 & 0.654 \\
+Sample Size $T$ & 68 & 68 & 68 & 68 & 68 & 68 & 68 & 68 \\
+		\bottomrule
+		\multicolumn{9}{p{14.3cm}}{\footnotesize \textit{Notes:} Dependent variable: $y_t$ (log real GDP). Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS \citep{VogelsangWagner2024}. Sample anchored at 1942--2024 ($T=68$ effective cointegrating observations after lagging distribution). Regressors include non-residential structures $k_t^{\text{NR}}$, mechanization gap $\kappa_t = k_t^{\text{ME}} - k_t^{\text{NR}}$, distributive wage share interaction $\omega_{t-1} \cdot \kappa_t$, regime shift interaction $\kappa_t \cdot D_t$, triple interaction $\omega_{t-1} \cdot \kappa_t \cdot D_t$, and relative price shock $\tilde{p}_t^{\kappa, \text{RER}}$. models (1)--(4) utilize net wage share ($\omega^{\text{net}}$); models (5)--(8) utilize gross wage share ($\omega^{\text{gross}}$). Columns (2) and (6) specify Bai-Perron structural break dates (1987 and 1999). Columns (3), (4), (7), and (8) specify composite external constraint thresholds ($Z_t = 0.2 \tilde{M}_t + 0.8 \tilde{S}_t$). Columns (4) and (8) represent ultra-parsimonious specifications excluding price controls. Significance: $^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$, with standard errors in parentheses.} \\
+	\end{tabular}
+\end{table}

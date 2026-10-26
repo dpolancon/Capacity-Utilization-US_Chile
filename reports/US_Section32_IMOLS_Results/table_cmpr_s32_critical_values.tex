@@ -1,0 +1,33 @@
+\begin{table}[H]
+\centering
+\begin{threeparttable}
+\caption{Non-Standard CMPR IM-OLS Critical Values (100,000 Replications)}
+\label{tab:s32_cvs}
+\scriptsize
+\begin{tabular}{l | ccc | ccc}
+\toprule
+ & \multicolumn{3}{c|}{$\boldsymbol{T=94}$ \textbf{(1931--2024)}} & \multicolumn{3}{c}{$\boldsymbol{T=77}$ \textbf{(1948--2024)}} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+\textbf{Parameter/Test} & 90\% & 95\% & 99\% & 90\% & 95\% & 99\% \\
+\midrule
+\multicolumn{7}{l}{\textbf{Panel A: Standard Wage Proxy Models (Set 1, No Break)}} \\
+$CT_{\text{IM}}$ (Global Coint. Test) & 0.074 & 0.094 & 0.157 & 0.088 & 0.117 & 0.213 \\
+$t_{\kappa}$ (Composition) & 1.946 & 2.340 & 3.213 & 2.035 & 2.465 & 3.430 \\
+$t_{\theta_{\omega\kappa}}$ (Wage Interaction) & 1.936 & 2.323 & 3.164 & 2.017 & 2.431 & 3.330 \\
+$t_{\theta_{\kappa p}}$ (Price Interaction) & 1.933 & 2.320 & 3.155 & 2.015 & 2.426 & 3.333 \\
+\midrule
+\multicolumn{7}{l}{\textbf{Panel B: Effective Wage Proxy Models (Set 2, No Break)}} \\
+$CT_{\text{IM}}$ (Global Coint. Test) & 0.074 & 0.094 & 0.158 & 0.089 & 0.117 & 0.216 \\
+$t_{\kappa}$ (Composition) & 1.943 & 2.333 & 3.205 & 2.027 & 2.448 & 3.452 \\
+$t_{\theta_{\omega\kappa}}$ (Effective Wage Int.) & 1.941 & 2.328 & 3.119 & 2.010 & 2.416 & 3.339 \\
+$t_{\theta_{\kappa p}}$ (Price Interaction) & 1.938 & 2.331 & 3.123 & 2.016 & 2.426 & 3.346 \\
+\midrule
+\multicolumn{7}{l}{\textbf{Panel C: Asymptotic Normal Benchmarks}} \\
+Standard Normal $Z$ & 1.645 & 1.960 & 2.576 & 1.645 & 1.960 & 2.576 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Note:} Critical values derived via custom $N=100,000$ pass Monte Carlo simulation matched exactly to the integration geometry of the regressors ($H_0$: $y^*_t \sim I(0)$). Fixed-$b$ inference utilizes Andrews automatic bandwidth selection ($b = M/T$) and the Bartlett kernel. Random number generator uses Mersenne Twister with \texttt{set.seed(1929)}.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

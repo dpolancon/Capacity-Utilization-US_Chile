@@ -4,32 +4,32 @@
 \caption{Specification Set 1: Standard Wage Interaction (NVA Basis)}
 \label{tab:specA_set1_nva}
 \scriptsize
-\begin{tabular}{p{3.8cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}}
+\begin{tabular}{p{3.8cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}}
 \toprule
-\multicolumn{9}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real NVA)}} \\
+\multicolumn{13}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real NVA)}} \\
 \midrule
-Model & M1.5a & M1.5b & M1.6a & M1.6b & M1.7a & M1.7b & M1.8a & M1.8b \\
+Model & M1.7a & M1.7b & M1.8a & M1.8b & M1.9a & M1.9b & M1.10a & M1.10b & M1.11a & M1.11b & M1.12a & M1.12b \\
 \midrule
-$\hat{\alpha}$ (Intercept) & 6.57$^{***}$ & 6.03$^{***}$ & 6.57$^{***}$ & 6.03$^{***}$ & 6.57$^{***}$ & 6.03$^{***}$ & 6.34$^{***}$ & 5.05$^{***}$ \\
- & (0.32) & (0.73) & (0.32) & (0.73) & (0.32) & (0.73) & (0.22) & (0.75) \\
-$\hat{\beta}$ (Private Core $k_{\text{cap}}$) & 0.58$^{***}$ & 0.60$^{***}$ & 0.58$^{***}$ & 0.60$^{***}$ & 0.58$^{***}$ & 0.60$^{***}$ & 0.60$^{***}$ & 0.70$^{***}$ \\
- & (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.06) \\
-$\hat{\theta}_1$ (FWL Interaction) & -0.02 & -0.08 & -0.02 & -0.08 & -0.02 & -0.08 & -0.24 & -0.27 \\
- & (0.13) & (0.10) & (0.13) & (0.10) & (0.13) & (0.10) & (0.09) & (0.12) \\
-Step Shifts ($D_{T_b}^{\text{step}}$) & No & Yes & No & Yes & No & Yes & No & Yes \\
+$\hat{\alpha}$ (Intercept) & 6.57$^{***}$ & 6.03$^{***}$ & 6.57$^{***}$ & 6.03$^{***}$ & 6.57$^{***}$ & 6.03$^{***}$ & 6.75 & 6.81 & 6.44$^{***}$ & 4.81$^{***}$ & 6.74 & 5.98 \\
+ & (0.32) & (0.73) & (0.32) & (0.73) & (0.32) & (0.73) & (0.27) & (1.01) & (0.28) & (0.93) & (0.26) & (1.06) \\
+$\hat{\beta}$ (Private Core $k_{\text{cap}}$) & 0.58$^{***}$ & 0.60$^{***}$ & 0.58$^{***}$ & 0.60$^{***}$ & 0.58$^{***}$ & 0.60$^{***}$ & 0.57 & 0.56 & 0.59$^{***}$ & 0.71$^{***}$ & 0.57 & 0.63 \\
+ & (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.08) & (0.02) & (0.08) & (0.02) & (0.08) \\
+$\hat{\theta}_1$ (FWL Interaction) & -0.02 & -0.08 & -0.02 & -0.08 & -0.02 & -0.08 & -0.19 & -0.26 & -0.09 & -0.32$^{*}$ & -0.20 & -0.29 \\
+ & (0.13) & (0.10) & (0.13) & (0.10) & (0.13) & (0.10) & (0.11) & (0.09) & (0.09) & (0.08) & (0.10) & (0.10) \\
+Step Shifts ($D_{T_b}^{\text{step}}$) & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\
 \midrule
-\multicolumn{9}{l}{\textbf{Collinearity Diagnostics (VIF)}} \\
-VIF ($k_{\text{cap}}$) & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\
-VIF (Interaction) & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\
+\multicolumn{13}{l}{\textbf{Collinearity Diagnostics (VIF)}} \\
+VIF ($k_{\text{cap}}$) & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\
+VIF (Interaction) & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\
 \midrule
-\multicolumn{9}{l}{\textbf{Cointegration Test Triad}} \\
-Resid. ADF ($t_{\text{ADF}}$) [$H_0$: No Coint.] & -2.41 & -2.81 & -2.41 & -2.81 & -2.41 & -2.81 & -2.94 & -2.95 \\
-Shin LM ($C_{\text{Shin}}$) [$H_0$: Coint.] & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.04 & 0.04 & 0.03 \\
-VW Type 2 ($S_{\text{Type 2}}$) [$H_0$: Coint.] & 3.30 & 11.34 & 3.30 & 11.34 & 3.30 & 11.34 & 0.05 & 11.94 \\
+\multicolumn{13}{l}{\textbf{Cointegration Test Triad}} \\
+Resid. ADF ($t_{\text{ADF}}$) [$H_0$: No Coint.] & -2.41 & -2.81 & -2.41 & -2.81 & -2.41 & -2.81 & -1.97 & -2.40 & -2.42 & -3.61$^{*}$ & -1.91 & -2.31 \\
+Shin LM ($C_{\text{Shin}}$) [$H_0$: Coint.] & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.05 & 0.06$^{*}$ & 0.03 & 0.06 & 0.05 \\
+VW Type 2 ($CT_{\text{IM}}$) [$H_0$: No Coint.] & 3.30$^{***}$ & 11.34$^{***}$ & 3.30$^{***}$ & 11.34$^{***}$ & 3.30$^{***}$ & 11.34$^{***}$ & 3.37 & 12.47 & 5.19$^{***}$ & 10.19$^{***}$ & 4.81 & 12.40 \\
 \midrule
-Bandwidth Ratio ($b$) & 0.2746 & 0.1872 & 0.2746 & 0.1872 & 0.2746 & 0.1872 & 0.1940 & 0.1935 \\
-Sample Size ($T$) & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94 \\
+Bandwidth Ratio ($b$) & 0.2746 & 0.1872 & 0.2746 & 0.1872 & 0.2746 & 0.1872 & 0.2772 & 0.2354 & 0.2418 & 0.1564 & 0.2797 & 0.2389 \\
+Sample Size ($T$) & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 & 94 & 94 & 76 & 76 \\
 \bottomrule
-\multicolumn{9}{p{14.5cm}}{\footnotesize Note: Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS (Vogelsang et al. 2024) over 1929--2024 ($T=94$). Standard errors in parentheses. Significance: $^* p < 0.10, ^{**} p < 0.05, ^{***} p < 0.01$. Stars for coefficient rows (capital elasticity and interaction) and the Residual VW Type 2 test are derived from a 100,000-pass custom Monte Carlo simulation suite mapping the exact DGP variant. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies.}
+\multicolumn{13}{p{14.5cm}}{\footnotesize Note: Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS (Vogelsang et al. 2024) over 1929--2024 ($T=94$). Standard errors in parentheses. Significance: $^* p < 0.10, ^{**} p < 0.05, ^{***} p < 0.01$. Stars for coefficient rows (capital elasticity and interaction) and the Residual VW Type 2 test are derived from a 100,000-pass custom Monte Carlo simulation suite mapping the exact DGP variant. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies.}
 \end{tabular}
 \end{table}

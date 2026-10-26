@@ -1,0 +1,41 @@
+\begin{table}[htbp]
+	\centering
+	\caption{Appendix Table A.1: Relative Capital Price Sensitivity \& Secondary Threshold Models}
+	\label{tab:chile_threshold_imols_appendix}
+	\small
+	\begin{tabular}{@{}lcccccc@{}}
+		\toprule
+		& \multicolumn{4}{c}{Relative Price Proxy Sensitivity (Mach. Imbalance)} & \multicolumn{2}{c}{Secondary Threshold Series} \\
+		\cmidrule(lr){2-5} \cmidrule(lr){6-7}
+		& (1) RER & (2) IPMUSA & (3) Composite & (4) ToT-Adj & (5) Growth Imbal. & (6) WBOP CA \\
+		\midrule
+		\textbf{Base Linear Regime} & & & & & & \\
+		$\hat{\theta}_{\text{NRC}}$ & 1.06$^{***}$ & 1.04$^{***}$ & 1.05$^{***}$ & 1.04$^{***}$ & 0.85$^{***}$ & 1.29$^{***}$ \\
+		& (0.08) & (0.13) & (0.13) & (0.14) & (0.15) & (0.21) \\
+		$\hat{\theta}_{\kappa}$ & $-0.59$ & $-0.63$ & $-0.65$ & $-0.63$ & 0.08 & $-0.24$ \\
+		& (0.37) & (0.38) & (0.38) & (0.38) & (0.66) & (0.55) \\
+		$\hat{\theta}_{\omega\kappa}$ & $-0.21$ & $-0.12$ & $-0.11$ & $-0.12$ & $-0.18$ & $-0.86$ \\
+		& (0.73) & (0.32) & (0.32) & (0.33) & (0.87) & (0.69) \\
+		$\hat{\theta}_{\kappa p^\kappa}$ & $-0.09$ & $-0.01$ & $-0.00$ & $-0.01$ & $-0.01$ & 0.02 \\
+		& (0.09) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) \\
+		\midrule
+		\textbf{Threshold Regime Penalty} & & & & & & \\
+		$\hat{\delta}_{\kappa}$ & 0.10 & 0.60 & 0.58 & 0.61 & $-0.42$ & $-0.72$ \\
+		& (0.37) & (0.41) & (0.41) & (0.41) & (0.58) & (0.45) \\
+		$\hat{\delta}_{\omega\kappa}$ & 0.12 & $-0.71$ & $-0.69$ & $-0.73$ & 0.28 & 1.07 \\
+		& (0.76) & (0.71) & (0.71) & (0.71) & (1.13) & (0.77) \\
+		\midrule
+		Optimal Cutoff ($\hat{\gamma}$) & $-1.12$ & $-1.64$ & $-1.64$ & $-1.64$ & 0.27 & $-0.02$ \\
+		Step shifts & No & No & No & No & No & No \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.03 & 0.03 & 0.03 & 0.03 & 0.04 & 0.03 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 7.25 & 7.12 & 7.18 & 7.10 & 8.95 & 7.45 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & $-4.38^{**}$ & $-4.42^{**}$ & $-4.41^{**}$ & $-4.40^{**}$ & $-4.18^{**}$ & $-4.30^{**}$ \\
+		Bandwidth ratio $b$ & 0.185 & 0.185 & 0.185 & 0.185 & 0.185 & 0.185 \\
+		$T$ & 104 & 104 & 104 & 104 & 104 & 104 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Sensitivity comparison of the CMPR IM-OLS Level Machinery Import Imbalance Model (Columns 1--4 across price proxies) and secondary threshold specifications (Columns 5--6). Estimated over 1920--2024 ($N=104$). Step Shifts "No": no structural break step dummies included. Significance: $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$. Stars derived from a 100,000-pass Monte Carlo simulation suite with random seed locked at \texttt{1920}. Standard errors in parentheses.
+	\end{minipage}
+\end{table}
