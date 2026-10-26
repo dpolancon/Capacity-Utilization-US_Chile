@@ -1,0 +1,27 @@
+\begin{table}[H]
+\centering
+\setlength{\tabcolsep}{2.5pt}
+\caption{Specification Set 2: Effective Wage Interaction (GVA Basis) --- Cointegration Diagnostics and Collinearity}
+\label{tab:specA_set2_gva_triad}
+\scriptsize
+\begin{tabular}{p{3.8cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}}
+\toprule
+\multicolumn{9}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real NVA)}} \\
+\midrule
+Model & M2.1a & M2.1b & M2.2a & M2.2b & M2.3a & M2.3b & M2.4a & M2.4b \\
+\midrule
+\multicolumn{9}{l}{\textbf{Collinearity Diagnostics (VIF)}} \\
+VIF ($k_{\text{cap}}$) & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\
+VIF (Interaction) & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\
+\midrule
+\multicolumn{9}{l}{\textbf{Cointegration Test Triad}} \\
+Resid. ADF ($t_{\text{ADF}}$) [$H_0$: No Coint.] & -2.32 & -3.06 & -2.26 & -2.96 & -4.02$^{**}$ & -2.93 & -3.27 & -2.90 \\
+Shin LM ($C_{\text{Shin}}$) [$H_0$: Coint.] & 0.06 & 0.04 & 0.06 & 0.04 & 0.05 & 0.03 & 0.03 & 0.03 \\
+VW Type 2 ($S_{\text{Type 2}}$) [$H_0$: Coint.] & 10.76 & 9.07 & 6.17 & 9.61 & 4.39 & 7.88 & 0.73 & 4.55 \\
+\midrule
+Bandwidth Ratio ($b$) & 0.2976 & 0.1687 & 0.3066 & 0.1732 & 0.2908 & 0.1765 & 0.2713 & 0.2047 \\
+Sample Size ($T$) & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94 \\
+\bottomrule
+\multicolumn{9}{p{14.5cm}}{\footnotesize \textbf{Note:} Full cointegration diagnostics for the estimates reported in the main text. \textbf{Star reversal warning:} for the Residual ADF test, significance stars indicate rejection of No Cointegration (supporting cointegration). For the Shin LM test, significance stars indicate rejection of Cointegration (indicating spurious regression). The Vogelsang--Wagner Type 2 test shares the Shin null ($H_0$: cointegration) and its stars read the same way. Critical values: Residual ADF (MacKinnon 2010, Case 2, constant only, $m=4$) $-3.81$ / $-4.10$ / $-4.64$ at 10\% / 5\% / 1\%; Shin LM (Shin 1994, Table 1, demeaned $C_\mu$) $0.163$ / $0.221$ / $0.380$ for $k=2$ and $0.121$ / $0.159$ / $0.271$ for $k=3$, where $k$ counts stochastic $I(1)$ regressors; Vogelsang--Wagner Type 2 critical values are fixed-$b$ and jointly indexed by $(b, k)$, so no single constant applies across models \textbf{[PENDING: see the note to the corresponding main-text table]}. Bandwidth ratio $b$ is the model's HAC bandwidth divided by $T$.} \\
+\end{tabular}
+\end{table}

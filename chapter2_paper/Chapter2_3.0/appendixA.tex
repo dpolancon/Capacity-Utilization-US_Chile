@@ -1,0 +1,215 @@
+\section{The Generalized Perpetual Inventory Method: Recursive
+	Construction and Calibration}
+\label{app:A1:gpim_construction}
+
+This appendix documents the recursive construction of U.S.
+nonfinancial corporate capital stocks via the Generalized Perpetual
+Inventory Method (GPIM) of \citet[App.~6.5]{Shaikh2016}. The
+construction proceeds asset-by-asset for machinery and equipment
+(ME) and nonresidential structures (NRC), recovering four distinct
+quantities from BEA Fixed Assets data: the asset-specific implicit
+price index $P_{j,t}$, the gross real stock $K^{G,R}_{j,t}$, the
+net current-cost stock $K^{N,V}_{j,t}$, and the net-value schedule
+$V_j(v)$. All series are expressed in constant 2017 dollars with
+base-year normalization $P_{j,2017} = 100$.
+
+\subsection{The Survival Function}
+\label{app:A1:survival}
+
+Physical survival of capital vintages follows a Weibull retirement
+distribution. For asset class $j \in \{\text{ME}, \text{NRC}\}$,
+the proportion of a vintage of age $v$ still in physical operation
+is
+\begin{equation}
+	S_j(v) = \exp\!\left[
+	-\left( \frac{v}{\lambda_j} \right)^{\alpha_j}
+	\right],
+	\quad v = 0, 1, \ldots, L_j,
+	\label{eq:A1:survival}
+\end{equation}
+where $\alpha_j > 1$ is the Weibull shape parameter and the scale
+parameter satisfies $\lambda_j = L_j / \Gamma(1 + 1/\alpha_j)$,
+with $L_j$ denoting the mean service life. The shape parameter
+$\alpha_j > 1$ implies a progressively increasing hazard rate:
+capital goods remain fully operative in early years and are
+withdrawn from service at an accelerating rate as they approach
+the mean service life. This pattern is consistent with the
+empirical evidence of \citet{Nomura2005}, who finds that nearly
+half of 66 Japanese asset classes exhibit increasing hazard rates.
+
+The calibrated parameters follow the BEA Fixed Assets methodology
+\citep{Fraumeni1997}:
+\begin{equation}
+	L_{\text{ME}} = 14, \quad \alpha_{\text{ME}} = 1.7,
+	\qquad
+	L_{\text{NRC}} = 30, \quad \alpha_{\text{NRC}} = 1.6.
+	\label{eq:A1:calibration_survival}
+\end{equation}
+The corresponding maximum ages are $L_{\text{ME}} = 14$ years and
+$L_{\text{NRC}} = 30$ years, beyond which $S_j(v) = 0$ and the
+vintage is fully retired.
+
+\subsection{The Age-Price Schedule and Net-Value Function}
+\label{app:A1:ageprice}
+
+The net-value schedule combines physical survival with financial
+age-price decay. For a vintage of age $v$, the net-value function
+is
+\begin{equation}
+	V_j(v) = S_j(v) \cdot (1 - d_j)^v,
+	\label{eq:A1:netvalue}
+\end{equation}
+where $d_j$ is the geometric declining-balance depreciation rate.
+The GPIM separates the two dimensions that the BEA conflates in
+its geometric depreciation convention: physical survival follows
+the Weibull distribution \eqref{eq:A1:survival}, while financial
+age-price decay follows the geometric profile $(1-d_j)^v$. This
+separation is necessary to construct distinct capacity and
+profitability measures \citep[App.~6.3]{Shaikh2016}.
+
+The declining-balance rates are calibrated as
+\begin{equation}
+	d_{\text{ME}} = 0.110, \qquad d_{\text{NRC}} = 0.024,
+	\label{eq:A1:calibration_decay}
+\end{equation}
+consistent with the geometric depreciation rates documented by
+\citet{Fraumeni1997} for the corresponding asset classes.
+
+\subsection{The SFC Implicit Price Recursion}
+\label{app:A1:sfc_recursion}
+
+The implicit price index $P_{j,t}$ is the unique price level that
+closes the stock-flow identity for the net current-cost stock. In
+each period $t$, the BEA-reported current-cost net stock must
+satisfy
+\begin{equation}
+	K^{\text{NET,CC}}_{j,t}
+	= I^{\text{NOM}}_{j,t}
+	+ \frac{P_{j,t}}{100}
+	\sum_{v=1}^{L_j} V_j(v)\, I^{\text{REAL}}_{j,t-v},
+	\label{eq:A1:sfc_identity}
+\end{equation}
+where $I^{\text{NOM}}_{j,t}$ is current-year nominal gross
+investment and $I^{\text{REAL}}_{j,t-v} = I^{\text{NOM}}_{j,t-v}
+/ (P_{j,t-v}/100)$ is real investment of vintage $t-v$ deflated
+by the previously recovered implicit price. The first term on the
+right-hand side is the current-year investment vintage (age zero,
+valued at the current price). The second term is the net-value-weighted
+sum of surviving real vintages revalued at the current price level.
+
+Solving \eqref{eq:A1:sfc_identity} for $P_{j,t}$ yields the
+forward recursion
+\begin{equation}
+	P_{j,t} = 100 \cdot
+	\frac{K^{\text{NET,CC}}_{j,t} - I^{\text{NOM}}_{j,t}}
+	{\displaystyle\sum_{v=1}^{L_j} V_j(v)\,
+		I^{\text{REAL}}_{j,t-v}}.
+	\label{eq:A1:price_recursion}
+\end{equation}
+Given the initial price $P_{j,0}$ and the sequence of nominal
+investment flows $\{I^{\text{NOM}}_{j,t}\}_{t=0}^{T}$, the
+recursion \eqref{eq:A1:price_recursion} determines $P_{j,t}$
+uniquely for each $t = 1, \ldots, T$. The price index is
+``implicit'' because it is not directly observed: it is the unique
+value that, applied to the survival-weighted real vintages,
+reproduces the BEA's reported current-cost net stock.
+
+\subsection{Initial Conditions and Base-Year Normalization}
+\label{app:A1:initialization}
+
+The recursion \eqref{eq:A1:price_recursion} requires an initial
+price $P_{j,0}$ and initial real investment vintages. The base
+year is 2017, at which $P_{j,2017} = 100$ by normalization. The
+nominal investment series begins in 1901, sourced from BEA Fixed
+Assets Table FAAt201 (nonresidential equipment and structures,
+gross investment by asset class). The current-cost net stock
+anchors $K^{\text{NET,CC}}_{j,t}$ are sourced from BEA Fixed
+Assets Table FAAt401 (net stock by asset class, current-cost
+basis).\footnote{Data retrieved via the BEA API
+	(\texttt{DatasetName}: FixedAssets). Table FAAt201 provides
+	nominal gross investment by asset; Table FAAt401 provides
+	current-cost net stock by asset; Table FAAt402 provides
+	current-cost depreciation by asset.}
+
+The initialization proceeds backward from 2017. Given
+$P_{j,2017} = 100$ and the observed nominal investment series,
+the recursion \eqref{eq:A1:price_recursion} is iterated backward
+to recover $P_{j,t}$ for $t < 2017$. Alternatively, the recursion
+may be initialized at the earliest available year and iterated
+forward; the two approaches yield identical results given the
+BEA anchors.
+
+\subsection{The Gross Real Stock}
+\label{app:A1:gross_stock}
+
+The capital stock used to estimate productive capacity is the gross
+real stock, constructed as the survival-weighted sum of real
+investment vintages:
+\begin{equation}
+	K^{G,R}_{j,t} = \sum_{v=0}^{L_j} S_j(v)\,
+	I^{\text{REAL}}_{j,t-v}.
+	\label{eq:A1:gross_stock}
+\end{equation}
+This measure relies exclusively on the physical survival schedule
+$S_j(v)$ and excludes the age-price factor $(1-d_j)^v$. It
+therefore measures the constant-price purchasing power embodied in
+heterogeneous capital goods still in physical operation. Financial
+write-downs, revaluation gains, and depreciation allowances do not
+enter. The OECD manual confirms that the gross stock, valued at
+``as new'' prices, ``is widely used as a broad indicator of the
+productive capacity of a country'' \citep[31]{OECD2001}.
+
+\subsection{The Warm-Up Period and Estimation Sample}
+\label{app:A1:warmup}
+
+The GPIM stock at any year $t$ requires investment vintages
+extending back $L_j$ years. Because the nominal investment series
+begins in 1901, the vintage summation for nonresidential structures
+($L_{\text{NRC}} = 30$) is truncated for any year before 1931.
+The stock values for 1901--1930 are therefore incomplete, omitting
+pre-1901 vintages that would still be physically in service. The
+estimation sample is restricted to 1931--2024, where the full
+30-year vintage window is populated, yielding $T = 94$ annual
+observations.
+
+\subsection{Validation}
+\label{app:A1:validation}
+
+The GPIM construction closes the stock-flow identity exactly: the
+maximum absolute reconstruction residual across both asset classes
+is $10^{-6}$ million dollars, confirming that the recovered SFC
+implicit price indexes reproduce the BEA current-cost net stock
+anchors to machine precision. The BEA's Fisher quantity index is
+retained solely as a validation comparison and does not enter the
+GPIM baseline. The sectoral scope is restricted to nonfinancial
+corporate (NFC) business, excluding non-profit institutions serving
+households (NPISH), government, and owner-occupied housing.
+
+\subsection{Data Sources}
+\label{app:A1:data}
+
+Table~\ref{tab:A1:data_sources} summarizes the BEA Fixed Assets
+tables used in the GPIM construction.
+
+\begin{table}[htbp]
+	\centering
+	\caption{BEA Fixed Assets tables used in GPIM construction}
+	\label{tab:A1:data_sources}
+	\small
+	\begin{tabular}{@{}lll@{}}
+		\toprule
+		\textbf{Table} & \textbf{Content} & \textbf{Use} \\
+		\midrule
+		FAAt201 & Nominal gross investment by asset & $I^{\text{NOM}}_{j,t}$ \\
+		FAAt401 & Current-cost net stock by asset & $K^{\text{NET,CC}}_{j,t}$ \\
+		FAAt402 & Current-cost depreciation by asset & Validation \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\footnotesize
+		\textit{Notes:} All tables are from the BEA Fixed Assets Accounts,
+		retrieved via the BEA API (\texttt{DatasetName}: FixedAssets).
+		Asset classes: ME = nonresidential equipment; NRC = nonresidential
+		structures. Sectoral scope: nonfinancial corporate business.
+	\end{minipage}
+\end{table}

@@ -1,0 +1,848 @@
+\section{The Analytical Framework: Formalizing the
+	Transformation Elasticity}
+\label{sec:3:analytical_framework}
+
+Distributive pressure conditions the choice of technique, and the choice
+of technique determines how much capacity a unit of accumulation
+produces. Section~2 established that claim historically and
+institutionally. It carries no elasticity until the cost-minimization
+problem behind it is written down, because only then does $\theta$ acquire
+a determinate value rather than a direction of movement.
+\citet{CajasGuajirro2024} first posed that problem as a choice over
+mechanization growth, and I extend it in three steps.
+
+The steps are nested rather than alternative. A firm that treats capital
+as homogeneous faces a single margin, and the elasticity that emerges
+from its cost minimization is a scalar. Allow the capital stock to
+separate into nonresidential structures and machinery, and a second
+margin opens: the mechanization gap $\kappa_t$, whose marginal capacity
+payoff depends on distribution and on relative asset prices at once.
+Impose a foreign-exchange bottleneck on the machinery half of that gap,
+and the interior solution can fail entirely, truncating $\theta$ at a
+corner. Setting the heterogeneity parameter to zero recovers the first
+model from the second; relaxing the foreign-exchange constraint recovers
+the center from the periphery. One structure, evaluated under three
+constraint sets.
+
+A limitation is worth stating before the derivations rather than after
+them. The mechanism is multi-sectoral in principle---disproportionality
+is a relation between departments of production---while the empirical
+implementation bounds it to a single-sector aggregate. That bound masks
+internal sectoral divergence. It preserves the transformation logic,
+which is what the estimation requires, but it means $\theta$ is recovered
+as an economy-wide average of a relation that operates unevenly across
+branches.
+
+\subsection{The Baseline Model of Cost-Minimizing
+	Mechanization (Homogeneous Capital Stock)}
+
+Actual aggregate output is represented by a Leontief
+production function with fixed technical coefficients:
+\begin{equation}
+	Y = \min\left( A L,\; \mu B K \right)
+	\label{eq:31:leontief}
+\end{equation}
+where $A = Y/L$ is actual labor productivity, $\mu = Y/Y^p$
+is capacity utilization, and $B = Y^p/K$ is maximum capital
+productivity. This production structure governs the rate of
+profit through the fundamental heterodox accounting identity:
+\begin{equation}
+	r = \mu B (1 - \omega)
+	\label{eq:31:profit_identity}
+\end{equation}
+where $\omega$ is the wage share. Standard macroeconomic
+models treat $B$ as an exogenous technological given and $\mu$
+as a behavioral constant smoothly targeted by a unified firm.
+I reject both assumptions. The components of
+\eqref{eq:31:profit_identity} are endogenous outcomes of
+class struggle and decentralized market anarchy, as
+established in Section~2. This subsection formalizes how
+distributive pressure forces cost-minimizing firms to alter
+their choice of technique, endogenously determining $B$.
+
+\subsubsection{Tactical Choice of Technique and Induced
+	Innovation}
+
+Capitalist firms choice of technique is given by aiming a mechanization growth rate $q$ under competitive cutting cost-pressures, looking at the net productivity surplus of technical change as their objective function.  Let $a$ denote the growth rate of
+labor productivity. The effective distributive cost of
+deploying mechanization growth is $q(1-\omega)$. Hence, the choice of technique of capitalist mechanization can be represented by: 
+\begin{equation}
+	\min_{q}\; c(q) = q(1-\omega) - a 
+	\label{eq:31:objective}
+\end{equation}
+This objective captures the induced-innovation logic: firms
+accelerate mechanization to expand labor productivity growth,
+but the distributive cost of capital intensity holds them
+back. The cost-minimizing objective function of capitalist becomes constrained by a mechanization function that can be represented as:
+
+\begin{equation}
+	a = \Phi(q) = \lambda_0 + \lambda_1 q + \lambda_2 q^2
+	\label{eq:31:frontier}
+\end{equation}
+
+\textbf{Assumption 1.} \textit{Concavity of the
+	mechanization frontier.} The frontier parameters satisfy
+$\lambda_0 > 0$, $\lambda_1 > 0$, and $\lambda_2 < 0$. The
+base productivity growth $\lambda_0$ sets the floor without
+advanced machinery. The linear coefficient $\lambda_1$
+captures the direct productivity payoff of mechanization. The
+strict concavity $\lambda_2 < 0$ ensures diminishing marginal
+returns to mechanization.
+
+Substituting \eqref{eq:31:frontier} into
+\eqref{eq:31:objective} and solving the first-order condition
+yields the optimal mechanization growth:
+\begin{align}
+	c(q) &= \lambda_0 + \left[\lambda_1 - (1-\omega)\right] q
+	+ \lambda_2 q^2 \label{eq:31:unconstrained} \\
+	\frac{\partial c}{\partial q} &= \lambda_1 - (1-\omega) + 2\lambda_2 q^*
+	= 0 \label{eq:31:foc} \\
+	q^*(\omega) &= \frac{(1-\omega) - \lambda_1}{2\lambda_2}
+	\label{eq:31:qstar}
+\end{align}
+The strict concavity ($c''(q) = 2\lambda_2 < 0$) guarantees
+a unique maximum.
+
+\textbf{Proposition 1.} \textit{Induced innovation.} Under
+Assumption~1, the optimal mechanization growth is strictly
+increasing in the wage share:
+\begin{equation}
+	\frac{\partial q^*}{\partial \omega}
+	= -\frac{1}{2\lambda_2} > 0
+	\label{eq:31:comparative_static}
+\end{equation}
+A rise in the wage share forces cost-minimizing firms to
+substitute machinery for labor. Rising wages drive
+mechanization directly through the first-order condition,
+pushing optimal capital intensity growth upward.
+\textit{Proof.} Immediate from differentiating
+\eqref{eq:31:qstar}. $\hfill\blacksquare$
+
+\textbf{Remark 1.} The objective
+\eqref{eq:31:objective} does not assert that the firm is a
+coherent optimizer. Following \citet{Vidal2022}, the firm is
+internally divided between the \textit{control imperative}
+(valorization: cost reduction through mechanization) and the
+\textit{cooperation imperative} (production: the need for
+worker effort, tacit knowledge, and problem-solving
+capacity). The formal model captures the cost-minimizing
+pole---the Okishio viability logic---while the constraints on
+the optimization problem capture the limits imposed by the
+cooperation imperative and by external conditions. The firm
+maximizes net productivity surplus---labor productivity
+growth minus the distributive cost of mechanization---subject
+to diminishing returns. The firm's actual mechanization
+choice is a contested settlement between these imperatives,
+not a coherent optimum. What the model demonstrates is the
+cost-reducing direction in which distributive pressure pushes
+the settlement, not the settlement itself.
+
+\subsubsection{Endogenous Transformation Elasticity}
+
+Substituting the optimal technique back into the
+technological frontier recovers the normal growth rate of
+labor productivity under smooth reproduction:
+\begin{equation}
+	a^N(\omega) = \lambda_0 + \lambda_1 q^*(\omega)
+	+ \lambda_2 \left[ q^*(\omega) \right]^2
+	\label{eq:31:aN}
+\end{equation}
+This optimal technique dictates the structural trajectory of
+the Leontief parameter $B$. By definition, maximum capital
+productivity is $B = Y^p / K$. In dynamic growth rates, the
+growth of capital productivity is:
+\begin{equation}
+	b \equiv g_{Y^p} - g_K = a - q
+	\label{eq:31:b_def}
+\end{equation}
+Evaluated at the smooth reproduction benchmark:
+$b^N(\omega) = a^N(\omega) - q^*(\omega)$.
+
+\textbf{Definition 1.} \textit{Transformation elasticity.}
+The transformation elasticity $\theta$ is the structural
+parameter that translates capital accumulation into productive
+capacity growth:
+\begin{equation}
+	g_{Y^p} = \theta\, g_K
+	\label{eq:31:theta_def}
+\end{equation}
+Substituting \eqref{eq:31:theta_def} into
+\eqref{eq:31:b_def} reveals the link between the level
+coefficient $B$ and the elasticity $\theta$:
+\begin{equation}
+	\theta = 1 + \frac{b}{g_K}
+	\label{eq:31:theta_link}
+\end{equation}
+
+To evaluate this elasticity, I anchor the choice of technique
+to a baseline rate of capital accumulation. Following the
+normal reproduction path, the normal accumulation rate is
+driven by the normal profit rate and the normal rate of re-capitalization  net of depreciation. I follow \citet{Foley1986} definition of the re-capitalization rate, $\chi=\frac{I}{\Pi}$, and interpret its normal conditions as continuous realization and re-investment of the surplus.\footnote{A simple accounting decomposition can demonstrate that the multiplier of profitability that drives investment, is precisely $\chi$. In a monetary economy with credit, the re-capitalization rate does not require to be bounded by the surplus $\Pi$ order of magnitude.} Hence, 
+
+\begin{equation}
+	g_K^N = \chi^N r^N - \delta
+	\label{eq:31:gKN}
+\end{equation}
+In dynamic growth accounting, changes in the growth rate of capital represent an acceleration term $\ddot{k} \equiv d g_K / dt$. In historical time, $\ddot{k}$ is kept strictly bounded by corporate liquidity constraints, debt-servicing ceilings, and Central Bank credit cycles, preventing explosive capital growth divergence. Expressed dynamically relative to this normal path, the aggregate transformation elasticity becomes:
+\begin{equation}
+	\theta(\omega) = 1 + \frac{b^N(\omega)}{g_K^N}
+	= 1 + \frac{a^N(\omega) - q^*(\omega)}{g_K^N}
+	\label{eq:31:theta_omega}
+\end{equation}
+
+\textbf{Proposition 2.} \textit{Endogeneity of the
+	transformation elasticity.} Under Assumption~1, the
+transformation elasticity $\theta$ is not an exogenous
+technical constant. It emerges endogenously from the
+cost-minimizing choice of technique. When distributive
+pressure forces firms to alter mechanization via
+\eqref{eq:31:comparative_static}, it simultaneously shifts
+the structural efficiency of accumulation via
+\eqref{eq:31:theta_omega}. The elasticity $\theta$ is
+therefore a function of the wage share $\omega$, the frontier
+parameters $\lambda_0, \lambda_1, \lambda_2$, and the normal
+accumulation rate $g_K^N$.
+
+\paragraph{Econometric note on capital measurement error.}
+Because the aggregate capital stock $K_t$ is constructed via Perpetual Inventory (GPIM) methods involving service-life and discard schedules, any classical right-hand-side measurement error in $K_t$ introduces standard econometric attenuation bias that pulls the estimated elasticity $\hat{\theta}$ downward toward zero. Classical measurement noise cannot account for the empirical finding that $\theta < 1$; rather, it reinforces that the true structural transformation elasticity is bounded strictly below unity even under conservative measurement assumptions.
+
+
+\subsection{Heterogeneous Capital, the Mechanization Gap,
+	and State-Dependent Viability}
+
+Mainstream macroeconomics treats the capital stock as a
+homogeneous aggregate, abstracting from the internal
+architecture of the firm. Following the theory of organizational political economy and the internally divided firm \citep{Vidal2022}, I unbundle
+aggregate productive capital into and extensive margin given by nonresidential
+structures ($K^{NRC}$) and intensive one, given by the accumulation of machinery and equipment ($K^{ME}$).
+These components do not unfold throughout the labor process
+symmetrically. Structures form the built environments that setup the 
+``envelope''of accumulation --- i.e. the factory floor and logistics shell of the productive process. Capital accumulation in Machinery and Equipment 
+is the active component that restructures the production process and the extraction of 
+relative surplus value \citep[Vol.~I, Ch.~15]{MarxKVI}.
+
+\textbf{Assumption 2.} \textit{Heterogeneous capital
+	decomposition.} Aggregate productive capital decomposes as
+$K^{cap}_t = K^{NRC}_t + K^{ME}_t$. Nonresidential
+structures evolve independently of short-run distributive
+conflict ($\omega$) and its rate of accumulation of accumulation is governed by its long-run relation with the rate of accumulation in machinery and equipment under normal conditions of accumulation in the long-run 
+\begin{equation}
+	g_{K^{NRC}, t}^N = f(\chi^N,r^N_t,g_{K^{ME}, t}^N,\delta) 
+	\label{eq:32:gKNRC}
+\end{equation}
+This extensive envelope $\Theta(K^{NRC})$ becomes a baseline for aggregate elasticity of transformation $\theta$ such that the rate of accumulation of capital stock in non-residential construction is a byproduct of the intensive margin of accumulation decided by a tactical technique choice made by capitalists in response to distributive pressures:
+
+\subsubsection{The Extensive Envelope and the Intensive Margin}
+
+Given the fixed infrastructural envelope, the
+\textbf{intensive margin} of accumulation is the tactical
+choice of the mechanization gap, defined in natural logs as:
+\begin{equation}
+	\kappa_t = k^{ME}_t - k^{NRC}_t
+	\label{eq:32:kappa_def}
+\end{equation}
+This gap measures mechanization intensity relative to the
+extensive plant scale. The capacity identity decomposes
+potential output into the extensive envelope and the
+intensive capacity yield $\Psi_t$:
+\begin{equation}
+	y^p_t = \theta_{NRC} k^{NRC}_t
+	+ \Psi_t(\kappa_t, \omega_{t-1}, p^\kappa_t)
+	\label{eq:32:capacity_decomp}
+\end{equation}
+The intensive yield $\Psi_t$ is not a fixed engineering
+constant. It is the outcome of a decentralized
+cost-minimization problem governed by the regime of
+accumulation, as formalized below.
+
+\subsubsection{Cost-Surplus Minimization and the Okishio
+	Viability Yield}
+
+In this case, the capitalist firm chooses a mechanization gap $\kappa_t$ under cutting-cost pressures, subject to the
+mechanization frontier:
+\begin{equation}
+	\Phi(\kappa_t) = \lambda_0 + \lambda_1 \kappa_t
+	+ \lambda_2 \kappa_t^2
+	\label{eq:32:frontier_kappa}
+\end{equation}
+The \textit{realized} capacity yield is governed by a viability condition: a
+cost-minimizing firm deploys a new technique only if it
+reduces unit costs at current distributive and price
+parameters \citep{Okishio1961, Basu2022}. I formalize
+this as a cost-minimization as problem:
+\begin{equation}
+	\min_{\kappa_t}\; c(\kappa_t)
+	= \kappa_t \cdot MC(\omega_{t-1}, p^\kappa_t) -\Phi(\kappa_t)
+	\label{eq:32:objective_kappa}
+\end{equation}
+
+The marginal viability cost $MC(\omega_{t-1}, p^\kappa_t)$
+is determined by two channels:
+\begin{enumerate}
+	\item \textbf{The distributive dividend (labor saving).}
+	Increasing $\kappa_t$ substitutes machinery for labor. The
+	value of this displacement is proportional to the lagged
+	wage share ($\omega_{t-1}$), reflecting the wage
+	settlement period prior to current capacity realization.
+	A higher wage share \textit{reduces} the net cost of
+	mechanization.
+	\item \textbf{The relative price penalty (capital cost).}
+	Increasing $\kappa_t$ requires accumulating machinery
+	faster than structures. The cost of this composition shift
+	is proportional to the log relative price of machinery
+	($p^\kappa_t = \ln P^{ME}_t - \ln P^{NRC}_t$). A higher
+	relative price \textit{increases} the marginal cost.
+\end{enumerate}
+I specify the marginal viability cost as:
+\begin{equation}
+	MC(\omega_{t-1}, p^\kappa_t)
+	= \gamma_0 - \gamma_1 \omega_{t-1} + \gamma_2 p^\kappa_t
+	\label{eq:32:MC}
+\end{equation}
+where $\gamma_1 > 0$ captures the wage-savings dividend and
+$\gamma_2 > 0$ captures the relative price penalty.
+
+Substituting \eqref{eq:32:frontier_kappa} and
+\eqref{eq:32:MC} into \eqref{eq:32:objective_kappa} and
+solving the first-order condition yields the optimal
+mechanization gap:
+\begin{align}
+	c(\kappa_t) &= \lambda_0
+	+ \left[\lambda_1 - (\gamma_0 - \gamma_1 \omega_{t-1}
+	+ \gamma_2 p^\kappa_t)\right] \kappa_t
+	+ \lambda_2 \kappa_t^2
+	\label{eq:32:unconstrained_kappa} \\
+	\frac{\partial c}{\partial \kappa_t} &= \lambda_1 - \gamma_0
+	+ \gamma_1 \omega_{t-1} - \gamma_2 p^\kappa_t
+	+ 2\lambda_2 \kappa_t^* = 0
+	\label{eq:32:foc_kappa} \\
+	\kappa_t^*(\omega_{t-1}, p^\kappa_t)
+	&= \frac{(\gamma_0 - \lambda_1) - \gamma_1 \omega_{t-1}
+		+ \gamma_2 p^\kappa_t}{2\lambda_2}
+	\label{eq:32:kappa_star}
+\end{align}
+
+\textbf{Proposition 3.} \textit{Dual-channel induced
+	innovation.} Under Assumption~1 (concavity) and
+Assumption~2 (heterogeneous capital), the optimal
+mechanization gap satisfies:
+\begin{align}
+	\frac{\partial \kappa_t^*}{\partial \omega_{t-1}}
+	&= -\frac{\gamma_1}{2\lambda_2} > 0
+	\label{eq:32:cs_omega} \\
+	\frac{\partial \kappa_t^*}{\partial p^\kappa_t}
+	&= \frac{\gamma_2}{2\lambda_2} < 0
+	\label{eq:32:cs_price}
+\end{align}
+A rising wage share forces cost-minimizing firms to widen
+the mechanization gap, substituting machinery for labor.
+A rising relative price of machinery suppresses the optimal
+gap, as the structural cost of the composition shift
+penalizes mechanization. \textit{Proof.} Immediate from
+differentiating \eqref{eq:32:kappa_star}. $\hfill\blacksquare$
+
+\subsubsection{The Marginal Capacity Payoff and the
+	Econometric Bridge}
+
+The macroeconomic translation from the mechanization gap to
+potential capacity is given by the \textit{marginal capacity payoff} ($MP_\kappa$), the derivative of the
+intensive capacity yield $\Psi_t$ with respect to $\kappa_t$.
+By the envelope theorem:
+\begin{align}
+	MP_\kappa &= \frac{\partial \Psi_t}{\partial \kappa_t}
+	= \frac{\partial \Phi}{\partial \kappa_t}
+	- MC(\omega_{t-1}, p^\kappa_t)
+	\label{eq:32:MP_env} \\
+	&= (\lambda_1 + 2\lambda_2 \kappa_t)
+	- (\gamma_0 - \gamma_1 \omega_{t-1} + \gamma_2 p^\kappa_t)
+	\label{eq:32:MP_expanded} \\
+	&= \underbrace{(\lambda_1 - \gamma_0
+		+ 2\lambda_2 \kappa_t)}_{\text{autonomous yield}}
+	+ \gamma_1 \omega_{t-1} - \gamma_2 p^\kappa_t
+	\label{eq:32:MP_rearranged}
+\end{align}
+
+Integrating the marginal payoff with respect to $\kappa_t$
+(treating $\omega_{t-1}$ and $p^\kappa_t$ as predetermined
+shifters) and defining $\theta_\kappa$,
+$\theta_{\omega\kappa} \equiv \gamma_1$, and
+$\theta_{\kappa p\kappa} \equiv -\gamma_2$ yields the
+intensive capacity yield function:
+\begin{equation}
+	\Psi_t = \theta_\kappa \kappa_t
+	+ \theta_{\omega\kappa} (\omega_{t-1} \kappa_t)
+	+ \theta_{\kappa p\kappa} (p^\kappa_t \kappa_t)
+	\label{eq:32:Psi}
+\end{equation}
+Substituting \eqref{eq:32:Psi} back into
+\eqref{eq:32:capacity_decomp} recovers the structural
+capacity equation:
+\begin{equation}
+	y^p_t = \theta_{NRC} k^{NRC}_t + \theta_\kappa \kappa_t
+	+ \theta_{\omega\kappa} (\omega_{t-1} \kappa_t)
+	+ \theta_{\kappa p\kappa} (p^\kappa_t \kappa_t)
+	\label{eq:32:capacity_eq}
+\end{equation}
+The interaction terms are not ad-hoc econometric additions.
+They are the macroeconomic footprint of the divided firm's
+Okishio viability constraint. Distributive pressure and
+relative price enter because they alter the marginal
+capacity payoff of the mechanization gap.
+
+\subsubsection{The Transformation Elasticity under Heterogeneous Capital Stock}
+
+% AUTHOR NOTE (not typeset): this subsection requires editing and careful
+% theoretical revision.
+
+Specification~B recovers separate capacity elasticities for nonresidential structures ($\theta_{\text{NRC}}$) and machinery ($\theta_\kappa$), but evaluating aggregate capacity dynamics requires defining an aggregate transformation elasticity ($\theta^{\text{Aggregate}}_t$). In a single-asset model (Specification~A), $\theta_A = \partial y^p / \partial k^{\text{cap}}$ is a scalar. Under heterogeneous capital, the total differential of productive capacity \eqref{eq:32:capacity_eq} separates extensive expansion from intensive composition shifters:
+\begin{align}
+	dy^p_t &= \theta_{\text{NRC}}\, dk^{\text{NRC}}_t + MP_\kappa\, d\kappa_t
+	\label{eq:32:dy_total} \\
+	&= \theta_{\text{NRC}}\, dk^{\text{NRC}}_t
+	+ \left(\theta_\kappa + \theta_{\omega\kappa}\, \omega_{t-1}
+	+ \theta_{\kappa p\kappa}\, p^\kappa_t\right) d\kappa_t.
+	\label{eq:32:dy_expanded}
+\end{align}
+
+Standard continuous-time growth accounting evaluates aggregate capital variation using a Divisia index of heterogeneous components \citep{Divisia1925}. Since $s_{\text{ME},t} + s_{\text{NRC},t} = 1$ and $d\kappa_t = dk^{\text{ME}}_t - dk^{\text{NRC}}_t$, aggregate capital growth decomposes as:
+\begin{align}
+	dk^{\text{cap}}_t &\approx s_{\text{ME},t}\, dk^{\text{ME}}_t
+	+ s_{\text{NRC},t}\, dk^{\text{NRC}}_t
+	\label{eq:32:dk_divisia} \\
+	&= dk^{\text{NRC}}_t + s_{\text{ME},t}\, d\kappa_t.
+	\label{eq:32:dk_simplified}
+\end{align}
+Dividing \eqref{eq:32:dy_expanded} by \eqref{eq:32:dk_simplified} yields the conventional total-derivative aggregate elasticity along the empirical growth path:
+\begin{equation}
+	\theta^{\text{Aggregate}}_{\text{total},t}
+	= \frac{\theta_{\text{NRC}}
+		+ \left(\theta_\kappa + \theta_{\omega\kappa}\, \omega_{t-1}
+		+ \theta_{\kappa p\kappa}\, p^\kappa_t\right)
+		\frac{d\kappa_t}{dk^{\text{NRC}}_t}}
+	{1 + s_{\text{ME},t}\, \frac{d\kappa_t}{dk^{\text{NRC}}_t}}.
+	\label{eq:32:theta_aggregate}
+\end{equation}
+
+Equation \eqref{eq:32:theta_aggregate} suffers from a severe theoretical flaw illuminated by the Cambridge Capital Controversy \citep{Robinson1953,Sraffa1960}. Heterogeneous physical assets cannot be aggregated into a single scalar $k^{\text{cap}}$ without value weights that depend on distribution and prices. Differentiating such a value aggregate and placing $dk^{\text{cap}}_t$ in the denominator re-introduces the circularity that the model with heterogeneous capital was designed to eliminate. Empirically, the denominator $1 + s_{\text{ME},t}(d\kappa_t / dk^{\text{NRC}}_t)$ vanishes whenever physical accumulation stalls or shifts composition, producing spurious zero-denominator singularities ($\theta \to \pm\infty$).
+
+Alternatively, I construct the aggregate transformation elasticity as an asset weighted from the heterogeneous capital stock system. Rather than differentiating a value aggregate, the structural asset-weighted transformation elasticity weights identified heterogeneous elasticities by gross capital asset shares:
+\begin{equation}
+	\theta^{\text{Aggregate}}_t = \theta_{\text{NRC}}^{\text{str}} + s_{\text{ME},t} \cdot MP_{\kappa,t}^{\text{str}},
+	\label{eq:32:theta_aggregate_structural}
+\end{equation}
+where $\theta_{\text{NRC}}^{\text{str}}$ is the base elasticity of structures, $s_{\text{ME},t} = K_{\text{ME},t} / K_{\text{cap},t}$ is the physical equipment share, and $MP_{\kappa,t}^{\text{str}} = \theta_{\kappa}^{\text{str}} + \theta_{\omega\kappa}\, (\omega_{t-1} - \bar{\omega}) + \theta_{\kappa p}\, (p^{\kappa}_t - \bar{p}^{\kappa})$ is the marginal capacity yield of mechanization. Equation \eqref{eq:32:theta_aggregate_structural} is immune to the Cambridge critique because the parameters are identified in a disaggregated system without prior scalar aggregation, and the weighting share $s_{\text{ME},t}$ is a physical asset ratio. This provides the equation for the trajectory to be implcitly identified from the co-integration relation estimated in empirically in Section~4.3.
+
+
+
+
+\subsection{The Peripheral Extension: Balance-of-Payments
+	Constraint and the Corner Solution}
+
+In the capitalist periphery, the intensive margin of
+accumulation is structurally tethered to the world market and
+constrained by domestic social friction. Following
+\citet{Prebisch1981} and \citet{Kaldor1959}, peripheral
+capitalism is characterized by high consumption propensities
+out of profits, structural inelasticities in agriculture, and
+a chronic vulnerability to balance-of-payments crises
+\citep{Ahumada2019}. This introduces a dual realization
+bottleneck: the macroeconomic capacity to import and the
+inelastic domestic supply of wage-goods. Section~2.5
+established this constraint qualitatively as the peripheral
+accumulation wedge. This subsection formalizes it as a strict
+macroeconomic boundary constraint on the cost-minimizing
+firm's choice of technique, integrating the structuralist
+insights of \citet{Prebisch1981} into the heterogeneous
+capital framework of Section~3.2.
+
+\subsubsection{The Import-Biased Intensive Margin and the
+	Balance of Payments Constraint}
+
+In Section~3.2, the cost-minimizing firm chooses the
+mechanization gap $\kappa_t$ to maximize the net viability
+surplus:
+\begin{equation}
+	\min_{\kappa_t}\; c(\kappa_t)
+	= \kappa_t \cdot MC(\omega_{t-1}, p^\kappa_t) - \Phi(\kappa_t)
+	\label{eq:33:objective_periphery}
+\end{equation}
+where $\Phi(\kappa_t) = \lambda_0 + \lambda_1 \kappa_t
++ \lambda_2 \kappa_t^2$ is the regime-conditioned
+mechanization frontier, and $MC(\omega_{t-1}, p^\kappa_t)
+= \gamma_0 - \gamma_1 \omega_{t-1} + \gamma_2 p^\kappa_t$
+is the marginal viability cost of the gap. In the core, this
+optimization proceeds unconstrained, yielding the optimal
+mechanization gap $\kappa_t^*$. In the periphery, however,
+active mechanization is strictly import-biased: widening the
+mechanization gap requires imported capital goods, specialized
+machinery, and technologically non-substitutable spare parts \citep{Vernengo2006}.
+
+\textbf{Assumption 3.} \textit{Import-biased mechanization.}
+The physical import requirement per unit of output
+($m^{req}_t$) is a linear function of the chosen technique:
+\begin{equation}
+	m^{req}_t = \nu \cdot \kappa_t
+	\label{eq:33:import_req}
+\end{equation}
+where $\nu > 0$ captures the structural import-intensity of
+the mechanization gap. Simultaneously, the physical capacity
+to satisfy this requirement is constrained by the 
+\textit{capacity to import} per unit of output
+($m^{avail}_t = M^{avail}_t / Y_t$). Following
+\citet{Prebisch1981}, peripheral export growth is governed by
+the center's income elasticity of demand for primary goods
+($\epsilon_{m,c} < 1$), structurally lagging behind domestic
+import demand. This external asymmetry, compounded by high
+consumption propensities out of capitalist profits
+\citep{Kaldor1959}, severely squeezes the foreign exchange
+available for productive accumulation. A necessary condition for the re-investment of the surplus. This imposes a strict
+ceiling on the choice of technique: 
+\begin{equation}
+	\nu \cdot \kappa_t \le m^{avail}_t
+	\implies \kappa_t \le \bar{\kappa}_t
+	\equiv \frac{m^{avail}_t}{\nu}
+	\label{eq:33:bop_ceiling}
+\end{equation}
+
+\subsubsection{The Macroeconomic Allocation of Foreign
+	Exchange}
+
+\textbf{Assumption 4.} \textit{Balance-of-payments
+	constraint.} Total import demand cannot exceed export
+capacity. The total supply of foreign exchange per unit of
+output is driven by primary exports
+($x_t = p_t^x X_t / Y_t$). Due to the center's low income
+elasticity for primary goods, $x_t$ is structurally rigid.
+The total demand for foreign exchange per unit of output
+consists of three competing components:
+\begin{enumerate}
+	\item \textbf{Wage-goods imports} ($m^W_t$): driven by the
+	wage share $\omega_{t-1}$ and the structural inelasticity
+	of domestic agriculture \citep{Kaldor1959}.
+	$m^W_t = m_w \omega_{t-1}$.
+	\item \textbf{Conspicuous consumption imports} ($m^C_t$):
+	driven by the profit share $\pi_t$ and the high propensity
+	of the peripheral upper strata to imitate the consumption
+	patterns of the center \citep{Prebisch1981, Kaldor1959}.
+	$m^C_t = m_c c_k \pi_t$.
+	\item \textbf{Productive capital imports} ($m^K_t$): driven
+	by the mechanization gap. $m^K_t = \nu \kappa_t$.
+\end{enumerate}
+
+\textbf{Assumption 5.} \textit{Surplus leakage.} The
+propensity to consume out of profits satisfies
+$c_k > c_k^{\min}$, where $c_k^{\min}$ is the threshold
+below which domestic savings suffice to finance capital
+formation without external borrowing. Under the
+developmentalist regime, the leakage channel is conspicuous
+consumption imports by domestic elites
+\citep{Prebisch1981, Kaldor1959}. Under the neoliberal
+regime, the leakage channel is profit repatriation by
+multinational corporations and capital flight
+\citep{Ahumada2019}. In both cases, $c_k > c_k^{\min}$
+ensures that the effective profit share available for
+productive reinvestment is compressed below the nominal
+level: $\pi_t^{eff} = \pi_t \cdot \phi_t < \pi_t$.
+
+The balance of payments constraint requires:
+\begin{equation}
+	m_w \omega_{t-1} + m_c c_k \pi_t + \nu \kappa_t \le x_t
+	\label{eq:33:bop_full}
+\end{equation}
+Using the distributive identity $\pi_t = 1 - \omega_{t-1}$,
+I substitute and solve for the maximum feasible mechanization
+gap:
+\begin{align}
+	m_w \omega_{t-1} + m_c c_k (1 - \omega_{t-1})
+	+ \nu \kappa_t &\le x_t
+	\label{eq:33:bop_sub} \\
+	\nu \kappa_t &\le x_t - m_c c_k
+	+ (m_c c_k - m_w) \omega_{t-1}
+	\label{eq:33:bop_solved} \\
+	\bar{\kappa}_t(\omega_{t-1})
+	&= \frac{1}{\nu} \left[ x_t - m_c c_k
+	+ (m_c c_k - m_w) \omega_{t-1} \right]
+	\label{eq:33:kappa_bar}
+\end{align}
+This equation formalizes the structuralist critique: the base
+capacity to import capital goods is determined by export
+earnings minus the baseline luxury consumption of the
+capitalist class ($x_t - m_c c_k$). The sign of
+$(m_c c_k - m_w)$ determines whether a rising wage share
+expands or contracts the feasible mechanization gap.
+
+\subsubsection{The Constrained Cost-Surplus Maximization
+	Problem}
+
+The peripheral firm's tactical problem is therefore a cost-minimization problem constrained by the mechanization function and the external constraint, such that the minimization problem can be stated as a Kuhn–Tucker optimization problem: 
+\begin{align}
+	\min_{\kappa_t}\; c(\kappa_t)
+	&=  \kappa_t \cdot MC(\omega_{t-1}, p^\kappa_t) - \Phi(\kappa_t)
+	\label{eq:33:constrained_obj} \\
+	\text{subject to:}\quad & \kappa_t \le \bar{\kappa}_t
+	\label{eq:33:constraint}
+\end{align}
+This formulation distinct a regime shifting behavior of the choice of technique in the capitalist periphery given by a double constraint in the capitalists cost-minimizing behavior: i) Endogenous to domestic distributive conflict, ii) and to the dependency of foreign currency to fulfill import requirements at a given choice of technique. Therefore, if the external constraint becomes binding due lack of foreign currency, a regime shifting behavior of technological change takes place. 
+
+\subsubsection{Endogenous Regime Shifts: The Corner Solution}
+
+The firm's unconstrained optimal technique
+$\kappa_t^*(\omega_{t-1})$ is strictly increasing in the wage
+share ($\partial \kappa_t^* / \partial \omega_{t-1} > 0$) due
+to the Okishio labor-saving bias established in
+\eqref{eq:32:cs_omega}.
+
+\textbf{Proposition 4.} \textit{Peripheral regime shifts.}
+Two regimes are endogenous to the interaction between domestic
+distributive conflict and the global market:
+\begin{enumerate}
+	\item \textbf{Regime A (Slack BoP):} When
+	$\kappa_t^* \le \bar{\kappa}_t$, the firm solves the
+	standard first-order condition, yielding $\kappa_t^*$. The
+	labor-saving bias successfully extracts the Okishio
+	distributive dividend.
+	\item \textbf{Regime B (Peripheral realization trap):} When
+	$\kappa_t^*(\omega_{t-1}) > \bar{\kappa}_t(\omega_{t-1})$,
+	the constraint binds and the firm is forced into a corner
+	solution:
+	\begin{equation}
+		\kappa_t = \bar{\kappa}_t
+		\label{eq:33:corner}
+	\end{equation}
+\end{enumerate}
+The corner solution arises through two intersecting structural
+vulnerabilities. First, if $m_c c_k$ is large (the
+conspicuous consumption drain), the baseline FX availability
+is severely squeezed, lowering the intercept of
+$\bar{\kappa}_t$. Second, if domestic agriculture is highly
+inelastic ($m_w > m_c c_k$), a rising wage share
+simultaneously increases the \textit{demand} for capital
+imports (via $\kappa_t^*$) while \textit{contracting} the
+supply of available FX (via $\bar{\kappa}_t$).
+\textit{Proof.} Immediate from the Kuhn--Tucker conditions
+applied to \eqref{eq:33:constrained_obj}--\eqref{eq:33:constraint}.
+$\hfill\blacksquare$
+
+\subsubsection{Effective Profit Compression and the Blocked
+	Surplus}
+
+\textbf{Definition 3.} \textit{FX-Conversion Ratio.} The
+FX-conversion ratio $\phi_t$ is the ratio of the maximum
+feasible technique to the optimal unconstrained technique:
+\begin{equation}
+	\phi_t = \min\left(1, \frac{\bar{\kappa}_t}{\kappa_t^*}\right)
+	\label{eq:33:phi}
+\end{equation}
+When the external constraint binds ($\kappa_t^* > \bar{\kappa}_t$),
+$\phi_t < 1$. This generates a direct compression of the
+effective profit share available for intensive accumulation.
+
+\textbf{Definition 4.} \textit{Blocked surplus.} Even if
+domestic wage suppression yields a high nominal profit share
+($\pi_t$), the physical inability to convert that surplus into
+imported machinery squeezes the effective profit rate:
+\begin{equation}
+	\pi_t^{eff} = \pi_t \cdot \phi_t
+	= (1 - \omega_{t-1}) \cdot \phi_t
+	\label{eq:33:pi_eff}
+\end{equation}
+The difference constitutes the \textit{blocked surplus}:
+\begin{equation}
+	\text{Blocked Surplus} = \pi_t(1 - \phi_t)
+	\label{eq:33:blocked}
+\end{equation}
+Because the accumulation of machinery is driven by the
+\textit{effective} profit share, the
+constraint decouples nominal profitability from capacity
+formation. If capitalists squeeze wages to raise $\pi_t$, they
+inadvertently increase conspicuous consumption ($m^C_t$),
+which lowers $\bar{\kappa}_t$ and compresses $\phi_t$.
+
+\subsubsection{The Regime-Shifting Aggregate
+	Transformation Elasticity}
+
+\textbf{Definition 5.} \textit{BoP binding ratio.} The BoP
+binding ratio $\tau_t$ is the ratio of productive capital
+imports to import capacity:
+\begin{equation}
+	\tau_t \equiv \frac{\nu \cdot I^{ME}_t}
+	{\text{ToT}_t \times X_t}
+	\label{eq:33:tau}
+\end{equation}
+where $I^{ME}_t$ is gross investment in machinery and equipment, and $\text{ToT}_t \times X_t$
+proxies the import capacity (FX supply). Under Assumption~3,
+productive capital imports $m^K_t = \nu \kappa_t$, since mechanization is import-biased in the periphery. The regime switch is governed by $\tau_t$:
+\begin{itemize}
+	\item $\tau_t < \bar{\tau}$: BoP constraint is
+	\textbf{slack} (Regime A: unconstrained optimum).
+	\item $\tau_t \ge \bar{\tau}$: BoP constraint is
+	\textbf{binding} (Regime B: corner solution).
+\end{itemize}
+The threshold $\bar{\tau}$ is determined empirically by the
+threshold regression in Section~4.
+
+The peripheral extension generates a regime-shifting
+aggregate transformation elasticity. Under \textbf{Regime~A}
+(slack BoP), the constraint does not bind, and the
+elasticity coincides with the unconstrained expression from
+Section~3.2 for the aggregate elasticity:
+\begin{equation}
+	\theta^{A}_t = 
+	= \frac{\theta_{NRC}
+		+ \left(\theta_\kappa + \theta_{\omega\kappa}\omega_{t-1}
+		+ \theta_{\kappa p\kappa} p^\kappa_t\right)
+		\frac{d\kappa_t^*}{dk^{NRC}_t}}
+	{1 + s_{ME,t}\frac{d\kappa_t^*}{dk^{NRC}_t}}
+	\label{eq:33:theta_A}
+\end{equation}
+
+Under \textbf{Regime~B} (BoP binding), the surplus of capitalist enterprises becomes blocked, and the firm is forced
+into a corner solution $\kappa_t = \bar{\kappa}_t$. The
+marginal capacity payoff at the corner is strictly positive
+because the firm would like to mechanize further but cannot:
+\begin{equation}
+	MP_\kappa\big|_{\kappa=\bar{\kappa}}
+	= \Phi'(\bar{\kappa}_t) - MC(\omega_{t-1}, p^\kappa_t) > 0
+	\label{eq:33:MP_corner}
+\end{equation}
+The Kuhn--Tucker multiplier on \eqref{eq:33:constraint} is
+strictly positive, confirming that the constraint binds. The
+aggregate transformation elasticity under the binding regime
+becomes:
+\begin{equation}
+	\theta^{B}_t
+	= \frac{\theta_{NRC}
+		+ MP_\kappa\big|_{\kappa=\bar{\kappa}}
+		\cdot \frac{d\bar{\kappa}_t}{dk^{NRC}_t}}
+	{1 + s_{ME,t}\frac{d\bar{\kappa}_t}{dk^{NRC}_t}}
+	\label{eq:33:theta_B}
+\end{equation}
+Since $\bar{\kappa}_t$ is determined by the BoP constraint
+\eqref{eq:33:kappa_bar} rather than by the first-order
+condition \eqref{eq:32:foc_kappa}, the growth path
+$d\bar{\kappa}_t / dk^{NRC}_t$ differs from the unconstrained
+path $d\kappa_t^* / dk^{NRC}_t$. The FX-conversion ratio
+$\phi_t = \bar{\kappa}_t / \kappa_t^* < 1$ compresses the
+intensive margin, and the elasticity under the binding regime
+is strictly lower:
+\begin{equation}
+	\theta^{B}_t < \theta^{A}_t
+	\label{eq:33:theta_inequality}
+\end{equation}
+
+\textbf{Proposition 5.} \textit{Regime-shifting elasticity.}
+The peripheral aggregate transformation elasticity is a
+regime-dependent parameter:
+\begin{equation}
+	\theta^{periphery}_t
+	= \theta^{A}_t \cdot \mathbf{1}\{\kappa_t^* \le \bar{\kappa}_t\}
+	+ \theta^{B}_t \cdot \mathbf{1}\{\kappa_t^* > \bar{\kappa}_t\}
+	\label{eq:33:theta_regime}
+\end{equation}
+The elasticity shifts discretely when the BoP constraint
+becomes binding. The regime switch is governed by the
+interaction between the desired mechanization gap
+$\kappa_t^*(\omega_{t-1}, p^\kappa_t)$ and the maximum
+feasible gap $\bar{\kappa}_t(\omega_{t-1})$ determined by
+export capacity, conspicuous consumption, and wage-goods
+imports. An increase in the wage share $\omega_{t-1}$
+simultaneously raises $\kappa_t^*$ (via capital-using 
+labor-saving choice of technique) and can contract $\bar{\kappa}_t$ (via
+the wage-goods import channel when $m_w > m_c c_k$), making
+the regime switch more likely. This is what \citet{Prebisch1981} coined as the strangulation of economic development in the capitalist periphery: distributive pressures that would induce
+productive mechanization in the center instead triggers the
+BoP constraint, which in this framework explain the truncated or regime shifting behavior of the transformation elasticity.
+
+\subsubsection{The Failure of the Viability Conditions for Technological Change and Structural Inflation}
+
+\textbf{Proposition 6.} \textit{Blocked viability condition.}
+At the boundary $\kappa_t = \bar{\kappa}_t$, the
+implementation of the viability condition is blocked, i.e. technical change is not net-surplus increasing or conversely, inefficient because it fails to achieve a cost-minimizing choice of technique. The firm satisfies the viability criterion---the technique would reduce unit costs---but cannot deploy it because the required machinery cannot be imported due lack of foreign currency. Hence, the capitalist enterprise in the capitalist periphery suffers a persistent shortfall in its cost-surplus
+relative to its unconstrained state.
+\textit{Proof.} At $\kappa_t = \bar{\kappa}_t$, the
+Kuhn--Tucker multiplier on \eqref{eq:33:constraint} is
+strictly positive, so the first-order condition
+$\partial c / \partial \kappa_t = 0$ does not hold. The
+marginal viability yield exceeds the marginal cost at the
+boundary, but the firm cannot expand further.
+$\hfill\blacksquare$
+
+
+\textbf{Corollary 1.} \textit{Structural Inflation} Unable to extract the distributive dividend via mechanization, capitalists attempt to recover the blocked surplus through the only remaining channel: price markups. When the wage-goods bottleneck forces nominal wage adjustments and the external BoP
+bottleneck blocks defensive mechanization, any further increase
+in the wage share directly crushes profitability. The resulting
+defensive pricing behavior ignites structural inflation
+dynamic \citep{Kalecki1955, Sunkel1958, Prebisch1981}. This is the
+peripheral realization trap: nominal profitability coexists
+with truncated mechanization and structurally stalled built-environments that constitute the \textit{``envelope''} of the labor process,
+permanently destabilizing the long-run relation between investments in plant 
+and machinery.
+
+
+\subsection{Analytical and Theoretical Synthesis}
+
+The three models developed in this section formalize a single
+theoretical claim: that decentralized, individually
+cost-minimizing decisions generate aggregate
+disproportionality under the unbalanced growth closure.
+Table~\ref{tab:coherence} summarizes the articulation
+between the Okishio and Vidal frameworks: 
+
+\begin{table}[H]
+	\centering
+	\footnotesize
+	\caption{Market Anarchy and the Internally Divided Firm Articulation Across Three Models}
+	\label{tab:coherence}
+	\begin{tabular}{p{2.2cm}p{3.8cm}p{3.8cm}p{4.2cm}}
+		\toprule
+		Logic & Decentralized Accumulation &
+		Internally Divided Firm & Analytical Insight \\
+		\midrule
+		\midrule
+		Micro logic & Viability condition (cost
+		reduction at prevailing prices) & Internal
+		contradiction (control vs.\ cooperation) &
+		Optimization problem = cost-minimizing pole;
+		constraints = cooperation limits \\
+		Macro logic & Decentralized decisions $\to$
+		disproportionality & Divided firm $\to$
+		contested operating conditions & $\theta \neq 1$
+		captures gap between accumulation and capacity \\
+		Disequilibrium & Unbalanced growth (supply
+		$\neq$ demand) & ``Mediocre sufficiency''
+		\citep{Vidal2022} (no coherent optimum) & $\mu$
+		demonstrates gap; $\theta$ captures structural
+		inefficiency \\
+		Peripheral specificity & BoP constraint blocks
+		\textit{implementation} of viability & External
+		constraint compounds internal division & Corner
+		solution: $\kappa = \bar{\kappa}$ when
+		constraint binds \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+This analytical framework does not assert equilibrium. It aims 
+demonstrates the opposite: capitalist accumulation,
+left to its own decentralized logic, does not generate
+proportional reproduction. The rate of capacity utilization 
+$\mu$ is the exhaust valve of this
+disproportionality: it shows that the normal operating
+conditions of capitalist firms, determined by their
+cost-minimizing mechanization choices, do not meet
+aggregate demand conditions. The transformation elasticity
+$\theta$ captures this structural gap between accumulation
+and realized capacity. Whether $\theta$ exceeds or falls
+below unity is an empirical question to be tackled below. In the center, this gap is cyclical---mediated by institutional configurations that
+can be exhausted triggering processes of capitalist re-structuring. In the periphery, this gap is permanent---locked in by the structural ceiling of
+external subordination \citep{Kaldor1959,Prebisch1981}.
+
+Three models have now specified what $\theta$ depends on, and none of
+them has said what it equals. The dependence is on objects that no
+national accounting system reports directly: a capacity ceiling that is
+never observed, a mechanization gap between two capital stocks that are
+valued by convention, and, for the periphery, an external state that has
+to be inferred rather than read off a date. Whether $\theta$ can be
+recovered at all therefore turns on whether those objects can be
+reconstructed from the historical record without importing the
+transformation relation into their construction.

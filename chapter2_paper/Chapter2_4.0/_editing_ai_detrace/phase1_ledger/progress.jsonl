@@ -1,0 +1,5 @@
+{"classified": 95, "eligible": 267, "unique_ids": 95, "status_counts": {"KEEP": 74, "LIGHT": 16, "COMPRESS": 4, "REWRITE": 1}, "source_hashes_unchanged": true, "protected_files": 155}
+{"classified": 169, "eligible": 267, "unique_ids": 169, "status_counts": {"KEEP": 129, "LIGHT": 30, "COMPRESS": 7, "REWRITE": 3}, "source_hashes_unchanged": true, "protected_files": 155}
+{"classified": 248, "eligible": 267, "unique_ids": 248, "status_counts": {"KEEP": 181, "LIGHT": 43, "COMPRESS": 19, "REWRITE": 4, "DELETE-SCAFFOLD": 1}, "source_hashes_unchanged": true, "protected_files": 155}
+{"classified": 267, "eligible": 267, "unique_ids": 267, "status_counts": {"KEEP": 190, "LIGHT": 46, "COMPRESS": 23, "REWRITE": 7, "DELETE-SCAFFOLD": 1}, "source_hashes_unchanged": true, "protected_files": 155}
+{"classified": 267, "eligible": 267, "unique_ids": 267, "status_counts": {"KEEP": 190, "LIGHT": 46, "COMPRESS": 23, "REWRITE": 7, "DELETE-SCAFFOLD": 1}, "source_hashes_unchanged": true, "protected_files": 155}

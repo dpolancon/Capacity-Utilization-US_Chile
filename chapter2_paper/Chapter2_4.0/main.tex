@@ -1,0 +1,157 @@
+\documentclass[11pt]{article}
+\usepackage{lmodern}
+
+% ---------- Layout ----------
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{setspace}
+\setstretch{1.05}
+
+% ---------- Math & text ----------
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+
+% ---------- Figures & tables ----------
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{threeparttable}       % NEW: table notes
+\usepackage{siunitx}              % NEW: S columns for decimal alignment
+\usepackage{pdflscape}
+
+
+% ---------- Bibliography ----------
+% natbib MUST be loaded BEFORE hyperref
+\usepackage[authoryear]{natbib}
+
+% ---------- Links ----------
+% hyperref should be loaded after all other packages (except cleveref)
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% ---------- Smart cross-references ----------
+% cleveref MUST be loaded AFTER hyperref
+\usepackage{cleveref}             % NEW: \cref and \Cref commands
+
+% ---------- Notation macros (00S Symbology and Notation Lock) ----------
+\newcommand{\mut}{\mu_t}
+\newcommand{\chit}{\chi_t}
+\newcommand{\kapt}{\kappa_t}
+\newcommand{\knrc}{k^{\text{NRC}}}
+\newcommand{\kme}{k^{\text{ME}}}
+\newcommand{\Ypot}{Y^{p}}
+\newcommand{\mech}{q}
+\newcommand{\pkap}{p_t^{\kappa}}
+\newcommand{\impint}{\nu}
+\newcommand{\deprec}{\delta}
+\newcommand{\discard}{z}
+\newcommand{\stepD}{\boldsymbol{\gamma}'\mathbf{D}_t}
+\newcommand{\stepDsys}{\boldsymbol{\Gamma}\mathbf{D}_t}
+\newcommand{\MPF}{Mechanization Productive Frontier}
+
+% ---------- Placeholder marker ----------
+\newcommand{\PLACEHOLDER}[1]{%
+	\par\medskip\noindent\fbox{\parbox{0.96\linewidth}{%
+			\footnotesize\textbf{[PLACEHOLDER]}~#1}}\par\medskip}
+% ---------- Title block ----------
+\title{The Transformation of Accumulation into Productive Capacities: Capacity Utilization in the Center and Periphery\thanks{This paper benefited from AI-assisted editing for syntax refinement, structural suggestions, and stylistic consistency checks. All analytical arguments, historical interpretations, and substantive content remain the author's sole responsibility.}\\
+\begin{large}
+\textbf{WORK IN PROGRESS / PLEASE DO NOT CIRCULATE}     
+\end{large}
+}
+\author{Diego Polanco\thanks{Doctoral Candidate in Economics, Department of Economics, University of Massachusetts Amherst.}\\
+Department of Economics, University of Massachusetts Amherst\\
+\texttt{dpolanconeco@umass.edu}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\noindent Chapter 1 demonstrated that the bivariate output--capital relation
+	fails system-level cointegration and that a stable long-run capacity path
+	requires the rate of exploitation to enter the cointegrating vector, yielding
+	a transformation elasticity below unity ($\hat{\theta}<1$) indicative of
+	structural overaccumulation. This chapter identifies \emph{how} distribution
+	conditions the conversion of accumulated capital into productive capacity and
+	extends the analysis to the periphery. I estimate the transformation
+	elasticity $\theta \equiv \partial \ln Y^p / \partial \ln K$ as a
+	state-dependent cointegrating relation: for the United States
+	(1931--2024), using Integrated Modified OLS with fixed-$b$ inference and
+	endogenously dated structural breaks \citep{VogelsangWagner2024,BaiPerron2003}; for Chile (1943--2010), using a threshold Cointegrating
+	Multivariate Polynomial Regression with a composite balance-of-payments
+	index. In the United States, $\theta$ remains strictly below unity throughout the
+	sample. It rises from $0.37$ in 1960 to $0.43$ in 2024 as effective wage
+	pressure falls with the diversion of investment into intellectual property.
+	Capacity utilization declines from its 1944 wartime peak to $93.8\%$ in
+	2024, never re-anchoring to its Fordist level. In Chile, a
+	balance-of-payments threshold at $\hat{\gamma}=0.425$ switches the
+	mechanization response off: the wage-share elasticity of the capital
+	composition gap falls from $+3.29$ to $+0.14$ once foreign exchange binds.
+	Peripheral capitalists retain the incentive to substitute machinery for labor
+	and lose the means to do so, because the machinery is imported. The center--periphery comparison establishes that the same transformation
+	relation is mediated by distributive conflict in the center and truncated by
+	the balance-of-payments constraint in the periphery. Neither economy operates
+	near $\theta=1$. Capacity utilization is not a norm toward which economies
+	converge; it is the residual of a politically conditioned conversion of
+	accumulation into productive capacity.
+\end{abstract}
+
+\vspace{1cm}
+
+\noindent\textbf{Keywords:} Capacity Utilization; Transformation Elasticity; Choice of Technique; Cointegration; Okishio Viability; Balance-of-Payments Constraint; Center--Periphery.
+
+\noindent\textbf{JEL Codes:} B51; C32; E01; E22; E32; P16.
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+
+\pagebreak
+\FloatBarrier
+\input{section1}
+\FloatBarrier
+\input{section2}
+\FloatBarrier
+\input{section3}
+\FloatBarrier
+\input{section4}
+\FloatBarrier
+\input{section5}
+\FloatBarrier
+\input{section6}
+
+
+% ---------- Bibliography ----------%
+\pagebreak
+\bibliographystyle{apalike}
+\bibliography{references}
+
+
+% ---------- Appendix ----------%
+% \appendix precedes the bibliography so appendix sections carry their own lettered
+% numbering instead of being absorbed into the preceding section's outline branch.
+\pagebreak
+\appendix
+\input{appendixA}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%
+\input{appendixB}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%
+\input{appendixC}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%
+\input{appendixD}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%
+\input{appendixE}
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%
+\input{appendixF}
+
+
+\end{document}

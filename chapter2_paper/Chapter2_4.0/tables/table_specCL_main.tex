@@ -1,0 +1,33 @@
+\begin{table}[h!]
+	\centering
+	\caption{Comparative Estimates Across Distributive Variable Permutations (Chile, 1943--2010)}
+	\label{tab:chile_distributive_comparison_main}
+	\small
+	\begin{tabular}{p{5.0cm}p{2.2cm}p{2.2cm}p{2.2cm}p{2.2cm}}
+		\toprule
+		& \multicolumn{2}{c}{Wage Share ($\omega$)} & \multicolumn{2}{c}{Rate of Exploitation ($e$)} \\
+		\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+		& Net ($\omega^{\text{net}}$) & Gross ($\omega^{\text{gross}}$) & Net ($e^{\text{net}}$) & Gross ($e^{\text{gross}}$) \\
+		& (1) & (2) & (3) & (4) \\
+		\midrule
+		$\hat{\theta}_{k^{\text{NR}}}$ (Structures $k^{\text{NR}}$) & 0.79$^{***}$ & 0.82$^{***}$ & 0.80$^{***}$ & 0.82$^{***}$ \\
+		& (0.07) & (0.08) & (0.07) & (0.08) \\
+		$\hat{\theta}_{\kappa}$ (Mechanization Gap $\kappa$) & 0.12 & -1.48$^{*}$ & 0.15 & 0.85 \\
+		& (0.39) & (0.54) & (0.25) & (0.38) \\
+		$\hat{\theta}_{\text{dist}\cdot\kappa}$ (Distributive Interaction) & -0.01 & 3.29$^{*}$ & 0.02 & -0.69$^{*}$ \\
+		& (0.22) & (1.07) & (0.09) & (0.23) \\
+		$\hat{\theta}_{\kappa D}$ (Regime Shift $\kappa D$) & 0.34 & 1.52$^{**}$ & 0.15 & -0.73 \\
+		& (0.16) & (0.45) & (0.08) & (0.29) \\
+		$\hat{\theta}_{\text{dist}\cdot\kappa D}$ (Triple Interaction) & -0.17 & -3.15$^{*}$ & 0.12 & 0.67$^{*}$ \\
+		& (0.23) & (1.04) & (0.10) & (0.22) \\
+		\midrule
+		Regime Threshold ($D_t$) & $Z_t \le 0.425$ & $Z_t \le 0.425$ & $Z_t \le 0.425$ & $Z_t \le 0.425$ \\
+		Price Control Included & No & No & No & No \\
+		$CT_{\text{IM}}$ [$H_0$: Cointegration] & 15.20 & 8.39 & 14.99 & 8.34 \\
+		$t_{\text{ADF}}$ [$H_0$: Unit Root] & -3.81$^{*}$ & -3.81$^{*}$ & -3.84$^{*}$ & -3.89$^{*}$ \\
+		Bandwidth ratio $b$ & 0.654 & 0.654 & 0.654 & 0.654 \\
+		Sample Size $T$ & 68 & 68 & 68 & 68 \\
+		\bottomrule
+		\multicolumn{5}{p{14.2cm}}{\footnotesize \textit{Notes:} Dependent variable: $y_t$ (log real GDP). Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS \citep{VogelsangWagner2024}. All models specify the ultra-parsimonious balance-of-payments threshold ($Z_t = 0.2 \tilde{M}_t + 0.8 \tilde{S}_t \le 0.425$) over the effective sample 1943--2010 ($T=68$). Columns (1) and (2) evaluate Net ($\omega^{\text{net}}$) and Gross ($\omega^{\text{gross}}$) wage shares; Columns (3) and (4) evaluate Net ($e^{\text{net}}$) and Gross ($e^{\text{gross}}$) rates of exploitation. Significance stars ($^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$) are benchmarked against 10,000-pass Monte Carlo simulation critical bounds under profile search.} \\
+	\end{tabular}
+\end{table}

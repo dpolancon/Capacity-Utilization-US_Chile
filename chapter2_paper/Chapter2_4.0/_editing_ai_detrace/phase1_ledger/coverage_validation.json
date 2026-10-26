@@ -1,0 +1,13 @@
+{
+  "eligible": 267,
+  "classified": 267,
+  "unique_ids": 267,
+  "uncovered_prose_lines": [],
+  "overlapping_locator_spans": [],
+  "short_units_with_full_opening": [
+    "CH2-S04.06.01-P005",
+    "CH2-S04.06.01-P020"
+  ],
+  "list_items": 26,
+  "extraction_reproducible": true
+}

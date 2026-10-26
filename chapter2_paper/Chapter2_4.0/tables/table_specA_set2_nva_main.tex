@@ -1,0 +1,29 @@
+\begin{table}[h!]
+\centering
+\caption{Specification A, Set 2: Effective Wage Interaction (NVA Basis)}
+\label{tab:specA_set2_nva_main}
+\small
+\begin{tabular}{p{4.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}p{1.2cm}}
+\toprule
+ & \multicolumn{2}{c}{NFC NVA Baseline} & \multicolumn{2}{c}{Clean Corp Tier 1} & \multicolumn{2}{c}{Clean Corp Tier 2} & \multicolumn{2}{c}{ST Tier 2 NVA} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+ & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+\midrule
+$\hat{\theta}_0$ (Capital Elasticity) & 0.58$^{***}$ & 0.56$^{***}$ & 0.58$^{***}$ & 0.65$^{***}$ & 0.57 & 0.56 & 0.57 & 0.55 \\
+ & (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.08) & (0.02) & (0.06) \\
+$\hat{\theta}_1$ (Effective Wage Pressure) & 0.00 & -0.17 & -0.04 & -0.30$^{**}$ & -0.19 & -0.49 & -0.21 & -0.35 \\
+ & (0.10) & (0.07) & (0.08) & (0.06) & (0.08) & (0.13) & (0.08) & (0.07) \\
+\midrule
+Step Shifts ($D_{T_b}^{\text{step}}$) & No & Yes & No & Yes & No & Yes & No & Yes \\
+$C_{\text{Shin}}$ [$H_0$: coint.] & 0.06 & 0.04 & 0.07$^{*}$ & 0.03 & 0.06 & 0.04 & 0.06 & 0.04 \\
+$S_{\text{Type 2}}$ [$H_0$: coint.] & 10.76 & 9.07 & 11.05 & 9.06 & 7.50 & 10.89 & 6.13 & 13.18 \\
+$t_{\text{ADF}}$ [$H_0$: no coint.] & -2.32 & -3.06 & -2.22 & -4.07$^{**}$ & -1.84 & -2.58 & -2.00 & -2.72 \\
+Bandwidth ratio $b$ & 0.298 & 0.169 & 0.280 & 0.165 & 0.272 & 0.237 & 0.259 & 0.237 \\
+Sample Size $T$ & 94 & 94 & 94 & 94 & 76 & 76 & 76 & 76 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{\textwidth}
+\scriptsize
+\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log NFC real GVA). Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS \citep{VogelsangWagner2024}. Step Shifts "No": no structural break dummies; "Yes": Bai-Perron step dummies included. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies. The effective wage interaction is $\omega_{t-1}(1-\iota_{t-1}) \times k_{\text{cap},t}$, where $\iota_{t-1}$ is the lagged IPP share of capital. Significance: $^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$. Stars for coefficient rows and cointegration tests are derived from a 100,000-pass Monte Carlo simulation suite mapping the exact DGP variant and fixed-$b$ Wald tables. Standard errors in parentheses.
+\end{minipage}
+\end{table}

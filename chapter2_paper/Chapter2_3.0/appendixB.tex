@@ -1,0 +1,164 @@
+\FloatBarrier
+\section{Appendix: United States Specification B --- Full Estimation Results}
+\label{app:specA_full_results}
+
+This appendix reports the full empirical estimation matrix across all 48 specifications of the aggregate capital model (Specification A). The specifications span two interaction sets (Set 1: standard wage interaction; Set 2: effective wage interaction scaled by $(1-\iota_{t-1})$), two value-added bases (Gross Value Added [GVA] and Net Value Added [NVA]), six wage share measures per basis (NFC Baseline, Corporate, Shaikh-Tonak Tier 1, Shaikh-Tonak Tier 2, Clean Corporate Tier 1, and Clean Corporate Tier 2), and two structural break modes (without step dummies; with Bai-Perron step shifts).
+
+\FloatBarrier
+\begin{table}[h!]
+	\centering
+	\caption{\textbf{Specification A, Set 1: Standard Wage Interaction (GVA Basis)}}
+	\label{tab:specA_set1_gva_app}
+	\tiny
+	\setlength{\tabcolsep}{1.5pt}
+	\begin{tabular}{p{3.2cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}}
+		\toprule
+		Model & M1.1a & M1.1b & M1.2a & M1.2b & M1.3a & M1.3b & M1.4a & M1.4b & M1.5a & M1.5b & M1.6a & M1.6b \\
+		\midrule
+		$\hat{\theta}_0$ (Capital) & 0.58$^{***}$ & 0.60$^{***}$ & 0.58$^{***}$ & 0.61$^{***}$ & 0.58$^{***}$ & 0.59$^{***}$ & 0.57 & 0.55 & 0.58$^{***}$ & 0.61$^{***}$ & 0.57 & 0.54 \\
+		& (0.02) & (0.06) & (0.02) & (0.07) & (0.02) & (0.06) & (0.02) & (0.08) & (0.02) & (0.07) & (0.02) & (0.08) \\
+		$\hat{\theta}_1$ (Interaction) & -0.02 & -0.08 & -0.03 & -0.04 & 0.06 & -0.08 & -0.19 & -0.23 & 0.01 & -0.07 & -0.20 & -0.29 \\
+		& (0.13) & (0.10) & (0.12) & (0.10) & (0.14) & (0.11) & (0.12) & (0.11) & (0.12) & (0.11) & (0.12) & (0.11) \\
+		\midrule
+		Step shifts & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.06 & 0.04 & 0.06 & 0.04 & 0.05 & 0.03 & 0.06 & 0.05 & 0.05 & 0.04 & 0.06 & 0.05 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 3.30 & 11.34 & 2.70 & 11.41 & 5.82 & 9.68 & 2.56 & 12.13 & 5.30 & 10.48 & 3.74 & 12.92 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & -2.41 & -2.81 & -2.33 & -2.73 & -4.15$^{**}$ & -3.56$^{*}$ & -1.80 & -2.15 & -3.33 & -2.66 & -1.75 & -2.12 \\
+		Bandwidth ratio $b$ & 0.275 & 0.187 & 0.286 & 0.193 & 0.285 & 0.200 & 0.315 & 0.254 & 0.304 & 0.201 & 0.321 & 0.256 \\
+		Sample Size $T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 & 94 & 94 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log NFC real GVA/NVA). Estimated via CMPR IM-OLS \citep{VogelsangWagner2014}. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies. Significance: $^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$. Stars for coefficient rows and cointegration tests are derived from a 100,000-pass Monte Carlo simulation suite mapping the exact DGP variant and fixed-$b$ Wald tables. Standard errors in parentheses.
+	\end{minipage}
+\end{table}
+
+\FloatBarrier
+\begin{table}[h!]
+	\centering
+	\caption{\textbf{Specification A, Set 1: Standard Wage Interaction (NVA Basis)}}
+	\label{tab:specA_set1_nva_app}
+	\tiny
+	\setlength{\tabcolsep}{1.5pt}
+	\begin{tabular}{p{3.2cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}}
+		\toprule
+		Model & M1.7a & M1.7b & M1.8a & M1.8b & M1.9a & M1.9b & M1.10a & M1.10b & M1.11a & M1.11b & M1.12a & M1.12b \\
+		\midrule
+		$\hat{\theta}_0$ (Capital) & 0.58$^{***}$ & 0.60$^{***}$ & 0.58$^{***}$ & 0.60$^{***}$ & 0.58$^{***}$ & 0.60$^{***}$ & 0.57 & 0.56 & 0.59$^{***}$ & 0.71$^{***}$ & 0.57 & 0.63 \\
+		& (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.08) & (0.02) & (0.08) & (0.02) & (0.08) \\
+		$\hat{\theta}_1$ (Interaction) & -0.02 & -0.08 & -0.02 & -0.08 & -0.02 & -0.08 & -0.19 & -0.26 & -0.09 & -0.32$^{*}$ & -0.20 & -0.29 \\
+		& (0.13) & (0.10) & (0.13) & (0.10) & (0.13) & (0.10) & (0.11) & (0.09) & (0.09) & (0.08) & (0.10) & (0.10) \\
+		\midrule
+		Step shifts & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.05 & 0.06$^{*}$ & 0.03 & 0.06 & 0.05 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 3.30 & 11.34 & 3.30 & 11.34 & 3.30 & 11.34 & 3.37 & 12.47 & 5.19 & 10.19 & 4.81 & 12.40 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & -2.41 & -2.81 & -2.41 & -2.81 & -2.41 & -2.81 & -1.97 & -2.40 & -2.42 & -3.61$^{*}$ & -1.91 & -2.31 \\
+		Bandwidth ratio $b$ & 0.275 & 0.187 & 0.275 & 0.187 & 0.275 & 0.187 & 0.277 & 0.235 & 0.242 & 0.156 & 0.280 & 0.239 \\
+		Sample Size $T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 & 94 & 94 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log NFC real GVA/NVA). Estimated via CMPR IM-OLS \citep{VogelsangWagner2014}. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies. Significance: $^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$. Stars for coefficient rows and cointegration tests are derived from a 100,000-pass Monte Carlo simulation suite mapping the exact DGP variant and fixed-$b$ Wald tables. Standard errors in parentheses.
+	\end{minipage}
+\end{table}
+
+\FloatBarrier
+\begin{table}[h!]
+	\centering
+	\caption{\textbf{Specification A, Set 2: Effective Wage Interaction (GVA Basis)}}
+	\label{tab:specA_set2_gva_app}
+	\tiny
+	\setlength{\tabcolsep}{1.5pt}
+	\begin{tabular}{p{3.2cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}}
+		\toprule
+		Model & M2.1a & M2.1b & M2.2a & M2.2b & M2.3a & M2.3b & M2.4a & M2.4b & M2.5a & M2.5b & M2.6a & M2.6b \\
+		\midrule
+		$\hat{\theta}_0$ (Capital) & 0.58$^{***}$ & 0.56$^{***}$ & 0.58$^{***}$ & 0.57$^{***}$ & 0.58$^{***}$ & 0.54$^{***}$ & 0.57 & 0.55 & 0.58$^{***}$ & 0.56$^{***}$ & 0.56 & 0.56 \\
+		& (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.07) & (0.02) & (0.06) & (0.02) & (0.08) \\
+		$\hat{\theta}_1$ (Interaction) & 0.00 & -0.17 & -0.00 & -0.15 & 0.04 & -0.20 & -0.22 & -0.37 & 0.01 & -0.18 & -0.20 & -0.39 \\
+		& (0.10) & (0.07) & (0.10) & (0.07) & (0.11) & (0.09) & (0.10) & (0.09) & (0.10) & (0.08) & (0.09) & (0.17) \\
+		\midrule
+		Step shifts & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.06 & 0.04 & 0.06 & 0.04 & 0.05 & 0.03 & 0.06 & 0.04 & 0.05 & 0.03 & 0.06 & 0.04 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 10.76 & 9.07 & 6.17 & 9.61 & 4.39 & 7.88 & 5.72 & 12.93 & 12.82 & 8.55 & 6.98 & 10.32 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & -2.32 & -3.06 & -2.26 & -2.96 & -4.02$^{**}$ & -2.93 & -1.79 & -2.31 & -3.37 & -2.87 & -1.68 & -2.20 \\
+		Bandwidth ratio $b$ & 0.298 & 0.169 & 0.307 & 0.173 & 0.291 & 0.176 & 0.298 & 0.241 & 0.310 & 0.178 & 0.315 & 0.245 \\
+		Sample Size $T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 & 94 & 94 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log NFC real GVA/NVA). Estimated via CMPR IM-OLS \citep{VogelsangWagner2014}. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies. Significance: $^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$. Stars for coefficient rows and cointegration tests are derived from a 100,000-pass Monte Carlo simulation suite mapping the exact DGP variant and fixed-$b$ Wald tables. Standard errors in parentheses.
+	\end{minipage}
+\end{table}
+
+\FloatBarrier
+\begin{table}[h!]
+	\centering
+	\caption{\textbf{Specification A, Set 2: Effective Wage Interaction (NVA Basis)}}
+	\label{tab:specA_set2_nva_app}
+	\tiny
+	\setlength{\tabcolsep}{1.5pt}
+	\begin{tabular}{p{3.2cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}p{1.0cm}}
+		\toprule
+		Model & M2.7a & M2.7b & M2.8a & M2.8b & M2.9a & M2.9b & M2.10a & M2.10b & M2.11a & M2.11b & M2.12a & M2.12b \\
+		\midrule
+		$\hat{\theta}_0$ (Capital) & 0.58$^{***}$ & 0.56$^{***}$ & 0.58$^{***}$ & 0.56$^{***}$ & 0.58$^{***}$ & 0.56$^{***}$ & 0.57 & 0.55 & 0.58$^{***}$ & 0.65$^{***}$ & 0.57 & 0.56 \\
+		& (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.06) & (0.02) & (0.08) \\
+		$\hat{\theta}_1$ (Interaction) & 0.00 & -0.17 & 0.00 & -0.17 & 0.00 & -0.17 & -0.21 & -0.35 & -0.04 & -0.30$^{**}$ & -0.19 & -0.49 \\
+		& (0.10) & (0.07) & (0.10) & (0.07) & (0.10) & (0.07) & (0.08) & (0.07) & (0.08) & (0.06) & (0.08) & (0.13) \\
+		\midrule
+		Step shifts & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes & No & Yes \\
+		$C_{\text{Shin}}$ [$H_0$: coint.] & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.04 & 0.06 & 0.04 & 0.07$^{*}$ & 0.03 & 0.06 & 0.04 \\
+		$S_{\text{Type 2}}$ [$H_0$: coint.] & 10.76 & 9.07 & 10.76 & 9.07 & 10.76 & 9.07 & 6.13 & 13.18 & 11.05 & 9.06 & 7.50 & 10.89 \\
+		$t_{\text{ADF}}$ [$H_0$: no coint.] & -2.32 & -3.06 & -2.32 & -3.06 & -2.32 & -3.06 & -2.00 & -2.72 & -2.22 & -4.07$^{**}$ & -1.84 & -2.58 \\
+		Bandwidth ratio $b$ & 0.298 & 0.169 & 0.298 & 0.169 & 0.298 & 0.169 & 0.259 & 0.237 & 0.280 & 0.165 & 0.272 & 0.237 \\
+		Sample Size $T$ & 94 & 94 & 94 & 94 & 94 & 94 & 76 & 76 & 94 & 94 & 76 & 76 \\
+		\bottomrule
+	\end{tabular}
+	\begin{minipage}{\textwidth}
+		\scriptsize
+		\textit{Notes:} Dependent variable: $y_t^{\text{NFC}}$ (log NFC real GVA/NVA). Estimated via CMPR IM-OLS \citep{VogelsangWagner2014}. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies. Significance: $^*p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$. Stars for coefficient rows and cointegration tests are derived from a 100,000-pass Monte Carlo simulation suite mapping the exact DGP variant and fixed-$b$ Wald tables. Standard errors in parentheses.
+	\end{minipage}
+\end{table}
+
+\FloatBarrier
+\begin{table}[H]
+	\centering
+	\caption{Custom Monte Carlo Simulated Critical Bounds for CMPR IM-OLS Inference (Specification A)}
+	\label{tab:appendixD_specA_mc_bounds}
+	\begin{tabular}{p{4.2cm} p{2.6cm} p{2.2cm} p{2.2cm} p{2.2cm}}
+		\toprule
+		\textbf{Statistic / Parameter} & \textbf{Asymptotic 95\%} & \textbf{Sim 90\%} & \textbf{Sim 95\%} & \textbf{Sim 99\%} \\
+		\midrule
+		\multicolumn{5}{l}{\textbf{Panel A: Baseline Sample ($T=94$, 1931--2024) --- No Structural Breaks ($m=0$)}} \\
+		\midrule
+		$t_{\text{level}}$ ($k_t^{\text{cap}}$) & 1.960 & 3.877 & 5.119 & 8.502 \\
+		$t_{\text{inter}}$ ($k_t^{\text{cap}} \cdot C_t$) & N/A & 3.123 & 4.006 & 6.238 \\
+		$CT_{\text{IM}}$ (Type 2 Cointegration) & 0.070 & 0.0580 & 0.0705 & 0.1005 \\
+		\midrule
+		\multicolumn{5}{l}{\textbf{Panel B: Baseline Sample ($T=94$, 1931--2024) --- Bai-Perron Level-Shift Breaks ($m \ge 1$)}} \\
+		\midrule
+		$t_{\text{level}}$ ($k_t^{\text{cap}}$) & 1.960 & 2.607 & 3.267 & 4.989 \\
+		$t_{\text{inter}}$ ($k_t^{\text{cap}} \cdot C_t$) & N/A & 3.455 & 4.325 & 6.444 \\
+		$CT_{\text{IM}}$ (Type 2 Cointegration) & 0.070 & 0.0482 & 0.0598 & 0.0895 \\
+		\midrule
+		\multicolumn{5}{l}{\textbf{Panel C: Supervisory Sample ($T=76$, 1948--2024) --- No Structural Breaks ($m=0$)}} \\
+		\midrule
+		$t_{\text{level}}$ ($k_t^{\text{cap}}$) & 1.960 & 3.900 & 5.155 & 8.387 \\
+		$t_{\text{inter}}$ ($k_t^{\text{cap}} \cdot C_t$) & N/A & 3.139 & 4.018 & 6.206 \\
+		$CT_{\text{IM}}$ (Type 2 Cointegration) & 0.070 & 0.0635 & 0.0780 & 0.1151 \\
+		\midrule
+		\multicolumn{5}{l}{\textbf{Panel D: Supervisory Sample ($T=76$, 1948--2024) --- Bai-Perron Level-Shift Breaks ($m \ge 1$)}} \\
+		\midrule
+		$t_{\text{level}}$ ($k_t^{\text{cap}}$) & 1.960 & 2.687 & 3.371 & 5.188 \\
+		$t_{\text{inter}}$ ($k_t^{\text{cap}} \cdot C_t$) & N/A & 3.427 & 4.277 & 6.213 \\
+		$CT_{\text{IM}}$ (Type 2 Cointegration) & 0.070 & 0.0545 & 0.0696 & 0.1065 \\
+		\bottomrule
+		\multicolumn{5}{p{14.2cm}}{\footnotesize \textbf{Notes:} Critical bounds derived from a custom $N=100,000$ iteration Monte Carlo simulation suite calibrated specifically to the $I(1) \times I(1)$ product integration geometry of the regressors and dynamic Bai-Perron break degrees of freedom. Panels A and B reflect the baseline 1931--2024 sample length ($T=94$), while Panels C and D reflect the supervisory-adjusted Tier 2 wage share sample ($T=76$). Bandwidth $b = M/T$ is fixed per Vogelsang \& Wagner (2014) IM-OLS specification. Data Generating Process ($H_0$) constructs independent zero-drift random walks for base level variables ($k_t^{\text{cap}}, \omega_t$), with interaction product processes algebraically assembled prior to estimation. Parameter $t$-statistics are centered around their true theoretical values ($t^* = |(\hat{\beta}^* - \beta_{\text{true}})/SE|$) to ensure pure size calibration rather than power distortion.} \\
+	\end{tabular}
+\end{table}
+
+

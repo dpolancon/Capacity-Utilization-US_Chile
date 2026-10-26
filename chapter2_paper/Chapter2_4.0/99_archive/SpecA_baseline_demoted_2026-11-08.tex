@@ -1,0 +1,241 @@
+
+Table~\ref{tab:specA_set2_nva_main} reports the baseline estimation
+results for the aggregate capital specification, focusing on the
+effective wage interaction (Set 2) on the NVA basis. Full results
+for all 32 specifications---spanning both interaction sets, both
+value-added bases, and both structural break modes---are reported
+in Appendix~\ref{app:specA_full_results}.
+
+\paragraph{Cointegration verdict.}
+The cointegration test triad confirms the presence of a stable
+cointegrating relationship across all 32 estimated models. The
+Engle-Granger residual ADF test rejects the null hypothesis of no
+cointegration in every specification ($t_{\text{ADF}} \leq -2.32$,
+with augmented lag selection via AIC). The Shin
+\citeyearpar{Shin1994} LM statistic ($C_{\text{Shin}} \leq 0.06$)
+and the Vogelsang-Wagner Type 2 statistic fail to reject the null
+hypothesis of cointegration across all specifications. This mutual
+confirmation establishes that the cointegrating relationship between
+$lnY^{NFC}$ and aggregate private gross capital stocks is robust to the
+choice of wage share measure, interaction specification, and
+structural break treatment.
+
+\paragraph{Capital elasticity.}
+The capital elasticity $\hat{\theta}_0$ is positive and highly
+significant across all specifications, ranging from 0.55 to 0.61
+with standard errors of 0.02--0.08. The point estimates are
+remarkably stable across wage share measures, interaction sets, and
+break modes, indicating that the long-run output-capital elasticity
+is robustly identified. The inclusion of Bai-Perron step dummies
+reduces $\hat{\theta}_0$ by approximately 0.02 in most
+specifications, reflecting the absorption of level shifts into the
+deterministic component.
+
+\paragraph{Failure of the standard wage interaction (Set 1).}
+In the standard interaction specifications (Set 1), the wage
+interaction coefficient $\hat{\theta}_1$ fails to achieve
+statistical significance under the custom Monte Carlo fixed-$b$
+critical values across all eight wage share measures and both break
+modes. The point estimates range from $-0.19$ to $+0.06$ with
+standard errors of 0.10--0.14, yielding $|t|$-statistics below the
+90th percentile Monte Carlo threshold of 2.96. This failure
+demonstrates that the raw, unconditioned wage share---whether
+computed over GVA or NVA, and whether using the baseline NFC measure
+or the Shaikh-Tonak supervisory-adjusted measures---does not capture
+the accumulation-channel dynamics predicted by the theoretical
+framework.
+
+\paragraph{Success of the effective wage interaction (Set 2).}
+When the wage interaction is scaled by productive accumulation
+$(1 - \iota_{t-1})$, where $\iota_{t-1}$ is the lagged share of
+intellectual property products in total capital, the effective wage
+interaction coefficient $\hat{\theta}_1$ becomes statistically
+significant with the theoretically predicted negative sign in the
+Shaikh-Tonak Tier 2 NVA specifications. In model M2.8a (no
+structural break dummies), $\hat{\theta}_1 = -0.21$ ($t = -2.63$,
+significant at the 10\% level under Monte Carlo critical values);
+in model M2.8b (with Bai-Perron step dummies), $\hat{\theta}_1 =
+-0.35$ ($t = -5.00$, significant at the 5\% level). The negative
+sign implies that higher effective wage pressure---wage pressure
+net of the unproductive intellectual property component---reduces
+the marginal capacity yield of capital. Economically, high effective
+wage pressure forces defensive mechanization, increasing the organic
+composition of capital and depressing the transformation elasticity.
+
+The contrast between Set 1 and Set 2 is sharp: the standard wage
+share fails to mediate the capital-output relationship, while the
+effective wage share---purged of the unproductive IPP
+component---captures the distributive channel through which class
+struggle over newly created value shapes the pace of capacity
+accumulation. This result is consistent with the theoretical
+prediction that only wage pressure over net value added, net of
+unproductive components, enters the firms' cost-minimization
+calculus and thereby mediates the transformation of capital into
+productive capacity.
+
+\paragraph{Structural break robustness.}
+The inclusion of Bai-Perron step dummies does not alter the
+qualitative conclusions. In Set 2 NVA specifications, the effective
+wage interaction remains significant with the same sign after
+controlling for endogenous structural breaks. The break years
+identified by the Bai-Perron procedure are reported in
+Appendix~\ref{app:specA_full_results}. The stability of
+$\hat{\theta}_1$ across break modes confirms that the distributive
+mediation result is not an artifact of omitted structural breaks.
+
+%%%% Results Table %%%%%
+\input{tables/table_specA_set2_nva_main.tex}
+
+
+
+\subsubsection{Baseline Transformation Elasticity and Capacity Utilization Estimates}
+
+\subsection{United States: Heterogeneous Capital Stock Estimates}
+
+\subsubsection{Heterogeneous Capital Stocks Empirical Estimates}
+\label{sec:431:specB_results}
+
+Specification B disaggregates the capital stock into non-residential
+structures ($k^{\text{NRC}}_t$) and the mechanization gap
+($\kappa_t = k^{\text{ME}}_t - k^{\text{NRC}}_t$), replacing the
+single aggregate capital regressor of Specification A with two
+distinct capital components. The cointegrating regression takes the
+form
+\begin{equation}
+	y_t = \alpha + \theta_{\text{NRC}}\, k^{\text{NRC}}_t
+	+ \theta_{\kappa}\, \kappa_t
+	+ \theta_{\omega\kappa}\, \xi^{\omega}_t
+	+ \theta_{\kappa p}\, \xi^{p}_t
+	+ u_t,
+	\label{eq:431:specB_model}
+\end{equation}
+where $\xi^{\omega}_t$ is the Frisch-Waugh-Lovell (FWL)
+orthogonalized wage-capital interaction and $\xi^{p}_t$ is the FWL
+orthogonalized relative-price interaction. The FWL orthogonalization
+partials out the base capital regressors and any detected structural
+break step dummies before estimating the interaction coefficients,
+as described in \cref{sec:421:estimation_strategy}. Two interaction
+specifications are estimated. Set 1 uses the standard wage
+interaction $\xi^{\omega}_t = \kappa_t \times \omega_{t-1}$; Set 2
+uses the effective wage interaction $\xi^{\omega}_t = \kappa_t
+\times \omega_{t-1}(1 - \iota_{t-1})$, where $\iota_{t-1}$ is the
+lagged share of intellectual property products in total capital. All
+models are estimated via the integrated modified OLS (IM-OLS)
+estimator \citep{VogelsangWagner2014}, whose partial-sum
+transformation and augmentation procedure for cointegrating
+polynomial regressions are derived in
+\cref{sec:421:estimation_strategy}. The estimation sample spans
+1931--2024 ($T = 94$ for standard wage measures; $T = 77$ for
+Shaikh-Tonak Tier 2 measures, which require the supervisory
+compensation ratio available from 1948).
+
+\paragraph{Theoretical motivation for the NVA basis.}
+The wage share entering the interaction term is computed over either
+gross value added (GVA) or net value added (NVA). Under the
+classical-Marxian decomposition, $\text{GVA} = \text{CFC} + v + s$
+and $\text{NVA} = v + s$, where CFC denotes consumption of fixed
+capital. Because CFC represents pre-existing constant capital
+transferred to output rather than newly created value, it lies
+outside the zero-sum distributive conflict over surplus. During
+intensive mechanization, the ratio $\text{CFC}/\text{GVA}$ rises
+mechanically, depressing GVA-basis wage shares even when the rate of
+surplus-value extraction ($s/v$) is unchanged. The NVA basis
+isolates the distributive balance from this mechanization
+distortion. Additionally, the Shaikh-Tonak Tier 2 measures strip
+supervisory overhead from compensation, isolating productive
+variable capital \citep{ShaikhTonak1994}.
+
+\paragraph{Cointegration verdict.}
+The cointegration test triad---comprising the Engle-Granger
+residual ADF test, the Shin \citeyearpar{Shin1994} LM test, and
+the Vogelsang-Wagner Type 2 statistic---is applied across all 24
+estimated models. The construction of these test statistics and
+their fixed-$b$ critical values are described in
+\cref{sec:421:estimation_strategy}. The Engle-Granger residual ADF
+test rejects the null hypothesis of no cointegration in all
+specifications ($t_{\text{ADF}} \leq -4.16$, $p < 0.05$). The Shin
+LM test ($C_{\text{Shin}} \leq 0.05$) and the Vogelsang-Wagner
+Type 2 statistic ($S_{\text{Type 2}} \leq 16.25$) fail to reject
+the null hypothesis of cointegration across all specifications. This
+mutual confirmation establishes that the cointegrating relationship
+between output and disaggregated capital is stable, and that the
+Bai-Perron step dummies absorb historical regime shifts without
+introducing spurious trend contamination.
+
+\paragraph{Set 1 results: standard wage interaction.}
+Tables~\ref{tab:app_specB_set1_gva} and
+\ref{tab:app_specB_set1_nva} in Appendix~\ref{app:E} report the
+Set 1 estimates. Three findings emerge. First, the structures
+coefficient $\hat{\theta}_{\text{NRC}}$ is positive and highly
+significant across all specifications ($0.35$--$0.62$,
+$p < 0.01$), confirming that non-residential structures constitute
+the primary capacity-yield channel. Second, the mechanization gap
+coefficient $\hat{\theta}_{\kappa}$ is positive but statistically
+insignificant in most GVA-basis specifications, becoming significant
+only in the Tier 2 NVA specification with break dummies
+($\hat{\theta}_{\kappa} = 1.00$, $p < 0.05$). Third, and most
+critically, the standard wage interaction
+$\hat{\theta}_{\omega\kappa}$ is statistically insignificant in all
+Set 1 specifications. The point estimates range from $-13.07$ to
+$+4.01$ with standard errors of $3.10$--$7.41$, yielding
+$|t|$-statistics below 2.0 in all cases. The unadjusted wage share,
+whether computed over GVA or NVA, fails to capture the
+accumulation-channel dynamics predicted by the theory.
+
+\paragraph{Set 2 results: effective wage interaction.}
+Tables~\ref{tab:app_specB_set2_gva} and
+\ref{tab:specB_set2_nva} report the Set 2 estimates, in which the
+wage interaction is scaled by productive accumulation
+$(1 - \iota_{t-1})$. The effective wage interaction
+$\hat{\theta}_{\omega\kappa}$ becomes statistically significant
+with the theoretically predicted negative sign. In the
+Shaikh-Tonak Tier 1 GVA specification without break dummies
+(M2.17a), $\hat{\theta}_{\omega\kappa} = -15.99$ ($t = -3.24$,
+$p < 0.01$); with break dummies (M2.18b),
+$\hat{\theta}_{\omega\kappa} = -12.29$ ($t = -2.91$,
+$p < 0.05$). In the Tier 2 GVA specification (M2.21a), the
+coefficient reaches $-18.45$ ($t = -4.78$, $p < 0.01$). The
+NVA-basis results in Table~\ref{tab:specB_set2_nva} confirm the
+pattern: $\hat{\theta}_{\omega\kappa} = -12.77$ ($t = -3.35$,
+$p < 0.01$) in M2.15a and $-15.43$ ($t = -3.98$, $p < 0.01$) in
+M2.23a.
+
+The negative sign of $\hat{\theta}_{\omega\kappa}$ implies that
+higher effective wage pressure reduces the marginal capacity yield
+of mechanization. Economically, when productive labor commands a
+larger share of newly created value, firms respond with defensive
+mechanization---substituting machinery for labor to restore cost
+competitiveness---but this substitution raises the organic
+composition of capital without a proportional expansion of
+productive capacity. The mechanization gap $\kappa_t$ widens, but
+the transformation elasticity $\theta(\omega_{t-1}) =
+\theta_{\text{NRC}} + \theta_{\kappa} +
+\theta_{\omega\kappa}\,\omega_{t-1}(1-\iota_{t-1})$ declines,
+depressing the capacity yield per unit of capital.
+
+\paragraph{Relative price interaction.}
+The relative-price interaction $\hat{\theta}_{\kappa p}$ is
+statistically insignificant in all specifications, with point
+estimates ranging from $-1.53$ to $+1.38$ and no consistent sign
+pattern. This suggests that relative capital price movements do not
+systematically mediate the mechanization-capacity channel in the
+U.S. data over the full sample period. The result is consistent with
+the theoretical prediction that relative price effects operate
+primarily through the investment allocation channel (which determines
+$\kappa_t$) rather than through the capacity yield channel (which
+determines $\theta$).
+
+\paragraph{Robustness across break specifications.}
+Comparing specifications without break dummies against variants
+controlling for Bai-Perron break step dummies reveals that the
+structural break step dummies absorb level shifts without materially
+altering the slope coefficients. The structures coefficient
+$\hat{\theta}_{\text{NRC}}$ typically declines by $0.03$--$0.13$
+when break dummies are included, reflecting the absorption of level
+shifts into the deterministic component. The effective wage
+interaction coefficient retains its sign and significance in all
+Set 2 specifications, confirming that the distributive mediation
+result is not an artifact of omitted structural breaks.
+
+%%%% Results Table %%%%%
+\input{tables/table_specB_set2_nva_main.tex}

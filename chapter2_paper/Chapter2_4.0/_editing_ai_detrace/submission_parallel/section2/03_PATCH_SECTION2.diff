@@ -1,0 +1,196 @@
+﻿diff --git a/01_BASELINE_SECTION2.tex b/02_CANDIDATE_SECTION2.tex
+index defb556..1557bc5 100644
+--- a/01_BASELINE_SECTION2.tex
++++ b/02_CANDIDATE_SECTION2.tex
+@@ -7,7 +7,7 @@ capacity ceiling---the denominator of the utilization rate---is
+ not a neutral engineering constraint but a historically contingent
+ outcome conditioned by the balance of class power. Yet identifying
+ this distributional conditioning at the macro level leaves the
+-underlying transmission mechanism black-boxed: how, precisely,
++underlying transmission mechanism black-boxed: how
+ does distributive conflict physically alter the conversion of
+ accumulated capital into productive capacity?
+ 
+@@ -46,7 +46,7 @@ firm.
+ Proportional reproduction is a condition of feasibility, not a
+ tendency of capitalist accumulation. Smooth reproduction requires
+ strict material proportionality between departments of
+-production---a condition \citet{Basu2022} and \citet{Okishio2022} formally established defined by the latter as the equilibrium accumulation trajectory. \citet{Bergmann2009} call
++production---a condition \citet{Basu2022} and \citet{Okishio2022} formally establish, defined by the latter as the equilibrium accumulation trajectory. \citet{Bergmann2009} call
+ this balanced trajectory, where realized output meets productive
+ capacity ($\mu_t = 1$), the \textit{``golden path.''} But the golden path
+ is a methodological closure, not a gravitational attractor. It
+@@ -77,11 +77,8 @@ routinely violate the proportional conditions of the golden path.
+ \citet{Okishio2022} demonstrates that chronic disproportionality
+ is not a temporary friction but the structural norm of
+ decentralized accumulation. Treating the transient benchmark of
+-$\mu_t = 1$ as a behavioral target therefore relies on a hidden
+-premise: that the firm is a unified planning subject capable of
+-selecting a utilization norm, enforcing it across the labor
+-process, and sustaining it over time. This premise---the unified
+-firm---is the target of the present section.
++$\mu_t = 1$ as a behavioral target therefore relies on the hidden
++premise that the firm is a unified planning subject.
+ 
+ The denominator of the utilization ratio (productive capacity
+ $Y^p_t$) is not an engineering constant. It is a contested
+@@ -110,19 +107,18 @@ value operating \textit{``behind their backs.''}\footnote{Karl
+ 	law of value operates as an overriding law of nature when
+ 	private producers exchange products \citep{MarxKVI}.} They are subject to market
+ forces and value relations they neither control nor consciously
+-direct. Critically, this anarchy is not a coordination failure
+-in an otherwise functional market. The market is a socially
++direct. This anarchy is not a coordination failure in an
++otherwise functional market: the market is a socially
+ constituted institution whose normal operation produces
+ disproportionality as a structural feature
+ \citep{VidalPeck2012}. \citet{Okishio2022} locates the source
+ of macroeconomic instability precisely in this constitutive
+-anarchy. Individual capitals commit to fixed investment on the
+-basis of private profitability expectations, yet the market validates
+-those commitments only after production has begun. No firm can
+-know in advance whether its expansion fits the investment and
+-consumption decisions taken elsewhere. The coordination problem
+-is not one of imperfect information surrounding an otherwise
+-coherent plan; no economy-wide plan exists.
++anarchy, where individual capitals commit to fixed investment
++on the basis of private profitability expectations without knowing
++in advance whether their expansion fits the investment and consumption
++decisions taken elsewhere. The coordination problem is not one
++of imperfect information surrounding an otherwise coherent plan;
++no economy-wide plan exists.
+ 
+ Smooth reproduction requires proportional expansion across
+ sectors producing means of production and sectors producing
+@@ -154,14 +150,13 @@ and creditors, but they do not restore the missing
+ Idle capacity is therefore a recurrent, structural form of
+ decentralized accumulation rather than a temporary friction.
+ Private investment physically builds capacity before the market
+-can realize its social use, recurrently a gap
+-between installed productive capacities ($Y^p_t$) and effective demand ($Y_t$). The capacity utilization rate ($\mu_t$) registers this gap at the macro level. Unbalanced growth is not a disturbance around proportionality; it is the structural consequence of distributively conditioned investment under
++can realize its social use, opening a recurrent gap
++between installed productive capacity ($Y^p_t$) and effective demand ($Y_t$). The capacity utilization rate ($\mu_t$) registers this gap at the macro level. Unbalanced growth is the structural consequence of distributively conditioned investment under
+ decentralized decision-making. The analytical problem is
+ therefore not how proportionality re-emerges, but how persistent
+-imbalance remains historically reproducible. The condition
+-$\mu_t = 1$ is at most a transient point through a given trajectory
+-proportionality, while persistent divergence records the ongoing
+-reality of market anarchy.
++imbalance remains historically reproducible: the condition
++$\mu_t = 1$ is at most a transient point, while persistent
++divergence records the ongoing reality of market anarchy.
+ 
+ Okishio's macro framework stops one step short: it does not explain how firms translate this external anarchy into internal operating decisions. The firm does not manage market anarchy; it internalizes it. A firm does not receive a price signal and respond as a frictionless, unified unit. It processes the signal through an organization divided over control, cooperation,
+ effort, and the allocation of resources. Vidal's internally
+@@ -221,14 +216,11 @@ neutral physical ceiling; they aggregate situated, institutional
+ judgments \citep{Shaikh2016, Nikiforos2016}. Complementarily,
+ empirical surveys of managerial practice confirm that firms do
+ not systematically organize production decisions around a
+-coherent capacity utilization target \citep{Singh2022}. For the
+-purposes of macroeconomic modeling, the productive capacity
+-ceiling ($Y^p_t$) is not an exogenous engineering constraint but
+-an endogenous settlement of workplace conflict. This settlement
+-is the micro-foundation through which class struggle and
+-distribution transmit into capacity utilization, setting up the
+-distributive--technological mapping developed in the following
+-subsection.
++coherent capacity utilization target \citep{Singh2022}. For
++macroeconomic modeling, the productive capacity ceiling ($Y^p_t$)
++is thus not an exogenous engineering constraint but an endogenous
++settlement through which workplace conflict and class struggle
++transmit into capacity utilization.
+ 
+ Because the valorization--labor process contradiction cannot be
+ solved, firms settle into organizational configurations of
+@@ -264,8 +256,8 @@ constant---a direct challenge to Marx's law of the tendential
+ fall in the rate of profit. Marx's account, by contrast, allows
+ the same form of technical change to depress profitability when
+ rising capital intensity increases the capital advanced relative
+-to surplus value. \citet{Basu2022} reconciles this seemingly mutually exclusive 
+-theorizations, by formalizing the \textit{Marx--Okishio threshold}: 
++to surplus value. \citet{Basu2022} reconciles these seemingly mutually exclusive 
++theorizations by formalizing the \textit{Marx--Okishio threshold}: 
+ the rate of real-wage growth defines the result driven by
+ the balance of class forces. 
+ 
+@@ -307,7 +299,7 @@ bargaining. Under a constant-wage-share closure---what
+ \citet{Basu2026} formalizes as the ``strong labor'' regime,
+ applicable to Atlantic Fordism---any viable CU-LS technique
+ unambiguously \textit{lowers} the equilibrium profit rate.
+-Marx's LTFRP reigns supreme precisely where labor is powerful
++Marx's LTFRP holds where labor is powerful
+ enough to compel real wages to grow in tandem with productivity.
+ Under this closure, rapid mechanization is induced by
+ distributive pressure, yet the same pressure contests capital's
+@@ -318,8 +310,8 @@ mechanization intensity by $8\%$ under strong-labor conditions,
+ the transformation elasticity $\theta$ rises from $0.70$ to
+ $0.85$: accumulation translates more efficiently into productive
+ capacity because firms substitute machinery for labor. Wage-led
+-mechanization was not a harmonious productivity bargain; but a
+-a contested settlement in which the distributive pressure that
++mechanization was not a harmonious productivity bargain, but a
++contested settlement in which the distributive pressure that
+ induced technical change simultaneously eroded the profit rate
+ it was meant to restore.
+ 
+@@ -375,7 +367,7 @@ utilization target. The analytical object that captures this
+ mediated transformation is the \textit{transformation elasticity} ($\theta \equiv d y^p / d k$), which governs how
+ accumulation converts into productive capacity under a context of
+ distributive conflict and market anarchy. The empirical
+-analysis limits the original inter-departamental formulation by Marx in Capital Volume II into a
++analysis limits the original inter-departamental formulation by Marx in Capital Volume II to a
+ single-sector aggregate, masking internal sectoral
+ divergences while preserving the core logic.
+ 
+@@ -408,11 +400,11 @@ consumption, oligopolistic market structures, and military
+ Keynesianism of the Fordist era absorbed the surplus and
+ sustained effective demand \citep{Vidal2019}.
+ 
+-Under a \textit{constant-unemployment} closure---which resembles the persistent unemployment feature of the post-Fordist accumulation regime---an era during which the class compromise that took place during the Fordist period is dismantled and labor's
++Under a \textit{constant-unemployment} closure---which resembles the persistent unemployment feature of the post-Fordist accumulation regime---the class compromise that took place during the Fordist period is dismantled and labor's
+ bargaining power is severely weakened. The wage share falls,
+ and mechanization is driven not by distributive pressure but
+ by the relative cheapening of ICT and the shift toward
+-financially reversible, short-horizon assets, patents and intellectual property of intangible assets 
++financially reversible, short-horizon assets, patents, and intangible intellectual property 
+ \citep{Lapavitsas2011, Pagano2014}. Because wages no longer
+ track productivity, the profit rate may stabilize or rise,
+ but the suppression of wage-led demand generates a chronic
+@@ -422,12 +414,12 @@ generating chronic idle capacity that is temporarily masked
+ by debt-led consumption and financial fragility rather than
+ sustainable realization \citep{Stockhammer2012, Vidal2019}.
+ 
+-In the capitalist periphery, different closures represent distinct historical configurations throughout Chilean history. First, under an assumption of a
++In the capitalist periphery, different closures represent distinct historical configurations throughout Chilean history. First, the assumption of a
+ \textit{constant-real-wage}, which corresponds to
+-Okishio's original formulation maps onto a surplus-labor
++Okishio's original formulation, maps onto a surplus-labor
+ economy \citep{Lewis1954, Basu2026}. During the
+ import-substituting industrialization (ISI) era, the
+-\textit{rural-urban} and \textit{demographic} transition enabled by the transformation of sanitary conditions and a massive drop of child mortality in the early XX century,  regulated late industrialization, providing an unlimited supply of labor from the countryside that disciplined urban wages and allowed the profit rate to reproduce itself alongside mechanization. 
++\textit{rural-urban} and \textit{demographic} transition enabled by the transformation of sanitary conditions and a massive drop of child mortality in the early XX century regulated late industrialization, providing an unlimited supply of labor from the countryside that disciplined urban wages and allowed the profit rate to reproduce itself alongside mechanization. 
+ However, peripheral mechanization is structurally import-biased:
+ widening the mechanization gap requires imported capital
+ goods and technologically non-substitutable inputs
+@@ -435,8 +427,7 @@ goods and technologically non-substitutable inputs
+ therefore acts as a hard external ceiling on the
+ transformation of accumulation into capacity. Under a
+ developmentalist regime with surplus labor (1933--1957), this operated as an
+-\textit{import capacity ceiling}. Second, a \textit{constant-wage-share} or more accurately \textit{rising-wage-share} closure, represents the intensification of stagnation tendencies leading to structural crisis of capitalism once the unlimited supply of labor depleted and the incentives for capitalist firms to mechanize risen due distributive pressures while increasing import requirements and stressing further the external constraint. Third, the discipline imposed by the neoliberal counter-revolution \citep{Casals2021} (1974--present) a \textit{constant-unemployment} closure coupled with trade and capital account liberalization relieved the external constraint, but locked the periphery into extractive specialization and premature deindustrialization, such that the WTO and bilateral free
+-trade agreements legally encoded a \textit{policy space ceiling} \citep{Ahumada2019, Palma2019}.
++\textit{import capacity ceiling}. Second, a \textit{constant-wage-share}---or more accurately \textit{rising-wage-share}---closure represents the intensification of stagnation tendencies leading to a structural crisis of capitalism. This occurred once the unlimited supply of labor was depleted and the incentives for capitalist firms to mechanize rose due to distributive pressures, increasing import requirements and stressing further the external constraint. Third, under the discipline imposed by the neoliberal counter-revolution \citep{Casals2021} (1974--present), a \textit{constant-unemployment} closure coupled with trade and capital account liberalization relieved the external constraint. Yet it locked the periphery into extractive specialization and premature deindustrialization, such that the WTO and bilateral free trade agreements legally encoded a \textit{policy space ceiling} \citep{Ahumada2019, Palma2019}.
+ 
+ 
+ These historical configurations establish that the productive
+@@ -447,7 +438,7 @@ positionality within the capitalist world system. The
+ center--periphery comparison reveals a fundamental asymmetry:
+ in the center, structural crises arise from the
+ \textit{exhaustion} of institutional mediation (e.g., the
+-1970s profit squeeze); in the periphery, arise from
++1970s profit squeeze); in the periphery, they arise from
+ the \textit{absence} of sovereign mediation and the
+-truncation imposed by the hierarchically oranized financial order imposing 
+-an external constraint that is not necessarily binding. 
+\ No newline at end of file
++truncation imposed by the hierarchically organized financial order imposing 
++an external constraint that is not necessarily binding. 

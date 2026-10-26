@@ -1,0 +1,27 @@
+\begin{table}[H]
+\centering
+\setlength{\tabcolsep}{2.5pt}
+\caption{Specification Set 1: Standard Wage Interaction (GVA Basis)}
+\label{tab:specA_set1_gva_core}
+\scriptsize
+\begin{tabular}{p{3.8cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}p{1.1cm}}
+\toprule
+\multicolumn{9}{l}{\textbf{Dependent Variable: $y_t^{\text{NFC}}$ (Log NFC Real NVA)}} \\
+\midrule
+Model & M1.1a & M1.1b & M1.2a & M1.2b & M1.3a & M1.3b & M1.4a & M1.4b \\
+\midrule
+$\hat{\alpha}$ (Intercept) & 6.57$^{***}$ & 6.03$^{***}$ & 6.56$^{***}$ & 5.93$^{***}$ & 6.61$^{***}$ & 6.17$^{***}$ & 6.42$^{***}$ & 4.91$^{***}$ \\
+ & (0.32) & (0.73) & (0.32) & (0.76) & (0.33) & (0.75) & (0.27) & (0.88) \\
+$\hat{\beta}$ (Private Core $k_{\text{cap}}$) & 0.58$^{***}$ & 0.60$^{***}$ & 0.58$^{***}$ & 0.61$^{***}$ & 0.58$^{***}$ & 0.59$^{***}$ & 0.59$^{***}$ & 0.71$^{***}$ \\
+ & (0.02) & (0.06) & (0.02) & (0.07) & (0.02) & (0.06) & (0.02) & (0.07) \\
+$\hat{\theta}_1$ (FWL Interaction) & -0.02 & -0.08 & -0.03 & -0.04 & 0.06 & -0.08 & -0.28 & -0.15 \\
+ & (0.13) & (0.10) & (0.12) & (0.10) & (0.14) & (0.11) & (0.14) & (0.15) \\
+Step Shifts ($D_{T_b}^{\text{step}}$) & No & Yes & No & Yes & No & Yes & No & Yes \\
+\midrule
+VW Type 2 ($S_{\text{Type 2}}$) [$H_0$: Coint.] & 3.30 & 11.34 & 2.70 & 11.41 & 5.82 & 9.68 & 1.46 & 9.08 \\
+\midrule
+Sample Size ($T$) & 94 & 94 & 94 & 94 & 94 & 94 & 94 & 94 \\
+\bottomrule
+\multicolumn{9}{p{14.5cm}}{\footnotesize \textbf{Note:} Estimated via Cointegrating Multivariate Polynomial Regression (CMPR) IM-OLS (Vogelsang and Wagner 2014; Vogelsang et al.\ 2024) over 1929--2024. Standard errors in parentheses. Coefficient significance ($^* p < 0.10$, $^{**} p < 0.05$, $^{***} p < 0.01$) is derived from a 100,000-pass Monte Carlo simulation of the exact DGP variant. The Vogelsang--Wagner Type 2 statistic tests $H_0$: \emph{cointegration}. Its stars therefore run opposite to the coefficient rows: an \textbf{absence of stars is the favourable result}, indicating the null of cointegration is not rejected. \textbf{[PENDING: the Type 2 statistics below have not yet been evaluated against the fixed-$b$ critical values in \texttt{codes/COMMON\_VW\_fixedb\_critical\_values.R}, which are indexed by each model's bandwidth ratio $b$ and stochastic regressor count $k$. They are reported here without inference.]} Residual ADF and Shin LM diagnostics, collinearity statistics, and bandwidth ratios are reported in Appendix D. All interaction terms are FWL-orthogonalized against base capital regressors and step dummies.} \\
+\end{tabular}
+\end{table}

@@ -1,0 +1,49 @@
+{
+  "verdict": "PASS",
+  "results": [
+    {
+      "pass": 1,
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-no-shell-escape",
+        "main.tex"
+      ],
+      "exit_code": 0
+    },
+    {
+      "pass": 2,
+      "command": [
+        "bibtex",
+        "main"
+      ],
+      "exit_code": 0
+    },
+    {
+      "pass": 3,
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-no-shell-escape",
+        "main.tex"
+      ],
+      "exit_code": 0
+    },
+    {
+      "pass": 4,
+      "command": [
+        "pdflatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-no-shell-escape",
+        "main.tex"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

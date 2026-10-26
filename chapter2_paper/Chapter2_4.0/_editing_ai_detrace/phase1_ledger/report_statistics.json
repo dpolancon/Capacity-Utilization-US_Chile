@@ -1,0 +1,497 @@
+{
+  "counts": {
+    "KEEP": 190,
+    "LIGHT": 46,
+    "COMPRESS": 23,
+    "REWRITE": 7,
+    "DELETE-SCAFFOLD": 1
+  },
+  "issues": {
+    "INT": 16,
+    "SYN": 42,
+    "REP": 26,
+    "SCF": 10,
+    "CONTR": 1,
+    "TYPO": 11,
+    "TERM": 2,
+    "RHYTH": 1,
+    "FIG": 11,
+    "META": 3,
+    "CERT": 11,
+    "TMPL": 5,
+    "MET": 6,
+    "VOICE": 2,
+    "ABSN": 1
+  },
+  "groups": {
+    "Abstract": {
+      "n": 1,
+      "counts": {
+        "KEEP": 1
+      },
+      "density": 0.0
+    },
+    "1": {
+      "n": 7,
+      "counts": {
+        "KEEP": 7
+      },
+      "density": 0.0
+    },
+    "2": {
+      "n": 27,
+      "counts": {
+        "LIGHT": 7,
+        "KEEP": 15,
+        "COMPRESS": 4,
+        "REWRITE": 1
+      },
+      "density": 0.4444444444444444
+    },
+    "2.1": {
+      "n": 4,
+      "counts": {
+        "LIGHT": 1,
+        "KEEP": 2,
+        "COMPRESS": 1
+      },
+      "density": 0.5
+    },
+    "2.2": {
+      "n": 5,
+      "counts": {
+        "COMPRESS": 2,
+        "KEEP": 3
+      },
+      "density": 0.4
+    },
+    "2.3": {
+      "n": 4,
+      "counts": {
+        "KEEP": 3,
+        "COMPRESS": 1
+      },
+      "density": 0.25
+    },
+    "2.4": {
+      "n": 6,
+      "counts": {
+        "LIGHT": 3,
+        "KEEP": 3
+      },
+      "density": 0.5
+    },
+    "2.5": {
+      "n": 5,
+      "counts": {
+        "KEEP": 2,
+        "LIGHT": 2,
+        "REWRITE": 1
+      },
+      "density": 0.6
+    },
+    "3": {
+      "n": 60,
+      "counts": {
+        "KEEP": 51,
+        "LIGHT": 9
+      },
+      "density": 0.15
+    },
+    "3.1": {
+      "n": 12,
+      "counts": {
+        "KEEP": 10,
+        "LIGHT": 2
+      },
+      "density": 0.16666666666666666
+    },
+    "3.1.1": {
+      "n": 5,
+      "counts": {
+        "LIGHT": 1,
+        "KEEP": 4
+      },
+      "density": 0.2
+    },
+    "3.1.2": {
+      "n": 6,
+      "counts": {
+        "KEEP": 5,
+        "LIGHT": 1
+      },
+      "density": 0.16666666666666666
+    },
+    "3.2": {
+      "n": 16,
+      "counts": {
+        "LIGHT": 3,
+        "KEEP": 13
+      },
+      "density": 0.1875
+    },
+    "3.2.1": {
+      "n": 1,
+      "counts": {
+        "KEEP": 1
+      },
+      "density": 0.0
+    },
+    "3.2.2": {
+      "n": 7,
+      "counts": {
+        "LIGHT": 1,
+        "KEEP": 6
+      },
+      "density": 0.14285714285714285
+    },
+    "3.2.3": {
+      "n": 2,
+      "counts": {
+        "KEEP": 2
+      },
+      "density": 0.0
+    },
+    "3.2.4": {
+      "n": 4,
+      "counts": {
+        "KEEP": 3,
+        "LIGHT": 1
+      },
+      "density": 0.25
+    },
+    "3.3": {
+      "n": 26,
+      "counts": {
+        "KEEP": 23,
+        "LIGHT": 3
+      },
+      "density": 0.11538461538461539
+    },
+    "3.3.1": {
+      "n": 2,
+      "counts": {
+        "KEEP": 1,
+        "LIGHT": 1
+      },
+      "density": 0.5
+    },
+    "3.3.2": {
+      "n": 6,
+      "counts": {
+        "KEEP": 6
+      },
+      "density": 0.0
+    },
+    "3.3.3": {
+      "n": 1,
+      "counts": {
+        "LIGHT": 1
+      },
+      "density": 1.0
+    },
+    "3.3.4": {
+      "n": 5,
+      "counts": {
+        "KEEP": 5
+      },
+      "density": 0.0
+    },
+    "3.3.5": {
+      "n": 2,
+      "counts": {
+        "KEEP": 2
+      },
+      "density": 0.0
+    },
+    "3.3.6": {
+      "n": 7,
+      "counts": {
+        "KEEP": 6,
+        "LIGHT": 1
+      },
+      "density": 0.14285714285714285
+    },
+    "3.3.7": {
+      "n": 2,
+      "counts": {
+        "KEEP": 2
+      },
+      "density": 0.0
+    },
+    "3.4": {
+      "n": 3,
+      "counts": {
+        "KEEP": 2,
+        "LIGHT": 1
+      },
+      "density": 0.3333333333333333
+    },
+    "4": {
+      "n": 153,
+      "counts": {
+        "LIGHT": 27,
+        "KEEP": 107,
+        "COMPRESS": 15,
+        "REWRITE": 3,
+        "DELETE-SCAFFOLD": 1
+      },
+      "density": 0.3006535947712418
+    },
+    "4.1": {
+      "n": 40,
+      "counts": {
+        "LIGHT": 6,
+        "KEEP": 32,
+        "COMPRESS": 1,
+        "REWRITE": 1
+      },
+      "density": 0.2
+    },
+    "4.1.1": {
+      "n": 8,
+      "counts": {
+        "LIGHT": 3,
+        "KEEP": 5
+      },
+      "density": 0.375
+    },
+    "4.1.2": {
+      "n": 6,
+      "counts": {
+        "COMPRESS": 1,
+        "KEEP": 5
+      },
+      "density": 0.16666666666666666
+    },
+    "4.1.3": {
+      "n": 4,
+      "counts": {
+        "LIGHT": 1,
+        "KEEP": 3
+      },
+      "density": 0.25
+    },
+    "4.1.4": {
+      "n": 2,
+      "counts": {
+        "KEEP": 2
+      },
+      "density": 0.0
+    },
+    "4.1.5": {
+      "n": 13,
+      "counts": {
+        "KEEP": 13
+      },
+      "density": 0.0
+    },
+    "4.1.6": {
+      "n": 3,
+      "counts": {
+        "KEEP": 3
+      },
+      "density": 0.0
+    },
+    "4.1.7": {
+      "n": 4,
+      "counts": {
+        "KEEP": 1,
+        "LIGHT": 2,
+        "REWRITE": 1
+      },
+      "density": 0.75
+    },
+    "4.2": {
+      "n": 14,
+      "counts": {
+        "REWRITE": 1,
+        "COMPRESS": 2,
+        "LIGHT": 8,
+        "KEEP": 3
+      },
+      "density": 0.7857142857142857
+    },
+    "4.2.1": {
+      "n": 7,
+      "counts": {
+        "COMPRESS": 1,
+        "LIGHT": 4,
+        "KEEP": 2
+      },
+      "density": 0.7142857142857143
+    },
+    "4.2.2": {
+      "n": 6,
+      "counts": {
+        "COMPRESS": 1,
+        "LIGHT": 4,
+        "KEEP": 1
+      },
+      "density": 0.8333333333333334
+    },
+    "4.3": {
+      "n": 20,
+      "counts": {
+        "KEEP": 20
+      },
+      "density": 0.0
+    },
+    "4.3.1": {
+      "n": 8,
+      "counts": {
+        "KEEP": 8
+      },
+      "density": 0.0
+    },
+    "4.3.2": {
+      "n": 3,
+      "counts": {
+        "KEEP": 3
+      },
+      "density": 0.0
+    },
+    "4.4": {
+      "n": 16,
+      "counts": {
+        "COMPRESS": 7,
+        "LIGHT": 4,
+        "KEEP": 4,
+        "DELETE-SCAFFOLD": 1
+      },
+      "density": 0.75
+    },
+    "4.4.1": {
+      "n": 11,
+      "counts": {
+        "COMPRESS": 7,
+        "LIGHT": 2,
+        "KEEP": 1,
+        "DELETE-SCAFFOLD": 1
+      },
+      "density": 0.9090909090909091
+    },
+    "4.4.2": {
+      "n": 5,
+      "counts": {
+        "LIGHT": 2,
+        "KEEP": 3
+      },
+      "density": 0.4
+    },
+    "4.5": {
+      "n": 16,
+      "counts": {
+        "LIGHT": 1,
+        "KEEP": 10,
+        "COMPRESS": 4,
+        "REWRITE": 1
+      },
+      "density": 0.375
+    },
+    "4.5.1": {
+      "n": 9,
+      "counts": {
+        "LIGHT": 1,
+        "KEEP": 5,
+        "COMPRESS": 3
+      },
+      "density": 0.4444444444444444
+    },
+    "4.5.2": {
+      "n": 7,
+      "counts": {
+        "KEEP": 5,
+        "COMPRESS": 1,
+        "REWRITE": 1
+      },
+      "density": 0.2857142857142857
+    },
+    "4.6": {
+      "n": 47,
+      "counts": {
+        "KEEP": 38,
+        "LIGHT": 8,
+        "COMPRESS": 1
+      },
+      "density": 0.19148936170212766
+    },
+    "4.6.1": {
+      "n": 27,
+      "counts": {
+        "KEEP": 23,
+        "LIGHT": 4
+      },
+      "density": 0.14814814814814814
+    },
+    "4.6.2": {
+      "n": 11,
+      "counts": {
+        "KEEP": 7,
+        "COMPRESS": 1,
+        "LIGHT": 3
+      },
+      "density": 0.36363636363636365
+    },
+    "4.6.3": {
+      "n": 9,
+      "counts": {
+        "KEEP": 8,
+        "LIGHT": 1
+      },
+      "density": 0.1111111111111111
+    },
+    "5": {
+      "n": 12,
+      "counts": {
+        "COMPRESS": 4,
+        "KEEP": 2,
+        "REWRITE": 3,
+        "LIGHT": 3
+      },
+      "density": 0.8333333333333334
+    },
+    "6": {
+      "n": 7,
+      "counts": {
+        "KEEP": 7
+      },
+      "density": 0.0
+    }
+  },
+  "structural_categories": {
+    "B": 51,
+    "A": 37,
+    "C": 7
+  },
+  "patterns": {
+    "Certification verbs": 80,
+    "rather than": 54,
+    "not-X-but-Y candidates (same sentence)": 16,
+    "not merely / not simply": 1,
+    "instead of / unlike / less-X-than-Y candidates": 5,
+    "structural (exact word)": 95,
+    "structurally (separate)": 9,
+    "Intensifier candidates": 72,
+    "Figure + reference + shows/plots/displays/traces/illustrates": 16,
+    "First enumeration marker": 13,
+    "Second enumeration marker": 13,
+    "This confirms / establishes / demonstrates": 2,
+    "Transition candidates": 2,
+    "Em-dash constructions (dash marks, not pairs)": 96
+  },
+  "git_status_same": false,
+  "coverage": {
+    "eligible": 267,
+    "classified": 267,
+    "unique_ids": 267,
+    "uncovered_prose_lines": [],
+    "overlapping_locator_spans": [],
+    "short_units_with_full_opening": [
+      "CH2-S04.06.01-P005",
+      "CH2-S04.06.01-P020"
+    ],
+    "list_items": 26,
+    "extraction_reproducible": true
+  }
+}

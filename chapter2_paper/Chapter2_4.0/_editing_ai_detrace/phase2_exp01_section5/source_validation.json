@@ -1,0 +1,817 @@
+{
+  "verdict": "PASS",
+  "changed_line_numbers": [
+    4,
+    6,
+    21,
+    26,
+    31,
+    35,
+    40
+  ],
+  "expected_line_numbers": [
+    4,
+    6,
+    21,
+    26,
+    31,
+    35,
+    40
+  ],
+  "all_other_bytes_identical": true,
+  "paragraphs": [
+    {
+      "id": "CH2-S05-P001",
+      "changed": true,
+      "checks": {
+        "citations": true,
+        "numbers": true,
+        "math": true,
+        "refs": true,
+        "commands": true
+      },
+      "original_tokens": {
+        "citations": [],
+        "numbers": [
+          "4"
+        ],
+        "math": [
+          "$\\theta_t$",
+          "$\\mu_t$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\theta",
+          "\\mu"
+        ]
+      },
+      "candidate_tokens": {
+        "citations": [],
+        "numbers": [
+          "4"
+        ],
+        "math": [
+          "$\\theta_t$",
+          "$\\mu_t$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\theta",
+          "\\mu"
+        ]
+      }
+    },
+    {
+      "id": "CH2-S05-P002",
+      "changed": true,
+      "checks": {
+        "citations": true,
+        "numbers": true,
+        "math": true,
+        "refs": true,
+        "commands": true
+      },
+      "original_tokens": {
+        "citations": [],
+        "numbers": [
+          "1"
+        ],
+        "math": [
+          "$\\theta < 1$",
+          "$\\mu_t$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\theta",
+          "\\mu"
+        ]
+      },
+      "candidate_tokens": {
+        "citations": [],
+        "numbers": [
+          "1"
+        ],
+        "math": [
+          "$\\theta < 1$",
+          "$\\mu_t$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\theta",
+          "\\mu"
+        ]
+      }
+    },
+    {
+      "id": "CH2-S05-P003",
+      "changed": false,
+      "checks": {
+        "citations": true,
+        "numbers": true,
+        "math": true,
+        "refs": true,
+        "commands": true
+      },
+      "original_tokens": {
+        "citations": [],
+        "numbers": [
+          "5",
+          "1931",
+          "2024",
+          "1940",
+          "2010",
+          "1973",
+          "1973",
+          "100",
+          "1981",
+          "1981",
+          "100"
+        ],
+        "math": [
+          "$\\mu_t$",
+          "$\\mu_{1973} = 100\\%$",
+          "$\\mu_{1981} = 100\\%$",
+          "$\\mu_t$"
+        ],
+        "refs": [
+          "\\ref{fig:sec5_combined_mu}"
+        ],
+        "commands": [
+          "\\ref",
+          "\\mu",
+          "\\footnote",
+          "\\mu",
+          "\\%",
+          "\\mu",
+          "\\%",
+          "\\mu"
+        ]
+      },
+      "candidate_tokens": {
+        "citations": [],
+        "numbers": [
+          "5",
+          "1931",
+          "2024",
+          "1940",
+          "2010",
+          "1973",
+          "1973",
+          "100",
+          "1981",
+          "1981",
+          "100"
+        ],
+        "math": [
+          "$\\mu_t$",
+          "$\\mu_{1973} = 100\\%$",
+          "$\\mu_{1981} = 100\\%$",
+          "$\\mu_t$"
+        ],
+        "refs": [
+          "\\ref{fig:sec5_combined_mu}"
+        ],
+        "commands": [
+          "\\ref",
+          "\\mu",
+          "\\footnote",
+          "\\mu",
+          "\\%",
+          "\\mu",
+          "\\%",
+          "\\mu"
+        ]
+      }
+    },
+    {
+      "id": "CH2-S05-P004",
+      "changed": true,
+      "checks": {
+        "citations": true,
+        "numbers": true,
+        "math": true,
+        "refs": true,
+        "commands": true
+      },
+      "original_tokens": {
+        "citations": [],
+        "numbers": [
+          "5",
+          "100",
+          "1975",
+          "1982",
+          "1979",
+          "1985",
+          "1982",
+          "82",
+          "1981",
+          "100"
+        ],
+        "math": [
+          "$\\mu = 100\\%$",
+          "$\\mu_t$",
+          "$K_t$",
+          "$\\mu_{1982} \\approx 82\\%$",
+          "$\\mu_{1981} = 100\\%$"
+        ],
+        "refs": [
+          "\\ref{fig:sec5_combined_mu}"
+        ],
+        "commands": [
+          "\\ref",
+          "\\mu",
+          "\\%",
+          "\\mu",
+          "\\mu",
+          "\\approx",
+          "\\%",
+          "\\mu",
+          "\\%"
+        ]
+      },
+      "candidate_tokens": {
+        "citations": [],
+        "numbers": [
+          "5",
+          "100",
+          "1975",
+          "1982",
+          "1979",
+          "1985",
+          "1982",
+          "82",
+          "1981",
+          "100"
+        ],
+        "math": [
+          "$\\mu = 100\\%$",
+          "$\\mu_t$",
+          "$K_t$",
+          "$\\mu_{1982} \\approx 82\\%$",
+          "$\\mu_{1981} = 100\\%$"
+        ],
+        "refs": [
+          "\\ref{fig:sec5_combined_mu}"
+        ],
+        "commands": [
+          "\\ref",
+          "\\mu",
+          "\\%",
+          "\\mu",
+          "\\mu",
+          "\\approx",
+          "\\%",
+          "\\mu",
+          "\\%"
+        ]
+      }
+    },
+    {
+      "id": "CH2-S05-P005",
+      "changed": false,
+      "checks": {
+        "citations": true,
+        "numbers": true,
+        "math": true,
+        "refs": true,
+        "commands": true
+      },
+      "original_tokens": {
+        "citations": [
+          "\\citep{Aglietta2000}"
+        ],
+        "numbers": [
+          "2000",
+          "85",
+          "105"
+        ],
+        "math": [
+          "$\\mu_t$",
+          "$\\theta$",
+          "$\\mu_t$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\mu",
+          "\\theta",
+          "\\textit",
+          "\\citep",
+          "\\mu",
+          "\\%"
+        ]
+      },
+      "candidate_tokens": {
+        "citations": [
+          "\\citep{Aglietta2000}"
+        ],
+        "numbers": [
+          "2000",
+          "85",
+          "105"
+        ],
+        "math": [
+          "$\\mu_t$",
+          "$\\theta$",
+          "$\\mu_t$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\mu",
+          "\\theta",
+          "\\textit",
+          "\\citep",
+          "\\mu",
+          "\\%"
+        ]
+      }
+    },
+    {
+      "id": "CH2-S05-P006",
+      "changed": true,
+      "checks": {
+        "citations": true,
+        "numbers": true,
+        "math": true,
+        "refs": true,
+        "commands": true
+      },
+      "original_tokens": {
+        "citations": [
+          "\\citet{Weisskopf1979}",
+          "\\citep{Stockhammer2012,Vidal2019}",
+          "\\citep{Rikap2021, Rotta2018}"
+        ],
+        "numbers": [
+          "1960",
+          "76.2",
+          "1975",
+          "74.1",
+          "1982",
+          "1979",
+          "0.32",
+          "2012",
+          "2019",
+          "100",
+          "2000",
+          "2000",
+          "103",
+          "2021",
+          "2018"
+        ],
+        "math": [
+          "$\\mu_t$",
+          "$\\mu_t$",
+          "$\\mu_t$",
+          "$\\theta_t$",
+          "$\\theta_t$",
+          "$\\theta_t$",
+          "$\\mu_t$",
+          "$\\mu_{2000} \\approx 103\\%$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\mu",
+          "\\%",
+          "\\%",
+          "\\citet",
+          "\\mu",
+          "\\mu",
+          "\\theta",
+          "\\theta",
+          "\\theta",
+          "\\mu",
+          "\\citep",
+          "\\%",
+          "\\mu",
+          "\\approx",
+          "\\%",
+          "\\citep"
+        ]
+      },
+      "candidate_tokens": {
+        "citations": [
+          "\\citet{Weisskopf1979}",
+          "\\citep{Stockhammer2012,Vidal2019}",
+          "\\citep{Rikap2021, Rotta2018}"
+        ],
+        "numbers": [
+          "1960",
+          "76.2",
+          "1975",
+          "74.1",
+          "1982",
+          "1979",
+          "0.32",
+          "2012",
+          "2019",
+          "100",
+          "2000",
+          "2000",
+          "103",
+          "2021",
+          "2018"
+        ],
+        "math": [
+          "$\\mu_t$",
+          "$\\mu_t$",
+          "$\\mu_t$",
+          "$\\theta_t$",
+          "$\\theta_t$",
+          "$\\theta_t$",
+          "$\\mu_t$",
+          "$\\mu_{2000} \\approx 103\\%$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\mu",
+          "\\%",
+          "\\%",
+          "\\citet",
+          "\\mu",
+          "\\mu",
+          "\\theta",
+          "\\theta",
+          "\\theta",
+          "\\mu",
+          "\\citep",
+          "\\%",
+          "\\mu",
+          "\\approx",
+          "\\%",
+          "\\citep"
+        ]
+      }
+    },
+    {
+      "id": "CH2-S05-P007",
+      "changed": false,
+      "checks": {
+        "citations": true,
+        "numbers": true,
+        "math": true,
+        "refs": true,
+        "commands": true
+      },
+      "original_tokens": {
+        "citations": [
+          "\\citet{Prebisch1981}",
+          "\\citet{Lewis1954}",
+          "\\citep{Polanco2021}"
+        ],
+        "numbers": [
+          "1981",
+          "1954",
+          "2021",
+          "1950",
+          "1970",
+          "1973"
+        ],
+        "math": [
+          "$K^{\\text{ME}}$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\citet",
+          "\\text",
+          "\\textit",
+          "\\`",
+          "\\citet",
+          "\\citep",
+          "\\textit"
+        ]
+      },
+      "candidate_tokens": {
+        "citations": [
+          "\\citet{Prebisch1981}",
+          "\\citet{Lewis1954}",
+          "\\citep{Polanco2021}"
+        ],
+        "numbers": [
+          "1981",
+          "1954",
+          "2021",
+          "1950",
+          "1970",
+          "1973"
+        ],
+        "math": [
+          "$K^{\\text{ME}}$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\citet",
+          "\\text",
+          "\\textit",
+          "\\`",
+          "\\citet",
+          "\\citep",
+          "\\textit"
+        ]
+      }
+    },
+    {
+      "id": "CH2-S05-P008",
+      "changed": true,
+      "checks": {
+        "citations": true,
+        "numbers": true,
+        "math": true,
+        "refs": true,
+        "commands": true
+      },
+      "original_tokens": {
+        "citations": [
+          "\\citep{DeVylder1976}"
+        ],
+        "numbers": [
+          "20",
+          "49",
+          "1970",
+          "69.03",
+          "1972",
+          "1.06",
+          "0.425",
+          "94.1",
+          "1969",
+          "98.4",
+          "1971",
+          "1972",
+          "1976",
+          "26",
+          "72",
+          "1975"
+        ],
+        "math": [
+          "$Z_t = -1.06 < \\hat{\\gamma} = 0.425$",
+          "$\\mu_t$",
+          "$\\mu_t$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\%",
+          "\\%",
+          "\\hat",
+          "\\gamma",
+          "\\textit",
+          "\\mu",
+          "\\%",
+          "\\mu",
+          "\\%",
+          "\\citep",
+          "\\%"
+        ]
+      },
+      "candidate_tokens": {
+        "citations": [
+          "\\citep{DeVylder1976}"
+        ],
+        "numbers": [
+          "20",
+          "49",
+          "1970",
+          "69.03",
+          "1972",
+          "1.06",
+          "0.425",
+          "94.1",
+          "1969",
+          "98.4",
+          "1971",
+          "1972",
+          "1976",
+          "26",
+          "72",
+          "1975"
+        ],
+        "math": [
+          "$Z_t = -1.06 < \\hat{\\gamma} = 0.425$",
+          "$\\mu_t$",
+          "$\\mu_t$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\%",
+          "\\%",
+          "\\hat",
+          "\\gamma",
+          "\\textit",
+          "\\mu",
+          "\\%",
+          "\\mu",
+          "\\%",
+          "\\citep",
+          "\\%"
+        ]
+      }
+    },
+    {
+      "id": "CH2-S05-P009",
+      "changed": false,
+      "checks": {
+        "citations": true,
+        "numbers": true,
+        "math": true,
+        "refs": true,
+        "commands": true
+      },
+      "original_tokens": {
+        "citations": [
+          "\\citep{Palma2019}",
+          "\\citep{Torres2022, Ahumada2026}",
+          "\\citep{Ffrench2018}"
+        ],
+        "numbers": [
+          "1975",
+          "1990",
+          "110",
+          "1993",
+          "1996",
+          "1997",
+          "1998",
+          "2019",
+          "2000",
+          "2022",
+          "2026",
+          "73",
+          "2010",
+          "2018"
+        ],
+        "math": [
+          "$\\mu > 110\\%$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\mu",
+          "\\%",
+          "\\citep",
+          "\\citep",
+          "\\%",
+          "\\citep"
+        ]
+      },
+      "candidate_tokens": {
+        "citations": [
+          "\\citep{Palma2019}",
+          "\\citep{Torres2022, Ahumada2026}",
+          "\\citep{Ffrench2018}"
+        ],
+        "numbers": [
+          "1975",
+          "1990",
+          "110",
+          "1993",
+          "1996",
+          "1997",
+          "1998",
+          "2019",
+          "2000",
+          "2022",
+          "2026",
+          "73",
+          "2010",
+          "2018"
+        ],
+        "math": [
+          "$\\mu > 110\\%$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\mu",
+          "\\%",
+          "\\citep",
+          "\\citep",
+          "\\%",
+          "\\citep"
+        ]
+      }
+    },
+    {
+      "id": "CH2-S05-P010",
+      "changed": true,
+      "checks": {
+        "citations": true,
+        "numbers": true,
+        "math": true,
+        "refs": true,
+        "commands": true
+      },
+      "original_tokens": {
+        "citations": [],
+        "numbers": [
+          "0.425",
+          "2000"
+        ],
+        "math": [
+          "$Z_t$",
+          "$\\hat{\\gamma} = 0.425$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\hat",
+          "\\gamma"
+        ]
+      },
+      "candidate_tokens": {
+        "citations": [],
+        "numbers": [
+          "0.425",
+          "2000"
+        ],
+        "math": [
+          "$Z_t$",
+          "$\\hat{\\gamma} = 0.425$"
+        ],
+        "refs": [],
+        "commands": [
+          "\\hat",
+          "\\gamma"
+        ]
+      }
+    },
+    {
+      "id": "CH2-S05-P011",
+      "changed": false,
+      "checks": {
+        "citations": true,
+        "numbers": true,
+        "math": true,
+        "refs": true,
+        "commands": true
+      },
+      "original_tokens": {
+        "citations": [
+          "\\citet{Prebisch1981}",
+          "\\citep{Vidal2019}",
+          "\\citep{Rotta2018, Rikap2021}",
+          "\\citep{McCombieThirwall1994}"
+        ],
+        "numbers": [
+          "1981",
+          "2019",
+          "2018",
+          "2021",
+          "1994"
+        ],
+        "math": [],
+        "refs": [],
+        "commands": [
+          "\\citet",
+          "\\textit",
+          "\\citep",
+          "\\citep",
+          "\\citep"
+        ]
+      },
+      "candidate_tokens": {
+        "citations": [
+          "\\citet{Prebisch1981}",
+          "\\citep{Vidal2019}",
+          "\\citep{Rotta2018, Rikap2021}",
+          "\\citep{McCombieThirwall1994}"
+        ],
+        "numbers": [
+          "1981",
+          "2019",
+          "2018",
+          "2021",
+          "1994"
+        ],
+        "math": [],
+        "refs": [],
+        "commands": [
+          "\\citet",
+          "\\textit",
+          "\\citep",
+          "\\citep",
+          "\\citep"
+        ]
+      }
+    },
+    {
+      "id": "CH2-S05-P012",
+      "changed": true,
+      "checks": {
+        "citations": true,
+        "numbers": true,
+        "math": true,
+        "refs": true,
+        "commands": true
+      },
+      "original_tokens": {
+        "citations": [],
+        "numbers": [],
+        "math": [],
+        "refs": [],
+        "commands": []
+      },
+      "candidate_tokens": {
+        "citations": [],
+        "numbers": [],
+        "math": [],
+        "refs": [],
+        "commands": []
+      }
+    }
+  ],
+  "problems": []
+}

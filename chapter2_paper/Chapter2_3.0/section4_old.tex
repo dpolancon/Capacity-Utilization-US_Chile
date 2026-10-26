@@ -1,0 +1,763 @@
+\section{Empirical Strategy and Narrative Synthesis}
+
+\subsection{Data Measurement and the Generalized Perpetual Inventory Method}
+
+\paragraph{A}
+To empirically adjudicate the choice-of-technique models developed in Section 3, we must construct capital stock variables that accurately reflect the physical footprint of accumulation. Standard macroeconomic datasets often conflate the monetary value of capital with its operational physical capacity, leading to severe measurement artifacts. This section outlines the structural protocol used to measure capital in this chapter, establishing the Generalized Perpetual Inventory Method (GPIM) as our core stock-flow consistency device.
+
+\paragraph{B}
+Consistent with our theoretical progression, we first establish the measurement architecture for the U.S. nonfinancial corporate (NFCorp) sector as the baseline core economy, followed by the harmonization of Chilean capital stocks for the peripheral extension.
+
+\subsubsection{Measuring Productive Capacity in the U.S. Core}
+
+\paragraph{A}
+Our primary data source for U.S. accumulation is the Bureau of Economic Analysis (BEA) Fixed Assets Accounts. However, we do not use the BEA's aggregate official quantity and price indexes. Instead, we rebuild the necessary capital stocks from the ground up using investment flows and asset-specific price indexes to enforce a strict separation of valuation registers.
+
+\paragraph{B}
+\textbf{The Dual Valuation Register.} Capital accumulation must be read through two distinct determinations: capacity and profitability. These require fundamentally different stock variables:
+
+\begin{enumerate}
+	\item \textbf{The Capacity Register (Gross Real GPIM Stock):} Productive capacity depends on capital goods that are still physically in operation. Therefore, the relevant measure is the \textit{gross real stock} ($K^{G,R}$). A machine that has depreciated to zero monetary accounting value may still operate at full physical capacity until it is permanently retired.
+	\item \textbf{The Profitability Register (Net Current-Cost Stock):} Profitability, conversely, is a monetary ratio between a profit flow and the value of capital advanced. The relevant measure is the \textit{net current-cost stock} ($K^{N,V}$), which tracks the monetary value of capital after accounting for financial depreciation and write-downs.
+\end{enumerate}
+
+\paragraph{C}
+A common flawed implementation in empirical macroeconomics is to use a single aggregate net capital stock for both capacity utilization and profit rate calculations. By doing so, one conflates value in motion with capacity in operation. We strictly separate these registers.
+
+\paragraph{D}
+\textbf{The GPIM Reconstruction Protocol.} Machinery ($ME$) and nonresidential structures ($NRC$) do not share a natural physical unit. They become comparable only through a monetary-mediated accounting procedure. We employ the Generalized Perpetual Inventory Method (GPIM) to reconstruct capacity-relevant stocks.
+
+\paragraph{E}
+The central GPIM rule is to construct each asset account internally first, rather than aggregating nominal values and deflating with a generic aggregate index. For each asset class $j \in \{ME, NRC\}$ in the U.S. NFCorp sector, we first derive real investment flows:
+
+\[ I_{j,t}^R = \frac{I_{j,t}^V}{P_{j,t}^K} \]
+
+\paragraph{F}
+where $I_{j,t}^V$ is the current-cost gross investment and $P_{j,t}^K$ is the asset-specific price index. The gross real GPIM stock is then reconstructed account by account:
+
+\[ K_{j,t}^{G,R} = \text{GPIM}(I_{j,t}^R, \rho_j, L_j) \]
+
+\paragraph{G}
+where $\rho_j$ governs the retirement logic and $L_j$ represents the mean service life. Unlike standard perpetual inventory methods that often rely on geometric depreciation (which continually decays the installed volume), our GPIM utilizes a Weibull retirement distribution. The Weibull curve ensures that capital goods remain fully in the capacity envelope until they are physically removed from service, accurately modeling the physical life cycle of a plant or machine.
+
+\paragraph{H}
+The resulting gross real GPIM stock ($K^{G,R}$) is not a literal physical quantity; it is a constant-price measure of purchasing power embodied in heterogeneous capital goods still in operation.
+
+\paragraph{I}
+\textbf{The ME-NRC Component Proxy.} To isolate the mechanization bias discussed in Section 3, we require a measure of the machinery share of capital. For the U.S. NFCorp sector, we utilize an $ME-NRC$ component proxy.
+
+\paragraph{J}
+The capacity-composition share is estimated directly from the gross real GPIM stocks:
+
+\[ s_{t, proxy} = \frac{K_{ME,t}^{G,R}}{K_{ME,t}^{G,R} + K_{NRC,t}^{G,R}} \]
+
+\paragraph{K}
+Because it is constructed from asset-specific GPIM stocks, $s_{t, proxy}$ is isolated from relative price drift between machinery and structures. It serves as a real-volume proxy for the machinery share relevant to the transformation relation.
+
+\subsubsection{Measuring Peripheral Accumulation (Chilean Case)}
+
+\paragraph{A}
+For Chile, capital stocks ($K^{NRC}$ and $K^{ME}$) are harmonized from Central Bank of Chile (BCCh) data and historical fixed capital series in constant 2003 CLP prices (matching the GDP price base). Imported machinery components are deflated using asset-specific import price deflators to isolate the physical accumulation envelope from exchange rate fluctuations and foreign exchange volatility.
+
+\subsubsection{The Series Before the Models}
+
+\paragraph{A}
+Before any parametric relation is imposed, the raw accumulation series are worth looking at directly. The capital composition object that the heterogeneous specification turns on is a difference of two log stocks, and whether that difference has the historical structure the theory expects is a question the data can answer before estimation rather than after it.
+
+\begin{figure}[H]
+	\centering
+	\caption{U.S. Capital Stock Levels, LOESS-Smoothed}
+	\label{fig:us_levels_loess}
+	\includegraphics[width=0.85\textwidth]{../../output/figures/us_capital_levels_loess.png}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\caption{U.S. Capital Composition $\kappa_t$ and Accumulation Regimes}
+	\label{fig:us_kappa_bands}
+	\includegraphics[width=0.85\textwidth]{../../output/figures/us_tau_regime_bands.png}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\caption{Chilean Capital Stock Levels, LOESS-Smoothed}
+	\label{fig:cl_levels_loess}
+	\includegraphics[width=0.85\textwidth]{../../output/CL/S20_EXTERNAL_CONSTRAINT_ADMISSIBILITY/fig_cl_capital_levels_loess.png}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\caption{Chilean Capital Composition $\kappa_t$ and Accumulation Regimes}
+	\label{fig:cl_kappa_bands}
+	\includegraphics[width=0.85\textwidth]{../../output/CL/S20_EXTERNAL_CONSTRAINT_ADMISSIBILITY/fig_cl_kappa_regime_bands.png}
+\end{figure}
+
+\paragraph{B}
+\PLACEHOLDER{These four figures are wired but not yet read. Each needs a paragraph stating what the raw series shows, in advance of the parametric work that follows, and the four together need a paragraph on what the comparison of the two composition paths establishes before any model is fitted to either. Two further gaps: the descriptive macro table of growth rates for output, capital, and employment currently sits in Section 3, where it interrupts the theoretical argument, and belongs here alongside these plots; and the second United States figure is generated from a file still named for the retired symbol MATHPLACEHOLDER0XYZ, though the object plotted is MATHPLACEHOLDER1XYZ --- the caption is correct and the filename is not.}
+
+\subsection{Empirical Reconstruction of the U.S. Core: Baseline Homogeneous Capital (Specification A)}
+
+\paragraph{A}
+This section maps the theoretical model of induced mechanization developed in Section 3 into an empirical econometric specification for the U.S. core economy. We establish the formal crosswalk between the aggregate transformation elasticity $\theta(e_t)$ and a Cointegrating Multivariate Polynomial Regression (CMPR) framework estimated via Integrated Modified OLS (IM-OLS) on U.S. Non-Financial Corporate (NFC) data over 1929–2024 ($T = 94$ observations after lag conditioning).
+
+\subsubsection{Econometric Specification and IM-OLS Estimation}
+
+\paragraph{A}
+The analytical model establishes that potential net output growth $g_{Y^p}$ is governed by the growth of productive net capital stock $g_K$ through the aggregate transformation closure:
+
+\[g_{Y^p} = \theta g_K \quad \text{and} \quad \frac{d Y^p}{d K} = \theta\]
+
+\paragraph{B}
+where $\theta$ represents the aggregate transformation elasticity of capital. In Marxian and post-Keynesian growth theory, $\theta$ is not a fixed technical constant. Following the Mechanization Productive Frontier (MPF) framework—built on Okishio's market anarchy threshold, Vidal's internally divided firm, and Marglin-style distributive grounding—$\theta$ varies endogenously with distributive pressures and technological choices:
+
+\[\theta_t = \theta_0 + \theta_1 \cdot \text{Interaction}_t\]
+
+\paragraph{C}
+where $\theta_0$ is the baseline elasticity of capacity output with respect to productive capital, and $\theta_1$ measures the marginal response of capital productivity to distributive and financialization pressures.
+
+\paragraph{D}
+Standard linear cointegration techniques fail when applied to non-linear transformations and interactions of integrated processes. As established by Wagner and Hong (2016) and Wagner (2023), integer powers, products, and non-linear combinations of $I(1)$ processes are not themselves $I(1)$ processes. Regressing log output on log capital and interaction terms constitutes a Cointegrating Polynomial Regression (CPR). Estimating a CPR with conventional linear estimators yields invalid asymptotic inference and inflated test statistics unless specialized non-standard estimators and critical values are employed.
+
+\paragraph{E}
+We specify the empirical cointegrating equation for U.S. Non-Financial Corporate Real Net Value Added ($y_t = \ln Y_t^{\text{NFC,NVA}}$) as:
+
+\[y_t = \alpha + \theta_0 k_t + \theta_1 \text{inter\_ortho}_t + \boldsymbol{\gamma}' \mathbf{D}_t + u_t\]
+
+\paragraph{F}
+where $\alpha$ is the constant intercept, $k_t$ is log real net capital stock, $\text{inter\_ortho}_t$ is the orthogonalized interaction regressor, $\mathbf{D}_t$ is a vector of deterministic step level-shift dummies ($\boldsymbol{\gamma}' \mathbf{D}_t$), and $u_t$ is a stationary $I(0)$ error term under the null hypothesis of cointegration.
+
+\paragraph{G}
+\textbf{Productive Capital Stock Variants ($k_t$).} Following the BEA Fixed Assets boundary protocols, we evaluate two alternative capital stock aggregates:
+
+\begin{enumerate}
+	\item \textbf{Private Core Capital ($k_t^{\text{priv}}$):} $\ln(K_t^{\text{ME}} + K_t^{\text{NRC}})$, combining private machinery and equipment ($K^{\text{ME}}$) with nonresidential structures ($K^{\text{NR}}$). This represents the primary direct productive capacity of the corporate sector.
+	\item \textbf{Infrastructure-Augmented Capital ($k_t^{\text{aug}}$):} $\ln(K_t^{\text{ME}} + K_t^{\text{NRC}} + K_t^{\text{GT}}$), incorporating government-funded transportation and infrastructure assets ($K^{\text{GT}}$) as a public conditioning capital stock.
+\end{enumerate}
+
+\paragraph{H}
+Intellectual Property Products ($K^{\text{IPP}}$) are strictly excluded from the core capital stock $K_{\text{cap}}$ and treated as a frontier conditioner or overhead cost, adhering to national accounting boundary rules.
+
+\paragraph{I}
+\textbf{Distributive Wage Share Variants ($\omega_{t-1}$)}
+We test three alternative wage share measures, conditioned at lag 1 to reflect the historical lag in capital investment planning:
+1. \textbf{Baseline NFC NVA Wage Share ($\omega_{\text{NFC,NVA}}$)}: Ratio of NFC compensation of employees to NFC net value added ($\text{NFC\_COMP} / \text{NFC\_NVA}$). This reflects the aggregate corporate distribution of net product.
+2. \textbf{Corporate NVA Wage Share ($\omega_{\text{CORP,NVA}}$)}: Ratio of total corporate compensation to total corporate net value added ($\text{CORP\_COMP} / \text{CORP\_NVA}$). This variant accounts for corporate financial sector adjustments, ensuring compliance with the "No Double Accounting Rule" by removing financial sector net interest distortions.
+3. \textbf{Shaikh-Tonak Tier 2 Wage Share ($\omega_{\text{ST,Tier2}}$)}: Ratio of supervisory-adjusted productive worker compensation to NFC net value added ($v_{\text{prod}} / \text{NFC\_NVA}$). Grounded in Shaikh and Tonak (1994), this measure strips out administrative and supervisory salaries from total employee compensation, isolating the true variable capital spent on productive labor that directly engages in value creation.
+
+\paragraph{J}
+\textbf{Interaction Logic and Permutation Sets}
+We evaluate two distinct interaction specifications to isolate the transmission mechanism:
+* \textbf{Specification Set 1 (Double Interactions)}: Uses the interaction term $k_t \cdot \omega_{t-1}$. This specification tests whether wage-share pressure directly alters the capital transformation elasticity without conditioning on financial overhead.
+* \textbf{Specification Set 2 (Triple Interactions)}: Uses the interaction term $k_t \cdot \omega_{t-1} \cdot (1 - \iota_{t-1})$, where $\iota_{t-1} = K_{t-1}^{\text{IPP}} / (K_{t-1}^{\text{cap}} + K_{t-1}^{\text{IPP}})$ represents the ratio of intellectual property products to total corporate fixed assets. The term $(1 - \iota_{t-1})$ measures the proportion of corporate capital retained in physical productive assets relative to financialized overhead. This specification tests whether distributive wage pressure induces mechanization only when corporate cash flows are not diverted into financialized asset accumulation.
+
+\paragraph{K}
+In both specification sets, distributive variables ($\omega_{t-1}$ and $\iota_{t-1}$) are centered at their 1929 initial state ($t_0$) prior to forming products, ensuring that baseline coefficient estimates remain interpretable at the historical initial condition.
+
+\paragraph{L}
+\textbf{Frisch-Waugh-Lovell (FWL) Orthogonalization Protocol.} Uncentered interaction terms between integrated processes introduce severe multicollinearity. In our sample, raw interaction terms ($k_t \cdot \omega_{t-1}$) exhibit pairwise correlation coefficients exceeding $r = 0.99$ with base log capital $k_t$, producing Variance Inflation Factors (VIF) above 100. High VIFs inflate parameter standard errors and render hypothesis testing unreliable.
+
+\paragraph{M}
+To resolve multicollinearity without altering the economic content of the model, we implement a strict Frisch-Waugh-Lovell (FWL) orthogonalization protocol. Before estimating the main cointegrating regression, we regress the raw interaction term on base log capital $k_t$, the constant intercept, and any active deterministic step dummies:
+
+\[\text{inter\_raw}_t = a_0 + a_1 k_t + \mathbf{a}_2' \mathbf{D}_t + \text{inter\_ortho}_t\]
+
+\paragraph{N}
+We extract the OLS residual $\text{inter\_ortho}_t$ and substitute it into the main regression. By construction, $\text{inter\_ortho}_t$ is strictly orthogonal to base capital $k_t$ and deterministic trend components. This orthogonalization collapses the Variance Inflation Factor for both $k_t$ and $\text{inter\_ortho}_t$ to exactly \textbf{1.00} across all 24 estimated models.
+
+\paragraph{O}
+Mathematically, FWL orthogonalization leaves the estimated interaction coefficient $\hat{\theta}_1$ and its standard error completely unchanged, while isolating the pure marginal interactive elasticity from the base capital elasticity $\hat{\theta}_0$.
+
+\paragraph{P}
+\textbf{Estimation Engine and Non-Standard Fixed-$b$ Inference.} We estimate the cointegrating equations using Integrated Modified OLS (IM-OLS) developed by Vogelsang and Wagner (2014a, 2024). Unlike Fully Modified OLS (FM-OLS) or Dynamic OLS (D-OLS), IM-OLS eliminates second-order endogeneity and serial correlation biases without requiring lead/lag choices or bandwidth tuning parameters in the estimation step.
+
+\paragraph{Q}
+The IM-OLS estimator applies a partial sum transformation to the regression model:
+
+\[S_t^y = \sum_{i=1}^t y_i, \quad S_t^X = \sum_{i=1}^t X_i, \quad S_t^D = \sum_{i=1}^t D_i\]
+
+\paragraph{R}
+The partial-summed equation is augmented with the level regressors $x_t$:
+
+\[S_t^y = S_t^D \boldsymbol{\delta} + S_t^X \boldsymbol{\beta} + x_t' \boldsymbol{\gamma} + S_t^u\]
+
+\paragraph{S}
+Estimating this augmented partial-sum regression via OLS yields super-consistent estimates of the long-run parameters.
+
+\paragraph{T}
+For asymptotic inference, standard normal and chi-squared critical values are invalid because the limiting distribution of the IM-OLS estimator depends on functionals of Brownian motions. Standard asymptotic inference also ignores finite-sample distortions caused by long-run variance estimation. We adopt fixed-$b$ asymptotic theory (Kiefer \& Vogelsang 2005; Vogelsang \& Wagner 2014a), estimating the scalar long-run variance $\omega_{u \cdot v}$ using a Bartlett kernel and Newey-West automatic bandwidth selection.
+
+\paragraph{U}
+\textbf{100,000 Monte Carlo Simulation Suite.} To obtain exact critical values for hypothesis testing and cointegration diagnostics, we execute a custom Monte Carlo simulation suite ($N = 100,000$ replications, sample size $T = 94$). The simulation generates independent random walks for regressors and sets $y_t = u_t$ under the true null hypothesis ($\theta_0 = 0$). This DGP preserves the cointegrated structure required to simulate the null distribution of the $CT_{\text{IM}}$ (VW Type 2) cointegration test, while ensuring that the simulated parameter $t$-statistics:
+
+\[t^* = \frac{\hat{\theta} - 0}{\text{SE}(\hat{\theta})}\]
+
+\paragraph{V}
+recover the exact non-standard asymptotic null distribution.
+
+\paragraph{W}
+\textbf{Endogenous Structural Break Audit.} To guard against structural instability across the 1929–2024 window, we implement a two-pass endogenous structural break audit. In the first pass, we estimate the baseline model without breaks and extract the IM-OLS residuals. We apply the Bai-Perron sequential structural break test to the residual path to identify up to two optimal break dates. If level breaks are detected, we construct step level-shift dummies:
+
+\[D_{T_b}^{\text{step}} = \mathbb{I}(t \ge T_b)\]
+
+\paragraph{X}
+and re-estimate the full IM-OLS regression including $\mathbf{D}_t^{\text{step}}$ in the deterministics vector. Both no-break ($a$) and break-adjusted ($b$) variants are retained to evaluate whether structural breaks alter the cointegration space.
+
+\subsubsection{Empirical Results and Cointegration Audit Matrix}
+
+\paragraph{A}
+This section evaluates the empirical estimation results of the 32 CMPR IM-OLS specifications estimated on U.S. Non-Financial Corporate (NFC) data over 1929–2024 ($T = 94$). We apply fixed-$b$ non-standard inference and a corrected residual cointegration test triad to isolate a narrow set of preferred models across Gross Value Added (GVA) vs. Net Value Added (NVA) nominal wage share measures.
+
+\paragraph{B}
+\textbf{Bottom Line Up Front (BLUF).} The empirical estimations establish four major findings:
+
+\begin{enumerate}
+	\item \textbf{Robust Capital Elasticity:} The baseline elasticity of output with respect to private core productive capital ($\hat{\beta}$) is remarkably stable across all 32 specifications, ranging between $0.52$ and $0.74$, and is statistically significant at the 1\% level ($p < 0.01$).
+	\item \textbf{Failure of Unconditioned Wage Shares:} Double interaction models (Set 1) show no statistically significant interaction effects across any wage share variant ($\hat{\theta}_1 \approx -0.02 \text{ to } -0.27$, failing to breach the 90th percentile fixed-$b$ critical threshold of 2.96). A rise in the aggregate wage share alone does not induce mechanization.
+	\item \textbf{Failure of GVA-Basis Wage Measures:} Across both Set 1 and Set 2, all wage share measures calculated over Gross Value Added (GVA) fail to achieve statistical significance ($\hat{\theta}_1 = 0.00, t = 0.00$ for M2.1a; $\hat{\theta}_1 = -0.00, t = -0.04$ for M2.4a). This empirically confirms that physical capital depreciation ($CFC$) distorts distributive measures during mechanization.
+	\item \textbf{Success of Net Value Added (NVA) Shaikh-Tonak Tier 2 \& Financialization Closure:} Triple interaction models (Set 2) achieve statistical significance \textbf{only} when combining the supervisory-adjusted Shaikh-Tonak Tier 2 wage share over Net Value Added ($\omega_{\text{ST,Tier2\_NVA}}$) with the financialization retention index $(1 - \iota_{t-1})$. The interaction elasticity is negative and statistically significant in preferred Model M2.8a ($\hat{\theta}_1 = -0.29^*$, $t = -3.63$, exceeding the 90th percentile bound of 2.96) and robust Model M2.8b ($\hat{\theta}_1 = -0.34^{**}$, $t = -4.25$).
+	\item \textbf{Cointegration and Endogenous Structural Stability:} The Vogelsang--Wagner Type 2 statistic, which tests the null of cointegration, is not rejected in any specification variant ($S_{\text{Type 2}} \in [0.05, 13.69]$; see the caveat on critical values in §D below). The absence of structural break dummies in the preferred model M2.8a indicates that the shift from Fordism to Post-Fordism is an endogenous regime shift absorbed by the distributive-financial interaction.
+\end{enumerate}
+
+\paragraph{C}
+We select \textbf{Model M2.8a} (Private Core Capital + Shaikh-Tonak Tier 2 NVA Wage Share + Effective Interaction + No Structural Break) as the primary preferred specification for Section 3.1.
+
+\paragraph{D}
+\textbf{Forensic Analysis of Empirical Results Across Specifications.} The four tables below report the estimation matrix across the two interaction sets and the two value-added bases. All models are estimated via IM-OLS with FWL orthogonalization, yielding VIFs of exactly 1.00 for capital and interaction regressors. Each table reports the Vogelsang--Wagner Type 2 statistic directly beneath the parameter estimates; the residual ADF and Shin LM diagnostics, the collinearity statistics, and the bandwidth ratios are collected in Appendix D, and the full specification space with every estimated alternative is mapped in Appendix C.
+
+\input{../../reports/US_Section31_IMOLS_Results/table_specA_set1_gva_CORE.tex}
+
+\input{../../reports/US_Section31_IMOLS_Results/table_specA_set1_nva_CORE.tex}
+
+\input{../../reports/US_Section31_IMOLS_Results/table_specA_set2_gva_CORE.tex}
+
+\input{../../reports/US_Section31_IMOLS_Results/table_specA_set2_nva_CORE.tex}
+
+\paragraph{E}
+Reading across the four tables, the capital elasticity $\hat{\beta}$ is stable near $0.58$--$0.60$ in the no-break models and rises to $0.65$--$0.74$ once step level-shifts enter. The interaction term $\hat{\theta}_1$ is indistinguishable from zero everywhere in Set 1 and everywhere on the GVA basis, and becomes negative and statistically significant only in the Set 2 NVA models built on the Shaikh-Tonak Tier 2 wage share.
+
+\paragraph{F}
+\textbf{Detailed Diagnostic Evaluation}
+
+\paragraph{G}
+\textbf{Capital Elasticity and Core Aggregate}
+Across all aggregate capital specifications, base log capital $k_{\text{cap}}$ exhibits an elasticity of approximately $\hat{\beta} \approx 0.58 - 0.60$ in no-break models and $\hat{\beta} \approx 0.65 - 0.74$ in break models. Concentrating on Private Core Capital ($k_{\text{cap}}$) provides a clean baseline of private corporate accumulation.
+
+\paragraph{H}
+\textbf{The Mechanics of Distributive Measurement: Why NVA \& Shaikh-Tonak Tier 2 Matter}
+The empirical failure of all GVA-basis models (M1.1a–M1.4b, M2.1a–M2.4b) confirms the core theoretical premise of Marxian national accounting. Evaluating wage share over Gross Value Added ($\text{GVA} = CFC + v + s$) pollutes the distributive signal with Consumption of Fixed Capital ($CFC$). As intensive mechanization increases capital intensity, $CFC/GVA$ rises mechanically, artificially depressing $\omega_{\text{GVA}}$ even when the rate of surplus value extraction ($s/v$) is constant.
+
+\paragraph{I}
+Switching to Net Value Added ($\text{NVA} = v + s$) isolates newly created value. Furthermore, standard NVA wage shares lump productive factory labor together with managerial overhead. By isolating variable labor compensation ($v_{\text{prod}}$), the Shaikh-Tonak Tier 2 NVA measure captures the exact shop-floor labor cost entering corporate cost minimization decisions.
+
+\paragraph{J}
+\textbf{The Financialization Constraint ($(1 - \iota)$)}
+Comparing Specification Set 1 with Specification Set 2 reveals that distributive pressure alone does not guarantee mechanization. In Set 1, even the Shaikh-Tonak NVA wage share yields an insignificant interaction ($\hat{\theta}_1 = -0.24$, $t = -2.67$, below the $p90 = 2.96$ critical value).
+
+\paragraph{K}
+In Set 2, multiplying by $(1 - \iota_{t-1})$ activates statistical significance. The index $\iota_{t-1}$ measures the proportion of corporate assets allocated to Intellectual Property Products and financialized assets. Distributive wage pressure only successfully induces mechanization when corporate funds remain dedicated to physical productive accumulation ($(1 - \iota) \to 1$).
+
+\paragraph{L}
+\textbf{Cointegration Verdict and Endogenous Structural Stability}
+The Vogelsang--Wagner Type 2 test carries the cointegration verdict. It tests $H_0$: cointegration directly on the IM-OLS fit rather than on a residual series, which is why it, and not the residual-based diagnostics, governs the reading. Across the no-break specifications the statistic stays low — $0.46$ in M2.8a — and it is never rejected in any specification reported above. Both break and no-break models sustain cointegration, and we carry forward the no-break specification because the step dummies become statistically redundant once the distributive-financial interaction is present. The Fordist-to-post-Fordist transition is therefore absorbed endogenously by the interaction rather than imposed exogenously through level shifts.
+
+\paragraph{M}
+\PLACEHOLDER{Critical values for this section are unresolved and the verdict above is stated without them. Three separate problems, all recorded in E17\_Cointegration\_Significance\_Stars\_Lock: (i) the constants previously cited here --- MATHPLACEHOLDER0XYZ for the Vogelsang--Wagner 10\% bound and MATHPLACEHOLDER1XYZ/MATHPLACEHOLDER2XYZ elsewhere in this section --- are the hardcoded triple the 2026-08-03 audit identified as matching no cell of the published fixed-MATHPLACEHOLDER3XYZ table, since genuine critical values vary jointly with the bandwidth ratio MATHPLACEHOLDER4XYZ and the stochastic regressor count MATHPLACEHOLDER5XYZ; (ii) the Shin bound cited as a 5\% critical value, MATHPLACEHOLDER6XYZ, is in fact the MATHPLACEHOLDER7XYZ \emph{10\%} value, and E17 records MATHPLACEHOLDER8XYZ as strictly MATHPLACEHOLDER9XYZ throughout Specification A, where the 5\% value is MATHPLACEHOLDER10XYZ; (iii) no Vogelsang--Wagner statistic in any table carries a significance star, so the tables report no inference on this test at all. Resolving this requires re-running the estimation against \texttt{codes/COMMON\_VW\_fixedb\_critical\_values.R}, which is out of scope for the present assembly pass. Until then the cointegration verdict should be read as provisional.}
+
+\subsubsection{Model Selection and Narrow Preferred Set}
+
+\paragraph{A}
+The preferred specification is \textbf{Model M2.8a}: Private Core Capital ($k_{\text{cap}}$) + Shaikh-Tonak Tier 2 NVA Wage Share ($\omega_{\text{ST,Tier2\_NVA}}$) + Financialization Retention ($(1-\iota)$) + No Structural Break. It is the only specification in which the interaction elasticity is both signed as the theory requires and statistically distinguishable from zero, and it achieves this without recourse to structural break dummies. Every alternative estimated along the way, and the reason each is not carried forward, is set out in Appendix C.
+
+\subsubsection{Contradictory Tendencies: Productive Capacity Path and Capacity Utilization}
+
+\paragraph{A}
+The empirical parameters estimated in preferred model M2.8a provide the basis for evaluating capacity utilization dynamic recovery in Section 4.2.3:
+
+\[\hat{\theta}_t = 0.60 - 0.29 \cdot \left[ \text{inter\_ortho}_t \right]\]
+
+\paragraph{B}
+This governs the evolution of potential capacity output growth $g_{Y^p,t} = \hat{\theta}_t g_{K,t}$ and actual capacity utilization $\mu_t = Y_t / Y_t^p$, capturing the dual tendencies of Fordist mechanization expansion and Post-Fordist realization drag.
+
+\subsubsection{Capacity Recovery and Institutional Era Divergence}
+
+\paragraph{A}
+This section applies preferred \textbf{Model M2.5a} to reconstruct the historical paths of potential capacity output ($Y_t^p$), aggregate capacity utilization ($\mu_t = Y_t / Y_t^p$), and the transformation elasticity ($\theta_t$) for the U.S. Non-Financial Corporate (NFC) sector over 1929–2024 ($T = 94$). Level-anchored under Protocol D03 at the 1973 Federal Reserve Board (FRB) survey peak benchmark ($\mu_{1973} = 1.00$), the empirical reconstruction establishes that U.S. corporate capitalism operates permanently within a structural regime of capital overaccumulation ($\theta_t < 1.00$), characterized by a sharp institutional divergence between the Fordist (1929–1973) and Post-Fordist (1974–2024) accumulation eras.
+
+\paragraph{B}
+\textbf{Bottom Line Up Front (BLUF).} The empirical reconstruction delivers three primary findings:
+
+\begin{enumerate}
+	\item \textbf{Permanent Capital Overaccumulation ($\theta_t < 1.00$):} The transformation elasticity $\theta_t$ remains bounded between $0.43$ and $0.46$ across the entire 1929–2024 century. Because $\theta_t$ is strictly less than 1.00, every 1\% increase in physical productive capital stock yields less than a 1\% increase in potential capacity output. U.S. corporate capitalism operates continuously within a structural overaccumulation regime.
+	\item \textbf{Effective Wage Share Dynamics:} Modeling $\theta_t$ as a function of the effective wage share $W_{\text{eff}, t-1} = \omega_{t-1}^{\text{ST,Tier2}} \cdot (1 - \iota_{t-1})$ reveals that technological capacity expansion depends jointly on variable labor conflict and financial retention. When variable labor costs rise while financial diversion is low, firms accelerate mechanization ($\theta_t \uparrow$). When neoliberal restructuring suppresses variable wages and diverts liquidity into intellectual property and financial assets ($\iota \uparrow$), technological dynamism declines ($\theta_t \downarrow$).
+	\item \textbf{Institutional Era Divergence:} Reconstructed capacity utilization ($\hat{\mu}_t$) displays two distinct regime signatures. Under Fordism (1929–1973), utilization fluctuates within a stable corridor around normal capacity ($\hat{\mu} \in [0.80, 1.05]$) outside of the Great Depression trough ($\hat{\mu}_{1933} = 0.32$) and World War II mobilization peak ($\hat{\mu}_{1944} = 0.78$). Under Post-Fordist neoliberal restructuring (1974–2024), wage suppression and financialization generate a secular downward drift in capacity utilization, reaching deep structural troughs during the Volcker disinflation ($\hat{\mu}_{1982} \approx 0.58$), the Great Recession ($\hat{\mu}_{2009} \approx 0.65$), and the COVID-19 pandemic.
+\end{enumerate}
+
+\paragraph{C}
+\textbf{Capacity Reconstruction Methodology (Protocol D03).} The econometric estimation of Model M2.5a recovers the long-run cointegrating vector and the marginal interaction elasticity $\hat{\theta}_1$. It does not, by itself, identify the absolute level scale at which capacity utilization equals normal or full capacity. Following Protocol D03, level-anchoring is a measurement convention that maps the reconstructed potential capacity path $\hat{Y}_t^p$ into a normalized utilization scale.
+
+\paragraph{D}
+We anchor the reconstruction at $t^* = 1973$, setting $\mu_{1973} = 1.00$ (100\%). The year 1973 corresponds to the historical maximum capacity utilization peak in the Federal Reserve Board manufacturing series and marks the institutional divide between post-war Fordism and neoliberal restructuring.
+
+\paragraph{E}
+To capture the state-dependent transformation elasticity without distortions from initial-state centering, we map the IM-OLS interaction estimate back to the uncentered effective wage share:
+
+\[W_{\text{eff}, t-1} = \omega_{t-1}^{\text{ST,Tier2}} \cdot (1 - \iota_{t-1})\]
+
+\paragraph{F}
+where $\omega_{t-1}^{\text{ST,Tier2}} = v_{\text{prod}} / \text{NFC\_NVA}$ is the Shaikh-Tonak supervisory-adjusted productive wage share, and $\iota_{t-1} = K_{t-1}^{\text{IPP}} / (K_{t-1}^{\text{cap}} + K_{t-1}^{\text{IPP}})$ is the IPP asset share. The state-dependent transformation elasticity is:
+
+\[\theta_t = \hat{\theta}_0^* + \hat{\theta}_1 \cdot W_{\text{eff}, t-1}\]
+
+\paragraph{G}
+where $\hat{\theta}_0^* = \hat{\theta}_0 - \hat{\theta}_1 a_1 - \hat{\theta}_1 W_{\text{eff}, 0} = 0.462$ represents the baseline capital transformation coefficient, and $\hat{\theta}_1 = -0.291$ is the empirical interaction elasticity from Model M2.5a.
+
+\paragraph{H}
+Following Protocol D03, potential capacity output $y_t^p = \ln Y_t^p$ is evaluated directly relative to the 1973 pinch point:
+
+\[y_t^p = y_{1973} + \theta_t \cdot (k_t - k_{1973})\]
+
+\paragraph{I}
+Reconstructed capacity utilization is derived as observed real value added relative to potential capacity:
+
+\[\hat{\mu}_t = \frac{Y_t}{\hat{Y}_t^p} = \exp(y_t - y_t^p)\]
+
+\paragraph{J}
+By construction, $\hat{\mu}_{1973} = 1.000000$ exactly (zero numerical error), satisfying Protocol D03.
+
+\subsubsection{The Capital Overaccumulation Regime ($\theta_t < 1.00$)}
+
+\paragraph{A}
+Figure~\ref{fig:specA_elasticity} presents a dual-panel visualization of the state-dependent transformation elasticity trajectory $\theta_t$ over 1929–2024 estimated from Model M2.5a. Panel A provides the macro regime context relative to the theoretical overcapacity threshold ($\theta = 1.00$), while Panel B presents a zoomed historical view isolating the fine-grained trajectory of $\theta_t$ across Fordist and Post-Fordist accumulation eras.
+
+\begin{figure}[H]
+	\centering
+	\caption{State-Dependent Transformation Elasticity and Overaccumulation Regime}
+	\label{fig:specA_elasticity}
+	\includegraphics[width=0.85\textwidth]{../../output/US/S60_CAPACITY_RECOVERY/figures/fig6_transformation_elasticity_overaccumulation.png}
+\end{figure}
+
+\paragraph{B}
+Panel A establishes a fundamental structural result: \textbf{the U.S. corporate economy has operated continuously within a regime of capital overaccumulation ($\theta_t < 1.00$) for nearly a century.} At no point in the 1929–2024 sample window does $\theta_t$ approach or cross the overcapacity threshold ($\theta = 1.00$).
+
+\paragraph{C}
+Panel B reveals the precise historical dynamics of $\theta_t$. The elasticity peaks at $\theta_{1933} = 0.436$ during the Great Depression contraction and reaches $\theta_{1951} = 0.459$ during the Korean War industrial expansion. Across the Post-Fordist era, $\theta_t$ exhibits a gradual secular decline, stabilizing around $0.445$ in the post-2010 period.
+
+\paragraph{D}
+In economic terms, $\theta_t < 1.00$ implies diminishing returns to capital accumulation in expanding productive capacity. When corporate firms accumulate physical machinery and plant structures ($K_{\text{cap}}$), technological capacity output grows at less than a one-to-one ratio ($g_{Y^p} = \theta_t g_K$). This non-unit elasticity reflects the rising organic composition of capital: a growing proportion of capital expenditure must be dedicated to replacing obsolete machinery, installing environmental controls, and expanding administrative infrastructure rather than expanding net physical output capacity.
+
+\subsubsection{Institutional Periodization: Fordism (1929–1973) vs. Post-Fordism (1974–2024)}
+
+\paragraph{A}
+Figure~\ref{fig:specA_mu} plots the reconstructed U.S. corporate capacity utilization path ($\hat{\mu}_t$) level-anchored at the 1973 FRB benchmark ($\mu_{1973} = 100\%$).
+
+\begin{figure}[H]
+	\centering
+	\caption{Reconstructed U.S. Corporate Capacity Utilization ($\hat{\mu}_t$, 1929--2024), Specification A}
+	\label{fig:specA_mu}
+	\includegraphics[width=0.85\textwidth]{../../output/US/S60_CAPACITY_RECOVERY/figures/fig4_reconstructed_capacity_utilization.png}
+\end{figure}
+
+\paragraph{B}
+The historical path of $\hat{\mu}_t$ reveals a clear institutional divide between the Fordist and Post-Fordist accumulation eras.
+
+\paragraph{C}
+\textbf{The Fordist Era (1929–1973): High Dynamism and Utilization Stability}
+The Fordist era was characterized by strong institutional wage floor protections, institutionalized collective bargaining, and low corporate financialization ($\iota < 0.04$).
+
+\begin{enumerate}
+	\item \textbf{Great Depression Shock (1929–1933)}: The collapse of aggregate demand pushed capacity utilization down to a historic trough of $\hat{\mu}_{1933} = 31.77\%$. Productive capital stock remained idle as real corporate output collapsed.
+	\item \textbf{War Mobilization Peak (1939–1944)}: World War II state-directed industrial planning forced existing corporate plant to operate beyond design limits. Utilization surged from $\hat{\mu}_{1939} = 49.07\%$ to a wartime peak of $\hat{\mu}_{1944} = 77.75\%$.
+	\item \textbf{Golden Age Stability (1947–1966)}: Following post-war reconversion, capacity utilization established a stable cyclical corridor between $60\%$ and $72\%$. Productive wage gains ($\omega_{\text{ST,Tier2}} \approx 0.48 - 0.52$) sustained high transformation elasticities ($\theta_t \approx 0.45$), while robust real demand growth ($g_Y$) absorbed expanding capacity output ($g_{Y^p}$).
+	\item \textbf{Late-Fordist Profit Squeeze (1967–1973)}: Tight labor markets pushed productive labor wage shares up, squeezing corporate profit margins. Rising wage costs induced technological substitution ($\theta_t \uparrow$), accelerating capacity expansion. By 1973, full capacity utilization was reached ($\hat{\mu}_{1973} = 100\%$), marking the structural peak of the Fordist model.
+\end{enumerate}
+
+\paragraph{D}
+\textbf{Post-Fordist Restructuring Era (1974–2024): Financialization and Realization Crisis}
+The 1973 oil shock and Volcker monetary tightening initiated a comprehensive institutional restructuring of U.S. capitalism. Neoliberal policy dismantled collective bargaining, suppressed real wages, and deregulated corporate finance.
+
+\begin{enumerate}
+	\item \textbf{The Volcker Disinflation Trough (1979–1982)}: High interest rates and aggressive labor discipline induced a severe industrial contraction. Capacity utilization fell to $\hat{\mu}_{1982} = 58.05\%$.
+	\item \textbf{Neoliberal Wage Suppression \& IPP Expansion}: Neoliberal restructuring successfully reduced the productive wage share $\omega_{\text{ST,Tier2}}$ while corporate investment shifted toward Intellectual Property Products ($\iota$ rose from $4.1\%$ in 1974 to over $15\%$ by 2024). This dual shift suppressed the effective wage share $W_{\text{eff}}$, causing $\theta_t$ to decline toward $0.44$.
+	\item \textbf{Secular Utilization Decline}: Lower $\theta_t$ reduced technological capacity dynamism, slowing $g_{Y^p}$. However, wage stagnation suppressed real aggregate demand growth ($g_Y$) even more severely. Consequently, actual capacity utilization experienced a secular downward trend, failing to recover to Fordist peak levels during business cycle expansions ($\hat{\mu}_{1989} = 78.4\%$, $\hat{\mu}_{2000} = 81.2\%$, $\hat{\mu}_{2007} = 75.1\%$).
+	\item \textbf{Structural Crisis Troughs}: The Great Recession pushed utilization down to $\hat{\mu}_{2009} = 65.3\%$. The COVID-19 pandemic induced a secondary shock in 2020 ($\hat{\mu}_{2020} = 68.1\%$).
+\end{enumerate}
+
+\subsubsection{Contradictory Tendencies and Realization Crises}
+
+\paragraph{A}
+The empirical path of $\hat{\mu}_t$ illustrates the fundamental macroeconomic contradiction governing capitalist accumulation. The dynamic law of motion for capacity utilization is:
+
+\[g_{\mu,t} = g_{Y,t} - g_{Y^p,t} = g_{Y,t} - \theta_t g_{K,t}\]
+
+\paragraph{B}
+This relation highlights the dual nature of distributive conflict in capitalist growth:
+
+\begin{enumerate}
+	\item \textbf{The Capacity Effect}: Higher productive wage shares ($\omega_{\text{ST,Tier2}}$) induce technological mechanization, increasing $\theta_t$ and accelerating potential capacity growth $g_{Y^p}$.
+	\item \textbf{The Realization Effect}: Real aggregate demand growth $g_Y$ depends on wage-led household consumption and profit-led corporate investment.
+\end{enumerate}
+
+\paragraph{C}
+Under neoliberalism, capital sought to resolve the Fordist profit squeeze by suppressing wages and expanding financialization ($\iota \uparrow$). While this restored corporate profit shares, it created a chronic realization crisis. Suppressing variable labor wages crippled consumer demand growth ($g_Y \downarrow$), while financialization diverted corporate profits away from physical investment $g_K$ into stock buybacks and financial asset acquisition.
+
+\paragraph{D}
+Even though lower $\theta_t$ slowed potential capacity growth $g_{Y^p}$, aggregate demand growth $g_Y$ fell even faster. Thus, neoliberal restructuring resolved the Fordist supply-side profit squeeze only by replacing it with a chronic Post-Fordist demand-side realization crisis, trapping U.S. corporate capitalism in a regime of persistent excess capacity and secularly declining utilization.
+
+\subsection{Heterogeneous Capital, Mechanization Gap, and Overaccumulation (Specification B)}
+
+\paragraph{A}
+This section maps the theoretical model of heterogeneous capital accumulation and induced mechanization into an empirical econometric specification. We establish the formal crosswalk between the structural capacity transformation elasticity $\theta_t$ and a Cointegrating Multivariate Polynomial Regression (CMPR) framework estimated via Integrated Modified OLS (IM-OLS) on U.S. Non-Financial Corporate (NFC) data over 1929–2024 ($T = 94$ observations after lag conditioning).
+
+\subsubsection{Spec B Econometric Specification and Cointegrating Equations}
+
+\paragraph{A}
+The baseline aggregate capital model assumes homogeneous capital stock. In historical reality, corporate fixed assets consist of distinct asset categories performing qualitatively different roles in production. Following the BEA Fixed Assets boundary protocols established in Chapter 2, we disaggregate core productive capital into non-residential structures ($K_t^{\text{NRC}}$) and machinery and equipment ($K_t^{\text{ME}}$).
+
+\paragraph{B}
+Structures represent the physical footprint and plant infrastructure of production, while machinery embodies technological mechanization. The theoretical model establishes that potential real net value added growth $g_{Y^p}$ depends on the growth of structures $g_{K^{\text{NRC}}}$ and the expansion of the mechanization gap $\kappa_t = k_t^{\text{ME}} - k_t^{\text{NRC}}$:
+
+\[g_{Y^p} = \theta_{\text{NRC}} g_{K^{\text{NRC}}} + \theta_{\kappa} g_{\kappa} \quad \text{and} \quad \frac{\partial Y^p}{\partial K^{\text{NRC}}} = \theta_{\text{NRC}}, \quad \frac{\partial Y^p}{\partial \kappa} = \theta_{\kappa}\]
+
+\paragraph{C}
+where $\theta_{\text{NRC}}$ measures the capacity elasticity of plant structures and $\theta_{\kappa}$ measures the marginal capacity payoff of expanding the mechanization ratio.
+
+\paragraph{D}
+Following the Mechanization Productive Frontier (MPF) framework—combining Okishio's induced innovation threshold, Vidal's divided firm, and Marglin-style distributive grounding—the payoff to mechanization $\theta_{\kappa}$ is not a fixed technical constant. When firms face intense distributive conflict, rising labor costs compel capital to increase the organic composition of capital through mechanization. However, this induced innovation process depends on corporate liquidity and is constrained by financial overhead and relative asset prices:
+
+\[\theta_{\kappa,t} = \theta_{\kappa} + \theta_{\omega\kappa} \text{inter}_{\omega\kappa, t-1} + \theta_{\kappa p} \text{inter}_{\kappa p, t-1}\]
+
+\paragraph{E}
+where $\theta_{\kappa}$ is the autonomous mechanization elasticity, $\theta_{\omega\kappa}$ captures the marginal effect of effective wage pressure on technological yield, and $\theta_{\kappa p}$ measures the impact of relative machinery prices.
+
+\paragraph{F}
+Regressing non-linear combinations, products, and non-stationary asset ratios of integrated processes introduces non-standard stochastic properties. As Wagner and Hong (2016) demonstrate, products of $I(1)$ series generate Cointegrating Polynomial Regressions (CPR) whose asymptotic distributions involve non-standard functionals of Brownian motions. Estimating a CPR with standard linear estimators yields invalid asymptotic inference and inflated test statistics unless specialized non-standard estimators and finite-sample critical values are employed.
+
+\paragraph{G}
+We specify the empirical cointegrating equation for U.S. Non-Financial Corporate Real Gross Value Added ($y_t = \ln Y_t^{\text{NFC,GVA}}$) under Specification B as:
+
+\[y_t = \alpha + \theta_{\text{NR}} k_t^{\text{NRC}} + \theta_{\kappa} \kappa_t + \theta_{\omega\kappa} \text{inter\_ortho}_{\omega\kappa, t} + \theta_{\kappa p} \text{inter\_ortho}_{\kappa p, t} + \boldsymbol{\gamma}' \mathbf{D}_t + u_t\]
+
+\paragraph{H}
+where $\alpha$ is the constant intercept, $k_t^{\text{NRC}}$ is log real non-residential structures, $\kappa_t = k_t^{\text{ME}} - k_t^{\text{NRC}}$ is the log mechanization gap, $\text{inter\_ortho}_{\omega\kappa, t}$ is the orthogonalized wage interaction term, $\text{inter\_ortho}_{\kappa p, t}$ is the orthogonalized relative price interaction, $\mathbf{D}_t$ is a vector of deterministic step level-shift dummies ($\boldsymbol{\gamma}' \mathbf{D}_t$), and $u_t$ is a stationary $I(0)$ error term under the cointegration null.
+
+\paragraph{I}
+\textbf{Regressor Definitions and Data Provenance}
+
+\paragraph{J}
+We construct systematic permutations across wage share definitions, interaction structures, and structural break regimes to test the robustness of the heterogeneous capital model.
+
+\paragraph{K}
+\textbf{Disaggregated Capital Variables ($k_t^{\text{NRC}}$ and $\kappa_t$)}
+Data are sourced from the BEA Fixed Assets Accounts:
+1. \textbf{Non-Residential Structures ($k_t^{\text{NRC}}$)}: $\ln K_t^{\text{NR}}$, representing nonresidential buildings, industrial plants, and utility structures.
+2. \textbf{Mechanization Gap ($\kappa_t$)}: $k_t^{\text{ME}} - k_t^{\text{NRC}} = \ln(K_t^{\text{ME}} / K_t^{\text{NR}})$, measuring the log ratio of machinery and equipment capital to nonresidential structures.
+
+\paragraph{L}
+Intellectual Property Products ($K^{\text{IPP}}$) and public transportation capital ($K^{\text{GT}}$) are excluded from core capital stock $K_{\text{cap}}$ and treated as frontier conditioners or overhead costs, adhering to the national accounting boundary rules locked in Chapter 2.
+
+\paragraph{M}
+\textbf{Nominal Wage Pressure Measures ($\omega_{t-1}$: GVA vs. NVA Basis)}
+We systematically evaluate 8 nominal wage pressure series, conditioned at lag 1 to match corporate investment planning horizons:
+1. \textbf{Gross Value Added (GVA) Basis ($\omega_{\text{GVA}}$)}: Measures wage costs relative to nominal Gross Value Added ($\text{GVA} = CFC + v + s$). Includes baseline NFC compensation ($\text{COMP}/\text{GVA}$), Corporate sector compensation, and Shaikh-Tonak Tier 1 and Tier 2 GVA-adjusted shares.
+2. \textbf{Net Value Added (NVA) Basis ($\omega_{\text{NVA}}$)}: Measures wage costs relative to nominal Net Value Added ($\text{NVA} = v + s$). Excludes Consumption of Fixed Capital ($CFC$), isolating true class struggle over newly created net value created on the shop floor. Includes baseline NFC compensation ($\text{COMP}/\text{NFC\_NVA}$), Corporate sector compensation, and Shaikh-Tonak Tier 1 and Tier 2 supervisory-adjusted shares ($v_{\text{prod}}/\text{NFC\_NVA}$).
+
+\paragraph{N}
+\textbf{Specification Sets (Standard vs. Effective Wage Pressure)}
+1. \textbf{Standard Wage Pressure (Specification Set 1)}: Interacts the mechanization gap directly with the wage share: $\kappa_t \cdot \omega_{t-1}$.
+2. \textbf{Effective Wage Pressure (Specification Set 2)}: Interacts the mechanization gap with the financialization-adjusted effective wage share: $\kappa_t \cdot \omega_{t-1}(1 - \iota_{t-1})$, where $\iota_{t-1} = K_{t-1}^{\text{IPP}} / (K_{t-1}^{\text{cap}} + K_{t-1}^{\text{IPP}})$ measures the asset share of intellectual property and financialized overhead. The multiplier $(1 - \iota_{t-1})$ isolates the proportion of corporate accumulation retained in physical productive assets.
+
+\paragraph{O}
+\textbf{Relative Price Interaction ($\text{inter}_{\kappa p, t-1}$)}
+The price interaction is constructed as $\kappa_t \cdot (p_{t-1}^{\text{ME}} - p_{t-1}^{\text{NRC}})$, capturing relative asset price movements between machinery equipment and plant structures.
+
+\subsubsection{Frisch-Waugh-Lovell (FWL) Orthogonalization Protocol}
+
+\paragraph{A}
+Uncentered interaction terms between integrated series introduce severe multicollinearity. Raw interaction terms between $\kappa_t$, $k_t^{\text{NRC}}$, and $\omega_{t-1}$ exhibit pairwise correlation coefficients exceeding $r = 0.98$, generating Variance Inflation Factors (VIF) above 100. High VIFs inflate standard errors and mask structural relationships.
+
+\paragraph{B}
+We enforce a strict Frisch-Waugh-Lovell (FWL) orthogonalization protocol. Before estimating the main cointegrating regression, we regress raw interaction terms on the base capital regressors ($k_t^{\text{NRC}}$ and $\kappa_t$), the constant intercept, and any active deterministic step dummies:
+
+\[\text{inter\_raw}_t = a_0 + a_1 k_t^{\text{NRC}} + a_2 \kappa_t + \mathbf{a}_3' \mathbf{D}_t + \text{inter\_ortho}_t\]
+
+\paragraph{C}
+We extract the OLS residual $\text{inter\_ortho}_t$ and insert it into the main regression. By construction, $\text{inter\_ortho}_t$ is strictly orthogonal to base capital regressors and deterministic components. This orthogonalization reduces the Variance Inflation Factor for base capital and interaction terms to near \textbf{1.00} across all models.
+
+\paragraph{D}
+FWL orthogonalization leaves the estimated interaction coefficients ($\hat{\theta}_{\omega\kappa}, \hat{\theta}_{\kappa p}$) and their standard errors numerically identical to the uncentered model, while isolating the pure marginal interactive elasticity from the base capital elasticities.
+
+\subsubsection{Estimation Engine, FWL Detrending, and Non-Standard Fixed-$b$ Inference}
+
+\paragraph{A}
+We estimate Specification B using Integrated Modified OLS (IM-OLS) developed by Vogelsang and Wagner (2014a, 2024). IM-OLS eliminates second-order endogeneity and serial correlation biases without requiring lead/lag choices or bandwidth tuning parameters in the estimation step.
+
+\paragraph{B}
+The IM-OLS estimator applies a partial sum transformation to the regression model:
+
+\[S_t^y = \sum_{i=1}^t y_i, \quad S_t^X = \sum_{i=1}^t X_i, \quad S_t^D = \sum_{i=1}^t D_i\]
+
+\paragraph{C}
+The partial-summed equation is augmented with level regressors $x_t$:
+
+\[S_t^y = S_t^D \boldsymbol{\delta} + S_t^X \boldsymbol{\beta} + x_t' \boldsymbol{\gamma} + S_t^u\]
+
+\paragraph{D}
+\textbf{Deterministic Space Detrending for Cointegration Null Tests}
+
+\paragraph{E}
+Applying cointegration tests to IM-OLS regressions requires careful handling of deterministic trends. In empirical macro data, stochastic regressors $x_t$ possess strong deterministic drift. If $x_t$ is not partialled out against the deterministic space (\texttt{deter} and step-shift accumulation paths \texttt{Sd}) prior to constructing the reverse cumulative sum matrix $Z_{2t}$ in Vogelsang-Wagner Type 2 tests, unspanned $t^4$ trends contaminate the test regression, blowing up the Wald statistic ($S_{\text{Type 2}}$) spuriously.
+
+\paragraph{F}
+We implement FWL detrending within the IM-OLS estimator engine:
+
+\[\mathbf{x}_{\text{det}} = \text{residuals of } \mathbf{x} \text{ regressed on } [\mathbf{D}_t, \mathbf{S}_{D,t}]\]
+
+\paragraph{G}
+We construct reverse cumulative sum regressors from $\mathbf{x}_{\text{det}}$, eliminating deterministic trend contamination.
+
+\paragraph{H}
+The corresponding construction detail for the residual cointegration diagnostics, which is a matter of implementation rather than of identification, is set out in Appendix D.
+
+\paragraph{I}
+\textbf{100,000 Monte Carlo Simulation Suite}
+
+\paragraph{J}
+Standard normal and chi-squared critical values are invalid for CPR regressions. We execute a custom Monte Carlo simulation suite ($N = 100,000$ replications, sample size $T = 94$) to generate exact finite-sample critical values under the null hypothesis of cointegration. The simulation generates independent random walks for regressors, partials out deterministic components under the exact empirical model structure, and derives exact critical thresholds for $t$-statistics and cointegration test statistics.
+
+\subsection{Empirical Results, Specification Audit, and Model Selection (Specification B: Heterogeneous Capital)}
+
+\subsubsection{Empirical Results and Overaccumulation Identification}
+
+\paragraph{A}
+This section presents the empirical estimation results for Specification B across 24 estimated model variants on U.S. Non-Financial Corporate (NFC) data over 1929–2024 ($T = 94$ observations after listwise deletion).
+
+\paragraph{B}
+\textbf{Bottom Line Up Front (BLUF).} The empirical estimations establish four key findings:
+
+\begin{enumerate}
+	\item \textbf{Extensive Envelope Stability ($\hat{\theta}_{\text{NRC}} \approx 0.60 - 0.61$):} The baseline capacity elasticity of non-residential structures is highly stable across all specifications, remaining near $0.61^{***}$ ($p < 0.01$). Structures provide the stable physical envelope for corporate capacity.
+	\item \textbf{Failure of Unadjusted Wage Shares (Set 1):} In standard interactive specifications (Set 1), raw wage share interactions ($\hat{\theta}_{\omega\kappa}$) fail to achieve statistical significance ($t = 0.54$ for GVA baseline; $t = -0.67$ for NVA baseline), demonstrating that unadjusted wage shares fail to capture corporate accumulation dynamics.
+	\item \textbf{Success of NVA-Based Effective Wage Pressure (Set 2, $\hat{\theta}_{\omega\kappa} < 0$):} When scaled by physical retention $(1 - \iota_{t-1})$ in Set 2, effective wage pressure interactions become \textbf{statistically significant with the theoretically predicted negative sign} ($\hat{\theta}_{\omega\kappa} = -15.99^{***}, t = -3.24, p < 0.01$ in M2.17a; $\hat{\theta}_{\omega\kappa} = -12.77^{***}, t = -3.36, p < 0.01$ in M2.19a; $\hat{\theta}_{\omega\kappa} = -10.13^{**}, t = -2.95, p < 0.05$ in M2.20b; $\hat{\theta}_{\omega\kappa} = -12.66^{**}, t = -3.14, p < 0.01$ in M2.24b). High effective wage pressure forces defensive mechanization, increasing the organic composition of capital and depressing marginal capacity yield.
+	\item \textbf{Cointegration:} The Vogelsang--Wagner Type 2 statistic, which tests the null of cointegration directly on the IM-OLS fit, is not rejected in any of the 24 models ($S_{\text{Type 2}} \le 16.74$). Residual ADF and Shin LM diagnostics are reported in Appendix D and are consistent with this reading.
+\end{enumerate}
+
+\paragraph{C}
+---
+
+\subsubsection{Comparative Matrix of Results (GVA vs. NVA Basis)}
+
+\paragraph{A}
+The results matrix is organized across four distinct estimation panels: Set 1 (GVA vs. NVA Basis) and Set 2 (GVA vs. NVA Basis). Each table reports the Vogelsang--Wagner Type 2 statistic directly beneath the parameter estimates; residual ADF and Shin LM diagnostics, collinearity statistics, and bandwidth ratios are collected in Appendix D.
+
+\input{../../reports/US_Section32_IMOLS_Results/table_specB_set1_gva_CORE.tex}
+
+\input{../../reports/US_Section32_IMOLS_Results/table_specB_set1_nva_CORE.tex}
+
+\input{../../reports/US_Section32_IMOLS_Results/table_specB_set2_gva_CORE.tex}
+
+\input{../../reports/US_Section32_IMOLS_Results/table_specB_set2_nva_CORE.tex}
+
+\paragraph{B}
+\PLACEHOLDER{Several model columns across these four tables are numerically identical to one another --- within the NVA panels and between the GVA and NVA panels --- so of the 24 nominal Specification B columns only about 14 are distinct. The GVA/NVA contrast the panel structure promises is therefore not yet carried by the numbers. Separately, the Chile realization-trap penalty reported in \S4.4 (MATHPLACEHOLDER0XYZ, standard error MATHPLACEHOLDER1XYZ) coincides exactly with the Specification B wage interaction for M2.17a here, across two different countries, samples, and dependent variables. Both require re-estimation to resolve and are out of scope for the present assembly pass.}
+
+\paragraph{C}
+\textbf{Panel A: Set 1 Standard Wage Interactions (GVA vs. NVA Basis)}
+In Set 1 models, raw wage interactions ($\hat{\theta}_{\omega\kappa}$) fail to reach statistical significance whether evaluated on a GVA basis (M2.1a–M2.10b) or an NVA basis (M2.3a–M2.12b). For example, under Model M2.1a (NFC GVA Baseline, No Breaks), $\hat{\theta}_{\omega\kappa} = -2.75$ ($\text{SE} = 4.07, t = -0.67$), while under M2.3a (NFC NVA Baseline, No Breaks), $\hat{\theta}_{\omega\kappa} = -2.75$ ($\text{SE} = 4.07, t = -0.67$).
+
+\paragraph{D}
+\textbf{Panel B: Set 2 Effective Wage Interactions (GVA vs. NVA Basis)}
+In Set 2 models, conditioning wage pressure by physical accumulation retention $(1-\iota_{t-1})$ renders the effective wage pressure interaction highly statistically significant:
+
+\begin{itemize}
+	\item \textbf{NFC Baseline Wage Share}:
+	\item Model M2.13a (GVA Basis, No Breaks): $\hat{\theta}_{\omega\kappa} = -12.77^{***}$ ($\text{SE} = 3.81, t = -3.36, p < 0.01$)
+	\item Model M2.15a (NVA Basis, No Breaks): $\hat{\theta}_{\omega\kappa} = -12.77^{***}$ ($\text{SE} = 3.81, t = -3.36, p < 0.01$)
+	\item Model M2.16b (NVA Basis, Step Breaks): $\hat{\theta}_{\omega\kappa} = -10.13^{**}$ ($\text{SE} = 3.43, t = -2.95, p < 0.05$)
+\end{itemize}
+
+\begin{itemize}
+	\item \textbf{Shaikh-Tonak Tier 1 Productive Wage Share}:
+	\item Model M2.17a (GVA Basis, No Breaks): $\hat{\theta}_{\omega\kappa} = -15.99^{***}$ ($\text{SE} = 4.94, t = -3.24, p < 0.01$)
+	\item Model M2.18b (GVA Basis, Step Breaks): $\hat{\theta}_{\omega\kappa} = -12.29^{**}$ ($\text{SE} = 4.22, t = -2.91, p < 0.05$)
+	\item Model M2.19a (NVA Basis, No Breaks): $\hat{\theta}_{\omega\kappa} = -12.77^{***}$ ($\text{SE} = 3.81, t = -3.36, p < 0.01$)
+	\item Model M2.20b (NVA Basis, Step Breaks): $\hat{\theta}_{\omega\kappa} = -10.13^{**}$ ($\text{SE} = 3.43, t = -2.95, p < 0.05$)
+\end{itemize}
+
+\begin{itemize}
+	\item \textbf{Shaikh-Tonak Tier 2 Supervisory-Adjusted Wage Share}:
+	\item Model M2.22b (GVA Basis, Step Breaks): $\hat{\theta}_{\omega\kappa} = -14.57^{**}$ ($\text{SE} = 4.67, t = -3.12, p < 0.01$)
+	\item Model M2.24b (NVA Basis, Step Breaks): $\hat{\theta}_{\omega\kappa} = -12.66^{**}$ ($\text{SE} = 4.03, t = -3.14, p < 0.01$)
+\end{itemize}
+
+\paragraph{E}
+---
+
+\subsubsection{Theoretical \& Diagnostic Synthesis}
+
+\paragraph{A}
+\textbf{The Binding Nature of Net Value Added (NVA)}
+Physical depreciation ($CFC$) represents pre-existing constant capital transferred to output by concrete labor. Because $CFC$ is not new value created on the shop floor, it lies outside zero-sum class struggle. Evaluating wage shares over Net Value Added ($\text{NVA} = v + s$) isolates the true balance of class power without physical depreciation distortions.
+
+\paragraph{B}
+\textbf{Defensive Mechanization and Organic Composition}
+The negative coefficient $\hat{\theta}_{\omega\kappa} < 0$ across all Set 2 specifications confirms the core Marxian prediction: high effective wage pressure compels defensive capital-deepening. As wage costs rise relative to physical accumulation retention, firms substitute machinery for living labor ($\kappa \uparrow$). While this expands physical capacity, it increases the organic composition of capital, depressing marginal capacity yield.
+
+\paragraph{C}
+\textbf{Preferred Model Selection}
+We select \textbf{Model M2.19a} (Shaikh-Tonak Tier 1 NVA, No Breaks: $\hat{\theta}_{\text{NRC}} = 0.61^{***}, \hat{\theta}_{\kappa} = 0.32^{**}, \hat{\theta}_{\omega\kappa} = -12.77^{***}$) and \textbf{Model M2.24b} (Shaikh-Tonak Tier 2 NVA Supervisory-Adjusted, Step Breaks: $\hat{\theta}_{\text{NRC}} = 0.52^{***}, \hat{\theta}_{\kappa} = 0.51^{*}, \hat{\theta}_{\omega\kappa} = -12.66^{**}$) as the primary preferred specifications for Specification B.
+
+\subsubsection{Capacity Recovery and Long-Run Dynamics}
+
+\paragraph{A}
+This section applies preferred \textbf{Model M2.19a} (Shaikh-Tonak Tier 1 NVA Basis) to reconstruct the historical paths of potential capacity output ($Y_t^p$), capacity utilization ($\mu_t = Y_t / Y_t^p$), and the aggregate heterogeneous transformation elasticity ($\theta_t^{\text{SpecB}}$) for the U.S. Non-Financial Corporate sector over 1929–2024.
+
+\paragraph{B}
+\textbf{Bottom Line Up Front (BLUF).} The empirical reconstruction under Specification B confirms that disaggregating capital into non-residential structures ($k^{\text{NRC}}$) and machinery ($k^{\text{ME}}$) reinforces the core findings of the baseline model while revealing the precise mechanism of overaccumulation. The aggregate transformation elasticity $\theta_t^{\text{SpecB}}$ remains strictly below 1.00 ($\theta_t^{\text{SpecB}} \in [0.42, 0.47]$), establishing that U.S. corporate accumulation is trapped in permanent capital overaccumulation.
+
+\paragraph{C}
+\textbf{Capacity Reconstruction Methodology (Protocol D03).} Following Protocol D03, level-anchoring is evaluated relative to the 1973 Federal Reserve Board capacity peak ($\mu_{1973} = 1.00$). The reconstructed potential capacity output path matches observed value added at the 1973 pinch point, allowing clean extrapolation of capacity utilization without relying on regression residuals.
+
+\begin{enumerate}
+	\item \textbf{Structural Capital Overaccumulation under Heterogeneous Capital}: The total effective capacity elasticity of capital $\theta_{\text{tot},t} = \hat{\theta}_{\text{NRC}} + \hat{\theta}_{\kappa,t}$ remains bounded between $0.48$ and $0.63$ across the entire 1929–2024 window. Because $\theta_{\text{tot},t}$ is strictly less than 1.00, expanding physical corporate capital yields less than a proportional increase in potential capacity output. U.S. corporate capitalism operates permanently within a structural regime of capital overaccumulation.
+	\item \textbf{Effective Wage Pressure and Dynamic Mechanization Payoff}: Modeling the mechanization elasticity as $\theta_{\kappa,t} = \hat{\theta}_{\kappa} + \hat{\theta}_{\omega\kappa} \text{inter\_ortho}_{\omega\kappa, t}$ demonstrates that technological capacity expansion is driven by the interaction of variable labor costs and corporate financial retention. Under Fordism, high productive wage shares combined with low financial overhead ($\iota \approx 0$) forced defensive mechanization, driving rapid potential capacity growth ($g_{Y^p}$). Under Post-Fordism, wage suppression and financialization ($\iota \uparrow$) depressed effective wage pressure, slowing potential capacity expansion.
+	\item \textbf{Institutional Realization Crisis}: Reconstructed capacity utilization ($\hat{\mu}_t$) exposes the fundamental macroeconomic contradiction of neoliberalism. Under Fordism (1929–1973), utilization cycled around normal capacity ($\hat{\mu} \in [0.75, 1.00]$) outside the Great Depression trough ($\hat{\mu}_{1933} = 0.32$) and WWII mobilization peak ($\hat{\mu}_{1944} = 0.78$). Under Post-Fordism (1974–2024), wage suppression restored profit shares but crippled consumer demand growth ($g_Y$), while financialization diverted corporate profits away from physical investment. Consequently, capacity utilization suffered a secular downward drift, reaching deep structural troughs in 1982 ($\hat{\mu} \approx 0.58$), 2009 ($\hat{\mu} \approx 0.65$), and 2020 ($\hat{\mu} \approx 0.68$).
+\end{enumerate}
+
+\subsubsection{Capacity Reconstruction Methodology (Protocol D03)}
+
+\paragraph{A}
+Estimating Model M2.19a identifies the long-run cointegrating parameters $\hat{\theta}_{\text{NRC}}$, $\hat{\theta}_{\kappa}$, and $\hat{\theta}_{\omega\kappa}$. Converting these estimates into an absolute capacity utilization path requires level-anchoring under \textbf{Protocol D03}.
+
+\paragraph{B}
+We anchor the capacity path at $t^* = 1973$, setting $\mu_{1973} = 1.00$ (100\%). The year 1973 represents the historical peak in the Federal Reserve Board manufacturing capacity series and marks the institutional divide between post-war Fordism and neoliberal restructuring.
+
+\paragraph{C}
+The state-dependent total capacity elasticity is evaluated as:
+
+\[\theta_{\text{tot},t} = \hat{\theta}_{\text{NRC}} + \hat{\theta}_{\kappa} + \hat{\theta}_{\omega\kappa} \text{inter\_ortho}_{\omega\kappa, t}\]
+
+\paragraph{D}
+where $\hat{\theta}_{\text{NRC}} = 0.613$, $\hat{\theta}_{\kappa} = 0.313$, and $\hat{\theta}_{\omega\kappa} = -15.987$ from Model M2.6a.
+
+\paragraph{E}
+Log potential capacity output $y_t^p = \ln Y_t^p$ is constructed directly relative to the 1973 pinch point:
+
+\[y_t^p = y_{1973} + \hat{\theta}_{\text{NRC}} (k_t^{\text{NRC}} - k_{1973}^{\text{NRC}}) + \hat{\theta}_{\kappa} (\kappa_t - \kappa_{1973}) + \hat{\theta}_{\omega\kappa} (\text{inter\_ortho}_{\omega\kappa, t} - \text{inter\_ortho}_{\omega\kappa, 1973})\]
+
+\paragraph{F}
+Reconstructed capacity utilization is calculated as observed real gross value added relative to potential capacity:
+
+\[\hat{\mu}_t = \frac{Y_t}{\hat{Y}_t^p} = \exp(y_t - y_t^p)\]
+
+\paragraph{G}
+By construction, $\hat{\mu}_{1973} = 1.000000$ exactly, fully adhering to Protocol D03.
+
+\subsubsection{Heterogeneous Overaccumulation Regime ($\theta_{\text{tot},t} < 1.00$)}
+
+\paragraph{A}
+Disaggregating capital into non-residential structures and machinery confirms that the U.S. corporate economy operates permanently within a regime of capital overaccumulation ($\theta_{\text{tot},t} < 1.00$).
+
+\paragraph{B}
+Across the 1929–2024 century, $\theta_{\text{tot},t}$ averages approximately $0.55$, remaining far below the unit elasticity threshold ($\theta = 1.00$). Diminishing returns to capital deepening reflect the rising organic composition of capital: expanding physical machinery equipment requires an increasing share of gross investment merely to replace depreciated assets, maintain complex technical systems, and absorb administrative overhead, rather than generating proportional additions to net output capacity.
+
+\subsubsection{Institutional Periodization: Fordism (1929–1973) vs. Post-Fordism (1974–2024)}
+
+\paragraph{A}
+Reconstructed capacity utilization $\hat{\mu}_t$ illustrates the contrasting macroeconomic dynamics of the two post-war institutional eras.
+
+\paragraph{B}
+\textbf{The Fordist Era (1929–1973): Supply-Side Dynamism and Demand Alignment}
+The Fordist era combined strong institutional wage growth, low corporate financialization ($\iota < 0.04$), and active state macroeconomic management.
+
+\begin{enumerate}
+	\item \textbf{Great Depression Collapse (1929–1933)}: The collapse of real aggregate demand pushed capacity utilization down to a historic trough of $\hat{\mu}_{1933} = 31.8\%$.
+	\item \textbf{Wartime Industrial Mobilization (1939–1944)}: World War II state direction pushed existing plant infrastructure to operate beyond normal capacity design limits, driving utilization to $\hat{\mu}_{1944} = 77.8\%$.
+	\item \textbf{Golden Age Stability (1947–1966)}: Institutionalized wage growth sustained robust consumer demand ($g_Y$), matching rapid potential capacity growth ($g_{Y^p}$). Utilization cycled in a stable band between $60\%$ and $75\%$.
+	\item \textbf{Late-Fordist Profit Squeeze (1967–1973)}: Tight labor markets pushed wage shares up, inducing corporate firms to accelerate mechanization. Rapid capacity expansion pushed utilization to its structural peak of $\hat{\mu}_{1973} = 100\%$.
+\end{enumerate}
+
+\paragraph{C}
+\textbf{Post-Fordist Neoliberal Restructuring (1974–2024): Financialization and Realization Crisis}
+Neoliberal policy responded to the Fordist profit squeeze by crushing collective bargaining, suppressing real wages, and deregulating financial markets.
+
+\begin{enumerate}
+	\item \textbf{Volcker Monetary Disinflation (1979–1982)}: Severe interest rate hikes induced a sharp industrial contraction, driving utilization down to $\hat{\mu}_{1982} = 58.1\%$.
+	\item \textbf{Neoliberal Squeeze and Financial Diversion}: Wage suppression reduced the productive wage share, while corporate asset allocation shifted heavily toward Intellectual Property Products and financial assets ($\iota$ rose above $15\%$). This dual squeeze suppressed effective wage pressure $(1-\iota)\omega$, slowing potential capacity expansion ($g_{Y^p}$).
+	\item \textbf{Secular Realization Crisis}: Although lower capacity growth $g_{Y^p}$ reduced supply expansion, aggregate demand growth $g_Y$ fell even faster due to stagnant wage incomes and fiscal austerity. Consequently, capacity utilization suffered a secular downward trend across successive business cycles ($\hat{\mu}_{1989} = 78.4\%$, $\hat{\mu}_{2000} = 81.2\%$, $\hat{\mu}_{2007} = 75.1\%$, $\hat{\mu}_{2020} = 68.1\%$).
+\end{enumerate}
+
+\subsubsection{Contradictory Tendencies of Capitalist Accumulation}
+
+\paragraph{A}
+The dynamic law of motion for capacity utilization:
+
+\[g_{\mu,t} = g_{Y,t} - g_{Y^p,t} = g_{Y,t} - (\hat{\theta}_{\text{NRC}} g_{K^{\text{NR}},t} + \theta_{\kappa,t} g_{\kappa,t})\]
+
+\paragraph{B}
+encapsulates the core structural contradiction of modern capitalism:
+
+\paragraph{C}
+Under Fordism, wage growth stimulated technological dynamism ($\theta_{\kappa,t} \uparrow$), expanding potential capacity output. When aggregate demand growth matched capacity expansion, utilization remained stable near normal levels. Under Post-Fordism, capital resolved the Fordist supply-side profit squeeze by suppressing wages and diverting liquidity into financial assets. While this restored corporate profit shares, it created a chronic demand-side realization crisis. Wage suppression crippled consumer demand growth ($g_Y$), trapping corporate capitalism in a regime of persistent excess capacity and secularly declining utilization.
+
+\subsection{Econometric Operationalization of the Peripheral Realization Trap (Specification C - Chile T-CMPR)}
+
+\paragraph{A}
+To bridge the gap between our analytical model of the peripheral realization trap (Section 3.3) and the empirical data, we operationalize the non-linear macroeconomic constraint within our cointegrating regression framework.
+
+\paragraph{B}
+While the exact external capacity ceiling ($\bar{\kappa}_t$) is unobservable, the presence of the constraint manifests as a regime shift. When the external constraint binds, the structural logic of the economy transitions from a dynamic Okishio wage-dividend regime (Regime A) into a stagnant realization trap where surplus is blocked (Regime B).
+
+\paragraph{C}
+To model this, we deploy a \textbf{Threshold Cointegrating Multivariate Polynomial Regression (T-CMPR)}. Relying on the robust threshold estimation theory for integrated regressors developed by Chen (2015), we map the non-linear Balance of Payments (BoP) constraint into a state-dependent dummy variable, allowing us to preserve the linear interactive architecture and FWL orthogonalization utilized in Sections 4.2 and 4.3.
+
+\subsubsection{The Prebischian Capacity to Import Threshold}
+
+\paragraph{A}
+To identify periods of external strangulation, we require an observable threshold variable ($q_t$) that captures the intensity of the macroeconomic realization pressure. Following the logic established in Section 3.3, this pressure is driven by the purchasing power of primary exports.
+
+\paragraph{B}
+We draw upon World Bank Balance of Payments (WBOP) data to construct the \textbf{Prebischian Capacity to Import ($C_t$)}:
+
+\[ C_t = X_t \cdot ToT_t \]
+
+\paragraph{C}
+where $X_t$ represents real export volumes and $ToT_t$ represents the Terms of Trade. This index acts as our empirical proxy for the foreign exchange envelope. By using $C_t$ as the threshold variable $q_t$, we strictly isolate the external supply-side constraint from domestic demand variables.
+
+\subsubsection{Profile Least Squares Detection and Linear State Conversion}
+
+\paragraph{A}
+We allow the data to identify the exact pressure threshold where the realization trap activates. Following Chen (2015), we employ a Profile Least Squares (Profile LS) grid-search algorithm over the empirical distribution of $C_t$. For each candidate threshold $\gamma$, we construct a temporary state-dependent dummy variable $D^{ext}_t(\gamma) = \mathbb{I}(C_t \le \gamma)$ and estimate the interactive IM-OLS regression to isolate the optimal threshold $\hat{\gamma}$ minimizing the sum of squared residuals:
+
+\[ \hat{\gamma} = \arg \min_{\gamma} \text{SSR}(\gamma) \]
+
+\paragraph{B}
+Once $\hat{\gamma}$ is isolated, the binding state dummy $D^{ext}_t = \mathbb{I}(C_t \le \hat{\gamma})$ is fixed, collapsing the non-linear regime shift into a linear dummy interaction.
+
+\subsubsection{The Linear Interactive T-CMPR Specification and Empirical Results}
+
+\paragraph{A}
+With the external constraint mapped to $D^{ext}_t$, we expand the Heterogeneous Capital specification (Section 4.3) to test the peripheral realization trap directly. The structural capacity equation becomes:
+
+\[ Y^p_t = \beta_0 k^{\text{NRC}}_t + \beta_1 \kappa_t + \beta_2 (\omega_{t-1} \kappa_t) + \delta_1 (\kappa_t \cdot D^{ext}_t) + \delta_2 (\omega_{t-1} \kappa_t \cdot D^{ext}_t) + u_t \]
+
+\paragraph{B}
+The table below presents the T-CMPR IM-OLS estimation results for Chile (1920–2024) across five specifications: a linear baseline, a continuously mediated variant, the two threshold states taken separately, and the full threshold specification. The Vogelsang--Wagner Type 2 statistic appears directly beneath the parameter estimates; residual ADF and Shin LM diagnostics, collinearity statistics, and the threshold grid are collected in Appendix D.
+
+\input{../../reports/Chile_Section33_Peripheral_IMOLS_Results/table_chile_threshold_imols_CORE.tex}
+
+\paragraph{C}
+The empirical results bear on both theoretical predictions:
+
+\begin{enumerate}
+	\item \textbf{Unconstrained Okishio Mechanism ($\theta_{\omega\kappa} > 0$):} In Regime $E_A$ ($D^{ext}_t = 0$), the wage pressure interaction is positive and statistically significant ($\hat{\theta}_{\omega\kappa} = 5.12^{**}$ in M3.3a). Wage increases compel capitalists to mechanize to restore profitability.
+	\item \textbf{Peripheral Realization Penalty ($\delta_{\omega\kappa} < 0$):} In Regime $E_B$ ($D^{ext}_t = 1$), when foreign exchange capacity collapses, the realization penalty activates ($\hat{\delta}_{\omega\kappa} = -15.99^{*}$ in M3.3b, $-16.24^{*}$ in the full specification M3.4a). The net interaction elasticity turns sharply negative. Under extreme external balance stress, nominal wage increases fail to induce productive capacity growth, which is the peripheral realization trap set out in Section 3.3.
+\end{enumerate}
+
+\paragraph{D}
+\PLACEHOLDER{Three unresolved discrepancies in this section. First, the realization penalty is significant at the 10\% level in the estimation output (MATHPLACEHOLDER0XYZ, standard error MATHPLACEHOLDER1XYZ, one star), not at the 1\% level as earlier drafts of this section stated; the MATHPLACEHOLDER2XYZ ratio of MATHPLACEHOLDER3XYZ is consistent with the reported standard error, so it is the significance level and not the point estimate that was overstated. Second, the threshold variable is defined as the Prebischian capacity to import MATHPLACEHOLDER4XYZ in the specification text but as MATHPLACEHOLDER5XYZ in the estimation output's own note; the terms-of-trade factor is dropped in one of the two and it is not established which reflects what was estimated. Third, this penalty coincides exactly, coefficient and standard error, with the U.S. Specification B wage interaction for M2.17a reported in \S4.3. All three require returning to the estimation, not the prose.}
+
+\paragraph{E}
+\textbf{Modification of the Fixed-$b$ Simulation Protocol.} Standard non-standard asymptotic bounds are invalid because the grid-search process consumes recursive degrees of freedom. To recover exact finite-sample fixed-$b$ bounds, the 100,000-pass Monte Carlo simulator replicates the Chen (2015) Profile LS grid-search across $C_t$ inside the loop, ensuring that statistical inference on $\hat{\delta}_2$ is robust to threshold data-mining.
+
+\paragraph{F}
+\PLACEHOLDER{\textbf{The Chilean case is developed to roughly a tenth the length of the two United States sections, and that asymmetry is itself a problem.} Sections 4.2 and 4.3 each carry a full arc: specification, estimation, capacity reconstruction, the MATHPLACEHOLDER0XYZ path, institutional periodization, and a reading of contradictory tendencies. This section stops at the estimation table. The locked outline forbids reading the periphery as a deviation from a central norm, but a chapter that gives one case six subsections and the other one will be read that way whatever its prose says --- structure carries the comparison as much as argument does. Outstanding: the Chilean capacity reconstruction under the threshold specification; the reconstructed MATHPLACEHOLDER1XYZ path with its level anchor; a periodization matched in grain to the Fordist/post-Fordist treatment of the United States, organized around Chile's own institutional sequence rather than mapped onto the United States timeline; and the corresponding figures.}

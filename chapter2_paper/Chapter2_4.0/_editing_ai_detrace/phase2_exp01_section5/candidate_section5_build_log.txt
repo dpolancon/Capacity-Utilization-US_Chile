@@ -1,0 +1,8 @@
+(./section5.tex
+<figures/fig_sec5_combined_mu.pdf, id=1965, 686.565pt x 375.4025pt>
+File: figures/fig_sec5_combined_mu.pdf Graphic file (type pdf)
+<use figures/fig_sec5_combined_mu.pdf>
+Package pdftex.def Info: figures/fig_sec5_combined_mu.pdf  used on input line 1
+5.
+(pdftex.def)             Requested size: 469.75502pt x 256.85129pt.
+[74] [75 <./figures/fig_sec5_combined_mu.pdf>] [76] [77]) 

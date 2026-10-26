@@ -1,0 +1,244 @@
+
+
+
+
+\subsubsection{Econometric Strategy: Threshold Cointegrating Multivariate Polynomial Regression}
+\label{sec:441:chile_strategy}
+
+This section translates the cost-minimizing capitalist behavior model of technological change under a external constraint developed in \cref{sec:33:peripheral_extension} into an empirical identification strategy. The objective is to estimate how the transformation elasticity $\theta$---which governs the conversion of capital accumulation into productive capacity---is determined in a peripheral, balance-of-payments-constrained economy.
+
+In core economies, the transformation elasticity $\theta$ reflects a domestic trade-off between extensive and intensive accumulation, mediated primarily by internal wage-led distributional conflict, insofar the re-investment of the surplus is not diverted towards un productive accumulation \citep{Rotta2018}. In a peripheral economy like Chile, capital accumulation relies structurally on imported machinery and equipment. When foreign exchange reserves collapse, the peripheral state faces a binding balance-of-payments constraint that curtails the mechanization function. Rather than adjusting smoothly through domestic relative prices, the economy undergoes a discontinuous structural breakdown: the capacity-generating effect of capital accumulation collapses because the denomination of international trade in foreign currency de
+
+To capture this state-dependent structural mechanism without imposing ad-hoc functional forms, we operationalize identification under a variation of Cointegrating Multivariate Polynomial Regression (CMPR) estimated via Integrated Modified OLS (IM-OLS) \citep{VogelsangWagner2024}, including a threshold behavior identified with a latent variable and represented with an interactive dummy variable. This subsection translates the peripheral corner-solution model developed into an empirical identification strategy. The core objective is to estimate how the transformation elasticity $\theta$---which governs the conversion of capital accumulation into productive capacity---is determined in a peripheral, balance-of-payments-constrained economy. 
+
+The generalized estimating equation specifies log real GDP ($y_t$) as a cointegrating function of non-residential structures ($k_t^{\text{NR}}$), the mechanization gap ($\kappa_t$), distributional conflict ($\omega_{t-1}$), the state-dependent external regime shift ($D_t^{\gamma}$), and relative price shocks ($\tilde{p}_t^{\kappa, \text{RER}}$):
+\begin{equation}
+	y_t = \alpha + \theta_1 k_t^{\text{NR}} + \theta_2 \kappa_t + \theta_3 (\omega_{t-1} \cdot \kappa_t) + \theta_4 (\kappa_t \cdot D_t^{\gamma}) + \theta_5 (\omega_{t-1} \cdot \kappa_t \cdot D_t^{\gamma}) + \beta_p \tilde{p}_t^{\kappa, \text{RER}} + u_t
+\end{equation}
+
+where:
+\begin{itemize}
+	\item $y_t = \ln Y_t$ is log real GDP in 2003 CLP.
+	\item $k_t^{\text{NR}} = \ln K_t^{\text{NR}}$ is the log net stock of non-residential structures (extensive capital stock).
+	\item $\kappa_t = k_t^{\text{ME}} - k_t^{\text{NR}} = \ln(K_t^{\text{ME}} / K_t^{\text{NR}})$ is the capital composition ratio, representing the mechanization gap between intensive machinery and equipment ($K_t^{\text{ME}}$) and extensive non-residential structures ($K_t^{\text{NR}}$).
+	\item $\omega_{t-1}$ is the one-period lagged wage share, evaluated under both net ($\omega_{t-1}^{\text{net}}$) and gross ($\omega_{t-1}^{\text{gross}}$) distribution. Lagging distribution by one period prevents contemporaneous feedback endogeneity with output.
+	\item $D_t^{\gamma} = \mathbb{I}(Z_t \le \gamma)$ is an indicator variable that takes the value 1 when the composite balance-of-payments constraint index ($Z_t$) falls at or below an endogenously identified threshold $\gamma$, and 0 otherwise.
+	\item $\tilde{p}_t^{\kappa, \text{RER}}$ is the standardized relative price of capital assets adjusted for the real effective exchange rate.
+	\item $u_t$ is a stationary $I(0)$ cointegration error term.
+\end{itemize}
+
+The central analytical parameter of interest is the marginal capital-composition transformation elasticity $\theta(\omega, D_t)$, defined as the partial derivative of productive capacity $y_t$ with respect to the mechanization gap $\kappa_t$:
+
+\begin{equation}
+	\frac{\partial y_t}{\partial \kappa_t} = \theta_2 + \theta_3 \omega_{t-1} + \theta_4 D_t^{\gamma} + \theta_5 (\omega_{t-1} \cdot D_t^{\gamma})
+\end{equation}
+
+
+The estimated parameter vector $\Theta$ directly tests the peripheral corner-solution hypothesis:
+\begin{enumerate}
+	\item \textbf{Baseline Elasticity ($\theta_1$)}: Measures the baseline capacity effect of capital accumulation on non-residential construction.
+	\item \textbf{Unconstrained Baseline Elasticity ($\theta_2$)}: Measures the baseline capacity effect of mechanization biased accumulation when external constraints do not bind ($D_t^{\gamma} = 0$).
+	\item \textbf{Domestic Distributional Mediation ($\theta_3$)}: Captures the mechanization induced-innovation effect, where higher wage shares incentivize capitalists to substitute labor with machinery under normal foreign exchange liquidity.
+	\item \textbf{BoP binding constraint ($\theta_4$)}: Measures the direct structural shift in the mechanization elasticity when the external constraint binds ($D_t^{\gamma} = 1$).
+	\item \textbf{Peripheral Distributional Inversion ($\theta_5$)}: Captures the state-dependent breakdown in wage-led accumulation. A negative estimate ($\theta_5 < 0$) demonstrates that under foreign exchange starvation, domestic wage pressures cannot be translated into intensive accumulation because machinery goods must be imported.
+\end{enumerate}
+
+\paragraph{Construction of the Composite External Constraint ($Z_t$) and 2D Grid Search}
+To capture foreign-exchange solvency without relying on arbitrary single-variable proxies, we define the composite external constraint indicator $Z_t(p)$ as a convex linear combination of two standardized macroeconomic variables reflecting peripheral balance-of-payments vulnerability:
+
+\begin{equation}
+	Z_t(p) = p \, \tilde{M}_t + (1 - p) \, \tilde{S}_t, \quad p \in [0, 1]
+\end{equation}
+
+where:
+\begin{enumerate}
+	\item $\tilde{S}_t = \text{scale}(F_t / M0_t)$ represents the standardized international liquidity ratio, measuring gross central bank foreign-exchange reserves $F_t = e_t \cdot \text{IR}_t$ relative to the monetary base $M0_t$\footnote{The case for the use of this variable will be discuss}. It proxies the monetary authority's capacity to defend foreign-currency obligations and absorb balance-of-payments shocks.
+	\item $\tilde{M}_t = \text{scale}(\text{Imbalance}_t)$ represents the standardized capital-goods import demand imbalance, measuring the structural gap between required machinery and equipment imports ($K^{\text{ME}}$ demand) and effective foreign-exchange import capacity.
+\end{enumerate}
+
+Because neither the structural weight $p$ nor the threshold level $\gamma$ is known \textit{a priori}, we execute a joint two-dimensional profile Sum of Squared Residuals (SSR) grid search over the discrete parameter space $(p, \gamma)$:
+
+\begin{equation}
+	(\hat{p}, \hat{\gamma}) = \arg\min_{p \in \mathcal{P}, \, \gamma \in \Gamma(p)} \text{SSR}(p, \gamma) = \arg\min_{p \in \mathcal{P}, \, \gamma \in \Gamma(p)} \sum_{t=1}^{T} \hat{u}_t(p, \gamma)^2
+\end{equation}
+
+The structural weighting grid $\mathcal{P} = \{ 0.0, 0.1, 0.2, \dots, 1.0 \}$ iterates across the unit interval in increments of 0.1. For each candidate weighting scheme $p \in \mathcal{P}$, the empirical cutoff grid $\Gamma(p)$ is evaluated over trimmed quantiles of the resulting series $Z_t(p)$:
+
+\begin{equation}
+	\Gamma(p) = \{ \gamma_q(p) : q \in [0.15, 0.85], \, \Delta q = 0.05 \}
+\end{equation}
+
+For every candidate parameter pair $(p, \gamma)$:
+\begin{enumerate}
+	\item The binary regime indicator $D_t^{p, \gamma} = \mathbb{I}(Z_t(p) \le \gamma)$ is generated, taking the value of 1 when composite solvency falls into the constrained state.
+	\item The interactive regressor matrix $X_t(p, \gamma) = [k_t^{\text{NR}}, \kappa_t, \text{dist}_{t-1} \cdot \kappa_t, \kappa_t D_t^{p, \gamma}, (\text{dist}_{t-1} \cdot \kappa_t) D_t^{p, \gamma}, \tilde{p}_t^{\kappa, \text{RER}}]$ is built, where $\text{dist}_{t-1} \in \{ e_{t-1}^{\text{gross}}, e_{t-1}^{\text{net}}, \omega_{t-1}^{\text{gross}}, \omega_{t-1}^{\text{net}} \}$.
+	\item Structural level residuals $\hat{u}_t(p, \gamma)$ are estimated via cointegrated polynomial regressor IM-OLS.
+	\item The global profile minimizer selects $\hat{p} = 0.2$ ($Z_t = 0.2 \tilde{M}_t + 0.8 \tilde{S}_t$) and $\hat{\gamma} = 0.425$ (or $\hat{\gamma} = 0.379$ in more parsimonious specifications), suggesting that international reserve cover by the central bank ($\tilde{S}_t$) dominates the empirical weighting in isolating the peripheral structural bottleneck.
+\end{enumerate}
+
+
+\paragraph{Bai-Perron Structural Break Benchmark} To compare that the external threshold $D_t^{\gamma}$ captures a genuine state-dependent macroeconomic constraint rather than an historical trend break, I compare the the model against a benchmark one using \citet{BaiPerron2003} endogenous structural break identification. The Bai-Perron specification models structural change as an exogenous, calendar-time break $T_b$:
+\begin{equation}
+	D_t^{\text{BP}} = \mathbb{I}(t \ge T_b)
+\end{equation}
+\begin{equation}
+	y_t = \alpha + \theta_1 k_t^{\text{NR}} + \theta_2 \kappa_t + \theta_3 (\omega_{t-1} \kappa_t) + \theta_4 (\kappa_t D_t^{\text{BP}}) + \theta_5 (\omega_{t-1} \kappa_t D_t^{\text{BP}}) + \theta_6 \tilde{p}_t^{\kappa, \text{RER}} + u_t
+\end{equation}
+
+Dynamic search over candidate break dates $T_b \in [0.15 T, 0.85 T]$ identifies two distinct historical break points:
+\begin{itemize}
+	\item \textbf{Net Wage Share ($\omega^{\text{net}}$)}: Identifies $T_b = 1987$. Econometrically, 1987 marks the post-1982 crisis structural consolidation under the Buchi reforms, where privatization, non-traditional export promotion, and fiscal austerity suppressed real wages to restore financial stability.
+	\item \textbf{Gross Wage Share ($\omega^{\text{gross}}$)}: Identifies $T_b = 1999$. Econometrically, 1999 marks the climax of the Asian Financial Crisis in Chile, when the Central Bank abandoned the exchange rate crawling band system and floated the Chilean peso, triggering a severe contraction in gross operating surplus.
+\end{itemize}
+
+Comparing Bai-Perron calendar breaks against the composite threshold $Z_t \le 0.425$ provides a strict falsification test: if the BoP composite threshold achieves lower SSR and superior cointegration statistics than calendar breaks, we rule out deterministic time breaks in favor of true BoP state-dependence.
+
+
+\paragraph{Variable Specification ($\tilde{p}_t^{\kappa, \text{RER}}$)}
+The relative price control $\tilde{p}_t^{\kappa, \text{RER}}$ accounts for international price shocks and foreign purchasing power shifts affecting imported capital assets:
+\begin{equation}
+	p_t^{\kappa, \text{RER}} = \ln(\text{TCREAL}_t)
+\end{equation}
+where $\text{TCREAL}_t$ is the multilateral Real Effective Exchange Rate index (rebased to 2003 = 1.0), and $\tilde{p}_t^{\kappa, \text{RER}} = \text{scale}(p_t^{\kappa, \text{RER}})$ is standardized to zero mean and unit variance.
+
+In primary source statistical accounting for Chile, separate long-run deflators for non-residential structures ($P_t^{\text{NRC}}$) and machinery ($P_t^{\text{ME}}$) do not exist as continuous annual series back to 1940. Capital stock harmonization constructs a single unified capital goods price deflator index ($P_{K,t}$, staged as \texttt{Pk\_2003base}), built by splicing historical investment deflators from the ClioLab/PUC historical database (1940--2010) with official Central Bank of Chile (BCCH) National Accounts deflators (2003 base year).
+
+To capture foreign relative price shocks on capital accumulation without fabricating separate asset deflators, the empirical strategy employs two complementary proxies:
+\begin{enumerate}
+	\item \textbf{Baseline Foreign Exchange Price Control ($\tilde{p}_t^{\kappa, \text{RER}}$)}: Uses the log of the Real Effective Exchange Rate ($\ln\text{TCREAL}_t$), capturing foreign exchange purchasing power shocks that directly alter the domestic cost of imported machinery and equipment ($K_t^{\text{ME}}$).
+	\item \textbf{Robustness Asset-to-Output Ratio ($p_t^{\kappa, P_Y/P_K}$)}: Evaluates the log ratio of the aggregate GDP deflator ($P_{Y,t}$) to the single unified capital price index ($P_{K,t}$):
+	\begin{equation}
+		p_t^{\kappa, P_Y/P_K} = \ln\left(\frac{P_{Y,t}}{P_{K,t}}\right)
+	\end{equation}
+	measuring relative movements between general output prices and unified investment goods prices.
+\end{enumerate}
+
+\paragraph{Interaction Geometry \& Dealing with Multicollinearity}
+Two critical econometric principles dictate the treatment of the price control:
+\begin{enumerate}
+	\item \textbf{Additive Levels  ($\theta_6$)}: The price control is included in the equation strictly additively in levels ($\theta_6 \tilde{p}_t^{\kappa, \text{RER}}$). 
+	\item \textbf{VIF Inflation \& Variance Explosions}: Preliminary empirical grid tests introducing price interaction terms (e.g., $\kappa_t \cdot \tilde{p}_t$) caused severe multicollinearity, pushing Variance Inflation Factors above $VIF > 88$. Inside the IM-OLS non-standard distribution, this collinearity destroys matrix invertibility $(X'X)^{-1}$ and inflates Monte Carlo critical bounds to extreme values ($|t^*| > 19$), rendering structural parameter identification impossible without adding explanatory power over cointegration. By keeping $\tilde{p}_t^{\kappa, \text{RER}}$ as an additive macro control---or dropping it in ultra-parsimonious specifications---we isolate the physical asset composition mechanism without polluting the structural derivative.
+\end{enumerate}
+
+\paragraph{The estimation sample and its limitations.}
+The benchmark estimation window for the Chilean peripheral
+constraint is 1942--2010, and I work with it from the outset. Two
+data limitations define this window and are acknowledged here
+rather than resolved. First, the pre-1942 monetary and external
+series do not provide a coherent basis for the threshold
+variables: under the gold-exchange standard the reserve-cover
+ratio records a legal requirement rather than a binding external
+constraint, and the monetary base responds to convertibility rules
+and fiscal pressure rather than to the balance of payments.
+Second, the historical ClioLab price and terms-of-trade series
+that anchor the external-constraint variables end in 2010. The
+capital-stock and distributive panels of
+\cref{sec:414:chile_capital,sec:415:chile_distrib} span
+1900--2024, but the threshold estimation discards 1900--1941 and
+2011--2024. The institutional history below explains why the first
+discard separates two equilibrium regimes rather than truncating a
+single one.
+
+
+\paragraph{The Kemmerer regime, 1925--1931.}
+Decree-Law No.~486 (21 August 1925) created the Chilean Central Bank (BCCh), and the Organic Law and Monetary Bill of 14 October 1925
+(Decree-Law No.~606) placed it under a gold-exchange standard: the
+peso was pegged to sterling and the Bank was required to hold a
+minimum gold cover of 50 percent against note issue, with the
+remainder of the reserve requirement met in foreign exchange.
+Reserve coverage of the money supply rose from 27 percent at the
+start of 1925 to exactly 50 percent by year-end. The system's
+credibility was therefore anchored abroad: it depended on the
+stability of sterling and on a steady inflow of copper revenue, and
+it functioned while export receipts replenished reserves.
+
+\paragraph{Collapse and fiscal dominance, 1931--1941.}
+The external anchor failed with the Great Depression. Between
+January 1930 and July 1931 the Bank lost more than half of its
+gold holdings defending the peg, and on 21 July 1931 Chile
+suspended convertibility; the United Kingdom's own departure from
+gold two months later then erased the value anchor of the
+remaining sterling reserves. The subsequent decade combined fiscal
+dominance---the Bank monetized deficits as a treasury agent---with
+multiple exchange rates administered by the \textit{Comisión de
+	Cambios Internacionales} and parallel currency markets. Once
+convertibility was suspended, the cover ratio ceased to operate
+as a statutory discipline and became instead an indicator of
+fragility: during a currency panic commercial banks hoard base
+money at the central bank and the money multiplier contracts, so
+the reserves-to-$M_0$ ratio isolates the Bank's capacity to absorb
+a speculative attack, whereas a broader aggregate such as $M_2$
+obscures the stress at the core of the system. The denominator
+therefore follows the exposure rather than the letter of the 1925
+law: the statute defined the requirement against note issue, but
+in a panic commercial banks also seek to convert their reserve
+deposits, so the economically relevant exposure is the entirety of
+central-bank liabilities, not notes alone. Under fiscal dominance,
+however, even this fragility indicator no longer anchored the
+external sector: the monetary base responded to deficit financing
+and to the administered exchange regime rather than to the balance
+of payments, so the 1931--1941 cover series records distress
+without constituting a stable external-constraint variable.
+
+
+\paragraph{The 1942 regime shift.}
+Law No.~7,200 (18 July 1942), together with Law No.~7,434, rewrote
+the Bank's Organic Law: the reserve-cover rule was abandoned, the
+mandate shifted from convertibility to the promotion of national
+production, and credit and foreign exchange were allocated through
+functional credit ceilings and a centralized foreign-exchange
+budget. Working alongside CORFO (Law No.~6,640, 1939), which
+concentrated credit allocation for import-substituting
+industrialization, the Bank financed the development plan rather
+than the peg. Stability thereafter derived from internal planning
+rather than external credibility, consolidating an institutional shift 
+that in the aim of reducing the degree of complexity from previous preliminary 
+results that exploded \textit{t-statistics} under monte-carlo simulations I decided to constraint the sample. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\paragraph{Threshold Grid Search \& Non-Standard Inference} The regime indicator $D_t^{\gamma} = \mathbb{I}(Z_t \le \gamma)$ depends on an unknown threshold parameter $\gamma$ evaluated over a standardized composite balance-of-payments variable $Z_t$. Following Hansen (2000) and Vogelsang and Wagner (2024), we estimate $\gamma$ endogenously via profile Sum of Squared Residuals (SSR) minimization:
+
+\begin{equation}
+	\hat{\gamma} = \arg\min_{\gamma \in \Gamma} \text{SSR}(\gamma) = \arg\min_{\gamma \in \Gamma} \sum_{t=1}^{T} \hat{u}_t(\gamma)^2
+\end{equation}
+
+
+The search grid $\Gamma$ is constrained to the trimmed quantile interval $\Gamma = [\gamma_{0.15}, \gamma_{0.85}]$ with step increments of 0.05 to prevent empirical instability at sample tails.
+For each candidate threshold $\gamma \in \Gamma$:
+\begin{enumerate}
+	\item The threshold indicator $D_t^{\gamma}$ is constructed from $Z_t$.
+	\item The interactive regressor matrix $X_t(\gamma) = [k_t^{\text{NR}}, \kappa_t, \omega_{t-1} \kappa_t, \kappa_t D_t^{\gamma}, \omega_{t-1} \kappa_t D_t^{\gamma}, \tilde{p}_t^{\kappa, \text{RER}}]$ is assembled.
+	\item The model is estimated via IM-OLS, partialing out deterministic components and non-stationary nuisance functions to extract IM-OLS residuals $\hat{u}_t(\gamma)$ and long-run variance matrices.
+	\item The profile estimator selects $\hat{\gamma}$ matching the global minimum $\text{SSR}(\hat{\gamma})$.
+\end{enumerate}
+
+Because the threshold $\hat{\gamma}$ is searched endogenously over non-stationary $I(1)$ interaction terms, standard Gaussian asymptotic inference breaks down completely. The profile search introduces an endogenous optimization selection that inflates parameter variance and shifts test statistic distributions. To conduct valid inference without relying on invalid standard tables, we execute a specification-contingent under Monte Carlo simulations with 10,000 replications
+
+Crucially, the simulation handles two distinct testing objectives under non-standard asymptotics:
+
+\begin{enumerate}
+	\item \textbf{Cointegration Diagnostic ($CT_{\text{IM}}$)}: The null hypothesis $H_0$ is that the specification forms a valid cointegrating relation ($u_t \sim I(0)$), evaluated against the alternative $H_1$ of no cointegration ($u_t \sim I(1)$, i.e. spurious regression). Under $H_0$, the asymptotic distribution of the $CT_{\text{IM}}$ statistic is invariant to the true cointegrating vector $\Theta$, but depends strictly on the stochastic geometry of the design matrix $X_t(\gamma)$---including $I(1) \times I(1)$ interaction products, Frisch-Waugh-Lovell (FWL) orthogonalization projections, and the profile SSR grid search over $\Gamma$.
+	\item \textbf{Parameter Significance ($t$-statistics)}: The null hypothesis $H_0: \theta_j = 0$ tests individual coefficient zero-restrictions. For each simulation pass, centered $t$-statistics $t^* = \hat{\theta}_j^* / \text{SE}(\hat{\theta}_j^*)$ are extracted across the profile grid search to construct exact fixed-$b$ critical bounds for empirical parameter testing.
+\end{enumerate}
+
+On each iteration, the Data Generating Process (DGP) simulates independent base random walks, constructs the specification-specific interaction design $X_t^*(\gamma)$, generates a cointegrated series $y_t^*$ under stationary $I(0)$ errors, executes the full profile SSR grid search across $\Gamma = [\gamma_{0.15}, \gamma_{0.85}]$, and records the resulting $CT_{\text{IM}}$ and centered $|t^*|$ distributions. The resulting empirical distributions provide exact, non-standard fixed-$b$ critical bounds for inference.
