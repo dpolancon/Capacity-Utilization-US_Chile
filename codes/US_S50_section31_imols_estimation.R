@@ -60,7 +60,7 @@ wage_cols <- c(
   "omega_NFC_NVA_lag1", "omega_CORP_NVA_lag1", "omega_ST_Tier1_NVA_lag1", "omega_ST_Tier2_NVA_lag1"
 )
 
-req_cols <- c("y_t", "k_cap", wage_cols, "iota_lag1")
+req_cols <- c("y_t", "k_cap", "omega_NFC_GVA_lag1", "omega_ST_Tier1_NVA_lag1", "iota_lag1")
 df_clean <- df[complete.cases(df[, req_cols]), ]
 
 cat(sprintf("Sample Window: %d - %d (N = %d observations)\n", 
@@ -268,14 +268,18 @@ run_s50_model <- function(df_data, y_var, k_var, w_var_lag, set_id, model_id, wa
 results_list <- list()
 
 wage_config <- list(
-  NFC_GVA      = list(col = "omega_NFC_GVA_lag1",      label = "Baseline NFC GVA"),
-  CORP_GVA     = list(col = "omega_CORP_GVA_lag1",     label = "Corporate GVA"),
-  ST_Tier1_GVA = list(col = "omega_ST_Tier1_GVA_lag1", label = "Shaikh-Tonak Tier 1 GVA"),
-  ST_Tier2_GVA = list(col = "omega_ST_Tier2_GVA_lag1", label = "Shaikh-Tonak Tier 2 GVA"),
-  NFC_NVA      = list(col = "omega_NFC_NVA_lag1",      label = "Baseline NFC NVA"),
-  CORP_NVA     = list(col = "omega_CORP_NVA_lag1",     label = "Corporate NVA (Finance-Adjusted)"),
-  ST_Tier1_NVA = list(col = "omega_ST_Tier1_NVA_lag1", label = "Shaikh-Tonak Tier 1 NVA"),
-  ST_Tier2_NVA = list(col = "omega_ST_Tier2_NVA_lag1", label = "Shaikh-Tonak Tier 2 NVA")
+  NFC_GVA                  = list(col = "omega_NFC_GVA_lag1",              label = "Baseline NFC GVA"),
+  CORP_GVA                 = list(col = "omega_CORP_GVA_lag1",             label = "Corporate GVA"),
+  ST_Tier1_GVA             = list(col = "omega_ST_Tier1_GVA_lag1",         label = "Shaikh-Tonak Tier 1 GVA"),
+  ST_Tier2_GVA             = list(col = "omega_ST_Tier2_GVA_lag1",         label = "Shaikh-Tonak Tier 2 GVA"),
+  CORP_GVA_clean_Tier1     = list(col = "omega_CORP_GVA_clean_Tier1_lag1", label = "Clean Corporate Tier 1 GVA"),
+  CORP_GVA_clean_Tier2     = list(col = "omega_CORP_GVA_clean_Tier2_lag1", label = "Clean Corporate Tier 2 GVA"),
+  NFC_NVA                  = list(col = "omega_NFC_NVA_lag1",              label = "Baseline NFC NVA"),
+  CORP_NVA                 = list(col = "omega_CORP_NVA_lag1",             label = "Corporate NVA (Finance-Adjusted)"),
+  ST_Tier1_NVA             = list(col = "omega_ST_Tier1_NVA_lag1",         label = "Shaikh-Tonak Tier 1 NVA"),
+  ST_Tier2_NVA             = list(col = "omega_ST_Tier2_NVA_lag1",         label = "Shaikh-Tonak Tier 2 NVA"),
+  CORP_NVA_clean_Tier1     = list(col = "omega_CORP_NVA_clean_Tier1_lag1", label = "Clean Corporate Tier 1 NVA"),
+  CORP_NVA_clean_Tier2     = list(col = "omega_CORP_NVA_clean_Tier2_lag1", label = "Clean Corporate Tier 2 NVA")
 )
 
 # Set 1 Models (M1.1a through M1.8b)
@@ -286,8 +290,13 @@ for (w_key in names(wage_config)) {
   
   for (b_mode in c("No", "Yes")) {
     m_id <- paste0(m_id_base, if (b_mode == "Yes") "b" else "a")
+    
+    # Dynamic Sample Window Filtering
+    req_loop <- c("y_t", "k_cap", w_info$col, "iota_lag1")
+    df_model <- df_clean[complete.cases(df_clean[, req_loop]), ]
+    
     res <- run_s50_model(
-      df_data = df_clean,
+      df_data = df_model,
       y_var = "y_t",
       k_var = "k_cap",
       w_var_lag = w_info$col,
@@ -312,8 +321,13 @@ for (w_key in names(wage_config)) {
   
   for (b_mode in c("No", "Yes")) {
     m_id <- paste0(m_id_base, if (b_mode == "Yes") "b" else "a")
+    
+    # Dynamic Sample Window Filtering
+    req_loop <- c("y_t", "k_cap", w_info$col, "iota_lag1")
+    df_model <- df_clean[complete.cases(df_clean[, req_loop]), ]
+    
     res <- run_s50_model(
-      df_data = df_clean,
+      df_data = df_model,
       y_var = "y_t",
       k_var = "k_cap",
       w_var_lag = w_info$col,

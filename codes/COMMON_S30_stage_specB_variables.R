@@ -49,6 +49,11 @@ df$inter_tau_omega_CORP_GVA  <- df$tau_real * df$omega_CORP_GVA_lag1
 df$inter_tau_omega_ST_Tier1  <- df$tau_real * df$omega_ST_Tier1_NVA_lag1
 df$inter_tau_omega_ST_Tier2  <- df$tau_real * df$omega_ST_Tier2_NVA_lag1
 
+df$inter_tau_omega_CORP_clean_Tier1_NVA <- df$tau_real * df$omega_CORP_NVA_clean_Tier1_lag1
+df$inter_tau_omega_CORP_clean_Tier2_NVA <- df$tau_real * df$omega_CORP_NVA_clean_Tier2_lag1
+df$inter_tau_omega_CORP_clean_Tier1_GVA <- df$tau_real * df$omega_CORP_GVA_clean_Tier1_lag1
+df$inter_tau_omega_CORP_clean_Tier2_GVA <- df$tau_real * df$omega_CORP_GVA_clean_Tier2_lag1
+
 df$inter_tau_prel <- df$tau_real * df$p_rel_lag1
 
 # Save staged dataset

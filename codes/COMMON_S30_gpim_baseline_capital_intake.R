@@ -25,7 +25,9 @@ df_us <- read.csv(us_csv, stringsAsFactors = FALSE)
 
 if (file.exists(s29f_csv)) {
   s29f <- read.csv(s29f_csv, stringsAsFactors = FALSE)
-  s29f_cols <- c("year", "omega_ST_Tier1", "omega_ST_Tier2", "omega_ST_Tier1_GVA_adj", "omega_ST_Tier2_GVA_adj")
+  s29f_cols <- c("year", "omega_ST_Tier1", "omega_ST_Tier2", "omega_ST_Tier1_GVA_adj", "omega_ST_Tier2_GVA_adj",
+                 "omega_CORP_NVA_clean_Tier1", "omega_CORP_GVA_clean_Tier1",
+                 "omega_CORP_NVA_clean_Tier2", "omega_CORP_GVA_clean_Tier2")
   s29f_cols <- intersect(s29f_cols, colnames(s29f))
   df_us <- merge(df_us, s29f[, s29f_cols], by = "year", all.x = TRUE)
 }
@@ -54,33 +56,43 @@ df_us$k_NRC  <- log(df_us$K_NRC)
 df_us$k_cap  <- log(df_us$K_cap)
 df_us$tau    <- df_us$k_ME - df_us$k_NRC
 
-# 8 Nominal Wage Share Measures (4 GVA Basis & 4 NVA Basis)
-df_us$omega_NFC_GVA      <- if ("omega_NFC" %in% colnames(df_us)) df_us$omega_NFC else 0.6325
-df_us$omega_CORP_GVA     <- if ("omega_CORP" %in% colnames(df_us)) df_us$omega_CORP else 0.6200
-df_us$omega_ST_Tier1_GVA <- if ("omega_ST_Tier1_GVA_adj" %in% colnames(df_us)) df_us$omega_ST_Tier1_GVA_adj else df_us$omega_NFC_GVA
-df_us$omega_ST_Tier2_GVA <- if ("omega_ST_Tier2_GVA_adj" %in% colnames(df_us)) df_us$omega_ST_Tier2_GVA_adj else df_us$omega_NFC_GVA * 0.92
+# Nominal Wage Share Measures (GVA Basis & NVA Basis)
+df_us$omega_NFC_GVA             <- if ("omega_NFC" %in% colnames(df_us)) df_us$omega_NFC else 0.6325
+df_us$omega_CORP_GVA            <- if ("omega_CORP" %in% colnames(df_us)) df_us$omega_CORP else 0.6200
+df_us$omega_ST_Tier1_GVA        <- if ("omega_ST_Tier1_GVA_adj" %in% colnames(df_us)) df_us$omega_ST_Tier1_GVA_adj else df_us$omega_NFC_GVA
+df_us$omega_ST_Tier2_GVA        <- if ("omega_ST_Tier2_GVA_adj" %in% colnames(df_us)) df_us$omega_ST_Tier2_GVA_adj else df_us$omega_NFC_GVA * 0.92
+df_us$omega_CORP_GVA_clean_Tier1 <- if ("omega_CORP_GVA_clean_Tier1" %in% colnames(df_us)) df_us$omega_CORP_GVA_clean_Tier1 else NA
+df_us$omega_CORP_GVA_clean_Tier2 <- if ("omega_CORP_GVA_clean_Tier2" %in% colnames(df_us)) df_us$omega_CORP_GVA_clean_Tier2 else NA
 
-df_us$omega_ST_Tier1_NVA <- if ("omega_ST_Tier1" %in% colnames(df_us)) df_us$omega_ST_Tier1 else df_us$omega_NFC_GVA / 0.82
-df_us$omega_ST_Tier2_NVA <- if ("omega_ST_Tier2" %in% colnames(df_us)) df_us$omega_ST_Tier2 else df_us$omega_shaikh
-df_us$omega_NFC_NVA      <- df_us$omega_ST_Tier1_NVA
-df_us$omega_CORP_NVA     <- df_us$omega_ST_Tier1_NVA * 0.985
+df_us$omega_ST_Tier1_NVA        <- if ("omega_ST_Tier1" %in% colnames(df_us)) df_us$omega_ST_Tier1 else df_us$omega_NFC_GVA / 0.82
+df_us$omega_ST_Tier2_NVA        <- if ("omega_ST_Tier2" %in% colnames(df_us)) df_us$omega_ST_Tier2 else df_us$omega_shaikh
+df_us$omega_NFC_NVA             <- df_us$omega_ST_Tier1_NVA
+df_us$omega_CORP_NVA            <- df_us$omega_ST_Tier1_NVA * 0.985
+df_us$omega_CORP_NVA_clean_Tier1 <- if ("omega_CORP_NVA_clean_Tier1" %in% colnames(df_us)) df_us$omega_CORP_NVA_clean_Tier1 else NA
+df_us$omega_CORP_NVA_clean_Tier2 <- if ("omega_CORP_NVA_clean_Tier2" %in% colnames(df_us)) df_us$omega_CORP_NVA_clean_Tier2 else NA
 
 # Lagged Wage Shares (Section 2 Micro-Meso Timing: omega_{t-1})
-df_us$omega_NFC_GVA_lag1      <- c(NA, df_us$omega_NFC_GVA[-nrow(df_us)])
-df_us$omega_CORP_GVA_lag1     <- c(NA, df_us$omega_CORP_GVA[-nrow(df_us)])
-df_us$omega_ST_Tier1_GVA_lag1 <- c(NA, df_us$omega_ST_Tier1_GVA[-nrow(df_us)])
-df_us$omega_ST_Tier2_GVA_lag1 <- c(NA, df_us$omega_ST_Tier2_GVA[-nrow(df_us)])
+df_us$omega_NFC_GVA_lag1              <- c(NA, df_us$omega_NFC_GVA[-nrow(df_us)])
+df_us$omega_CORP_GVA_lag1             <- c(NA, df_us$omega_CORP_GVA[-nrow(df_us)])
+df_us$omega_ST_Tier1_GVA_lag1         <- c(NA, df_us$omega_ST_Tier1_GVA[-nrow(df_us)])
+df_us$omega_ST_Tier2_GVA_lag1         <- c(NA, df_us$omega_ST_Tier2_GVA[-nrow(df_us)])
+df_us$omega_CORP_GVA_clean_Tier1_lag1 <- c(NA, df_us$omega_CORP_GVA_clean_Tier1[-nrow(df_us)])
+df_us$omega_CORP_GVA_clean_Tier2_lag1 <- c(NA, df_us$omega_CORP_GVA_clean_Tier2[-nrow(df_us)])
 
-df_us$omega_NFC_NVA_lag1      <- c(NA, df_us$omega_NFC_NVA[-nrow(df_us)])
-df_us$omega_CORP_NVA_lag1     <- c(NA, df_us$omega_CORP_NVA[-nrow(df_us)])
-df_us$omega_ST_Tier1_NVA_lag1 <- c(NA, df_us$omega_ST_Tier1_NVA[-nrow(df_us)])
-df_us$omega_ST_Tier2_NVA_lag1 <- c(NA, df_us$omega_ST_Tier2_NVA[-nrow(df_us)])
+df_us$omega_NFC_NVA_lag1              <- c(NA, df_us$omega_NFC_NVA[-nrow(df_us)])
+df_us$omega_CORP_NVA_lag1             <- c(NA, df_us$omega_CORP_NVA[-nrow(df_us)])
+df_us$omega_ST_Tier1_NVA_lag1         <- c(NA, df_us$omega_ST_Tier1_NVA[-nrow(df_us)])
+df_us$omega_ST_Tier2_NVA_lag1         <- c(NA, df_us$omega_ST_Tier2_NVA[-nrow(df_us)])
+df_us$omega_CORP_NVA_clean_Tier1_lag1 <- c(NA, df_us$omega_CORP_NVA_clean_Tier1[-nrow(df_us)])
+df_us$omega_CORP_NVA_clean_Tier2_lag1 <- c(NA, df_us$omega_CORP_NVA_clean_Tier2[-nrow(df_us)])
 
 # Interaction Terms: k_cap * omega_{t-1}
-df_us$q_base_NFC_NVA  <- df_us$k_cap * df_us$omega_NFC_NVA_lag1
-df_us$q_base_CORP_NVA <- df_us$k_cap * df_us$omega_CORP_NVA_lag1
-df_us$q_base_ST_Tier1 <- df_us$k_cap * df_us$omega_ST_Tier1_NVA_lag1
-df_us$q_base_ST_Tier2 <- df_us$k_cap * df_us$omega_ST_Tier2_NVA_lag1
+df_us$q_base_NFC_NVA               <- df_us$k_cap * df_us$omega_NFC_NVA_lag1
+df_us$q_base_CORP_NVA              <- df_us$k_cap * df_us$omega_CORP_NVA_lag1
+df_us$q_base_ST_Tier1              <- df_us$k_cap * df_us$omega_ST_Tier1_NVA_lag1
+df_us$q_base_ST_Tier2              <- df_us$k_cap * df_us$omega_ST_Tier2_NVA_lag1
+df_us$q_base_CORP_NVA_clean_Tier1  <- df_us$k_cap * df_us$omega_CORP_NVA_clean_Tier1_lag1
+df_us$q_base_CORP_NVA_clean_Tier2  <- df_us$k_cap * df_us$omega_CORP_NVA_clean_Tier2_lag1
 
 df_us$country <- "US"
 

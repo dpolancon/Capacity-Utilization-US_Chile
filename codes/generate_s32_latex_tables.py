@@ -2,12 +2,23 @@ import pandas as pd
 import numpy as np
 
 df = pd.read_csv("C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S61_SECTION32_IMOLS/csv/s61_section32_results.csv")
-cv_df = pd.read_csv("C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S62_SECTION32_MC/csv/cmpr_s32_critical_values_N100000.csv")
 
-# Convert cv_df to a dict for easy lookup
+try:
+    cv_df_94 = pd.read_csv("C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S62_SECTION32_MC/csv/cmpr_s32_critical_values_T94_N100000.csv")
+    cv_df_77 = pd.read_csv("C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S62_SECTION32_MC/csv/cmpr_s32_critical_values_T77_N100000.csv")
+except FileNotFoundError:
+    print("Warning: CV tables not found. Please ensure MC simulations have completed.")
+    cv_df_94 = pd.DataFrame()
+    cv_df_77 = pd.DataFrame()
+
+# Convert cv_dfs to a dict for easy lookup
 cv_dict = {}
-for idx, row in cv_df.iterrows():
-    cv_dict[row['Variant']] = row.to_dict()
+if not cv_df_94.empty:
+    for idx, row in cv_df_94.iterrows():
+        cv_dict[(94, row['Variant'])] = row.to_dict()
+if not cv_df_77.empty:
+    for idx, row in cv_df_77.iterrows():
+        cv_dict[(77, row['Variant'])] = row.to_dict()
 
 def fmt(val, decimals=2, is_stat=False):
     if pd.isna(val) or val is None or str(val).strip() == "" or str(val).lower() == "nan":
@@ -24,10 +35,11 @@ def fmt(val, decimals=2, is_stat=False):
     except:
         return str(val)
 
-def get_stars(t_val, variant_key, param_type):
-    if variant_key not in cv_dict:
+def get_stars(t_val, variant_key, param_type, t_obs):
+    key = (t_obs, variant_key)
+    if key not in cv_dict:
         return ""
-    cvs = cv_dict[variant_key]
+    cvs = cv_dict[key]
     
     if param_type == "kappa":
         p90 = cvs["t_kappa_p90"]
@@ -64,12 +76,12 @@ def generate_set_table(df_set, caption_text, label_text, out_tex_path, set_id):
     with open(out_tex_path, "w", encoding="utf-8") as f:
         f.write("\\begin{table}[H]\n")
         f.write("\\centering\n")
-        f.write("\\setlength{\\tabcolsep}{2.5pt}\n")
+        f.write("\\setlength{\\tabcolsep}{1.5pt}\n")
         f.write(f"\\caption{{{caption_text}}}\n")
         f.write(f"\\label{{{label_text}}}\n")
-        f.write("\\scriptsize\n")
+        f.write("\\tiny\n")
         
-        col_spec = "p{3.8cm}" + "p{1.1cm}" * n_cols
+        col_spec = "p{3.5cm}" + "p{1.0cm}" * n_cols
         f.write(f"\\begin{{tabular}}{{{col_spec}}}\n")
         f.write("\\toprule\n")
         f.write(f"\\multicolumn{{{n_cols + 1}}}{{l}}{{\\textbf{{Dependent Variable: $y_t^{{\\text{{NFC}}}}$ (Log NFC Real GVA)}}}} \\\\\n")
@@ -98,7 +110,8 @@ def generate_set_table(df_set, caption_text, label_text, out_tex_path, set_id):
                     
                     # Calculate t-stat
                     t_val = abs(est / sd) if sd > 0 else 0
-                    stars = get_stars(t_val, v_key, param_type)
+                    t_obs = int(sub['Sample_T'].values[0]) if 'Sample_T' in sub.columns else 94
+                    stars = get_stars(t_val, v_key, param_type, t_obs)
                     
                     row_est.append(f"{est:.2f}{stars}")
                     row_sd.append(f"({sd:.2f})")
@@ -178,7 +191,8 @@ def generate_set_table(df_set, caption_text, label_text, out_tex_path, set_id):
                 if break_mode == "Yes":
                     v_key += "_break"
                 
-                stars = get_stars(val, v_key, "ct_im")
+                t_obs = int(sub['Sample_T'].values[0]) if 'Sample_T' in sub.columns else 94
+                stars = get_stars(val, v_key, "ct_im", t_obs)
                 row_shin.append(f"{val:.2f}{stars}")
             else: row_shin.append("---")
         f.write(" & ".join(row_shin) + " \\\\\n")
@@ -235,3 +249,60 @@ generate_set_table(df_set2_nva, "Specification Set 2: Effective Wage Interaction
 
 print("Generated table_specB_set1_gva.tex, table_specB_set1_nva.tex, table_specB_set2_gva.tex, and table_specB_set2_nva.tex cleanly.")
 
+
+def generate_cv_appendix_table():
+    out_tex = "C:/ReposGitHub/Capacity-Utilization-US_Chile/reports/US_Section32_IMOLS_Results/table_cmpr_s32_critical_values.tex"
+    
+    try:
+        cv_94 = pd.read_csv("C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S62_SECTION32_MC/csv/cmpr_s32_critical_values_T94_N100000.csv")
+        cv_77 = pd.read_csv("C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S62_SECTION32_MC/csv/cmpr_s32_critical_values_T77_N100000.csv")
+    except:
+        return
+        
+    with open(out_tex, "w", encoding="utf-8") as f:
+        f.write("\\begin{table}[H]\n")
+        f.write("\\centering\n")
+        f.write("\\begin{threeparttable}\n")
+        f.write("\\caption{Non-Standard CMPR IM-OLS Critical Values (100,000 Replications)}\n")
+        f.write("\\label{tab:s32_cvs}\n")
+        f.write("\\scriptsize\n")
+        f.write("\\begin{tabular}{l | ccc | ccc}\n")
+        f.write("\\toprule\n")
+        f.write(" & \\multicolumn{3}{c|}{$\\boldsymbol{T=94}$ \\textbf{(1931--2024)}} & \\multicolumn{3}{c}{$\\boldsymbol{T=77}$ \\textbf{(1948--2024)}} \\\\\n")
+        f.write("\\cmidrule(lr){2-4} \\cmidrule(lr){5-7}\n")
+        f.write("\\textbf{Parameter/Test} & 90\\% & 95\\% & 99\\% & 90\\% & 95\\% & 99\\% \\\\\n")
+        f.write("\\midrule\n")
+        
+        # Helper to format row
+        def w_row(label, col90, col95, col99, variant_idx=0):
+            r94 = cv_94.iloc[variant_idx]
+            r77 = cv_77.iloc[variant_idx]
+            v94_90, v94_95, v94_99 = r94[col90], r94[col95], r94[col99]
+            v77_90, v77_95, v77_99 = r77[col90], r77[col95], r77[col99]
+            f.write(f"{label} & {v94_90:.3f} & {v94_95:.3f} & {v94_99:.3f} & {v77_90:.3f} & {v77_95:.3f} & {v77_99:.3f} \\\\\n")
+        
+        f.write("\\multicolumn{7}{l}{\\textbf{Panel A: Standard Wage Proxy Models (Set 1, No Break)}} \\\\\n")
+        w_row("$CT_{\\text{IM}}$ (Global Coint. Test)", "CT_IM_p90", "CT_IM_p95", "CT_IM_p99", 0)
+        w_row("$t_{\\kappa}$ (Composition)", "t_kappa_p90", "t_kappa_p95", "t_kappa_p99", 0)
+        w_row("$t_{\\theta_{\\omega\\kappa}}$ (Wage Interaction)", "t_ortho1_p90", "t_ortho1_p95", "t_ortho1_p99", 0)
+        w_row("$t_{\\theta_{\\kappa p}}$ (Price Interaction)", "t_ortho2_p90", "t_ortho2_p95", "t_ortho2_p99", 0)
+        
+        f.write("\\midrule\n")
+        f.write("\\multicolumn{7}{l}{\\textbf{Panel B: Effective Wage Proxy Models (Set 2, No Break)}} \\\\\n")
+        w_row("$CT_{\\text{IM}}$ (Global Coint. Test)", "CT_IM_p90", "CT_IM_p95", "CT_IM_p99", 2)
+        w_row("$t_{\\kappa}$ (Composition)", "t_kappa_p90", "t_kappa_p95", "t_kappa_p99", 2)
+        w_row("$t_{\\theta_{\\omega\\kappa}}$ (Effective Wage Int.)", "t_ortho1_p90", "t_ortho1_p95", "t_ortho1_p99", 2)
+        w_row("$t_{\\theta_{\\kappa p}}$ (Price Interaction)", "t_ortho2_p90", "t_ortho2_p95", "t_ortho2_p99", 2)
+        
+        f.write("\\midrule\n")
+        f.write("\\multicolumn{7}{l}{\\textbf{Panel C: Asymptotic Normal Benchmarks}} \\\\\n")
+        f.write("Standard Normal $Z$ & 1.645 & 1.960 & 2.576 & 1.645 & 1.960 & 2.576 \\\\\n")
+        f.write("\\bottomrule\n")
+        f.write("\\end{tabular}\n")
+        f.write("\\begin{tablenotes}\n")
+        f.write("\\item \\textit{Note:} Critical values derived via custom $N=100,000$ pass Monte Carlo simulation matched exactly to the integration geometry of the regressors ($H_0$: $y^*_t \\sim I(0)$). Fixed-$b$ inference utilizes Andrews automatic bandwidth selection ($b = M/T$) and the Bartlett kernel. Random number generator uses Mersenne Twister with \\texttt{set.seed(1929)}.\n")
+        f.write("\\end{tablenotes}\n")
+        f.write("\\end{threeparttable}\n")
+        f.write("\\end{table}\n")
+
+generate_cv_appendix_table()

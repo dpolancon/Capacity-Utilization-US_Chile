@@ -227,7 +227,7 @@ run_cmpr_simulation_suite <- function(N_sim = 100, T_obs = 94, out_csv = NULL) {
   final_df <- do.call(rbind, results_summary)
   if (is.null(out_csv)) {
     repo_root <- "C:/ReposGitHub/Capacity-Utilization-US_Chile"
-    out_csv <- file.path(repo_root, "output", "US", "S62_SECTION32_MC", "csv", sprintf("cmpr_s32_critical_values_N%d.csv", N_sim))
+    out_csv <- file.path(repo_root, "output", "US", "S62_SECTION32_MC", "csv", sprintf("cmpr_s32_critical_values_T%d_N%d.csv", T_obs, N_sim))
   }
   
   dir.create(dirname(out_csv), recursive = TRUE, showWarnings = FALSE)
@@ -238,10 +238,15 @@ run_cmpr_simulation_suite <- function(N_sim = 100, T_obs = 94, out_csv = NULL) {
 }
 
 args <- commandArgs(trailingOnly = TRUE)
-if (length(args) >= 2) {
+if (length(args) >= 3) {
   nsim <- as.integer(args[1])
-  out_file <- args[2]
-  run_cmpr_simulation_suite(N_sim = nsim, T_obs = 94, out_csv = out_file)
+  tobs <- as.integer(args[2])
+  out_file <- args[3]
+  run_cmpr_simulation_suite(N_sim = nsim, T_obs = tobs, out_csv = out_file)
+} else if (length(args) == 2) {
+  nsim <- as.integer(args[1])
+  tobs <- as.integer(args[2])
+  run_cmpr_simulation_suite(N_sim = nsim, T_obs = tobs)
 } else if (length(args) == 1) {
   nsim <- as.integer(args[1])
   run_cmpr_simulation_suite(N_sim = nsim, T_obs = 94)

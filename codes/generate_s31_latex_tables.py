@@ -3,17 +3,22 @@ import numpy as np
 import os
 
 results_path = "C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S50_SECTION31_IMOLS/csv/s50_section31_results.csv"
-cv_path = "C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S50_SECTION31_IMOLS/csv/section31_cmpr_custom_critical_values_N100000.csv"
+cv_path_94 = "C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S50_SECTION31_IMOLS/csv/section31_cmpr_custom_critical_values_T94_N100000.csv"
+cv_path_77 = "C:/ReposGitHub/Capacity-Utilization-US_Chile/output/US/S50_SECTION31_IMOLS/csv/section31_cmpr_custom_critical_values_T77_N100000.csv"
 out_dir = "C:/ReposGitHub/Capacity-Utilization-US_Chile/reports/US_Section31_IMOLS_Results"
 
 os.makedirs(out_dir, exist_ok=True)
 
 df = pd.read_csv(results_path)
-cv_df = pd.read_csv(cv_path)
+cv_df_94 = pd.read_csv(cv_path_94)
+cv_df_77 = pd.read_csv(cv_path_77)
 
 cv_dict = {}
-for idx, row in cv_df.iterrows():
-    cv_dict[row['Variant']] = row.to_dict()
+for idx, row in cv_df_94.iterrows():
+    cv_dict[f"T94_{row['Variant']}"] = row.to_dict()
+for idx, row in cv_df_77.iterrows():
+    cv_dict[f"T77_{row['Variant']}"] = row.to_dict()
+
 
 def fmt(val, decimals=2):
     if pd.isna(val) or val is None or str(val).strip() == "" or str(val).lower() == "nan":
@@ -30,10 +35,11 @@ def fmt(val, decimals=2):
     except:
         return str(val)
 
-def get_stars(t_val, variant_key, param_type):
-    if variant_key not in cv_dict:
+def get_stars(t_val, variant_key, t_obs, param_type):
+    key = f"T{t_obs}_{variant_key}"
+    if key not in cv_dict:
         return ""
-    cvs = cv_dict[variant_key]
+    cvs = cv_dict[key]
     
     if param_type == "k0":
         p90 = cvs["t_k0_p90"]
@@ -97,8 +103,9 @@ def generate_section31_panel_table(df_set, caption_text, label_text, out_tex_pat
                     if break_mode == "Yes":
                         v_key += "_break"
                     
+                    t_obs = int(sub['T_obs'].values[0]) if 'T_obs' in sub else 94
                     t_val = abs(est / sd) if sd > 0 else 0
-                    stars = get_stars(t_val, v_key, param_type)
+                    stars = get_stars(t_val, v_key, t_obs, param_type)
                     
                     row_est.append(f"{est:.2f}{stars}")
                     row_sd.append(f"({sd:.2f})")
@@ -169,18 +176,26 @@ def generate_section31_panel_table(df_set, caption_text, label_text, out_tex_pat
                 if break_mode == "Yes":
                     v_key += "_break"
                 
-                stars = get_stars(val, v_key, "ct_im")
+                t_obs = int(sub['T_obs'].values[0]) if 'T_obs' in sub else 94
+                stars = get_stars(val, v_key, t_obs, "ct_im")
                 row_shin.append(f"{val:.2f}{stars}")
             else: row_shin.append("---")
         f.write(" & ".join(row_shin) + " \\\\\n")
 
         # VW Type 2
-        row_vw = ["VW Type 2 ($S_{\\text{Type 2}}$) [$H_0$: Coint.]"]
+        row_vw = ["VW Type 2 ($CT_{\\text{IM}}$) [$H_0$: No Coint.]"]
         for m in models:
             sub = df_set[df_set['Model_ID'] == m]
             if len(sub) > 0:
                 val = fmt(sub['VW_stat'].values[0], 2)
-                stars = str(sub['VW_stars'].values[0]) if not pd.isna(sub['VW_stars'].values[0]) else ""
+                
+                break_mode = sub['Break_Mode'].values[0]
+                set_prefix = "spec1" if set_id == "Set_1" else "spec2"
+                v_key = set_prefix
+                if break_mode == "Yes": v_key += "_break"
+                t_obs = int(sub['T_obs'].values[0]) if 'T_obs' in sub else 94
+                
+                stars = get_stars(float(sub['VW_stat'].values[0]), v_key, t_obs, "ct_im") if not pd.isna(sub['VW_stat'].values[0]) else ""
                 row_vw.append(f"{val}{stars}")
             else: row_vw.append("---")
         f.write(" & ".join(row_vw) + " \\\\\n")

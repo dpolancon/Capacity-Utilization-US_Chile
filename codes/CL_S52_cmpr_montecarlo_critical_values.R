@@ -15,7 +15,7 @@ suppressPackageStartupMessages({
   library(parallel)
 })
 
-set.seed(1929)
+set.seed(1920)
 repo_root <- "C:/ReposGitHub/Capacity-Utilization-US_Chile"
 
 # Fallback functions if cpr_imols_estimator.R isn't exported perfectly to cluster
@@ -54,7 +54,7 @@ run_chile_cmpr_sim <- function(T_obs = 104) {
   x_base_base <- cbind(k_NR, kappa)
   
   u_t <- rnorm(T_obs)
-  y_t <- u_t # Under H0 of cointegration, y is just stationary noise (or cointegrated directly)
+  y_t <- u_t # Under H0 of cointegration, y is just stationary noise
   
   deter_base <- matrix(1, nrow = T_obs, ncol = 1)
   colnames(deter_base) <- "const"
@@ -69,9 +69,6 @@ run_chile_cmpr_sim <- function(T_obs = 104) {
     kappa_D <- kappa * D_ext
     omega_kappa_D <- omega_kappa * D_ext
     
-    # Normally we'd FWL orthogonalize interactions against base variables here if strict.
-    # We follow the same matrix layout as CL_S50
-    # X matrix: k_NR, kappa, omega_kappa, kappa_D, omega_kappa_D, p_kappa
     x_levels_full <- cbind(k_NR, kappa, omega_kappa, kappa_D, omega_kappa_D, p_kappa)
     
     # Fast IM-OLS step
@@ -147,11 +144,6 @@ run_chile_cmpr_sim <- function(T_obs = 104) {
   coefs <- im_fit$coefficients[1:ncol(Xmat)]
   t_stats <- coefs / sd_theta
   
-  # Indexes in Xmat:
-  # Sd is 1 col (const)
-  # Sx is 6 cols: k_NR (2), kappa (3), omega_kappa (4), kappa_D (5), omega_kappa_D (6), p_kappa (7)
-  # x_base_base is 2 cols
-  
   return(list(
     ct_im = ct_stat,
     t_omega_kappa = abs(t_stats[4]),
@@ -160,13 +152,63 @@ run_chile_cmpr_sim <- function(T_obs = 104) {
   ))
 }
 
+run_vif_diagnostics <- function() {
+  cat("\n--- Running VIF Diagnostics (Ash Directive) ---\n")
+  suppressPackageStartupMessages(library(car))
+  suppressPackageStartupMessages(library(dplyr))
+  suppressPackageStartupMessages(library(readr))
+  
+  df_raw <- suppressWarnings(read_csv(file.path(repo_root, "data/staged/ch2_panel_chile_with_prices.csv"), show_col_types = FALSE))
+  df <- df_raw %>%
+    mutate(
+      y_t = log(GDP_real),
+      k_NR = log(K_NR),
+      kappa_t = log(K_ME) - log(K_NR),
+      omega_net_lag = lag(omega_net),
+      D_ext = ifelse(SolvR_M1 <= quantile(SolvR_M1, 0.5, na.rm=TRUE), 1, 0),
+      omega_kappa = omega_net_lag * kappa_t,
+      kappa_D = kappa_t * D_ext,
+      omega_kappa_D = omega_kappa * D_ext,
+      p_kappa_rer = p_kappa_rer,
+      p_kappa_inter = p_kappa_rer * kappa_t,
+      p_kappa_inter_D = p_kappa_inter * D_ext
+    ) %>%
+    filter(!is.na(y_t), !is.na(k_NR), !is.na(kappa_t), !is.na(omega_net_lag), !is.na(p_kappa_rer))
+    
+  # Tier 1 (Role 2 - Standalone Control)
+  mod_t1 <- lm(y_t ~ k_NR + kappa_t + omega_kappa + kappa_D + omega_kappa_D + p_kappa_rer, data = df)
+  vif_t1 <- car::vif(mod_t1)
+  
+  # Tier 2 (Role 1 - Interacted)
+  mod_t2 <- lm(y_t ~ k_NR + kappa_t + omega_kappa + kappa_D + omega_kappa_D + p_kappa_inter + p_kappa_inter_D, data = df)
+  vif_t2 <- car::vif(mod_t2)
+  
+  cat("Tier 1 (Standalone Control) VIF:\n")
+  print(vif_t1)
+  cat("\nTier 2 (Interacted) VIF:\n")
+  print(vif_t2)
+  
+  max_t1 <- max(vif_t1)
+  max_t2 <- max(vif_t2)
+  cat(sprintf("\nMax VIF Tier 1: %.2f | Max VIF Tier 2: %.2f\n", max_t1, max_t2))
+  
+  if (max_t2 > 10 && max_t1 < max_t2) {
+    cat("CONCLUSION: Ash's hypothesis confirmed. Interacting relative prices inflates VIF well beyond standalone control.\n")
+  } else {
+    cat("CONCLUSION: VIF behavior is stable.\n")
+  }
+  cat("----------------------------------------------\n\n")
+}
+
 run_chile_cmpr_simulation_suite <- function(N_sim = 100, T_obs = 104, out_csv = NULL) {
+  run_vif_diagnostics()
   cat(sprintf("\nStarting Chile CMPR Threshold Critical Value Simulation Suite (N_sim = %d, T = %d)...\n", N_sim, T_obs))
   
   num_cores <- min(12, detectCores() - 2)
   if (num_cores < 1) num_cores <- 1
   cat(sprintf("Using %d cores for parallel cluster execution.\n", num_cores))
   cl <- makeCluster(num_cores)
+  clusterSetRNGStream(cl, 1920)
   
   clusterEvalQ(cl, {
     library(cointReg)

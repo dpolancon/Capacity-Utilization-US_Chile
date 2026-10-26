@@ -277,12 +277,18 @@ results_list <- list()
 m_idx <- 1
 
 wage_permutations <- list(
-  c(var = "omega_NFC_GVA_lag1",      label = "NFC GVA Baseline"),
-  c(var = "omega_NFC_NVA_lag1",      label = "NFC NVA Baseline"),
-  c(var = "omega_ST_Tier1_GVA_lag1", label = "Shaikh-Tonak Tier 1 (GVA)"),
-  c(var = "omega_ST_Tier1_NVA_lag1", label = "Shaikh-Tonak Tier 1 (NVA)"),
-  c(var = "omega_ST_Tier2_GVA_lag1", label = "Shaikh-Tonak Tier 2 (GVA Super)"),
-  c(var = "omega_ST_Tier2_NVA_lag1", label = "Shaikh-Tonak Tier 2 (NVA Super)")
+  c(var = "omega_NFC_GVA_lag1",                  label = "NFC GVA Baseline"),
+  c(var = "omega_NFC_NVA_lag1",                  label = "NFC NVA Baseline"),
+  c(var = "omega_CORP_GVA_lag1",                 label = "Corporate GVA Baseline"),
+  c(var = "omega_CORP_NVA_lag1",                 label = "Corporate NVA Baseline"),
+  c(var = "omega_ST_Tier1_GVA_lag1",             label = "Shaikh-Tonak Tier 1 (GVA)"),
+  c(var = "omega_ST_Tier1_NVA_lag1",             label = "Shaikh-Tonak Tier 1 (NVA)"),
+  c(var = "omega_ST_Tier2_GVA_lag1",             label = "Shaikh-Tonak Tier 2 (GVA Super)"),
+  c(var = "omega_ST_Tier2_NVA_lag1",             label = "Shaikh-Tonak Tier 2 (NVA Super)"),
+  c(var = "omega_CORP_GVA_clean_Tier1_lag1",     label = "Clean Corporate Tier 1 (GVA)"),
+  c(var = "omega_CORP_NVA_clean_Tier1_lag1",     label = "Clean Corporate Tier 1 (NVA)"),
+  c(var = "omega_CORP_GVA_clean_Tier2_lag1",     label = "Clean Corporate Tier 2 (GVA Super)"),
+  c(var = "omega_CORP_NVA_clean_Tier2_lag1",     label = "Clean Corporate Tier 2 (NVA Super)")
 )
 
 # Loop over Set 1 (Standard) and Set 2 (Effective (1-iota))
@@ -293,7 +299,12 @@ for (set_type in c("Set_1", "Set_2")) {
     w_lbl <- wp["label"]
     for (b_mode in c("No", "Yes")) {
       m_id <- sprintf("M2.%d%s", m_idx, if (b_mode == "No") "a" else "b")
-      results_list[[m_idx]] <- run_s61_model(df_clean, "y_t", spec_base, w_var, set_type, m_id, w_lbl, b_mode)
+      
+      # Dynamic Sample Window Filtering
+      req_loop <- c("y_t", "k_NRC", "kappa_t", "p_kappa", w_var, "iota_lag1")
+      df_model <- df_clean[complete.cases(df_clean[, req_loop]), ]
+      
+      results_list[[m_idx]] <- run_s61_model(df_model, "y_t", spec_base, w_var, set_type, m_id, w_lbl, b_mode)
       m_idx <- m_idx + 1
     }
   }

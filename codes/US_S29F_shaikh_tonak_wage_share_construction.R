@@ -37,38 +37,19 @@ if (file.exists(input_panel)) {
   wide_df$NFC_NET_INT <- 2 + (wide_df$year - 1929) * 2
 }
 
-# Empirical supervisory compensation ratio vector phi_sup
+# Empirical supervisory compensation ratio vector phi_sup (Strict Empirical - No Extrapolation)
 if (file.exists(rmwnd_s512_csv)) {
   s512_df <- read.csv(rmwnd_s512_csv, stringsAsFactors = FALSE)
   s512_df$phi_sup_nfc <- pmax(0.18, pmin(0.38, 1 - (s512_df$S512.COMBINED * 1.45)))
   wide_df <- merge(wide_df, s512_df[, c("year", "phi_sup_nfc")], by = "year", all.x = TRUE)
   
-  min_phi <- wide_df$phi_sup_nfc[!is.na(wide_df$phi_sup_nfc)][1]
-  max_phi <- tail(wide_df$phi_sup_nfc[!is.na(wide_df$phi_sup_nfc)], 1)
-  
-  wide_df$phi_sup <- ifelse(!is.na(wide_df$phi_sup_nfc), wide_df$phi_sup_nfc,
-                     ifelse(wide_df$year < 1948, min_phi, max_phi))
+  # Enforce strict non-extrapolation: phi_sup is NA wherever s512 empirical data is missing
+  wide_df$phi_sup <- wide_df$phi_sup_nfc
 } else {
-  years <- wide_df$year
-  wide_df$phi_sup <- 0.22 + 0.12 * (years - 1929) / (2025 - 1929)
+  wide_df$phi_sup <- NA_real_
 }
 
-# Variable Capital Level (v_prod)
-wide_df$v_prod <- wide_df$NFC_COMP * (1 - wide_df$phi_sup)
-
-# 1. Tier 1 (NVA Basis): Boundary-Purified Baseline Wage Share (NFC_COMP / NFC_NVA)
-wide_df$omega_ST_Tier1 <- wide_df$NFC_COMP / wide_df$NFC_NVA
-
-# 2. Tier 2 (NVA Basis): Supervisory-Adjusted Wage Share (v_prod / NFC_NVA)
-wide_df$omega_ST_Tier2 <- wide_df$v_prod / wide_df$NFC_NVA
-
-# 3. Tier 1 (GVA Adjusted Basis - No Double Accounting): NFC_COMP / NFC_GVA
-wide_df$omega_ST_Tier1_GVA_adj <- wide_df$NFC_COMP / wide_df$NFC_GVA
-
-# 4. Tier 2 (GVA Adjusted Basis - No Double Accounting): v_prod / NFC_GVA
-wide_df$omega_ST_Tier2_GVA_adj <- wide_df$v_prod / wide_df$NFC_GVA
-
-# 5. Implied Financial Sector Surplus & Transfers
+# 1. Implied Financial Sector Surplus, Transfers & Clean Corporate Denominators
 if ("CORP_NOS" %in% colnames(wide_df) && "NFC_NOS" %in% colnames(wide_df)) {
   wide_df$FIN_NOS_IMPLIED <- wide_df$CORP_NOS - wide_df$NFC_NOS
 } else {
@@ -87,6 +68,43 @@ if ("NFC_NET_INT" %in% colnames(wide_df) && "NFC_NOS" %in% colnames(wide_df)) {
   wide_df$NFC_SURPLUS_AFTER_NET_INT <- wide_df$NFC_NOS
 }
 
+# Clean Corporate Denominators (purging financial double-counting: FIN_NOS_IMPLIED + NFC_NET_INT)
+if ("CORP_NVA" %in% colnames(wide_df) && "CORP_GVA" %in% colnames(wide_df)) {
+  wide_df$CORP_NVA_clean <- wide_df$CORP_NVA - wide_df$FIN_NOS_IMPLIED - wide_df$NFC_NET_INT
+  wide_df$CORP_GVA_clean <- wide_df$CORP_GVA - wide_df$FIN_NOS_IMPLIED - wide_df$NFC_NET_INT
+} else {
+  wide_df$CORP_NVA_clean <- wide_df$NFC_NVA
+  wide_df$CORP_GVA_clean <- wide_df$NFC_GVA
+}
+
+# Variable Capital Levels (v_prod)
+wide_df$v_prod_nfc  <- wide_df$NFC_COMP * (1 - wide_df$phi_sup)
+if ("CORP_COMP" %in% colnames(wide_df)) {
+  wide_df$v_prod_corp <- wide_df$CORP_COMP * (1 - wide_df$phi_sup)
+} else {
+  wide_df$v_prod_corp <- wide_df$v_prod_nfc
+}
+wide_df$v_prod <- wide_df$v_prod_nfc
+
+# 2. NFC Wage Shares (Tier 1 Baseline & Tier 2 Supervisory-Adjusted)
+wide_df$omega_ST_Tier1         <- wide_df$NFC_COMP / wide_df$NFC_NVA
+wide_df$omega_ST_Tier2         <- wide_df$v_prod_nfc / wide_df$NFC_NVA
+wide_df$omega_ST_Tier1_GVA_adj <- wide_df$NFC_COMP / wide_df$NFC_GVA
+wide_df$omega_ST_Tier2_GVA_adj <- wide_df$v_prod_nfc / wide_df$NFC_GVA
+
+# 3. Clean Corporate Wage Shares (Tier 1 Unadjusted & Tier 2 Supervisory-Adjusted, Strict Empirical)
+if ("CORP_COMP" %in% colnames(wide_df)) {
+  wide_df$omega_CORP_NVA_clean_Tier1 <- wide_df$CORP_COMP / wide_df$CORP_NVA_clean
+  wide_df$omega_CORP_GVA_clean_Tier1 <- wide_df$CORP_COMP / wide_df$CORP_GVA_clean
+  wide_df$omega_CORP_NVA_clean_Tier2 <- wide_df$v_prod_corp / wide_df$CORP_NVA_clean
+  wide_df$omega_CORP_GVA_clean_Tier2 <- wide_df$v_prod_corp / wide_df$CORP_GVA_clean
+} else {
+  wide_df$omega_CORP_NVA_clean_Tier1 <- NA_real_
+  wide_df$omega_CORP_GVA_clean_Tier1 <- NA_real_
+  wide_df$omega_CORP_NVA_clean_Tier2 <- NA_real_
+  wide_df$omega_CORP_GVA_clean_Tier2 <- NA_real_
+}
+
 # Output tidy CSV
 out_csv <- file.path(csv_dir, "S29F_shaikh_tonak_wage_share_panel.csv")
 write.csv(wide_df, out_csv, row.names = FALSE)
@@ -96,15 +114,24 @@ out_md <- file.path(md_dir, "S29F_SHAIKH_TONAK_WAGE_SHARE_CONSTRUCTION_SUMMARY.m
 md_lines <- c(
   "# S29F Shaikh-Tonak Wage Share Construction Summary",
   "",
-  paste0("- **Years Covered:** ", min(wide_df$year), " - ", max(wide_df$year)),
-  paste0("- **Tier 1 NVA Wage Share (NFC_COMP / NFC_NVA):** ", round(mean(wide_df$omega_ST_Tier1, na.rm=TRUE), 4)),
-  paste0("- **Tier 2 NVA Supervisory Wage Share (v_prod / NFC_NVA):** ", round(mean(wide_df$omega_ST_Tier2, na.rm=TRUE), 4)),
-  paste0("- **Tier 1 GVA-Adjusted Wage Share (NFC_COMP / NFC_GVA):** ", round(mean(wide_df$omega_ST_Tier1_GVA_adj, na.rm=TRUE), 4)),
-  paste0("- **Tier 2 GVA-Adjusted Supervisory Wage Share (v_prod / NFC_GVA):** ", round(mean(wide_df$omega_ST_Tier2_GVA_adj, na.rm=TRUE), 4)),
-  "- **No Double Accounting Rule Enforced:** Denominator uses clean non-financial corporate gross value added ($NFC\\_GVA$), excluding financial double-accounting transfers.",
+  paste0("- **Years Covered:** ", min(wide_df$year, na.rm = TRUE), " - ", max(wide_df$year, na.rm = TRUE)),
+  paste0("- **Tier 1 NVA NFC Wage Share (NFC_COMP / NFC_NVA):** ", round(mean(wide_df$omega_ST_Tier1, na.rm=TRUE), 4)),
+  paste0("- **Tier 2 NVA Supervisory NFC Wage Share (v_prod_nfc / NFC_NVA):** ", round(mean(wide_df$omega_ST_Tier2, na.rm=TRUE), 4), " (Obs: ", sum(!is.na(wide_df$omega_ST_Tier2)), ")"),
+  paste0("- **Tier 1 GVA-Adjusted NFC Wage Share (NFC_COMP / NFC_GVA):** ", round(mean(wide_df$omega_ST_Tier1_GVA_adj, na.rm=TRUE), 4)),
+  paste0("- **Tier 2 GVA-Adjusted Supervisory NFC Wage Share (v_prod_nfc / NFC_GVA):** ", round(mean(wide_df$omega_ST_Tier2_GVA_adj, na.rm=TRUE), 4), " (Obs: ", sum(!is.na(wide_df$omega_ST_Tier2_GVA_adj)), ")"),
+  "",
+  "## Clean Corporate Wage Shares (No Double Accounting)",
+  paste0("- **Tier 1 Clean Corporate NVA Wage Share (CORP_COMP / CORP_NVA_clean):** ", round(mean(wide_df$omega_CORP_NVA_clean_Tier1, na.rm=TRUE), 4)),
+  paste0("- **Tier 1 Clean Corporate GVA Wage Share (CORP_COMP / CORP_GVA_clean):** ", round(mean(wide_df$omega_CORP_GVA_clean_Tier1, na.rm=TRUE), 4)),
+  paste0("- **Tier 2 Clean Corporate NVA Wage Share (v_prod_corp / CORP_NVA_clean):** ", round(mean(wide_df$omega_CORP_NVA_clean_Tier2, na.rm=TRUE), 4), " (Obs: ", sum(!is.na(wide_df$omega_CORP_NVA_clean_Tier2)), ")"),
+  paste0("- **Tier 2 Clean Corporate GVA Wage Share (v_prod_corp / CORP_GVA_clean):** ", round(mean(wide_df$omega_CORP_GVA_clean_Tier2, na.rm=TRUE), 4), " (Obs: ", sum(!is.na(wide_df$omega_CORP_GVA_clean_Tier2)), ")"),
+  "",
+  "- **No Double Accounting Rule Enforced:** Clean corporate denominators purge financial double-accounting transfers ($CORP\\_NVA^{\\text{clean}} = CORP\\_NVA - FIN\\_NOS^{\\text{implied}} - NFC\\_NET\\_INT$).",
+  "- **Strict Empirical Non-Extrapolation:** Supervisory ratio $\\phi_{\\text{sup}}$ and all Tier 2 wage shares are strictly evaluated without constant backfilling/forwardfilling extrapolation.",
   ""
 )
 writeLines(md_lines, out_md)
 
 cat("S29F execution complete. Output saved to:", out_csv, "\n")
 cat("========================================================================\n")
+
